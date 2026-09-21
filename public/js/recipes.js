@@ -52915,5 +52915,161 @@ export const recipes = [
       it: "Lo Zürcher Geschnetzeltes si diffuse dal cantone di Zurigo solo nella prima metà del XX secolo, e le ricette pubblicate nei libri di cucina svizzeri degli anni Quaranta confermano la versione odierna, con panna e funghi. Tagliare la carne a striscioline sottili, una tecnica rara nella cucina alpina tradizionale, consente una cottura estremamente rapida.\n\nOggi è considerato uno dei piatti nazionali della Svizzera, presente nei menu dei ristoranti in tutto il paese, quasi sempre accompagnato da rösti, mai da riso o pasta.",
       ko: "취리히식 크림 송아지고기는 20세기 전반에야 취리히주에서 퍼져나갔으며, 1940년대 스위스 요리책에 실린 레시피들이 크림과 버섯을 사용하는 오늘날의 버전을 뒷받침한다. 고기를 가늘게 써는 것은 전통적인 알프스 요리에서는 드문 기법으로, 매우 빠른 조리를 가능하게 한다.\n\n오늘날 이 요리는 스위스의 대표 국민 요리 중 하나로 여겨지며, 전국 레스토랑 메뉴에 등장하고 거의 항상 뢰스티와 함께 제공되며 쌀밥이나 국수와는 곁들이지 않는다."
     }
+  },
+  {
+    id: 431,
+    servings: 4,
+    tipType: "pasta",
+    pairingsType: "pasta",
+    nutrition: { cal: 580, prot: 20, carb: 65, fat: 26, fib: 4 },
+    origin: {
+      ro: "Elveția", en: "Switzerland", es: "Suiza", fr: "Suisse", de: "Schweiz",
+      pt: "Suíça", ru: "Швейцария", ar: "سويسرا", zh: "瑞士", ja: "スイス",
+      hi: "स्विट्ज़रलैंड", tr: "İsviçre", it: "Svizzera", ko: "스위스"
+    },
+    name: {
+      ro: "Älplermagronen", en: "Älplermagronen", es: "Älplermagronen", fr: "Älplermagronen", de: "Älplermagronen",
+      pt: "Älplermagronen", ru: "Альплермагронен", ar: "ألبلرماغرونين", zh: "阿尔卑斯牧民通心粉", ja: "アルプラーマグロネン",
+      hi: "आल्प्लरमाग्रोनन", tr: "Älplermagronen", it: "Älplermagronen", ko: "알플러마그로넨"
+    },
+    category: {
+      ro: "Fel principal", en: "Main Course", es: "Plato principal", fr: "Plat principal", de: "Hauptgericht",
+      pt: "Prato principal", ru: "Основное блюдо", ar: "طبق رئيسي", zh: "主菜", ja: "メイン料理",
+      hi: "मुख्य व्यंजन", tr: "Ana Yemek", it: "Piatto principale", ko: "메인 요리"
+    },
+    featureCards: {
+      ro: [
+        { icon: "🧑‍🌾", t: "Mâncarea păstorilor de munte", d: "Un preparat rustic al văcarilor din Alpi, gândit să sature repede după o zi de muncă la altitudine." },
+        { icon: "🥔", t: "Cartofii și pastele fierb împreună", d: "Cartofii și macaroanele se fierb în aceeași oală, economisind timp și combustibil la stână." },
+        { icon: "🧀", t: "Brânza se topește direct în oală", d: "Brânza rasă generos se amestecă fierbinte cu pastele și cartofii, formând o cremă bogată." },
+        { icon: "🍎", t: "Compotul de mere, alături obligatoriu", d: "Dulceața compotului de mere taie din bogăția brânzei și untului topit, un contrast clasic elvețian." }
+      ],
+      en: [
+        { icon: "🧑‍🌾", t: "A herder's mountain meal", d: "A rustic dish of Alpine cowherds, meant to fill you up fast after a day of work at altitude." },
+        { icon: "🥔", t: "Potatoes and pasta boil together", d: "Potatoes and macaroni cook in the same pot, saving time and fuel up at the mountain hut." },
+        { icon: "🧀", t: "Cheese melts right in the pot", d: "Generously grated cheese is stirred hot into the pasta and potatoes, forming a rich, creamy mass." },
+        { icon: "🍎", t: "Applesauce is a mandatory side", d: "The sweetness of applesauce cuts through the richness of the melted cheese and butter, a classic Swiss contrast." }
+      ],
+      es: [
+        { icon: "🧑‍🌾", t: "La comida de los pastores de montaña", d: "Un plato rústico de los vaqueros alpinos, pensado para llenar rápido tras un día de trabajo en altitud." },
+        { icon: "🥔", t: "Las papas y la pasta se hierven juntas", d: "Papas y macarrones se cocinan en la misma olla, ahorrando tiempo y combustible en la cabaña de montaña." },
+        { icon: "🧀", t: "El queso se funde directamente en la olla", d: "Queso rallado generosamente se mezcla caliente con la pasta y las papas, formando una masa cremosa." },
+        { icon: "🍎", t: "El puré de manzana es un acompañamiento obligatorio", d: "La dulzura del puré de manzana corta la riqueza del queso y la mantequilla fundidos, un contraste suizo clásico." }
+      ],
+      fr: [
+        { icon: "🧑‍🌾", t: "Le repas des bergers de montagne", d: "Un plat rustique des vachers alpins, pensé pour rassasier vite après une journée de travail en altitude." },
+        { icon: "🥔", t: "Les pommes de terre et les pâtes cuisent ensemble", d: "Pommes de terre et macaronis cuisent dans la même marmite, économisant temps et combustible à l'alpage." },
+        { icon: "🧀", t: "Le fromage fond directement dans la marmite", d: "Du fromage râpé généreusement est mélangé chaud aux pâtes et pommes de terre, formant une masse crémeuse." },
+        { icon: "🍎", t: "La compote de pommes, un accompagnement obligatoire", d: "La douceur de la compote de pommes tranche avec la richesse du fromage et du beurre fondus, un contraste suisse classique." }
+      ],
+      de: [
+        { icon: "🧑‍🌾", t: "Das Essen der Senner", d: "Ein rustikales Gericht der Alpsenner, gedacht, um nach einem Arbeitstag auf der Alp schnell satt zu machen." },
+        { icon: "🥔", t: "Kartoffeln und Pasta kochen zusammen", d: "Kartoffeln und Makkaroni garen im selben Topf, was auf der Alphütte Zeit und Brennstoff spart." },
+        { icon: "🧀", t: "Käse schmilzt direkt im Topf", d: "Großzügig geriebener Käse wird heiß unter Pasta und Kartoffeln gerührt und bildet eine cremige Masse." },
+        { icon: "🍎", t: "Apfelmus ist eine Pflichtbeilage", d: "Die Süße des Apfelmus schneidet durch die Fülle von geschmolzenem Käse und Butter, ein klassischer Schweizer Kontrast." }
+      ],
+      pt: [
+        { icon: "🧑‍🌾", t: "A refeição dos pastores de montanha", d: "Um prato rústico dos vaqueiros alpinos, pensado para saciar rapidamente após um dia de trabalho em altitude." },
+        { icon: "🥔", t: "As batatas e a massa cozem juntas", d: "Batatas e macarrão cozinham na mesma panela, poupando tempo e combustível na cabana de montanha." },
+        { icon: "🧀", t: "O queijo derrete diretamente na panela", d: "Queijo ralado generosamente é misturado quente com a massa e as batatas, formando uma massa cremosa." },
+        { icon: "🍎", t: "O puré de maçã é um acompanhamento obrigatório", d: "A doçura do puré de maçã corta a riqueza do queijo e da manteiga derretidos, um contraste suíço clássico." }
+      ],
+      ru: [
+        { icon: "🧑‍🌾", t: "Еда горных пастухов", d: "Простое блюдо альпийских скотоводов, созданное, чтобы быстро насытить после рабочего дня в горах." },
+        { icon: "🥔", t: "Картофель и макароны варятся вместе", d: "Картофель и макароны готовятся в одной кастрюле, экономя время и топливо в горной хижине." },
+        { icon: "🧀", t: "Сыр плавится прямо в кастрюле", d: "Щедро натёртый сыр вмешивается в горячие макароны и картофель, образуя густую кремовую массу." },
+        { icon: "🍎", t: "Яблочное пюре — обязательный гарнир", d: "Сладость яблочного пюре смягчает насыщенность расплавленного сыра и масла — классический швейцарский контраст." }
+      ],
+      ar: [
+        { icon: "🧑‍🌾", t: "وجبة رعاة الجبال", d: "طبق ريفي لرعاة الأبقار الألبيين، صُمم ليشبع بسرعة بعد يوم عمل في المرتفعات." },
+        { icon: "🥔", t: "البطاطا والمعكرونة تُسلقان معاً", d: "تُطهى البطاطا والمعكرونة في نفس القدر، مما يوفر الوقت والوقود في كوخ الجبل." },
+        { icon: "🧀", t: "الجبن يذوب مباشرة في القدر", d: "يُمزج الجبن المبشور بسخاء وهو ساخن مع المعكرونة والبطاطا، مكوّناً كتلة كريمية غنية." },
+        { icon: "🍎", t: "مهروس التفاح طبق جانبي إلزامي", d: "حلاوة مهروس التفاح توازن غنى الجبن والزبدة المذابين، تباين سويسري كلاسيكي." }
+      ],
+      zh: [
+        { icon: "🧑‍🌾", t: "牧民的山间餐食", d: "这是阿尔卑斯山牧牛人的乡村菜肴，为了在高海拔劳作一天后能迅速填饱肚子。" },
+        { icon: "🥔", t: "土豆和面食一起煮", d: "土豆和通心粉在同一锅中煮熟，在山间小屋节省时间和燃料。" },
+        { icon: "🧀", t: "奶酪直接在锅里融化", d: "大量的芝士碎趁热拌入面食和土豆中，形成浓郁的奶油质地。" },
+        { icon: "🍎", t: "苹果酱是必备配菜", d: "苹果酱的甜味中和了融化奶酪和黄油的浓郁，是瑞士经典的对比搭配。" }
+      ],
+      ja: [
+        { icon: "🧑‍🌾", t: "牧夫たちの山の食事", d: "アルプスの牛飼いたちの素朴な料理で、標高の高い場所での一日の労働の後、素早く満腹になれるよう作られた。" },
+        { icon: "🥔", t: "じゃがいもとパスタを一緒に茹でる", d: "じゃがいもとマカロニは同じ鍋で調理され、山小屋での時間と燃料を節約する。" },
+        { icon: "🧀", t: "チーズは鍋の中でそのまま溶ける", d: "たっぷりのすりおろしチーズを熱いパスタとじゃがいもに混ぜ込み、濃厚でクリーミーな塊にする。" },
+        { icon: "🍎", t: "アップルソースは必須の付け合わせ", d: "アップルソースの甘さが溶けたチーズとバターの濃厚さを引き締める、スイスの定番の対比だ。" }
+      ],
+      hi: [
+        { icon: "🧑‍🌾", t: "पहाड़ी चरवाहों का भोजन", d: "आल्पाइन गोपालकों का एक देहाती व्यंजन, ऊंचाई पर दिनभर काम के बाद जल्दी पेट भरने के लिए बनाया गया।" },
+        { icon: "🥔", t: "आलू और पास्ता साथ उबलते हैं", d: "आलू और मैकरोनी एक ही बर्तन में पकते हैं, जिससे पहाड़ी झोपड़ी में समय और ईंधन बचता है।" },
+        { icon: "🧀", t: "चीज़ सीधे बर्तन में पिघलता है", d: "भरपूर कद्दूकस किया चीज़ गरम पास्ता और आलू में मिलाया जाता है, जो एक समृद्ध, मलाईदार मिश्रण बनाता है।" },
+        { icon: "🍎", t: "सेब की चटनी अनिवार्य साइड है", d: "सेब की चटनी की मिठास पिघले चीज़ और मक्खन की चिकनाई को संतुलित करती है, एक क्लासिक स्विस विरोधाभास।" }
+      ],
+      tr: [
+        { icon: "🧑‍🌾", t: "Dağ çobanlarının yemeği", d: "Alp inek çobanlarının rustik bir yemeği, yükseklikte bir günlük çalışmadan sonra hızla doyurmak için tasarlanmış." },
+        { icon: "🥔", t: "Patates ve makarna birlikte haşlanır", d: "Patates ve makarna aynı tencerede pişer, dağ kulübesinde zaman ve yakıt tasarrufu sağlar." },
+        { icon: "🧀", t: "Peynir doğrudan tencerede erir", d: "Cömertçe rendelenmiş peynir sıcak makarna ve patateslere karıştırılır, zengin kremamsı bir kütle oluşturur." },
+        { icon: "🍎", t: "Elma püresi zorunlu bir garnitürdür", d: "Elma püresinin tatlılığı, eriyen peynir ve tereyağının ağırlığını dengeler, klasik bir İsviçre kontrastı." }
+      ],
+      it: [
+        { icon: "🧑‍🌾", t: "Il pasto dei pastori di montagna", d: "Un piatto rustico dei mandriani alpini, pensato per saziare rapidamente dopo una giornata di lavoro in quota." },
+        { icon: "🥔", t: "Patate e pasta bollono insieme", d: "Patate e maccheroni cuociono nella stessa pentola, risparmiando tempo e combustibile nella baita." },
+        { icon: "🧀", t: "Il formaggio si scioglie direttamente in pentola", d: "Formaggio grattugiato generosamente viene mescolato caldo con pasta e patate, formando una massa cremosa." },
+        { icon: "🍎", t: "La composta di mele è un contorno obbligatorio", d: "La dolcezza della composta di mele taglia la ricchezza del formaggio e del burro fusi, un classico contrasto svizzero." }
+      ],
+      ko: [
+        { icon: "🧑‍🌾", t: "목동들의 산악 음식", d: "알프스 소몰이꾼들의 소박한 요리로, 높은 고도에서 하루 일한 후 빠르게 배를 채우기 위해 만들어졌다." },
+        { icon: "🥔", t: "감자와 파스타를 함께 삶는다", d: "감자와 마카로니를 같은 냄비에서 조리해 산장에서 시간과 연료를 절약한다." },
+        { icon: "🧀", t: "치즈는 냄비 안에서 바로 녹는다", d: "넉넉하게 간 치즈를 뜨거운 파스타와 감자에 섞어 진하고 크리미한 덩어리를 만든다." },
+        { icon: "🍎", t: "사과 소스는 필수 곁들임", d: "사과 소스의 단맛이 녹은 치즈와 버터의 진한 맛을 중화하는, 스위스의 고전적인 대비다." }
+      ]
+    },
+    ingredients: {
+      ro: ["300g macaroane", "500g cartofi, cuburi", "sare", "100g unt", "2 cepe mari, feliate subțire", "250g brânză Gruyère sau Appenzeller, rasă", "150ml smântână pentru gătit", "piper negru", "compot de mere, pentru servire"],
+      en: ["300g macaroni", "500g potatoes, diced", "salt", "100g butter", "2 large onions, thinly sliced", "250g Gruyère or Appenzeller cheese, grated", "150ml cooking cream", "black pepper", "applesauce, for serving"],
+      es: ["300g de macarrones", "500g de papas, en cubos", "sal", "100g de mantequilla", "2 cebollas grandes, en láminas finas", "250g de queso Gruyère o Appenzeller, rallado", "150ml de nata para cocinar", "pimienta negra", "puré de manzana, para servir"],
+      fr: ["300g de macaronis", "500g de pommes de terre, en dés", "sel", "100g de beurre", "2 grands oignons, émincés finement", "250g de fromage Gruyère ou Appenzeller, râpé", "150ml de crème culinaire", "poivre noir", "compote de pommes, pour servir"],
+      de: ["300g Makkaroni", "500g Kartoffeln, gewürfelt", "Salz", "100g Butter", "2 große Zwiebeln, fein in Scheiben", "250g Gruyère- oder Appenzellerkäse, gerieben", "150ml Kochrahm", "schwarzer Pfeffer", "Apfelmus, zum Servieren"],
+      pt: ["300g de macarrão tipo cotovelo", "500g de batatas, em cubos", "sal", "100g de manteiga", "2 cebolas grandes, em fatias finas", "250g de queijo Gruyère ou Appenzeller, ralado", "150ml de natas culinárias", "pimenta preta", "puré de maçã, para servir"],
+      ru: ["300г макарон", "500г картофеля, кубиками", "соль", "100г сливочного масла", "2 крупные луковицы, тонко нарезанные", "250г сыра Грюйер или Аппенцеллер, тёртого", "150мл кулинарных сливок", "чёрный перец", "яблочное пюре, для подачи"],
+      ar: ["300غ معكرونة", "500غ بطاطا، مكعبات", "ملح", "100غ زبدة", "2 بصلة كبيرة، مقطعة شرائح رفيعة", "250غ جبن غرويير أو أبنزيلر، مبشور", "150مل قشدة طهي", "فلفل أسود", "مهروس تفاح، للتقديم"],
+      zh: ["300克通心粉", "500克土豆，切丁", "盐", "100克黄油", "2个大洋葱，切薄片", "250克格吕耶尔或阿彭策尔奶酪，磨碎", "150毫升烹饪奶油", "黑胡椒", "苹果酱，配餐用"],
+      ja: ["マカロニ300g", "じゃがいも500g（角切り）", "塩", "バター100g", "大玉ねぎ2個（薄切り）", "グリュイエールまたはアッペンツェラーチーズ250g（すりおろし）", "料理用生クリーム150ml", "黒こしょう", "アップルソース（添える用）"],
+      hi: ["300 ग्राम मैकरोनी", "500 ग्राम आलू, क्यूब्स में", "नमक", "100 ग्राम मक्खन", "2 बड़े प्याज़, पतले कटे", "250 ग्राम ग्रूयेर या एपेंज़ेलर चीज़, कद्दूकस", "150 मिली कुकिंग क्रीम", "काली मिर्च", "परोसने के लिए सेब की चटनी"],
+      tr: ["300g makarna (dirsek)", "500g patates, küp doğranmış", "tuz", "100g tereyağı", "2 büyük soğan, ince dilimlenmiş", "250g Gruyère veya Appenzeller peyniri, rendelenmiş", "150ml pişirme kreması", "karabiber", "servis için elma püresi"],
+      it: ["300g di maccheroni", "500g di patate, a cubetti", "sale", "100g di burro", "2 grosse cipolle, affettate sottilmente", "250g di formaggio Gruyère o Appenzeller, grattugiato", "150ml di panna da cucina", "pepe nero", "composta di mele, per servire"],
+      ko: ["마카로니 300g", "감자 500g, 깍둑썰기", "소금", "버터 100g", "큰 양파 2개, 얇게 썬 것", "그뤼에르 또는 아펜첼러 치즈 250g, 간 것", "요리용 생크림 150ml", "흑후추", "곁들일 사과 소스"]
+    },
+    howIsMade: {
+      ro: "Se curăță și se taie cubulețe cartofii, apoi se fierb în apă sărată până devin aproape fragezi. Se adaugă macaroanele în aceeași oală și se fierb împreună până pastele devin al dente. Între timp, se prăjesc cepele feliate în unt până devin aurii și caramelizate. Se scurg cartofii și macaroanele, apoi se pun înapoi în oală. Se amestecă smântâna și cea mai mare parte din brânza rasă până totul se acoperă bine și brânza începe să se topească. Se condimentează generos cu sare și piper, apoi se pune în boluri. Se ornează cu restul de brânză și cepele caramelizate, servind fierbinte alături de compot de mere.",
+      en: "Peel and dice the potatoes, then boil them in salted water until nearly tender. Add the macaroni to the same pot and cook both together until the pasta is al dente. Meanwhile, fry the sliced onions in butter until deep golden and caramelized. Drain the potatoes and macaroni, then return them to the pot. Stir in the cream and most of the grated cheese until everything is well coated and the cheese starts to melt. Season generously with salt and pepper, then spoon into bowls. Top with the remaining cheese and the caramelized onions, and serve hot alongside applesauce.",
+      es: "Pela y corta en cubos las papas, luego hiérvelas en agua con sal hasta que estén casi tiernas. Añade los macarrones a la misma olla y cocínalos juntos hasta que la pasta esté al dente. Mientras tanto, fríe las cebollas en láminas con mantequilla hasta que estén doradas y caramelizadas. Escurre las papas y los macarrones, y vuelve a ponerlos en la olla. Incorpora la nata y la mayor parte del queso rallado hasta que todo esté bien cubierto y el queso empiece a fundirse. Sazona generosamente con sal y pimienta, y sirve en cuencos. Cubre con el queso restante y las cebollas caramelizadas, y sirve caliente junto a puré de manzana.",
+      fr: "Épluchez et coupez les pommes de terre en dés, puis faites-les cuire dans de l'eau salée jusqu'à ce qu'elles soient presque tendres. Ajoutez les macaronis dans la même marmite et faites cuire ensemble jusqu'à ce que les pâtes soient al dente. Pendant ce temps, faites revenir les oignons émincés dans le beurre jusqu'à ce qu'ils soient bien dorés et caramélisés. Égouttez les pommes de terre et les macaronis, puis remettez-les dans la marmite. Incorporez la crème et la majeure partie du fromage râpé jusqu'à ce que tout soit bien enrobé et que le fromage commence à fondre. Assaisonnez généreusement de sel et de poivre, puis répartissez dans des bols. Garnissez du reste de fromage et des oignons caramélisés, et servez chaud avec de la compote de pommes.",
+      de: "Die Kartoffeln schälen und würfeln, dann in Salzwasser fast weich kochen. Die Makkaroni in denselben Topf geben und zusammen kochen, bis die Pasta al dente ist. In der Zwischenzeit die Zwiebelscheiben in Butter goldbraun und karamellisiert braten. Kartoffeln und Makkaroni abgießen und zurück in den Topf geben. Sahne und den Großteil des geriebenen Käses unterrühren, bis alles gut überzogen ist und der Käse zu schmelzen beginnt. Großzügig mit Salz und Pfeffer würzen und in Schüsseln füllen. Mit dem restlichen Käse und den karamellisierten Zwiebeln garnieren und heiß mit Apfelmus servieren.",
+      pt: "Descasque e corte as batatas em cubos, depois cozinhe-as em água com sal até ficarem quase macias. Junte o macarrão à mesma panela e cozinhe ambos até a massa ficar al dente. Entretanto, frite as cebolas fatiadas em manteiga até dourarem e caramelizarem. Escorra as batatas e o macarrão, e volte a colocá-los na panela. Envolva as natas e a maior parte do queijo ralado até tudo ficar bem envolto e o queijo começar a derreter. Tempere generosamente com sal e pimenta e coloque em tigelas. Cubra com o queijo restante e as cebolas caramelizadas, e sirva quente com puré de maçã.",
+      ru: "Очистите и нарежьте картофель кубиками, затем отварите в подсоленной воде почти до готовности. Добавьте макароны в ту же кастрюлю и варите вместе до состояния аль денте. Тем временем обжарьте нарезанный лук в масле до насыщенной золотистой карамелизации. Слейте воду с картофеля и макарон и верните их в кастрюлю. Вмешайте сливки и большую часть тёртого сыра, пока всё хорошо не покроется и сыр не начнёт плавиться. Щедро приправьте солью и перцем, затем разложите по мискам. Посыпьте оставшимся сыром и карамелизированным луком и подавайте горячим с яблочным пюре.",
+      ar: "قشّري البطاطا وقطّعيها مكعبات، ثم اسلقيها في ماء مملح حتى تصبح شبه طرية. أضيفي المعكرونة إلى نفس القدر واطهيهما معاً حتى تصبح المعكرونة أل دنتي. في الأثناء، اقلي البصل المقطع شرائح في الزبدة حتى يصبح ذهبياً غامقاً ومكرملاً. صفّي البطاطا والمعكرونة، ثم أعيديهما إلى القدر. أضيفي القشدة ومعظم الجبن المبشور وقلّبي حتى يتغطى كل شيء جيداً ويبدأ الجبن بالذوبان. تبّلي بسخاء بالملح والفلفل، ثم وزّعي في أوعية. زيّني بباقي الجبن والبصل المكرمل، وقدّمي ساخناً مع مهروس التفاح.",
+      zh: "将土豆去皮切丁，放入盐水中煮至接近软熟。将通心粉加入同一锅中一起煮至弹牙。同时，将洋葱片用黄油炒至深金黄焦糖色。将土豆和通心粉沥干，放回锅中。拌入奶油和大部分芝士碎，直至充分裹匀且奶酪开始融化。用盐和黑胡椒充分调味，然后盛入碗中。撒上剩余的奶酪和焦糖洋葱，趁热配苹果酱享用。",
+      ja: "じゃがいもの皮をむいて角切りにし、塩水でほぼ柔らかくなるまでゆでる。同じ鍋にマカロニを加え、パスタがアルデンテになるまで一緒に煮る。その間に、スライスした玉ねぎをバターで濃い黄金色になるまで炒めてキャラメリゼする。じゃがいもとマカロニの水を切り、鍋に戻す。生クリームとすりおろしたチーズの大部分を加え、全体がよくコーティングされチーズが溶け始めるまで混ぜる。塩こしょうでしっかり味を整え、ボウルに盛る。残りのチーズとキャラメリゼした玉ねぎをのせ、アップルソースを添えて熱いうちに提供する。",
+      hi: "आलू छीलकर क्यूब्स में काटें, फिर नमकीन पानी में लगभग नरम होने तक उबालें। उसी बर्तन में मैकरोनी डालें और दोनों को साथ तब तक पकाएं जब तक पास्ता अल डेंटे न हो जाए। इस बीच, कटे प्याज़ को मक्खन में गहरे सुनहरे और कैरामलाइज़्ड होने तक भूनें। आलू और मैकरोनी को छान लें, फिर वापस बर्तन में डालें। क्रीम और अधिकांश कद्दूकस चीज़ मिलाएं जब तक सब कुछ अच्छी तरह लिपट न जाए और चीज़ पिघलना शुरू न हो जाए। नमक-काली मिर्च से भरपूर स्वाद दें, फिर कटोरों में परोसें। बचा हुआ चीज़ और कैरामलाइज़्ड प्याज़ ऊपर डालें, और सेब की चटनी के साथ गरम परोसें।",
+      tr: "Patatesleri soyup küp küp doğrayın, ardından tuzlu suda neredeyse yumuşayana kadar haşlayın. Makarnayı aynı tencereye ekleyin ve ikisini birlikte makarna al dente olana kadar pişirin. Bu arada, dilimlenmiş soğanları tereyağında koyu altın rengi ve karamelize olana kadar kızartın. Patates ve makarnanın suyunu süzün, ardından tekrar tencereye alın. Kremayı ve rendelenmiş peynirin çoğunu ekleyip her şey iyice kaplanana ve peynir erimeye başlayana kadar karıştırın. Tuz ve karabiberle bolca tatlandırın, ardından kaselere bölün. Kalan peynir ve karamelize soğanlarla üzerini süsleyin ve elma püresi ile sıcak servis edin.",
+      it: "Sbuccia e taglia a cubetti le patate, poi lessale in acqua salata finché non sono quasi tenere. Aggiungi i maccheroni nella stessa pentola e cuoci entrambi finché la pasta non è al dente. Nel frattempo, rosola le cipolle affettate nel burro finché non diventano dorate e caramellate. Scola le patate e i maccheroni, poi rimettili in pentola. Incorpora la panna e la maggior parte del formaggio grattugiato finché tutto non è ben ricoperto e il formaggio inizia a sciogliersi. Condisci generosamente con sale e pepe, poi versa nelle ciotole. Guarnisci con il formaggio rimasto e le cipolle caramellate, e servi caldo con composta di mele.",
+      ko: "감자 껍질을 벗기고 깍둑썰기한 뒤 소금물에 거의 익을 때까지 삶는다. 같은 냄비에 마카로니를 넣고 파스타가 알덴테가 될 때까지 함께 익힌다. 그동안 슬라이스한 양파를 버터에 진한 황금빛으로 캐러멜라이즈될 때까지 볶는다. 감자와 마카로니의 물을 빼고 다시 냄비에 넣는다. 크림과 간 치즈 대부분을 넣어 모든 것이 잘 코팅되고 치즈가 녹기 시작할 때까지 섞는다. 소금과 후추로 넉넉하게 간한 뒤 그릇에 담는다. 남은 치즈와 캐러멜라이즈된 양파를 올리고 사과 소스와 함께 뜨겁게 낸다."
+    },
+    originText: {
+      ro: "Älplermagronen provine din bucătăria stânelor alpine elvețiene, un fel gândit de văcari și păstori care aveau nevoie de o masă simplă, calorică și ușor de preparat cu ingrediente ce nu se stricau la altitudine — cartofi, paste uscate și brânza produsă chiar la stână. Denumirea combină 'Älpler' (persoana care lucrează la munte vara) cu 'Magronen', cuvântul elvețian-german pentru paste.\n\nCombinația neobișnuită cu compot de mere, deși pare stranie la prima vedere, e o tradiție consacrată: dulceața fructului răcorește gura după fiecare îmbucătură bogată în brânză și unt.",
+      en: "Älplermagronen originates from the kitchens of Swiss Alpine huts, a dish devised by cowherds and shepherds who needed a simple, calorie-dense meal made from ingredients that wouldn't spoil at altitude — potatoes, dried pasta, and cheese made right at the hut. The name combines 'Älpler' (a person who works in the mountains during summer) with 'Magronen', the Swiss-German word for pasta.\n\nThe unusual pairing with applesauce, though it seems strange at first, is a well-established tradition: the fruit's sweetness cools the mouth after each rich, cheesy, buttery bite.",
+      es: "El Älplermagronen proviene de las cocinas de las cabañas alpinas suizas, un plato ideado por vaqueros y pastores que necesitaban una comida sencilla y calórica hecha con ingredientes que no se estropearan en altitud: papas, pasta seca y queso elaborado en la propia cabaña. El nombre combina 'Älpler' (persona que trabaja en la montaña en verano) con 'Magronen', la palabra suizo-alemana para pasta.\n\nLa inusual combinación con puré de manzana, aunque parezca extraña al principio, es una tradición bien establecida: la dulzura de la fruta refresca la boca tras cada bocado rico en queso y mantequilla.",
+      fr: "L'Älplermagronen vient des cuisines des chalets alpins suisses, un plat conçu par les vachers et bergers qui avaient besoin d'un repas simple, calorique, fait d'ingrédients ne s'abîmant pas en altitude — pommes de terre, pâtes sèches et fromage produit sur place. Le nom combine 'Älpler' (celui qui travaille en montagne l'été) et 'Magronen', le mot suisse-allemand pour les pâtes.\n\nL'association inhabituelle avec la compote de pommes, bien qu'étrange au premier abord, est une tradition bien établie : la douceur du fruit rafraîchit la bouche après chaque bouchée riche en fromage et en beurre.",
+      de: "Älplermagronen stammt aus den Küchen der Schweizer Alphütten, ein Gericht, das von Sennen und Hirten entwickelt wurde, die eine einfache, kalorienreiche Mahlzeit aus Zutaten brauchten, die auf der Höhe nicht verderben — Kartoffeln, Trockenpasta und direkt auf der Alp hergestellter Käse. Der Name kombiniert 'Älpler' (jemand, der im Sommer in den Bergen arbeitet) mit 'Magronen', dem schweizerdeutschen Wort für Pasta.\n\nDie ungewöhnliche Kombination mit Apfelmus, so seltsam sie zunächst wirkt, ist eine fest verankerte Tradition: Die Süße der Frucht kühlt den Mund nach jedem käsig-buttrigen Bissen.",
+      pt: "O Älplermagronen tem origem nas cozinhas das cabanas alpinas suíças, um prato concebido por vaqueiros e pastores que precisavam de uma refeição simples e calórica, feita com ingredientes que não se estragavam em altitude — batatas, massa seca e queijo produzido na própria cabana. O nome combina 'Älpler' (pessoa que trabalha na montanha no verão) com 'Magronen', a palavra suíço-alemã para massa.\n\nA combinação incomum com puré de maçã, embora pareça estranha à primeira vista, é uma tradição bem estabelecida: a doçura da fruta refresca a boca depois de cada garfada rica em queijo e manteiga.",
+      ru: "Альплермагронен происходит из кухонь швейцарских альпийских хижин — блюдо, придуманное пастухами и скотоводами, которым нужна была простая, калорийная еда из ингредиентов, не портящихся на высоте: картофеля, сухих макарон и сыра, изготовленного прямо на месте. Название сочетает 'Älpler' (человек, работающий в горах летом) с 'Magronen', швейцарско-немецким словом для макарон.\n\nНеобычное сочетание с яблочным пюре, каким бы странным оно ни казалось на первый взгляд, — устоявшаяся традиция: сладость фрукта освежает рот после каждого сырного, масляного кусочка.",
+      ar: "نشأ طبق ألبلرماغرونين في مطابخ الأكواخ الألبية السويسرية، وهو طبق ابتكره رعاة الأبقار والأغنام الذين احتاجوا وجبة بسيطة وعالية السعرات من مكونات لا تفسد في المرتفعات — البطاطا والمعكرونة المجففة والجبن المصنوع في الكوخ نفسه. يجمع الاسم بين 'Älpler' (الشخص الذي يعمل في الجبال صيفاً) و'Magronen'، الكلمة السويسرية-الألمانية للمعكرونة.\n\nالمزج غير المعتاد مع مهروس التفاح، رغم أنه يبدو غريباً للوهلة الأولى، تقليد راسخ: حلاوة الفاكهة تُنعش الفم بعد كل قضمة غنية بالجبن والزبدة.",
+      zh: "阿尔卑斯牧民通心粉起源于瑞士高山小屋的厨房，是牧牛人和牧羊人为了在高海拔地区获得简单、高热量的一餐而设计的菜肴，所用食材不易变质——土豆、干面食和小屋自制的奶酪。这个名字将'Älpler'（夏季在山里劳作的人）与瑞士德语中意为面食的'Magronen'组合在一起。\n\n与苹果酱这种不寻常的搭配，虽然初看奇怪，却是一个由来已久的传统：水果的甜味能在每一口浓郁的奶酪黄油之后清新口感。",
+      ja: "アルプラーマグロネンはスイスのアルプ小屋のキッチンに由来する料理で、標高の高い場所でも傷まない食材——じゃがいも、乾燥パスタ、その場で作られたチーズ——を使ったシンプルで高カロリーな食事を必要とした牛飼いや羊飼いによって考案された。名前は夏に山で働く人を意味する『Älpler』とスイスドイツ語でパスタを意味する『Magronen』を組み合わせたものだ。\n\nアップルソースとの組み合わせは、一見奇妙に思えるかもしれないが、確立された伝統だ。果物の甘さが、チーズとバターたっぷりの一口ごとに口の中をさっぱりさせてくれる。",
+      hi: "आल्प्लरमाग्रोनन स्विस आल्पाइन झोपड़ियों की रसोई से उत्पन्न हुआ, यह गोपालकों और चरवाहों द्वारा बनाया गया व्यंजन है जिन्हें ऊंचाई पर खराब न होने वाली सामग्री — आलू, सूखा पास्ता, और झोपड़ी में ही बना चीज़ — से एक सरल, कैलोरी युक्त भोजन की जरूरत थी। नाम 'Älpler' (गर्मियों में पहाड़ों में काम करने वाला व्यक्ति) को 'Magronen', पास्ता के लिए स्विस-जर्मन शब्द, के साथ जोड़ता है।\n\nसेब की चटनी के साथ यह असामान्य संयोजन, हालांकि पहली नज़र में अजीब लगता है, एक स्थापित परंपरा है: फल की मिठास चीज़ और मक्खन से भरपूर हर कौर के बाद मुंह को ताज़ा करती है।",
+      tr: "Älplermagronen, İsviçre Alp kulübelerinin mutfaklarından gelir; yükseklikte bozulmayan malzemelerden — patates, kuru makarna ve kulübede üretilen peynirden — basit, kalorili bir yemeğe ihtiyaç duyan çoban ve inek çobanlarının icadıdır. İsim, yazın dağlarda çalışan kişi anlamına gelen 'Älpler' ile İsviçre Almancası'nda makarna anlamına gelen 'Magronen'i birleştirir.\n\nElma püresiyle olan bu alışılmadık eşleşme, ilk bakışta garip görünse de köklü bir gelenektir: meyvenin tatlılığı, peynir ve tereyağıyla dolu her lokmadan sonra ağzı ferahlatır.",
+      it: "L'Älplermagronen ha origine nelle cucine dei rifugi alpini svizzeri, un piatto ideato da mandriani e pastori che avevano bisogno di un pasto semplice e calorico fatto con ingredienti che non si deteriorassero in quota — patate, pasta secca e formaggio prodotto proprio nel rifugio. Il nome combina 'Älpler' (chi lavora in montagna d'estate) con 'Magronen', la parola svizzero-tedesca per la pasta.\n\nL'insolito abbinamento con la composta di mele, per quanto possa sembrare strano a prima vista, è una tradizione consolidata: la dolcezza del frutto rinfresca il palato dopo ogni boccone ricco di formaggio e burro.",
+      ko: "알플러마그로넨은 스위스 알프스 산장 부엌에서 유래한 요리로, 고지대에서 상하지 않는 재료—감자, 건조 파스타, 산장에서 직접 만든 치즈—로 간단하고 열량이 높은 한 끼를 필요로 했던 목동과 양치기들이 고안한 것이다. 이름은 여름에 산에서 일하는 사람을 뜻하는 'Älpler'와 스위스 독일어로 파스타를 뜻하는 'Magronen'을 합친 것이다.\n\n사과 소스와의 이색적인 조합은 처음엔 낯설어 보여도 확고히 자리 잡은 전통이다: 과일의 단맛이 치즈와 버터가 풍부한 한 입 한 입 후 입안을 상쾌하게 해준다."
+    }
   }
 ];
