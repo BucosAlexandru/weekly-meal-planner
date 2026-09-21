@@ -51527,7 +51527,7 @@ export const recipes = [
       hi: "फ़िनलैंड"
     },
     name: {
-      ro: "Poronkäristys (Ren Sotat)",
+      ro: "Poronkäristys",
       en: "Poronkäristys",
       es: "Poronkäristys",
       fr: "Poronkäristys",
@@ -51765,7 +51765,7 @@ export const recipes = [
       hi: "यूनाइटेड किंगडम"
     },
     name: {
-      ro: "Cârnați cu Piure (Bangers and Mash)",
+      ro: "Cârnați cu Piure",
       en: "Bangers and Mash",
       es: "Salchichas con Puré",
       fr: "Saucisses-Purée",
