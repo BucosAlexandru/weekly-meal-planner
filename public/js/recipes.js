@@ -52135,5 +52135,473 @@ export const recipes = [
       it: "Lo sticky toffee pudding si diffuse in Gran Bretagna soprattutto a partire dagli anni Settanta, reso popolare dall'hotel Sharrow Bay in Cumbria, anche se le storie sulla sua esatta origine variano. I datteri, ingrediente insolito nella pasticceria britannica tradizionale, donano al dolce un'umidità e una profondità dolce che lo zucchero da solo non può offrire.\n\nOggi è uno dei dessert da pub più amati nel Regno Unito, servito quasi sempre caldo, con generosa salsa toffee versata sopra e una pallina di gelato alla vaniglia a fianco.",
       ko: "스티키 토피 푸딩은 주로 1970년대부터 영국 전역으로 퍼졌으며, 컴브리아의 샤로우 베이 호텔이 이를 대중화한 것으로 알려져 있지만 정확한 기원에 대한 이야기는 다양하다. 전통 영국 제과에서는 흔치 않은 재료인 대추야자가 설탕만으로는 낼 수 없는 촉촉함과 깊은 단맛을 케이크에 더한다.\n\n오늘날에는 영국에서 가장 사랑받는 펍 디저트 중 하나로, 거의 항상 따뜻하게 제공되며 위에 토피 소스를 듬뿍 붓고 바닐라 아이스크림 한 스쿱을 곁들인다."
     }
+  },
+  {
+    id: 426,
+    servings: 4,
+    tipType: "meat",
+    pairingsType: "meat",
+    nutrition: { cal: 650, prot: 46, carb: 40, fat: 32, fib: 3 },
+    origin: {
+      ro: "Australia", en: "Australia", es: "Australia", fr: "Australie", de: "Australien",
+      pt: "Austrália", ru: "Австралия", ar: "أستراليا", zh: "澳大利亚", ja: "オーストラリア",
+      hi: "ऑस्ट्रेलिया", tr: "Avustralya", it: "Australia", ko: "호주"
+    },
+    name: {
+      ro: "Chicken Parmigiana", en: "Chicken Parmigiana", es: "Chicken Parmigiana", fr: "Chicken Parmigiana", de: "Chicken Parmigiana",
+      pt: "Chicken Parmigiana", ru: "Курица пармиджана", ar: "دجاج بارميجيانا", zh: "帕玛森鸡排", ja: "チキンパルミジャーナ",
+      hi: "चिकन पर्मिजियाना", tr: "Tavuk Parmigiana", it: "Chicken Parmigiana", ko: "치킨 파르미지아나"
+    },
+    category: {
+      ro: "Fel principal", en: "Main Course", es: "Plato principal", fr: "Plat principal", de: "Hauptgericht",
+      pt: "Prato principal", ru: "Основное блюдо", ar: "طبق رئيسي", zh: "主菜", ja: "メイン料理",
+      hi: "मुख्य व्यंजन", tr: "Ana Yemek", it: "Piatto principale", ko: "메인 요리"
+    },
+    featureCards: {
+      ro: [
+        { icon: "🍗", t: "Un clasic de pub australian", d: "Parma, cum i se spune scurt, e vedeta oricărui meniu de pub din Australia, servit uriaș și generos." },
+        { icon: "🍞", t: "Pane crocantă e cheia", d: "Puiul bătut subțire și dat prin pesmet fin rămâne crocant chiar și sub sos și brânză." },
+        { icon: "🍅", t: "Sos de roșii simplu", d: "Un sos rapid de roșii cu usturoi echilibrează bogăția cărnii pane și a brânzei topite." },
+        { icon: "🧀", t: "Șuncă și mozzarella deasupra", d: "Felia de șuncă și mozzarella topită formează stratul final, gratinat la grill până face bule." }
+      ],
+      en: [
+        { icon: "🍗", t: "An Aussie pub classic", d: "The 'parma', as it's known for short, is the star of every Australian pub menu, served big and generous." },
+        { icon: "🍞", t: "Crispy crumb is key", d: "Pounded thin and coated in fine breadcrumbs, the chicken stays crunchy even under sauce and cheese." },
+        { icon: "🍅", t: "A simple tomato sauce", d: "A quick garlic tomato sauce balances the richness of the crumbed chicken and melted cheese." },
+        { icon: "🧀", t: "Ham and mozzarella on top", d: "A slice of ham and melted mozzarella form the final layer, grilled until bubbling." }
+      ],
+      es: [
+        { icon: "🍗", t: "Un clásico de pub australiano", d: "El 'parma', como se lo conoce, es la estrella de cualquier menú de pub australiano, servido grande y generoso." },
+        { icon: "🍞", t: "El rebozado crujiente es clave", d: "El pollo aplanado y cubierto de pan rallado fino se mantiene crujiente incluso bajo la salsa y el queso." },
+        { icon: "🍅", t: "Una salsa de tomate sencilla", d: "Una salsa rápida de tomate y ajo equilibra la riqueza del pollo empanizado y el queso fundido." },
+        { icon: "🧀", t: "Jamón y mozzarella encima", d: "Una loncha de jamón y mozzarella fundida forman la capa final, gratinada hasta burbujear." }
+      ],
+      fr: [
+        { icon: "🍗", t: "Un classique des pubs australiens", d: "Le 'parma', surnom courant, est la vedette de tout menu de pub australien, servi généreusement." },
+        { icon: "🍞", t: "La panure croustillante est essentielle", d: "Le poulet aplati et enrobé de chapelure fine reste croustillant même sous la sauce et le fromage." },
+        { icon: "🍅", t: "Une sauce tomate simple", d: "Une sauce tomate rapide à l'ail équilibre la richesse du poulet pané et du fromage fondu." },
+        { icon: "🧀", t: "Jambon et mozzarella dessus", d: "Une tranche de jambon et de la mozzarella fondue forment la couche finale, gratinée jusqu'à bouillonner." }
+      ],
+      de: [
+        { icon: "🍗", t: "Ein australischer Pub-Klassiker", d: "Die 'Parma', wie sie kurz genannt wird, ist der Star jeder australischen Pub-Speisekarte, großzügig serviert." },
+        { icon: "🍞", t: "Knusprige Panade ist entscheidend", d: "Dünn geklopft und in feinen Semmelbröseln paniert, bleibt das Hähnchen auch unter Sauce und Käse knusprig." },
+        { icon: "🍅", t: "Eine einfache Tomatensauce", d: "Eine schnelle Knoblauch-Tomatensauce gleicht die Fülle von Panade und geschmolzenem Käse aus." },
+        { icon: "🧀", t: "Schinken und Mozzarella oben", d: "Eine Scheibe Schinken und geschmolzener Mozzarella bilden die letzte Schicht, überbacken bis sie blubbert." }
+      ],
+      pt: [
+        { icon: "🍗", t: "Um clássico de pub australiano", d: "O 'parma', como é chamado, é a estrela de qualquer menu de pub australiano, servido grande e generoso." },
+        { icon: "🍞", t: "O empanado crocante é essencial", d: "O frango batido fino e coberto de farinha de rosca fina permanece crocante mesmo sob molho e queijo." },
+        { icon: "🍅", t: "Um molho de tomate simples", d: "Um molho rápido de tomate com alho equilibra a riqueza do frango empanado e do queijo derretido." },
+        { icon: "🧀", t: "Presunto e mozzarella por cima", d: "Uma fatia de presunto e mozzarella derretida formam a camada final, gratinada até borbulhar." }
+      ],
+      ru: [
+        { icon: "🍗", t: "Классика австралийских пабов", d: "«Парма», как её называют сокращённо, — звезда любого меню австралийского паба, подаётся щедро." },
+        { icon: "🍞", t: "Хрустящая панировка — главное", d: "Отбитая тонко курица в мелких сухарях остаётся хрустящей даже под соусом и сыром." },
+        { icon: "🍅", t: "Простой томатный соус", d: "Быстрый томатный соус с чесноком уравновешивает насыщенность панированной курицы и плавленого сыра." },
+        { icon: "🧀", t: "Ветчина и моцарелла сверху", d: "Ломтик ветчины и расплавленная моцарелла образуют финальный слой, запечённый до пузырьков." }
+      ],
+      ar: [
+        { icon: "🍗", t: "طبق كلاسيكي في حانات أستراليا", d: "يُعرف اختصاراً بـ'بارما'، وهو نجم كل قائمة طعام في الحانات الأسترالية، يُقدَّم بحجم كبير وسخي." },
+        { icon: "🍞", t: "الطبقة المقرمشة أساسية", d: "الدجاج المطروق رقيقاً والمغطى ببقسماط ناعم يبقى مقرمشاً حتى تحت الصلصة والجبن." },
+        { icon: "🍅", t: "صلصة طماطم بسيطة", d: "صلصة طماطم سريعة بالثوم توازن غنى الدجاج المقرمش والجبن المذاب." },
+        { icon: "🧀", t: "لحم مقدد وموزاريلا فوقها", d: "شريحة من اللحم المقدد وموزاريلا مذابة تشكل الطبقة الأخيرة، مشوية حتى تفور." }
+      ],
+      zh: [
+        { icon: "🍗", t: "澳洲酒吧经典菜", d: "简称'parma'，是澳大利亚每家酒吧菜单上的明星菜品，分量十足。" },
+        { icon: "🍞", t: "酥脆面包糠是关键", d: "鸡肉拍薄后裹上细面包糠，即使盖上酱汁和奶酪也依然保持酥脆。" },
+        { icon: "🍅", t: "简单的番茄酱", d: "快手蒜香番茄酱平衡了炸鸡排和融化奶酪的浓郁口感。" },
+        { icon: "🧀", t: "火腿和马苏里拉在上层", d: "一片火腿和融化的马苏里拉奶酪构成最后一层，烤至冒泡。" }
+      ],
+      ja: [
+        { icon: "🍗", t: "オージーパブの定番", d: "略して『パルマ』と呼ばれ、オーストラリアのパブメニューの主役として豪快に提供される。" },
+        { icon: "🍞", t: "サクサクの衣が決め手", d: "薄く叩いて細かいパン粉をまぶしたチキンは、ソースとチーズの下でもサクサク感を保つ。" },
+        { icon: "🍅", t: "シンプルなトマトソース", d: "にんにく入りの手早いトマトソースが、衣付きチキンと溶けたチーズの濃厚さを引き立てる。" },
+        { icon: "🧀", t: "ハムとモッツァレラを上に", d: "ハム1枚と溶けたモッツァレラが最後の層となり、泡立つまで焼き上げる。" }
+      ],
+      hi: [
+        { icon: "🍗", t: "एक ऑस्ट्रेलियाई पब क्लासिक", d: "इसे संक्षेप में 'पर्मा' कहा जाता है, जो हर ऑस्ट्रेलियाई पब मेनू का सितारा है, बड़े आकार में परोसा जाता है।" },
+        { icon: "🍞", t: "कुरकुरी परत जरूरी है", d: "पतला कूटा और बारीक ब्रेडक्रम्ब में लपेटा चिकन सॉस और चीज़ के नीचे भी कुरकुरा रहता है।" },
+        { icon: "🍅", t: "साधारण टमाटर सॉस", d: "लहसुन वाली झटपट टमाटर सॉस ब्रेडेड चिकन और पिघले चीज़ की भारीपन को संतुलित करती है।" },
+        { icon: "🧀", t: "ऊपर हैम और मोज़ेरेला", d: "हैम की एक स्लाइस और पिघली मोज़ेरेला अंतिम परत बनाती है, जिसे उबाल आने तक ग्रिल किया जाता है।" }
+      ],
+      tr: [
+        { icon: "🍗", t: "Avustralya pub klasiği", d: "Kısaca 'parma' olarak bilinir, her Avustralya pub menüsünün yıldızıdır, bol ve cömert servis edilir." },
+        { icon: "🍞", t: "Çıtır galeta önemlidir", d: "İncecik dövülüp ince galeta unu ile kaplanan tavuk, sos ve peynirin altında bile gevrek kalır." },
+        { icon: "🍅", t: "Basit bir domates sosu", d: "Hızlı hazırlanan sarımsaklı domates sosu, galeta unlu tavuğun ve erimiş peynirin ağırlığını dengeler." },
+        { icon: "🧀", t: "Üzerinde jambon ve mozzarella", d: "Bir dilim jambon ve eriyen mozzarella son katmanı oluşturur, köpürene kadar ızgara yapılır." }
+      ],
+      it: [
+        { icon: "🍗", t: "Un classico dei pub australiani", d: "La 'parma', come viene chiamata in breve, è la star di ogni menu dei pub australiani, servita generosa." },
+        { icon: "🍞", t: "La panatura croccante è essenziale", d: "Il pollo battuto sottile e impanato nel pangrattato fine resta croccante anche sotto sugo e formaggio." },
+        { icon: "🍅", t: "Un sugo di pomodoro semplice", d: "Un sugo rapido di pomodoro e aglio bilancia la ricchezza del pollo impanato e del formaggio fuso." },
+        { icon: "🧀", t: "Prosciutto e mozzarella sopra", d: "Una fetta di prosciutto e mozzarella fusa formano lo strato finale, gratinato fino a gorgogliare." }
+      ],
+      ko: [
+        { icon: "🍗", t: "호주 펍의 대표 메뉴", d: "줄여서 '파르마'라 불리며, 호주 펍 메뉴의 스타로 푸짐하게 제공된다." },
+        { icon: "🍞", t: "바삭한 튀김옷이 핵심", d: "얇게 두드려 고운 빵가루를 입힌 치킨은 소스와 치즈 아래에서도 바삭함을 유지한다." },
+        { icon: "🍅", t: "심플한 토마토 소스", d: "마늘을 넣은 간단한 토마토 소스가 튀긴 치킨과 녹은 치즈의 진한 맛을 중화시킨다." },
+        { icon: "🧀", t: "위에 햄과 모짜렐라", d: "햄 한 장과 녹인 모짜렐라가 마지막 층을 이루며, 보글거릴 때까지 그릴에 굽는다." }
+      ]
+    },
+    ingredients: {
+      ro: ["4 piept de pui", "100g făină", "2 ouă bătute", "150g pesmet fin", "300ml sos de roșii (passata)", "2 căței de usturoi", "4 felii de șuncă", "200g mozzarella rasă", "ulei pentru prăjit"],
+      en: ["4 chicken breast fillets", "100g flour", "2 eggs, beaten", "150g fine breadcrumbs", "300ml tomato passata", "2 garlic cloves", "4 slices leg ham", "200g grated mozzarella", "oil for frying"],
+      es: ["4 filetes de pechuga de pollo", "100g de harina", "2 huevos batidos", "150g de pan rallado fino", "300ml de tomate triturado", "2 dientes de ajo", "4 lonchas de jamón", "200g de mozzarella rallada", "aceite para freír"],
+      fr: ["4 filets de poulet", "100g de farine", "2 œufs battus", "150g de chapelure fine", "300ml de passata de tomate", "2 gousses d'ail", "4 tranches de jambon", "200g de mozzarella râpée", "huile pour friture"],
+      de: ["4 Hähnchenbrustfilets", "100g Mehl", "2 verquirlte Eier", "150g feine Semmelbrösel", "300ml passierte Tomaten", "2 Knoblauchzehen", "4 Scheiben Kochschinken", "200g geriebener Mozzarella", "Öl zum Braten"],
+      pt: ["4 filés de peito de frango", "100g de farinha", "2 ovos batidos", "150g de farinha de rosca fina", "300ml de molho de tomate", "2 dentes de alho", "4 fatias de presunto", "200g de mozzarella ralada", "óleo para fritar"],
+      ru: ["4 куриных филе", "100г муки", "2 взбитых яйца", "150г мелких панировочных сухарей", "300мл томатного пюре", "2 зубчика чеснока", "4 ломтика ветчины", "200г тёртой моцареллы", "масло для жарки"],
+      ar: ["4 شرائح صدر دجاج", "100غ دقيق", "2 بيضة مخفوقة", "150غ بقسماط ناعم", "300مل صلصة طماطم مهروسة", "2 فص ثوم", "4 شرائح لحم مقدد", "200غ موزاريلا مبشورة", "زيت للقلي"],
+      zh: ["4块鸡胸肉排", "100克面粉", "2个鸡蛋，打散", "150克细面包糠", "300毫升番茄泥", "2瓣大蒜", "4片火腿", "200克马苏里拉丝", "煎炸用油"],
+      ja: ["鶏むね肉フィレ4枚", "小麦粉100g", "溶き卵2個", "細かいパン粉150g", "トマトパッサータ300ml", "にんにく2片", "ハム4枚", "モッツァレラチーズ（すりおろし）200g", "揚げ油"],
+      hi: ["4 चिकन ब्रेस्ट फिलेट", "100 ग्राम आटा", "2 अंडे, फेंटे हुए", "150 ग्राम बारीक ब्रेडक्रम्ब", "300 मिली टमाटर पैसाटा", "2 लहसुन की कलियां", "4 स्लाइस हैम", "200 ग्राम कद्दूकस मोज़ेरेला", "तलने के लिए तेल"],
+      tr: ["4 tavuk göğsü fileto", "100g un", "2 çırpılmış yumurta", "150g ince galeta unu", "300ml domates püresi (passata)", "2 diş sarımsak", "4 dilim jambon", "200g rendelenmiş mozzarella", "kızartmak için yağ"],
+      it: ["4 filetti di petto di pollo", "100g di farina", "2 uova sbattute", "150g di pangrattato fine", "300ml di passata di pomodoro", "2 spicchi d'aglio", "4 fette di prosciutto cotto", "200g di mozzarella grattugiata", "olio per friggere"],
+      ko: ["닭가슴살 필레 4장", "밀가루 100g", "달걀 2개, 푼 것", "고운 빵가루 150g", "토마토 파사타 300ml", "마늘 2쪽", "햄 4장", "간 모짜렐라 치즈 200g", "튀김용 기름"]
+    },
+    howIsMade: {
+      ro: "Se bate puiul subțire pentru grosime uniformă, apoi se condimentează cu sare și piper. Se trece fiecare piept prin făină, apoi prin ou bătut și se acoperă bine cu pesmet. Se prăjește puiul pane în ulei încins până devine auriu și pătrunde bine, apoi se scurge pe hârtie absorbantă. Se fierbe sosul de roșii cu usturoi tocat până se îngroașă și capătă gust bogat. Se așază șnițelele prăjite pe o tavă și se toarnă sos de roșii peste fiecare. Se pune câte o felie de șuncă și un pumn generos de mozzarella pe fiecare bucată. Se dă la grill până brânza se topește și face bule, apoi se servește cu cartofi prăjiți și salată.",
+      en: "Pound the chicken thin for even thickness, then season with salt and pepper. Dust each fillet in flour, dip in beaten egg, and coat thoroughly in breadcrumbs. Fry the crumbed chicken in hot oil until golden and cooked through, then drain on paper towel. Simmer the tomato passata with chopped garlic until it thickens into a rich sauce. Arrange the fried schnitzels on a tray and spoon the tomato sauce over each one. Layer a slice of ham and a generous handful of mozzarella on top of each piece. Grill until the cheese is melted and bubbling, then serve with chips and salad.",
+      es: "Aplana el pollo para un grosor uniforme y sazona con sal y pimienta. Pasa cada filete por harina, luego por huevo batido y cúbrelo bien con pan rallado. Fríe el pollo empanizado en aceite caliente hasta dorar y cocinar bien, luego escúrrelo sobre papel absorbente. Cuece a fuego lento el tomate triturado con ajo picado hasta que espese y tome un sabor intenso. Coloca las milanesas fritas en una bandeja y vierte la salsa de tomate sobre cada una. Añade una loncha de jamón y un puñado generoso de mozzarella encima de cada pieza. Gratina hasta que el queso se derrita y burbujee, y sirve con papas fritas y ensalada.",
+      fr: "Aplatissez le poulet pour une épaisseur uniforme, puis assaisonnez de sel et de poivre. Passez chaque filet dans la farine, puis dans l'œuf battu, et enrobez-le généreusement de chapelure. Faites frire le poulet pané dans l'huile chaude jusqu'à ce qu'il soit doré et cuit, puis égouttez-le sur du papier absorbant. Faites mijoter la passata avec l'ail haché jusqu'à obtenir une sauce épaisse et riche. Disposez les escalopes frites sur un plateau et nappez chacune de sauce tomate. Ajoutez une tranche de jambon et une bonne poignée de mozzarella sur chaque morceau. Faites gratiner jusqu'à ce que le fromage fonde et bouillonne, puis servez avec des frites et une salade.",
+      de: "Das Hähnchen für eine gleichmäßige Dicke dünn klopfen, dann mit Salz und Pfeffer würzen. Jedes Filet in Mehl wenden, durch verquirltes Ei ziehen und gründlich mit Semmelbröseln panieren. Das panierte Hähnchen in heißem Öl goldbraun und durchgebraten braten, dann auf Küchenpapier abtropfen lassen. Die passierten Tomaten mit gehacktem Knoblauch einköcheln, bis eine kräftige Sauce entsteht. Die gebratenen Schnitzel auf ein Blech legen und jedes mit Tomatensauce beträufeln. Eine Scheibe Schinken und eine großzügige Portion Mozzarella auf jedes Stück legen. Überbacken, bis der Käse schmilzt und blubbert, dann mit Pommes und Salat servieren.",
+      pt: "Bata o frango fino para uma espessura uniforme, depois tempere com sal e pimenta. Passe cada filé pela farinha, depois pelo ovo batido e cubra bem com farinha de rosca. Frite o frango empanado em óleo quente até dourar e cozinhar por completo, depois escorra em papel absorvente. Cozinhe o molho de tomate com alho picado até engrossar e ganhar sabor intenso. Disponha os escalopes fritos numa travessa e regue cada um com molho de tomate. Coloque uma fatia de presunto e um punhado generoso de mozzarella em cada pedaço. Leve ao grill até o queijo derreter e borbulhar, depois sirva com batatas fritas e salada.",
+      ru: "Отбейте курицу до одинаковой толщины, затем приправьте солью и перцем. Обваляйте каждое филе в муке, обмакните во взбитое яйцо и тщательно обваляйте в панировочных сухарях. Обжарьте панированную курицу в горячем масле до золотистой корочки и полной готовности, затем обсушите на бумажном полотенце. Потушите томатное пюре с измельчённым чесноком до густого насыщенного соуса. Разложите обжаренные шницели на противне и полейте каждый томатным соусом. Положите на каждый кусок ломтик ветчины и щедрую горсть моцареллы. Запекайте до расплавления и пузырьков сыра, затем подавайте с картофелем фри и салатом.",
+      ar: "اطرقي الدجاج ليصبح رقيقاً بسماكة متساوية، ثم تبّليه بالملح والفلفل. مرّري كل شريحة في الدقيق، ثم في البيض المخفوق، وغطّيها جيداً بالبقسماط. اقلي الدجاج المقرمش في زيت ساخن حتى يصبح ذهبياً ومطهواً جيداً، ثم صفّيه على ورق ماص. اطهي صلصة الطماطم مع الثوم المفروم حتى تتكاثف وتصبح غنية. رتّبي شرائح الدجاج المقلية على صينية واسكبي صلصة الطماطم فوق كل منها. ضعي شريحة لحم مقدد وحفنة سخية من الموزاريلا فوق كل قطعة. اشويها حتى يذوب الجبن ويفور، ثم قدّميها مع البطاطا المقلية والسلطة.",
+      zh: "将鸡肉拍打至厚度均匀，然后用盐和胡椒调味。将每块鸡排依次裹上面粉、蛋液，再彻底裹满面包糠。将裹好面包糠的鸡肉放入热油中炸至金黄熟透，捞出沥干在厨房纸上。将番茄泥与蒜末一起小火慢煮至浓稠味浓。将炸好的鸡排摆在烤盘上，在每块上淋上番茄酱。在每块鸡排上铺一片火腿和一大把马苏里拉芝士。放入烤箱烤至芝士融化冒泡，配薯条和沙拉享用。",
+      ja: "鶏肉を均一な厚さになるまで叩き、塩こしょうで下味をつける。各フィレに小麦粉をまぶし、溶き卵にくぐらせ、パン粉をしっかりまぶす。衣をつけた鶏肉を熱した油できつね色になり中まで火が通るまで揚げ、キッチンペーパーで油を切る。トマトパッサータをみじん切りのにんにくと一緒に煮詰め、濃厚なソースにする。揚げたシュニッツェルをトレイに並べ、それぞれにトマトソースをかける。各切れにハムを1枚とたっぷりのモッツァレラをのせる。チーズが溶けて泡立つまでグリルし、フライドポテトとサラダを添えて提供する。",
+      hi: "चिकन को समान मोटाई के लिए पतला कूटें, फिर नमक-काली मिर्च से स्वाद दें। हर फिलेट को आटे में लपेटें, फिर फेंटे अंडे में डुबोएं और अच्छी तरह ब्रेडक्रम्ब में लपेटें। ब्रेडेड चिकन को गरम तेल में सुनहरा और पूरी तरह पका होने तक तलें, फिर टिशू पेपर पर निथारें। टमाटर पैसाटा को कटे लहसुन के साथ तब तक पकाएं जब तक गाढ़ी और स्वादिष्ट सॉस न बन जाए। तली हुई श्निट्ज़ल को ट्रे पर रखें और हर पर टमाटर सॉस डालें। हर टुकड़े पर हैम की एक स्लाइस और भरपूर मोज़ेरेला डालें। चीज़ पिघलकर उबाल आने तक ग्रिल करें, फिर चिप्स और सलाद के साथ परोसें।",
+      tr: "Tavuğu eşit kalınlık için ince dövün, ardından tuz ve karabiberle tatlandırın. Her fileto una bulayın, çırpılmış yumurtaya batırın ve iyice galeta ununa bulayın. Galeta unlu tavuğu sıcak yağda altın rengi ve içi pişene kadar kızartın, ardından kağıt havlu üzerinde süzdürün. Domates püresini doğranmış sarımsakla koyulaşıp zengin bir sos olana kadar pişirin. Kızarmış şnitzelleri bir tepsiye dizin ve her birinin üzerine domates sosu gezdirin. Her parçanın üzerine bir dilim jambon ve cömert bir avuç mozzarella koyun. Peynir eriyip köpürene kadar ızgara yapın, ardından patates kızartması ve salata ile servis edin.",
+      it: "Batti il pollo per uno spessore uniforme, poi condisci con sale e pepe. Passa ogni filetto nella farina, poi nell'uovo sbattuto, e ricoprilo bene di pangrattato. Friggi il pollo impanato in olio caldo finché non è dorato e ben cotto, poi scolalo su carta assorbente. Fai sobbollire la passata di pomodoro con l'aglio tritato finché non diventa un sugo denso e ricco. Disponi le cotolette fritte su una teglia e versa il sugo di pomodoro su ciascuna. Aggiungi una fetta di prosciutto e una generosa manciata di mozzarella su ogni pezzo. Gratina finché il formaggio non si scioglie e gorgoglia, poi servi con patatine e insalata.",
+      ko: "닭고기를 두께가 균일하도록 얇게 두드린 뒤 소금과 후추로 간한다. 각 필레에 밀가루를 묻히고 푼 달걀에 담갔다가 빵가루를 골고루 입힌다. 빵가루 입힌 닭고기를 뜨거운 기름에 노릇하고 속까지 익을 때까지 튀긴 뒤 키친타월에 기름을 뺀다. 다진 마늘과 함께 토마토 파사타를 걸쭉하고 진한 소스가 될 때까지 졸인다. 튀긴 슈니첼을 트레이에 놓고 각각에 토마토 소스를 끼얹는다. 각 조각 위에 햄 한 장과 넉넉한 모짜렐라 치즈를 올린다. 치즈가 녹아 보글거릴 때까지 그릴에 구운 뒤 감자튀김과 샐러드를 곁들여 낸다."
+    },
+    originText: {
+      ro: "Chicken parmigiana, sau simplu 'parma', și-a găsit drumul în Australia prin influența culinară italiană din secolul XX, dar a devenit rapid un preparat pur australian, distinct de melanzane alla parmigiana de origine. Astăzi e atât de răspândit încât multe pub-uri organizează chiar 'Parma Night' săptămânal cu prețuri speciale.\n\nVersiunile variază enorm de la un local la altul, de la clasicul cu șuncă și mozzarella la variante cu ananas sau bacon, dar baza rămâne aceeași: pui pane crocant, sos de roșii și brânză topită generos.",
+      en: "Chicken parmigiana, or simply 'parma', found its way to Australia through 20th-century Italian culinary influence, but quickly became a distinctly Australian dish, far removed from the original melanzane alla parmigiana. Today it's so widespread that many pubs even run a weekly 'Parma Night' with special prices.\n\nVersions vary wildly from pub to pub, from the classic ham-and-mozzarella to variations topped with pineapple or bacon, but the base stays the same: crispy crumbed chicken, tomato sauce, and generously melted cheese.",
+      es: "El chicken parmigiana, o simplemente 'parma', llegó a Australia por la influencia culinaria italiana del siglo XX, pero rápidamente se convirtió en un plato genuinamente australiano, muy alejado del melanzane alla parmigiana original. Hoy está tan extendido que muchos pubs organizan una 'Parma Night' semanal con precios especiales.\n\nLas versiones varían enormemente de un local a otro, desde el clásico con jamón y mozzarella hasta variantes con piña o panceta, pero la base se mantiene igual: pollo empanizado crujiente, salsa de tomate y queso fundido generosamente.",
+      fr: "Le chicken parmigiana, ou simplement 'parma', s'est implanté en Australie grâce à l'influence culinaire italienne du XXe siècle, mais est vite devenu un plat résolument australien, bien éloigné du melanzane alla parmigiana original. Aujourd'hui, il est si répandu que de nombreux pubs organisent une 'Parma Night' hebdomadaire à prix réduit.\n\nLes versions varient énormément d'un pub à l'autre, du classique jambon-mozzarella aux variantes à l'ananas ou au bacon, mais la base reste la même : poulet pané croustillant, sauce tomate et fromage fondu généreusement.",
+      de: "Chicken Parmigiana, oder kurz 'Parma', kam durch den italienischen kulinarischen Einfluss des 20. Jahrhunderts nach Australien, wurde aber schnell zu einem eigenständig australischen Gericht, weit entfernt vom ursprünglichen Melanzane alla Parmigiana. Heute ist es so verbreitet, dass viele Pubs sogar eine wöchentliche 'Parma Night' mit Sonderpreisen veranstalten.\n\nDie Versionen variieren stark von Pub zu Pub, vom klassischen Schinken-Mozzarella bis zu Varianten mit Ananas oder Speck, aber die Basis bleibt gleich: knusprig paniertes Hähnchen, Tomatensauce und großzügig geschmolzener Käse.",
+      pt: "O chicken parmigiana, ou simplesmente 'parma', chegou à Austrália pela influência culinária italiana do século XX, mas rapidamente se tornou um prato genuinamente australiano, bem distante do melanzane alla parmigiana original. Hoje é tão difundido que muitos pubs até organizam uma 'Parma Night' semanal com preços especiais.\n\nAs versões variam enormemente de um pub para outro, do clássico com presunto e mozzarella a variantes com ananás ou bacon, mas a base permanece a mesma: frango empanado crocante, molho de tomate e queijo derretido generosamente.",
+      ru: "Курица пармиджана, или просто «парма», попала в Австралию благодаря итальянскому кулинарному влиянию XX века, но быстро стала самобытным австралийским блюдом, далёким от оригинального melanzane alla parmigiana. Сегодня оно настолько распространено, что многие пабы устраивают еженедельные «Parma Night» со специальными ценами.\n\nВерсии сильно различаются от паба к пабу — от классической с ветчиной и моцареллой до вариантов с ананасом или беконом, но основа остаётся неизменной: хрустящая панированная курица, томатный соус и щедро расплавленный сыр.",
+      ar: "وصل طبق 'شيكن بارميجيانا'، أو 'بارما' اختصاراً، إلى أستراليا عبر التأثير الطهوي الإيطالي في القرن العشرين، لكنه سرعان ما أصبح طبقاً أسترالياً مميزاً، بعيداً عن أصله الإيطالي melanzane alla parmigiana. اليوم أصبح منتشراً لدرجة أن العديد من الحانات تقيم 'ليلة بارما' أسبوعياً بأسعار خاصة.\n\nتختلف النسخ اختلافاً كبيراً من حانة إلى أخرى، من الكلاسيكية باللحم المقدد والموزاريلا إلى نسخ مع الأناناس أو اللحم المقدد المقرمش، لكن الأساس يبقى واحداً: دجاج مقرمش، صلصة طماطم، وجبن مذاب بسخاء.",
+      zh: "帕玛森鸡排，简称'parma'，通过20世纪意大利烹饪的影响传入澳大利亚，但很快演变成一道地道的澳大利亚菜，与原版的茄子帕玛森大相径庭。如今它极为流行，许多酒吧甚至每周举办特价的'Parma之夜'。\n\n各家酒吧的做法差异很大，从经典的火腿马苏里拉版本到菠萝或培根变体，但基础始终不变：酥脆的炸鸡排、番茄酱和大量融化的奶酪。",
+      ja: "チキンパルミジャーナ、略して『パルマ』は20世紀のイタリア料理の影響でオーストラリアに伝わったが、すぐに本場のメランザーネ・アッラ・パルミジャーナとは全く異なる、オーストラリア独自の料理となった。今では非常に人気があり、多くのパブが特別価格の週末『パルマナイト』を開催している。\n\nパブごとにバリエーションは大きく異なり、定番のハムとモッツァレラからパイナップルやベーコンを乗せたものまであるが、基本は変わらない：サクサクの衣のチキン、トマトソース、たっぷり溶けたチーズだ。",
+      hi: "चिकन पर्मिजियाना, या संक्षेप में 'पर्मा', 20वीं सदी के इतालवी पाक प्रभाव से ऑस्ट्रेलिया पहुंचा, लेकिन जल्दी ही मूल melanzane alla parmigiana से बहुत अलग, एक विशिष्ट ऑस्ट्रेलियाई व्यंजन बन गया। आज यह इतना लोकप्रिय है कि कई पब साप्ताहिक 'पर्मा नाइट' विशेष कीमतों पर आयोजित करते हैं।\n\nपब-दर-पब संस्करण बहुत अलग होते हैं, क्लासिक हैम-मोज़ेरेला से लेकर अनानास या बेकन वाली विविधताओं तक, लेकिन आधार वही रहता है: कुरकुरा ब्रेडेड चिकन, टमाटर सॉस, और भरपूर पिघला चीज़।",
+      tr: "Chicken parmigiana, kısaca 'parma', 20. yüzyıldaki İtalyan mutfak etkisiyle Avustralya'ya ulaştı, ancak hızla orijinal melanzane alla parmigiana'dan uzak, tamamen Avustralya'ya özgü bir yemeğe dönüştü. Bugün o kadar yaygın ki birçok pub haftalık özel fiyatlı 'Parma Night' düzenliyor.\n\nSürümler pubdan puba büyük farklılıklar gösterir, klasik jambon-mozzarella'dan ananas veya pastırmalı versiyonlara kadar, ama temel aynı kalır: çıtır galeta unlu tavuk, domates sosu ve cömertçe eritilmiş peynir.",
+      it: "Il chicken parmigiana, o semplicemente 'parma', arrivò in Australia grazie all'influenza culinaria italiana del XX secolo, ma divenne presto un piatto squisitamente australiano, ben lontano dal melanzane alla parmigiana originale. Oggi è così diffuso che molti pub organizzano persino una 'Parma Night' settimanale a prezzi speciali.\n\nLe versioni variano enormemente da un pub all'altro, dal classico con prosciutto e mozzarella a varianti con ananas o pancetta, ma la base rimane la stessa: pollo impanato croccante, sugo di pomodoro e formaggio fuso in abbondanza.",
+      ko: "치킨 파르미지아나, 줄여서 '파르마'는 20세기 이탈리아 요리의 영향으로 호주에 전해졌지만, 곧 원조 멜란자네 알라 파르미지아나와는 거리가 먼 독특한 호주 요리가 되었다. 오늘날에는 매우 대중적이어서 많은 펍이 특가로 매주 '파르마 나이트'를 연다.\n\n펍마다 버전이 크게 다른데, 클래식한 햄-모짜렐라부터 파인애플이나 베이컨을 얹은 변형까지 다양하지만, 기본은 동일하다: 바삭한 튀김옷의 치킨, 토마토 소스, 그리고 듬뿍 녹인 치즈다."
+    }
+  },
+  {
+    id: 427,
+    servings: 4,
+    tipType: "fish",
+    pairingsType: "fish",
+    nutrition: { cal: 380, prot: 34, carb: 4, fat: 25, fib: 1 },
+    origin: {
+      ro: "Australia", en: "Australia", es: "Australia", fr: "Australie", de: "Australien",
+      pt: "Austrália", ru: "Австралия", ar: "أستراليا", zh: "澳大利亚", ja: "オーストラリア",
+      hi: "ऑस्ट्रेलिया", tr: "Avustralya", it: "Australia", ko: "호주"
+    },
+    name: {
+      ro: "Barramundi cu unt și macadamia", en: "Barramundi with Brown Butter and Macadamia", es: "Barramundi con mantequilla dorada y macadamia", fr: "Barramundi au beurre noisette et macadamia", de: "Barramundi mit brauner Butter und Macadamia",
+      pt: "Barramundi com manteiga dourada e macadâmia", ru: "Барамунди с ореховым маслом и макадамией", ar: "سمك باراموندي بالزبدة البنية والمكاداميا", zh: "澳洲肺鱼配焦香黄油夏威夷果", ja: "バラマンディのブラウンバターマカダミア添え",
+      hi: "बरामुंडी ब्राउन बटर और मैकाडेमिया के साथ", tr: "Kahverengi Tereyağlı ve Makadamyalı Barramundi", it: "Barramundi al burro nocciola e macadamia", ko: "브라운 버터 마카다미아 바라문디"
+    },
+    category: {
+      ro: "Fel principal", en: "Main Course", es: "Plato principal", fr: "Plat principal", de: "Hauptgericht",
+      pt: "Prato principal", ru: "Основное блюдо", ar: "طبق رئيسي", zh: "主菜", ja: "メイン料理",
+      hi: "मुख्य व्यंजन", tr: "Ana Yemek", it: "Piatto principale", ko: "메인 요리"
+    },
+    featureCards: {
+      ro: [
+        { icon: "🐟", t: "Peștele preferat al Australiei", d: "Barramundi are carne albă, fermă și dulceagă, cu piele care devine extraordinar de crocantă la prăjit." },
+        { icon: "🔥", t: "Pielea crocantă e esențială", d: "Un praf ușor de făină pe piele și o tigaie foarte încinsă dau crusta aurie caracteristică." },
+        { icon: "🧈", t: "Unt cu aromă de alune", d: "Untul lăsat să capete o culoare brun-aurie devine baza unui sos rapid și bogat în aromă." },
+        { icon: "🥜", t: "Macadamia, un ingredient nativ", d: "Nucile de macadamia tocate aduc crocanță și un gust unic australian sosului final." }
+      ],
+      en: [
+        { icon: "🐟", t: "Australia's favourite fish", d: "Barramundi has firm, sweet white flesh and skin that turns wonderfully crisp when pan-fried." },
+        { icon: "🔥", t: "Crispy skin is essential", d: "A light dusting of flour on the skin and a very hot pan give the signature golden crust." },
+        { icon: "🧈", t: "Nutty brown butter", d: "Butter cooked until golden-brown becomes the base for a quick, richly flavoured sauce." },
+        { icon: "🥜", t: "Macadamia, a native touch", d: "Chopped macadamia nuts bring crunch and a distinctly Australian flavour to the finished sauce." }
+      ],
+      es: [
+        { icon: "🐟", t: "El pescado favorito de Australia", d: "El barramundi tiene carne blanca firme y dulce, con una piel que queda maravillosamente crujiente al freír." },
+        { icon: "🔥", t: "La piel crujiente es esencial", d: "Un ligero espolvoreo de harina en la piel y una sartén muy caliente dan la característica costra dorada." },
+        { icon: "🧈", t: "Mantequilla avellanada", d: "La mantequilla cocinada hasta dorarse se convierte en la base de una salsa rápida y sabrosa." },
+        { icon: "🥜", t: "Macadamia, un toque nativo", d: "Las nueces de macadamia picadas aportan crujiente y un sabor claramente australiano a la salsa final." }
+      ],
+      fr: [
+        { icon: "🐟", t: "Le poisson préféré de l'Australie", d: "Le barramundi a une chair blanche ferme et douce, avec une peau qui devient merveilleusement croustillante." },
+        { icon: "🔥", t: "La peau croustillante est essentielle", d: "Un léger voile de farine sur la peau et une poêle très chaude donnent la croûte dorée caractéristique." },
+        { icon: "🧈", t: "Un beurre noisette", d: "Le beurre cuit jusqu'à devenir doré forme la base d'une sauce rapide et riche en saveurs." },
+        { icon: "🥜", t: "La macadamia, une touche locale", d: "Les noix de macadamia hachées apportent du croquant et une saveur bien australienne à la sauce." }
+      ],
+      de: [
+        { icon: "🐟", t: "Australiens Lieblingsfisch", d: "Barramundi hat festes, süßliches weißes Fleisch und Haut, die beim Anbraten herrlich knusprig wird." },
+        { icon: "🔥", t: "Knusprige Haut ist entscheidend", d: "Eine leichte Mehlschicht auf der Haut und eine sehr heiße Pfanne ergeben die typische goldene Kruste." },
+        { icon: "🧈", t: "Nussig-braune Butter", d: "Bis goldbraun gebratene Butter wird zur Basis einer schnellen, aromatischen Sauce." },
+        { icon: "🥜", t: "Macadamia, eine einheimische Note", d: "Gehackte Macadamianüsse geben der fertigen Sauce Crunch und einen typisch australischen Geschmack." }
+      ],
+      pt: [
+        { icon: "🐟", t: "O peixe favorito da Austrália", d: "O barramundi tem carne branca firme e doce, com pele que fica maravilhosamente crocante ao fritar." },
+        { icon: "🔥", t: "A pele crocante é essencial", d: "Uma leve camada de farinha na pele e uma frigideira muito quente dão a crosta dourada característica." },
+        { icon: "🧈", t: "Manteiga avelãda", d: "A manteiga cozinhada até dourar torna-se a base de um molho rápido e rico em sabor." },
+        { icon: "🥜", t: "Macadâmia, um toque nativo", d: "Nozes de macadâmia picadas trazem crocância e um sabor tipicamente australiano ao molho final." }
+      ],
+      ru: [
+        { icon: "🐟", t: "Любимая рыба Австралии", d: "У барамунди плотное сладковатое белое мясо и кожа, которая становится изумительно хрустящей при жарке." },
+        { icon: "🔥", t: "Хрустящая кожа — главное", d: "Лёгкий слой муки на коже и очень горячая сковорода дают фирменную золотистую корочку." },
+        { icon: "🧈", t: "Ореховое масло", d: "Масло, доведённое до золотисто-коричневого цвета, становится основой быстрого насыщенного соуса." },
+        { icon: "🥜", t: "Макадамия — местный штрих", d: "Измельчённые орехи макадамия придают финальному соусу хруст и характерный австралийский вкус." }
+      ],
+      ar: [
+        { icon: "🐟", t: "سمك أستراليا المفضل", d: "يتميز الباراموندي بلحم أبيض متماسك وحلو، وجلد يصبح مقرمشاً بشكل رائع عند القلي." },
+        { icon: "🔥", t: "الجلد المقرمش أساسي", d: "رشة خفيفة من الدقيق على الجلد ومقلاة ساخنة جداً تمنحان القشرة الذهبية المميزة." },
+        { icon: "🧈", t: "زبدة بنية بنكهة البندق", d: "الزبدة المطهوة حتى تصبح ذهبية بنية تصبح أساساً لصلصة سريعة وغنية بالنكهة." },
+        { icon: "🥜", t: "المكاداميا، لمسة محلية", d: "جوز المكاداميا المفروم يضفي قرمشة ونكهة أسترالية مميزة على الصلصة النهائية." }
+      ],
+      zh: [
+        { icon: "🐟", t: "澳大利亚最爱的鱼", d: "肺鱼肉质紧实带甜味，鱼皮煎制后格外酥脆。" },
+        { icon: "🔥", t: "酥脆鱼皮是关键", d: "鱼皮上薄薄一层面粉，加上滚烫的煎锅，才能煎出标志性的金黄脆皮。" },
+        { icon: "🧈", t: "焦香黄油", d: "黄油煎至焦糖色，成为快手浓郁酱汁的基础。" },
+        { icon: "🥜", t: "夏威夷果，本土风味", d: "切碎的夏威夷果为最后的酱汁带来爽脆口感和典型的澳洲风味。" }
+      ],
+      ja: [
+        { icon: "🐟", t: "オーストラリアの人気魚", d: "バラマンディは締まった甘みのある白身魚で、皮は焼くと見事にパリッとなる。" },
+        { icon: "🔥", t: "パリパリの皮が決め手", d: "皮に軽く小麦粉をまぶし、よく熱したフライパンで焼くことで特徴的な黄金色の焼き目がつく。" },
+        { icon: "🧈", t: "香ばしい焦がしバター", d: "きつね色になるまで焼いたバターが、手早く作る風味豊かなソースの土台になる。" },
+        { icon: "🥜", t: "マカダミア、地元らしい一品", d: "刻んだマカダミアナッツが仕上げのソースに食感と独特のオーストラリアらしい風味を加える。" }
+      ],
+      hi: [
+        { icon: "🐟", t: "ऑस्ट्रेलिया की पसंदीदा मछली", d: "बरामुंडी का मांस दृढ़ और मीठा होता है, और तलने पर इसकी त्वचा अद्भुत रूप से कुरकुरी हो जाती है।" },
+        { icon: "🔥", t: "कुरकुरी त्वचा जरूरी है", d: "त्वचा पर हल्का आटा और बहुत गरम पैन विशिष्ट सुनहरी परत देते हैं।" },
+        { icon: "🧈", t: "अखरोट जैसा भूरा मक्खन", d: "सुनहरा-भूरा होने तक पका मक्खन एक झटपट, स्वादिष्ट सॉस का आधार बनता है।" },
+        { icon: "🥜", t: "मैकाडेमिया, एक देसी स्पर्श", d: "कटे हुए मैकाडेमिया मेवे अंतिम सॉस में कुरकुरापन और विशिष्ट ऑस्ट्रेलियाई स्वाद लाते हैं।" }
+      ],
+      tr: [
+        { icon: "🐟", t: "Avustralya'nın gözde balığı", d: "Barramundi'nin sert ve tatlımsı beyaz eti vardır, derisi kızartıldığında muhteşem çıtır olur." },
+        { icon: "🔥", t: "Çıtır deri şarttır", d: "Derinin üzerine ince bir un tabakası ve çok sıcak bir tava, o karakteristik altın rengi kabuğu verir." },
+        { icon: "🧈", t: "Fındıksı kahverengi tereyağı", d: "Altın kahverengi olana kadar pişirilen tereyağı, hızlı ve lezzetli bir sosun temelini oluşturur." },
+        { icon: "🥜", t: "Makadamya, yerel bir dokunuş", d: "Doğranmış makadamya fındıkları son sosa çıtırlık ve belirgin bir Avustralya lezzeti katar." }
+      ],
+      it: [
+        { icon: "🐟", t: "Il pesce preferito dell'Australia", d: "Il barramundi ha carne bianca soda e dolce, con la pelle che diventa meravigliosamente croccante in padella." },
+        { icon: "🔥", t: "La pelle croccante è essenziale", d: "Una leggera infarinatura sulla pelle e una padella molto calda danno la caratteristica crosta dorata." },
+        { icon: "🧈", t: "Burro nocciola", d: "Il burro cotto fino a diventare dorato diventa la base di un sugo rapido e ricco di sapore." },
+        { icon: "🥜", t: "Macadamia, un tocco locale", d: "Le noci macadamia tritate aggiungono croccantezza e un sapore tipicamente australiano al sugo finale." }
+      ],
+      ko: [
+        { icon: "🐟", t: "호주가 사랑하는 생선", d: "바라문디는 살이 단단하고 달콤하며, 껍질은 구우면 놀랍도록 바삭해진다." },
+        { icon: "🔥", t: "바삭한 껍질이 핵심", d: "껍질에 밀가루를 살짝 묻히고 아주 뜨거운 팬에서 구우면 특유의 황금빛 껍질이 만들어진다." },
+        { icon: "🧈", t: "고소한 브라운 버터", d: "황금빛 갈색이 될 때까지 익힌 버터가 빠르고 풍미 가득한 소스의 기본이 된다." },
+        { icon: "🥜", t: "마카다미아, 호주다운 터치", d: "다진 마카다미아가 마지막 소스에 바삭함과 호주 특유의 풍미를 더한다." }
+      ]
+    },
+    ingredients: {
+      ro: ["4 file de barramundi, cu piele", "sare și piper", "2 linguri făină", "80g unt", "2 linguri suc de lămâie", "1 lingură capere", "50g nuci de macadamia, tocate", "pătrunjel proaspăt tocat", "1 lingură ulei de măsline"],
+      en: ["4 barramundi fillets, skin on", "salt and pepper", "2 tbsp flour", "80g butter", "2 tbsp lemon juice", "1 tbsp capers", "50g macadamia nuts, chopped", "fresh parsley, chopped", "1 tbsp olive oil"],
+      es: ["4 filetes de barramundi, con piel", "sal y pimienta", "2 cdas de harina", "80g de mantequilla", "2 cdas de jugo de limón", "1 cda de alcaparras", "50g de nueces de macadamia picadas", "perejil fresco picado", "1 cda de aceite de oliva"],
+      fr: ["4 filets de barramundi, avec peau", "sel et poivre", "2 c. à soupe de farine", "80g de beurre", "2 c. à soupe de jus de citron", "1 c. à soupe de câpres", "50g de noix de macadamia hachées", "persil frais haché", "1 c. à soupe d'huile d'olive"],
+      de: ["4 Barramundi-Filets mit Haut", "Salz und Pfeffer", "2 EL Mehl", "80g Butter", "2 EL Zitronensaft", "1 EL Kapern", "50g gehackte Macadamianüsse", "frische gehackte Petersilie", "1 EL Olivenöl"],
+      pt: ["4 filés de barramundi, com pele", "sal e pimenta", "2 col. sopa de farinha", "80g de manteiga", "2 col. sopa de suco de limão", "1 col. sopa de alcaparras", "50g de nozes de macadâmia picadas", "salsa fresca picada", "1 col. sopa de azeite"],
+      ru: ["4 филе барамунди с кожей", "соль и перец", "2 ст.л. муки", "80г сливочного масла", "2 ст.л. лимонного сока", "1 ст.л. каперсов", "50г орехов макадамия, измельчённых", "свежая петрушка, рубленая", "1 ст.л. оливкового масла"],
+      ar: ["4 شرائح سمك باراموندي بالجلد", "ملح وفلفل", "2 ملعقة كبيرة دقيق", "80غ زبدة", "2 ملعقة كبيرة عصير ليمون", "1 ملعقة كبيرة كبر", "50غ جوز مكاداميا مفروم", "بقدونس طازج مفروم", "1 ملعقة كبيرة زيت زيتون"],
+      zh: ["4片带皮肺鱼鱼排", "盐和胡椒", "2汤匙面粉", "80克黄油", "2汤匙柠檬汁", "1汤匙刺山柑", "50克夏威夷果，切碎", "新鲜欧芹，切碎", "1汤匙橄榄油"],
+      ja: ["バラマンディ切り身4枚（皮付き）", "塩こしょう", "小麦粉大さじ2", "バター80g", "レモン汁大さじ2", "ケッパー大さじ1", "マカダミアナッツ50g（刻む）", "生パセリ（刻む）", "オリーブオイル大さじ1"],
+      hi: ["4 बरामुंडी फिलेट, त्वचा सहित", "नमक और काली मिर्च", "2 बड़े चम्मच आटा", "80 ग्राम मक्खन", "2 बड़े चम्मच नींबू का रस", "1 बड़ा चम्मच केपर्स", "50 ग्राम मैकाडेमिया मेवे, कटे हुए", "ताज़ा अजमोद, कटा हुआ", "1 बड़ा चम्मच जैतून का तेल"],
+      tr: ["4 barramundi fileto, derili", "tuz ve karabiber", "2 yemek kaşığı un", "80g tereyağı", "2 yemek kaşığı limon suyu", "1 yemek kaşığı kapari", "50g makadamya fındığı, doğranmış", "taze maydanoz, doğranmış", "1 yemek kaşığı zeytinyağı"],
+      it: ["4 filetti di barramundi, con pelle", "sale e pepe", "2 cucchiai di farina", "80g di burro", "2 cucchiai di succo di limone", "1 cucchiaio di capperi", "50g di noci macadamia tritate", "prezzemolo fresco tritato", "1 cucchiaio di olio d'oliva"],
+      ko: ["바라문디 필레 4장 (껍질째)", "소금과 후추", "밀가루 2큰술", "버터 80g", "레몬즙 2큰술", "케이퍼 1큰술", "다진 마카다미아 50g", "다진 생파슬리", "올리브유 1큰술"]
+    },
+    howIsMade: {
+      ro: "Se usucă file de barramundi cu un șervet de bucătărie și se condimentează ambele fețe cu sare și piper. Se presară un strat subțire de făină pe partea cu piele pentru a ajuta la crocanță. Se prăjesc filetele cu pielea în jos într-o tigaie foarte încinsă cu ulei până pielea devine aurie și crocantă. Se întorc și se lasă puțin pe partea cealaltă până carnea devine opacă și se desprinde ușor. Se scoate peștele și se topește untul în aceeași tigaie până capătă o culoare brun-aurie și aromă de alune. Se adaugă sucul de lămâie, caperele și macadamia tocată pentru un sos rapid de tigaie. Se toarnă sosul cald peste file și se presară pătrunjel proaspăt înainte de servire.",
+      en: "Pat the barramundi fillets dry and season both sides with salt and pepper. Dust the skin side lightly with flour to help it crisp up. Sear the fillets skin-side down in a very hot pan with oil until the skin is golden and crisp. Flip and cook briefly on the other side until the flesh turns opaque and flakes easily. Remove the fish and melt the butter in the same pan until it turns nutty and golden-brown. Stir in the lemon juice, capers, and chopped macadamias to make a quick pan sauce. Spoon the warm sauce over the fillets and scatter with fresh parsley before serving.",
+      es: "Seca los filetes de barramundi con papel de cocina y sazona ambos lados con sal y pimienta. Espolvorea ligeramente la piel con harina para ayudarla a quedar crujiente. Sella los filetes con la piel hacia abajo en una sartén muy caliente con aceite hasta que la piel esté dorada y crujiente. Voltea y cocina brevemente por el otro lado hasta que la carne quede opaca y se desmenuce con facilidad. Retira el pescado y derrite la mantequilla en la misma sartén hasta que se dore y tome aroma a avellana. Añade el jugo de limón, las alcaparras y las macadamias picadas para una salsa rápida. Vierte la salsa caliente sobre los filetes y esparce perejil fresco antes de servir.",
+      fr: "Séchez les filets de barramundi avec du papier absorbant et assaisonnez les deux faces de sel et de poivre. Saupoudrez légèrement la peau de farine pour l'aider à devenir croustillante. Saisissez les filets côté peau dans une poêle très chaude avec de l'huile jusqu'à ce que la peau soit dorée et croustillante. Retournez et faites cuire brièvement l'autre côté jusqu'à ce que la chair devienne opaque et s'effeuille facilement. Retirez le poisson et faites fondre le beurre dans la même poêle jusqu'à ce qu'il devienne doré et parfumé à la noisette. Incorporez le jus de citron, les câpres et les noix de macadamia hachées pour une sauce rapide. Nappez les filets de sauce chaude et parsemez de persil frais avant de servir.",
+      de: "Die Barramundi-Filets trocken tupfen und beidseitig mit Salz und Pfeffer würzen. Die Hautseite leicht mit Mehl bestäuben, damit sie knusprig wird. Die Filets mit der Hautseite nach unten in einer sehr heißen Pfanne mit Öl anbraten, bis die Haut goldbraun und knusprig ist. Wenden und kurz auf der anderen Seite braten, bis das Fleisch weiß wird und leicht zerfällt. Den Fisch herausnehmen und die Butter in derselben Pfanne schmelzen, bis sie nussig und goldbraun wird. Zitronensaft, Kapern und gehackte Macadamianüsse für eine schnelle Pfannensauce einrühren. Die warme Sauce über die Filets geben und vor dem Servieren mit frischer Petersilie bestreuen.",
+      pt: "Seque os filés de barramundi com papel de cozinha e tempere ambos os lados com sal e pimenta. Polvilhe levemente a pele com farinha para ajudar a ficar crocante. Sele os filés com a pele para baixo numa frigideira muito quente com óleo até a pele ficar dourada e crocante. Vire e cozinhe brevemente do outro lado até a carne ficar opaca e desfiar facilmente. Retire o peixe e derreta a manteiga na mesma frigideira até dourar e ganhar aroma de avelã. Junte o suco de limão, as alcaparras e as macadâmias picadas para um molho rápido. Regue os filés com o molho quente e finalize com salsa fresca antes de servir.",
+      ru: "Обсушите филе барамунди бумажным полотенцем и приправьте обе стороны солью и перцем. Слегка присыпьте кожу мукой, чтобы она стала хрустящей. Обжарьте филе кожей вниз на очень горячей сковороде с маслом, пока кожа не станет золотистой и хрустящей. Переверните и жарьте недолго с другой стороны, пока мясо не станет непрозрачным и легко не будет разделяться. Уберите рыбу и растопите масло на той же сковороде, пока оно не станет золотисто-коричневым с ореховым ароматом. Добавьте лимонный сок, каперсы и измельчённую макадамию для быстрого соуса. Полейте филе тёплым соусом и посыпьте свежей петрушкой перед подачей.",
+      ar: "جففي شرائح الباراموندي بمنشفة مطبخ وتبّلي الوجهين بالملح والفلفل. رشّي طبقة خفيفة من الدقيق على جهة الجلد لتساعده على القرمشة. اقلي الشرائح بجهة الجلد لأسفل في مقلاة ساخنة جداً بالزيت حتى يصبح الجلد ذهبياً ومقرمشاً. اقلبيها واطهيها قليلاً على الجهة الأخرى حتى يصبح اللحم غير شفاف ويتقشر بسهولة. ارفعي السمك وأذيبي الزبدة في نفس المقلاة حتى تصبح ذهبية بنكهة البندق. أضيفي عصير الليمون والكبر والمكاداميا المفرومة لصلصة سريعة. اسكبي الصلصة الدافئة فوق الشرائح ورشّي البقدونس الطازج قبل التقديم.",
+      zh: "用厨房纸擦干肺鱼鱼排，两面撒盐和胡椒调味。在鱼皮一面轻轻扑上一层面粉以助脆化。将鱼皮朝下放入非常热的油锅中煎至鱼皮金黄酥脆。翻面稍煎另一侧，直到鱼肉变白且轻松剥落。取出鱼，在同一锅中融化黄油，煮至焦糖色并散发坚果香。加入柠檬汁、刺山柑和切碎的夏威夷果，快速做成酱汁。将温热的酱汁淋在鱼排上，撒上新鲜欧芹后即可享用。",
+      ja: "バラマンディの切り身をキッチンペーパーで拭き、両面に塩こしょうをする。皮側に軽く小麦粉をまぶしてパリッとしやすくする。油を熱した非常に熱いフライパンに皮を下にして並べ、皮が黄金色でパリッとするまで焼く。返して反対側も軽く焼き、身が白く不透明になり簡単にほぐれるまで火を通す。魚を取り出し、同じフライパンでバターを香ばしく黄金色になるまで溶かす。レモン汁、ケッパー、刻んだマカダミアナッツを加えて手早くソースを作る。温かいソースを切り身にかけ、生パセリを散らして仕上げる。",
+      hi: "बरामुंडी फिलेट को कपड़े से सुखाएं और दोनों तरफ नमक-काली मिर्च से स्वाद दें। त्वचा वाले हिस्से पर हल्का आटा छिड़कें ताकि यह कुरकुरा हो जाए। तेल के साथ बहुत गरम पैन में त्वचा नीचे रखकर तब तक सेकें जब तक त्वचा सुनहरी और कुरकुरी न हो जाए। पलटें और दूसरी तरफ थोड़ा पकाएं जब तक मांस अपारदर्शी होकर आसानी से टूटने न लगे। मछली निकालें और उसी पैन में मक्खन तब तक पिघलाएं जब तक सुनहरा-भूरा और अखरोट जैसी खुशबू न आए। नींबू का रस, केपर्स और कटे मैकाडेमिया मिलाकर झटपट सॉस बनाएं। गरम सॉस फिलेट पर डालें और परोसने से पहले ताज़ा अजमोद छिड़कें।",
+      tr: "Barramundi filetolarını kağıt havluyla kurulayın ve her iki tarafını tuz ve karabiberle tatlandırın. Deri tarafına çıtır olmasına yardımcı olması için hafifçe un serpin. Filetoları yağlı, çok sıcak bir tavada deri tarafı aşağı gelecek şekilde deri altın rengi ve çıtır olana kadar közleyin. Çevirin ve balık eti mat hale gelip kolayca dağılana kadar diğer tarafını kısa süre pişirin. Balığı alın ve aynı tavada tereyağını fındıksı ve altın kahverengi olana kadar eritin. Limon suyu, kapari ve doğranmış makadamya ekleyerek hızlı bir sos yapın. Sıcak sosu filetoların üzerine dökün ve servisten önce taze maydanoz serpin.",
+      it: "Asciuga i filetti di barramundi con carta da cucina e condisci entrambi i lati con sale e pepe. Cospargi leggermente la pelle di farina per aiutarla a diventare croccante. Rosola i filetti con la pelle verso il basso in una padella molto calda con olio finché la pelle non è dorata e croccante. Gira e cuoci brevemente l'altro lato finché la carne non diventa opaca e si sfalda facilmente. Togli il pesce e sciogli il burro nella stessa padella finché non diventa dorato e profumato di nocciola. Aggiungi succo di limone, capperi e macadamia tritate per un sugo veloce. Versa il sugo caldo sui filetti e guarnisci con prezzemolo fresco prima di servire.",
+      ko: "바라문디 필레를 키친타월로 물기를 제거하고 양면에 소금과 후추로 간한다. 껍질 쪽에 밀가루를 살짝 뿌려 바삭해지도록 돕는다. 기름을 두른 매우 뜨거운 팬에 껍질이 아래로 가도록 놓고 황금빛으로 바삭해질 때까지 굽는다. 뒤집어서 살이 불투명해지고 쉽게 부서질 때까지 잠깐 더 굽는다. 생선을 꺼내고 같은 팬에 버터를 고소한 황금빛이 될 때까지 녹인다. 레몬즙, 케이퍼, 다진 마카다미아를 넣어 빠르게 소스를 만든다. 따뜻한 소스를 필레 위에 붓고 신선한 파슬리를 뿌려 마무리한다."
+    },
+    originText: {
+      ro: "Barramundi este un pește nativ al apelor din nordul Australiei, prețuit de mii de ani de populațiile aborigene, iar numele său provine dintr-un cuvânt aborigen care înseamnă aproximativ 'pește cu solzi mari'. Cultivat astăzi și pe scară largă în acvacultură, a devenit unul dintre cele mai populare pești de restaurant din țară.\n\nAsocierea cu macadamia, singurul nuc nativ comercializat pe scară largă din Australia, e o alegere firească: reflectă tendința bucătăriei moderne australiene de a combina ingrediente native cu tehnici europene clasice, precum untul brun.",
+      en: "Barramundi is a fish native to northern Australian waters, prized for thousands of years by Aboriginal peoples, and its name comes from an Aboriginal word roughly meaning 'large-scaled river fish'. Widely farmed today, it has become one of the country's most popular restaurant fish.\n\nPairing it with macadamia, Australia's only widely commercialised native nut, is a natural choice: it reflects modern Australian cuisine's habit of combining native ingredients with classic European techniques, like brown butter.",
+      es: "El barramundi es un pez nativo de las aguas del norte de Australia, apreciado durante miles de años por los pueblos aborígenes, y su nombre proviene de una palabra aborigen que significa aproximadamente 'pez de río de escamas grandes'. Hoy ampliamente cultivado, se ha convertido en uno de los pescados de restaurante más populares del país.\n\nCombinarlo con macadamia, el único fruto seco nativo de Australia comercializado ampliamente, es una elección natural: refleja la costumbre de la cocina australiana moderna de unir ingredientes nativos con técnicas europeas clásicas, como la mantequilla dorada.",
+      fr: "Le barramundi est un poisson originaire des eaux du nord de l'Australie, apprécié depuis des millénaires par les peuples aborigènes, et son nom vient d'un mot aborigène signifiant à peu près 'poisson de rivière à grosses écailles'. Aujourd'hui largement élevé, il est devenu l'un des poissons les plus populaires des restaurants du pays.\n\nL'associer à la macadamia, le seul fruit à coque natif d'Australie largement commercialisé, est un choix naturel : il reflète l'habitude de la cuisine australienne moderne de marier des ingrédients natifs à des techniques européennes classiques, comme le beurre noisette.",
+      de: "Barramundi ist ein Fisch, der in den nordaustralischen Gewässern heimisch ist und seit Jahrtausenden von Aborigines geschätzt wird; sein Name stammt aus einem Aborigine-Wort, das ungefähr 'großschuppiger Flussfisch' bedeutet. Heute weit verbreitet gezüchtet, ist er einer der beliebtesten Restaurantfische des Landes geworden.\n\nDie Kombination mit Macadamia, Australiens einziger weithin vermarkteten einheimischen Nuss, ist eine naheliegende Wahl: Sie spiegelt die Gewohnheit der modernen australischen Küche wider, einheimische Zutaten mit klassischen europäischen Techniken wie brauner Butter zu verbinden.",
+      pt: "O barramundi é um peixe nativo das águas do norte da Austrália, apreciado há milhares de anos pelos povos aborígenes, e o seu nome vem de uma palavra aborígene que significa aproximadamente 'peixe de rio de escamas grandes'. Hoje amplamente cultivado, tornou-se um dos peixes de restaurante mais populares do país.\n\nCombiná-lo com macadâmia, a única noz nativa da Austrália comercializada em larga escala, é uma escolha natural: reflete o hábito da cozinha australiana moderna de unir ingredientes nativos a técnicas europeias clássicas, como a manteiga dourada.",
+      ru: "Барамунди — рыба, обитающая в водах северной Австралии, которую тысячелетиями ценили аборигенные народы; её название происходит от аборигенного слова, означающего примерно «речная рыба с крупной чешуёй». Сегодня она широко разводится и стала одной из самых популярных рыб в ресторанах страны.\n\nСочетание с макадамией, единственным широко продаваемым местным орехом Австралии, — естественный выбор: оно отражает привычку современной австралийской кухни объединять местные ингредиенты с классическими европейскими техниками, такими как ореховое масло.",
+      ar: "الباراموندي سمكة موطنها مياه شمال أستراليا، قدّرها السكان الأصليون منذ آلاف السنين، واسمها مشتق من كلمة أصلية تعني تقريباً 'سمكة نهرية كبيرة الحراشف'. تُربّى اليوم على نطاق واسع، وأصبحت من أكثر أسماك المطاعم شعبية في البلاد.\n\nإقرانها بالمكاداميا، وهي الجوزة الأسترالية الأصلية الوحيدة المسوّقة على نطاق واسع، خيار طبيعي: فهو يعكس عادة المطبخ الأسترالي الحديث في الجمع بين المكونات المحلية والتقنيات الأوروبية الكلاسيكية مثل الزبدة البنية.",
+      zh: "肺鱼是原产于澳大利亚北部水域的鱼类，数千年来一直受到原住民的珍视，其名字来源于一个原住民词语，大意为“大鳞河鱼”。如今它被广泛养殖，已成为该国餐厅中最受欢迎的鱼类之一。\n\n将它与夏威夷果搭配——澳大利亚唯一广泛商业化的本土坚果——是一种自然的选择：这体现了现代澳大利亚料理将本土食材与经典欧式技法（如焦香黄油）相结合的习惯。",
+      ja: "バラマンディはオーストラリア北部の水域原産の魚で、何千年もの間アボリジニの人々に珍重されてきた。その名前はおおよそ「大きな鱗の川魚」を意味するアボリジニの言葉に由来する。今日では広く養殖され、国内で最も人気のあるレストラン向け魚の一つとなっている。\n\nオーストラリア唯一の広く商業化された固有のナッツであるマカダミアと組み合わせるのは自然な選択だ。これは、現代オーストラリア料理が固有の食材をブラウンバターのような古典的なヨーロッパの技法と組み合わせる習慣を反映している。",
+      hi: "बरामुंडी उत्तरी ऑस्ट्रेलिया के जल की मूल मछली है, जिसे हज़ारों वर्षों से आदिवासी लोग सराहते आए हैं, और इसका नाम एक आदिवासी शब्द से आया है जिसका अर्थ लगभग 'बड़े शल्कों वाली नदी मछली' है। आज व्यापक रूप से पाली जाने वाली यह देश की सबसे लोकप्रिय रेस्तरां मछलियों में से एक बन गई है।\n\nइसे मैकाडेमिया के साथ जोड़ना, ऑस्ट्रेलिया का एकमात्र व्यापक रूप से व्यावसायिक देसी मेवा, एक स्वाभाविक चुनाव है: यह आधुनिक ऑस्ट्रेलियाई व्यंजनों की देसी सामग्री को क्लासिक यूरोपीय तकनीकों, जैसे ब्राउन बटर, के साथ जोड़ने की आदत को दर्शाता है।",
+      tr: "Barramundi, kuzey Avustralya sularına özgü bir balıktır ve binlerce yıldır Aborijin halkları tarafından değer görmüştür; adı, kabaca 'büyük pullu nehir balığı' anlamına gelen bir Aborijin kelimesinden gelir. Bugün yaygın olarak yetiştirilen bu balık, ülkenin en popüler restoran balıklarından biri haline gelmiştir.\n\nOnu Avustralya'nın geniş çapta ticarileştirilen tek yerli fındığı olan makadamya ile eşleştirmek doğal bir seçimdir: modern Avustralya mutfağının yerli malzemeleri kahverengi tereyağı gibi klasik Avrupa teknikleriyle birleştirme alışkanlığını yansıtır.",
+      it: "Il barramundi è un pesce originario delle acque dell'Australia settentrionale, apprezzato da migliaia di anni dai popoli aborigeni, e il suo nome deriva da una parola aborigena che significa all'incirca 'pesce di fiume dalle grandi scaglie'. Oggi ampiamente allevato, è diventato uno dei pesci più popolari nei ristoranti del paese.\n\nAbbinarlo alla macadamia, l'unica noce nativa australiana ampiamente commercializzata, è una scelta naturale: riflette l'abitudine della cucina australiana moderna di unire ingredienti nativi a tecniche europee classiche, come il burro nocciola.",
+      ko: "바라문디는 호주 북부 해역이 원산지인 물고기로, 수천 년 동안 원주민들에게 귀하게 여겨졌으며 그 이름은 대략 '비늘이 큰 강 물고기'를 뜻하는 원주민 단어에서 유래했다. 오늘날 널리 양식되며 호주에서 가장 인기 있는 레스토랑 생선 중 하나가 되었다.\n\n호주에서 유일하게 널리 상업화된 토종 견과류인 마카다미아와 짝을 이루는 것은 자연스러운 선택이다. 이는 현대 호주 요리가 토종 재료를 브라운 버터 같은 클래식한 유럽 기법과 결합하는 습관을 반영한다."
+    }
+  },
+  {
+    id: 428,
+    servings: 4,
+    tipType: "dessert",
+    pairingsType: "dessert",
+    nutrition: { cal: 320, prot: 4, carb: 48, fat: 13, fib: 2 },
+    origin: {
+      ro: "Australia", en: "Australia", es: "Australia", fr: "Australie", de: "Australien",
+      pt: "Austrália", ru: "Австралия", ar: "أستراليا", zh: "澳大利亚", ja: "オーストラリア",
+      hi: "ऑस्ट्रेलिया", tr: "Avustralya", it: "Australia", ko: "호주"
+    },
+    name: {
+      ro: "Lamingtons", en: "Lamingtons", es: "Lamingtons", fr: "Lamingtons", de: "Lamingtons",
+      pt: "Lamingtons", ru: "Лэмингтоны", ar: "لامينغتون", zh: "拉明顿蛋糕", ja: "ラミントン",
+      hi: "लैमिंगटन", tr: "Lamington", it: "Lamington", ko: "라밍턴"
+    },
+    category: {
+      ro: "Desert", en: "Dessert", es: "Postre", fr: "Dessert", de: "Dessert",
+      pt: "Sobremesa", ru: "Десерт", ar: "حلوى", zh: "甜点", ja: "デザート",
+      hi: "मिठाई", tr: "Tatlı", it: "Dolce", ko: "디저트"
+    },
+    featureCards: {
+      ro: [
+        { icon: "🍫", t: "Un pătrat simplu, iubit de toți", d: "Cuburi de pandișpan învelite în ciocolată și cocos, deceniiile la rând nelipsite de la orice ceai." },
+        { icon: "🍰", t: "Pandișpanul trebuie să fie uscat cu o zi", d: "Un blat lăsat o zi bun de tăiat absoarbe glazura fără să se destrame." },
+        { icon: "🥥", t: "Cocosul rade textura finală", d: "Nucă de cocos uscată, rasă fin, se lipește de glazura de ciocolată încă umedă și creează crusta caracteristică." },
+        { icon: "🍓", t: "Varianta cu dulceață", d: "Multe familii taie cuburile în două și adaugă un strat de dulceață de zmeură sau frișcă înainte de a le închide." }
+      ],
+      en: [
+        { icon: "🍫", t: "A simple square, loved by all", d: "Cubes of sponge cake dipped in chocolate and coconut, a fixture at Australian afternoon teas for generations." },
+        { icon: "🍰", t: "The sponge should be a day old", d: "A sponge left to firm up for a day slices cleanly and soaks up the coating without falling apart." },
+        { icon: "🥥", t: "Coconut gives the finishing texture", d: "Finely shredded desiccated coconut sticks to the still-wet chocolate coating and forms the signature crust." },
+        { icon: "🍓", t: "The jam-filled version", d: "Many families slice the cubes in half and add a layer of raspberry jam or cream before closing them." }
+      ],
+      es: [
+        { icon: "🍫", t: "Un cuadrado sencillo, querido por todos", d: "Cubos de bizcocho bañados en chocolate y coco, un clásico de las meriendas australianas durante generaciones." },
+        { icon: "🍰", t: "El bizcocho debe tener un día", d: "Un bizcocho reposado un día se corta limpiamente y absorbe el baño sin desmoronarse." },
+        { icon: "🥥", t: "El coco da la textura final", d: "El coco rallado seco fino se adhiere al baño de chocolate aún húmedo y forma la costra característica." },
+        { icon: "🍓", t: "La versión con mermelada", d: "Muchas familias cortan los cubos por la mitad y añaden una capa de mermelada de frambuesa o nata antes de cerrarlos." }
+      ],
+      fr: [
+        { icon: "🍫", t: "Un simple carré, aimé de tous", d: "Des cubes de génoise trempés dans le chocolat et la noix de coco, un incontournable du goûter australien." },
+        { icon: "🍰", t: "La génoise doit avoir un jour", d: "Une génoise laissée à raffermir un jour se découpe proprement et absorbe le glaçage sans s'effriter." },
+        { icon: "🥥", t: "La noix de coco donne la texture finale", d: "La noix de coco râpée fine adhère au glaçage au chocolat encore humide et forme la croûte caractéristique." },
+        { icon: "🍓", t: "La version à la confiture", d: "De nombreuses familles coupent les cubes en deux et ajoutent une couche de confiture de framboise ou de crème avant de refermer." }
+      ],
+      de: [
+        { icon: "🍫", t: "Ein einfaches Quadrat, von allen geliebt", d: "Biskuitwürfel getaucht in Schokolade und Kokos, seit Generationen fester Bestandteil des australischen Nachmittagstees." },
+        { icon: "🍰", t: "Der Biskuit sollte einen Tag alt sein", d: "Ein einen Tag ruhen gelassener Biskuit lässt sich sauber schneiden und saugt die Glasur auf, ohne zu zerfallen." },
+        { icon: "🥥", t: "Kokos gibt die finale Textur", d: "Fein geraspelte getrocknete Kokosraspel haften an der noch feuchten Schokoladenglasur und bilden die typische Kruste." },
+        { icon: "🍓", t: "Die Variante mit Marmelade", d: "Viele Familien schneiden die Würfel in zwei Hälften und fügen vor dem Schließen eine Schicht Himbeermarmelade oder Sahne hinzu." }
+      ],
+      pt: [
+        { icon: "🍫", t: "Um quadrado simples, amado por todos", d: "Cubos de pão de ló mergulhados em chocolate e coco, presença garantida nos chás australianos há gerações." },
+        { icon: "🍰", t: "O pão de ló deve ter um dia", d: "Um pão de ló deixado a firmar por um dia corta-se de forma limpa e absorve a cobertura sem desfazer-se." },
+        { icon: "🥥", t: "O coco dá a textura final", d: "Coco ralado fino e seco adere à cobertura de chocolate ainda húmida e forma a crosta característica." },
+        { icon: "🍓", t: "A versão com compota", d: "Muitas famílias cortam os cubos ao meio e adicionam uma camada de compota de framboesa ou natas antes de fechar." }
+      ],
+      ru: [
+        { icon: "🍫", t: "Простой квадрат, любимый всеми", d: "Кубики бисквита, обмакнутые в шоколад и кокос, — неизменная часть австралийского чаепития уже поколениями." },
+        { icon: "🍰", t: "Бисквит должен постоять день", d: "Бисквит, оставленный на день, режется аккуратно и впитывает глазурь, не разваливаясь." },
+        { icon: "🥥", t: "Кокос даёт финальную текстуру", d: "Мелкая сушёная кокосовая стружка прилипает к ещё влажной шоколадной глазури и создаёт фирменную корочку." },
+        { icon: "🍓", t: "Вариант с джемом", d: "Многие семьи разрезают кубики пополам и добавляют слой малинового джема или сливок перед закрытием." }
+      ],
+      ar: [
+        { icon: "🍫", t: "مربع بسيط يحبه الجميع", d: "مكعبات كيك إسفنجي مغموسة بالشوكولاتة وجوز الهند، حاضرة في شاي بعد الظهر الأسترالي منذ أجيال." },
+        { icon: "🍰", t: "يجب أن يكون الإسفنج بعمر يوم", d: "الإسفنج المتروك ليتماسك ليوم يُقطَّع بنظافة ويمتص الطلاء دون أن يتفتت." },
+        { icon: "🥥", t: "جوز الهند يمنح الملمس النهائي", d: "جوز الهند المبشور الناعم يلتصق بطلاء الشوكولاتة لا يزال رطباً ويشكل القشرة المميزة." },
+        { icon: "🍓", t: "النسخة المحشوة بالمربى", d: "تقطع عائلات كثيرة المكعبات إلى نصفين وتضيف طبقة من مربى التوت أو الكريمة قبل إغلاقها." }
+      ],
+      zh: [
+        { icon: "🍫", t: "简单的方块，人人喜爱", d: "海绵蛋糕块蘸上巧克力和椰丝，几代人以来一直是澳大利亚下午茶的常客。" },
+        { icon: "🍰", t: "海绵蛋糕最好放一天", d: "放置一天变得紧实的蛋糕切起来更干净，吸收糖衣时也不会散碎。" },
+        { icon: "🥥", t: "椰丝赋予最后的口感", d: "细椰丝粘在仍湿润的巧克力糖衣上，形成标志性的外壳。" },
+        { icon: "🍓", t: "夹果酱的版本", d: "许多家庭会把方块切成两半，在合上前加一层覆盆子果酱或奶油。" }
+      ],
+      ja: [
+        { icon: "🍫", t: "みんなに愛されるシンプルな四角", d: "チョコレートとココナッツをまとったスポンジケーキの立方体で、何世代にもわたりオーストラリアのアフタヌーンティーの定番。" },
+        { icon: "🍰", t: "スポンジは一日置くとよい", d: "一日置いて落ち着かせたスポンジはきれいに切れ、崩れずにコーティングを吸収する。" },
+        { icon: "🥥", t: "ココナッツが最後の食感を作る", d: "細かく削った乾燥ココナッツがまだ湿ったチョコレートコーティングにくっつき、特徴的な表面を作る。" },
+        { icon: "🍓", t: "ジャム入りバージョン", d: "多くの家庭では立方体を半分に切り、閉じる前にラズベリージャムやクリームの層を加える。" }
+      ],
+      hi: [
+        { icon: "🍫", t: "एक सादा वर्ग, सबका पसंदीदा", d: "चॉकलेट और नारियल में डुबोए स्पंज केक के टुकड़े, पीढ़ियों से ऑस्ट्रेलियाई दोपहर की चाय का हिस्सा।" },
+        { icon: "🍰", t: "स्पंज एक दिन पुराना होना चाहिए", d: "एक दिन जमने दिया गया स्पंज साफ कटता है और बिना टूटे कोटिंग सोख लेता है।" },
+        { icon: "🥥", t: "नारियल अंतिम बनावट देता है", d: "बारीक कद्दूकस सूखा नारियल अभी भी गीली चॉकलेट कोटिंग से चिपककर विशिष्ट परत बनाता है।" },
+        { icon: "🍓", t: "जैम भरा संस्करण", d: "कई परिवार टुकड़ों को आधा काटकर बंद करने से पहले रास्पबेरी जैम या क्रीम की परत जोड़ते हैं।" }
+      ],
+      tr: [
+        { icon: "🍫", t: "Herkesin sevdiği basit bir kare", d: "Çikolata ve hindistancevizine batırılmış pandispan küpleri, nesillerdir Avustralya öğleden sonra çaylarının vazgeçilmezi." },
+        { icon: "🍰", t: "Pandispan bir günlük olmalı", d: "Bir gün dinlendirilen pandispan temiz kesilir ve dağılmadan kaplamayı emer." },
+        { icon: "🥥", t: "Hindistancevizi son dokuyu verir", d: "İnce rendelenmiş kuru hindistancevizi hâlâ ıslak olan çikolata kaplamaya yapışarak karakteristik kabuğu oluşturur." },
+        { icon: "🍓", t: "Reçelli versiyon", d: "Birçok aile küpleri ikiye keser ve kapatmadan önce ahududu reçeli veya krema katmanı ekler." }
+      ],
+      it: [
+        { icon: "🍫", t: "Un semplice quadrato amato da tutti", d: "Cubetti di pan di Spagna immersi in cioccolato e cocco, presenza fissa del tè pomeridiano australiano da generazioni." },
+        { icon: "🍰", t: "Il pan di Spagna deve avere un giorno", d: "Un pan di Spagna lasciato rassodare un giorno si taglia pulito e assorbe la copertura senza sbriciolarsi." },
+        { icon: "🥥", t: "Il cocco dà la texture finale", d: "Il cocco essiccato grattugiato fine aderisce alla copertura di cioccolato ancora umida e forma la crosta caratteristica." },
+        { icon: "🍓", t: "La versione con marmellata", d: "Molte famiglie tagliano i cubetti a metà e aggiungono uno strato di marmellata di lamponi o panna prima di richiuderli." }
+      ],
+      ko: [
+        { icon: "🍫", t: "모두가 사랑하는 심플한 사각형", d: "초콜릿과 코코넛에 담근 스펀지케이크 큐브로, 여러 세대에 걸쳐 호주 애프터눈 티의 필수품이었다." },
+        { icon: "🍰", t: "스펀지는 하루 지난 것이 좋다", d: "하루 두어 단단해진 스펀지는 깔끔하게 잘리고 부서지지 않으며 코팅을 흡수한다." },
+        { icon: "🥥", t: "코코넛이 마지막 식감을 만든다", d: "곱게 간 건조 코코넛이 아직 젖어 있는 초콜릿 코팅에 붙어 특유의 겉면을 만든다." },
+        { icon: "🍓", t: "잼을 채운 버전", d: "많은 가정에서 큐브를 반으로 잘라 닫기 전에 라즈베리 잼이나 크림 층을 넣는다." }
+      ]
+    },
+    ingredients: {
+      ro: ["4 ouă", "150g zahăr", "150g făină", "1 linguriță praf de copt", "200g zahăr pudră", "40g pudră de cacao", "80ml lapte", "20g unt topit", "150g nucă de cocos uscată, rasă"],
+      en: ["4 eggs", "150g sugar", "150g flour", "1 tsp baking powder", "200g icing sugar", "40g cocoa powder", "80ml milk", "20g melted butter", "150g desiccated coconut"],
+      es: ["4 huevos", "150g de azúcar", "150g de harina", "1 cdta de levadura en polvo", "200g de azúcar glas", "40g de cacao en polvo", "80ml de leche", "20g de mantequilla derretida", "150g de coco rallado seco"],
+      fr: ["4 œufs", "150g de sucre", "150g de farine", "1 c. à café de levure chimique", "200g de sucre glace", "40g de cacao en poudre", "80ml de lait", "20g de beurre fondu", "150g de noix de coco râpée séchée"],
+      de: ["4 Eier", "150g Zucker", "150g Mehl", "1 TL Backpulver", "200g Puderzucker", "40g Kakaopulver", "80ml Milch", "20g geschmolzene Butter", "150g getrocknete Kokosraspel"],
+      pt: ["4 ovos", "150g de açúcar", "150g de farinha", "1 col. chá de fermento em pó", "200g de açúcar em pó", "40g de cacau em pó", "80ml de leite", "20g de manteiga derretida", "150g de coco ralado seco"],
+      ru: ["4 яйца", "150г сахара", "150г муки", "1 ч.л. разрыхлителя", "200г сахарной пудры", "40г какао-порошка", "80мл молока", "20г растопленного сливочного масла", "150г сушёной кокосовой стружки"],
+      ar: ["4 بيضات", "150غ سكر", "150غ دقيق", "1 ملعقة صغيرة بيكنج باودر", "200غ سكر بودرة", "40غ كاكاو بودرة", "80مل حليب", "20غ زبدة مذابة", "150غ جوز هند مبشور جاف"],
+      zh: ["4个鸡蛋", "150克糖", "150克面粉", "1茶匙泡打粉", "200克糖粉", "40克可可粉", "80毫升牛奶", "20克融化黄油", "150克干椰丝"],
+      ja: ["卵4個", "砂糖150g", "小麦粉150g", "ベーキングパウダー小さじ1", "粉砂糖200g", "ココアパウダー40g", "牛乳80ml", "溶かしバター20g", "乾燥ココナッツ150g"],
+      hi: ["4 अंडे", "150 ग्राम चीनी", "150 ग्राम आटा", "1 छोटा चम्मच बेकिंग पाउडर", "200 ग्राम आइसिंग शुगर", "40 ग्राम कोको पाउडर", "80 मिली दूध", "20 ग्राम पिघला मक्खन", "150 ग्राम सूखा कद्दूकस नारियल"],
+      tr: ["4 yumurta", "150g şeker", "150g un", "1 tatlı kaşığı kabartma tozu", "200g pudra şekeri", "40g kakao tozu", "80ml süt", "20g eritilmiş tereyağı", "150g kuru rendelenmiş hindistancevizi"],
+      it: ["4 uova", "150g di zucchero", "150g di farina", "1 cucchiaino di lievito in polvere", "200g di zucchero a velo", "40g di cacao in polvere", "80ml di latte", "20g di burro fuso", "150g di cocco essiccato grattugiato"],
+      ko: ["달걀 4개", "설탕 150g", "밀가루 150g", "베이킹파우더 1작은술", "슈가파우더 200g", "코코아 파우더 40g", "우유 80ml", "녹인 버터 20g", "건조 코코넛 150g"]
+    },
+    howIsMade: {
+      ro: "Se bat ouăle cu zahărul la viteză mare până devin pufoase și triplează volumul. Se încorporează ușor făina cernută cu praful de copt, cu mișcări de jos în sus. Se coace compoziția într-o tavă pătrată unsă până crește și un test cu scobitoarea iese curat, apoi se lasă blatul o zi la temperatura camerei. Se taie blatul rece în cuburi egale, de câțiva centimetri fiecare. Se amestecă zahărul pudră cu cacaua, laptele și untul topit până se obține o glazură lucioasă. Se scufundă fiecare cub în glazura de ciocolată, scurgând excesul, apoi se rulează imediat prin nuca de cocos. Se lasă cuburile pe un grătar până glazura se întărește complet înainte de servire.",
+      en: "Beat the eggs with the sugar on high speed until pale and tripled in volume. Gently fold in the sifted flour and baking powder with an up-and-down motion. Bake the batter in a greased square tin until risen and a skewer comes out clean, then let the sponge rest at room temperature for a day. Cut the firm sponge into even cubes, a few centimetres each. Whisk the icing sugar with cocoa, milk, and melted butter until you get a glossy coating. Dip each cube into the chocolate coating, letting the excess drip off, then roll it immediately in the desiccated coconut. Leave the cubes on a rack until the coating sets completely before serving.",
+      es: "Bate los huevos con el azúcar a velocidad alta hasta que estén pálidos y tripliquen su volumen. Incorpora suavemente la harina tamizada con la levadura, con movimientos envolventes. Hornea la masa en un molde cuadrado engrasado hasta que suba y un palillo salga limpio, luego deja reposar el bizcocho a temperatura ambiente un día. Corta el bizcocho firme en cubos parejos de unos centímetros. Bate el azúcar glas con el cacao, la leche y la mantequilla derretida hasta obtener un baño brillante. Sumerge cada cubo en el baño de chocolate, dejando escurrir el exceso, y enrolla enseguida en el coco rallado. Deja los cubos sobre una rejilla hasta que el baño cuaje por completo antes de servir.",
+      fr: "Battez les œufs avec le sucre à grande vitesse jusqu'à ce qu'ils pâlissent et triplent de volume. Incorporez délicatement la farine tamisée et la levure avec des mouvements de bas en haut. Faites cuire la pâte dans un moule carré beurré jusqu'à ce qu'elle lève et qu'un pic ressorte propre, puis laissez la génoise reposer un jour à température ambiante. Coupez la génoise ferme en cubes égaux de quelques centimètres. Fouettez le sucre glace avec le cacao, le lait et le beurre fondu jusqu'à obtenir un glaçage brillant. Trempez chaque cube dans le glaçage au chocolat, laissez égoutter l'excédent, puis roulez-le aussitôt dans la noix de coco râpée. Laissez les cubes sur une grille jusqu'à ce que le glaçage soit complètement pris avant de servir.",
+      de: "Die Eier mit dem Zucker auf hoher Stufe schlagen, bis sie hell und dreimal so voluminös sind. Das gesiebte Mehl mit dem Backpulver vorsichtig mit Auf-und-ab-Bewegungen unterheben. Den Teig in einer gefetteten quadratischen Form backen, bis er aufgegangen ist und ein Holzstäbchen sauber herauskommt, dann den Biskuit einen Tag bei Raumtemperatur ruhen lassen. Den festen Biskuit in gleichmäßige Würfel von wenigen Zentimetern schneiden. Puderzucker mit Kakao, Milch und geschmolzener Butter verrühren, bis eine glänzende Glasur entsteht. Jeden Würfel in die Schokoladenglasur tauchen, überschüssige Glasur abtropfen lassen, dann sofort in Kokosraspeln wälzen. Die Würfel auf einem Gitter ruhen lassen, bis die Glasur vor dem Servieren vollständig fest ist.",
+      pt: "Bata os ovos com o açúcar em velocidade alta até ficarem claros e triplicarem de volume. Incorpore suavemente a farinha peneirada com o fermento, com movimentos de baixo para cima. Asse a massa numa forma quadrada untada até crescer e um palito sair limpo, depois deixe o pão de ló descansar um dia à temperatura ambiente. Corte o pão de ló firme em cubos iguais de poucos centímetros. Bata o açúcar em pó com o cacau, o leite e a manteiga derretida até obter uma cobertura brilhante. Mergulhe cada cubo na cobertura de chocolate, deixando escorrer o excesso, e passe imediatamente pelo coco ralado. Deixe os cubos numa grelha até a cobertura endurecer por completo antes de servir.",
+      ru: "Взбейте яйца с сахаром на высокой скорости до посветления и увеличения объёма втрое. Аккуратно вмешайте просеянную муку с разрыхлителем движениями снизу вверх. Выпекайте тесто в смазанной квадратной форме, пока не поднимется и шпажка не выйдет сухой, затем дайте бисквиту постоять при комнатной температуре день. Нарежьте окрепший бисквит на ровные кубики по несколько сантиметров. Взбейте сахарную пудру с какао, молоком и растопленным маслом до глянцевой глазури. Окуните каждый кубик в шоколадную глазурь, дав стечь излишкам, затем сразу обваляйте в кокосовой стружке. Оставьте кубики на решётке до полного застывания глазури перед подачей.",
+      ar: "اخفقي البيض مع السكر على سرعة عالية حتى يصبح فاتحاً ويتضاعف حجمه ثلاث مرات. أضيفي الدقيق المنخول مع البيكنج باودر بلطف بحركات من الأسفل للأعلى. اخبزي الخليط في قالب مربع مدهون حتى يرتفع ويخرج السيخ نظيفاً، ثم اتركي الإسفنج يرتاح في درجة حرارة الغرفة ليوم. قطّعي الإسفنج المتماسك إلى مكعبات متساوية بحجم بضعة سنتيمترات. اخفقي سكر البودرة مع الكاكاو والحليب والزبدة المذابة حتى تحصلي على طلاء لامع. اغمسي كل مكعب في طلاء الشوكولاتة، دعي الزائد يقطر، ثم لفّيه فوراً بجوز الهند المبشور. اتركي المكعبات على شبكة حتى يتماسك الطلاء تماماً قبل التقديم.",
+      zh: "将鸡蛋与糖高速打发至颜色变浅、体积膨胀至三倍。轻轻拌入过筛的面粉和泡打粉，用上下翻拌的手法。将面糊倒入涂油的方形烤盘中烘烤至膨发、竹签插入取出干净为止，然后让蛋糕在室温下放置一天。将变紧实的蛋糕切成几厘米见方的均匀方块。将糖粉与可可粉、牛奶和融化黄油搅拌至有光泽的糖衣。将每块蛋糕浸入巧克力糖衣，让多余部分滴落，然后立即滚上椰丝。将方块放在架子上直至糖衣完全凝固后再享用。",
+      ja: "卵を砂糖と一緒に高速で、色が薄くなり体積が3倍になるまで泡立てる。ふるった小麦粉とベーキングパウダーを上下に動かしながら優しく混ぜ込む。油を塗った角型に生地を流し入れ、膨らんで串が綺麗に出るまで焼き、スポンジを室温で一日置く。しっかりしたスポンジを数センチ角の均等なキューブに切る。粉砂糖にココア、牛乳、溶かしバターを混ぜてつややかなコーティングを作る。各キューブをチョコレートコーティングに浸し、余分を落としてからすぐにココナッツにまぶす。サービス前にコーティングが完全に固まるまでキューブを網の上に置いておく。",
+      hi: "अंडों को चीनी के साथ तेज़ गति से तब तक फेंटें जब तक हल्के और तीन गुना फूल न जाएं। छना हुआ आटा और बेकिंग पाउडर ऊपर-नीचे गति से धीरे से मिलाएं। घोल को चिकनाई लगे चौकोर टिन में तब तक बेक करें जब तक फूल न जाए और सींक साफ न निकले, फिर स्पंज को कमरे के तापमान पर एक दिन आराम दें। सख्त हुए स्पंज को कुछ सेंटीमीटर के बराबर क्यूब्स में काटें। आइसिंग शुगर को कोको, दूध और पिघले मक्खन के साथ तब तक फेंटें जब तक चमकदार कोटिंग न बन जाए। हर क्यूब को चॉकलेट कोटिंग में डुबोएं, अतिरिक्त टपकने दें, फिर तुरंत नारियल में लपेटें। परोसने से पहले कोटिंग पूरी तरह जमने तक क्यूब्स को रैक पर छोड़ें।",
+      tr: "Yumurtaları şekerle yüksek hızda rengi açılıp hacmi üç katına çıkana kadar çırpın. Elenmiş unu kabartma tozuyla yukarı aşağı hareketlerle nazikçe katın. Hamuru yağlanmış kare bir kalıpta kabarıp kürdan temiz çıkana kadar pişirin, ardından pandispanı bir gün oda sıcaklığında dinlendirin. Sertleşen pandispanı birkaç santimetrelik eşit küpler halinde kesin. Pudra şekerini kakao, süt ve eritilmiş tereyağıyla parlak bir kaplama elde edene kadar çırpın. Her küpü çikolata kaplamaya batırın, fazlasını damlatın, ardından hemen hindistancevizine bulayın. Servisten önce kaplama tamamen sertleşene kadar küpleri bir ızgara üzerinde bekletin.",
+      it: "Sbatti le uova con lo zucchero ad alta velocità finché non diventano chiare e triplicano di volume. Incorpora delicatamente la farina setacciata con il lievito, con movimenti dal basso verso l'alto. Cuoci l'impasto in uno stampo quadrato imburrato finché non lievita e uno stecchino non esce pulito, poi lascia riposare il pan di Spagna a temperatura ambiente per un giorno. Taglia il pan di Spagna sodo in cubetti uguali di pochi centimetri. Sbatti lo zucchero a velo con il cacao, il latte e il burro fuso finché non ottieni una copertura lucida. Immergi ogni cubetto nella copertura al cioccolato, lasciando sgocciolare l'eccesso, poi arrotolalo subito nel cocco. Lascia i cubetti su una griglia finché la copertura non si rassoda completamente prima di servire.",
+      ko: "달걀을 설탕과 함께 색이 옅어지고 부피가 세 배가 될 때까지 고속으로 휘핑한다. 체 친 밀가루와 베이킹파우더를 위아래로 젓는 동작으로 부드럽게 섞는다. 반죽을 기름칠한 정사각형 틀에 부어 부풀고 꼬치가 깨끗이 나올 때까지 구운 뒤 스펀지를 실온에서 하루 둔다. 단단해진 스펀지를 몇 센티미터 크기의 고른 큐브로 자른다. 슈가파우더를 코코아, 우유, 녹인 버터와 함께 저어 윤기 나는 코팅을 만든다. 각 큐브를 초콜릿 코팅에 담갔다가 여분을 떨어뜨린 뒤 바로 코코넛에 굴린다. 서빙 전 코팅이 완전히 굳을 때까지 큐브를 망 위에 둔다."
+    },
+    originText: {
+      ro: "Lamington-urile poartă numele lui Lord Lamington, guvernator al statului Queensland la începutul secolului XX, deși povestea exactă a inventării lor rămâne disputată — o versiune spune că bucătarul său a improvizat desertul pentru oaspeți neanunțați. Simplitatea rețetei, care folosea doar un blat vechi, ciocolată și cocos, a făcut-o ușor de reprodus în orice bucătărie.\n\nAstăzi, 21 iulie e sărbătorită oficial ca National Lamington Day în Australia, iar prăjitura rămâne una dintre cele mai populare vânzări de strângere de fonduri prin școli și organizații caritabile.",
+      en: "Lamingtons are named after Lord Lamington, governor of Queensland in the early 20th century, though the exact story of their invention remains disputed — one version says his cook improvised the dessert for unannounced guests. The recipe's simplicity, using only day-old sponge, chocolate, and coconut, made it easy to recreate in any kitchen.\n\nToday, July 21st is officially celebrated as National Lamington Day in Australia, and the cake remains one of the most popular fundraising sales through schools and charities.",
+      es: "Los lamingtons deben su nombre a Lord Lamington, gobernador de Queensland a principios del siglo XX, aunque la historia exacta de su invención sigue siendo disputada: una versión dice que su cocinero improvisó el postre para invitados inesperados. La sencillez de la receta, que solo usaba bizcocho del día anterior, chocolate y coco, la hizo fácil de recrear en cualquier cocina.\n\nHoy, el 21 de julio se celebra oficialmente como el Día Nacional del Lamington en Australia, y el pastel sigue siendo una de las ventas benéficas más populares en escuelas y organizaciones caritativas.",
+      fr: "Les lamingtons doivent leur nom à Lord Lamington, gouverneur du Queensland au début du XXe siècle, bien que l'histoire exacte de leur invention reste débattue — une version raconte que son cuisinier aurait improvisé ce dessert pour des invités inattendus. La simplicité de la recette, utilisant seulement de la génoise rassise, du chocolat et de la noix de coco, l'a rendue facile à reproduire dans n'importe quelle cuisine.\n\nAujourd'hui, le 21 juillet est officiellement célébré comme la Journée nationale du lamington en Australie, et le gâteau reste l'une des ventes de charité les plus populaires dans les écoles et associations.",
+      de: "Lamingtons sind nach Lord Lamington benannt, dem Gouverneur von Queensland zu Beginn des 20. Jahrhunderts, auch wenn die genaue Geschichte ihrer Erfindung umstritten bleibt — eine Version besagt, sein Koch habe das Dessert für unangekündigte Gäste improvisiert. Die Einfachheit des Rezepts, das nur altbackenen Biskuit, Schokolade und Kokos verwendete, machte es in jeder Küche leicht nachzumachen.\n\nHeute wird der 21. Juli in Australien offiziell als National Lamington Day gefeiert, und der Kuchen bleibt einer der beliebtesten Verkäufe bei Schul- und Wohltätigkeitsbasaren.",
+      pt: "Os lamingtons devem o nome a Lord Lamington, governador de Queensland no início do século XX, embora a história exata da sua invenção continue disputada — uma versão diz que o seu cozinheiro improvisou a sobremesa para convidados inesperados. A simplicidade da receita, usando apenas pão de ló do dia anterior, chocolate e coco, tornou-a fácil de recriar em qualquer cozinha.\n\nHoje, 21 de julho é oficialmente celebrado como o Dia Nacional do Lamington na Austrália, e o bolo continua a ser uma das vendas de angariação de fundos mais populares em escolas e instituições de caridade.",
+      ru: "Лэмингтоны названы в честь лорда Лэмингтона, губернатора Квинсленда в начале XX века, хотя точная история их изобретения остаётся спорной — по одной из версий, его повар импровизировал десерт для нежданных гостей. Простота рецепта, использующего лишь вчерашний бисквит, шоколад и кокос, сделала его лёгким для повторения на любой кухне.\n\nСегодня 21 июля официально отмечается в Австралии как Национальный день лэмингтона, и этот торт остаётся одним из самых популярных на благотворительных продажах в школах и организациях.",
+      ar: "سُمّي اللامينغتون تيمّناً باللورد لامينغتون، حاكم كوينزلاند في أوائل القرن العشرين، رغم أن القصة الدقيقة لاختراعه تبقى مثار جدل — تقول إحدى الروايات إن طاهيه ارتجل الحلوى لضيوف غير متوقعين. بساطة الوصفة، التي تستخدم فقط إسفنجاً من اليوم السابق والشوكولاتة وجوز الهند، جعلتها سهلة التحضير في أي مطبخ.\n\nاليوم، يُحتفل رسمياً بيوم 21 يوليو باعتباره اليوم الوطني لللامينغتون في أستراليا، ويبقى الكيك من أكثر منتجات جمع التبرعات شعبية في المدارس والجمعيات الخيرية.",
+      zh: "拉明顿蛋糕得名于20世纪初昆士兰州总督拉明顿勋爵，尽管其发明的确切故事仍有争议——一种说法是他的厨师为不速之客即兴制作了这道甜点。这道食谱的简单——只需隔夜海绵蛋糕、巧克力和椰丝——使其在任何厨房都容易复制。\n\n如今，7月21日在澳大利亚被正式定为全国拉明顿日，这款蛋糕依然是学校和慈善机构筹款义卖中最受欢迎的产品之一。",
+      ja: "ラミントンは20世紀初頭のクイーンズランド州知事ラミントン卿にちなんで名付けられたが、その発明の正確な経緯には諸説ある——一説には、突然の来客のために彼の料理人がこのデザートを即興で作ったとされる。前日のスポンジ、チョコレート、ココナッツだけを使うレシピのシンプルさが、どの家庭でも再現しやすいものにした。\n\n今日では7月21日がオーストラリアで正式に「全国ラミントンの日」として祝われ、このケーキは学校や慈善団体の資金集めで今も最も人気のある販売品の一つである。",
+      hi: "लैमिंगटन का नाम 20वीं सदी की शुरुआत में क्वींसलैंड के गवर्नर लॉर्ड लैमिंगटन के नाम पर रखा गया, हालांकि इसके आविष्कार की सटीक कहानी विवादित बनी हुई है — एक संस्करण कहता है कि उनके रसोइये ने अनियोजित मेहमानों के लिए यह मिठाई तुरंत बनाई। इस रेसिपी की सादगी, जिसमें केवल एक दिन पुराना स्पंज, चॉकलेट और नारियल इस्तेमाल होता है, ने इसे किसी भी रसोई में बनाना आसान बना दिया।\n\nआज, 21 जुलाई को ऑस्ट्रेलिया में आधिकारिक रूप से राष्ट्रीय लैमिंगटन दिवस के रूप में मनाया जाता है, और यह केक स्कूलों और चैरिटी संगठनों में सबसे लोकप्रिय धन-संग्रह बिक्री में से एक बना हुआ है।",
+      tr: "Lamington'lar, 20. yüzyılın başında Queensland valisi Lord Lamington'ın adını taşır, ancak icat edilişinin tam hikayesi hâlâ tartışmalıdır — bir anlatıma göre aşçısı bu tatlıyı habersiz misafirler için doğaçlama yaptı. Sadece bir günlük pandispan, çikolata ve hindistancevizi kullanan tarifin basitliği, onu her mutfakta kolayca yapılabilir hale getirdi.\n\nBugün, 21 Temmuz Avustralya'da resmi olarak Ulusal Lamington Günü olarak kutlanıyor ve bu kek okullarda ve hayır kurumlarında en popüler bağış satışlarından biri olmaya devam ediyor.",
+      it: "I lamington prendono il nome da Lord Lamington, governatore del Queensland agli inizi del XX secolo, anche se la storia esatta della loro invenzione resta contesa — una versione racconta che il suo cuoco improvvisò il dolce per ospiti inaspettati. La semplicità della ricetta, che usa solo pan di Spagna del giorno prima, cioccolato e cocco, l'ha resa facile da riprodurre in qualsiasi cucina.\n\nOggi, il 21 luglio è celebrato ufficialmente come National Lamington Day in Australia, e la torta resta una delle vendite di beneficenza più popolari nelle scuole e nelle organizzazioni caritatevoli.",
+      ko: "라밍턴은 20세기 초 퀸즐랜드 총독이었던 라밍턴 경의 이름을 딴 것이지만, 정확한 탄생 이야기는 여전히 논쟁거리다 — 한 설에 따르면 그의 요리사가 예고 없이 온 손님을 위해 즉흥적으로 만든 디저트라고 한다. 하루 지난 스펀지, 초콜릿, 코코넛만 사용하는 레시피의 단순함 덕분에 어느 부엌에서든 쉽게 재현할 수 있었다.\n\n오늘날 7월 21일은 호주에서 공식적으로 전국 라밍턴의 날로 기념되며, 이 케이크는 학교와 자선 단체의 모금 판매에서 여전히 가장 인기 있는 품목 중 하나다."
+    }
   }
 ];
