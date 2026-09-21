@@ -1957,7 +1957,7 @@ function mealSummary(rec, lc_code) {
   if (!rec) return '';
   const ot = rec.originText?.[lc_code] || rec.originText?.en || rec.originText?.ro || '';
   if (ot) {
-    const firstSentence = ot.split(/(?:\.\s+|[。！？]\s*)/)[0] || ot;
+    const firstSentence = ot.split(/(?:\.\s+|[。！？]\s*|।\s*)/)[0] || ot;
     const trimmed = firstSentence.trim();
     if (trimmed.length <= 180) return trimmed + (trimmed.endsWith('.') || trimmed.endsWith('。') ? '' : '.');
     // Word-boundary cut at 150 chars
@@ -3973,9 +3973,11 @@ function recipePage(recipe, rl) {
   const cat  = recipe.category?.[code]    || recipe.category?.en    || recipe.category?.ro    || '';
   const metaDesc  = recipesMeta[recipe.id]?.desc?.[code] || recipesMeta[recipe.id]?.desc?.en || '';
   const originTxt = recipe.originText?.[code] || recipe.originText?.en || recipe.originText?.ro || metaDesc || rl.heroDesc(o);
-  // Sentence-end splitter: ASCII period+space (Latin/AR/HI/KO) or CJK full stop (ZH/JA).
+  // Sentence-end splitter: ASCII period+space (Latin/AR/KO) or CJK full stop (ZH/JA)
+  // or Devanagari danda (HI, which never uses ASCII '.').
   // Without the CJK branch, ZH/JA howIsMade collapses into a single mega-step.
-  const rawSteps = how.split(/(?:\.\s+|[。！？]\s*)/).filter(s => s.trim().length > 2);
+  // Without the danda branch, HI howIsMade collapses into a single mega-step.
+  const rawSteps = how.split(/(?:\.\s+|[。！？]\s*|।\s*)/).filter(s => s.trim().length > 2);
   const steps = padSteps(rawSteps, code);
   const enName = recipe.name?.en || recipe.name?.ro || '';
   const rslug  = slug(enName);
@@ -4068,7 +4070,7 @@ function recipePage(recipe, rl) {
       const rs = slug(r.name?.en || r.name?.ro || rn);
       const ri = r.ingredients?.[code] || r.ingredients?.en || [];
       const rh = r.howIsMade?.[code] || r.howIsMade?.en || '';
-      const rst = rh.split(/(?:\.\s+|[。！？]\s*)/).filter(s=>s.trim().length>2);
+      const rst = rh.split(/(?:\.\s+|[。！？]\s*|।\s*)/).filter(s=>s.trim().length>2);
       const rcat = r.category?.[code] || r.category?.en || '';
       const rm = recipeMetadata(ri, rst, rcat, code);
       const re = recipeCardEmoji(rcat);
@@ -4120,7 +4122,7 @@ function recipePage(recipe, rl) {
       const rs = slug(raw.name?.en || raw.name?.ro || rn);
       const ri = raw.ingredients?.[code] || raw.ingredients?.en || [];
       const rh = raw.howIsMade?.[code]  || raw.howIsMade?.en  || '';
-      const rst = rh.split(/(?:\.\s+|[。！？]\s*)/).filter(s => s.trim().length > 2);
+      const rst = rh.split(/(?:\.\s+|[。！？]\s*|।\s*)/).filter(s => s.trim().length > 2);
       const rcat = raw.category?.[code] || raw.category?.en || '';
       const rm = recipeMetadata(ri, rst, rcat, code);
       const re = recipeCardEmoji(rcat);
@@ -4434,8 +4436,8 @@ function tileExcerpt(text, maxLen = 160) {
   if (!text) return '';
   const trimmed = String(text).trim();
   if (!trimmed) return '';
-  // First sentence ending in Latin `.!?` or CJK `。！？`.
-  const m = trimmed.match(/^[^.!?。！？]*[.!?。！？]/);
+  // First sentence ending in Latin `.!?`, CJK `。！？`, or Devanagari danda `।`.
+  const m = trimmed.match(/^[^.!?。！？।]*[.!?。！？।]/);
   const first = (m ? m[0] : trimmed).trim();
   if (first.length <= maxLen) return first;
   // Word-boundary truncation. The `> 60` guard avoids cutting CJK runs
