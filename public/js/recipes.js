@@ -53071,5 +53071,473 @@ export const recipes = [
       it: "L'Älplermagronen ha origine nelle cucine dei rifugi alpini svizzeri, un piatto ideato da mandriani e pastori che avevano bisogno di un pasto semplice e calorico fatto con ingredienti che non si deteriorassero in quota — patate, pasta secca e formaggio prodotto proprio nel rifugio. Il nome combina 'Älpler' (chi lavora in montagna d'estate) con 'Magronen', la parola svizzero-tedesca per la pasta.\n\nL'insolito abbinamento con la composta di mele, per quanto possa sembrare strano a prima vista, è una tradizione consolidata: la dolcezza del frutto rinfresca il palato dopo ogni boccone ricco di formaggio e burro.",
       ko: "알플러마그로넨은 스위스 알프스 산장 부엌에서 유래한 요리로, 고지대에서 상하지 않는 재료—감자, 건조 파스타, 산장에서 직접 만든 치즈—로 간단하고 열량이 높은 한 끼를 필요로 했던 목동과 양치기들이 고안한 것이다. 이름은 여름에 산에서 일하는 사람을 뜻하는 'Älpler'와 스위스 독일어로 파스타를 뜻하는 'Magronen'을 합친 것이다.\n\n사과 소스와의 이색적인 조합은 처음엔 낯설어 보여도 확고히 자리 잡은 전통이다: 과일의 단맛이 치즈와 버터가 풍부한 한 입 한 입 후 입안을 상쾌하게 해준다."
     }
+  },
+  {
+    id: 432,
+    servings: 4,
+    tipType: "veg",
+    pairingsType: "middle-eastern",
+    nutrition: { cal: 380, prot: 14, carb: 40, fat: 20, fib: 9 },
+    origin: {
+      ro: "Israel", en: "Israel", es: "Israel", fr: "Israël", de: "Israel",
+      pt: "Israel", ru: "Израиль", ar: "إسرائيل", zh: "以色列", ja: "イスラエル",
+      hi: "इज़राइल", tr: "İsrail", it: "Israele", ko: "이스라엘"
+    },
+    name: {
+      ro: "Falafel", en: "Falafel", es: "Falafel", fr: "Falafel", de: "Falafel",
+      pt: "Falafel", ru: "Фалафель", ar: "فلافل", zh: "法拉费", ja: "ファラフェル",
+      hi: "फलाफेल", tr: "Falafel", it: "Falafel", ko: "팔라펠"
+    },
+    category: {
+      ro: "Fel principal", en: "Main Course", es: "Plato principal", fr: "Plat principal", de: "Hauptgericht",
+      pt: "Prato principal", ru: "Основное блюдо", ar: "طبق رئيسي", zh: "主菜", ja: "メイン料理",
+      hi: "मुख्य व्यंजन", tr: "Ana Yemek", it: "Piatto principale", ko: "메인 요리"
+    },
+    featureCards: {
+      ro: [
+        { icon: "🫘", t: "Năutul crud, nu fiert", d: "Secretul unui falafel crocant e năutul uscat înmuiat, măcinat crud, niciodată năut fiert sau la conservă." },
+        { icon: "🌿", t: "Verdeața dă culoarea", d: "Pătrunjelul și cilantrul proaspăt dau compoziției nuanța verde intensă caracteristică." },
+        { icon: "🧂", t: "Bicarbonatul, adăugat la final", d: "Bicarbonatul se pune chiar înainte de prăjit, ca bilele să rămână pufoase în interior." },
+        { icon: "🫓", t: "Servit mereu în pită", d: "Falafelul crocant se servește aproape mereu în pită caldă, cu tahini și legume proaspete." }
+      ],
+      en: [
+        { icon: "🫘", t: "Raw chickpeas, not cooked", d: "The secret to a crispy falafel is dried chickpeas soaked and ground raw, never cooked or canned chickpeas." },
+        { icon: "🌿", t: "Fresh herbs give the colour", d: "Parsley and cilantro give the mixture its characteristic deep green hue." },
+        { icon: "🧂", t: "Baking soda goes in last", d: "Baking soda is stirred in right before frying, so the balls stay fluffy inside." },
+        { icon: "🫓", t: "Always served in pita", d: "Crispy falafel is almost always tucked into warm pita with tahini and fresh vegetables." }
+      ],
+      es: [
+        { icon: "🫘", t: "Garbanzos crudos, no cocidos", d: "El secreto de un falafel crujiente son los garbanzos secos remojados y molidos crudos, nunca garbanzos cocidos o de bote." },
+        { icon: "🌿", t: "Las hierbas frescas dan el color", d: "El perejil y el cilantro dan a la mezcla su característico tono verde intenso." },
+        { icon: "🧂", t: "El bicarbonato va al final", d: "El bicarbonato se añade justo antes de freír, para que las bolitas queden esponjosas por dentro." },
+        { icon: "🫓", t: "Siempre servido en pita", d: "El falafel crujiente casi siempre se sirve en pan de pita caliente, con tahini y verduras frescas." }
+      ],
+      fr: [
+        { icon: "🫘", t: "Des pois chiches crus, non cuits", d: "Le secret d'un falafel croustillant, ce sont des pois chiches secs trempés et moulus crus, jamais cuits ou en conserve." },
+        { icon: "🌿", t: "Les herbes fraîches donnent la couleur", d: "Le persil et la coriandre donnent au mélange sa teinte vert intense caractéristique." },
+        { icon: "🧂", t: "Le bicarbonate en dernier", d: "Le bicarbonate est incorporé juste avant la friture, pour que les boules restent moelleuses à l'intérieur." },
+        { icon: "🫓", t: "Toujours servi dans une pita", d: "Le falafel croustillant est presque toujours glissé dans une pita chaude avec du tahini et des légumes frais." }
+      ],
+      de: [
+        { icon: "🫘", t: "Rohe, nicht gekochte Kichererbsen", d: "Das Geheimnis eines knusprigen Falafels sind eingeweichte, roh gemahlene getrocknete Kichererbsen, nie gekochte oder Dosen-Kichererbsen." },
+        { icon: "🌿", t: "Frische Kräuter geben die Farbe", d: "Petersilie und Koriander geben der Masse ihren charakteristischen tiefgrünen Ton." },
+        { icon: "🧂", t: "Natron kommt zuletzt dazu", d: "Natron wird erst kurz vor dem Frittieren untergerührt, damit die Bällchen innen locker bleiben." },
+        { icon: "🫓", t: "Immer in Pita serviert", d: "Knuspriger Falafel wird fast immer in warmem Pitabrot mit Tahini und frischem Gemüse serviert." }
+      ],
+      pt: [
+        { icon: "🫘", t: "Grão-de-bico cru, não cozido", d: "O segredo de um falafel crocante é grão-de-bico seco demolhado e moído cru, nunca grão-de-bico cozido ou de lata." },
+        { icon: "🌿", t: "As ervas frescas dão a cor", d: "A salsa e a coentros dão à mistura o seu tom verde intenso característico." },
+        { icon: "🧂", t: "O bicarbonato entra por último", d: "O bicarbonato é misturado mesmo antes de fritar, para que as bolinhas fiquem fofas por dentro." },
+        { icon: "🫓", t: "Sempre servido em pita", d: "O falafel crocante é quase sempre servido em pão pita quente, com tahini e legumes frescos." }
+      ],
+      ru: [
+        { icon: "🫘", t: "Сырой, а не варёный нут", d: "Секрет хрустящего фалафеля — сушёный нут, замоченный и перемолотый сырым, никогда не варёный или консервированный." },
+        { icon: "🌿", t: "Свежая зелень даёт цвет", d: "Петрушка и кинза придают массе характерный насыщенный зелёный оттенок." },
+        { icon: "🧂", t: "Сода добавляется в конце", d: "Соду вмешивают прямо перед жаркой, чтобы шарики оставались пышными внутри." },
+        { icon: "🫓", t: "Всегда подаётся в питте", d: "Хрустящий фалафель почти всегда подают в тёплой питте с тахини и свежими овощами." }
+      ],
+      ar: [
+        { icon: "🫘", t: "حمص نيء وليس مطبوخاً", d: "سر الفلافل المقرمشة هو الحمص الجاف المنقوع والمطحون نيئاً، وليس الحمص المطبوخ أو المعلب أبداً." },
+        { icon: "🌿", t: "الأعشاب الطازجة تمنح اللون", d: "البقدونس والكزبرة يمنحان الخليط لونه الأخضر الداكن المميز." },
+        { icon: "🧂", t: "صودا الخبز تُضاف أخيراً", d: "تُضاف صودا الخبز قبل القلي مباشرة، لتبقى الكرات هشة من الداخل." },
+        { icon: "🫓", t: "تُقدم دائماً في الخبز", d: "تُقدَّم الفلافل المقرمشة دائماً تقريباً داخل خبز البيتا الدافئ مع الطحينة والخضار الطازجة." }
+      ],
+      zh: [
+        { icon: "🫘", t: "生鹰嘴豆而非煮熟的", d: "酥脆法拉费的秘诀是泡发后生磨的干鹰嘴豆，绝不能用煮熟或罐装鹰嘴豆。" },
+        { icon: "🌿", t: "新鲜香草赋予颜色", d: "欧芹和香菜让面糊呈现出标志性的深绿色。" },
+        { icon: "🧂", t: "小苏打最后加入", d: "小苏打在油炸前才拌入，以保证丸子内部松软。" },
+        { icon: "🫓", t: "总是配皮塔饼享用", d: "酥脆的法拉费几乎总是夹在温热的皮塔饼中，配塔希尼酱和新鲜蔬菜。" }
+      ],
+      ja: [
+        { icon: "🫘", t: "生のひよこ豆、加熱しない", d: "サクサクのファラフェルの秘訣は、戻した乾燥ひよこ豆を生のまま挽くこと。煮た豆や缶詰の豆は使わない。" },
+        { icon: "🌿", t: "フレッシュハーブが色を作る", d: "パセリとコリアンダーが生地に特徴的な濃い緑色を与える。" },
+        { icon: "🧂", t: "重曹は最後に加える", d: "重曹は揚げる直前に混ぜ込み、団子の中をふんわりさせる。" },
+        { icon: "🫓", t: "必ずピタで提供", d: "サクサクのファラフェルはほぼ必ず温かいピタパンにタヒニと新鮮な野菜と共に詰められる。" }
+      ],
+      hi: [
+        { icon: "🫘", t: "कच्चे छोले, पके नहीं", d: "कुरकुरे फलाफेल का राज़ है भिगोए और कच्चे पिसे सूखे छोले, कभी पके या डिब्बाबंद छोले नहीं।" },
+        { icon: "🌿", t: "ताज़ी जड़ी-बूटियां रंग देती हैं", d: "अजमोद और धनिया मिश्रण को इसका विशिष्ट गहरा हरा रंग देते हैं।" },
+        { icon: "🧂", t: "बेकिंग सोडा आखिर में डालें", d: "तलने से ठीक पहले बेकिंग सोडा मिलाया जाता है, ताकि गोले अंदर से फूले रहें।" },
+        { icon: "🫓", t: "हमेशा पीटा में परोसा जाता है", d: "कुरकुरा फलाफेल लगभग हमेशा गरम पीटा में ताहिनी और ताज़ी सब्ज़ियों के साथ परोसा जाता है।" }
+      ],
+      tr: [
+        { icon: "🫘", t: "Çiğ nohut, pişmiş değil", d: "Çıtır falafelin sırrı, ıslatılıp çiğ öğütülmüş kuru nohuttur, asla pişmiş veya konserve nohut değil." },
+        { icon: "🌿", t: "Taze otlar rengi verir", d: "Maydanoz ve kişniş karışıma karakteristik koyu yeşil tonunu verir." },
+        { icon: "🧂", t: "Karbonat en son eklenir", d: "Karbonat kızartmadan hemen önce karıştırılır, böylece toplar içten kabarık kalır." },
+        { icon: "🫓", t: "Her zaman pitada servis edilir", d: "Çıtır falafel neredeyse her zaman sıcak pita ekmeğine tahin ve taze sebzelerle konarak servis edilir." }
+      ],
+      it: [
+        { icon: "🫘", t: "Ceci crudi, non cotti", d: "Il segreto di un falafel croccante sono i ceci secchi ammollati e macinati crudi, mai ceci cotti o in scatola." },
+        { icon: "🌿", t: "Le erbe fresche danno il colore", d: "Prezzemolo e coriandolo danno all'impasto la sua caratteristica tonalità verde intensa." },
+        { icon: "🧂", t: "Il bicarbonato va aggiunto per ultimo", d: "Il bicarbonato viene incorporato appena prima di friggere, così le polpette restano soffici all'interno." },
+        { icon: "🫓", t: "Servito sempre nella pita", d: "Il falafel croccante viene quasi sempre servito in una pita calda con tahini e verdure fresche." }
+      ],
+      ko: [
+        { icon: "🫘", t: "익히지 않은 날 병아리콩", d: "바삭한 팔라펠의 비결은 불려서 날것으로 간 마른 병아리콩이며, 삶거나 캔에 든 병아리콩은 절대 쓰지 않는다." },
+        { icon: "🌿", t: "신선한 허브가 색을 만든다", d: "파슬리와 고수가 반죽에 특유의 짙은 녹색을 더한다." },
+        { icon: "🧂", t: "베이킹소다는 마지막에", d: "베이킹소다는 튀기기 직전에 섞어 속이 폭신하게 남도록 한다." },
+        { icon: "🫓", t: "항상 피타에 넣어 낸다", d: "바삭한 팔라펠은 거의 항상 따뜻한 피타에 타히니와 신선한 채소를 곁들여 넣어 제공된다." }
+      ]
+    },
+    ingredients: {
+      ro: ["300g năut uscat, înmuiat peste noapte", "1 ceapă mică, tocată", "3 căței de usturoi", "un mănunchi de pătrunjel proaspăt", "un mănunchi de cilantru proaspăt", "1 linguriță chimen măcinat", "1 linguriță coriandru măcinat", "1/2 linguriță bicarbonat de sodiu", "ulei pentru prăjit"],
+      en: ["300g dried chickpeas, soaked overnight", "1 small onion, chopped", "3 garlic cloves", "a bunch of fresh parsley", "a bunch of fresh cilantro", "1 tsp ground cumin", "1 tsp ground coriander", "1/2 tsp baking soda", "oil for frying"],
+      es: ["300g de garbanzos secos, remojados toda la noche", "1 cebolla pequeña, picada", "3 dientes de ajo", "un manojo de perejil fresco", "un manojo de cilantro fresco", "1 cdta de comino molido", "1 cdta de cilantro molido", "1/2 cdta de bicarbonato de sodio", "aceite para freír"],
+      fr: ["300g de pois chiches secs, trempés toute une nuit", "1 petit oignon, haché", "3 gousses d'ail", "un bouquet de persil frais", "un bouquet de coriandre fraîche", "1 c. à café de cumin moulu", "1 c. à café de coriandre moulue", "1/2 c. à café de bicarbonate de soude", "huile pour friture"],
+      de: ["300g getrocknete Kichererbsen, über Nacht eingeweicht", "1 kleine Zwiebel, gehackt", "3 Knoblauchzehen", "ein Bund frische Petersilie", "ein Bund frischer Koriander", "1 TL gemahlener Kreuzkümmel", "1 TL gemahlener Koriander", "1/2 TL Natron", "Öl zum Frittieren"],
+      pt: ["300g de grão-de-bico seco, demolhado de um dia para o outro", "1 cebola pequena, picada", "3 dentes de alho", "um molho de salsa fresca", "um molho de coentros frescos", "1 col. chá de cominhos moídos", "1 col. chá de coentros moídos", "1/2 col. chá de bicarbonato de sódio", "óleo para fritar"],
+      ru: ["300г сушёного нута, замоченного на ночь", "1 маленькая луковица, нарезанная", "3 зубчика чеснока", "пучок свежей петрушки", "пучок свежей кинзы", "1 ч.л. молотого тмина", "1 ч.л. молотого кориандра", "1/2 ч.л. пищевой соды", "масло для жарки"],
+      ar: ["300غ حمص جاف، منقوع طوال الليل", "1 بصلة صغيرة، مفرومة", "3 فصوص ثوم", "حزمة بقدونس طازج", "حزمة كزبرة طازجة", "1 ملعقة صغيرة كمون مطحون", "1 ملعقة صغيرة كزبرة مطحونة", "1/2 ملعقة صغيرة صودا الخبز", "زيت للقلي"],
+      zh: ["300克干鹰嘴豆，隔夜泡发", "1个小洋葱，切碎", "3瓣大蒜", "一把新鲜欧芹", "一把新鲜香菜", "1茶匙孜然粉", "1茶匙芫荽粉", "1/2茶匙小苏打", "煎炸用油"],
+      ja: ["乾燥ひよこ豆300g（一晩浸水）", "小玉ねぎ1個（みじん切り）", "にんにく3片", "生パセリ一束", "生コリアンダー一束", "クミンパウダー小さじ1", "コリアンダーパウダー小さじ1", "重曹小さじ1/2", "揚げ油"],
+      hi: ["300 ग्राम सूखे छोले, रातभर भिगोए", "1 छोटा प्याज़, कटा हुआ", "3 लहसुन की कलियां", "ताज़ा अजमोद का एक गुच्छा", "ताज़ा धनिया का एक गुच्छा", "1 छोटा चम्मच पिसा जीरा", "1 छोटा चम्मच पिसा धनिया", "1/2 छोटा चम्मच बेकिंग सोडा", "तलने के लिए तेल"],
+      tr: ["300g kuru nohut, bir gece ıslatılmış", "1 küçük soğan, doğranmış", "3 diş sarımsak", "bir demet taze maydanoz", "bir demet taze kişniş", "1 tatlı kaşığı toz kimyon", "1 tatlı kaşığı toz kişniş", "1/2 tatlı kaşığı karbonat", "kızartmak için yağ"],
+      it: ["300g di ceci secchi, ammollati per una notte", "1 cipolla piccola, tritata", "3 spicchi d'aglio", "un mazzetto di prezzemolo fresco", "un mazzetto di coriandolo fresco", "1 cucchiaino di cumino macinato", "1 cucchiaino di coriandolo macinato", "1/2 cucchiaino di bicarbonato", "olio per friggere"],
+      ko: ["마른 병아리콩 300g, 하룻밤 불린 것", "작은 양파 1개, 다진 것", "마늘 3쪽", "생파슬리 한 다발", "생고수 한 다발", "커민 가루 1작은술", "고수 가루 1작은술", "베이킹소다 1/2작은술", "튀김용 기름"]
+    },
+    howIsMade: {
+      ro: "Se înmoaie năutul uscat în multă apă peste noapte, apoi se scurge bine, fără să se fiarbă niciodată. Se dă prin robot năutul înmuiat împreună cu ceapa, usturoiul, pătrunjelul și cilantrul, până devine o pastă fin măcinată, dar nu piure. Se condimentează compoziția cu chimen, coriandru și sare, apoi se adaugă bicarbonatul chiar înainte de prăjit. Se lasă amestecul să stea circa 20 de minute ca aromele să se combine și bicarbonatul să activeze. Se modelează bile mici sau chiftele, presate ferm. Se prăjesc falafelurile în ulei încins, în tranșe, până devin aurii intens și crocante la exterior. Se scurg pe hârtie absorbantă și se servesc calde, în pită, cu sos tahini și legume proaspete.",
+      en: "Soak the dried chickpeas in plenty of water overnight, then drain well — never boil them. Blend the soaked chickpeas with the onion, garlic, parsley, and cilantro until finely ground but not pureed. Season the mixture with cumin, coriander, and salt, then stir in the baking soda just before frying. Let the mixture rest for about 20 minutes so the flavours meld and the baking soda activates. Shape the mixture into small balls or patties, pressing them together firmly. Fry the falafel in hot oil, in batches, until deep golden brown and crisp on the outside. Drain on paper towel and serve hot, tucked into pita with tahini sauce and fresh vegetables.",
+      es: "Remoja los garbanzos secos en abundante agua toda la noche y luego escúrrelos bien; nunca los hiervas. Tritura los garbanzos remojados con la cebolla, el ajo, el perejil y el cilantro hasta obtener una pasta finamente molida, pero no un puré. Sazona la mezcla con comino, cilantro y sal, y añade el bicarbonato justo antes de freír. Deja reposar la mezcla unos 20 minutos para que los sabores se integren y el bicarbonato actúe. Forma bolitas o hamburguesas pequeñas, apretándolas con firmeza. Fríe el falafel en aceite caliente, por tandas, hasta que esté bien dorado y crujiente por fuera. Escurre sobre papel absorbente y sirve caliente, en pan de pita, con salsa tahini y verduras frescas.",
+      fr: "Faites tremper les pois chiches secs dans beaucoup d'eau toute une nuit, puis égouttez-les bien — ne les faites jamais bouillir. Mixez les pois chiches trempés avec l'oignon, l'ail, le persil et la coriandre jusqu'à obtenir une pâte finement moulue, mais pas une purée. Assaisonnez le mélange de cumin, de coriandre et de sel, puis incorporez le bicarbonate juste avant de frire. Laissez reposer le mélange environ 20 minutes pour que les saveurs se mêlent et que le bicarbonate agisse. Façonnez de petites boules ou galettes, en les pressant fermement. Faites frire les falafels dans l'huile chaude, par lots, jusqu'à ce qu'ils soient bien dorés et croustillants à l'extérieur. Égouttez sur du papier absorbant et servez chaud, dans une pita, avec de la sauce tahini et des légumes frais.",
+      de: "Die getrockneten Kichererbsen über Nacht in reichlich Wasser einweichen, dann gut abtropfen lassen — niemals kochen. Die eingeweichten Kichererbsen mit Zwiebel, Knoblauch, Petersilie und Koriander mixen, bis eine fein gemahlene, aber nicht pürierte Masse entsteht. Die Masse mit Kreuzkümmel, Koriander und Salz würzen, dann das Natron erst kurz vor dem Frittieren unterrühren. Die Masse etwa 20 Minuten ruhen lassen, damit sich die Aromen verbinden und das Natron wirkt. Aus der Masse kleine Bällchen oder Küchlein formen und fest zusammendrücken. Die Falafel portionsweise in heißem Öl goldbraun und außen knusprig frittieren. Auf Küchenpapier abtropfen lassen und heiß in Pitabrot mit Tahini-Sauce und frischem Gemüse servieren.",
+      pt: "Demolhe o grão-de-bico seco em bastante água de um dia para o outro e depois escorra bem — nunca o cozinhe. Triture o grão-de-bico demolhado com a cebola, o alho, a salsa e os coentros até obter uma pasta finamente moída, mas não um puré. Tempere a mistura com cominhos, coentros e sal, e junte o bicarbonato mesmo antes de fritar. Deixe a mistura repousar cerca de 20 minutos para os sabores se combinarem e o bicarbonato atuar. Molde bolinhas pequenas ou hambúrgueres, apertando-os com firmeza. Frite o falafel em óleo quente, aos poucos, até ficar bem dourado e crocante por fora. Escorra em papel absorvente e sirva quente, em pão pita, com molho tahini e legumes frescos.",
+      ru: "Замочите сушёный нут в большом количестве воды на ночь, затем хорошо слейте воду — никогда не варите его. Измельчите размоченный нут с луком, чесноком, петрушкой и кинзой до мелкой, но не пюреобразной массы. Приправьте массу тмином, кориандром и солью, затем вмешайте соду прямо перед жаркой. Дайте массе постоять около 20 минут, чтобы вкусы соединились, а сода начала действовать. Сформируйте небольшие шарики или котлетки, плотно спрессовывая их. Обжарьте фалафель в горячем масле порциями до насыщенного золотистого цвета и хрустящей корочки снаружи. Обсушите на бумажном полотенце и подавайте горячим в питте с соусом тахини и свежими овощами.",
+      ar: "انقعي الحمص الجاف في كمية وافرة من الماء طوال الليل، ثم صفّيه جيداً — لا تسلقيه أبداً. اخلطي الحمص المنقوع مع البصل والثوم والبقدونس والكزبرة حتى يصبح مطحوناً ناعماً وليس مهروساً. تبّلي الخليط بالكمون والكزبرة والملح، ثم أضيفي صودا الخبز قبل القلي مباشرة. اتركي الخليط يرتاح حوالي 20 دقيقة حتى تتمازج النكهات وتنشط الصودا. شكّلي كرات صغيرة أو أقراصاً، مع الضغط عليها بإحكام. اقلي الفلافل في زيت ساخن، على دفعات، حتى تصبح ذهبية داكنة ومقرمشة من الخارج. صفّيها على ورق ماص وقدّميها ساخنة، داخل خبز البيتا، مع صلصة الطحينة والخضار الطازجة.",
+      zh: "将干鹰嘴豆用大量水浸泡一夜，然后彻底沥干——切勿煮沸。将泡好的鹰嘴豆与洋葱、大蒜、欧芹和香菜一起搅打至细腻但不成泥状。用孜然、芫荽和盐给混合物调味，然后在油炸前拌入小苏打。让混合物静置约20分钟，使味道融合并让小苏打起效。将混合物捏成小球或小饼，紧紧压实。分批将法拉费放入热油中炸至外表呈深金黄色且酥脆。捞出沥干在厨房纸上，趁热搭配塔希尼酱和新鲜蔬菜装入皮塔饼中享用。",
+      ja: "乾燥ひよこ豆をたっぷりの水に一晩浸し、しっかり水を切る——決して煮ないこと。戻したひよこ豆を玉ねぎ、にんにく、パセリ、コリアンダーと一緒に、細かく挽くがペースト状にはならない程度に混ぜる。クミン、コリアンダー、塩で味を整え、揚げる直前に重曹を混ぜ込む。生地を約20分休ませ、風味を馴染ませ重曹を働かせる。生地を小さな球やパティ状にしっかり押し固めて成形する。ファラフェルを熱い油で数回に分けて、外側が濃い黄金色でカリッとするまで揚げる。キッチンペーパーで油を切り、熱いうちにピタパンにタヒニソースと新鮮な野菜と共に詰めて提供する。",
+      hi: "सूखे छोलों को भरपूर पानी में रातभर भिगोएं, फिर अच्छी तरह छान लें — कभी उबालें नहीं। भीगे छोलों को प्याज़, लहसुन, अजमोद और धनिया के साथ तब तक पीसें जब तक बारीक पिसा हुआ हो, लेकिन प्यूरी न बने। मिश्रण को जीरा, धनिया और नमक से स्वाद दें, फिर तलने से ठीक पहले बेकिंग सोडा मिलाएं। मिश्रण को लगभग 20 मिनट आराम दें ताकि स्वाद मिल जाएं और बेकिंग सोडा सक्रिय हो जाए। छोटी गोलियां या टिक्की बनाएं, मजबूती से दबाते हुए। फलाफेल को गरम तेल में थोड़ा-थोड़ा करके तब तक तलें जब तक बाहर से गहरा सुनहरा और कुरकुरा न हो जाए। टिशू पेपर पर निथारें और गरम परोसें, पीटा में ताहिनी सॉस और ताज़ी सब्ज़ियों के साथ।",
+      tr: "Kuru nohutları bol suda bir gece ıslatın, ardından iyice süzün — asla kaynatmayın. Islatılmış nohutları soğan, sarımsak, maydanoz ve kişnişle birlikte ince öğütülmüş ama püre olmayacak şekilde karıştırın. Karışımı kimyon, kişniş ve tuzla tatlandırın, ardından kızartmadan hemen önce karbonatı karıştırın. Karışımı yaklaşık 20 dakika dinlendirin ki lezzetler kaynaşsın ve karbonat etkinleşsin. Karışımdan küçük toplar veya köfteler şekillendirin, sıkıca bastırarak. Falafeli sıcak yağda parti parti dıştan koyu altın rengi ve çıtır olana kadar kızartın. Kağıt havlu üzerinde süzdürün ve sıcak pita ekmeğine tahin sosu ve taze sebzelerle koyarak servis edin.",
+      it: "Metti in ammollo i ceci secchi in abbondante acqua per tutta la notte, poi scolali bene — non farli mai bollire. Frulla i ceci ammollati con la cipolla, l'aglio, il prezzemolo e il coriandolo fino a ottenere un composto finemente macinato ma non un purè. Condisci il composto con cumino, coriandolo e sale, poi incorpora il bicarbonato appena prima di friggere. Lascia riposare il composto per circa 20 minuti affinché i sapori si amalgamino e il bicarbonato agisca. Forma delle palline o polpette piccole, premendole con decisione. Friggi il falafel in olio caldo, a lotti, finché non è dorato scuro e croccante all'esterno. Scola su carta assorbente e servi caldo, in una pita, con salsa tahini e verdure fresche.",
+      ko: "마른 병아리콩을 충분한 물에 하룻밤 불린 뒤 물기를 잘 뺀다 — 절대 삶지 않는다. 불린 병아리콩을 양파, 마늘, 파슬리, 고수와 함께 곱게 갈되 퓌레가 되지 않도록 간다. 커민, 고수, 소금으로 간을 한 뒤 튀기기 직전에 베이킹소다를 섞는다. 반죽을 약 20분간 두어 맛이 어우러지고 베이킹소다가 작용하도록 한다. 반죽을 작은 공이나 패티 모양으로 단단히 눌러 빚는다. 팔라펠을 뜨거운 기름에 나누어 겉이 진한 황금빛이 되고 바삭해질 때까지 튀긴다. 키친타월에 기름을 빼고 뜨거울 때 피타에 타히니 소스와 신선한 채소를 곁들여 넣어 낸다."
+    },
+    originText: {
+      ro: "Originea exactă a falafelului rămâne disputată în regiune, unele povești plasându-l în Egipt, altele în Levant, dar în Israel a devenit rapid una dintre mâncările stradale definitorii, adoptată și adaptată de comunitățile de imigranți din a doua jumătate a secolului XX. Faptul că e complet vegetal l-a făcut popular și printre cei care respectă legile kașer.\n\nAstăzi, standurile de falafel sunt omniprezente în orașele israeliene, iar felul a devenit un simbol al bucătăriei de stradă locale, servit rapid, ieftin și aproape întotdeauna proaspăt prăjit la comandă.",
+      en: "The exact origin of falafel remains disputed in the region, with some stories placing it in Egypt and others in the Levant, but in Israel it quickly became one of the defining street foods, adopted and adapted by waves of immigrant communities in the second half of the 20th century. Being entirely plant-based also made it popular among those keeping kosher.\n\nToday, falafel stands are everywhere in Israeli cities, and the dish has become a symbol of local street food, served fast, cheap, and almost always fried fresh to order.",
+      es: "El origen exacto del falafel sigue siendo objeto de disputa en la región, con relatos que lo sitúan en Egipto y otros en el Levante, pero en Israel se convirtió rápidamente en una de las comidas callejeras definitorias, adoptada y adaptada por oleadas de comunidades inmigrantes en la segunda mitad del siglo XX. Ser completamente vegetal también lo hizo popular entre quienes siguen las leyes kosher.\n\nHoy, los puestos de falafel están por todas partes en las ciudades israelíes, y el plato se ha convertido en un símbolo de la comida callejera local, servido rápido, barato y casi siempre frito al momento.",
+      fr: "L'origine exacte du falafel reste disputée dans la région, certains récits le situant en Égypte, d'autres au Levant, mais en Israël il est rapidement devenu l'un des plats de rue emblématiques, adopté et adapté par des vagues de communautés immigrées dans la seconde moitié du XXe siècle. Le fait qu'il soit entièrement végétal l'a aussi rendu populaire parmi ceux qui suivent les lois casher.\n\nAujourd'hui, les stands de falafel sont partout dans les villes israéliennes, et le plat est devenu un symbole de la street food locale, servi vite, bon marché et presque toujours frit sur commande.",
+      de: "Der genaue Ursprung des Falafels bleibt in der Region umstritten — manche Erzählungen verorten ihn in Ägypten, andere in der Levante — aber in Israel wurde er schnell zu einem der prägenden Streetfoods, übernommen und angepasst von Einwandererwellen in der zweiten Hälfte des 20. Jahrhunderts. Dass er rein pflanzlich ist, machte ihn auch bei koscher lebenden Menschen beliebt.\n\nHeute sind Falafel-Stände in israelischen Städten allgegenwärtig, und das Gericht ist zu einem Symbol des lokalen Streetfoods geworden — schnell, günstig und fast immer frisch auf Bestellung frittiert.",
+      pt: "A origem exata do falafel continua a ser disputada na região, com algumas histórias a situá-lo no Egito e outras no Levante, mas em Israel tornou-se rapidamente uma das comidas de rua definidoras, adotada e adaptada por vagas de comunidades imigrantes na segunda metade do século XX. Ser inteiramente vegetal também o tornou popular entre os que seguem as leis kosher.\n\nHoje, as bancas de falafel estão por toda a parte nas cidades israelitas, e o prato tornou-se um símbolo da comida de rua local, servido rápido, barato e quase sempre frito na hora.",
+      ru: "Точное происхождение фалафеля остаётся спорным в регионе — одни версии помещают его в Египет, другие в Левант, — но в Израиле он быстро стал одним из определяющих уличных блюд, воспринятым и адаптированным волнами иммигрантских общин во второй половине XX века. Его полностью растительный состав также сделал его популярным среди соблюдающих кошер.\n\nСегодня лотки с фалафелем повсюду в израильских городах, и блюдо стало символом местной уличной еды — быстрое, дешёвое и почти всегда жарящееся свежим на заказ.",
+      ar: "يبقى الأصل الدقيق للفلافل موضع خلاف في المنطقة، إذ تضعه بعض الروايات في مصر وأخرى في بلاد الشام، لكنه في إسرائيل أصبح سريعاً أحد أطعمة الشارع المميزة، تبنته وطوّرته موجات من مجتمعات المهاجرين في النصف الثاني من القرن العشرين. كونه نباتياً بالكامل جعله أيضاً شائعاً بين ملتزمي قوانين الكوشر.\n\nاليوم، أكشاك الفلافل منتشرة في كل مكان في المدن الإسرائيلية، وأصبح الطبق رمزاً لطعام الشارع المحلي، يُقدَّم بسرعة وبسعر زهيد وغالباً مقلياً طازجاً عند الطلب.",
+      zh: "法拉费的确切起源在该地区仍有争议，一些说法认为源自埃及，另一些则认为源自黎凡特地区，但在以色列，它迅速成为最具代表性的街头食品之一，被20世纪下半叶一波又一波的移民社区采纳并加以改良。它完全是植物性食品，这也让它在遵守犹太洁食规定的人群中广受欢迎。\n\n如今，法拉费摊位在以色列各城市随处可见，这道菜已成为当地街头美食的象征——快速、便宜，而且几乎总是现点现炸。",
+      ja: "ファラフェルの正確な起源はこの地域では今も議論の的であり、エジプト起源とする説もあればレバント起源とする説もあるが、イスラエルでは急速に代表的なストリートフードの一つとなり、20世紀後半の移民コミュニティの波によって受け入れられ、独自に発展した。完全に植物性であることも、コーシャの戒律を守る人々の間で人気を得た理由の一つだ。\n\n今日、ファラフェルの屋台はイスラエルの街のいたるところにあり、この料理は地元のストリートフードの象徴となっている——素早く、安価で、ほぼ常に注文を受けてから揚げたてが提供される。",
+      hi: "फलाफेल की सटीक उत्पत्ति इस क्षेत्र में विवादित बनी हुई है, कुछ कहानियां इसे मिस्र में रखती हैं तो कुछ लेवांत में, लेकिन इज़राइल में यह जल्दी ही सबसे प्रतिष्ठित स्ट्रीट फूड्स में से एक बन गया, जिसे 20वीं सदी के उत्तरार्ध में आप्रवासी समुदायों की लहरों ने अपनाया और अनुकूलित किया। पूरी तरह से पादप-आधारित होने के कारण यह कोषेर नियमों का पालन करने वालों में भी लोकप्रिय हो गया।\n\nआज, फलाफेल स्टैंड इज़राइली शहरों में हर जगह हैं, और यह व्यंजन स्थानीय स्ट्रीट फूड का प्रतीक बन गया है — तेज़, सस्ता और लगभग हमेशा ऑर्डर पर ताज़ा तला हुआ।",
+      tr: "Falafelin kesin kökeni bölgede tartışmalı olmaya devam ediyor; bazı anlatılar onu Mısır'a, bazıları Levant'a yerleştiriyor, ancak İsrail'de hızla belirleyici sokak yiyeceklerinden biri haline geldi, 20. yüzyılın ikinci yarısında göçmen toplulukları dalgaları tarafından benimsendi ve uyarlandı. Tamamen bitkisel olması onu koşer kurallarına uyanlar arasında da popüler yaptı.\n\nBugün falafel tezgahları İsrail şehirlerinde her yerde bulunuyor ve yemek yerel sokak yemeğinin bir simgesi haline geldi — hızlı, ucuz ve neredeyse her zaman sipariş üzerine taze kızartılıyor.",
+      it: "L'origine esatta del falafel resta contesa nella regione, con alcune storie che lo collocano in Egitto e altre nel Levante, ma in Israele divenne rapidamente uno dei cibi di strada distintivi, adottato e adattato da ondate di comunità immigrate nella seconda metà del XX secolo. Essere completamente vegetale lo rese popolare anche tra chi osserva le leggi kosher.\n\nOggi, i chioschi di falafel sono ovunque nelle città israeliane, e il piatto è diventato un simbolo dello street food locale, servito veloce, economico e quasi sempre fritto fresco su ordinazione.",
+      ko: "팔라펠의 정확한 기원은 이 지역에서 여전히 논쟁거리로, 일부는 이집트를, 일부는 레반트를 기원으로 본다. 그러나 이스라엘에서는 20세기 후반 이민자 공동체의 물결에 의해 받아들여지고 변형되며 빠르게 대표적인 길거리 음식 중 하나가 되었다. 완전히 식물성이라는 점도 코셔 규정을 지키는 사람들 사이에서 인기를 얻은 이유였다.\n\n오늘날 팔라펠 노점은 이스라엘 도시 곳곳에 있으며, 이 요리는 지역 길거리 음식의 상징이 되었다 — 빠르고 저렴하며 거의 항상 주문 즉시 튀겨 신선하게 제공된다."
+    }
+  },
+  {
+    id: 433,
+    servings: 4,
+    tipType: "dessert",
+    pairingsType: "dessert",
+    nutrition: { cal: 280, prot: 5, carb: 38, fat: 11, fib: 1 },
+    origin: {
+      ro: "Israel", en: "Israel", es: "Israel", fr: "Israël", de: "Israel",
+      pt: "Israel", ru: "Израиль", ar: "إسرائيل", zh: "以色列", ja: "イスラエル",
+      hi: "इज़राइल", tr: "İsrail", it: "Israele", ko: "이스라엘"
+    },
+    name: {
+      ro: "Malabi", en: "Malabi", es: "Malabi", fr: "Malabi", de: "Malabi",
+      pt: "Malabi", ru: "Малаби", ar: "مهلبية", zh: "马拉比奶冻", ja: "マラビ",
+      hi: "मलाबी", tr: "Malabi", it: "Malabi", ko: "말라비"
+    },
+    category: {
+      ro: "Desert", en: "Dessert", es: "Postre", fr: "Dessert", de: "Dessert",
+      pt: "Sobremesa", ru: "Десерт", ar: "حلوى", zh: "甜点", ja: "デザート",
+      hi: "मिठाई", tr: "Tatlı", it: "Dolce", ko: "디저트"
+    },
+    featureCards: {
+      ro: [
+        { icon: "🥛", t: "O budincă fină de lapte", d: "Laptele îngroșat cu amidon de porumb devine o budincă tremurândă, mătăsoasă pe limbă." },
+        { icon: "🌹", t: "Apa de trandafiri, aroma semnătură", d: "Un strop de apă de trandafiri sau flori de portocal parfumează budinca discret, fără să domine." },
+        { icon: "🍯", t: "Siropul roșu dulce-acrișor", d: "Siropul de rodie sau de zmeură, turnat deasupra, dă contrastul de culoare și aciditate." },
+        { icon: "🥜", t: "Nucile crocante încheie desertul", d: "Nuci de cocos, fistic sau alune tocate presărate deasupra aduc textura finală crocantă." }
+      ],
+      en: [
+        { icon: "🥛", t: "A delicate milk pudding", d: "Milk thickened with cornstarch becomes a wobbly pudding, silky on the tongue." },
+        { icon: "🌹", t: "Rosewater, the signature aroma", d: "A splash of rosewater or orange blossom water perfumes the pudding subtly, without overpowering it." },
+        { icon: "🍯", t: "The sweet-tart red syrup", d: "Pomegranate or raspberry syrup, poured on top, gives the colour contrast and tartness." },
+        { icon: "🥜", t: "Crunchy nuts finish the dessert", d: "Shredded coconut, pistachios, or chopped peanuts scattered on top bring the final crunchy texture." }
+      ],
+      es: [
+        { icon: "🥛", t: "Un delicado pudín de leche", d: "La leche espesada con maicena se convierte en un pudín tembloroso, sedoso en la lengua." },
+        { icon: "🌹", t: "El agua de rosas, el aroma característico", d: "Un chorrito de agua de rosas o de azahar perfuma el pudín sutilmente, sin dominarlo." },
+        { icon: "🍯", t: "El jarabe rojo agridulce", d: "El jarabe de granada o frambuesa, vertido encima, aporta el contraste de color y acidez." },
+        { icon: "🥜", t: "Los frutos secos crujientes rematan el postre", d: "Coco rallado, pistachos o cacahuetes picados esparcidos encima aportan la textura crujiente final." }
+      ],
+      fr: [
+        { icon: "🥛", t: "Un délicat pudding au lait", d: "Le lait épaissi à la fécule de maïs devient un pudding tremblotant, soyeux en bouche." },
+        { icon: "🌹", t: "L'eau de rose, l'arôme signature", d: "Une touche d'eau de rose ou de fleur d'oranger parfume subtilement le pudding, sans le dominer." },
+        { icon: "🍯", t: "Le sirop rouge doux-acidulé", d: "Le sirop de grenade ou de framboise, versé dessus, apporte le contraste de couleur et d'acidité." },
+        { icon: "🥜", t: "Les noix croquantes terminent le dessert", d: "Noix de coco, pistaches ou cacahuètes hachées parsemées dessus apportent la touche croquante finale." }
+      ],
+      de: [
+        { icon: "🥛", t: "Ein zarter Milchpudding", d: "Mit Maisstärke eingedickte Milch wird zu einem wackeligen, seidig zergehenden Pudding." },
+        { icon: "🌹", t: "Rosenwasser, das charakteristische Aroma", d: "Ein Schuss Rosenwasser oder Orangenblütenwasser parfümiert den Pudding dezent, ohne ihn zu übertönen." },
+        { icon: "🍯", t: "Der süß-saure rote Sirup", d: "Granatapfel- oder Himbeersirup, darübergegossen, sorgt für den Farbkontrast und die Säure." },
+        { icon: "🥜", t: "Knackige Nüsse beenden das Dessert", d: "Kokosraspeln, Pistazien oder gehackte Erdnüsse obendrauf bringen die abschließende Knusprigkeit." }
+      ],
+      pt: [
+        { icon: "🥛", t: "Um delicado pudim de leite", d: "O leite engrossado com amido de milho torna-se um pudim trémulo, sedoso na língua." },
+        { icon: "🌹", t: "Água de rosas, o aroma característico", d: "Um toque de água de rosas ou de flor de laranjeira perfuma o pudim subtilmente, sem o dominar." },
+        { icon: "🍯", t: "O xarope vermelho agridoce", d: "O xarope de romã ou de framboesa, deitado por cima, dá o contraste de cor e acidez." },
+        { icon: "🥜", t: "Frutos secos crocantes terminam a sobremesa", d: "Coco ralado, pistácios ou amendoins picados polvilhados por cima trazem a textura crocante final." }
+      ],
+      ru: [
+        { icon: "🥛", t: "Нежный молочный пудинг", d: "Молоко, загущённое кукурузным крахмалом, превращается в дрожащий, шелковистый на языке пудинг." },
+        { icon: "🌹", t: "Розовая вода — фирменный аромат", d: "Немного розовой воды или воды из цветов апельсина тонко ароматизирует пудинг, не заглушая его." },
+        { icon: "🍯", t: "Кисло-сладкий красный сироп", d: "Гранатовый или малиновый сироп, политый сверху, даёт цветовой контраст и кислинку." },
+        { icon: "🥜", t: "Хрустящие орехи завершают десерт", d: "Кокосовая стружка, фисташки или измельчённый арахис сверху придают финальную хрусткость." }
+      ],
+      ar: [
+        { icon: "🥛", t: "بودينغ حليب رقيق", d: "يتحول الحليب المكثف بنشا الذرة إلى بودينغ مرتجف وحريري على اللسان." },
+        { icon: "🌹", t: "ماء الورد، النكهة المميزة", d: "رشة من ماء الورد أو ماء زهر البرتقال تُعطّر البودينغ بلطف دون أن تطغى عليه." },
+        { icon: "🍯", t: "الشراب الأحمر الحلو الحامض", d: "شراب الرمان أو التوت، المسكوب فوقه، يمنح تبايناً في اللون وحموضة." },
+        { icon: "🥜", t: "المكسرات المقرمشة تختم الحلوى", d: "جوز الهند المبشور أو الفستق أو الفول السوداني المفروم المرشوش فوقه يمنح القرمشة النهائية." }
+      ],
+      zh: [
+        { icon: "🥛", t: "细腻的牛奶布丁", d: "用玉米淀粉增稠的牛奶变成一份颤巍巍、入口丝滑的布丁。" },
+        { icon: "🌹", t: "玫瑰水是标志性香气", d: "一点玫瑰水或橙花水为布丁增添微妙香气，却不会喧宾夺主。" },
+        { icon: "🍯", t: "酸甜的红色糖浆", d: "淋在上面的石榴或覆盆子糖浆带来色彩对比和酸味。" },
+        { icon: "🥜", t: "香脆坚果收尾", d: "撒在上面的椰丝、开心果或碎花生带来最后的酥脆口感。" }
+      ],
+      ja: [
+        { icon: "🥛", t: "繊細なミルクプディング", d: "コーンスターチでとろみをつけたミルクは、舌の上でとろけるぷるぷるのプディングになる。" },
+        { icon: "🌹", t: "ローズウォーターが特徴的な香り", d: "少量のローズウォーターやオレンジフラワーウォーターがプディングを控えめに香らせる。" },
+        { icon: "🍯", t: "甘酸っぱい赤いシロップ", d: "上にかけるザクロやラズベリーのシロップが色の対比と酸味を与える。" },
+        { icon: "🥜", t: "カリカリのナッツで仕上げ", d: "上に散らしたココナッツ、ピスタチオ、刻んだピーナッツが最後のカリカリ食感を加える。" }
+      ],
+      hi: [
+        { icon: "🥛", t: "एक नाज़ुक दूध पुडिंग", d: "कॉर्नस्टार्च से गाढ़ा दूध एक थरथराती, जीभ पर रेशमी पुडिंग बन जाता है।" },
+        { icon: "🌹", t: "गुलाब जल, खास सुगंध", d: "गुलाब जल या संतरे के फूल के पानी की एक बूंद पुडिंग को हल्के से सुगंधित करती है, बिना हावी हुए।" },
+        { icon: "🍯", t: "मीठी-खट्टी लाल चाशनी", d: "अनार या रास्पबेरी की चाशनी, ऊपर डाली गई, रंग विरोधाभास और खटास देती है।" },
+        { icon: "🥜", t: "कुरकुरे मेवे मिठाई को पूरा करते हैं", d: "ऊपर छिड़का नारियल, पिस्ता या कटी मूंगफली अंतिम कुरकुरी बनावट लाते हैं।" }
+      ],
+      tr: [
+        { icon: "🥛", t: "İnce bir süt pudingi", d: "Mısır nişastasıyla koyulaştırılan süt, dilde ipeksi hissettiren titrek bir puding olur." },
+        { icon: "🌹", t: "Gül suyu, imza aroma", d: "Bir tutam gül suyu veya portakal çiçeği suyu pudingi hafifçe kokulandırır, baskın olmadan." },
+        { icon: "🍯", t: "Tatlı-ekşi kırmızı şurup", d: "Üzerine dökülen nar veya ahududu şurubu renk kontrastı ve ekşilik verir." },
+        { icon: "🥜", t: "Çıtır kuruyemişler tatlıyı tamamlar", d: "Üzerine serpilen hindistancevizi, fıstık veya doğranmış yer fıstığı son çıtır dokuyu getirir." }
+      ],
+      it: [
+        { icon: "🥛", t: "Un delicato budino di latte", d: "Il latte addensato con amido di mais diventa un budino tremolante, setoso sulla lingua." },
+        { icon: "🌹", t: "L'acqua di rose, l'aroma distintivo", d: "Un tocco di acqua di rose o di fiori d'arancio profuma il budino sottilmente, senza sovrastarlo." },
+        { icon: "🍯", t: "Lo sciroppo rosso agrodolce", d: "Lo sciroppo di melagrana o di lampone, versato sopra, dà il contrasto di colore e l'acidità." },
+        { icon: "🥜", t: "Le noci croccanti chiudono il dolce", d: "Cocco grattugiato, pistacchi o arachidi tritate sparse sopra portano la croccantezza finale." }
+      ],
+      ko: [
+        { icon: "🥛", t: "섬세한 우유 푸딩", d: "옥수수 전분으로 걸쭉해진 우유는 혀에서 살살 녹는 탱글탱글한 푸딩이 된다." },
+        { icon: "🌹", t: "장미수, 시그니처 향", d: "장미수나 오렌지꽃물 한 방울이 푸딩을 은은하게 향기롭게 하되 압도하지 않는다." },
+        { icon: "🍯", t: "새콤달콤한 빨간 시럽", d: "위에 붓는 석류나 라즈베리 시럽이 색의 대비와 새콤함을 더한다." },
+        { icon: "🥜", t: "바삭한 견과류로 마무리", d: "위에 뿌린 코코넛, 피스타치오, 다진 땅콩이 마지막 바삭한 식감을 더한다." }
+      ]
+    },
+    ingredients: {
+      ro: ["750ml lapte integral", "60g amidon de porumb", "80g zahăr", "1 linguriță apă de trandafiri", "250ml apă", "100g zahăr (pentru sirop)", "150ml suc de rodie sau zmeură", "50g fistic tocat", "50g nucă de cocos rasă"],
+      en: ["750ml whole milk", "60g cornstarch", "80g sugar", "1 tsp rosewater", "250ml water", "100g sugar (for the syrup)", "150ml pomegranate or raspberry juice", "50g chopped pistachios", "50g shredded coconut"],
+      es: ["750ml de leche entera", "60g de maicena", "80g de azúcar", "1 cdta de agua de rosas", "250ml de agua", "100g de azúcar (para el jarabe)", "150ml de jugo de granada o frambuesa", "50g de pistachos picados", "50g de coco rallado"],
+      fr: ["750ml de lait entier", "60g de fécule de maïs", "80g de sucre", "1 c. à café d'eau de rose", "250ml d'eau", "100g de sucre (pour le sirop)", "150ml de jus de grenade ou de framboise", "50g de pistaches hachées", "50g de noix de coco râpée"],
+      de: ["750ml Vollmilch", "60g Maisstärke", "80g Zucker", "1 TL Rosenwasser", "250ml Wasser", "100g Zucker (für den Sirup)", "150ml Granatapfel- oder Himbeersaft", "50g gehackte Pistazien", "50g geriebene Kokosnuss"],
+      pt: ["750ml de leite integral", "60g de amido de milho", "80g de açúcar", "1 col. chá de água de rosas", "250ml de água", "100g de açúcar (para a calda)", "150ml de sumo de romã ou framboesa", "50g de pistácios picados", "50g de coco ralado"],
+      ru: ["750мл цельного молока", "60г кукурузного крахмала", "80г сахара", "1 ч.л. розовой воды", "250мл воды", "100г сахара (для сиропа)", "150мл гранатового или малинового сока", "50г измельчённых фисташек", "50г тёртого кокоса"],
+      ar: ["750مل حليب كامل الدسم", "60غ نشا ذرة", "80غ سكر", "1 ملعقة صغيرة ماء ورد", "250مل ماء", "100غ سكر (للشراب)", "150مل عصير رمان أو توت", "50غ فستق مفروم", "50غ جوز هند مبشور"],
+      zh: ["750毫升全脂牛奶", "60克玉米淀粉", "80克糖", "1茶匙玫瑰水", "250毫升水", "100克糖（用于糖浆）", "150毫升石榴汁或覆盆子汁", "50克开心果碎", "50克椰丝"],
+      ja: ["全乳750ml", "コーンスターチ60g", "砂糖80g", "ローズウォーター小さじ1", "水250ml", "砂糖100g（シロップ用）", "ザクロまたはラズベリージュース150ml", "刻みピスタチオ50g", "ココナッツフレーク50g"],
+      hi: ["750 मिली फुल क्रीम दूध", "60 ग्राम कॉर्नस्टार्च", "80 ग्राम चीनी", "1 छोटा चम्मच गुलाब जल", "250 मिली पानी", "100 ग्राम चीनी (चाशनी के लिए)", "150 मिली अनार या रास्पबेरी जूस", "50 ग्राम कटे पिस्ता", "50 ग्राम कसा नारियल"],
+      tr: ["750ml tam yağlı süt", "60g mısır nişastası", "80g şeker", "1 tatlı kaşığı gül suyu", "250ml su", "100g şeker (şurup için)", "150ml nar veya ahududu suyu", "50g doğranmış fıstık", "50g hindistancevizi rendesi"],
+      it: ["750ml di latte intero", "60g di amido di mais", "80g di zucchero", "1 cucchiaino di acqua di rose", "250ml di acqua", "100g di zucchero (per lo sciroppo)", "150ml di succo di melagrana o lampone", "50g di pistacchi tritati", "50g di cocco grattugiato"],
+      ko: ["전유 750ml", "옥수수전분 60g", "설탕 80g", "장미수 1작은술", "물 250ml", "설탕 100g (시럽용)", "석류즙 또는 라즈베리즙 150ml", "다진 피스타치오 50g", "코코넛 슈레드 50g"]
+    },
+    howIsMade: {
+      ro: "Se amestecă amidonul de porumb cu puțin lapte rece până se dizolvă complet, fără cocoloașe. Se încălzește restul laptelui cu zahărul într-o oală până aproape de fierbere. Se toarnă treptat amestecul de amidon în laptele cald, amestecând continuu la foc mediu până se îngroașă. Se ia oala de pe foc și se adaugă apa de trandafiri, amestecând bine. Se toarnă budinca în boluri individuale și se lasă la frigider cel puțin trei ore, până se întărește complet. Se fierbe apa cu zahărul și sucul de rodie sau zmeură până se obține un sirop ușor sirupos. Se toarnă siropul răcit peste budincă și se presară fistic tocat și nucă de cocos înainte de servire.",
+      en: "Mix the cornstarch with a little cold milk until fully dissolved, with no lumps. Heat the remaining milk with the sugar in a pot until nearly boiling. Gradually pour the cornstarch mixture into the warm milk, stirring constantly over medium heat until it thickens. Remove the pot from the heat and stir in the rosewater. Pour the pudding into individual bowls and refrigerate for at least three hours, until fully set. Simmer the water with the sugar and pomegranate or raspberry juice until you get a light syrup. Pour the cooled syrup over the pudding and sprinkle with chopped pistachios and shredded coconut before serving.",
+      es: "Mezcla la maicena con un poco de leche fría hasta que se disuelva por completo, sin grumos. Calienta el resto de la leche con el azúcar en una olla hasta casi hervir. Vierte gradualmente la mezcla de maicena en la leche caliente, removiendo constantemente a fuego medio hasta que espese. Retira la olla del fuego e incorpora el agua de rosas. Vierte el pudín en cuencos individuales y refrigera al menos tres horas, hasta que cuaje por completo. Cuece a fuego lento el agua con el azúcar y el jugo de granada o frambuesa hasta obtener un jarabe ligero. Vierte el jarabe frío sobre el pudín y espolvorea con pistachos picados y coco rallado antes de servir.",
+      fr: "Mélangez la fécule de maïs avec un peu de lait froid jusqu'à dissolution complète, sans grumeaux. Faites chauffer le reste du lait avec le sucre dans une casserole jusqu'à presque ébullition. Versez progressivement le mélange de fécule dans le lait chaud, en remuant constamment à feu moyen jusqu'à épaississement. Retirez la casserole du feu et incorporez l'eau de rose. Versez le pudding dans des bols individuels et réfrigérez au moins trois heures, jusqu'à ce qu'il soit bien pris. Faites mijoter l'eau avec le sucre et le jus de grenade ou de framboise jusqu'à obtenir un sirop léger. Versez le sirop refroidi sur le pudding et parsemez de pistaches hachées et de noix de coco râpée avant de servir.",
+      de: "Die Maisstärke mit etwas kalter Milch verrühren, bis sie sich vollständig ohne Klumpen auflöst. Die restliche Milch mit dem Zucker in einem Topf fast zum Kochen bringen. Die Stärkemischung nach und nach in die warme Milch geben, dabei ständig bei mittlerer Hitze rühren, bis sie eindickt. Den Topf vom Herd nehmen und das Rosenwasser einrühren. Den Pudding in einzelne Schälchen füllen und mindestens drei Stunden kühlen, bis er vollständig fest ist. Wasser mit Zucker und Granatapfel- oder Himbeersaft köcheln lassen, bis ein leichter Sirup entsteht. Den abgekühlten Sirup über den Pudding gießen und vor dem Servieren mit gehackten Pistazien und Kokosraspeln bestreuen.",
+      pt: "Misture o amido de milho com um pouco de leite frio até dissolver completamente, sem grumos. Aqueça o restante do leite com o açúcar numa panela até quase ferver. Verta gradualmente a mistura de amido no leite quente, mexendo constantemente em lume médio até engrossar. Retire a panela do lume e junte a água de rosas. Deite o pudim em taças individuais e leve ao frigorífico por pelo menos três horas, até firmar completamente. Cozinhe a água com o açúcar e o sumo de romã ou framboesa até obter uma calda leve. Regue o pudim frio com a calda fria e polvilhe com pistácios picados e coco ralado antes de servir.",
+      ru: "Смешайте кукурузный крахмал с небольшим количеством холодного молока до полного растворения без комков. Нагрейте оставшееся молоко с сахаром в кастрюле почти до кипения. Постепенно влейте крахмальную смесь в тёплое молоко, постоянно помешивая на среднем огне, пока оно не загустеет. Снимите кастрюлю с огня и вмешайте розовую воду. Разлейте пудинг по отдельным мискам и уберите в холодильник минимум на три часа, пока полностью не застынет. Уварите воду с сахаром и гранатовым или малиновым соком до лёгкого сиропа. Полейте остывшим сиропом пудинг и посыпьте измельчёнными фисташками и кокосовой стружкой перед подачей.",
+      ar: "اخلطي نشا الذرة مع قليل من الحليب البارد حتى يذوب تماماً دون كتل. سخّني باقي الحليب مع السكر في قدر حتى يقارب الغليان. اسكبي خليط النشا تدريجياً في الحليب الدافئ، مع التحريك المستمر على نار متوسطة حتى يتكاثف. ارفعي القدر عن النار وأضيفي ماء الورد مع التحريك جيداً. اسكبي البودينغ في أوعية فردية وضعيها في الثلاجة لمدة ثلاث ساعات على الأقل حتى تتماسك تماماً. اطهي الماء مع السكر وعصير الرمان أو التوت حتى تحصلي على شراب خفيف. اسكبي الشراب البارد فوق البودينغ ورشّي الفستق المفروم وجوز الهند المبشور قبل التقديم.",
+      zh: "将玉米淀粉与少量冷牛奶混合，搅拌至完全溶解且无结块。将剩余牛奶与糖一起放入锅中加热至接近沸腾。将淀粉糊逐渐倒入温牛奶中，中火不停搅拌至变稠。将锅从火上移开，拌入玫瑰水。将布丁倒入单独的碗中，冷藏至少三小时，直至完全凝固。将水与糖以及石榴汁或覆盆子汁一起小火煮至形成清淡的糖浆。将放凉的糖浆淋在布丁上，享用前撒上开心果碎和椰丝。",
+      ja: "コーンスターチを少量の冷たい牛乳と混ぜ、ダマなく完全に溶かす。残りの牛乳を砂糖と一緒に鍋でほぼ沸騰するまで温める。コーンスターチの液を温めた牛乳に少しずつ加え、中火で絶えずかき混ぜながらとろみがつくまで煮る。鍋を火から下ろし、ローズウォーターを混ぜ込む。プディングを個々の器に注ぎ、完全に固まるまで冷蔵庫で最低3時間冷やす。水を砂糖とザクロまたはラズベリージュースと一緒に軽いシロップになるまで煮詰める。冷ましたシロップをプディングにかけ、提供前に刻みピスタチオとココナッツフレークを散らす。",
+      hi: "कॉर्नस्टार्च को थोड़े ठंडे दूध में तब तक मिलाएं जब तक पूरी तरह घुल न जाए, बिना गांठ के। बचे दूध को चीनी के साथ बर्तन में लगभग उबाल आने तक गरम करें। कॉर्नस्टार्च मिश्रण को धीरे-धीरे गरम दूध में डालें, मध्यम आंच पर लगातार हिलाते हुए तब तक जब तक गाढ़ा न हो जाए। बर्तन को आंच से उतारें और गुलाब जल मिलाएं। पुडिंग को अलग कटोरों में डालें और कम से कम तीन घंटे फ्रिज में रखें जब तक पूरी तरह जम न जाए। पानी को चीनी और अनार या रास्पबेरी जूस के साथ हल्की चाशनी बनने तक पकाएं। ठंडी चाशनी पुडिंग पर डालें और परोसने से पहले कटे पिस्ता और कसा नारियल छिड़कें।",
+      tr: "Mısır nişastasını, topaksız tamamen çözülene kadar biraz soğuk sütle karıştırın. Kalan sütü şekerle birlikte tencerede kaynamaya yakın ısıtın. Nişasta karışımını ılık süte yavaş yavaş dökün, orta ateşte koyulaşana kadar sürekli karıştırın. Tencereyi ocaktan alın ve gül suyunu karıştırın. Pudingi ayrı kaselere dökün ve tamamen katılaşana kadar en az üç saat buzdolabında bekletin. Suyu şeker ve nar veya ahududu suyuyla hafif bir şurup elde edene kadar pişirin. Soğutulmuş şurubu pudingin üzerine dökün ve servisten önce doğranmış fıstık ve hindistancevizi rendesiyle süsleyin.",
+      it: "Mescola l'amido di mais con un po' di latte freddo finché non si scioglie completamente, senza grumi. Scalda il latte rimanente con lo zucchero in una pentola fino quasi a ebollizione. Versa gradualmente il composto di amido nel latte caldo, mescolando continuamente a fuoco medio finché non si addensa. Togli la pentola dal fuoco e incorpora l'acqua di rose. Versa il budino in ciotole individuali e refrigera per almeno tre ore, finché non si rassoda completamente. Fai sobbollire l'acqua con lo zucchero e il succo di melagrana o lampone finché non ottieni uno sciroppo leggero. Versa lo sciroppo raffreddato sul budino e cospargi con pistacchi tritati e cocco grattugiato prima di servire.",
+      ko: "옥수수전분을 차가운 우유 약간과 덩어리 없이 완전히 녹을 때까지 섞는다. 나머지 우유를 설탕과 함께 냄비에 넣어 거의 끓기 직전까지 데운다. 전분 혼합물을 따뜻한 우유에 조금씩 부으며 중불에서 걸쭉해질 때까지 계속 젓는다. 냄비를 불에서 내리고 장미수를 섞는다. 푸딩을 개별 그릇에 부어 완전히 굳을 때까지 최소 세 시간 냉장고에 둔다. 물을 설탕, 석류즙 또는 라즈베리즙과 함께 가벼운 시럽이 될 때까지 끓인다. 식힌 시럽을 푸딩 위에 붓고 서빙 전에 다진 피스타치오와 코코넛 슈레드를 뿌린다."
+    },
+    originText: {
+      ro: "Malabi are rădăcini care merg în bucătăria otomană și persană, unde budincile parfumate cu apă de trandafiri erau răspândite cu mult înainte să ajungă în Levant. În Israel, desertul a fost adoptat de comunitățile evreiești sefarde și mizrahi și a devenit una din gustările de vară preferate, vândută adesea de vânzători ambulanți pe plajă.\n\nRețeta de bază rămâne simplă — lapte, amidon, apă de trandafiri — dar toppingurile variază enorm de la un vânzător la altul, de la siropuri colorate la nuci diverse, fiecare stand având propria combinație semnătură.",
+      en: "Malabi has roots in Ottoman and Persian cooking, where rosewater-scented puddings were widespread long before they reached the Levant. In Israel, the dessert was adopted by Sephardic and Mizrahi Jewish communities and became one of the favourite summer treats, often sold by street vendors on the beach.\n\nThe base recipe stays simple — milk, starch, rosewater — but the toppings vary enormously from vendor to vendor, from colourful syrups to different nuts, each stand having its own signature combination.",
+      es: "El malabi tiene raíces en la cocina otomana y persa, donde los pudines perfumados con agua de rosas eran comunes mucho antes de llegar al Levante. En Israel, el postre fue adoptado por las comunidades judías sefardíes y mizrajíes y se convirtió en uno de los antojos veraniegos favoritos, a menudo vendido por vendedores ambulantes en la playa.\n\nLa receta base sigue siendo sencilla —leche, almidón, agua de rosas— pero las coberturas varían enormemente de un vendedor a otro, desde jarabes de colores hasta distintos frutos secos, teniendo cada puesto su propia combinación característica.",
+      fr: "Le malabi trouve ses racines dans la cuisine ottomane et persane, où des puddings parfumés à l'eau de rose étaient répandus bien avant d'atteindre le Levant. En Israël, le dessert a été adopté par les communautés juives séfarades et mizrahi et est devenu l'une des gourmandises estivales préférées, souvent vendue par des vendeurs ambulants sur la plage.\n\nLa recette de base reste simple — lait, fécule, eau de rose — mais les garnitures varient énormément d'un vendeur à l'autre, des sirops colorés à divers fruits à coque, chaque stand ayant sa propre combinaison signature.",
+      de: "Malabi hat Wurzeln in der osmanischen und persischen Küche, wo mit Rosenwasser parfümierte Puddings weit verbreitet waren, lange bevor sie die Levante erreichten. In Israel wurde das Dessert von sephardischen und misrachischen jüdischen Gemeinden übernommen und zu einer der beliebtesten Sommerleckereien, oft von Straßenverkäufern am Strand verkauft.\n\nDas Grundrezept bleibt einfach — Milch, Stärke, Rosenwasser — aber die Beläge variieren enorm von Verkäufer zu Verkäufer, von bunten Sirupen bis zu verschiedenen Nüssen, wobei jeder Stand seine eigene charakteristische Kombination hat.",
+      pt: "O malabi tem raízes na cozinha otomana e persa, onde pudins perfumados com água de rosas eram comuns muito antes de chegarem ao Levante. Em Israel, a sobremesa foi adotada pelas comunidades judaicas sefarditas e mizrahi e tornou-se uma das guloseimas de verão favoritas, frequentemente vendida por vendedores ambulantes na praia.\n\nA receita base mantém-se simples — leite, amido, água de rosas — mas as coberturas variam enormemente de vendedor para vendedor, de xaropes coloridos a diferentes frutos secos, tendo cada banca a sua própria combinação característica.",
+      ru: "Малаби уходит корнями в османскую и персидскую кухню, где ароматизированные розовой водой пудинги были распространены задолго до того, как достигли Леванта. В Израиле десерт был перенят сефардскими и мизрахи еврейскими общинами и стал одним из любимых летних лакомств, часто продаваемых уличными торговцами на пляже.\n\nБазовый рецепт остаётся простым — молоко, крахмал, розовая вода, — но начинки сильно варьируются от продавца к продавцу: от цветных сиропов до разных орехов, при этом у каждой точки своя фирменная комбинация.",
+      ar: "تعود جذور المهلبية إلى المطبخ العثماني والفارسي، حيث كانت البودينغات المعطرة بماء الورد منتشرة قبل وصولها إلى بلاد الشام بوقت طويل. في إسرائيل، تبنّت الجاليات اليهودية السفاردية والمزراحية هذه الحلوى وأصبحت من أحب حلويات الصيف، وغالباً ما يبيعها الباعة المتجولون على الشاطئ.\n\nتبقى الوصفة الأساسية بسيطة — حليب ونشا وماء ورد — لكن الإضافات تختلف اختلافاً كبيراً من بائع لآخر، من الشراب الملون إلى أنواع مختلفة من المكسرات، ولكل كشك مزيجه المميز الخاص.",
+      zh: "马拉比奶冻起源于奥斯曼和波斯烹饪，玫瑰水香型布丁在传入黎凡特地区之前早已流行。在以色列，这道甜点被塞法迪和米兹拉希犹太社区所采用，成为最受欢迎的夏日小吃之一，常由沙滩上的流动小贩售卖。\n\n基础配方保持简单——牛奶、淀粉、玫瑰水——但浇头因摊贩而异，差异巨大，从彩色糖浆到各种坚果不一而足，每个摊位都有自己招牌的组合。",
+      ja: "マラビはオスマンとペルシャの料理にルーツを持ち、ローズウォーターの香りをつけたプディングはレバントに伝わるずっと前から広く親しまれていた。イスラエルではセファルディムとミズラヒのユダヤ人コミュニティに取り入れられ、人気の夏のおやつの一つとなり、よくビーチの屋台で売られている。\n\n基本のレシピはシンプルなまま——ミルク、でんぷん、ローズウォーター——だが、トッピングは店ごとに大きく異なり、色とりどりのシロップから様々なナッツまで、それぞれの屋台が独自の定番の組み合わせを持っている。",
+      hi: "मलाबी की जड़ें ऑटोमन और फारसी व्यंजनों में हैं, जहां गुलाब जल से सुगंधित पुडिंग लेवांत तक पहुंचने से बहुत पहले से प्रचलित थी। इज़राइल में, यह मिठाई सेफार्डिक और मिज़राही यहूदी समुदायों द्वारा अपनाई गई और गर्मियों की पसंदीदा मिठाइयों में से एक बन गई, जिसे अक्सर समुद्र तट पर फेरीवाले बेचते हैं।\n\nमूल रेसिपी सरल बनी रहती है — दूध, स्टार्च, गुलाब जल — लेकिन टॉपिंग विक्रेता-दर-विक्रेता बहुत अलग होती हैं, रंगीन चाशनी से लेकर विभिन्न मेवों तक, हर स्टैंड का अपना खास संयोजन होता है।",
+      tr: "Malabi, gül suyu kokulu pudinglerin Levant'a ulaşmadan çok önce yaygın olduğu Osmanlı ve Fars mutfağında köklere sahiptir. İsrail'de bu tatlı Sefarad ve Mizrahi Yahudi toplulukları tarafından benimsendi ve genellikle sahilde seyyar satıcılar tarafından satılan en sevilen yaz ikramlarından biri oldu.\n\nTemel tarif basit kalır — süt, nişasta, gül suyu — ancak üzerindeki malzemeler satıcıdan satıcıya büyük farklılıklar gösterir, renkli şuruplardan çeşitli kuruyemişlere kadar, her tezgahın kendine özgü bir kombinasyonu vardır.",
+      it: "Il malabi affonda le radici nella cucina ottomana e persiana, dove i budini profumati all'acqua di rose erano diffusi molto prima di raggiungere il Levante. In Israele, il dolce fu adottato dalle comunità ebraiche sefardite e mizrahi e divenne uno dei dolcetti estivi preferiti, spesso venduto dai venditori ambulanti in spiaggia.\n\nLa ricetta base resta semplice — latte, amido, acqua di rose — ma le guarnizioni variano enormemente da venditore a venditore, dagli sciroppi colorati a diverse noci, con ogni bancarella che ha la propria combinazione distintiva.",
+      ko: "말라비는 오스만과 페르시아 요리에 뿌리를 두고 있으며, 장미수 향의 푸딩은 레반트에 전해지기 훨씬 전부터 널리 퍼져 있었다. 이스라엘에서는 세파르디와 미즈라히 유대인 공동체가 이를 받아들여 가장 인기 있는 여름 간식 중 하나가 되었고, 흔히 해변의 노점상들이 판매한다.\n\n기본 레시피는 간단하다 — 우유, 전분, 장미수 — 하지만 토핑은 노점마다 매우 다양해서, 화려한 색의 시럽부터 다양한 견과류까지, 각 노점마다 저마다의 시그니처 조합을 가지고 있다."
+    }
+  },
+  {
+    id: 434,
+    servings: 4,
+    tipType: "def",
+    pairingsType: "middle-eastern",
+    nutrition: { cal: 420, prot: 7, carb: 48, fat: 23, fib: 2 },
+    origin: {
+      ro: "Israel", en: "Israel", es: "Israel", fr: "Israël", de: "Israel",
+      pt: "Israel", ru: "Израиль", ar: "إسرائيل", zh: "以色列", ja: "イスラエル",
+      hi: "इज़राइल", tr: "İsrail", it: "Israele", ko: "이스라엘"
+    },
+    name: {
+      ro: "Jachnun", en: "Jachnun", es: "Jachnun", fr: "Jachnun", de: "Jachnun",
+      pt: "Jachnun", ru: "Джахнун", ar: "جחנון", zh: "雅努恩卷饼", ja: "ジャフヌン",
+      hi: "जाकनून", tr: "Jahnun", it: "Jachnun", ko: "야흐눈"
+    },
+    category: {
+      ro: "Fel principal", en: "Main Course", es: "Plato principal", fr: "Plat principal", de: "Hauptgericht",
+      pt: "Prato principal", ru: "Основное блюдо", ar: "طبق رئيسي", zh: "主菜", ja: "メイン料理",
+      hi: "मुख्य व्यंजन", tr: "Ana Yemek", it: "Piatto principale", ko: "메인 요리"
+    },
+    featureCards: {
+      ro: [
+        { icon: "🌙", t: "Coace toată noaptea", d: "Aluatul rulat se coace la foc mic peste douăsprezece ore, tradițional peste noapte, spre dimineața de Șabat." },
+        { icon: "🧈", t: "Straturi unse cu unt clarifiat", d: "Aluatul întins foarte subțire se unge generos cu unt clarifiat înainte de a fi rulat strâns." },
+        { icon: "🥚", t: "Ou fiert copt deasupra", d: "Un ou întreg, cu coajă, se coace deasupra ruloului și devine maro-caramel, cu gust unic." },
+        { icon: "🍅", t: "Servit cu sos de roșii picant", d: "Jachnun-ul cald se rupe cu mâna și se mănâncă alături de sos de roșii picant, zhug și ou copt." }
+      ],
+      en: [
+        { icon: "🌙", t: "Bakes all night long", d: "The rolled dough bakes at a low temperature for over twelve hours, traditionally overnight into Shabbat morning." },
+        { icon: "🧈", t: "Layers brushed with clarified butter", d: "The dough, stretched extremely thin, is brushed generously with clarified butter before being rolled up tightly." },
+        { icon: "🥚", t: "A whole egg bakes on top", d: "A whole egg, in its shell, bakes on top of the roll and turns a deep caramel brown with a distinct flavour." },
+        { icon: "🍅", t: "Served with spicy tomato sauce", d: "Warm jachnun is torn by hand and eaten alongside spicy tomato sauce, zhug, and the baked egg." }
+      ],
+      es: [
+        { icon: "🌙", t: "Se hornea toda la noche", d: "La masa enrollada se hornea a fuego lento durante más de doce horas, tradicionalmente toda la noche hasta la mañana de Shabat." },
+        { icon: "🧈", t: "Capas pinceladas con mantequilla clarificada", d: "La masa, estirada extremadamente fina, se pincela generosamente con mantequilla clarificada antes de enrollarla apretada." },
+        { icon: "🥚", t: "Un huevo entero se hornea encima", d: "Un huevo entero, con cáscara, se hornea sobre el rollo y adquiere un tono marrón caramelo con un sabor distintivo." },
+        { icon: "🍅", t: "Se sirve con salsa de tomate picante", d: "El jachnun caliente se rompe con la mano y se come junto a salsa de tomate picante, zhug y el huevo horneado." }
+      ],
+      fr: [
+        { icon: "🌙", t: "Cuit toute la nuit", d: "La pâte roulée cuit à basse température pendant plus de douze heures, traditionnellement toute la nuit jusqu'au matin de Shabbat." },
+        { icon: "🧈", t: "Des couches badigeonnées de beurre clarifié", d: "La pâte, étirée extrêmement finement, est généreusement badigeonnée de beurre clarifié avant d'être roulée serrée." },
+        { icon: "🥚", t: "Un œuf entier cuit dessus", d: "Un œuf entier, dans sa coquille, cuit sur le rouleau et devient brun caramel avec une saveur distincte." },
+        { icon: "🍅", t: "Servi avec une sauce tomate épicée", d: "Le jachnun chaud est déchiré à la main et mangé avec une sauce tomate épicée, du zhug et l'œuf cuit." }
+      ],
+      de: [
+        { icon: "🌙", t: "Backt die ganze Nacht", d: "Der gerollte Teig backt über zwölf Stunden bei niedriger Temperatur, traditionell über Nacht bis zum Schabbatmorgen." },
+        { icon: "🧈", t: "Schichten mit geklärter Butter bestrichen", d: "Der extrem dünn ausgezogene Teig wird großzügig mit geklärter Butter bestrichen, bevor er fest aufgerollt wird." },
+        { icon: "🥚", t: "Ein ganzes Ei backt obenauf", d: "Ein ganzes Ei in der Schale backt auf der Rolle und wird tief karamellbraun mit einem unverwechselbaren Geschmack." },
+        { icon: "🍅", t: "Serviert mit scharfer Tomatensauce", d: "Warmer Jachnun wird mit der Hand zerrissen und zusammen mit scharfer Tomatensauce, Zhug und dem gebackenen Ei gegessen." }
+      ],
+      pt: [
+        { icon: "🌙", t: "Assa a noite toda", d: "A massa enrolada assa em lume baixo durante mais de doze horas, tradicionalmente durante a noite até à manhã de Shabat." },
+        { icon: "🧈", t: "Camadas pinceladas com manteiga clarificada", d: "A massa, esticada extremamente fina, é pincelada generosamente com manteiga clarificada antes de ser enrolada com firmeza." },
+        { icon: "🥚", t: "Um ovo inteiro assa por cima", d: "Um ovo inteiro, com casca, assa sobre o rolo e fica castanho caramelo profundo, com um sabor distinto." },
+        { icon: "🍅", t: "Servido com molho de tomate picante", d: "O jachnun quente é rasgado à mão e comido junto com molho de tomate picante, zhug e o ovo assado." }
+      ],
+      ru: [
+        { icon: "🌙", t: "Печётся всю ночь", d: "Скрученное тесто выпекается при низкой температуре более двенадцати часов, традиционно всю ночь до утра субботы." },
+        { icon: "🧈", t: "Слои смазаны топлёным маслом", d: "Тесто, раскатанное очень тонко, щедро смазывают топлёным маслом перед тем, как плотно скрутить." },
+        { icon: "🥚", t: "Целое яйцо запекается сверху", d: "Целое яйцо в скорлупе запекается на рулете и становится тёмно-карамельным с особым вкусом." },
+        { icon: "🍅", t: "Подаётся с острым томатным соусом", d: "Тёплый джахнун разрывают руками и едят с острым томатным соусом, зхугом и запечённым яйцом." }
+      ],
+      ar: [
+        { icon: "🌙", t: "يُخبز طوال الليل", d: "تُخبز العجينة الملفوفة على نار هادئة لأكثر من اثنتي عشرة ساعة، تقليدياً طوال الليل حتى صباح السبت." },
+        { icon: "🧈", t: "طبقات مدهونة بالسمن الصافي", d: "تُدهن العجينة الممدودة بشدة رقة بالسمن الصافي بسخاء قبل لفها بإحكام." },
+        { icon: "🥚", t: "بيضة كاملة تُخبز فوقها", d: "تُخبز بيضة كاملة بقشرها فوق اللفافة وتصبح بنية كراملية داكنة بنكهة مميزة." },
+        { icon: "🍅", t: "يُقدَّم مع صلصة طماطم حارة", d: "يُمزَّق الجحنون الدافئ باليد ويؤكل مع صلصة الطماطم الحارة والزحوق والبيضة المخبوزة." }
+      ],
+      zh: [
+        { icon: "🌙", t: "整夜烘烤", d: "卷起的面团在低温下烘烤十二个多小时，传统上是整夜烤至安息日早晨。" },
+        { icon: "🧈", t: "层层刷上澄清黄油", d: "擀得极薄的面团刷上大量澄清黄油，然后紧紧卷起。" },
+        { icon: "🥚", t: "一整个鸡蛋在上面烘烤", d: "带壳的整个鸡蛋在卷饼上方烘烤，变成深焦糖色，风味独特。" },
+        { icon: "🍅", t: "配辛辣番茄酱享用", d: "温热的雅努恩卷饼用手撕开，搭配辛辣番茄酱、绿辣酱和烤鸡蛋一起食用。" }
+      ],
+      ja: [
+        { icon: "🌙", t: "一晩中焼く", d: "巻いた生地は12時間以上低温で焼かれ、伝統的には一晩かけて安息日の朝まで焼き続ける。" },
+        { icon: "🧈", t: "層に澄ましバターを塗る", d: "極薄に伸ばした生地に澄ましバターをたっぷり塗り、きつく巻き上げる。" },
+        { icon: "🥚", t: "殻付きの卵を上で焼く", d: "殻付きの卵を丸ごと巻きの上にのせて焼き、深いカラメル色になり独特の風味が出る。" },
+        { icon: "🍅", t: "辛いトマトソースと共に", d: "温かいジャフヌンは手でちぎり、辛いトマトソース、ズフーグ、焼き卵と共に食べる。" }
+      ],
+      hi: [
+        { icon: "🌙", t: "पूरी रात बेक होता है", d: "लपेटा हुआ आटा बारह घंटे से अधिक धीमी आंच पर बेक होता है, पारंपरिक रूप से रातभर शाबात की सुबह तक।" },
+        { icon: "🧈", t: "परतों पर घी लगाया जाता है", d: "बेहद पतला बेला हुआ आटा घी से भरपूर लगाया जाता है फिर कसकर लपेटा जाता है।" },
+        { icon: "🥚", t: "पूरा अंडा ऊपर पकता है", d: "छिलके सहित पूरा अंडा रोल के ऊपर पकता है और गहरे कारमेल भूरे रंग का हो जाता है, जिसका स्वाद अनोखा है।" },
+        { icon: "🍅", t: "तीखी टमाटर चटनी के साथ परोसा जाता है", d: "गरम जाकनून हाथ से तोड़ा जाता है और तीखी टमाटर चटनी, ज़ूग और पके अंडे के साथ खाया जाता है।" }
+      ],
+      tr: [
+        { icon: "🌙", t: "Bütün gece pişer", d: "Rulo yapılan hamur on iki saatten fazla düşük ısıda pişer, geleneksel olarak Şabat sabahına kadar bütün gece." },
+        { icon: "🧈", t: "Katmanlar sadeyağla fırçalanır", d: "Son derece ince açılan hamur, sıkıca rulo yapılmadan önce bol sadeyağla fırçalanır." },
+        { icon: "🥚", t: "Üzerinde bütün bir yumurta pişer", d: "Kabuğuyla bütün bir yumurta rulonun üzerinde pişer ve derin karamel kahverengiye dönüşerek kendine has bir tat kazanır." },
+        { icon: "🍅", t: "Acılı domates sosuyla servis edilir", d: "Sıcak jachnun elle parçalanır ve acılı domates sosu, zhug ve pişmiş yumurtayla birlikte yenir." }
+      ],
+      it: [
+        { icon: "🌙", t: "Cuoce tutta la notte", d: "L'impasto arrotolato cuoce a bassa temperatura per oltre dodici ore, tradizionalmente durante la notte fino alla mattina dello Shabbat." },
+        { icon: "🧈", t: "Strati spennellati con burro chiarificato", d: "L'impasto, steso estremamente sottile, viene spennellato generosamente con burro chiarificato prima di essere arrotolato stretto." },
+        { icon: "🥚", t: "Un uovo intero cuoce sopra", d: "Un uovo intero, con il guscio, cuoce sopra il rotolo e diventa marrone caramello intenso con un sapore distinto." },
+        { icon: "🍅", t: "Servito con salsa di pomodoro piccante", d: "Lo jachnun caldo viene strappato a mano e mangiato con salsa di pomodoro piccante, zhug e l'uovo cotto." }
+      ],
+      ko: [
+        { icon: "🌙", t: "밤새 굽는다", d: "말아놓은 반죽은 열두 시간 넘게 낮은 온도에서 구워지며, 전통적으로 안식일 아침까지 밤새 굽는다." },
+        { icon: "🧈", t: "층마다 정제 버터를 바른다", d: "아주 얇게 편 반죽에 정제 버터를 듬뿍 바른 뒤 단단히 만다." },
+        { icon: "🥚", t: "통째 달걀이 위에서 익는다", d: "껍질째인 통달걀이 롤 위에서 구워지며 짙은 캐러멜 갈색이 되고 독특한 풍미를 낸다." },
+        { icon: "🍅", t: "매콤한 토마토 소스와 함께", d: "따뜻한 야흐눈은 손으로 찢어 매콤한 토마토 소스, 주그, 구운 달걀과 함께 먹는다." }
+      ]
+    },
+    ingredients: {
+      ro: ["500g făină", "1 linguriță sare", "300ml apă călduță", "1 linguriță zahăr", "200g unt clarifiat, topit", "4 ouă întregi, cu coajă", "4 roșii mari, tocate", "2 căței de usturoi, tocați", "sos zhug picant, pentru servire"],
+      en: ["500g flour", "1 tsp salt", "300ml lukewarm water", "1 tsp sugar", "200g clarified butter, melted", "4 whole eggs, in their shell", "4 large tomatoes, chopped", "2 garlic cloves, minced", "spicy zhug sauce, for serving"],
+      es: ["500g de harina", "1 cdta de sal", "300ml de agua tibia", "1 cdta de azúcar", "200g de mantequilla clarificada, derretida", "4 huevos enteros, con cáscara", "4 tomates grandes, picados", "2 dientes de ajo, picados", "salsa zhug picante, para servir"],
+      fr: ["500g de farine", "1 c. à café de sel", "300ml d'eau tiède", "1 c. à café de sucre", "200g de beurre clarifié, fondu", "4 œufs entiers, dans leur coquille", "4 grosses tomates, hachées", "2 gousses d'ail, hachées", "sauce zhug épicée, pour servir"],
+      de: ["500g Mehl", "1 TL Salz", "300ml lauwarmes Wasser", "1 TL Zucker", "200g geklärte Butter, geschmolzen", "4 ganze Eier, in der Schale", "4 große Tomaten, gehackt", "2 Knoblauchzehen, gehackt", "scharfe Zhug-Sauce, zum Servieren"],
+      pt: ["500g de farinha", "1 col. chá de sal", "300ml de água morna", "1 col. chá de açúcar", "200g de manteiga clarificada, derretida", "4 ovos inteiros, com casca", "4 tomates grandes, picados", "2 dentes de alho, picados", "molho zhug picante, para servir"],
+      ru: ["500г муки", "1 ч.л. соли", "300мл тёплой воды", "1 ч.л. сахара", "200г топлёного масла, растопленного", "4 целых яйца, в скорлупе", "4 крупных помидора, нарезанных", "2 зубчика чеснока, измельчённых", "острый соус зхуг, для подачи"],
+      ar: ["500غ دقيق", "1 ملعقة صغيرة ملح", "300مل ماء فاتر", "1 ملعقة صغيرة سكر", "200غ سمن صافٍ، مذاب", "4 بيضات كاملة، بقشرها", "4 حبات طماطم كبيرة، مقطعة", "2 فص ثوم، مفروم", "صلصة زحوق حارة، للتقديم"],
+      zh: ["500克面粉", "1茶匙盐", "300毫升温水", "1茶匙糖", "200克澄清黄油，融化", "4个带壳整鸡蛋", "4个大番茄，切碎", "2瓣大蒜，切碎", "辛辣绿辣酱，配餐用"],
+      ja: ["小麦粉500g", "塩小さじ1", "ぬるま湯300ml", "砂糖小さじ1", "澄ましバター200g（溶かす）", "殻付き卵4個", "大きめのトマト4個（刻む）", "にんにく2片（みじん切り）", "辛いズフーグソース（添える用）"],
+      hi: ["500 ग्राम आटा", "1 छोटा चम्मच नमक", "300 मिली गुनगुना पानी", "1 छोटा चम्मच चीनी", "200 ग्राम घी, पिघला हुआ", "4 पूरे अंडे, छिलके सहित", "4 बड़े टमाटर, कटे हुए", "2 लहसुन की कलियां, कटी हुई", "तीखी ज़ूग सॉस, परोसने के लिए"],
+      tr: ["500g un", "1 tatlı kaşığı tuz", "300ml ılık su", "1 tatlı kaşığı şeker", "200g sadeyağ, eritilmiş", "4 bütün yumurta, kabuğuyla", "4 büyük domates, doğranmış", "2 diş sarımsak, doğranmış", "acılı zhug sosu, servis için"],
+      it: ["500g di farina", "1 cucchiaino di sale", "300ml di acqua tiepida", "1 cucchiaino di zucchero", "200g di burro chiarificato, fuso", "4 uova intere, con il guscio", "4 pomodori grandi, tritati", "2 spicchi d'aglio, tritati", "salsa zhug piccante, per servire"],
+      ko: ["밀가루 500g", "소금 1작은술", "미지근한 물 300ml", "설탕 1작은술", "정제 버터 200g, 녹인 것", "껍질째인 통달걀 4개", "큰 토마토 4개, 다진 것", "마늘 2쪽, 다진 것", "매운 주그 소스, 곁들임용"]
+    },
+    howIsMade: {
+      ro: "Se frământă făina cu sarea, zahărul și apa călduță până rezultă un aluat elastic și neted. Se lasă aluatul să se odihnească acoperit cel puțin o oră la temperatura camerei. Se împarte aluatul în patru și se întinde fiecare bucată extrem de subțire, aproape transparentă, pe o suprafață unsă. Se unge generos fiecare foaie cu unt clarifiat topit, apoi se rulează strâns, ca un melc. Se așază rulourile într-o oală grea unsă, împreună cu ouăle întregi, cu coajă. Se acoperă oala bine și se coace la foc foarte mic timp de douăsprezece ore sau peste noapte. Se servește cald, rupt cu mâna, alături de roșii tocate cu usturoi și sos zhug picant.",
+      en: "Knead the flour with the salt, sugar, and lukewarm water until you get an elastic, smooth dough. Let the dough rest, covered, for at least an hour at room temperature. Divide the dough into four and roll out each piece extremely thin, almost see-through, on an oiled surface. Brush each sheet generously with melted clarified butter, then roll it up tightly, like a snail shell. Arrange the rolls in a heavy greased pot, together with the whole eggs, still in their shells. Cover the pot tightly and bake at a very low heat for twelve hours or overnight. Serve warm, torn apart by hand, alongside chopped tomatoes with garlic and spicy zhug sauce.",
+      es: "Amasa la harina con la sal, el azúcar y el agua tibia hasta obtener una masa elástica y suave. Deja reposar la masa, tapada, al menos una hora a temperatura ambiente. Divide la masa en cuatro y estira cada trozo extremadamente fino, casi transparente, sobre una superficie aceitada. Pincela cada lámina generosamente con mantequilla clarificada derretida, luego enróllala apretada, como una concha de caracol. Coloca los rollos en una olla pesada engrasada, junto con los huevos enteros, todavía con cáscara. Tapa bien la olla y hornea a fuego muy bajo durante doce horas o toda la noche. Sirve caliente, roto a mano, junto a tomates picados con ajo y salsa zhug picante.",
+      fr: "Pétrissez la farine avec le sel, le sucre et l'eau tiède jusqu'à obtenir une pâte élastique et lisse. Laissez reposer la pâte, couverte, au moins une heure à température ambiante. Divisez la pâte en quatre et étirez chaque morceau extrêmement finement, presque transparent, sur une surface huilée. Badigeonnez généreusement chaque feuille de beurre clarifié fondu, puis roulez-la serrée, comme une coquille d'escargot. Disposez les rouleaux dans une cocotte lourde beurrée, avec les œufs entiers, toujours dans leur coquille. Couvrez bien la cocotte et faites cuire à très basse température pendant douze heures ou toute la nuit. Servez chaud, déchiré à la main, avec des tomates hachées à l'ail et de la sauce zhug épicée.",
+      de: "Das Mehl mit Salz, Zucker und lauwarmem Wasser zu einem elastischen, glatten Teig verkneten. Den Teig abgedeckt mindestens eine Stunde bei Raumtemperatur ruhen lassen. Den Teig in vier Teile teilen und jedes Stück auf einer geölten Fläche extrem dünn, fast durchsichtig, ausziehen. Jedes Blatt großzügig mit geschmolzener geklärter Butter bestreichen, dann fest wie eine Schneckenschale aufrollen. Die Rollen in einen schweren gefetteten Topf legen, zusammen mit den ganzen, noch ungeschälten Eiern. Den Topf fest verschließen und bei sehr niedriger Hitze zwölf Stunden oder über Nacht backen. Warm servieren, mit der Hand zerrissen, zusammen mit gehackten Tomaten mit Knoblauch und scharfer Zhug-Sauce.",
+      pt: "Amasse a farinha com o sal, o açúcar e a água morna até obter uma massa elástica e lisa. Deixe a massa repousar, tapada, pelo menos uma hora à temperatura ambiente. Divida a massa em quatro e estique cada pedaço extremamente fino, quase transparente, numa superfície untada. Pincele generosamente cada folha com manteiga clarificada derretida, depois enrole-a com firmeza, como uma concha de caracol. Disponha os rolos numa panela pesada untada, junto com os ovos inteiros, ainda com casca. Tape bem a panela e leve a cozer em lume muito baixo durante doze horas ou durante a noite. Sirva quente, rasgado à mão, com tomates picados com alho e molho zhug picante.",
+      ru: "Замесите муку с солью, сахаром и тёплой водой до получения эластичного гладкого теста. Дайте тесту отдохнуть под крышкой минимум час при комнатной температуре. Разделите тесто на четыре части и раскатайте каждый кусок очень тонко, почти прозрачно, на смазанной маслом поверхности. Обильно смажьте каждый пласт растопленным топлёным маслом, затем плотно сверните, как ракушку улитки. Уложите рулеты в тяжёлую смазанную маслом кастрюлю вместе с целыми яйцами в скорлупе. Плотно закройте кастрюлю крышкой и запекайте на очень слабом огне двенадцать часов или всю ночь. Подавайте тёплым, разорванным руками, вместе с нарезанными помидорами с чесноком и острым соусом зхуг.",
+      ar: "اعجني الدقيق مع الملح والسكر والماء الفاتر حتى تحصلي على عجينة مرنة وناعمة. اتركي العجينة ترتاح مغطاة لمدة ساعة على الأقل في درجة حرارة الغرفة. قسّمي العجينة إلى أربعة أجزاء ومدّي كل قطعة بشدة رقة، شبه شفافة، على سطح مدهون بالزيت. ادهني كل طبقة بسخاء بالسمن الصافي المذاب، ثم لفّيها بإحكام، كصدفة الحلزون. رتّبي اللفافات في قدر ثقيل مدهون، مع البيض الكامل بقشره. غطّي القدر جيداً واخبزي على نار هادئة جداً لمدة اثنتي عشرة ساعة أو طوال الليل. قدّميها دافئة، ممزقة باليد، مع الطماطم المفرومة بالثوم وصلصة الزحوق الحارة.",
+      zh: "将面粉与盐、糖和温水揉合成有弹性且光滑的面团。将面团盖好，在室温下静置至少一小时。将面团分成四份，在涂油的台面上将每份擀得极薄，几乎透明。在每张面皮上刷上大量融化的澄清黄油，然后紧紧卷起，像蜗牛壳一样。将卷饼摆放在涂油的厚重锅中，连同带壳的整鸡蛋一起。将锅盖紧，用非常小的火烤十二小时或整夜。趁热用手撕开享用，搭配蒜末番茄碎和辛辣绿辣酱。",
+      ja: "小麦粉を塩、砂糖、ぬるま湯と一緒にこね、弾力のある滑らかな生地にする。生地を覆い、室温で最低1時間休ませる。生地を4等分し、油を塗った台の上でそれぞれをほぼ透けるほど極薄に伸ばす。各シートに溶かした澄ましバターをたっぷり塗り、カタツムリの殻のようにきつく巻く。巻いたものを油を塗った重い鍋に、殻付きの卵と一緒に並べる。鍋をしっかり密閉し、とても弱い火で12時間または一晩焼く。温かいうちに手でちぎり、にんにく入りの刻みトマトと辛いズフーグソースと共に提供する。",
+      hi: "आटे को नमक, चीनी और गुनगुने पानी के साथ तब तक गूंधें जब तक एक लचीला, चिकना आटा न बन जाए। आटे को ढककर कमरे के तापमान पर कम से कम एक घंटे आराम दें। आटे को चार भागों में बांटें और तेल लगी सतह पर हर टुकड़े को बेहद पतला, लगभग पारदर्शी बेलें। हर शीट पर पिघला घी भरपूर लगाएं, फिर घोंघे के खोल की तरह कसकर लपेटें। रोल को चिकनाई लगी भारी बर्तन में, छिलके सहित पूरे अंडों के साथ रखें। बर्तन को अच्छी तरह ढकें और बहुत धीमी आंच पर बारह घंटे या रातभर पकाएं। गरम परोसें, हाथ से तोड़कर, लहसुन के साथ कटे टमाटर और तीखी ज़ूग सॉस के साथ।",
+      tr: "Unu tuz, şeker ve ılık suyla esnek, pürüzsüz bir hamur elde edene kadar yoğurun. Hamuru örtülü olarak oda sıcaklığında en az bir saat dinlendirin. Hamuru dörde bölün ve yağlanmış bir yüzeyde her parçayı neredeyse şeffaf olacak kadar son derece ince açın. Her yaprağı bolca eritilmiş sadeyağla fırçalayın, ardından salyangoz kabuğu gibi sıkıca sarın. Ruloları, kabuklu bütün yumurtalarla birlikte yağlanmış ağır bir tencereye yerleştirin. Tencereyi iyice kapatın ve on iki saat veya bütün gece çok düşük ateşte pişirin. Sıcak servis edin, elle parçalayarak, sarımsaklı doğranmış domatesler ve acılı zhug sosuyla birlikte.",
+      it: "Impasta la farina con il sale, lo zucchero e l'acqua tiepida finché non ottieni un impasto elastico e liscio. Lascia riposare l'impasto, coperto, per almeno un'ora a temperatura ambiente. Dividi l'impasto in quattro e stendi ogni pezzo estremamente sottile, quasi trasparente, su una superficie oliata. Spennella generosamente ogni sfoglia con burro chiarificato fuso, poi arrotolala stretta, come un guscio di lumaca. Disponi i rotoli in una pentola pesante imburrata, insieme alle uova intere, ancora con il guscio. Copri bene la pentola e cuoci a fuoco molto basso per dodici ore o tutta la notte. Servi caldo, strappato a mano, con pomodori tritati con aglio e salsa zhug piccante.",
+      ko: "밀가루를 소금, 설탕, 미지근한 물과 함께 탄력 있고 매끄러운 반죽이 될 때까지 치댄다. 반죽을 덮어 실온에서 최소 한 시간 휴지시킨다. 반죽을 네 등분하고 기름칠한 표면 위에서 각 조각을 거의 비칠 정도로 매우 얇게 편다. 각 반죽에 녹인 정제 버터를 듬뿍 바른 뒤 달팽이 껍질처럼 단단히 만다. 롤을 기름칠한 두꺼운 냄비에 껍질째인 통달걀과 함께 놓는다. 냄비를 꽉 덮고 아주 약한 불에서 열두 시간 또는 밤새 굽는다. 따뜻할 때 손으로 찢어 마늘을 넣은 다진 토마토, 매운 주그 소스와 함께 낸다."
+    },
+    originText: {
+      ro: "Jachnun a fost adus în Israel de evreii yemeniți, care păstrau obiceiul de a coace acest aluat rulat toată noaptea de vineri până sâmbătă dimineață, respectând interdicția de a găti în Șabat, dar bucurându-se totuși de mâncare caldă. Metoda de coacere extrem de lentă, la foc mic, e ceea ce transformă aluatul simplu într-un preparat dulceag, aproape caramelizat.\n\nAstăzi jachnun-ul e servit în toată țara, nu doar în comunitățile yemenite, adesea ca micul dejun de sâmbătă dimineață, alături de roșii proaspete rase și sos zhug, extrem de picant, care echilibrează dulceața aluatului.",
+      en: "Jachnun was brought to Israel by Yemenite Jews, who kept the custom of baking this rolled dough overnight from Friday to Saturday morning, respecting the prohibition against cooking on Shabbat while still enjoying warm food. The extremely slow, low-heat baking method is what transforms plain dough into a sweetish, almost caramelised dish.\n\nToday jachnun is served across the whole country, not just in Yemenite communities, often as a Saturday morning breakfast, alongside freshly grated tomatoes and extremely spicy zhug sauce, which balances the dough's sweetness.",
+      es: "El jachnun fue traído a Israel por los judíos yemeníes, que mantenían la costumbre de hornear esta masa enrollada toda la noche del viernes al sábado por la mañana, respetando la prohibición de cocinar en Shabat mientras disfrutaban de comida caliente. El método de horneado extremadamente lento, a fuego bajo, es lo que transforma la masa simple en un plato dulzón, casi caramelizado.\n\nHoy el jachnun se sirve en todo el país, no solo en las comunidades yemeníes, a menudo como desayuno del sábado por la mañana, junto a tomates recién rallados y salsa zhug extremadamente picante, que equilibra la dulzura de la masa.",
+      fr: "Le jachnun a été apporté en Israël par les Juifs yéménites, qui gardaient la coutume de faire cuire cette pâte roulée toute la nuit du vendredi au samedi matin, respectant l'interdiction de cuisiner pendant le Shabbat tout en profitant de plats chauds. La méthode de cuisson extrêmement lente, à basse température, est ce qui transforme la pâte simple en un plat sucré, presque caramélisé.\n\nAujourd'hui, le jachnun est servi dans tout le pays, pas seulement dans les communautés yéménites, souvent comme petit-déjeuner du samedi matin, accompagné de tomates fraîchement râpées et d'une sauce zhug extrêmement épicée, qui équilibre la douceur de la pâte.",
+      de: "Jachnun wurde von jemenitischen Juden nach Israel gebracht, die den Brauch pflegten, diesen gerollten Teig von Freitag bis Samstagmorgen über Nacht zu backen — im Einklang mit dem Kochverbot am Schabbat, aber dennoch mit warmem Essen. Die extrem langsame Backmethode bei niedriger Hitze verwandelt den einfachen Teig in ein süßliches, fast karamellisiertes Gericht.\n\nHeute wird Jachnun im ganzen Land serviert, nicht nur in jemenitischen Gemeinden, oft als Samstagmorgenfrühstück, zusammen mit frisch geriebenen Tomaten und extrem scharfer Zhug-Sauce, die die Süße des Teigs ausgleicht.",
+      pt: "O jachnun foi trazido a Israel pelos judeus iemenitas, que mantinham o costume de assar esta massa enrolada durante a noite de sexta-feira até ao sábado de manhã, respeitando a proibição de cozinhar no Shabat enquanto ainda desfrutavam de comida quente. O método de cozedura extremamente lento, em lume baixo, é o que transforma a massa simples num prato adocicado, quase caramelizado.\n\nHoje o jachnun é servido em todo o país, não apenas nas comunidades iemenitas, frequentemente como pequeno-almoço de sábado de manhã, junto com tomates ralados na hora e molho zhug extremamente picante, que equilibra a doçura da massa.",
+      ru: "Джахнун был привезён в Израиль йеменскими евреями, которые сохраняли обычай выпекать это скрученное тесто всю ночь с пятницы до субботнего утра, соблюдая запрет готовить в субботу, но всё же наслаждаясь тёплой едой. Чрезвычайно медленный способ выпечки на слабом огне превращает обычное тесто в сладковатое, почти карамелизированное блюдо.\n\nСегодня джахнун подают по всей стране, не только в йеменских общинах, часто как субботний завтрак, вместе со свежетёртыми помидорами и чрезвычайно острым соусом зхуг, который уравновешивает сладость теста.",
+      ar: "جلب اليهود اليمنيون الجحنون إلى إسرائيل، إذ حافظوا على عادة خبز هذه العجينة الملفوفة طوال الليل من الجمعة حتى صباح السبت، احتراماً لحظر الطهي في السبت مع الاستمتاع بطعام دافئ. طريقة الخبز البطيئة للغاية على نار هادئة هي ما يحوّل العجينة البسيطة إلى طبق حلو المذاق، شبه مكرمل.\n\nاليوم يُقدَّم الجحنون في جميع أنحاء البلاد، وليس فقط في المجتمعات اليمنية، وغالباً كإفطار صباح السبت، مع طماطم مبشورة طازجة وصلصة زحوق حارة جداً، توازن حلاوة العجينة.",
+      zh: "雅努恩卷饼由也门犹太人带入以色列，他们保留了从周五整夜烘烤这种卷起的面团直到周六早晨的习俗，既遵守安息日禁止烹饪的规定，又能享用温热的食物。这种极其缓慢的小火烘烤方法，正是将普通面团转化为略带甜味、近乎焦糖化的美食的关键。\n\n如今雅努恩卷饼在全国各地都能吃到，不仅限于也门社区，常作为周六早餐，搭配新鲜擦碎的番茄和极辣的绿辣酱一起食用，中和面团的甜味。",
+      ja: "ジャフヌンはイエメン系ユダヤ人によってイスラエルにもたらされ、彼らは安息日に料理をしてはいけないという戒律を守りながらも温かい食事を楽しむため、この巻いた生地を金曜から土曜の朝まで一晩かけて焼く習慣を保ってきた。極めてゆっくりとした弱火での焼き方こそが、シンプルな生地を甘くほぼキャラメル状の料理に変える理由だ。\n\n今日ではジャフヌンはイエメン系コミュニティだけでなく国中で提供されており、しばしば土曜の朝食として、新鮮にすりおろしたトマトと生地の甘さを引き締める非常に辛いズフーグソースと共に食べられる。",
+      hi: "जाकनून को यमनी यहूदियों द्वारा इज़राइल लाया गया, जिन्होंने शुक्रवार से शनिवार सुबह तक इस लपेटे हुए आटे को रातभर पकाने की प्रथा बनाए रखी, शाबात में खाना पकाने के निषेध का सम्मान करते हुए फिर भी गरम भोजन का आनंद लेते हुए। बहुत धीमी, कम आंच पर पकाने की विधि ही साधारण आटे को एक मीठा, लगभग कारमेलाइज़्ड व्यंजन में बदल देती है।\n\nआज जाकनून पूरे देश में परोसा जाता है, न केवल यमनी समुदायों में, अक्सर शनिवार सुबह के नाश्ते के रूप में, ताज़ा कद्दूकस किए टमाटर और बेहद तीखी ज़ूग सॉस के साथ, जो आटे की मिठास को संतुलित करती है।",
+      tr: "Jachnun, İsrail'e Yemenli Yahudiler tarafından getirildi; onlar bu rulo hamuru Cuma'dan Cumartesi sabahına kadar bütün gece pişirme geleneğini sürdürdüler, Şabat'ta pişirme yasağına saygı gösterirken yine de sıcak yemek keyfini çıkardılar. Son derece yavaş, düşük ısıda pişirme yöntemi, sade hamuru tatlımsı, neredeyse karamelize bir yemeğe dönüştüren şeydir.\n\nBugün jachnun sadece Yemen topluluklarında değil, ülke genelinde servis edilir, genellikle Cumartesi sabahı kahvaltısı olarak, taze rendelenmiş domatesler ve hamurun tatlılığını dengeleyen son derece acılı zhug sosuyla birlikte.",
+      it: "Lo jachnun fu portato in Israele dagli ebrei yemeniti, che mantenevano l'usanza di cuocere questo impasto arrotolato tutta la notte dal venerdì al sabato mattina, rispettando il divieto di cucinare durante lo Shabbat pur godendo di cibo caldo. Il metodo di cottura estremamente lento, a fuoco basso, è ciò che trasforma l'impasto semplice in un piatto dolciastro, quasi caramellato.\n\nOggi lo jachnun viene servito in tutto il paese, non solo nelle comunità yemenite, spesso come colazione del sabato mattina, insieme a pomodori appena grattugiati e salsa zhug estremamente piccante, che bilancia la dolcezza dell'impasto.",
+      ko: "야흐눈은 예멘계 유대인들이 이스라엘에 가져온 요리로, 안식일에 요리하는 것이 금지된 규율을 지키면서도 따뜻한 음식을 즐기기 위해 금요일 밤부터 토요일 아침까지 이 말린 반죽을 밤새 굽는 관습을 지켜왔다. 매우 느린 저온 굽기 방식이 평범한 반죽을 달콤하고 거의 캐러멜화된 요리로 바꾸는 비결이다.\n\n오늘날 야흐눈은 예멘 공동체뿐 아니라 전국에서 제공되며, 흔히 토요일 아침 식사로 갓 간 토마토와 반죽의 단맛을 중화시키는 매우 매운 주그 소스와 함께 즐긴다."
+    }
   }
 ];
