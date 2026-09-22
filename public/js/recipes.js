@@ -54475,5 +54475,473 @@ export const recipes = [
       it: "L'indivia fu scoperta per caso a metà del XIX secolo da un contadino belga di Schaerbeek, che conservò radici di cicoria in una cantina buia e notò che producevano germogli pallidi e teneri, completamente diversi dalle solite foglie verdi. La scoperta divenne rapidamente una coltura commerciale importante, e il Belgio resta oggi il maggior produttore mondiale.\n\nIl gratin con prosciutto e besciamella è il modo classico in cui i belgi trasformano l'amarezza naturale dell'ortaggio in un confortante piatto invernale, spesso servito la domenica in famiglia, insieme al purè di patate.",
       ko: "치커리는 19세기 중반 스하르베이크의 한 벨기에 농부가 우연히 발견한 것으로, 그는 치커리 뿌리를 어두운 지하실에 저장해 두었다가 일반적인 초록 잎과는 완전히 다른, 창백하고 부드러운 싹이 자라난 것을 발견했다. 이 발견은 곧 중요한 상업 작물이 되었고, 벨기에는 오늘날에도 세계 최대 생산국으로 남아 있다.\n\n햄과 베샤멜을 곁들인 그라탱은 벨기에 사람들이 이 채소의 자연스러운 쓴맛을 아늑한 겨울 요리로 바꾸는 전형적인 방법으로, 흔히 일요일 가족 식사에서 으깬 감자와 함께 제공된다."
     }
+  },
+  {
+    id: 441,
+    servings: 4,
+    tipType: "meat",
+    pairingsType: "meat",
+    nutrition: { cal: 480, prot: 18, carb: 38, fat: 30, fib: 2 },
+    origin: {
+      ro: "Croația", en: "Croatia", es: "Croacia", fr: "Croatie", de: "Kroatien",
+      pt: "Croácia", ru: "Хорватия", ar: "كرواتيا", zh: "克罗地亚", ja: "クロアチア",
+      hi: "क्रोएशिया", tr: "Hırvatistan", it: "Croazia", ko: "크로아티아"
+    },
+    name: {
+      ro: "Burek cu carne", en: "Burek", es: "Burek de carne", fr: "Burek à la viande", de: "Burek mit Hackfleisch",
+      pt: "Burek de carne", ru: "Бурек с мясом", ar: "بوريك باللحم", zh: "肉馅布雷克", ja: "ミートブレク",
+      hi: "मीट बुरेक", tr: "Kıymalı Börek", it: "Burek alla carne", ko: "고기 부렉"
+    },
+    category: {
+      ro: "Fel principal", en: "Main Course", es: "Plato principal", fr: "Plat principal", de: "Hauptgericht",
+      pt: "Prato principal", ru: "Основное блюдо", ar: "طبق رئيسي", zh: "主菜", ja: "メイン料理",
+      hi: "मुख्य व्यंजन", tr: "Ana Yemek", it: "Piatto principale", ko: "메인 요리"
+    },
+    featureCards: {
+      ro: [
+        { icon: "🌀", t: "Un melc din foi subțiri", d: "Foile subțiri de aluat se rulează cu umplutură și se încolăcesc în spirală, formând tiparul clasic al burekului." },
+        { icon: "🥩", t: "Umplutură simplă de carne", d: "Carne tocată amestecată doar cu ceapă și condimente, fără alte ingrediente, rămâne rețeta clasică croată." },
+        { icon: "🥛", t: "Un amestec de iaurt turnat deasupra", d: "Un amestec de iaurt, ulei și apă minerală, turnat peste burek înainte de copt, îl face incredibil de umed la interior." },
+        { icon: "🍽️", t: "Se mănâncă cu iaurt de băut", d: "Croații mănâncă aproape întotdeauna burekul alături de un pahar de iaurt de băut rece." }
+      ],
+      en: [
+        { icon: "🌀", t: "A snail made of thin sheets", d: "Thin sheets of dough are rolled with filling and coiled into a spiral, forming burek's classic shape." },
+        { icon: "🥩", t: "A simple meat filling", d: "Ground meat mixed with just onion and seasoning, no other ingredients, remains the classic Croatian recipe." },
+        { icon: "🥛", t: "A yogurt mix poured on top", d: "A blend of yogurt, oil, and sparkling water, poured over the burek before baking, makes it incredibly moist inside." },
+        { icon: "🍽️", t: "Eaten with drinking yogurt", d: "Croatians almost always eat burek alongside a glass of cold drinking yogurt." }
+      ],
+      es: [
+        { icon: "🌀", t: "Un caracol de láminas finas", d: "Láminas finas de masa se enrollan con relleno y se enroscan en espiral, formando la forma clásica del burek." },
+        { icon: "🥩", t: "Un relleno de carne sencillo", d: "Carne picada mezclada solo con cebolla y condimentos, sin otros ingredientes, sigue siendo la receta clásica croata." },
+        { icon: "🥛", t: "Una mezcla de yogur por encima", d: "Una mezcla de yogur, aceite y agua con gas, vertida sobre el burek antes de hornear, lo deja increíblemente jugoso por dentro." },
+        { icon: "🍽️", t: "Se come con yogur para beber", d: "Los croatas casi siempre comen el burek junto a un vaso de yogur para beber frío." }
+      ],
+      fr: [
+        { icon: "🌀", t: "Un escargot de fines feuilles", d: "De fines feuilles de pâte sont roulées avec la farce et enroulées en spirale, formant la forme classique du burek." },
+        { icon: "🥩", t: "Une farce de viande simple", d: "De la viande hachée mélangée à de l'oignon et des épices, rien d'autre, reste la recette classique croate." },
+        { icon: "🥛", t: "Un mélange au yaourt versé dessus", d: "Un mélange de yaourt, d'huile et d'eau gazeuse, versé sur le burek avant cuisson, le rend incroyablement moelleux à l'intérieur." },
+        { icon: "🍽️", t: "Mangé avec du yaourt à boire", d: "Les Croates mangent presque toujours le burek avec un verre de yaourt à boire bien frais." }
+      ],
+      de: [
+        { icon: "🌀", t: "Eine Schnecke aus dünnen Blättern", d: "Dünne Teigblätter werden mit Füllung gerollt und zu einer Spirale gewickelt, die klassische Burek-Form." },
+        { icon: "🥩", t: "Eine einfache Fleischfüllung", d: "Hackfleisch, nur mit Zwiebel und Gewürzen gemischt, keine weiteren Zutaten, bleibt das klassische kroatische Rezept." },
+        { icon: "🥛", t: "Eine Joghurtmischung obenauf gegossen", d: "Eine Mischung aus Joghurt, Öl und Sprudelwasser, vor dem Backen über den Burek gegossen, macht ihn innen unglaublich saftig." },
+        { icon: "🍽️", t: "Mit Trinkjoghurt gegessen", d: "Kroaten essen Burek fast immer zusammen mit einem Glas kaltem Trinkjoghurt." }
+      ],
+      pt: [
+        { icon: "🌀", t: "Um caracol de folhas finas", d: "Folhas finas de massa são enroladas com recheio e enroladas em espiral, formando a forma clássica do burek." },
+        { icon: "🥩", t: "Um recheio de carne simples", d: "Carne picada misturada apenas com cebola e temperos, sem outros ingredientes, continua sendo a receita clássica croata." },
+        { icon: "🥛", t: "Uma mistura de iogurte por cima", d: "Uma mistura de iogurte, azeite e água com gás, despejada sobre o burek antes de assar, deixa-o incrivelmente húmido por dentro." },
+        { icon: "🍽️", t: "Comido com iogurte líquido", d: "Os croatas quase sempre comem burek com um copo de iogurte líquido gelado." }
+      ],
+      ru: [
+        { icon: "🌀", t: "Улитка из тонких листов", d: "Тонкие листы теста скручивают с начинкой и заворачивают в спираль — классическую форму бурека." },
+        { icon: "🥩", t: "Простая мясная начинка", d: "Фарш, смешанный только с луком и специями, без других ингредиентов, остаётся классическим хорватским рецептом." },
+        { icon: "🥛", t: "Йогуртовая смесь сверху", d: "Смесь йогурта, масла и газированной воды, вылитая на бурек перед выпечкой, делает его невероятно влажным внутри." },
+        { icon: "🍽️", t: "Едят с питьевым йогуртом", d: "Хорваты почти всегда едят бурек вместе со стаканом холодного питьевого йогурта." }
+      ],
+      ar: [
+        { icon: "🌀", t: "حلزون من طبقات رقيقة", d: "تُلف طبقات رقيقة من العجين بالحشوة وتُلف على شكل حلزون، مكوّنة الشكل الكلاسيكي للبوريك." },
+        { icon: "🥩", t: "حشوة لحم بسيطة", d: "لحم مفروم ممزوج فقط بالبصل والتوابل، دون مكونات أخرى، تبقى الوصفة الكرواتية الكلاسيكية." },
+        { icon: "🥛", t: "مزيج زبادي يُسكب فوقها", d: "مزيج من الزبادي والزيت والماء الفوار، يُسكب فوق البوريك قبل الخبز، يجعله رطباً بشكل مذهل من الداخل." },
+        { icon: "🍽️", t: "يُؤكل مع زبادي للشرب", d: "يأكل الكرواتيون البوريك دائماً تقريباً مع كوب من الزبادي البارد للشرب." }
+      ],
+      zh: [
+        { icon: "🌀", t: "薄层制成的蜗牛卷", d: "薄薄的面皮卷入馅料并盘成螺旋状，形成布雷克经典的造型。" },
+        { icon: "🥩", t: "简单的肉馅", d: "只用洋葱和调味料调味的肉馅，不加其他配料，是经典的克罗地亚做法。" },
+        { icon: "🥛", t: "浇上酸奶混合液", d: "烘烤前浇在布雷克上的酸奶、油和苏打水混合液，让内部格外湿润。" },
+        { icon: "🍽️", t: "配饮用酸奶享用", d: "克罗地亚人几乎总是搭配一杯冰镇饮用酸奶来享用布雷克。" }
+      ],
+      ja: [
+        { icon: "🌀", t: "薄い生地で作るかたつむり形", d: "薄い生地に具材を巻き、渦巻き状に丸めることで、ブレクの定番の形になる。" },
+        { icon: "🥩", t: "シンプルな肉の具材", d: "玉ねぎと調味料だけで味付けしたひき肉が、クロアチアの定番レシピのままだ。" },
+        { icon: "🥛", t: "上にかけるヨーグルトミックス", d: "ヨーグルト、油、炭酸水を混ぜたものを焼く前にブレクにかけると、中が驚くほどしっとりする。" },
+        { icon: "🍽️", t: "飲むヨーグルトと共に", d: "クロアチア人はほぼ必ず冷たい飲むヨーグルトと一緒にブレクを食べる。" }
+      ],
+      hi: [
+        { icon: "🌀", t: "पतली परतों से बना घोंघा", d: "आटे की पतली परतें भरावन के साथ लपेटी जाती हैं और सर्पिल में मोड़ी जाती हैं, जो बुरेक का क्लासिक आकार बनाती हैं।" },
+        { icon: "🥩", t: "एक साधारण मांस भरावन", d: "केवल प्याज़ और मसालों के साथ मिलाया गया कीमा, बिना किसी अन्य सामग्री के, क्लासिक क्रोएशियाई रेसिपी बना हुआ है।" },
+        { icon: "🥛", t: "ऊपर डाला गया दही मिश्रण", d: "दही, तेल और सोडा वाटर का मिश्रण, बेक करने से पहले बुरेक पर डाला जाता है, जो इसे अंदर से अविश्वसनीय रूप से नम बना देता है।" },
+        { icon: "🍽️", t: "पीने के दही के साथ खाया जाता है", d: "क्रोएशियाई लोग लगभग हमेशा बुरेक को ठंडे पीने के दही के गिलास के साथ खाते हैं।" }
+      ],
+      tr: [
+        { icon: "🌀", t: "İnce yapraklardan yapılan salyangoz", d: "İnce hamur yaprakları içle birlikte sarılır ve spiral şeklinde kıvrılarak böreğin klasik şeklini oluşturur." },
+        { icon: "🥩", t: "Basit bir kıyma iç harç", d: "Sadece soğan ve baharatla karıştırılmış kıyma, başka malzeme olmadan, klasik Hırvat tarifi olmaya devam eder." },
+        { icon: "🥛", t: "Üzerine dökülen yoğurt karışımı", d: "Pişirmeden önce böreğin üzerine dökülen yoğurt, yağ ve sodalı su karışımı, içini inanılmaz derecede nemli yapar." },
+        { icon: "🍽️", t: "İçme yoğurduyla yenir", d: "Hırvatlar böreği neredeyse her zaman soğuk bir bardak içme yoğurduyla yerler." }
+      ],
+      it: [
+        { icon: "🌀", t: "Una lumaca di fogli sottili", d: "Sottili fogli di pasta vengono arrotolati con il ripieno e avvolti a spirale, formando la forma classica del burek." },
+        { icon: "🥩", t: "Un semplice ripieno di carne", d: "Carne macinata mescolata solo con cipolla e condimenti, senza altri ingredienti, resta la classica ricetta croata." },
+        { icon: "🥛", t: "Un composto di yogurt versato sopra", d: "Un mix di yogurt, olio e acqua frizzante, versato sul burek prima della cottura, lo rende incredibilmente umido dentro." },
+        { icon: "🍽️", t: "Si mangia con yogurt da bere", d: "I croati mangiano quasi sempre il burek insieme a un bicchiere di yogurt da bere freddo." }
+      ],
+      ko: [
+        { icon: "🌀", t: "얇은 시트로 만든 달팽이 모양", d: "얇은 반죽 시트에 속재료를 넣고 말아 나선형으로 감아 부렉의 클래식한 모양을 만든다." },
+        { icon: "🥩", t: "심플한 고기 속재료", d: "양파와 양념만 섞은 다진 고기, 다른 재료 없이, 여전히 클래식한 크로아티아 레시피다." },
+        { icon: "🥛", t: "위에 붓는 요거트 믹스", d: "요거트, 기름, 탄산수를 섞은 것을 굽기 전 부렉 위에 부으면 속이 놀랍도록 촉촉해진다." },
+        { icon: "🍽️", t: "마시는 요거트와 함께", d: "크로아티아 사람들은 거의 항상 차가운 마시는 요거트 한 잔과 함께 부렉을 먹는다." }
+      ]
+    },
+    ingredients: {
+      ro: ["10 foi de plăcintă (yufka)", "500g carne de vită tocată", "1 ceapă mare, tocată fin", "sare și piper", "1 linguriță boia dulce", "100ml ulei", "200g iaurt", "100ml apă minerală", "1 ou"],
+      en: ["10 phyllo/yufka sheets", "500g ground beef", "1 large onion, finely chopped", "salt and pepper", "1 tsp sweet paprika", "100ml oil", "200g plain yogurt", "100ml sparkling water", "1 egg"],
+      es: ["10 láminas de masa filo (yufka)", "500g de carne de res molida", "1 cebolla grande, picada fina", "sal y pimienta", "1 cdta de pimentón dulce", "100ml de aceite", "200g de yogur natural", "100ml de agua con gas", "1 huevo"],
+      fr: ["10 feuilles de pâte filo (yufka)", "500g de bœuf haché", "1 gros oignon, finement haché", "sel et poivre", "1 c. à café de paprika doux", "100ml d'huile", "200g de yaourt nature", "100ml d'eau gazeuse", "1 œuf"],
+      de: ["10 Filoteigblätter (Yufka)", "500g Rinderhackfleisch", "1 große Zwiebel, fein gehackt", "Salz und Pfeffer", "1 TL süßes Paprikapulver", "100ml Öl", "200g Naturjoghurt", "100ml Sprudelwasser", "1 Ei"],
+      pt: ["10 folhas de massa filo (yufka)", "500g de carne de vaca moída", "1 cebola grande, picada fina", "sal e pimenta", "1 col. chá de colorau doce", "100ml de óleo", "200g de iogurte natural", "100ml de água com gás", "1 ovo"],
+      ru: ["10 листов теста фило (юфка)", "500г говяжьего фарша", "1 крупная луковица, мелко нарезанная", "соль и перец", "1 ч.л. сладкой паприки", "100мл масла", "200г натурального йогурта", "100мл газированной воды", "1 яйцо"],
+      ar: ["10 أوراق عجين فيلو (يوفكا)", "500غ لحم بقري مفروم", "1 بصلة كبيرة، مفرومة ناعماً", "ملح وفلفل", "1 ملعقة صغيرة بابريكا حلوة", "100مل زيت", "200غ زبادي سادة", "100مل ماء فوار", "1 بيضة"],
+      zh: ["10张千层酥皮（yufka）", "500克牛肉末", "1个大洋葱，切细末", "盐和胡椒", "1茶匙甜红椒粉", "100毫升油", "200克原味酸奶", "100毫升苏打水", "1个鸡蛋"],
+      ja: ["フィロ生地（ユフカ）10枚", "牛ひき肉500g", "大玉ねぎ1個（みじん切り）", "塩こしょう", "パプリカパウダー小さじ1", "油100ml", "プレーンヨーグルト200g", "炭酸水100ml", "卵1個"],
+      hi: ["10 फिलो/युफ्का शीट", "500 ग्राम गोमांस कीमा", "1 बड़ा प्याज़, बारीक कटा", "नमक और काली मिर्च", "1 छोटा चम्मच मीठी पैपरिका", "100 मिली तेल", "200 ग्राम सादा दही", "100 मिली सोडा वाटर", "1 अंडा"],
+      tr: ["10 yufka yaprağı", "500g dana kıyma", "1 büyük soğan, ince doğranmış", "tuz ve karabiber", "1 tatlı kaşığı tatlı kırmızı biber", "100ml yağ", "200g sade yoğurt", "100ml sodalı su", "1 yumurta"],
+      it: ["10 fogli di pasta fillo (yufka)", "500g di manzo macinato", "1 cipolla grande, tritata finemente", "sale e pepe", "1 cucchiaino di paprica dolce", "100ml di olio", "200g di yogurt bianco", "100ml di acqua frizzante", "1 uovo"],
+      ko: ["필로/유프카 시트 10장", "다진 소고기 500g", "큰 양파 1개, 잘게 다진 것", "소금과 후추", "단맛 파프리카 가루 1작은술", "기름 100ml", "플레인 요거트 200g", "탄산수 100ml", "달걀 1개"]
+    },
+    howIsMade: {
+      ro: "Se amestecă vita tocată cu ceapa tocată fin, sare, piper și boia, până compoziția se leagă bine. Se așază o foaie de plăcintă pe blat și se unge ușor cu ulei. Se întinde o linie subțire de umplutură de-a lungul unei margini și se rulează într-un sul lung și lejer. Se încolăcește sulul într-o spirală și se așază într-o tavă rotundă unsă, continuând cu mai multe spirale în jur. Se bate iaurtul cu puțin ulei și apa minerală, apoi se toarnă uniform peste tot aluatul. Se coace la cuptor încins până partea de deasupra devine auriu-închis și crocantă. Se lasă câteva minute la odihnă înainte de a tăia felii și de a servi cald.",
+      en: "Mix the ground beef with the finely chopped onion, salt, pepper, and paprika until well combined. Lay a sheet of phyllo on the counter and brush lightly with oil. Spread a thin line of the meat filling along one edge and roll into a long, loose coil. Curl the rolled log into a spiral and place it in a greased round baking pan, continuing with more spirals around it. Whisk together the yogurt, a little oil, and sparkling water, then pour evenly over the whole pastry. Bake in a hot oven until the top is deep golden and crisp. Let it rest a few minutes before cutting into wedges and serving warm.",
+      es: "Mezcla la carne molida con la cebolla picada fina, sal, pimienta y pimentón hasta que quede bien unida. Coloca una lámina de masa filo sobre la superficie de trabajo y píntala ligeramente con aceite. Extiende una línea fina de relleno a lo largo de un borde y enróllala en un rollo largo y suelto. Enrosca el rollo en espiral y colócalo en un molde redondo engrasado, continuando con más espirales alrededor. Bate el yogur con un poco de aceite y el agua con gas, y viértelo de manera uniforme sobre toda la masa. Hornea a alta temperatura hasta que la parte superior esté dorada y crujiente. Deja reposar unos minutos antes de cortar en porciones y servir caliente.",
+      fr: "Mélangez le bœuf haché avec l'oignon finement haché, le sel, le poivre et le paprika jusqu'à ce que le mélange soit bien lié. Posez une feuille de pâte filo sur le plan de travail et badigeonnez-la légèrement d'huile. Étalez une fine ligne de farce le long d'un bord et roulez en un long boudin lâche. Enroulez le boudin en spirale et placez-le dans un moule rond beurré, en continuant avec d'autres spirales autour. Fouettez le yaourt avec un peu d'huile et l'eau gazeuse, puis versez uniformément sur toute la pâte. Faites cuire dans un four chaud jusqu'à ce que le dessus soit bien doré et croustillant. Laissez reposer quelques minutes avant de couper en parts et de servir chaud.",
+      de: "Das Rinderhackfleisch mit der fein gehackten Zwiebel, Salz, Pfeffer und Paprika vermischen, bis alles gut verbunden ist. Ein Filoteigblatt auf die Arbeitsfläche legen und leicht mit Öl bestreichen. Eine dünne Linie Fleischfüllung entlang einer Kante verteilen und zu einer langen, lockeren Rolle aufrollen. Die Rolle zu einer Spirale einrollen und in eine gefettete runde Backform legen, mit weiteren Spiralen drum herum fortfahren. Joghurt mit etwas Öl und Sprudelwasser verquirlen, dann gleichmäßig über den ganzen Teig gießen. Im heißen Ofen backen, bis die Oberseite tief golden und knusprig ist. Ein paar Minuten ruhen lassen, bevor in Stücke geschnitten und warm serviert wird.",
+      pt: "Misture a carne moída com a cebola picada fina, sal, pimenta e colorau até ficar bem ligada. Coloque uma folha de massa filo na bancada e pincele levemente com óleo. Espalhe uma linha fina de recheio ao longo de uma borda e enrole num rolo longo e solto. Enrole o rolo em espiral e coloque numa forma redonda untada, continuando com mais espirais à volta. Bata o iogurte com um pouco de óleo e a água com gás, depois deite uniformemente sobre toda a massa. Leve ao forno quente até o topo ficar dourado escuro e crocante. Deixe repousar alguns minutos antes de cortar em fatias e servir quente.",
+      ru: "Смешайте говяжий фарш с мелко нарезанным луком, солью, перцем и паприкой до однородности. Положите лист теста фило на стол и слегка смажьте маслом. Распределите тонкую полоску мясной начинки вдоль одного края и сверните в длинный рыхлый рулет. Скрутите рулет спиралью и уложите в смазанную круглую форму для выпечки, продолжая укладывать спирали вокруг. Взбейте йогурт с небольшим количеством масла и газированной воды, затем равномерно полейте всё тесто. Выпекайте в горячей духовке до тёмно-золотистого и хрустящего верха. Дайте постоять несколько минут перед тем, как нарезать на дольки и подавать тёплым.",
+      ar: "اخلطي لحم البقر المفروم مع البصل المفروم ناعماً والملح والفلفل والبابريكا حتى يتماسك الخليط جيداً. ضعي ورقة عجين فيلو على الطاولة وادهنيها بخفة بالزيت. وزّعي خطاً رفيعاً من الحشوة على طول أحد الحواف ولفّيها إلى لفافة طويلة وفضفاضة. لفّي اللفافة على شكل حلزون وضعيها في صينية خبز مستديرة مدهونة، مع الاستمرار بإضافة حلزونات أخرى حولها. اخفقي الزبادي مع قليل من الزيت والماء الفوار، ثم اسكبيه بالتساوي فوق العجين كله. اخبزي في فرن ساخن حتى يصبح الوجه ذهبياً داكناً ومقرمشاً. اتركيه يرتاح بضع دقائق قبل تقطيعه إلى شرائح وتقديمه دافئاً.",
+      zh: "将牛肉末与切细的洋葱、盐、胡椒和红椒粉混合均匀。将一张酥皮铺在台面上，轻轻刷上油。沿一边薄薄铺一条肉馅，卷成松散的长条。将卷好的长条盘成螺旋状，放入涂油的圆形烤盘中，继续在周围添加更多螺旋。将酸奶与少许油和苏打水搅打均匀，均匀浇在整个酥皮上。放入烧热的烤箱中烤至表面呈深金黄色且酥脆。静置几分钟后切块，趁热享用。",
+      ja: "牛ひき肉を細かく刻んだ玉ねぎ、塩、こしょう、パプリカパウダーとよく混ぜ合わせる。生地を台の上に広げ、軽く油を塗る。片端に沿って薄く具材を広げ、緩くロール状に巻く。巻いたものを渦巻き状に丸め、油を塗った丸い焼き型に入れ、周りに渦巻きを増やしていく。ヨーグルトに少量の油と炭酸水を加えて泡立て、生地全体に均一にかける。熱いオーブンで表面が濃い黄金色でカリッとするまで焼く。数分休ませてからくさび形に切り分け、温かいうちに提供する。",
+      hi: "गोमांस कीमा को बारीक कटे प्याज़, नमक, काली मिर्च और पैपरिका के साथ तब तक मिलाएं जब तक अच्छी तरह बंध न जाए। काउंटर पर फिलो शीट रखें और हल्के से तेल लगाएं। एक किनारे के साथ भरावन की पतली रेखा फैलाएं और लंबे, ढीले रोल में लपेटें। लपेटे रोल को सर्पिल में मोड़ें और चिकनाई लगे गोल बेकिंग पैन में रखें, चारों ओर और सर्पिल जोड़ते जाएं। दही को थोड़े तेल और सोडा वाटर के साथ फेंटें, फिर पूरे पेस्ट्री पर समान रूप से डालें। गरम ओवन में तब तक बेक करें जब तक ऊपर गहरा सुनहरा और कुरकुरा न हो जाए। स्लाइस काटने और गरम परोसने से पहले कुछ मिनट आराम दें।",
+      tr: "Kıymayı ince doğranmış soğan, tuz, karabiber ve kırmızı biberle iyice birleşene kadar karıştırın. Yufka yaprağını tezgaha serin ve hafifçe yağla fırçalayın. Bir kenar boyunca ince bir iç harç çizgisi yayın ve uzun, gevşek bir rulo halinde sarın. Sarılan ruloyu spiral şeklinde kıvırın ve yağlanmış yuvarlak bir fırın tepsisine yerleştirin, etrafına daha fazla spiral eklemeye devam edin. Yoğurdu biraz yağ ve sodalı suyla çırpın, ardından tüm hamurun üzerine eşitçe dökün. Sıcak fırında üst kısmı koyu altın rengi ve çıtır olana kadar pişirin. Dilimleyip sıcak servis etmeden önce birkaç dakika dinlendirin.",
+      it: "Mescola il manzo macinato con la cipolla tritata finemente, sale, pepe e paprica finché non è ben amalgamato. Stendi un foglio di pasta fillo sul piano di lavoro e spennellalo leggermente con olio. Distribuisci una sottile striscia di ripieno lungo un bordo e arrotola in un rotolo lungo e morbido. Avvolgi il rotolo a spirale e mettilo in una teglia rotonda imburrata, continuando con altre spirali intorno. Sbatti lo yogurt con un po' d'olio e l'acqua frizzante, poi versa uniformemente su tutta la pasta. Cuoci in forno caldo finché la superficie non è dorata scura e croccante. Lascia riposare qualche minuto prima di tagliare a spicchi e servire caldo.",
+      ko: "다진 소고기를 잘게 썬 양파, 소금, 후추, 파프리카 가루와 잘 어우러지도록 섞는다. 필로 시트를 작업대에 펼치고 기름을 살짝 바른다. 한쪽 가장자리를 따라 속재료를 얇게 펴 바른 뒤 길고 느슨한 롤로 만다. 만 롤을 나선형으로 감아 기름칠한 둥근 오븐 팬에 놓고, 그 주위로 나선을 계속 추가한다. 요거트에 기름과 탄산수를 조금 넣어 섞은 뒤 반죽 전체에 고르게 붓는다. 뜨거운 오븐에서 윗면이 진한 황금빛으로 바삭해질 때까지 굽는다. 몇 분간 그대로 두었다가 조각으로 잘라 따뜻할 때 낸다."
+    },
+    originText: {
+      ro: "Burekul a ajuns în Balcani prin influența otomană, dar croații l-au adoptat rapid ca un fel de mâncare cotidian, disponibil în aproape orice brutărie de la ora șase dimineața. Legea croată reglementează chiar folosirea numelui 'burek', permițându-l oficial doar pentru variantele cu carne — cele cu brânză sau spanac poartă alte denumiri.\n\nSe mănâncă tradițional la micul dejun, cald, direct din hârtie, iar iaurtul de băut rece rămâne combinația nescrisă dar obligatorie, cu efect de a echilibra bogăția aluatului uns cu unt sau ulei.",
+      en: "Burek arrived in the Balkans through Ottoman influence, but Croatians quickly adopted it as an everyday dish, available in nearly every bakery from six in the morning. Croatian law even regulates the use of the name 'burek', officially reserving it only for the meat variants — versions with cheese or spinach carry other names.\n\nIt's traditionally eaten for breakfast, warm, straight out of paper wrapping, and cold drinking yogurt remains the unwritten but essential pairing, its job being to balance out the richness of the buttery or oiled pastry.",
+      es: "El burek llegó a los Balcanes por influencia otomana, pero los croatas lo adoptaron rápidamente como plato cotidiano, disponible en casi todas las panaderías desde las seis de la mañana. La ley croata incluso regula el uso del nombre 'burek', reservándolo oficialmente solo para las variantes de carne; las versiones con queso o espinacas llevan otros nombres.\n\nSe come tradicionalmente en el desayuno, caliente, directamente del papel, y el yogur para beber frío sigue siendo el acompañamiento no escrito pero esencial, cuya función es equilibrar la riqueza de la masa untada con mantequilla o aceite.",
+      fr: "Le burek est arrivé dans les Balkans grâce à l'influence ottomane, mais les Croates l'ont rapidement adopté comme plat quotidien, disponible dans presque toutes les boulangeries dès six heures du matin. La loi croate réglemente même l'utilisation du nom 'burek', le réservant officiellement aux seules variantes à la viande — les versions au fromage ou aux épinards portent d'autres noms.\n\nIl se mange traditionnellement au petit-déjeuner, chaud, directement sorti du papier, et le yaourt à boire froid reste l'accompagnement non écrit mais essentiel, dont le rôle est d'équilibrer la richesse de la pâte beurrée ou huilée.",
+      de: "Burek kam durch osmanischen Einfluss auf den Balkan, aber die Kroaten übernahmen ihn schnell als Alltagsgericht, das in fast jeder Bäckerei ab sechs Uhr morgens erhältlich ist. Das kroatische Gesetz regelt sogar die Verwendung des Namens 'Burek' und reserviert ihn offiziell nur für die Fleischvarianten — Versionen mit Käse oder Spinat tragen andere Namen.\n\nEr wird traditionell zum Frühstück gegessen, warm, direkt aus dem Papier, und kalter Trinkjoghurt bleibt die ungeschriebene, aber unverzichtbare Beilage, deren Aufgabe es ist, die Fülle des buttrigen oder geölten Teigs auszugleichen.",
+      pt: "O burek chegou aos Balcãs através da influência otomana, mas os croatas rapidamente o adotaram como prato do dia a dia, disponível em quase todas as padarias a partir das seis da manhã. A lei croata até regula o uso do nome 'burek', reservando-o oficialmente apenas para as variantes de carne — as versões com queijo ou espinafre têm outros nomes.\n\nÉ tradicionalmente comido ao pequeno-almoço, quente, diretamente do papel, e o iogurte líquido gelado continua a ser o acompanhamento não escrito mas essencial, cuja função é equilibrar a riqueza da massa amanteigada ou oleada.",
+      ru: "Бурек попал на Балканы благодаря османскому влиянию, но хорваты быстро сделали его повседневным блюдом, доступным почти в каждой пекарне с шести утра. Хорватское законодательство даже регулирует использование названия «бурек», официально закрепляя его только за мясными вариантами — версии с сыром или шпинатом носят другие названия.\n\nЕго традиционно едят на завтрак, тёплым, прямо из бумаги, а холодный питьевой йогурт остаётся негласным, но обязательным дополнением, чья роль — уравновесить насыщенность промасленного теста.",
+      ar: "وصل البوريك إلى البلقان عبر التأثير العثماني، لكن الكروات سرعان ما تبنوه كطبق يومي، متوفر في كل مخبز تقريباً منذ الساعة السادسة صباحاً. حتى إن القانون الكرواتي ينظم استخدام اسم 'بوريك'، ويحصره رسمياً على الأنواع باللحم فقط — أما النسخ بالجبن أو السبانخ فتحمل أسماء أخرى.\n\nيُؤكل تقليدياً في الإفطار، دافئاً، مباشرة من الورق، ويبقى الزبادي البارد للشرب المرافق غير المكتوب لكنه أساسي، ودوره موازنة غنى العجين المدهون بالزبدة أو الزيت.",
+      zh: "布雷克通过奥斯曼帝国的影响传入巴尔干地区，但克罗地亚人很快将其变成日常食品，几乎每家面包店从早上六点起就有售卖。克罗地亚法律甚至规定了'burek'这一名称的使用，正式规定只有肉馅版本才能称为burek——奶酪或菠菜馅的版本则使用其他名称。\n\n传统上作为早餐食用，趁热直接用纸包着吃，冰镇饮用酸奶则是不成文但必不可少的搭配，其作用是平衡涂了黄油或油的酥皮的浓郁口感。",
+      ja: "ブレクはオスマン帝国の影響でバルカン半島に伝わったが、クロアチア人はすぐにこれを日常的な料理として取り入れ、朝6時からほとんどのパン屋で手に入るようになった。クロアチアの法律では『burek』という名称の使用さえ規定されており、正式には肉入りのバージョンにのみ使用が認められている——チーズやほうれん草入りのバージョンには別の名前が付けられている。\n\n伝統的に朝食として、温かいまま紙に包まれた状態でそのまま食べられ、冷たい飲むヨーグルトは書かれてはいないが必須の組み合わせとして残っており、その役割はバターや油を塗った生地の濃厚さを引き締めることにある。",
+      hi: "बुरेक ऑटोमन प्रभाव से बाल्कन तक पहुंचा, लेकिन क्रोएशियाई लोगों ने इसे जल्दी ही रोज़मर्रा के व्यंजन के रूप में अपना लिया, जो लगभग हर बेकरी में सुबह छह बजे से उपलब्ध है। क्रोएशियाई कानून 'बुरेक' नाम के उपयोग को भी नियंत्रित करता है, इसे आधिकारिक रूप से केवल मांस वाले संस्करणों के लिए आरक्षित करता है — चीज़ या पालक वाले संस्करण अन्य नाम रखते हैं।\n\nपारंपरिक रूप से नाश्ते में, गरम, सीधे कागज़ से खाया जाता है, और ठंडा पीने का दही एक अलिखित लेकिन आवश्यक संयोजन बना हुआ है, जिसका काम मक्खन या तेल लगे आटे की भारीपन को संतुलित करना है।",
+      tr: "Börek, Osmanlı etkisiyle Balkanlar'a ulaştı, ancak Hırvatlar onu hızla günlük bir yemek olarak benimsediler; sabah altıdan itibaren neredeyse her fırında bulunabilir. Hırvat yasası hatta 'börek' isminin kullanımını düzenler ve resmi olarak sadece etli çeşitler için ayırır — peynirli veya ıspanaklı versiyonlar başka isimler taşır.\n\nGeleneksel olarak kahvaltıda, sıcak, doğrudan kağıttan yenir ve soğuk içme yoğurdu, yağlı veya tereyağlı hamurun ağırlığını dengeleme görevi gören yazılı olmayan ama vazgeçilmez eşlikçi olmaya devam eder.",
+      it: "Il burek arrivò nei Balcani grazie all'influenza ottomana, ma i croati lo adottarono rapidamente come piatto quotidiano, disponibile in quasi ogni panetteria dalle sei del mattino. La legge croata regola persino l'uso del nome 'burek', riservandolo ufficialmente solo alle varianti di carne — le versioni con formaggio o spinaci portano altri nomi.\n\nViene tradizionalmente mangiato a colazione, caldo, direttamente dalla carta, e lo yogurt da bere freddo resta l'accompagnamento non scritto ma essenziale, il cui compito è bilanciare la ricchezza della pasta imburrata o oliata.",
+      ko: "부렉은 오스만 제국의 영향으로 발칸반도에 전해졌지만, 크로아티아인들은 이를 빠르게 일상적인 음식으로 받아들여 아침 6시부터 거의 모든 빵집에서 판매되었다. 크로아티아 법은 심지어 '부렉'이라는 이름의 사용을 규제하여, 공식적으로 고기 버전에만 이 이름을 허용한다 — 치즈나 시금치가 든 버전은 다른 이름을 갖는다.\n\n전통적으로 아침 식사로, 따뜻하게, 종이에서 바로 꺼내 먹으며, 차가운 마시는 요거트는 문서화되어 있지는 않지만 필수적인 조합으로 남아 있는데, 그 역할은 버터나 기름을 바른 반죽의 진한 맛을 균형 잡아주는 것이다."
+    }
+  },
+  {
+    id: 442,
+    servings: 4,
+    tipType: "dessert",
+    pairingsType: "dessert",
+    nutrition: { cal: 320, prot: 5, carb: 42, fat: 14, fib: 1 },
+    origin: {
+      ro: "Croația", en: "Croatia", es: "Croacia", fr: "Croatie", de: "Kroatien",
+      pt: "Croácia", ru: "Хорватия", ar: "كرواتيا", zh: "克罗地亚", ja: "クロアチア",
+      hi: "क्रोएशिया", tr: "Hırvatistan", it: "Croazia", ko: "크로아티아"
+    },
+    name: {
+      ro: "Fritule", en: "Fritule", es: "Fritule", fr: "Fritule", de: "Fritule",
+      pt: "Fritule", ru: "Фритуле", ar: "فريتولي", zh: "克罗地亚炸糖球", ja: "フリトゥーレ",
+      hi: "फ्रितुले", tr: "Fritule", it: "Fritule", ko: "프리툴레"
+    },
+    category: {
+      ro: "Desert", en: "Dessert", es: "Postre", fr: "Dessert", de: "Dessert",
+      pt: "Sobremesa", ru: "Десерт", ar: "حلوى", zh: "甜点", ja: "デザート",
+      hi: "मिठाई", tr: "Tatlı", it: "Dolce", ko: "디저트"
+    },
+    featureCards: {
+      ro: [
+        { icon: "🍇", t: "Stafide și rom, aromele semnătură", d: "Stafidele înmuiate în rom sau rachiu se ascund în fiecare bilă, surprinzând la fiecare mușcătură." },
+        { icon: "🍊", t: "Coajă de citrice pentru prospețime", d: "Coajă rasă de lămâie și portocală luminează gustul aluatului dulce dospit." },
+        { icon: "⚫", t: "Bile mici, prăjite rapid", d: "Aluatul se prăjește în bile mici, cu o lingură, direct din bolul de dospire, niciodată întins sau tăiat." },
+        { icon: "❄️", t: "Un desert de sărbători de iarnă", d: "Fritulele apar aproape peste tot pe litoralul croat în perioada Crăciunului, vândute la piețele de iarnă." }
+      ],
+      en: [
+        { icon: "🍇", t: "Raisins and rum, the signature flavours", d: "Raisins soaked in rum or brandy hide inside each ball, surprising with every bite." },
+        { icon: "🍊", t: "Citrus zest for freshness", d: "Grated lemon and orange zest brighten the flavour of the sweet, yeasted batter." },
+        { icon: "⚫", t: "Small balls, fried quickly", d: "The batter is fried into small balls, dropped by spoon straight from the rising bowl, never rolled out or cut." },
+        { icon: "❄️", t: "A winter holiday treat", d: "Fritule appear almost everywhere along the Croatian coast around Christmas, sold at winter markets." }
+      ],
+      es: [
+        { icon: "🍇", t: "Pasas y ron, los sabores característicos", d: "Pasas remojadas en ron o brandy se esconden dentro de cada bola, sorprendiendo en cada bocado." },
+        { icon: "🍊", t: "Ralladura de cítricos para frescura", d: "La ralladura de limón y naranja realza el sabor de la masa dulce fermentada." },
+        { icon: "⚫", t: "Bolitas pequeñas, fritas rápidamente", d: "La masa se fríe en bolitas pequeñas, echadas con cuchara directamente del bol de fermentación, nunca extendidas ni cortadas." },
+        { icon: "❄️", t: "Un dulce de las fiestas de invierno", d: "Las fritule aparecen casi por todas partes en la costa croata en Navidad, vendidas en mercados de invierno." }
+      ],
+      fr: [
+        { icon: "🍇", t: "Raisins secs et rhum, les saveurs signature", d: "Des raisins secs trempés dans du rhum ou du brandy se cachent dans chaque boule, surprenant à chaque bouchée." },
+        { icon: "🍊", t: "Le zeste d'agrumes pour la fraîcheur", d: "Le zeste de citron et d'orange râpé illumine la saveur de la pâte levée sucrée." },
+        { icon: "⚫", t: "De petites boules, frites rapidement", d: "La pâte est frite en petites boules, déposées à la cuillère directement du bol de fermentation, jamais étalées ni découpées." },
+        { icon: "❄️", t: "Une gourmandise des fêtes d'hiver", d: "Les fritule apparaissent presque partout sur la côte croate autour de Noël, vendues sur les marchés d'hiver." }
+      ],
+      de: [
+        { icon: "🍇", t: "Rosinen und Rum, die charakteristischen Aromen", d: "In Rum oder Brandy eingeweichte Rosinen verstecken sich in jeder Kugel und überraschen bei jedem Bissen." },
+        { icon: "🍊", t: "Zitrusschale für Frische", d: "Geriebene Zitronen- und Orangenschale hellt den Geschmack des süßen Hefeteigs auf." },
+        { icon: "⚫", t: "Kleine Kugeln, schnell frittiert", d: "Der Teig wird zu kleinen Kugeln frittiert, direkt mit einem Löffel aus der Gehschüssel, nie ausgerollt oder geschnitten." },
+        { icon: "❄️", t: "Eine winterliche Feiertagsleckerei", d: "Fritule tauchen um Weihnachten fast überall an der kroatischen Küste auf und werden auf Wintermärkten verkauft." }
+      ],
+      pt: [
+        { icon: "🍇", t: "Passas e rum, os sabores característicos", d: "Passas embebidas em rum ou brandy escondem-se dentro de cada bola, surpreendendo a cada dentada." },
+        { icon: "🍊", t: "Raspa de citrinos para frescura", d: "Raspa de limão e laranja ralada realça o sabor da massa doce fermentada." },
+        { icon: "⚫", t: "Bolinhas pequenas, fritas rapidamente", d: "A massa é frita em pequenas bolinhas, colocadas com colher diretamente da tigela de fermentação, nunca esticadas ou cortadas." },
+        { icon: "❄️", t: "Uma guloseima das festas de inverno", d: "As fritule aparecem quase por toda a costa croata pelo Natal, vendidas em mercados de inverno." }
+      ],
+      ru: [
+        { icon: "🍇", t: "Изюм и ром — фирменные вкусы", d: "Изюм, замоченный в роме или бренди, прячется внутри каждого шарика, удивляя с каждым укусом." },
+        { icon: "🍊", t: "Цедра цитрусовых для свежести", d: "Тёртая цедра лимона и апельсина освежает вкус сладкого дрожжевого теста." },
+        { icon: "⚫", t: "Маленькие шарики, быстро жарятся", d: "Тесто жарят маленькими шариками, выкладывая ложкой прямо из миски для подъёма, никогда не раскатывают и не режут." },
+        { icon: "❄️", t: "Зимнее праздничное лакомство", d: "Фритуле появляются почти повсюду на хорватском побережье перед Рождеством, продаются на зимних рынках." }
+      ],
+      ar: [
+        { icon: "🍇", t: "الزبيب والروم، النكهات المميزة", d: "الزبيب المنقوع في الروم أو البراندي يختبئ داخل كل كرة، ليفاجئ مع كل قضمة." },
+        { icon: "🍊", t: "قشر الحمضيات للانتعاش", d: "قشر الليمون والبرتقال المبشور يُبرز نكهة العجينة الحلوة المخمرة." },
+        { icon: "⚫", t: "كرات صغيرة تُقلى بسرعة", d: "تُقلى العجينة على شكل كرات صغيرة، تُسكب بالملعقة مباشرة من وعاء التخمير، دون فرد أو تقطيع أبداً." },
+        { icon: "❄️", t: "حلوى أعياد الشتاء", d: "تظهر الفريتولي في كل مكان تقريباً على الساحل الكرواتي حول عيد الميلاد، وتُباع في أسواق الشتاء." }
+      ],
+      zh: [
+        { icon: "🍇", t: "葡萄干和朗姆酒是招牌风味", d: "用朗姆酒或白兰地泡过的葡萄干藏在每个小球中，每一口都带来惊喜。" },
+        { icon: "🍊", t: "柑橘皮屑带来清新感", d: "柠檬和橙子皮屑提亮了甜发酵面糊的风味。" },
+        { icon: "⚫", t: "小球状，快速油炸", d: "面糊直接用勺子从发酵碗中舀出炸成小球，从不擀开或切割。" },
+        { icon: "❄️", t: "冬季节日甜点", d: "圣诞节前后，炸糖球几乎出现在克罗地亚沿海的各个地方，在冬季市场上售卖。" }
+      ],
+      ja: [
+        { icon: "🍇", t: "レーズンとラム酒が定番の風味", d: "ラム酒やブランデーに漬けたレーズンが各ボールの中に隠れていて、一口ごとに驚きがある。" },
+        { icon: "🍊", t: "柑橘の皮が爽やかさを加える", d: "すりおろしたレモンとオレンジの皮が甘いイースト生地の風味を引き立てる。" },
+        { icon: "⚫", t: "小さなボール状で素早く揚げる", d: "生地は発酵させたボウルからスプーンで直接すくい、小さなボール状に揚げる。決して伸ばしたり切ったりしない。" },
+        { icon: "❄️", t: "冬の祝祭のお菓子", d: "フリトゥーレはクリスマスの時期、クロアチア沿岸のほぼどこでも見られ、冬の市場で売られる。" }
+      ],
+      hi: [
+        { icon: "🍇", t: "किशमिश और रम, खास स्वाद", d: "रम या ब्रांडी में भिगोई किशमिश हर गोले के अंदर छिपी रहती है, हर कौर में चौंकाती है।" },
+        { icon: "🍊", t: "ताज़गी के लिए साइट्रस ज़ेस्ट", d: "कद्दूकस किया नींबू और संतरे का छिलका मीठे खमीर वाले घोल के स्वाद को उभारता है।" },
+        { icon: "⚫", t: "छोटे गोले, तेज़ी से तले जाते हैं", d: "घोल को चम्मच से सीधे फूलने वाले कटोरे से छोटे गोलों में तला जाता है, कभी बेला या काटा नहीं जाता।" },
+        { icon: "❄️", t: "सर्दियों के त्योहार की मिठाई", d: "क्रिसमस के आसपास फ्रितुले क्रोएशियाई तट पर लगभग हर जगह दिखाई देते हैं, सर्दियों के बाज़ारों में बेचे जाते हैं।" }
+      ],
+      tr: [
+        { icon: "🍇", t: "Kuru üzüm ve rom, imza lezzetler", d: "Rom veya brendide bekletilmiş kuru üzümler her topun içinde saklanır, her ısırıkta sürpriz yapar." },
+        { icon: "🍊", t: "Tazelik için narenciye kabuğu", d: "Rendelenmiş limon ve portakal kabuğu tatlı mayalı hamurun tadını aydınlatır." },
+        { icon: "⚫", t: "Küçük toplar, hızlıca kızartılır", d: "Hamur, kabarma kabından kaşıkla doğrudan alınarak küçük toplar halinde kızartılır, asla açılmaz veya kesilmez." },
+        { icon: "❄️", t: "Bir kış bayramı lezzeti", d: "Fritule, Noel civarında Hırvat kıyısının hemen her yerinde görülür ve kış pazarlarında satılır." }
+      ],
+      it: [
+        { icon: "🍇", t: "Uvetta e rum, i sapori distintivi", d: "L'uvetta ammollata nel rum o nel brandy si nasconde dentro ogni pallina, sorprendendo a ogni morso." },
+        { icon: "🍊", t: "La scorza di agrumi per la freschezza", d: "La scorza grattugiata di limone e arancia illumina il sapore dell'impasto dolce lievitato." },
+        { icon: "⚫", t: "Piccole palline, fritte velocemente", d: "L'impasto viene fritto in piccole palline, versate con un cucchiaio direttamente dalla ciotola di lievitazione, mai steso o tagliato." },
+        { icon: "❄️", t: "Un dolce delle feste invernali", d: "Le fritule compaiono quasi ovunque lungo la costa croata intorno a Natale, vendute nei mercatini invernali." }
+      ],
+      ko: [
+        { icon: "🍇", t: "건포도와 럼주, 시그니처 풍미", d: "럼주나 브랜디에 적신 건포도가 각 볼 안에 숨어 있어 한 입마다 놀라움을 준다." },
+        { icon: "🍊", t: "상큼함을 더하는 시트러스 제스트", d: "간 레몬과 오렌지 제스트가 달콤한 이스트 반죽의 풍미를 살린다." },
+        { icon: "⚫", t: "작은 공 모양으로 빠르게 튀긴다", d: "반죽은 발효 볼에서 바로 숟가락으로 떠서 작은 공 모양으로 튀기며, 절대 펴거나 자르지 않는다." },
+        { icon: "❄️", t: "겨울 명절 간식", d: "프리툴레는 크리스마스 무렵 크로아티아 해안 거의 모든 곳에서 겨울 시장에 등장해 판매된다." }
+      ]
+    },
+    ingredients: {
+      ro: ["500g făină", "10g drojdie proaspătă", "250ml lapte călduț", "2 ouă", "50g zahăr", "50g stafide", "2 linguri rom", "coajă rasă de la o lămâie și o portocală", "ulei pentru prăjit"],
+      en: ["500g flour", "10g fresh yeast", "250ml lukewarm milk", "2 eggs", "50g sugar", "50g raisins", "2 tbsp rum", "grated zest of one lemon and one orange", "oil for frying"],
+      es: ["500g de harina", "10g de levadura fresca", "250ml de leche tibia", "2 huevos", "50g de azúcar", "50g de pasas", "2 cdas de ron", "ralladura de un limón y una naranja", "aceite para freír"],
+      fr: ["500g de farine", "10g de levure fraîche", "250ml de lait tiède", "2 œufs", "50g de sucre", "50g de raisins secs", "2 c. à soupe de rhum", "zeste râpé d'un citron et d'une orange", "huile pour friture"],
+      de: ["500g Mehl", "10g frische Hefe", "250ml lauwarme Milch", "2 Eier", "50g Zucker", "50g Rosinen", "2 EL Rum", "geriebene Schale einer Zitrone und einer Orange", "Öl zum Frittieren"],
+      pt: ["500g de farinha", "10g de fermento fresco", "250ml de leite morno", "2 ovos", "50g de açúcar", "50g de passas", "2 col. sopa de rum", "raspa de um limão e uma laranja", "óleo para fritar"],
+      ru: ["500г муки", "10г свежих дрожжей", "250мл тёплого молока", "2 яйца", "50г сахара", "50г изюма", "2 ст.л. рома", "тёртая цедра одного лимона и одного апельсина", "масло для жарки"],
+      ar: ["500غ دقيق", "10غ خميرة طازجة", "250مل حليب فاتر", "2 بيضة", "50غ سكر", "50غ زبيب", "2 ملعقة كبيرة روم", "قشر مبشور من ليمونة وبرتقالة", "زيت للقلي"],
+      zh: ["500克面粉", "10克鲜酵母", "250毫升温牛奶", "2个鸡蛋", "50克糖", "50克葡萄干", "2汤匙朗姆酒", "一个柠檬和一个橙子的擦皮", "煎炸用油"],
+      ja: ["小麦粉500g", "生イースト10g", "ぬるま湯牛乳250ml", "卵2個", "砂糖50g", "レーズン50g", "ラム酒大さじ2", "レモン1個とオレンジ1個のすりおろした皮", "揚げ油"],
+      hi: ["500 ग्राम आटा", "10 ग्राम ताज़ा खमीर", "250 मिली गुनगुना दूध", "2 अंडे", "50 ग्राम चीनी", "50 ग्राम किशमिश", "2 बड़े चम्मच रम", "एक नींबू और एक संतरे का कद्दूकस किया छिलका", "तलने के लिए तेल"],
+      tr: ["500g un", "10g taze maya", "250ml ılık süt", "2 yumurta", "50g şeker", "50g kuru üzüm", "2 yemek kaşığı rom", "bir limon ve bir portakalın rendelenmiş kabuğu", "kızartmak için yağ"],
+      it: ["500g di farina", "10g di lievito fresco", "250ml di latte tiepido", "2 uova", "50g di zucchero", "50g di uvetta", "2 cucchiai di rum", "scorza grattugiata di un limone e un'arancia", "olio per friggere"],
+      ko: ["밀가루 500g", "생이스트 10g", "미지근한 우유 250ml", "달걀 2개", "설탕 50g", "건포도 50g", "럼주 2큰술", "레몬 1개와 오렌지 1개의 간 제스트", "튀김용 기름"]
+    },
+    howIsMade: {
+      ro: "Se dizolvă drojdia în laptele călduț și se lasă până face spumă. Se amestecă făina, zahărul și ouăle, apoi se adaugă amestecul de drojdie pentru a forma un aluat moale, lipicios. Se înmoaie stafidele în rom timp de câteva minute, apoi se scurg și se adaugă în aluat împreună cu coaja de citrice rasă. Se acoperă aluatul și se lasă la dospit într-un loc călduț circa o oră, până își dublează volumul. Se încinge uleiul într-o tigaie adâncă la foc mediu. Se pun linguri mici de aluat direct în uleiul încins, prăjind câteva bucăți odată, până devin aurii pe toate părțile. Se scot pe hârtie absorbentă și se pudrează cu zahăr înainte de servire, calde.",
+      en: "Dissolve the yeast in the lukewarm milk and let it stand until foamy. Mix the flour, sugar, and eggs, then add the yeast mixture to form a soft, sticky dough. Soak the raisins in rum for a few minutes, then drain and fold them into the dough along with the grated citrus zest. Cover the dough and let it rise in a warm place for about an hour, until doubled in size. Heat oil in a deep pan over medium heat. Drop small spoonfuls of dough directly into the hot oil, frying a few pieces at a time, until golden on all sides. Lift out onto paper towel and dust with sugar before serving warm.",
+      es: "Disuelve la levadura en la leche tibia y deja reposar hasta que haga espuma. Mezcla la harina, el azúcar y los huevos, luego añade la mezcla de levadura para formar una masa suave y pegajosa. Remoja las pasas en ron durante unos minutos, luego escúrrelas e incorpóralas a la masa junto con la ralladura de cítricos. Tapa la masa y déjala reposar en un lugar cálido durante una hora, hasta que doble su tamaño. Calienta aceite en una sartén honda a fuego medio. Echa cucharaditas de masa directamente en el aceite caliente, friendo unas pocas a la vez, hasta que estén doradas por todos lados. Retira sobre papel absorbente y espolvorea con azúcar antes de servir calientes.",
+      fr: "Diluez la levure dans le lait tiède et laissez reposer jusqu'à ce qu'elle mousse. Mélangez la farine, le sucre et les œufs, puis ajoutez la levure pour former une pâte molle et collante. Faites tremper les raisins secs dans le rhum pendant quelques minutes, puis égouttez-les et incorporez-les à la pâte avec le zeste d'agrumes râpé. Couvrez la pâte et laissez-la lever dans un endroit chaud pendant environ une heure, jusqu'à ce qu'elle double de volume. Faites chauffer l'huile dans une poêle profonde à feu moyen. Déposez de petites cuillerées de pâte directement dans l'huile chaude, en faisant frire quelques morceaux à la fois, jusqu'à ce qu'ils soient dorés de tous les côtés. Retirez sur du papier absorbant et saupoudrez de sucre avant de servir chaud.",
+      de: "Die Hefe in der lauwarmen Milch auflösen und stehen lassen, bis sie schäumt. Mehl, Zucker und Eier vermischen, dann die Hefemischung hinzufügen, um einen weichen, klebrigen Teig zu formen. Die Rosinen einige Minuten in Rum einweichen, dann abtropfen lassen und zusammen mit der geriebenen Zitrusschale unter den Teig heben. Den Teig abdecken und an einem warmen Ort etwa eine Stunde gehen lassen, bis er sich verdoppelt hat. Öl in einer tiefen Pfanne bei mittlerer Hitze erhitzen. Kleine Löffel Teig direkt ins heiße Öl geben und einige Stücke gleichzeitig frittieren, bis sie rundum golden sind. Auf Küchenpapier herausheben und vor dem warmen Servieren mit Zucker bestäuben.",
+      pt: "Dissolva o fermento no leite morno e deixe repousar até fazer espuma. Misture a farinha, o açúcar e os ovos, depois junte a mistura de fermento para formar uma massa mole e pegajosa. Demolhe as passas em rum por alguns minutos, depois escorra-as e incorpore-as na massa junto com a raspa de citrinos. Tape a massa e deixe-a levedar num local morno durante cerca de uma hora, até dobrar de tamanho. Aqueça óleo numa frigideira funda em lume médio. Deite pequenas colheradas de massa diretamente no óleo quente, fritando algumas de cada vez, até dourarem de todos os lados. Retire para papel absorvente e polvilhe com açúcar antes de servir quentes.",
+      ru: "Растворите дрожжи в тёплом молоке и дайте постоять до появления пены. Смешайте муку, сахар и яйца, затем добавьте дрожжевую смесь, чтобы получить мягкое липкое тесто. Замочите изюм в роме на несколько минут, затем слейте и вмешайте в тесто вместе с тёртой цедрой цитрусовых. Накройте тесто и дайте подняться в тёплом месте около часа, пока не увеличится вдвое. Разогрейте масло в глубокой сковороде на среднем огне. Выкладывайте небольшие ложки теста прямо в горячее масло, обжаривая по несколько штук за раз, до золотистого цвета со всех сторон. Выложите на бумажное полотенце и присыпьте сахаром перед подачей тёплыми.",
+      ar: "أذيبي الخميرة في الحليب الفاتر واتركيها حتى تصبح رغوية. اخلطي الدقيق والسكر والبيض، ثم أضيفي خليط الخميرة لتشكيل عجينة طرية ولزجة. انقعي الزبيب في الروم لبضع دقائق، ثم صفّيه وأضيفيه إلى العجينة مع قشر الحمضيات المبشور. غطّي العجينة واتركيها ترتفع في مكان دافئ لمدة ساعة تقريباً حتى يتضاعف حجمها. سخّني الزيت في مقلاة عميقة على نار متوسطة. ضعي ملاعق صغيرة من العجينة مباشرة في الزيت الساخن، مع قلي بضع قطع في كل مرة، حتى تصبح ذهبية من كل الجهات. ارفعيها على ورق ماص ورشّي السكر قبل التقديم دافئة.",
+      zh: "将酵母溶解在温牛奶中，静置至起泡。将面粉、糖和鸡蛋混合，加入酵母混合物，揉成柔软、黏稠的面团。将葡萄干在朗姆酒中浸泡几分钟，然后沥干，连同擦好的柑橘皮屑一起拌入面团。盖好面团，让其在温暖处发酵约一小时，至体积翻倍。在深锅中用中火加热油。用勺子舀取小团面糊直接放入热油中，每次炸几个，直至各面金黄。捞出放在厨房纸上，撒上糖粉后趁热享用。",
+      ja: "イーストをぬるま湯牛乳に溶かし、泡立つまで置く。小麦粉、砂糖、卵を混ぜ、イースト液を加えて柔らかく粘り気のある生地を作る。レーズンをラム酒に数分間浸し、水を切ってからすりおろした柑橘の皮と一緒に生地に折り込む。覆いをして暖かい場所で約1時間、2倍の大きさになるまで発酵させる。深めのフライパンで中火で油を熱する。生地を小さじですくって熱い油に直接落とし、数個ずつ全面が黄金色になるまで揚げる。キッチンペーパーに取り出し、砂糖をまぶして温かいうちに提供する。",
+      hi: "खमीर को गुनगुने दूध में घोलें और झागदार होने तक रखें। आटा, चीनी और अंडे मिलाएं, फिर खमीर मिश्रण डालकर नरम, चिपचिपा आटा बनाएं। किशमिश को कुछ मिनट रम में भिगोएं, फिर छानकर कद्दूकस साइट्रस छिलके के साथ आटे में मिलाएं। आटे को ढककर गरम जगह पर लगभग एक घंटे फूलने दें जब तक दोगुना न हो जाए। मध्यम आंच पर गहरे पैन में तेल गरम करें। आटे के छोटे चम्मच सीधे गरम तेल में डालें, एक बार में कुछ टुकड़े तलते हुए, जब तक चारों तरफ से सुनहरा न हो जाए। टिशू पेपर पर निकालें और गरम परोसने से पहले चीनी छिड़कें।",
+      tr: "Mayayı ılık sütte eritin ve köpürene kadar bekletin. Un, şeker ve yumurtaları karıştırın, ardından yumuşak, yapışkan bir hamur oluşturmak için maya karışımını ekleyin. Kuru üzümleri birkaç dakika romda bekletin, sonra süzün ve rendelenmiş narenciye kabuğuyla birlikte hamura katın. Hamuru örtün ve hacmi ikiye katlanana kadar yaklaşık bir saat sıcak bir yerde mayalandırın. Derin bir tavada orta ateşte yağ ısıtın. Küçük kaşık dolusu hamuru doğrudan sıcak yağa bırakın, her tarafı altın rengi olana kadar birkaçını birlikte kızartın. Kağıt havlu üzerine alın ve sıcak servis etmeden önce şeker serpin.",
+      it: "Sciogli il lievito nel latte tiepido e lascialo riposare finché non fa schiuma. Mescola la farina, lo zucchero e le uova, poi aggiungi il composto di lievito per formare un impasto morbido e appiccicoso. Metti a bagno l'uvetta nel rum per qualche minuto, poi scolala e incorporala all'impasto insieme alla scorza di agrumi grattugiata. Copri l'impasto e lascialo lievitare in un luogo caldo per circa un'ora, finché non raddoppia di volume. Scalda l'olio in una padella profonda a fuoco medio. Versa piccole cucchiaiate di impasto direttamente nell'olio caldo, friggendo alcuni pezzi alla volta, finché non sono dorati su tutti i lati. Solleva su carta assorbente e cospargi di zucchero prima di servire caldo.",
+      ko: "이스트를 미지근한 우유에 녹여 거품이 날 때까지 둔다. 밀가루, 설탕, 달걀을 섞은 뒤 이스트 혼합물을 넣어 부드럽고 끈적한 반죽을 만든다. 건포도를 럼주에 몇 분간 불린 뒤 물기를 빼고 간 시트러스 제스트와 함께 반죽에 넣어 섞는다. 반죽을 덮어 따뜻한 곳에서 약 한 시간, 부피가 두 배가 될 때까지 발효시킨다. 깊은 팬에 중불로 기름을 데운다. 반죽을 작은 숟가락으로 떠서 뜨거운 기름에 바로 넣고 몇 개씩 사방이 황금빛이 될 때까지 튀긴다. 키친타월에 건져내고 설탕을 뿌려 따뜻할 때 낸다."
+    },
+    originText: {
+      ro: "Fritulele au ajuns pe coasta croată prin influența bucătăriei venețiene, o moștenire a secolelor de stăpânire a Republicii Veneția asupra Dalmației, unde deserturile prăjite similare rămân populare până astăzi. Numele provine din cuvântul italian 'frittella', gogoașă mică.\n\nDevenite un simbol al Crăciunului croat, fritulele se prepară în cantități mari în fiecare gospodărie de pe coastă în decembrie, iar rețeta variază ușor de la o familie la alta — unele adaugă mere rase, altele mai mult rom, dar stafidele și coaja de citrice rămân aproape întotdeauna prezente.",
+      en: "Fritule arrived on the Croatian coast through Venetian culinary influence, a legacy of centuries of Republic of Venice rule over Dalmatia, where similar fried desserts remain popular to this day. The name comes from the Italian word 'frittella', small doughnut.\n\nHaving become a symbol of Croatian Christmas, fritule are made in large batches in nearly every coastal household in December, and the recipe varies slightly from family to family — some add grated apple, others more rum, but raisins and citrus zest are almost always present.",
+      es: "Las fritule llegaron a la costa croata por la influencia culinaria veneciana, un legado de siglos de dominio de la República de Venecia sobre Dalmacia, donde postres fritos similares siguen siendo populares hasta hoy. El nombre proviene de la palabra italiana 'frittella', pequeño buñuelo.\n\nConvertidas en símbolo de la Navidad croata, las fritule se preparan en grandes cantidades en casi todos los hogares costeros en diciembre, y la receta varía ligeramente de una familia a otra: algunas añaden manzana rallada, otras más ron, pero las pasas y la ralladura de cítricos casi siempre están presentes.",
+      fr: "Les fritule sont arrivées sur la côte croate grâce à l'influence culinaire vénitienne, un héritage de siècles de domination de la République de Venise sur la Dalmatie, où des desserts frits similaires restent populaires aujourd'hui. Le nom vient du mot italien 'frittella', petit beignet.\n\nDevenues un symbole de Noël croate, les fritule sont préparées en grandes quantités dans presque tous les foyers côtiers en décembre, et la recette varie légèrement d'une famille à l'autre — certaines ajoutent de la pomme râpée, d'autres plus de rhum, mais les raisins secs et le zeste d'agrumes sont presque toujours présents.",
+      de: "Fritule kamen durch venezianischen kulinarischen Einfluss an die kroatische Küste, ein Erbe jahrhundertelanger Herrschaft der Republik Venedig über Dalmatien, wo ähnliche frittierte Desserts bis heute beliebt sind. Der Name stammt vom italienischen Wort 'frittella', kleiner Krapfen.\n\nZum Symbol des kroatischen Weihnachtsfests geworden, werden Fritule im Dezember in fast jedem Küstenhaushalt in großen Mengen zubereitet, und das Rezept variiert leicht von Familie zu Familie — manche fügen geriebenen Apfel hinzu, andere mehr Rum, aber Rosinen und Zitrusschale sind fast immer dabei.",
+      pt: "As fritule chegaram à costa croata através da influência culinária veneziana, um legado de séculos de domínio da República de Veneza sobre a Dalmácia, onde sobremesas fritas semelhantes continuam populares até hoje. O nome vem da palavra italiana 'frittella', pequeno bolinho frito.\n\nTornando-se um símbolo do Natal croata, as fritule são preparadas em grandes quantidades em quase todas as casas costeiras em dezembro, e a receita varia ligeiramente de família para família — algumas juntam maçã ralada, outras mais rum, mas as passas e a raspa de citrinos estão quase sempre presentes.",
+      ru: "Фритуле попали на хорватское побережье благодаря венецианскому кулинарному влиянию — наследию веков правления Венецианской республики над Далмацией, где подобные жареные десерты остаются популярными по сей день. Название происходит от итальянского слова «frittella», маленький пончик.\n\nСтав символом хорватского Рождества, фритуле готовят большими партиями почти в каждом прибрежном доме в декабре, и рецепт слегка отличается от семьи к семье — одни добавляют тёртое яблоко, другие больше рома, но изюм и цедра цитрусовых присутствуют почти всегда.",
+      ar: "وصلت الفريتولي إلى الساحل الكرواتي عبر التأثير الطهوي الفينيسي، إرث قرون من حكم جمهورية البندقية على دالماسيا، حيث لا تزال الحلويات المقلية المشابهة شائعة حتى اليوم. الاسم مشتق من الكلمة الإيطالية 'frittella' أي الكعكة الصغيرة المقلية.\n\nبعد أن أصبحت رمزاً لعيد الميلاد الكرواتي، تُحضَّر الفريتولي بكميات كبيرة في كل منزل ساحلي تقريباً في ديسمبر، وتختلف الوصفة قليلاً من عائلة لأخرى — تضيف بعضها تفاحاً مبشوراً، وأخرى المزيد من الروم، لكن الزبيب وقشر الحمضيات يبقيان حاضرين دائماً تقريباً.",
+      zh: "炸糖球通过威尼斯的烹饪影响传入克罗地亚沿海地区，这是威尼斯共和国统治达尔马提亚数百年留下的遗产，类似的油炸甜点至今在那里仍很受欢迎。这个名字来自意大利语单词'frittella'，意为小甜甜圈。\n\n作为克罗地亚圣诞节的象征，炸糖球在十二月几乎每个沿海家庭都会大量制作，配方因家庭而略有不同——有些加入擦碎的苹果，有些加更多朗姆酒，但葡萄干和柑橘皮屑几乎总是必不可少的。",
+      ja: "フリトゥーレはヴェネツィア料理の影響でクロアチア沿岸に伝わったもので、何世紀にもわたるヴェネツィア共和国のダルマチア支配の遺産であり、そこでは似たような揚げ菓子が今日まで人気を保っている。名前はイタリア語の『frittella』（小さなドーナツ）に由来する。\n\nクロアチアのクリスマスの象徴となったフリトゥーレは、12月にはほぼすべての沿岸の家庭で大量に作られ、レシピは家庭ごとに少しずつ異なる——すりおろしたリンゴを加える家庭もあれば、より多くのラム酒を加える家庭もあるが、レーズンと柑橘の皮はほぼ常に含まれている。",
+      hi: "फ्रितुले वेनिसियन पाक प्रभाव के माध्यम से क्रोएशियाई तट पर पहुंचे, यह डालमेशिया पर वेनिस गणराज्य के सदियों के शासन की विरासत है, जहां आज भी समान तली हुई मिठाइयां लोकप्रिय हैं। नाम इतालवी शब्द 'फ्रिटेला' से आया है, छोटा डोनट।\n\nक्रोएशियाई क्रिसमस का प्रतीक बन जाने के बाद, फ्रितुले दिसंबर में लगभग हर तटीय घर में बड़ी मात्रा में बनाए जाते हैं, और रेसिपी परिवार-दर-परिवार थोड़ी अलग होती है — कुछ कद्दूकस सेब मिलाते हैं, कुछ अधिक रम, लेकिन किशमिश और साइट्रस छिलका लगभग हमेशा मौजूद रहते हैं।",
+      tr: "Fritule, Dalmaçya üzerinde yüzyıllarca süren Venedik Cumhuriyeti egemenliğinin bir mirası olan Venedik mutfağı etkisiyle Hırvat kıyısına ulaştı; burada benzer kızartma tatlılar bugün de popülerliğini korur. İsim, küçük çörek anlamına gelen İtalyanca 'frittella' kelimesinden gelir.\n\nHırvat Noel'inin bir simgesi haline gelen fritule, Aralık ayında neredeyse her kıyı evinde büyük partiler halinde hazırlanır ve tarif ailelere göre biraz değişir — bazıları rendelenmiş elma ekler, bazıları daha fazla rom, ama kuru üzüm ve narenciye kabuğu neredeyse her zaman bulunur.",
+      it: "Le fritule arrivarono sulla costa croata grazie all'influenza culinaria veneziana, un'eredità di secoli di dominio della Repubblica di Venezia sulla Dalmazia, dove dolci fritti simili restano popolari ancora oggi. Il nome deriva dalla parola italiana 'frittella', piccola ciambella fritta.\n\nDivenute un simbolo del Natale croato, le fritule vengono preparate in grandi quantità in quasi ogni famiglia costiera a dicembre, e la ricetta varia leggermente da famiglia a famiglia — alcune aggiungono mela grattugiata, altre più rum, ma uvetta e scorza di agrumi sono quasi sempre presenti.",
+      ko: "프리툴레는 베네치아 요리의 영향을 통해 크로아티아 해안에 전해졌는데, 이는 베네치아 공화국이 수세기 동안 달마티아를 지배한 유산으로, 그곳에서는 비슷한 튀긴 디저트가 오늘날까지도 인기를 유지하고 있다. 이름은 작은 도넛을 뜻하는 이탈리아어 단어 'frittella'에서 유래했다.\n\n크로아티아 크리스마스의 상징이 된 프리툴레는 12월이면 거의 모든 해안 가정에서 대량으로 만들어지며, 레시피는 가정마다 조금씩 다르다 — 어떤 곳은 간 사과를 넣고, 어떤 곳은 럼주를 더 많이 넣지만, 건포도와 시트러스 제스트는 거의 항상 들어간다."
+    }
+  },
+  {
+    id: 443,
+    servings: 4,
+    tipType: "veg",
+    pairingsType: "def",
+    nutrition: { cal: 440, prot: 16, carb: 34, fat: 27, fib: 1 },
+    origin: {
+      ro: "Croația", en: "Croatia", es: "Croacia", fr: "Croatie", de: "Kroatien",
+      pt: "Croácia", ru: "Хорватия", ar: "كرواتيا", zh: "克罗地亚", ja: "クロアチア",
+      hi: "क्रोएशिया", tr: "Hırvatistan", it: "Croazia", ko: "크로아티아"
+    },
+    name: {
+      ro: "Štrukli", en: "Štrukli", es: "Štrukli", fr: "Štrukli", de: "Štrukli",
+      pt: "Štrukli", ru: "Штрукли", ar: "شتروكلي", zh: "什特鲁克利芝士卷", ja: "シュトゥルクリ",
+      hi: "श्त्रुक्ली", tr: "Štrukli", it: "Štrukli", ko: "슈트루클리"
+    },
+    category: {
+      ro: "Fel principal", en: "Main Course", es: "Plato principal", fr: "Plat principal", de: "Hauptgericht",
+      pt: "Prato principal", ru: "Основное блюдо", ar: "طبق رئيسي", zh: "主菜", ja: "メイン料理",
+      hi: "मुख्य व्यंजन", tr: "Ana Yemek", it: "Piatto principale", ko: "메인 요리"
+    },
+    featureCards: {
+      ro: [
+        { icon: "🧀", t: "Brânză proaspătă de vacă, ingredientul de bază", d: "Brânza proaspătă de vacă, amestecată cu smântână și ouă, formează umplutura cremoasă tradițională din Zagorje." },
+        { icon: "📏", t: "Aluat întins subțire cu mâna", d: "Aluatul se întinde până devine aproape transparent, tehnică moștenită și folosită și la ștrudel." },
+        { icon: "🌀", t: "Se rulează, apoi se coace sau se fierbe", d: "Ruloul umplut se poate fierbe în apă clocotită sau se poate coace direct în smântână, în funcție de regiune." },
+        { icon: "🥛", t: "Smântână deasupra, obligatorie", d: "Smântână grasă se toarnă generos peste ștrukli înainte de copt, formând o crustă cremoasă la suprafață." }
+      ],
+      en: [
+        { icon: "🧀", t: "Fresh cottage cheese, the core ingredient", d: "Fresh cottage cheese, mixed with sour cream and eggs, forms the traditional creamy filling from the Zagorje region." },
+        { icon: "📏", t: "Dough stretched thin by hand", d: "The dough is stretched until nearly transparent, a technique inherited from and shared with strudel." },
+        { icon: "🌀", t: "Rolled, then baked or boiled", d: "The filled roll can be boiled in simmering water or baked directly in cream, depending on the region." },
+        { icon: "🥛", t: "Sour cream on top is mandatory", d: "Rich sour cream is poured generously over the štrukli before baking, forming a creamy surface crust." }
+      ],
+      es: [
+        { icon: "🧀", t: "Requesón fresco, el ingrediente base", d: "El requesón fresco, mezclado con nata agria y huevos, forma el relleno cremoso tradicional de la región de Zagorje." },
+        { icon: "📏", t: "Masa estirada fina a mano", d: "La masa se estira hasta quedar casi transparente, una técnica heredada de y compartida con el strudel." },
+        { icon: "🌀", t: "Se enrolla, luego se hornea o hierve", d: "El rollo relleno se puede hervir en agua a fuego lento o hornear directamente en nata, según la región." },
+        { icon: "🥛", t: "La nata agria encima es obligatoria", d: "Se vierte generosamente nata agria espesa sobre el štrukli antes de hornear, formando una costra cremosa en la superficie." }
+      ],
+      fr: [
+        { icon: "🧀", t: "Du fromage blanc frais, l'ingrédient central", d: "Le fromage blanc frais, mélangé à de la crème aigre et des œufs, forme la garniture crémeuse traditionnelle de la région de Zagorje." },
+        { icon: "📏", t: "Une pâte étirée finement à la main", d: "La pâte est étirée jusqu'à devenir presque transparente, une technique héritée du et partagée avec le strudel." },
+        { icon: "🌀", t: "Roulé, puis cuit au four ou bouilli", d: "Le rouleau farci peut être bouilli dans de l'eau frémissante ou cuit directement dans de la crème, selon la région." },
+        { icon: "🥛", t: "De la crème aigre dessus, obligatoire", d: "Une crème aigre épaisse est généreusement versée sur le štrukli avant cuisson, formant une croûte crémeuse en surface." }
+      ],
+      de: [
+        { icon: "🧀", t: "Frischer Quark, die Hauptzutat", d: "Frischer Quark, gemischt mit Sauerrahm und Eiern, bildet die traditionelle cremige Füllung aus der Region Zagorje." },
+        { icon: "📏", t: "Von Hand dünn ausgezogener Teig", d: "Der Teig wird ausgezogen, bis er fast durchsichtig ist — eine Technik, die vom Strudel übernommen wurde und mit ihm geteilt wird." },
+        { icon: "🌀", t: "Gerollt, dann gebacken oder gekocht", d: "Die gefüllte Rolle kann in siedendem Wasser gekocht oder direkt in Sahne gebacken werden, je nach Region." },
+        { icon: "🥛", t: "Sauerrahm obenauf ist Pflicht", d: "Reichhaltiger Sauerrahm wird großzügig über die Štrukli gegossen, bevor sie gebacken werden, und bildet eine cremige Oberflächenkruste." }
+      ],
+      pt: [
+        { icon: "🧀", t: "Queijo fresco tipo requeijão, o ingrediente base", d: "Queijo fresco, misturado com natas azedas e ovos, forma o recheio cremoso tradicional da região de Zagorje." },
+        { icon: "📏", t: "Massa esticada fina à mão", d: "A massa é esticada até ficar quase transparente, uma técnica herdada e partilhada com o strudel." },
+        { icon: "🌀", t: "Enrolado, depois assado ou fervido", d: "O rolo recheado pode ser fervido em água a ferver lentamente ou assado diretamente em natas, dependendo da região." },
+        { icon: "🥛", t: "Natas azedas por cima são obrigatórias", d: "Natas azedas ricas são despejadas generosamente sobre o štrukli antes de assar, formando uma crosta cremosa na superfície." }
+      ],
+      ru: [
+        { icon: "🧀", t: "Свежий творог — основной ингредиент", d: "Свежий творог, смешанный со сметаной и яйцами, образует традиционную кремовую начинку из региона Загорье." },
+        { icon: "📏", t: "Тесто, растянутое тонко вручную", d: "Тесто растягивают почти до прозрачности — техника, унаследованная и общая со штруделем." },
+        { icon: "🌀", t: "Скручивают, затем запекают или варят", d: "Скрученный фаршированный рулет можно отварить в кипящей воде или запечь прямо в сливках, в зависимости от региона." },
+        { icon: "🥛", t: "Сметана сверху обязательна", d: "Жирную сметану щедро выливают на штрукли перед выпечкой, образуя кремовую корочку сверху." }
+      ],
+      ar: [
+        { icon: "🧀", t: "جبن قريش طازج، المكون الأساسي", d: "الجبن القريش الطازج، الممزوج بالقشدة الحامضة والبيض، يشكل الحشوة الكريمية التقليدية من منطقة زاغورييه." },
+        { icon: "📏", t: "عجينة ممدودة رقيقة باليد", d: "تُمَدُّ العجينة حتى تصبح شبه شفافة، وهي تقنية موروثة ومشتركة مع الشتروديل." },
+        { icon: "🌀", t: "تُلف ثم تُخبز أو تُسلق", d: "يمكن سلق اللفافة المحشوة في ماء يغلي بهدوء أو خبزها مباشرة في القشدة، حسب المنطقة." },
+        { icon: "🥛", t: "القشدة الحامضة فوقها إلزامية", d: "تُسكب قشدة حامضة غنية بسخاء فوق الشتروكلي قبل الخبز، مكوّنة قشرة كريمية على السطح." }
+      ],
+      zh: [
+        { icon: "🧀", t: "新鲜白干酪是核心食材", d: "新鲜白干酪与酸奶油和鸡蛋混合，构成来自扎戈列地区传统的奶香馅料。" },
+        { icon: "📏", t: "手工擀得极薄的面皮", d: "面皮擀得近乎透明，这一技法继承自并与苹果卷共享。" },
+        { icon: "🌀", t: "卷起后烘烤或水煮", d: "填馅的卷可以在微沸的水中煮熟，也可以直接放入奶油中烘烤，做法因地区而异。" },
+        { icon: "🥛", t: "上面必须浇酸奶油", d: "烘烤前会在什特鲁克利上慷慨地浇上浓郁的酸奶油，在表面形成奶香外壳。" }
+      ],
+      ja: [
+        { icon: "🧀", t: "新鮮なカッテージチーズが核となる材料", d: "新鮮なカッテージチーズにサワークリームと卵を混ぜたものが、ザゴリェ地方伝統のクリーミーな詰め物になる。" },
+        { icon: "📏", t: "手で薄く伸ばした生地", d: "生地はほぼ透明になるまで伸ばされる。これはシュトゥルーデルから受け継がれ、共有されている技法だ。" },
+        { icon: "🌀", t: "巻いてから焼くか茹でる", d: "詰め物をした巻きは、地域によって煮立った湯で茹でるか、クリームの中で直接焼くかのどちらかになる。" },
+        { icon: "🥛", t: "上にかけるサワークリームは必須", d: "焼く前にたっぷりのサワークリームをシュトゥルクリの上にかけ、表面にクリーミーな層を作る。" }
+      ],
+      hi: [
+        { icon: "🧀", t: "ताज़ा कॉटेज चीज़, मुख्य सामग्री", d: "ताज़ा कॉटेज चीज़, खट्टी क्रीम और अंडों के साथ मिलाकर, ज़ागोरये क्षेत्र की पारंपरिक मलाईदार भरावन बनती है।" },
+        { icon: "📏", t: "हाथ से पतला बेला आटा", d: "आटा तब तक बेला जाता है जब तक लगभग पारदर्शी न हो जाए, यह तकनीक स्ट्रूडल से विरासत में मिली और साझा की गई है।" },
+        { icon: "🌀", t: "लपेटा जाता है, फिर बेक या उबाला जाता है", d: "भरा हुआ रोल क्षेत्र के अनुसार उबलते पानी में उबाला जा सकता है या सीधे क्रीम में बेक किया जा सकता है।" },
+        { icon: "🥛", t: "ऊपर खट्टी क्रीम अनिवार्य है", d: "बेक करने से पहले गाढ़ी खट्टी क्रीम भरपूर मात्रा में श्त्रुक्ली पर डाली जाती है, जो सतह पर मलाईदार परत बनाती है।" }
+      ],
+      tr: [
+        { icon: "🧀", t: "Taze lor peyniri, temel malzeme", d: "Ekşi krema ve yumurtalarla karıştırılan taze lor peyniri, Zagorje bölgesine özgü geleneksel kremamsı iç harcı oluşturur." },
+        { icon: "📏", t: "Elle incecik açılmış hamur", d: "Hamur neredeyse şeffaf olana kadar açılır, strudel'den miras kalan ve onunla paylaşılan bir teknik." },
+        { icon: "🌀", t: "Sarılır, sonra pişirilir veya haşlanır", d: "Doldurulmuş rulo bölgeye bağlı olarak kaynayan suda haşlanabilir veya doğrudan kremada pişirilebilir." },
+        { icon: "🥛", t: "Üzerine ekşi krema şarttır", d: "Pişirmeden önce zengin ekşi krema cömertçe štrukli üzerine dökülür, yüzeyde kremamsı bir kabuk oluşturur." }
+      ],
+      it: [
+        { icon: "🧀", t: "Ricotta fresca, l'ingrediente principale", d: "La ricotta fresca, mescolata con panna acida e uova, forma il tradizionale ripieno cremoso della regione di Zagorje." },
+        { icon: "📏", t: "Impasto steso sottile a mano", d: "L'impasto viene steso finché non diventa quasi trasparente, una tecnica ereditata e condivisa con lo strudel." },
+        { icon: "🌀", t: "Arrotolato, poi cotto al forno o bollito", d: "Il rotolo ripieno può essere bollito in acqua sobbollente o cotto direttamente nella panna, a seconda della regione." },
+        { icon: "🥛", t: "La panna acida sopra è obbligatoria", d: "Panna acida ricca viene versata generosamente sullo štrukli prima della cottura, formando una crosta cremosa in superficie." }
+      ],
+      ko: [
+        { icon: "🧀", t: "신선한 코티지 치즈가 핵심 재료", d: "신선한 코티지 치즈에 사워크림과 달걀을 섞은 것이 자고리예 지역 전통의 크리미한 속재료가 된다." },
+        { icon: "📏", t: "손으로 얇게 편 반죽", d: "반죽은 거의 투명해질 때까지 펴는데, 이는 슈트루델에서 물려받아 공유하는 기법이다." },
+        { icon: "🌀", t: "말아서 굽거나 삶는다", d: "속을 채운 롤은 지역에 따라 끓는 물에 삶거나 크림에 직접 구울 수 있다." },
+        { icon: "🥛", t: "위에 얹는 사워크림은 필수", d: "굽기 전 진한 사워크림을 슈트루클리 위에 듬뿍 부어 표면에 크리미한 막을 만든다." }
+      ]
+    },
+    ingredients: {
+      ro: ["300g făină", "1 ou", "150ml apă călduță", "1 lingură ulei", "1/2 linguriță sare", "600g brânză proaspătă de vacă", "200ml smântână grasă", "2 ouă", "sare, pentru umplutură"],
+      en: ["300g flour", "1 egg", "150ml lukewarm water", "1 tbsp oil", "1/2 tsp salt", "600g fresh cottage cheese", "200ml full-fat sour cream", "2 eggs", "salt, for the filling"],
+      es: ["300g de harina", "1 huevo", "150ml de agua tibia", "1 cda de aceite", "1/2 cdta de sal", "600g de requesón fresco", "200ml de nata agria entera", "2 huevos", "sal, para el relleno"],
+      fr: ["300g de farine", "1 œuf", "150ml d'eau tiède", "1 c. à soupe d'huile", "1/2 c. à café de sel", "600g de fromage blanc frais", "200ml de crème aigre entière", "2 œufs", "sel, pour la garniture"],
+      de: ["300g Mehl", "1 Ei", "150ml lauwarmes Wasser", "1 EL Öl", "1/2 TL Salz", "600g frischer Quark", "200ml vollfetter Sauerrahm", "2 Eier", "Salz, für die Füllung"],
+      pt: ["300g de farinha", "1 ovo", "150ml de água morna", "1 col. sopa de óleo", "1/2 col. chá de sal", "600g de queijo fresco tipo requeijão", "200ml de natas azedas gordas", "2 ovos", "sal, para o recheio"],
+      ru: ["300г муки", "1 яйцо", "150мл тёплой воды", "1 ст.л. масла", "1/2 ч.л. соли", "600г свежего творога", "200мл жирной сметаны", "2 яйца", "соль, для начинки"],
+      ar: ["300غ دقيق", "1 بيضة", "150مل ماء فاتر", "1 ملعقة كبيرة زيت", "1/2 ملعقة صغيرة ملح", "600غ جبن قريش طازج", "200مل قشدة حامضة كاملة الدسم", "2 بيضة", "ملح، للحشوة"],
+      zh: ["300克面粉", "1个鸡蛋", "150毫升温水", "1汤匙油", "1/2茶匙盐", "600克新鲜白干酪", "200毫升全脂酸奶油", "2个鸡蛋", "盐，用于馅料"],
+      ja: ["小麦粉300g", "卵1個", "ぬるま湯150ml", "油大さじ1", "塩小さじ1/2", "新鮮なカッテージチーズ600g", "全脂サワークリーム200ml", "卵2個", "塩（詰め物用）"],
+      hi: ["300 ग्राम आटा", "1 अंडा", "150 मिली गुनगुना पानी", "1 बड़ा चम्मच तेल", "1/2 छोटा चम्मच नमक", "600 ग्राम ताज़ा कॉटेज चीज़", "200 मिली फुल-फैट खट्टी क्रीम", "2 अंडे", "नमक, भरावन के लिए"],
+      tr: ["300g un", "1 yumurta", "150ml ılık su", "1 yemek kaşığı yağ", "1/2 tatlı kaşığı tuz", "600g taze lor peyniri", "200ml tam yağlı ekşi krema", "2 yumurta", "tuz, iç harç için"],
+      it: ["300g di farina", "1 uovo", "150ml di acqua tiepida", "1 cucchiaio di olio", "1/2 cucchiaino di sale", "600g di ricotta fresca", "200ml di panna acida intera", "2 uova", "sale, per il ripieno"],
+      ko: ["밀가루 300g", "달걀 1개", "미지근한 물 150ml", "기름 1큰술", "소금 1/2작은술", "신선한 코티지 치즈 600g", "전지 사워크림 200ml", "달걀 2개", "소금, 속재료용"]
+    },
+    howIsMade: {
+      ro: "Se frământă făina cu oul, apa călduță, uleiul și sarea până rezultă un aluat neted și elastic. Se acoperă aluatul și se lasă la odihnă cel puțin 30 de minute la temperatura camerei. Se amestecă brânza proaspătă cu smântâna, ouăle și sare, până se obține o umplutură cremoasă. Se întinde aluatul pe o față de masă curată, tras cu mâna până devine aproape transparent. Se întinde umplutura de brânză uniform pe toată suprafața aluatului. Se rulează aluatul strâns folosind fața de masă ca ajutor, apoi se taie în bucăți și se așază într-o tavă unsă, acoperite cu smântână. Se coace la cuptor până devine auriu deasupra, apoi se servește cald.",
+      en: "Knead the flour with the egg, lukewarm water, oil, and salt until you get a smooth, elastic dough. Cover the dough and let it rest for at least 30 minutes at room temperature. Mix the fresh cottage cheese with the sour cream, eggs, and salt until you get a creamy filling. Stretch the dough over a clean tablecloth, pulling it by hand until it's nearly transparent. Spread the cheese filling evenly over the whole surface of the dough. Roll the dough up tightly using the tablecloth for support, then cut into pieces and place in a greased dish, topped with sour cream. Bake until golden on top, then serve warm.",
+      es: "Amasa la harina con el huevo, el agua tibia, el aceite y la sal hasta obtener una masa lisa y elástica. Tapa la masa y déjala reposar al menos 30 minutos a temperatura ambiente. Mezcla el requesón fresco con la nata agria, los huevos y la sal hasta obtener un relleno cremoso. Estira la masa sobre un mantel limpio, tirando con la mano hasta que quede casi transparente. Extiende el relleno de queso de manera uniforme sobre toda la superficie de la masa. Enrolla la masa apretada usando el mantel de ayuda, luego corta en trozos y colócalos en una fuente engrasada, cubiertos de nata agria. Hornea hasta que esté dorada por encima, y sirve caliente.",
+      fr: "Pétrissez la farine avec l'œuf, l'eau tiède, l'huile et le sel jusqu'à obtenir une pâte lisse et élastique. Couvrez la pâte et laissez-la reposer au moins 30 minutes à température ambiante. Mélangez le fromage blanc frais avec la crème aigre, les œufs et le sel jusqu'à obtenir une garniture crémeuse. Étirez la pâte sur une nappe propre, en la tirant à la main jusqu'à ce qu'elle soit presque transparente. Étalez la garniture au fromage uniformément sur toute la surface de la pâte. Roulez la pâte serrée en vous aidant de la nappe, puis coupez en morceaux et disposez dans un plat beurré, nappés de crème aigre. Faites cuire au four jusqu'à ce que le dessus soit doré, puis servez chaud.",
+      de: "Das Mehl mit dem Ei, lauwarmem Wasser, Öl und Salz zu einem glatten, elastischen Teig verkneten. Den Teig abdecken und mindestens 30 Minuten bei Raumtemperatur ruhen lassen. Den frischen Quark mit Sauerrahm, Eiern und Salz vermischen, bis eine cremige Füllung entsteht. Den Teig auf einem sauberen Tischtuch ausziehen, mit der Hand ziehen, bis er fast durchsichtig ist. Die Käsefüllung gleichmäßig über die gesamte Teigfläche verteilen. Den Teig mithilfe des Tischtuchs fest aufrollen, dann in Stücke schneiden und in eine gefettete Form legen, mit Sauerrahm bedeckt. Backen, bis die Oberseite golden ist, dann warm servieren.",
+      pt: "Amasse a farinha com o ovo, a água morna, o óleo e o sal até obter uma massa lisa e elástica. Tape a massa e deixe-a repousar pelo menos 30 minutos à temperatura ambiente. Misture o queijo fresco com as natas azedas, os ovos e o sal até obter um recheio cremoso. Estique a massa sobre uma toalha de mesa limpa, puxando-a à mão até ficar quase transparente. Espalhe o recheio de queijo uniformemente por toda a superfície da massa. Enrole a massa com firmeza usando a toalha como apoio, depois corte em pedaços e coloque num tabuleiro untado, cobertos com natas azedas. Leve ao forno até dourar por cima, depois sirva quente.",
+      ru: "Замесите муку с яйцом, тёплой водой, маслом и солью до получения гладкого эластичного теста. Накройте тесто и дайте отдохнуть минимум 30 минут при комнатной температуре. Смешайте свежий творог со сметаной, яйцами и солью до получения кремовой начинки. Растяните тесто на чистой скатерти руками, пока оно не станет почти прозрачным. Равномерно распределите творожную начинку по всей поверхности теста. Плотно сверните тесто, используя скатерть как помощь, затем нарежьте на куски и уложите в смазанную форму, полив сметаной. Запекайте до золотистого верха, затем подавайте тёплым.",
+      ar: "اعجني الدقيق مع البيضة والماء الفاتر والزيت والملح حتى تحصلي على عجينة ناعمة ومرنة. غطّي العجينة واتركيها ترتاح لمدة 30 دقيقة على الأقل في درجة حرارة الغرفة. اخلطي الجبن القريش الطازج مع القشدة الحامضة والبيض والملح حتى تحصلي على حشوة كريمية. مدّي العجينة فوق مفرش نظيف، بشدها باليد حتى تصبح شبه شفافة. وزّعي حشوة الجبن بالتساوي على كامل سطح العجينة. لفّي العجينة بإحكام مستخدمة المفرش للمساعدة، ثم قطّعيها إلى قطع وضعيها في طبق مدهون، مغطاة بالقشدة الحامضة. اخبزي حتى يصبح الوجه ذهبياً، ثم قدّميها دافئة.",
+      zh: "将面粉与鸡蛋、温水、油和盐揉成光滑有弹性的面团。盖好面团，在室温下静置至少30分钟。将新鲜白干酪与酸奶油、鸡蛋和盐混合，制成奶香馅料。将面团铺在干净的桌布上，用手拉伸至近乎透明。将奶酪馅料均匀铺满整个面皮表面。借助桌布将面皮紧紧卷起，然后切成小段放入涂油的烤盘中，淋上酸奶油。烤至表面金黄，趁热享用。",
+      ja: "小麦粉を卵、ぬるま湯、油、塩と一緒になめらかで弾力のある生地にこねる。生地を覆い、室温で最低30分休ませる。新鮮なカッテージチーズをサワークリーム、卵、塩と混ぜてクリーミーな詰め物を作る。清潔なテーブルクロスの上で生地を手で引っ張りほぼ透明になるまで伸ばす。チーズの詰め物を生地全体に均一に広げる。テーブルクロスを使って生地をしっかりと巻き、切り分けて油を塗った耐熱皿に並べ、サワークリームをかける。表面が黄金色になるまで焼き、温かいうちに提供する。",
+      hi: "आटे को अंडे, गुनगुने पानी, तेल और नमक के साथ तब तक गूंधें जब तक चिकना, लचीला आटा न बन जाए। आटे को ढककर कमरे के तापमान पर कम से कम 30 मिनट आराम दें। ताज़ा कॉटेज चीज़ को खट्टी क्रीम, अंडों और नमक के साथ मिलाकर मलाईदार भरावन बनाएं। साफ मेज़पोश पर आटे को हाथ से खींचकर लगभग पारदर्शी होने तक फैलाएं। चीज़ भरावन को आटे की पूरी सतह पर समान रूप से फैलाएं। मेज़पोश की मदद से आटे को कसकर लपेटें, फिर टुकड़ों में काटकर चिकनाई लगी डिश में रखें, खट्टी क्रीम से ढककर। ऊपर सुनहरा होने तक बेक करें, फिर गरम परोसें।",
+      tr: "Unu yumurta, ılık su, yağ ve tuzla pürüzsüz, esnek bir hamur elde edene kadar yoğurun. Hamuru örtün ve oda sıcaklığında en az 30 dakika dinlendirin. Taze lor peynirini ekşi krema, yumurta ve tuzla kremamsı bir iç harç elde edene kadar karıştırın. Hamuru temiz bir masa örtüsü üzerinde elle çekerek neredeyse şeffaf olana kadar açın. Peynir iç harcını hamurun tüm yüzeyine eşitçe yayın. Masa örtüsünü kullanarak hamuru sıkıca sarın, ardından parçalara kesin ve yağlanmış bir kaba yerleştirin, üzerine ekşi krema dökerek. Üstü altın rengi olana kadar fırınlayın, ardından sıcak servis edin.",
+      it: "Impasta la farina con l'uovo, l'acqua tiepida, l'olio e il sale finché non ottieni un impasto liscio ed elastico. Copri l'impasto e lascialo riposare per almeno 30 minuti a temperatura ambiente. Mescola la ricotta fresca con la panna acida, le uova e il sale finché non ottieni un ripieno cremoso. Stendi l'impasto su una tovaglia pulita, tirandolo a mano finché non diventa quasi trasparente. Distribuisci il ripieno di formaggio uniformemente su tutta la superficie dell'impasto. Arrotola l'impasto stretto aiutandoti con la tovaglia, poi taglia a pezzi e disponi in una teglia imburrata, ricoperti di panna acida. Cuoci in forno finché la superficie non è dorata, poi servi caldo.",
+      ko: "밀가루를 달걀, 미지근한 물, 기름, 소금과 함께 매끄럽고 탄력 있는 반죽이 될 때까지 치댄다. 반죽을 덮어 실온에서 최소 30분간 휴지시킨다. 신선한 코티지 치즈를 사워크림, 달걀, 소금과 섞어 크리미한 속재료를 만든다. 깨끗한 식탁보 위에서 손으로 당겨 거의 투명해질 때까지 반죽을 편다. 치즈 속재료를 반죽 전체 표면에 고르게 펴 바른다. 식탁보의 도움을 받아 반죽을 단단히 만 뒤 조각으로 잘라 기름칠한 그릇에 놓고 사워크림을 끼얹는다. 윗면이 황금빛이 될 때까지 구운 뒤 따뜻할 때 낸다."
+    },
+    originText: {
+      ro: "Štrukli provine din regiunea Zagorje din nordul Croației, unde a fost mult timp o mâncare de familie transmisă din generație în generație, pregătită mai ales la sărbători și duminici. Tehnica de a întinde aluatul aproape transparent leagă preparatul de tradiția strudelului central-european, moștenire a influenței austriece asupra bucătăriei croate.\n\nÎn 2007, ministerul culturii croat a declarat štrukli parte a patrimoniului cultural intangibil al țării, iar preparatul apare azi pe meniurile restaurantelor din toată Croația, în versiuni sărate coapte, dar și în variante dulci, cu dulceață sau nuci.",
+      en: "Štrukli originates from the Zagorje region of northern Croatia, where it was long a family dish passed down through generations, prepared mainly for holidays and Sundays. The technique of stretching the dough almost transparent links the dish to the Central European strudel tradition, a legacy of Austrian influence on Croatian cuisine.\n\nIn 2007, the Croatian ministry of culture declared štrukli part of the country's intangible cultural heritage, and the dish now appears on restaurant menus across Croatia, both in baked savoury versions and in sweet variants filled with jam or walnuts.",
+      es: "El štrukli proviene de la región de Zagorje, en el norte de Croacia, donde durante mucho tiempo fue un plato familiar transmitido de generación en generación, preparado principalmente en fiestas y domingos. La técnica de estirar la masa hasta casi la transparencia vincula el plato con la tradición del strudel centroeuropeo, un legado de la influencia austríaca en la cocina croata.\n\nEn 2007, el ministerio de cultura croata declaró el štrukli parte del patrimonio cultural inmaterial del país, y el plato aparece hoy en los menús de restaurantes de toda Croacia, tanto en versiones saladas horneadas como en variantes dulces con mermelada o nueces.",
+      fr: "Le štrukli est originaire de la région de Zagorje, dans le nord de la Croatie, où il fut longtemps un plat familial transmis de génération en génération, préparé surtout pour les fêtes et les dimanches. La technique consistant à étirer la pâte jusqu'à la rendre presque transparente relie ce plat à la tradition du strudel d'Europe centrale, héritage de l'influence autrichienne sur la cuisine croate.\n\nEn 2007, le ministère croate de la culture a déclaré le štrukli partie du patrimoine culturel immatériel du pays, et le plat figure aujourd'hui sur les menus de restaurants dans toute la Croatie, tant en versions salées cuites au four qu'en variantes sucrées à la confiture ou aux noix.",
+      de: "Štrukli stammt aus der Region Zagorje im Norden Kroatiens, wo es lange ein Familiengericht war, das über Generationen weitergegeben wurde und vor allem an Feiertagen und Sonntagen zubereitet wurde. Die Technik, den Teig fast durchsichtig auszuziehen, verbindet das Gericht mit der mitteleuropäischen Strudel-Tradition, ein Erbe des österreichischen Einflusses auf die kroatische Küche.\n\n2007 erklärte das kroatische Kulturministerium Štrukli zum immateriellen Kulturerbe des Landes, und das Gericht erscheint heute auf Restaurantkarten in ganz Kroatien, sowohl in gebackenen herzhaften Versionen als auch in süßen Varianten mit Marmelade oder Walnüssen.",
+      pt: "O štrukli provém da região de Zagorje, no norte da Croácia, onde durante muito tempo foi um prato de família transmitido de geração em geração, preparado principalmente em feriados e domingos. A técnica de esticar a massa até ficar quase transparente liga o prato à tradição do strudel centro-europeu, uma herança da influência austríaca na culinária croata.\n\nEm 2007, o ministério da cultura croata declarou o štrukli parte do património cultural imaterial do país, e o prato aparece hoje nos menus de restaurantes por toda a Croácia, tanto em versões salgadas assadas como em variantes doces com compota ou nozes.",
+      ru: "Штрукли происходит из региона Загорье на севере Хорватии, где долгое время было семейным блюдом, передаваемым из поколения в поколение, готовившимся в основном по праздникам и воскресеньям. Техника растягивания теста почти до прозрачности связывает это блюдо с центральноевропейской традицией штруделя, наследием австрийского влияния на хорватскую кухню.\n\nВ 2007 году министерство культуры Хорватии объявило штрукли частью нематериального культурного наследия страны, и сегодня блюдо встречается в меню ресторанов по всей Хорватии, как в запечённых солёных версиях, так и в сладких вариантах с джемом или грецкими орехами.",
+      ar: "ينشأ الشتروكلي من منطقة زاغورييه في شمال كرواتيا، حيث كان لفترة طويلة طبقاً عائلياً يُتوارث عبر الأجيال، يُحضَّر بشكل رئيسي في الأعياد وأيام الأحد. تقنية مد العجينة حتى تصبح شبه شفافة تربط الطبق بتقليد الشتروديل في وسط أوروبا، إرث التأثير النمساوي على المطبخ الكرواتي.\n\nفي عام 2007، أعلنت وزارة الثقافة الكرواتية أن الشتروكلي جزء من التراث الثقافي غير المادي للبلاد، ويظهر الطبق اليوم في قوائم المطاعم في جميع أنحاء كرواتيا، سواء في نسخ مالحة مخبوزة أو في نسخ حلوة محشوة بالمربى أو الجوز.",
+      zh: "什特鲁克利起源于克罗地亚北部的扎戈列地区，长期以来一直是代代相传的家庭菜肴，主要在节假日和周日制作。将面皮擀得近乎透明的技法，将这道菜与中欧的苹果卷传统联系在一起，这是奥地利对克罗地亚料理影响的遗产。\n\n2007年，克罗地亚文化部将什特鲁克利列为该国非物质文化遗产的一部分，如今这道菜出现在克罗地亚各地的餐厅菜单上，既有烘烤的咸味版本，也有加果酱或核桃的甜味变体。",
+      ja: "シュトゥルクリはクロアチア北部のザゴリェ地方に起源を持ち、長らく世代を超えて受け継がれてきた家庭料理として、主に祝祭日や日曜日に作られてきた。生地をほぼ透明になるまで伸ばす技法は、この料理を中央ヨーロッパのシュトゥルーデルの伝統と結びつけており、オーストリアのクロアチア料理への影響の名残である。\n\n2007年、クロアチア文化省はシュトゥルクリを国の無形文化遺産の一部と宣言し、この料理は今日クロアチア全土のレストランのメニューに登場し、焼いた塩味のバージョンだけでなく、ジャムやクルミを詰めた甘いバリエーションもある。",
+      hi: "श्त्रुक्ली उत्तरी क्रोएशिया के ज़ागोरये क्षेत्र से उत्पन्न हुआ, जहां यह लंबे समय से पीढ़ी-दर-पीढ़ी चला आ रहा पारिवारिक व्यंजन रहा है, जो मुख्य रूप से त्योहारों और रविवार को बनाया जाता है। आटे को लगभग पारदर्शी होने तक फैलाने की तकनीक इस व्यंजन को मध्य यूरोपीय स्ट्रूडल परंपरा से जोड़ती है, जो क्रोएशियाई व्यंजनों पर ऑस्ट्रियाई प्रभाव की विरासत है।\n\n2007 में, क्रोएशियाई संस्कृति मंत्रालय ने श्त्रुक्ली को देश की अमूर्त सांस्कृतिक विरासत का हिस्सा घोषित किया, और यह व्यंजन आज पूरे क्रोएशिया के रेस्तरां मेनू में दिखाई देता है, बेक किए गए नमकीन संस्करणों के साथ-साथ जैम या अखरोट वाले मीठे रूपों में भी।",
+      tr: "Štrukli, Hırvatistan'ın kuzeyindeki Zagorje bölgesinden gelir; burada uzun süre nesilden nesile aktarılan bir aile yemeği olmuş, esas olarak bayramlarda ve pazar günleri hazırlanmıştır. Hamuru neredeyse şeffaf olana kadar açma tekniği, bu yemeği Orta Avrupa strudel geleneğine bağlar; bu, Avusturya'nın Hırvat mutfağı üzerindeki etkisinin bir mirasıdır.\n\n2007'de Hırvat kültür bakanlığı štrukli'yi ülkenin somut olmayan kültürel mirasının bir parçası ilan etti ve yemek bugün Hırvatistan genelindeki restoran menülerinde, hem fırınlanmış tuzlu versiyonlarda hem de reçel veya cevizle doldurulmuş tatlı çeşitlerde yer alıyor.",
+      it: "Lo štrukli è originario della regione di Zagorje, nel nord della Croazia, dove è stato a lungo un piatto familiare tramandato di generazione in generazione, preparato soprattutto per le feste e la domenica. La tecnica di stendere l'impasto fino a renderlo quasi trasparente collega il piatto alla tradizione dello strudel centroeuropeo, un'eredità dell'influenza austriaca sulla cucina croata.\n\nNel 2007, il ministero della cultura croato ha dichiarato lo štrukli parte del patrimonio culturale immateriale del paese, e il piatto compare oggi nei menu dei ristoranti in tutta la Croazia, sia in versioni salate al forno che in varianti dolci con marmellata o noci.",
+      ko: "슈트루클리는 크로아티아 북부 자고리예 지역에서 유래했으며, 오랫동안 대를 이어 전해진 가정 요리로 주로 명절과 일요일에 만들어졌다. 반죽을 거의 투명해질 때까지 늘리는 기법은 이 요리를 중부 유럽 슈트루델 전통과 연결시키는데, 이는 오스트리아가 크로아티아 요리에 남긴 영향의 유산이다.\n\n2007년 크로아티아 문화부는 슈트루클리를 국가 무형문화유산의 일부로 지정했으며, 이 요리는 오늘날 크로아티아 전역의 레스토랑 메뉴에 등장하는데, 구운 짭짤한 버전뿐 아니라 잼이나 호두를 채운 달콤한 버전으로도 만날 수 있다."
+    }
   }
 ];
