@@ -53539,5 +53539,473 @@ export const recipes = [
       it: "Lo jachnun fu portato in Israele dagli ebrei yemeniti, che mantenevano l'usanza di cuocere questo impasto arrotolato tutta la notte dal venerdì al sabato mattina, rispettando il divieto di cucinare durante lo Shabbat pur godendo di cibo caldo. Il metodo di cottura estremamente lento, a fuoco basso, è ciò che trasforma l'impasto semplice in un piatto dolciastro, quasi caramellato.\n\nOggi lo jachnun viene servito in tutto il paese, non solo nelle comunità yemenite, spesso come colazione del sabato mattina, insieme a pomodori appena grattugiati e salsa zhug estremamente piccante, che bilancia la dolcezza dell'impasto.",
       ko: "야흐눈은 예멘계 유대인들이 이스라엘에 가져온 요리로, 안식일에 요리하는 것이 금지된 규율을 지키면서도 따뜻한 음식을 즐기기 위해 금요일 밤부터 토요일 아침까지 이 말린 반죽을 밤새 굽는 관습을 지켜왔다. 매우 느린 저온 굽기 방식이 평범한 반죽을 달콤하고 거의 캐러멜화된 요리로 바꾸는 비결이다.\n\n오늘날 야흐눈은 예멘 공동체뿐 아니라 전국에서 제공되며, 흔히 토요일 아침 식사로 갓 간 토마토와 반죽의 단맛을 중화시키는 매우 매운 주그 소스와 함께 즐긴다."
     }
+  },
+  {
+    id: 435,
+    servings: 4,
+    tipType: "soup",
+    pairingsType: "soup",
+    nutrition: { cal: 320, prot: 24, carb: 18, fat: 16, fib: 4 },
+    origin: {
+      ro: "Filipine", en: "Philippines", es: "Filipinas", fr: "Philippines", de: "Philippinen",
+      pt: "Filipinas", ru: "Филиппины", ar: "الفلبين", zh: "菲律宾", ja: "フィリピン",
+      hi: "फिलीपींस", tr: "Filipinler", it: "Filippine", ko: "필리핀"
+    },
+    name: {
+      ro: "Sinigang", en: "Sinigang", es: "Sinigang", fr: "Sinigang", de: "Sinigang",
+      pt: "Sinigang", ru: "Синиганг", ar: "سينيغانغ", zh: "酸汤西尼冈", ja: "シニガン",
+      hi: "सिनिगांग", tr: "Sinigang", it: "Sinigang", ko: "시니강"
+    },
+    category: {
+      ro: "Supă", en: "Soup", es: "Sopa", fr: "Soupe", de: "Suppe",
+      pt: "Sopa", ru: "Суп", ar: "شوربة", zh: "汤", ja: "スープ",
+      hi: "सूप", tr: "Çorba", it: "Zuppa", ko: "수프"
+    },
+    featureCards: {
+      ro: [
+        { icon: "🍋", t: "Acrimea e vedeta supei", d: "Tamarindul dă supei o aciditate răcoritoare, complet diferită de supele clare din restul Asiei de Sud-Est." },
+        { icon: "🥩", t: "Carnea de porc, cea mai comună", d: "Coaste sau burtă de porc fierte lent devin fragede și dau supei un gust bogat, cărnos." },
+        { icon: "🥬", t: "Legume proaspete, adăugate treptat", d: "Ridichi, fasole verde și frunze de kangkong se adaugă în ordine, ca fiecare să rămână crocantă." },
+        { icon: "🍚", t: "Servită mereu cu orez", d: "Sinigang se mănâncă aproape întotdeauna alături de orez aburit, care înmoaie aciditatea supei." }
+      ],
+      en: [
+        { icon: "🍋", t: "Sourness is the star", d: "Tamarind gives the soup a refreshing tartness, quite different from the clear broths found elsewhere in Southeast Asia." },
+        { icon: "🥩", t: "Pork is the most common choice", d: "Slow-simmered pork ribs or belly become tender and give the broth a rich, meaty depth." },
+        { icon: "🥬", t: "Fresh vegetables added in stages", d: "Radish, string beans, and kangkong leaves go in one after another, so each stays just tender." },
+        { icon: "🍚", t: "Always served with rice", d: "Sinigang is almost always eaten alongside steamed rice, which tames the soup's tang." }
+      ],
+      es: [
+        { icon: "🍋", t: "La acidez es la protagonista", d: "El tamarindo da a la sopa una acidez refrescante, muy distinta de los caldos claros del resto del sudeste asiático." },
+        { icon: "🥩", t: "El cerdo, la opción más común", d: "Costillas o panceta de cerdo cocidas a fuego lento quedan tiernas y dan al caldo una profundidad cárnica." },
+        { icon: "🥬", t: "Verduras frescas añadidas por etapas", d: "Rábano, judías verdes y hojas de kangkong se agregan una tras otra para que cada una quede justo tierna." },
+        { icon: "🍚", t: "Siempre servida con arroz", d: "El sinigang casi siempre se come junto con arroz al vapor, que suaviza la acidez de la sopa." }
+      ],
+      fr: [
+        { icon: "🍋", t: "L'acidité est la vedette", d: "Le tamarin donne à la soupe une acidité rafraîchissante, bien différente des bouillons clairs du reste de l'Asie du Sud-Est." },
+        { icon: "🥩", t: "Le porc, le choix le plus courant", d: "Des côtes ou de la poitrine de porc mijotées lentement deviennent tendres et donnent au bouillon une belle profondeur." },
+        { icon: "🥬", t: "Des légumes frais ajoutés par étapes", d: "Radis, haricots verts et feuilles de kangkong sont ajoutés l'un après l'autre pour que chacun reste juste tendre." },
+        { icon: "🍚", t: "Toujours servi avec du riz", d: "Le sinigang se mange presque toujours avec du riz vapeur, qui adoucit l'acidité de la soupe." }
+      ],
+      de: [
+        { icon: "🍋", t: "Die Säure ist der Star", d: "Tamarinde gibt der Suppe eine erfrischende Säure, ganz anders als die klaren Brühen im übrigen Südostasien." },
+        { icon: "🥩", t: "Schweinefleisch ist die häufigste Wahl", d: "Langsam geschmorte Schweinerippen oder -bauch werden zart und verleihen der Brühe eine kräftige, fleischige Tiefe." },
+        { icon: "🥬", t: "Frisches Gemüse wird stufenweise zugegeben", d: "Rettich, grüne Bohnen und Kangkong-Blätter kommen nacheinander hinein, damit jedes gerade richtig zart bleibt." },
+        { icon: "🍚", t: "Immer mit Reis serviert", d: "Sinigang wird fast immer zusammen mit gedämpftem Reis gegessen, der die Säure der Suppe zähmt." }
+      ],
+      pt: [
+        { icon: "🍋", t: "A acidez é a estrela", d: "O tamarindo dá à sopa uma acidez refrescante, bem diferente dos caldos claros do resto do sudeste asiático." },
+        { icon: "🥩", t: "O porco, a escolha mais comum", d: "Costelas ou barriga de porco cozidas lentamente ficam macias e dão ao caldo uma profundidade rica e carnuda." },
+        { icon: "🥬", t: "Legumes frescos adicionados em etapas", d: "Rabanete, feijão verde e folhas de kangkong entram um após o outro, para que cada um fique apenas tenro." },
+        { icon: "🍚", t: "Sempre servida com arroz", d: "O sinigang é quase sempre comido junto com arroz cozido a vapor, que suaviza a acidez da sopa." }
+      ],
+      ru: [
+        { icon: "🍋", t: "Кислинка — главная звезда", d: "Тамаринд придаёт супу освежающую кислинку, совершенно отличную от прозрачных бульонов остальной Юго-Восточной Азии." },
+        { icon: "🥩", t: "Свинина — самый частый выбор", d: "Медленно томлённые свиные рёбра или грудинка становятся мягкими и придают бульону насыщенную мясную глубину." },
+        { icon: "🥬", t: "Свежие овощи добавляются поэтапно", d: "Редис, стручковая фасоль и листья кангконга добавляются один за другим, чтобы каждый оставался в меру мягким." },
+        { icon: "🍚", t: "Всегда подаётся с рисом", d: "Синиганг почти всегда едят вместе с рисом на пару, который смягчает кислоту супа." }
+      ],
+      ar: [
+        { icon: "🍋", t: "الحموضة هي النجمة", d: "يمنح التمر الهندي الحساء حموضة منعشة، مختلفة تماماً عن المرق الصافي في بقية جنوب شرق آسيا." },
+        { icon: "🥩", t: "لحم الخنزير هو الخيار الأكثر شيوعاً", d: "أضلاع أو بطن الخنزير المطهوة ببطء تصبح طرية وتمنح المرق عمقاً غنياً ولحمياً." },
+        { icon: "🥬", t: "خضار طازجة تُضاف على مراحل", d: "الفجل والفاصولياء الخضراء وأوراق الكانغكونغ تُضاف واحدة تلو الأخرى، لتبقى كل واحدة طرية بالضبط." },
+        { icon: "🍚", t: "يُقدَّم دائماً مع الأرز", d: "يُؤكل السينيغانغ دائماً تقريباً مع الأرز المطهو بالبخار، الذي يلطّف حموضة الحساء." }
+      ],
+      zh: [
+        { icon: "🍋", t: "酸味是主角", d: "罗望子赋予汤清爽的酸味，与东南亚其他地区的清汤截然不同。" },
+        { icon: "🥩", t: "猪肉是最常见的选择", d: "慢炖的猪排骨或五花肉变得软嫩，为汤底带来浓郁的肉香。" },
+        { icon: "🥬", t: "新鲜蔬菜分阶段加入", d: "白萝卜、四季豆和空心菜叶依次下锅，保证每种蔬菜都恰到好处地保持嫩脆。" },
+        { icon: "🍚", t: "总是配米饭享用", d: "酸汤西尼冈几乎总是搭配蒸米饭食用，米饭能中和汤的酸味。" }
+      ],
+      ja: [
+        { icon: "🍋", t: "酸味が主役", d: "タマリンドがスープに爽やかな酸味を与え、東南アジアの他の澄んだスープとは大きく異なる。" },
+        { icon: "🥩", t: "豚肉が最も一般的", d: "じっくり煮込んだ豚のあばら肉やバラ肉は柔らかくなり、スープに濃厚な旨味を与える。" },
+        { icon: "🥬", t: "野菜は段階的に加える", d: "大根、さやいんげん、カンコン（空心菜）の葉を順番に加え、それぞれがちょうどよい柔らかさを保つようにする。" },
+        { icon: "🍚", t: "必ずご飯と共に", d: "シニガンはほぼ必ず蒸したご飯と一緒に食べられ、スープの酸味を和らげる。" }
+      ],
+      hi: [
+        { icon: "🍋", t: "खटास ही हीरो है", d: "इमली सूप को एक ताज़गी भरी खटास देती है, जो बाकी दक्षिण-पूर्व एशिया के साफ शोरबों से काफी अलग है।" },
+        { icon: "🥩", t: "सूअर का मांस सबसे आम विकल्प है", d: "धीमी आंच पर पकी सूअर की पसलियां या पेट का मांस नरम हो जाता है और शोरबे को गहरा, मांसल स्वाद देता है।" },
+        { icon: "🥬", t: "ताज़ी सब्ज़ियां चरणों में डाली जाती हैं", d: "मूली, फ्रेंच बीन्स और कांगकोंग के पत्ते एक-एक करके डाले जाते हैं, ताकि हर एक ठीक नरम रहे।" },
+        { icon: "🍚", t: "हमेशा चावल के साथ परोसा जाता है", d: "सिनिगांग लगभग हमेशा उबले चावल के साथ खाया जाता है, जो सूप की खटास को नरम करता है।" }
+      ],
+      tr: [
+        { icon: "🍋", t: "Ekşilik yıldız rolde", d: "Demirhindi çorbaya ferahlatıcı bir ekşilik verir, Güneydoğu Asya'nın geri kalanındaki berrak çorbalardan oldukça farklıdır." },
+        { icon: "🥩", t: "Domuz eti en yaygın tercih", d: "Yavaşça pişirilen domuz kaburgası veya göbeği yumuşar ve suya zengin, etli bir derinlik katar." },
+        { icon: "🥬", t: "Taze sebzeler aşamalı eklenir", d: "Turp, taze fasulye ve su ıspanağı yaprakları sırayla eklenir, böylece her biri tam kıvamında kalır." },
+        { icon: "🍚", t: "Her zaman pirinçle servis edilir", d: "Sinigang neredeyse her zaman buharda pişmiş pirinçle birlikte yenir, bu da çorbanın ekşiliğini yumuşatır." }
+      ],
+      it: [
+        { icon: "🍋", t: "L'acidità è la protagonista", d: "Il tamarindo dona alla zuppa un'acidità rinfrescante, molto diversa dai brodi limpidi del resto del sud-est asiatico." },
+        { icon: "🥩", t: "Il maiale è la scelta più comune", d: "Costine o pancia di maiale cotte lentamente diventano tenere e donano al brodo una profondità ricca e carnosa." },
+        { icon: "🥬", t: "Verdure fresche aggiunte in fasi", d: "Ravanello, fagiolini e foglie di kangkong vengono aggiunti uno dopo l'altro, così ognuno resta appena tenero." },
+        { icon: "🍚", t: "Sempre servita con riso", d: "Il sinigang si mangia quasi sempre insieme a riso al vapore, che ammorbidisce l'acidità della zuppa." }
+      ],
+      ko: [
+        { icon: "🍋", t: "신맛이 주인공", d: "타마린드가 수프에 상쾌한 신맛을 주며, 동남아시아 다른 지역의 맑은 국물과는 사뭇 다르다." },
+        { icon: "🥩", t: "돼지고기가 가장 흔한 선택", d: "천천히 끓인 돼지갈비나 삼겹살은 부드러워지고 국물에 진한 고기 맛을 더한다." },
+        { icon: "🥬", t: "채소는 단계별로 넣는다", d: "무, 깍지콩, 깡꽁(공심채) 잎을 차례로 넣어 각각이 딱 알맞게 부드러운 상태를 유지하도록 한다." },
+        { icon: "🍚", t: "항상 밥과 함께", d: "시니강은 거의 항상 찐밥과 함께 먹으며, 밥이 수프의 신맛을 중화시킨다." }
+      ]
+    },
+    ingredients: {
+      ro: ["600g coaste de porc, tăiate bucăți", "1.5l apă", "1 ceapă, tăiată în sferturi", "2 roșii mari, tăiate în sferturi", "50g pastă concentrată de tamarind", "1 ridiche albă (labanos), feliată", "150g fasole verde, tăiată", "1 legătură kangkong sau spanac", "sos de pește, după gust"],
+      en: ["600g pork ribs, cut into pieces", "1.5l water", "1 onion, quartered", "2 large tomatoes, quartered", "50g concentrated tamarind paste", "1 white radish (daikon), sliced", "150g string beans, cut", "1 bunch kangkong (water spinach) or spinach", "fish sauce, to taste"],
+      es: ["600g de costillas de cerdo, cortadas en trozos", "1.5l de agua", "1 cebolla, en cuartos", "2 tomates grandes, en cuartos", "50g de pasta concentrada de tamarindo", "1 rábano blanco (daikon), en rodajas", "150g de judías verdes, cortadas", "1 manojo de kangkong (espinaca de agua) o espinaca", "salsa de pescado, al gusto"],
+      fr: ["600g de côtes de porc, coupées en morceaux", "1,5l d'eau", "1 oignon, en quartiers", "2 grosses tomates, en quartiers", "50g de pâte de tamarin concentrée", "1 radis blanc (daikon), en tranches", "150g de haricots verts, coupés", "1 bouquet de kangkong (épinard d'eau) ou d'épinards", "sauce de poisson, selon le goût"],
+      de: ["600g Schweinerippen, in Stücke geschnitten", "1,5l Wasser", "1 Zwiebel, geviertelt", "2 große Tomaten, geviertelt", "50g konzentrierte Tamarindenpaste", "1 weißer Rettich (Daikon), in Scheiben", "150g grüne Bohnen, geschnitten", "1 Bund Kangkong (Wasserspinat) oder Spinat", "Fischsauce, nach Geschmack"],
+      pt: ["600g de costelas de porco, cortadas em pedaços", "1,5l de água", "1 cebola, em quartos", "2 tomates grandes, em quartos", "50g de pasta concentrada de tamarindo", "1 rabanete branco (daikon), fatiado", "150g de feijão verde, cortado", "1 molho de kangkong (espinafre-de-água) ou espinafre", "molho de peixe, a gosto"],
+      ru: ["600г свиных рёбер, нарезанных кусками", "1,5л воды", "1 луковица, четвертинками", "2 крупных помидора, четвертинками", "50г концентрированной пасты тамаринда", "1 белая редька (дайкон), нарезанная", "150г стручковой фасоли, нарезанной", "1 пучок кангконга (водного шпината) или шпината", "рыбный соус, по вкусу"],
+      ar: ["600غ أضلاع خنزير، مقطعة قطعاً", "1.5 لتر ماء", "1 بصلة، مقطعة أرباعاً", "2 حبة طماطم كبيرة، مقطعة أرباعاً", "50غ معجون تمر هندي مركز", "1 فجل أبيض (دايكون)، مقطع شرائح", "150غ فاصولياء خضراء، مقطعة", "1 حزمة كانغكونغ (سبانخ الماء) أو سبانخ", "صلصة سمك، حسب الرغبة"],
+      zh: ["600克猪排骨，切块", "1.5升水", "1个洋葱，切四瓣", "2个大番茄，切四瓣", "50克浓缩罗望子酱", "1根白萝卜，切片", "150克四季豆，切段", "1把空心菜或菠菜", "鱼露，适量"],
+      ja: ["豚あばら肉600g（一口大に切る）", "水1.5リットル", "玉ねぎ1個（くし切り）", "大きめのトマト2個（くし切り）", "濃縮タマリンドペースト50g", "白大根1本（薄切り）", "さやいんげん150g（切る）", "カンコン（空心菜）またはほうれん草1束", "ナンプラー（好みで）"],
+      hi: ["600 ग्राम सूअर की पसलियां, टुकड़ों में कटी", "1.5 लीटर पानी", "1 प्याज़, चार टुकड़ों में", "2 बड़े टमाटर, चार टुकड़ों में", "50 ग्राम गाढ़ा इमली का पेस्ट", "1 सफेद मूली (डाइकॉन), कटी हुई", "150 ग्राम फ्रेंच बीन्स, कटी हुई", "1 गुच्छा कांगकोंग (वाटर स्पिनेच) या पालक", "फिश सॉस, स्वादानुसार"],
+      tr: ["600g domuz kaburgası, parçalara kesilmiş", "1.5l su", "1 soğan, dörde bölünmüş", "2 büyük domates, dörde bölünmüş", "50g konsantre demirhindi macunu", "1 beyaz turp (daikon), dilimlenmiş", "150g taze fasulye, kesilmiş", "1 demet su ıspanağı (kangkong) veya ıspanak", "balık sosu, tada göre"],
+      it: ["600g di costine di maiale, tagliate a pezzi", "1,5l di acqua", "1 cipolla, tagliata in quarti", "2 pomodori grandi, tagliati in quarti", "50g di pasta di tamarindo concentrata", "1 ravanello bianco (daikon), a fette", "150g di fagiolini, tagliati", "1 mazzetto di kangkong (spinacio d'acqua) o spinaci", "salsa di pesce, a piacere"],
+      ko: ["돼지갈비 600g, 토막 낸 것", "물 1.5리터", "양파 1개, 4등분", "큰 토마토 2개, 4등분", "농축 타마린드 페이스트 50g", "흰 무(다이콘) 1개, 슬라이스", "깍지콩 150g, 자른 것", "깡꽁(공심채) 또는 시금치 한 다발", "피시소스, 기호에 따라"]
+    },
+    howIsMade: {
+      ro: "Se fierb coastele de porc în apă cu ceapă până devin fragede, spumând ocazional. Se adaugă roșiile și se lasă să fiarbă până se înmoaie și se dezintegrează ușor. Se amestecă pasta de tamarind în supă, până capătă o aciditate plăcută. Se adaugă ridichea și se lasă să fiarbă până începe să se înmoaie. Se pune fasolea verde și se gătește până e fragedă, dar încă crocantă. Se condimentează cu sos de pește, apoi se adaugă frunzele de kangkong și se lasă doar câteva minute până se ofilesc. Se servește fierbinte, în boluri, alături de orez aburit.",
+      en: "Boil the pork ribs in water with the onion until tender, skimming off foam occasionally. Add the tomatoes and simmer until they soften and break down slightly. Stir the tamarind paste into the broth until it turns pleasantly sour. Add the radish and simmer until it starts to soften. Add the string beans and cook until tender but still crisp. Season with fish sauce, then add the kangkong leaves and let them wilt for just a couple of minutes. Serve hot, in bowls, alongside steamed rice.",
+      es: "Hierve las costillas de cerdo en agua con la cebolla hasta que estén tiernas, retirando la espuma de vez en cuando. Añade los tomates y deja cocer a fuego lento hasta que se ablanden y se deshagan un poco. Incorpora la pasta de tamarindo al caldo hasta que adquiera una acidez agradable. Añade el rábano y deja cocer hasta que empiece a ablandarse. Agrega las judías verdes y cocina hasta que estén tiernas pero aún crujientes. Sazona con salsa de pescado, luego añade las hojas de kangkong y déjalas marchitar solo un par de minutos. Sirve caliente, en cuencos, junto con arroz al vapor.",
+      fr: "Faites bouillir les côtes de porc dans l'eau avec l'oignon jusqu'à ce qu'elles soient tendres, en écumant de temps en temps. Ajoutez les tomates et laissez mijoter jusqu'à ce qu'elles ramollissent et se défassent légèrement. Incorporez la pâte de tamarin au bouillon jusqu'à ce qu'il devienne agréablement acide. Ajoutez le radis et laissez mijoter jusqu'à ce qu'il commence à ramollir. Ajoutez les haricots verts et faites cuire jusqu'à ce qu'ils soient tendres mais encore croquants. Assaisonnez de sauce de poisson, puis ajoutez les feuilles de kangkong et laissez-les flétrir seulement quelques minutes. Servez chaud, dans des bols, avec du riz vapeur.",
+      de: "Die Schweinerippen mit der Zwiebel in Wasser weich kochen, dabei gelegentlich den Schaum abschöpfen. Die Tomaten hinzufügen und köcheln lassen, bis sie weich werden und leicht zerfallen. Die Tamarindenpaste in die Brühe einrühren, bis sie angenehm säuerlich wird. Den Rettich hinzufügen und köcheln lassen, bis er weich zu werden beginnt. Die grünen Bohnen hinzufügen und garen, bis sie weich, aber noch knackig sind. Mit Fischsauce würzen, dann die Kangkong-Blätter hinzufügen und nur wenige Minuten welken lassen. Heiß in Schalen servieren, zusammen mit gedämpftem Reis.",
+      pt: "Cozinhe as costelas de porco em água com a cebola até ficarem macias, retirando a espuma ocasionalmente. Junte os tomates e deixe cozinhar até amolecerem e desfazerem-se um pouco. Misture a pasta de tamarindo no caldo até ficar agradavelmente ácido. Junte o rabanete e deixe cozinhar até começar a amolecer. Adicione o feijão verde e cozinhe até ficar macio mas ainda crocante. Tempere com molho de peixe, depois junte as folhas de kangkong e deixe murchar por apenas alguns minutos. Sirva quente, em tigelas, com arroz cozido a vapor.",
+      ru: "Отварите свиные рёбра в воде с луком до мягкости, время от времени снимая пену. Добавьте помидоры и варите на медленном огне, пока они не размягчатся и слегка не разварятся. Вмешайте пасту тамаринда в бульон, пока он не станет приятно кислым. Добавьте редьку и варите, пока она не начнёт размягчаться. Добавьте стручковую фасоль и готовьте до мягкости, но сохраняя хруст. Приправьте рыбным соусом, затем добавьте листья кангконга и дайте им повянуть всего пару минут. Подавайте горячим, в мисках, вместе с рисом на пару.",
+      ar: "اسلقي أضلاع الخنزير في الماء مع البصل حتى تصبح طرية، مع إزالة الرغوة من حين لآخر. أضيفي الطماطم واتركيها تغلي حتى تلين وتتفكك قليلاً. قلّبي معجون التمر الهندي في المرق حتى يصبح حامضاً بشكل لطيف. أضيفي الفجل واتركيه يغلي حتى يبدأ باللين. أضيفي الفاصولياء الخضراء واطهيها حتى تصبح طرية لكن لا تزال مقرمشة. تبّلي بصلصة السمك، ثم أضيفي أوراق الكانغكونغ واتركيها تذبل لبضع دقائق فقط. قدّميه ساخناً في أوعية، مع الأرز المطهو بالبخار.",
+      zh: "将猪排骨与洋葱一起放入水中煮至软嫩，不时撇去浮沫。加入番茄，煮至变软并略微散开。将罗望子酱拌入汤中，直到汤呈现出宜人的酸味。加入白萝卜，煮至开始变软。加入四季豆，煮至软嫩但仍保持脆度。用鱼露调味，然后加入空心菜叶，只需焖软几分钟即可。趁热盛入碗中，配蒸米饭享用。",
+      ja: "豚あばら肉を玉ねぎと一緒に水で柔らかくなるまで煮て、時々アクを取る。トマトを加え、柔らかくなって少し崩れるまで煮込む。タマリンドペーストをスープに混ぜ入れ、心地よい酸味になるまで加える。大根を加え、柔らかくなり始めるまで煮る。さやいんげんを加え、柔らかいがまだシャキシャキするまで火を通す。ナンプラーで味を整え、カンコンの葉を加えてほんの数分しんなりさせる。熱いうちに碗に盛り、蒸したご飯を添えて提供する。",
+      hi: "सूअर की पसलियों को प्याज़ के साथ पानी में नरम होने तक उबालें, बीच-बीच में झाग हटाते हुए। टमाटर डालें और तब तक पकाएं जब तक नरम होकर थोड़ा टूट न जाएं। इमली का पेस्ट शोरबे में तब तक मिलाएं जब तक सुखद खटास न आ जाए। मूली डालें और तब तक पकाएं जब तक नरम होना शुरू न हो जाए। फ्रेंच बीन्स डालें और तब तक पकाएं जब तक नरम पर कुरकुरी रहे। फिश सॉस से स्वाद दें, फिर कांगकोंग के पत्ते डालें और सिर्फ कुछ मिनट मुरझाने दें। गरम परोसें, कटोरों में, उबले चावल के साथ।",
+      tr: "Domuz kaburgalarını soğanla birlikte suda yumuşayana kadar haşlayın, ara sıra köpüğünü alarak. Domatesleri ekleyin ve yumuşayıp hafifçe dağılana kadar pişirin. Demirhindi macununu suya karıştırın, hoş bir ekşilik alana kadar. Turpu ekleyin ve yumuşamaya başlayana kadar pişirin. Taze fasulyeyi ekleyin ve yumuşak ama hâlâ çıtır olana kadar pişirin. Balık sosuyla tatlandırın, ardından su ıspanağı yapraklarını ekleyin ve sadece birkaç dakika solmasını bekleyin. Sıcak servis edin, kaselerde, buharda pişmiş pirinçle birlikte.",
+      it: "Fai bollire le costine di maiale in acqua con la cipolla finché non sono tenere, schiumando di tanto in tanto. Aggiungi i pomodori e lascia sobbollire finché non si ammorbidiscono e si sfaldano leggermente. Incorpora la pasta di tamarindo nel brodo finché non diventa piacevolmente acido. Aggiungi il ravanello e lascia sobbollire finché non inizia ad ammorbidirsi. Aggiungi i fagiolini e cuoci finché non sono teneri ma ancora croccanti. Condisci con salsa di pesce, poi aggiungi le foglie di kangkong e lasciale appassire solo per un paio di minuti. Servi caldo, in ciotole, con riso al vapore.",
+      ko: "돼지갈비를 양파와 함께 물에 부드러워질 때까지 삶으며 가끔 거품을 걷어낸다. 토마토를 넣고 부드러워지고 약간 풀어질 때까지 끓인다. 타마린드 페이스트를 국물에 섞어 기분 좋은 신맛이 날 때까지 넣는다. 무를 넣고 부드러워지기 시작할 때까지 끓인다. 깍지콩을 넣고 부드럽지만 아삭함이 남을 때까지 익힌다. 피시소스로 간을 하고 깡꽁 잎을 넣어 몇 분만 숨이 죽을 때까지 익힌다. 뜨거울 때 그릇에 담아 찐밥과 함께 낸다."
+    },
+    originText: {
+      ro: "Sinigang e considerată una din supele definitorii ale bucătăriei filipineze, cu rădăcini care precedă influențele coloniale, când tamarindul și alte fructe acre erau folosite pentru a acidula supele înainte ca lămâia sau oțetul să devină comune. Numele vine de la cuvântul filipinez 'sinigang', care înseamnă literalmente 'fiert' sau 'înăbușit'.\n\nDeși porcul e cel mai comun, sinigang se face și cu vită, creveți sau pește, iar aciditatea de bază poate proveni și din alte fructe locale, nu doar din tamarind. Rămâne unul dintre felurile pe care filipinezii din diaspora îl caută cel mai mult, ca amintire a casei.",
+      en: "Sinigang is considered one of the defining soups of Philippine cuisine, with roots predating colonial influences, when tamarind and other sour fruits were used to acidify soups before lemon or vinegar became common. The name comes from the Filipino word 'sinigang', which literally means 'stewed' or 'boiled'.\n\nWhile pork is the most common, sinigang is also made with beef, shrimp, or fish, and the sour base can also come from other local fruits, not just tamarind. It remains one of the dishes Filipinos abroad crave the most, as a taste of home.",
+      es: "El sinigang se considera una de las sopas definitorias de la cocina filipina, con raíces anteriores a las influencias coloniales, cuando el tamarindo y otras frutas ácidas se usaban para acidular las sopas antes de que el limón o el vinagre se volvieran comunes. El nombre proviene de la palabra filipina 'sinigang', que literalmente significa 'guisado' o 'hervido'.\n\nAunque el cerdo es lo más común, el sinigang también se prepara con carne de res, camarones o pescado, y la base ácida también puede provenir de otras frutas locales, no solo del tamarindo. Sigue siendo uno de los platos que más añoran los filipinos en el extranjero, como un sabor de hogar.",
+      fr: "Le sinigang est considéré comme l'une des soupes emblématiques de la cuisine philippine, avec des racines antérieures aux influences coloniales, lorsque le tamarin et d'autres fruits acides étaient utilisés pour acidifier les soupes avant que le citron ou le vinaigre ne se répandent. Le nom vient du mot philippin 'sinigang', qui signifie littéralement 'mijoté' ou 'bouilli'.\n\nBien que le porc soit le plus courant, le sinigang se prépare aussi avec du bœuf, des crevettes ou du poisson, et la base acide peut aussi provenir d'autres fruits locaux, pas seulement du tamarin. Il reste l'un des plats dont les Philippins de la diaspora ont le plus la nostalgie, comme un goût du pays.",
+      de: "Sinigang gilt als eine der prägenden Suppen der philippinischen Küche, mit Wurzeln, die vor den kolonialen Einflüssen liegen, als Tamarinde und andere säuerliche Früchte verwendet wurden, um Suppen zu säuern, bevor Zitrone oder Essig verbreitet waren. Der Name kommt vom philippinischen Wort 'sinigang', das wörtlich 'geschmort' oder 'gekocht' bedeutet.\n\nObwohl Schweinefleisch am häufigsten ist, wird Sinigang auch mit Rindfleisch, Garnelen oder Fisch zubereitet, und die säuerliche Basis kann auch von anderen einheimischen Früchten stammen, nicht nur von Tamarinde. Es bleibt eines der Gerichte, nach denen sich Filipinos im Ausland am meisten sehnen, als Geschmack der Heimat.",
+      pt: "O sinigang é considerado uma das sopas mais emblemáticas da culinária filipina, com raízes anteriores às influências coloniais, quando o tamarindo e outras frutas azedas eram usados para acidular sopas antes de o limão ou o vinagre se tornarem comuns. O nome vem da palavra filipina 'sinigang', que significa literalmente 'estufado' ou 'fervido'.\n\nEmbora o porco seja o mais comum, o sinigang também é feito com carne de vaca, camarão ou peixe, e a base ácida também pode vir de outras frutas locais, não apenas do tamarindo. Continua a ser um dos pratos que os filipinos no estrangeiro mais desejam, como um sabor de casa.",
+      ru: "Синиганг считается одним из определяющих супов филиппинской кухни, с корнями, предшествующими колониальным влияниям, когда тамаринд и другие кислые фрукты использовались для подкисления супов до того, как лимон или уксус стали обычными. Название происходит от филиппинского слова «sinigang», которое буквально означает «тушёный» или «варёный».\n\nХотя свинина — самый распространённый вариант, синиганг также готовят с говядиной, креветками или рыбой, а кислая основа может исходить и из других местных фруктов, а не только из тамаринда. Это остаётся одним из блюд, по которым филиппинцы за границей тоскуют больше всего, как вкус родного дома.",
+      ar: "يُعتبر السينيغانغ من أهم الحساءات المميزة في المطبخ الفلبيني، وتعود جذوره إلى ما قبل التأثيرات الاستعمارية، عندما كان التمر الهندي وفواكه حامضة أخرى تُستخدم لتحميض الحساء قبل أن يصبح الليمون أو الخل شائعين. يأتي الاسم من الكلمة الفلبينية 'سينيغانغ' التي تعني حرفياً 'مطهو' أو 'مسلوق'.\n\nرغم أن لحم الخنزير هو الأكثر شيوعاً، يُحضَّر السينيغانغ أيضاً بلحم البقر أو الروبيان أو السمك، ويمكن أن يأتي الأساس الحامض من فواكه محلية أخرى وليس التمر الهندي فقط. يبقى من الأطباق التي يشتاق إليها الفلبينيون في الخارج أكثر من غيرها، كنكهة للوطن.",
+      zh: "西尼冈被视为菲律宾料理中最具代表性的汤品之一，其起源早于殖民影响时期，当时罗望子和其他酸味水果被用来给汤增酸，那时柠檬或醋尚未普及。这个名字来自菲律宾语单词'sinigang'，字面意思是'炖煮'或'水煮'。\n\n虽然猪肉是最常见的选择，但西尼冈也可用牛肉、虾或鱼来制作，酸味基底也可以来自其他本地水果，不仅限于罗望子。它仍然是海外菲律宾人最思念的家乡味道之一。",
+      ja: "シニガンはフィリピン料理を代表するスープの一つとされ、レモンや酢が一般的になる前にタマリンドや他の酸っぱい果物がスープを酸味づけするために使われていた植民地時代以前にルーツを持つ。名前はフィリピン語の『sinigang』に由来し、文字通り『煮込んだ』または『茹でた』という意味だ。\n\n豚肉が最も一般的だが、シニガンは牛肉、エビ、魚でも作られ、酸味のベースはタマリンドだけでなく他の地元の果物からも作られることがある。海外に住むフィリピン人が最も恋しがる料理の一つであり、故郷の味として今も愛されている。",
+      hi: "सिनिगांग को फिलीपीनी व्यंजनों के सबसे प्रतिष्ठित सूपों में से एक माना जाता है, जिसकी जड़ें औपनिवेशिक प्रभावों से पहले की हैं, जब नींबू या सिरका आम होने से पहले इमली और अन्य खट्टे फलों का उपयोग सूप को खट्टा बनाने के लिए किया जाता था। नाम फिलीपीनी शब्द 'सिनिगांग' से आया है, जिसका शाब्दिक अर्थ है 'पकाया हुआ' या 'उबाला हुआ'।\n\nहालांकि सूअर का मांस सबसे आम है, सिनिगांग गोमांस, झींगे या मछली से भी बनाया जाता है, और खट्टा आधार अन्य स्थानीय फलों से भी आ सकता है, केवल इमली से नहीं। यह विदेश में रहने वाले फिलीपीनियों के लिए घर के स्वाद के रूप में सबसे अधिक चाहा जाने वाला व्यंजन बना हुआ है।",
+      tr: "Sinigang, limon veya sirkenin yaygınlaşmasından önce demirhindi ve diğer ekşi meyvelerin çorbaları asitlendirmek için kullanıldığı, sömürge etkilerinden önceki köklere sahip, Filipin mutfağının belirleyici çorbalarından biri olarak kabul edilir. İsim, kelimenin tam anlamıyla 'haşlanmış' veya 'kaynatılmış' anlamına gelen Filipince 'sinigang' kelimesinden gelir.\n\nDomuz eti en yaygın olsa da, sinigang sığır eti, karides veya balıkla da yapılır ve ekşi taban sadece demirhindiden değil diğer yerel meyvelerden de gelebilir. Yurtdışındaki Filipinlilerin evin tadı olarak en çok özlediği yemeklerden biri olmaya devam ediyor.",
+      it: "Il sinigang è considerato una delle zuppe distintive della cucina filippina, con radici che precedono le influenze coloniali, quando il tamarindo e altri frutti aspri venivano usati per acidificare le zuppe prima che limone o aceto diventassero comuni. Il nome deriva dalla parola filippina 'sinigang', che significa letteralmente 'stufato' o 'bollito'.\n\nSebbene il maiale sia il più comune, il sinigang viene preparato anche con manzo, gamberetti o pesce, e la base acida può provenire anche da altri frutti locali, non solo dal tamarindo. Resta uno dei piatti più desiderati dai filippini all'estero, come sapore di casa.",
+      ko: "시니강은 레몬이나 식초가 흔해지기 전, 타마린드와 다른 신 과일들이 수프를 시게 만드는 데 쓰였던 식민지 이전 시대에 뿌리를 둔, 필리핀 요리를 대표하는 수프 중 하나로 여겨진다. 이름은 필리핀어 'sinigang'에서 왔으며, 문자 그대로 '조린' 또는 '끓인'이라는 뜻이다.\n\n돼지고기가 가장 흔하지만, 시니강은 소고기, 새우, 생선으로도 만들며, 신맛의 기본이 되는 재료도 타마린드뿐 아니라 다른 현지 과일에서 올 수 있다. 해외에 사는 필리핀인들이 고향의 맛으로 가장 그리워하는 요리 중 하나로 남아 있다."
+    }
+  },
+  {
+    id: 436,
+    servings: 4,
+    tipType: "meat",
+    pairingsType: "asian",
+    nutrition: { cal: 340, prot: 15, carb: 28, fat: 19, fib: 2 },
+    origin: {
+      ro: "Filipine", en: "Philippines", es: "Filipinas", fr: "Philippines", de: "Philippinen",
+      pt: "Filipinas", ru: "Филиппины", ar: "الفلبين", zh: "菲律宾", ja: "フィリピン",
+      hi: "फिलीपींस", tr: "Filipinler", it: "Filippine", ko: "필리핀"
+    },
+    name: {
+      ro: "Lumpia", en: "Lumpia", es: "Lumpia", fr: "Lumpia", de: "Lumpia",
+      pt: "Lumpia", ru: "Лумпия", ar: "لومبيا", zh: "菲式春卷", ja: "ルンピア",
+      hi: "लुम्पिया", tr: "Lumpia", it: "Lumpia", ko: "룸피아"
+    },
+    category: {
+      ro: "Aperitiv", en: "Appetizer", es: "Aperitivo", fr: "Entrée", de: "Vorspeise",
+      pt: "Entrada", ru: "Закуска", ar: "مقبلات", zh: "开胃菜", ja: "前菜",
+      hi: "स्टार्टर", tr: "Meze", it: "Antipasto", ko: "애피타이저"
+    },
+    featureCards: {
+      ro: [
+        { icon: "🥕", t: "Umplutura tocată mărunt", d: "Carnea de porc tocată se amestecă cu morcov, ceapă și usturoi tăiate foarte fin, pentru un rulou uniform." },
+        { icon: "🌯", t: "Rulate subțiri și strânse", d: "Foile de lumpia se rulează strâns, mai subțiri decât cele pentru egg roll-uri chinezești." },
+        { icon: "🔥", t: "Prăjite de două ori", d: "Multe gospodării prăjesc rulourile o dată pentru a le sigila, apoi din nou, chiar înainte de servire, pentru crocanță maximă." },
+        { icon: "🍯", t: "Sosul dulce-acru obligatoriu", d: "Sosul de oțet dulce sau de banană ketchup completează fiecare mușcătură crocantă." }
+      ],
+      en: [
+        { icon: "🥕", t: "The filling is finely minced", d: "Ground pork is mixed with very finely chopped carrot, onion, and garlic, so every roll cooks evenly." },
+        { icon: "🌯", t: "Rolled thin and tight", d: "Lumpia wrappers are rolled tightly, thinner than the ones used for Chinese egg rolls." },
+        { icon: "🔥", t: "Fried twice for extra crunch", d: "Many households fry the rolls once to seal them, then again right before serving for maximum crispness." },
+        { icon: "🍯", t: "A sweet-sour dip is mandatory", d: "Sweet vinegar or banana ketchup sauce completes every crunchy bite." }
+      ],
+      es: [
+        { icon: "🥕", t: "El relleno se pica muy fino", d: "La carne de cerdo molida se mezcla con zanahoria, cebolla y ajo picados muy finamente, para que cada rollo se cocine parejo." },
+        { icon: "🌯", t: "Enrollados finos y apretados", d: "Las obleas de lumpia se enrollan bien apretadas, más finas que las usadas para los rollitos chinos." },
+        { icon: "🔥", t: "Fritos dos veces para más crujiente", d: "Muchos hogares fríen los rollos una vez para sellarlos, y de nuevo justo antes de servir para lograr máxima crujencia." },
+        { icon: "🍯", t: "Una salsa agridulce es obligatoria", d: "La salsa de vinagre dulce o de salsa de plátano completa cada bocado crujiente." }
+      ],
+      fr: [
+        { icon: "🥕", t: "La farce est finement hachée", d: "Le porc haché est mélangé avec de la carotte, de l'oignon et de l'ail très finement hachés, pour une cuisson uniforme de chaque rouleau." },
+        { icon: "🌯", t: "Roulés fins et serrés", d: "Les feuilles de lumpia sont roulées serrées, plus fines que celles utilisées pour les rouleaux de printemps chinois." },
+        { icon: "🔥", t: "Frits deux fois pour plus de croustillant", d: "Beaucoup de foyers frisent les rouleaux une fois pour les sceller, puis à nouveau juste avant de servir pour un croustillant maximal." },
+        { icon: "🍯", t: "Une sauce aigre-douce obligatoire", d: "Une sauce au vinaigre sucré ou au ketchup de banane complète chaque bouchée croustillante." }
+      ],
+      de: [
+        { icon: "🥕", t: "Die Füllung ist fein gehackt", d: "Schweinehack wird mit sehr fein gehackter Karotte, Zwiebel und Knoblauch gemischt, damit jede Rolle gleichmäßig gart." },
+        { icon: "🌯", t: "Dünn und fest gerollt", d: "Lumpia-Blätter werden fest aufgerollt, dünner als die für chinesische Frühlingsrollen verwendeten." },
+        { icon: "🔥", t: "Zweimal frittiert für extra Knusprigkeit", d: "Viele Haushalte frittieren die Rollen einmal zum Versiegeln und dann kurz vor dem Servieren erneut für maximale Knusprigkeit." },
+        { icon: "🍯", t: "Ein süß-saurer Dip ist Pflicht", d: "Süße Essigsauce oder Bananenketchup-Sauce vervollständigt jeden knusprigen Bissen." }
+      ],
+      pt: [
+        { icon: "🥕", t: "O recheio é finamente picado", d: "A carne de porco moída é misturada com cenoura, cebola e alho picados muito finamente, para que cada rolinho cozinhe por igual." },
+        { icon: "🌯", t: "Enrolados finos e apertados", d: "As massas de lumpia são enroladas bem apertadas, mais finas do que as usadas nos rolinhos primavera chineses." },
+        { icon: "🔥", t: "Fritos duas vezes para mais crocância", d: "Muitas famílias fritam os rolinhos uma vez para selar e depois novamente antes de servir para máxima crocância." },
+        { icon: "🍯", t: "Um molho agridoce é obrigatório", d: "Molho de vinagre doce ou de ketchup de banana completa cada mordida crocante." }
+      ],
+      ru: [
+        { icon: "🥕", t: "Начинка мелко нарублена", d: "Фарш из свинины смешивают с очень мелко нарезанной морковью, луком и чесноком, чтобы каждый рулет готовился равномерно." },
+        { icon: "🌯", t: "Скручены тонко и плотно", d: "Обёртки для лумпии скручивают плотно, они тоньше тех, что используют для китайских яичных рулетов." },
+        { icon: "🔥", t: "Жарят дважды для дополнительного хруста", d: "Многие семьи обжаривают рулеты один раз, чтобы запечатать, а затем снова перед подачей для максимальной хрусткости." },
+        { icon: "🍯", t: "Кисло-сладкий соус обязателен", d: "Сладкий уксусный соус или соус из бананового кетчупа дополняет каждый хрустящий кусочек." }
+      ],
+      ar: [
+        { icon: "🥕", t: "الحشوة مفرومة ناعماً", d: "يُمزج لحم الخنزير المفروم مع الجزر والبصل والثوم المفروم ناعماً جداً، لتُطهى كل لفافة بالتساوي." },
+        { icon: "🌯", t: "تُلف رقيقة ومحكمة", d: "تُلف أوراق اللومبيا بإحكام، أرق من تلك المستخدمة في لفائف البيض الصينية." },
+        { icon: "🔥", t: "تُقلى مرتين لقرمشة إضافية", d: "تقلي عائلات كثيرة اللفائف مرة لإغلاقها، ثم مرة أخرى قبل التقديم مباشرة للحصول على أقصى قرمشة." },
+        { icon: "🍯", t: "صلصة حلوة حامضة إلزامية", d: "صلصة الخل الحلو أو كاتشب الموز تكمل كل قضمة مقرمشة." }
+      ],
+      zh: [
+        { icon: "🥕", t: "馅料切得极细", d: "猪肉馅与切得极细的胡萝卜、洋葱和大蒜混合，确保每个卷都均匀受热。" },
+        { icon: "🌯", t: "卷得又薄又紧", d: "菲式春卷皮卷得紧实，比中式蛋卷皮更薄。" },
+        { icon: "🔥", t: "炸两次更酥脆", d: "许多家庭会先炸一次封口，再在上桌前重炸一次以获得最大的酥脆度。" },
+        { icon: "🍯", t: "酸甜蘸酱必不可少", d: "甜醋酱或香蕉番茄酱为每一口酥脆增添滋味。" }
+      ],
+      ja: [
+        { icon: "🥕", t: "具材は細かく刻む", d: "豚ひき肉は極細に刻んだにんじん、玉ねぎ、にんにくと混ぜ合わせ、どの巻きも均一に火が通るようにする。" },
+        { icon: "🌯", t: "薄くきつく巻く", d: "ルンピアの皮は中華の春巻きより薄く、しっかりときつく巻かれる。" },
+        { icon: "🔥", t: "二度揚げでよりカリッと", d: "多くの家庭では一度揚げて封をし、提供直前にもう一度揚げて最大限のカリカリ感を出す。" },
+        { icon: "🍯", t: "甘酸っぱいタレが必須", d: "甘い酢のタレやバナナケチャップのソースがカリカリの一口一口を引き立てる。" }
+      ],
+      hi: [
+        { icon: "🥕", t: "भरावन बारीक कटा होता है", d: "पिसा सूअर का मांस बहुत बारीक कटी गाजर, प्याज़ और लहसुन के साथ मिलाया जाता है, ताकि हर रोल समान रूप से पके।" },
+        { icon: "🌯", t: "पतला और कसकर लपेटा जाता है", d: "लुम्पिया के रैपर कसकर लपेटे जाते हैं, चीनी एग रोल में इस्तेमाल होने वालों से पतले।" },
+        { icon: "🔥", t: "अतिरिक्त कुरकुरेपन के लिए दो बार तला जाता है", d: "कई घरों में रोल को एक बार सील करने के लिए तला जाता है, फिर परोसने से ठीक पहले अधिकतम कुरकुरेपन के लिए फिर से तला जाता है।" },
+        { icon: "🍯", t: "मीठी-खट्टी चटनी अनिवार्य है", d: "मीठे सिरके या केले की केचप सॉस हर कुरकुरे टुकड़े को पूरा करती है।" }
+      ],
+      tr: [
+        { icon: "🥕", t: "İç harç ince ince kıyılır", d: "Kıyma domuz eti çok ince doğranmış havuç, soğan ve sarımsakla karıştırılır, böylece her rulo eşit pişer." },
+        { icon: "🌯", t: "İnce ve sıkı sarılır", d: "Lumpia yaprakları sıkıca sarılır, Çin usulü baharat rulolarında kullanılanlardan daha incedir." },
+        { icon: "🔥", t: "Ekstra çıtırlık için iki kez kızartılır", d: "Birçok ev, ruloları önce mühürlemek için bir kez, sonra servisten hemen önce maksimum çıtırlık için tekrar kızartır." },
+        { icon: "🍯", t: "Tatlı-ekşi sos şarttır", d: "Tatlı sirke sosu veya muz ketçabı her çıtır lokmayı tamamlar." }
+      ],
+      it: [
+        { icon: "🥕", t: "Il ripieno è tritato finemente", d: "Il maiale macinato viene mescolato con carota, cipolla e aglio tritati molto finemente, così ogni involtino cuoce uniformemente." },
+        { icon: "🌯", t: "Arrotolati sottili e stretti", d: "Le sfoglie per lumpia vengono arrotolate strette, più sottili di quelle usate per gli involtini primavera cinesi." },
+        { icon: "🔥", t: "Fritti due volte per più croccantezza", d: "Molte famiglie friggono gli involtini una volta per sigillarli, poi di nuovo appena prima di servire per la massima croccantezza." },
+        { icon: "🍯", t: "Una salsa agrodolce è obbligatoria", d: "Salsa di aceto dolce o di ketchup di banana completa ogni morso croccante." }
+      ],
+      ko: [
+        { icon: "🥕", t: "속재료는 잘게 다진다", d: "다진 돼지고기를 아주 잘게 썬 당근, 양파, 마늘과 섞어 모든 롤이 고르게 익도록 한다." },
+        { icon: "🌯", t: "얇고 단단하게 만다", d: "룸피아 피는 중국식 에그롤보다 얇으며 단단하게 말아진다." },
+        { icon: "🔥", t: "더 바삭하도록 두 번 튀긴다", d: "많은 가정에서 롤을 한 번 튀겨 봉하고, 서빙 직전에 다시 튀겨 최대의 바삭함을 낸다." },
+        { icon: "🍯", t: "새콤달콤한 소스는 필수", d: "달콤한 식초 소스나 바나나 케첩 소스가 바삭한 한 입 한 입을 완성한다." }
+      ]
+    },
+    ingredients: {
+      ro: ["400g carne de porc tocată", "1 morcov, tocat fin", "1 ceapă mică, tocată fin", "2 căței de usturoi, tocați", "50g fasole verde, tocată fin", "1 ou, bătut", "1 lingură sos de soia", "20 foi de lumpia sau foi pentru egg roll", "ulei pentru prăjit"],
+      en: ["400g ground pork", "1 carrot, finely chopped", "1 small onion, finely chopped", "2 garlic cloves, minced", "50g green beans, finely chopped", "1 egg, beaten", "1 tbsp soy sauce", "20 lumpia wrappers or spring roll wrappers", "oil for frying"],
+      es: ["400g de carne de cerdo molida", "1 zanahoria, picada fina", "1 cebolla pequeña, picada fina", "2 dientes de ajo, picados", "50g de judías verdes, picadas finas", "1 huevo, batido", "1 cda de salsa de soja", "20 obleas de lumpia o de rollitos de primavera", "aceite para freír"],
+      fr: ["400g de porc haché", "1 carotte, finement hachée", "1 petit oignon, finement haché", "2 gousses d'ail, hachées", "50g de haricots verts, finement hachés", "1 œuf, battu", "1 c. à soupe de sauce soja", "20 feuilles de lumpia ou de rouleaux de printemps", "huile pour friture"],
+      de: ["400g Schweinehack", "1 Karotte, fein gehackt", "1 kleine Zwiebel, fein gehackt", "2 Knoblauchzehen, gehackt", "50g grüne Bohnen, fein gehackt", "1 Ei, verquirlt", "1 EL Sojasauce", "20 Lumpia- oder Frühlingsrollenblätter", "Öl zum Frittieren"],
+      pt: ["400g de carne de porco moída", "1 cenoura, picada fina", "1 cebola pequena, picada fina", "2 dentes de alho, picados", "50g de feijão verde, picado fino", "1 ovo, batido", "1 col. sopa de molho de soja", "20 massas de lumpia ou de rolinhos primavera", "óleo para fritar"],
+      ru: ["400г свиного фарша", "1 морковь, мелко нарезанная", "1 маленькая луковица, мелко нарезанная", "2 зубчика чеснока, измельчённых", "50г зелёной фасоли, мелко нарезанной", "1 яйцо, взбитое", "1 ст.л. соевого соуса", "20 оберток для лумпии или спринг-роллов", "масло для жарки"],
+      ar: ["400غ لحم خنزير مفروم", "1 جزرة، مفرومة ناعماً", "1 بصلة صغيرة، مفرومة ناعماً", "2 فص ثوم، مفروم", "50غ فاصولياء خضراء، مفرومة ناعماً", "1 بيضة، مخفوقة", "1 ملعقة كبيرة صلصة صويا", "20 ورقة لومبيا أو ورق لفائف الربيع", "زيت للقلي"],
+      zh: ["400克猪肉末", "1根胡萝卜，切细末", "1个小洋葱，切细末", "2瓣大蒜，切碎", "50克四季豆，切细末", "1个鸡蛋，打散", "1汤匙酱油", "20张春卷皮", "煎炸用油"],
+      ja: ["豚ひき肉400g", "にんじん1本（みじん切り）", "小玉ねぎ1個（みじん切り）", "にんにく2片（みじん切り）", "さやいんげん50g（みじん切り）", "卵1個（溶く）", "醤油大さじ1", "ルンピアの皮または春巻きの皮20枚", "揚げ油"],
+      hi: ["400 ग्राम पिसा सूअर का मांस", "1 गाजर, बारीक कटी", "1 छोटा प्याज़, बारीक कटा", "2 लहसुन की कलियां, कटी हुई", "50 ग्राम फ्रेंच बीन्स, बारीक कटी", "1 अंडा, फेंटा हुआ", "1 बड़ा चम्मच सोया सॉस", "20 लुम्पिया या स्प्रिंग रोल रैपर", "तलने के लिए तेल"],
+      tr: ["400g kıyma domuz eti", "1 havuç, ince doğranmış", "1 küçük soğan, ince doğranmış", "2 diş sarımsak, doğranmış", "50g taze fasulye, ince doğranmış", "1 yumurta, çırpılmış", "1 yemek kaşığı soya sosu", "20 lumpia yaprağı veya baharat rulosu yaprağı", "kızartmak için yağ"],
+      it: ["400g di carne di maiale macinata", "1 carota, tritata finemente", "1 cipolla piccola, tritata finemente", "2 spicchi d'aglio, tritati", "50g di fagiolini, tritati finemente", "1 uovo, sbattuto", "1 cucchiaio di salsa di soia", "20 sfoglie per lumpia o involtini primavera", "olio per friggere"],
+      ko: ["다진 돼지고기 400g", "당근 1개, 잘게 다진 것", "작은 양파 1개, 잘게 다진 것", "마늘 2쪽, 다진 것", "깍지콩 50g, 잘게 다진 것", "달걀 1개, 푼 것", "간장 1큰술", "룸피아 또는 스프링롤 피 20장", "튀김용 기름"]
+    },
+    howIsMade: {
+      ro: "Se amestecă în castron carnea de porc tocată cu morcovul, ceapa, usturoiul și fasolea verde, toate tocate foarte fin. Se adaugă oul bătut și sosul de soia, apoi se amestecă bine până compoziția se leagă. Se așază o lingură de umplutură pe fiecare foaie de lumpia, aproape de o margine. Se rulează strâns foaia peste umplutură, îndoind marginile spre interior pe măsură ce se rulează. Se sigilează capătul foii cu puțină apă, ca ruloul să rămână închis. Se prăjesc rulourile în ulei încins, în tranșe, până devin aurii și crocante pe toate părțile. Se scurg pe hârtie absorbantă și se servesc calde, cu sos dulce-acru pentru înmuiat.",
+      en: "Combine the ground pork with the carrot, onion, garlic, and green beans in a bowl, all very finely chopped. Add the beaten egg and soy sauce, then mix well until the filling binds together. Place a spoonful of filling on each lumpia wrapper, near one edge. Roll the wrapper tightly over the filling, tucking in the sides as you go. Seal the end of the wrapper with a little water so the roll stays closed. Fry the rolls in hot oil, in batches, until golden and crisp on all sides. Drain on paper towel and serve warm, with sweet-sour sauce for dipping.",
+      es: "Combina en un bowl la carne de cerdo molida con la zanahoria, la cebolla, el ajo y las judías verdes, todo picado muy fino. Añade el huevo batido y la salsa de soja, y mezcla bien hasta que el relleno se una. Coloca una cucharada de relleno en cada oblea de lumpia, cerca de un borde. Enrolla la oblea apretada sobre el relleno, doblando los lados hacia adentro mientras enrollas. Sella el extremo de la oblea con un poco de agua para que el rollo quede cerrado. Fríe los rollos en aceite caliente, por tandas, hasta que estén dorados y crujientes por todos lados. Escurre sobre papel absorbente y sirve caliente, con salsa agridulce para mojar.",
+      fr: "Mélangez le porc haché avec la carotte, l'oignon, l'ail et les haricots verts, le tout très finement haché, dans un bol. Ajoutez l'œuf battu et la sauce soja, puis mélangez bien jusqu'à ce que la farce se lie. Placez une cuillerée de farce sur chaque feuille de lumpia, près d'un bord. Roulez la feuille serrée sur la farce, en repliant les côtés au fur et à mesure. Scellez l'extrémité de la feuille avec un peu d'eau pour que le rouleau reste fermé. Faites frire les rouleaux dans l'huile chaude, par lots, jusqu'à ce qu'ils soient dorés et croustillants de tous les côtés. Égouttez sur du papier absorbant et servez chaud, avec une sauce aigre-douce pour tremper.",
+      de: "Das Schweinehack mit Karotte, Zwiebel, Knoblauch und grünen Bohnen, alles sehr fein gehackt, in einer Schüssel vermischen. Das verquirlte Ei und die Sojasauce hinzufügen, dann gut mischen, bis die Füllung zusammenhält. Einen Löffel Füllung auf jedes Lumpia-Blatt geben, nahe an einer Kante. Das Blatt fest über die Füllung rollen, dabei die Seiten einschlagen. Das Ende des Blattes mit etwas Wasser versiegeln, damit die Rolle geschlossen bleibt. Die Rollen portionsweise in heißem Öl goldbraun und rundum knusprig frittieren. Auf Küchenpapier abtropfen lassen und warm mit süß-saurer Dip-Sauce servieren.",
+      pt: "Combine numa tigela a carne de porco moída com a cenoura, a cebola, o alho e o feijão verde, tudo picado muito fino. Junte o ovo batido e o molho de soja, e misture bem até o recheio se ligar. Coloque uma colher de recheio em cada massa de lumpia, perto de uma borda. Enrole a massa com firmeza sobre o recheio, dobrando as laterais à medida que avança. Sele a ponta da massa com um pouco de água para que o rolinho fique fechado. Frite os rolinhos em óleo quente, aos poucos, até dourarem e ficarem crocantes de todos os lados. Escorra em papel absorvente e sirva quente, com molho agridoce para molhar.",
+      ru: "Смешайте в миске свиной фарш с морковью, луком, чесноком и зелёной фасолью — всё очень мелко нарезанное. Добавьте взбитое яйцо и соевый соус, хорошо перемешайте, пока начинка не соединится. Положите ложку начинки на каждую обёртку для лумпии, ближе к одному краю. Плотно сверните обёртку вокруг начинки, подворачивая края по ходу. Смочите конец обёртки водой, чтобы рулет оставался закрытым. Обжарьте рулеты в горячем масле порциями до золотистого цвета и хруста со всех сторон. Обсушите на бумажном полотенце и подавайте тёплыми, с кисло-сладким соусом для макания.",
+      ar: "اخلطي في وعاء لحم الخنزير المفروم مع الجزر والبصل والثوم والفاصولياء الخضراء، جميعها مفرومة ناعماً جداً. أضيفي البيض المخفوق وصلصة الصويا، ثم اخلطي جيداً حتى تتماسك الحشوة. ضعي ملعقة من الحشوة على كل ورقة لومبيا، بالقرب من أحد الحواف. لفّي الورقة بإحكام فوق الحشوة، مع طي الجانبين أثناء اللف. أغلقي طرف الورقة بقليل من الماء ليبقى اللفافة مغلقة. اقلي اللفائف في زيت ساخن، على دفعات، حتى تصبح ذهبية ومقرمشة من كل الجهات. صفّيها على ورق ماص وقدّميها دافئة، مع صلصة حلوة حامضة للتغميس.",
+      zh: "将猪肉末与胡萝卜、洋葱、大蒜和四季豆（全部切得极细）放入碗中混合。加入打散的鸡蛋和酱油，充分搅拌至馅料黏合。将一勺馅料放在每张春卷皮靠近一边的位置。将皮紧紧卷起包住馅料，边卷边把两侧向内折。用少许水封住卷皮末端，使卷保持闭合。分批将春卷放入热油中炸至各面金黄酥脆。捞出沥干在厨房纸上，趁热搭配酸甜酱蘸食享用。",
+      ja: "豚ひき肉を、すべて非常に細かく刻んだにんじん、玉ねぎ、にんにく、さやいんげんとボウルで混ぜ合わせる。溶き卵と醤油を加え、具材がまとまるまでよく混ぜる。ルンピアの皮の端近くに具材を大さじ1杯のせる。具材の上から皮をきつく巻き、巻きながら両端を折り込む。皮の端を少量の水で留めて巻きが開かないようにする。熱い油で数回に分けて全面が黄金色でカリッとするまで揚げる。キッチンペーパーで油を切り、温かいうちに甘酸っぱいディップソースを添えて提供する。",
+      hi: "पिसे सूअर के मांस को गाजर, प्याज़, लहसुन और फ्रेंच बीन्स के साथ मिलाएं, सब बारीक कटे हुए, एक कटोरे में। फेंटा अंडा और सोया सॉस डालें, फिर तब तक मिलाएं जब तक भरावन एक साथ बंध न जाए। हर लुम्पिया रैपर पर एक किनारे के पास एक चम्मच भरावन रखें। भरावन के ऊपर रैपर को कसकर लपेटें, लपेटते हुए किनारों को अंदर मोड़ें। रैपर के सिरे को थोड़े पानी से सील करें ताकि रोल बंद रहे। रोल को गरम तेल में थोड़ा-थोड़ा करके तब तक तलें जब तक चारों तरफ से सुनहरा और कुरकुरा न हो जाए। टिशू पेपर पर निथारें और गरम परोसें, डुबोने के लिए मीठी-खट्टी चटनी के साथ।",
+      tr: "Kıyma domuz etini havuç, soğan, sarımsak ve taze fasulye ile birlikte bir kasede karıştırın, hepsi çok ince doğranmış olmalı. Çırpılmış yumurta ve soya sosunu ekleyin, ardından iç harç bir araya gelene kadar iyice karıştırın. Her lumpia yaprağının bir kenarına yakın bir kaşık iç harç koyun. Yaprağı iç harcın üzerinden sıkıca sarın, sarma sırasında kenarları içe katlayın. Rulonun kapalı kalması için yaprağın ucunu biraz suyla mühürleyin. Ruloları sıcak yağda parti parti her tarafı altın rengi ve çıtır olana kadar kızartın. Kağıt havlu üzerinde süzdürün ve tatlı-ekşi sosla birlikte sıcak servis edin.",
+      it: "Unisci in una ciotola il maiale macinato con carota, cipolla, aglio e fagiolini, tutti tritati molto finemente. Aggiungi l'uovo sbattuto e la salsa di soia, poi mescola bene finché il ripieno non si lega. Metti un cucchiaio di ripieno su ogni sfoglia per lumpia, vicino a un bordo. Arrotola la sfoglia stretta sul ripieno, piegando i lati man mano che arrotoli. Sigilla l'estremità della sfoglia con un po' d'acqua affinché l'involtino resti chiuso. Friggi gli involtini in olio caldo, a lotti, finché non sono dorati e croccanti su tutti i lati. Scola su carta assorbente e servi caldo, con salsa agrodolce per intingere.",
+      ko: "다진 돼지고기를 당근, 양파, 마늘, 깍지콩과 함께 그릇에 넣고 섞는데, 모두 아주 잘게 썬다. 푼 달걀과 간장을 넣고 속재료가 잘 뭉칠 때까지 섞는다. 룸피아 피 한 쪽 가장자리 가까이에 속재료를 한 숟갈 올린다. 속재료 위로 피를 단단히 말며 양옆을 안으로 접어 넣는다. 물을 살짝 발라 피 끝을 봉해 롤이 풀리지 않게 한다. 뜨거운 기름에 나누어 넣고 사방이 황금빛으로 바삭해질 때까지 튀긴다. 키친타월에 기름을 빼고 새콤달콤한 소스를 곁들여 따뜻할 때 낸다."
+    },
+    originText: {
+      ro: "Lumpia a ajuns în Filipine prin comercianții chinezi Hokkien, care au adus rulourile de primăvară cu secole în urmă, dar felul a fost complet adaptat gusturilor locale, devenind mai mic, mai crocant și servit cu sosuri specific filipineze, precum oțetul dulce sau banana ketchup. Denumirea provine chiar din cuvântul hokkien 'lunpia'.\n\nExistă zeci de variante regionale — de la lumpia proaspătă, neprăjită, din Batangas, la variantele umplute cu creveți sau legume — dar versiunea prăjită cu carne de porc rămâne cea mai populară la petreceri și sărbători, aproape întotdeauna prezentă pe masă.",
+      en: "Lumpia arrived in the Philippines through Hokkien Chinese traders, who brought spring rolls centuries ago, but the dish was fully adapted to local tastes, becoming smaller, crispier, and served with distinctly Filipino sauces like sweet vinegar or banana ketchup. The name comes directly from the Hokkien word 'lunpia'.\n\nThere are dozens of regional variants — from fresh, unfried lumpia from Batangas, to versions filled with shrimp or vegetables — but the fried pork version remains the most popular at parties and celebrations, almost always present on the table.",
+      es: "El lumpia llegó a Filipinas a través de comerciantes chinos hokkien, que trajeron los rollitos de primavera hace siglos, pero el plato se adaptó por completo a los gustos locales, volviéndose más pequeño, más crujiente y servido con salsas típicamente filipinas como el vinagre dulce o el ketchup de plátano. El nombre viene directamente de la palabra hokkien 'lunpia'.\n\nExisten decenas de variantes regionales —desde el lumpia fresco, sin freír, de Batangas, hasta versiones rellenas de camarones o verduras—, pero la versión frita de cerdo sigue siendo la más popular en fiestas y celebraciones, casi siempre presente en la mesa.",
+      fr: "Le lumpia est arrivé aux Philippines grâce aux commerçants chinois hokkien, qui ont apporté les rouleaux de printemps il y a des siècles, mais le plat a été entièrement adapté aux goûts locaux, devenant plus petit, plus croustillant et servi avec des sauces typiquement philippines comme le vinaigre sucré ou le ketchup de banane. Le nom vient directement du mot hokkien 'lunpia'.\n\nIl existe des dizaines de variantes régionales — du lumpia frais, non frit, de Batangas, aux versions farcies de crevettes ou de légumes — mais la version frite au porc reste la plus populaire lors des fêtes et célébrations, presque toujours présente sur la table.",
+      de: "Lumpia kam über Hokkien-chinesische Händler auf die Philippinen, die vor Jahrhunderten Frühlingsrollen mitbrachten, aber das Gericht wurde vollständig an den lokalen Geschmack angepasst, wurde kleiner, knuspriger und mit typisch philippinischen Saucen wie süßem Essig oder Bananenketchup serviert. Der Name kommt direkt vom Hokkien-Wort 'lunpia'.\n\nEs gibt Dutzende regionale Varianten — von frischem, ungebratenem Lumpia aus Batangas bis zu mit Garnelen oder Gemüse gefüllten Versionen — aber die gebratene Schweinefleisch-Version bleibt bei Partys und Feiern am beliebtesten und ist fast immer auf dem Tisch zu finden.",
+      pt: "O lumpia chegou às Filipinas através de comerciantes chineses hokkien, que trouxeram os rolinhos primavera há séculos, mas o prato foi totalmente adaptado aos gostos locais, tornando-se mais pequeno, mais crocante e servido com molhos tipicamente filipinos como o vinagre doce ou o ketchup de banana. O nome vem diretamente da palavra hokkien 'lunpia'.\n\nExistem dezenas de variantes regionais — do lumpia fresco, não frito, de Batangas, a versões recheadas com camarão ou legumes — mas a versão frita de porco continua a ser a mais popular em festas e celebrações, quase sempre presente na mesa.",
+      ru: "Лумпия попала на Филиппины через китайских торговцев хоккиен, которые привезли спринг-роллы много веков назад, но блюдо было полностью адаптировано под местные вкусы, став меньше, более хрустящим и подаваемым с типично филиппинскими соусами, такими как сладкий уксус или банановый кетчуп. Название происходит непосредственно от хоккиенского слова «lunpia».\n\nСуществуют десятки региональных вариантов — от свежей, не жареной лумпии из Батангаса до версий с креветками или овощами, — но жареный вариант со свининой остаётся самым популярным на вечеринках и праздниках, почти всегда присутствуя на столе.",
+      ar: "وصلت اللومبيا إلى الفلبين عبر التجار الصينيين من الهوكيان، الذين جلبوا لفائف الربيع منذ قرون، لكن الطبق تكيّف بالكامل مع الأذواق المحلية، فأصبح أصغر وأكثر قرمشة ويُقدَّم مع صلصات فلبينية مميزة مثل الخل الحلو أو كاتشب الموز. يأتي الاسم مباشرة من الكلمة الهوكيانية 'lunpia'.\n\nهناك عشرات الأنواع الإقليمية — من اللومبيا الطازجة غير المقلية من باتانغاس، إلى النسخ المحشوة بالروبيان أو الخضار — لكن النسخة المقلية بلحم الخنزير تبقى الأكثر شعبية في الحفلات والاحتفالات، وتكاد تكون حاضرة دائماً على المائدة.",
+      zh: "春卷通过福建华商传入菲律宾，他们几个世纪前带来了春卷，但这道菜完全适应了当地口味，变得更小、更酥脆，并配以典型的菲律宾酱汁，如甜醋或香蕉番茄酱。这个名字直接来自闽南语单词'lunpia'。\n\n菲律宾各地有数十种地方变体——从巴塘加斯的新鲜不炸春卷，到虾仁或蔬菜馅的版本——但炸猪肉馅版本仍然是聚会和庆典上最受欢迎的，几乎总能在餐桌上见到。",
+      ja: "ルンピアは福建系中国人商人によってフィリピンにもたらされ、彼らは何世紀も前に春巻きを持ち込んだが、この料理は完全に現地の味覚に合わせて改変され、より小さく、よりカリッとして、甘い酢やバナナケチャップといった典型的なフィリピンのソースと共に提供されるようになった。名前は福建語の『lunpia』に直接由来する。\n\nバタンガス地方の揚げていない新鮮なルンピアから、エビや野菜を詰めたバージョンまで、数十種類の地方バリエーションがあるが、揚げた豚肉のバージョンがパーティーや祝い事で最も人気があり、テーブルにほぼ必ず登場する。",
+      hi: "लुम्पिया फिलीपींस में होक्कियन चीनी व्यापारियों के माध्यम से आया, जो सदियों पहले स्प्रिंग रोल लाए, लेकिन यह व्यंजन स्थानीय स्वाद के अनुसार पूरी तरह बदल गया, छोटा, अधिक कुरकुरा और मीठे सिरके या केले की केचप जैसी विशिष्ट फिलीपीनी चटनियों के साथ परोसा जाने लगा। नाम सीधे होक्कियन शब्द 'लुनपिया' से आया है।\n\nदर्जनों क्षेत्रीय विविधताएं हैं — बटांगस के ताज़े, बिना तले लुम्पिया से लेकर झींगे या सब्ज़ियों से भरे संस्करणों तक — लेकिन तला हुआ सूअर के मांस वाला संस्करण पार्टियों और समारोहों में सबसे लोकप्रिय बना हुआ है, लगभग हमेशा मेज़ पर मौजूद।",
+      tr: "Lumpia, yüzyıllar önce baharat rulolarını getiren Hokkien Çinli tüccarlar aracılığıyla Filipinler'e ulaştı, ancak yemek tamamen yerel damak zevkine uyarlandı, daha küçük, daha çıtır hale geldi ve tatlı sirke veya muz ketçabı gibi belirgin Filipin soslarıyla servis edildi. İsim doğrudan Hokkien kelimesi 'lunpia'dan gelir.\n\nBatangas'ın taze, kızartılmamış lumpiasından karides veya sebzeli versiyonlara kadar düzinelerce bölgesel çeşit vardır, ancak kızartılmış domuz eti versiyonu partilerde ve kutlamalarda en popüler olmaya devam ediyor, neredeyse her zaman masada hazır bulunuyor.",
+      it: "Il lumpia arrivò nelle Filippine grazie ai commercianti cinesi Hokkien, che portarono gli involtini primavera secoli fa, ma il piatto fu completamente adattato ai gusti locali, diventando più piccolo, più croccante e servito con salse tipicamente filippine come l'aceto dolce o il ketchup di banana. Il nome deriva direttamente dalla parola Hokkien 'lunpia'.\n\nEsistono decine di varianti regionali — dal lumpia fresco, non fritto, di Batangas, a versioni ripiene di gamberetti o verdure — ma la versione fritta con maiale resta la più popolare durante feste e celebrazioni, quasi sempre presente in tavola.",
+      ko: "룸피아는 수 세기 전 스프링롤을 가져온 호키엔계 중국 상인들을 통해 필리핀에 전해졌지만, 이 요리는 현지 입맛에 완전히 맞춰져 더 작고 더 바삭해졌으며 달콤한 식초나 바나나 케첩 같은 전형적인 필리핀 소스와 함께 제공되었다. 이름은 호키엔어 단어 'lunpia'에서 직접 유래했다.\n\n바탕가스의 신선한 튀기지 않은 룸피아부터 새우나 채소를 채운 버전까지 수십 가지 지역별 변형이 있지만, 튀긴 돼지고기 버전이 파티와 축하 행사에서 가장 인기 있으며 거의 항상 식탁에 오른다."
+    }
+  },
+  {
+    id: 437,
+    servings: 4,
+    tipType: "dessert",
+    pairingsType: "dessert",
+    nutrition: { cal: 360, prot: 6, carb: 62, fat: 11, fib: 3 },
+    origin: {
+      ro: "Filipine", en: "Philippines", es: "Filipinas", fr: "Philippines", de: "Philippinen",
+      pt: "Filipinas", ru: "Филиппины", ar: "الفلبين", zh: "菲律宾", ja: "フィリピン",
+      hi: "फिलीपींस", tr: "Filipinler", it: "Filippine", ko: "필리핀"
+    },
+    name: {
+      ro: "Halo-Halo", en: "Halo-Halo", es: "Halo-Halo", fr: "Halo-Halo", de: "Halo-Halo",
+      pt: "Halo-Halo", ru: "Хало-хало", ar: "هالو هالو", zh: "哈罗哈罗刨冰", ja: "ハロハロ",
+      hi: "हालो-हालो", tr: "Halo-Halo", it: "Halo-Halo", ko: "할로할로"
+    },
+    category: {
+      ro: "Desert", en: "Dessert", es: "Postre", fr: "Dessert", de: "Dessert",
+      pt: "Sobremesa", ru: "Десерт", ar: "حلوى", zh: "甜点", ja: "デザート",
+      hi: "मिठाई", tr: "Tatlı", it: "Dolce", ko: "디저트"
+    },
+    featureCards: {
+      ro: [
+        { icon: "🍧", t: "Numele înseamnă 'amestecă-amestecă'", d: "Halo-Halo se traduce literal 'amestec amestec', invitația de a combina toate straturile înainte de a mânca." },
+        { icon: "🫘", t: "Fasole dulce în loc de fructe", d: "Fasole roșie sau năut dulce, gătite cu zahăr, dau desertului o textură cremoasă neobișnuită." },
+        { icon: "🧊", t: "Gheața rasă fină, baza tuturor", d: "Gheața zdrobită mărunt umple paharul, topindu-se treptat și amestecându-se cu laptele condensat." },
+        { icon: "🍨", t: "Ube și flan încheie desertul", d: "O bilă de înghețată de ube violet și o felie de flan de ou se așază deasupra, ca elemente decorative și gustoase." }
+      ],
+      en: [
+        { icon: "🍧", t: "The name means 'mix-mix'", d: "Halo-halo literally translates to 'mix mix', an invitation to stir all the layers together before eating." },
+        { icon: "🫘", t: "Sweet beans instead of fruit", d: "Sweetened red beans or chickpeas, cooked in sugar, give the dessert an unusual creamy texture." },
+        { icon: "🧊", t: "Finely shaved ice is the base", d: "Finely shaved ice fills the glass, gradually melting and mixing with the condensed milk." },
+        { icon: "🍨", t: "Ube and flan finish the dessert", d: "A scoop of purple ube ice cream and a slice of egg flan sit on top, as both decoration and flavour." }
+      ],
+      es: [
+        { icon: "🍧", t: "El nombre significa 'mezcla-mezcla'", d: "Halo-halo se traduce literalmente como 'mezcla mezcla', una invitación a revolver todas las capas antes de comer." },
+        { icon: "🫘", t: "Frijoles dulces en lugar de fruta", d: "Frijoles rojos o garbanzos endulzados, cocidos con azúcar, dan al postre una textura cremosa poco habitual." },
+        { icon: "🧊", t: "El hielo raspado fino es la base", d: "El hielo raspado fino llena el vaso, derritiéndose gradualmente y mezclándose con la leche condensada." },
+        { icon: "🍨", t: "El ube y el flan rematan el postre", d: "Una bola de helado de ube morado y una rebanada de flan de huevo se colocan encima, como decoración y sabor." }
+      ],
+      fr: [
+        { icon: "🍧", t: "Le nom signifie 'mélange-mélange'", d: "Halo-halo se traduit littéralement par 'mélange mélange', une invitation à remuer toutes les couches avant de manger." },
+        { icon: "🫘", t: "Des haricots sucrés au lieu de fruits", d: "Des haricots rouges ou des pois chiches sucrés, cuits dans du sucre, donnent au dessert une texture crémeuse inhabituelle." },
+        { icon: "🧊", t: "La glace pilée fine forme la base", d: "De la glace finement pilée remplit le verre, fondant progressivement et se mélangeant au lait concentré." },
+        { icon: "🍨", t: "L'ube et le flan terminent le dessert", d: "Une boule de glace à l'ube violette et une tranche de flan à l'œuf sont posées dessus, à la fois décoration et saveur." }
+      ],
+      de: [
+        { icon: "🍧", t: "Der Name bedeutet 'misch-misch'", d: "Halo-halo bedeutet wörtlich 'misch misch', eine Aufforderung, alle Schichten vor dem Essen zusammenzurühren." },
+        { icon: "🫘", t: "Süße Bohnen statt Obst", d: "Gesüßte rote Bohnen oder Kichererbsen, in Zucker gekocht, geben dem Dessert eine ungewöhnlich cremige Textur." },
+        { icon: "🧊", t: "Fein geschabtes Eis bildet die Basis", d: "Fein geschabtes Eis füllt das Glas, schmilzt allmählich und vermischt sich mit der Kondensmilch." },
+        { icon: "🍨", t: "Ube und Flan runden das Dessert ab", d: "Eine Kugel lila Ube-Eis und eine Scheibe Ei-Flan liegen obenauf, als Dekoration und Geschmack zugleich." }
+      ],
+      pt: [
+        { icon: "🍧", t: "O nome significa 'mistura-mistura'", d: "Halo-halo traduz-se literalmente como 'mistura mistura', um convite a mexer todas as camadas antes de comer." },
+        { icon: "🫘", t: "Feijão doce em vez de fruta", d: "Feijão vermelho ou grão-de-bico adoçado, cozinhado em açúcar, dá à sobremesa uma textura cremosa incomum." },
+        { icon: "🧊", t: "O gelo raspado fino é a base", d: "Gelo raspado fino enche o copo, derretendo gradualmente e misturando-se com o leite condensado." },
+        { icon: "🍨", t: "Ube e flan terminam a sobremesa", d: "Uma bola de gelado de ube roxo e uma fatia de flan de ovo ficam por cima, tanto como decoração como sabor." }
+      ],
+      ru: [
+        { icon: "🍧", t: "Название означает «мешай-мешай»", d: "Хало-хало буквально переводится как «мешай мешай» — приглашение перемешать все слои перед едой." },
+        { icon: "🫘", t: "Сладкая фасоль вместо фруктов", d: "Подслащённая красная фасоль или нут, сваренные в сахаре, придают десерту необычную кремовую текстуру." },
+        { icon: "🧊", t: "Мелко колотый лёд — основа", d: "Мелко колотый лёд заполняет стакан, постепенно тая и смешиваясь со сгущённым молоком." },
+        { icon: "🍨", t: "Убе и флан завершают десерт", d: "Шарик фиолетового мороженого убе и кусочек яичного флана лежат сверху — и для украшения, и для вкуса." }
+      ],
+      ar: [
+        { icon: "🍧", t: "الاسم يعني 'اخلط-اخلط'", d: "تُترجم هالو هالو حرفياً إلى 'اخلط اخلط'، دعوة لتقليب كل الطبقات معاً قبل الأكل." },
+        { icon: "🫘", t: "فاصولياء حلوة بدلاً من الفاكهة", d: "الفاصولياء الحمراء أو الحمص المحلى المطهو بالسكر يمنح الحلوى قواماً كريمياً غير معتاد." },
+        { icon: "🧊", t: "الثلج المبشور الناعم هو الأساس", d: "يملأ الثلج المبشور الناعم الكأس، ويذوب تدريجياً ويمتزج مع الحليب المكثف." },
+        { icon: "🍨", t: "الأوبي والفلان يختمان الحلوى", d: "توضع كرة من آيس كريم الأوبي البنفسجي وشريحة من الفلان بالبيض فوقها، كزينة ونكهة معاً." }
+      ],
+      zh: [
+        { icon: "🍧", t: "名字意为'混合-混合'", d: "哈罗哈罗字面意思是'混合混合'，邀请食用者在吃之前将所有层次搅拌在一起。" },
+        { icon: "🫘", t: "甜豆代替水果", d: "用糖煮过的甜红豆或鹰嘴豆为甜点带来一种不同寻常的绵密口感。" },
+        { icon: "🧊", t: "细碎刨冰是基底", d: "细碎的刨冰填满杯子，逐渐融化并与炼乳混合。" },
+        { icon: "🍨", t: "紫薯冰淇淋和布丁点睛", d: "一勺紫色紫薯冰淇淋和一片鸡蛋布丁放在最上层，既是装饰也增添风味。" }
+      ],
+      ja: [
+        { icon: "🍧", t: "名前は「混ぜ混ぜ」を意味する", d: "ハロハロは文字通り「混ぜる混ぜる」を意味し、食べる前にすべての層をかき混ぜる合図だ。" },
+        { icon: "🫘", t: "フルーツの代わりに甘い豆", d: "砂糖で煮た甘い赤豆やひよこ豆が、デザートに独特のクリーミーな食感を与える。" },
+        { icon: "🧊", t: "細かい削り氷が土台", d: "細かく削った氷がグラスを満たし、徐々に溶けてコンデンスミルクと混ざり合う。" },
+        { icon: "🍨", t: "ウベとフランが仕上げ", d: "紫色のウベアイスクリームのスクープと卵フランのスライスが上にのり、飾りと風味を兼ねる。" }
+      ],
+      hi: [
+        { icon: "🍧", t: "नाम का मतलब है 'मिक्स-मिक्स'", d: "हालो-हालो का शाब्दिक अर्थ है 'मिक्स मिक्स', खाने से पहले सभी परतों को मिलाने का न्योता।" },
+        { icon: "🫘", t: "फल के बजाय मीठी फलियां", d: "चीनी में पकी मीठी राजमा या छोले मिठाई को एक असामान्य मलाईदार बनावट देते हैं।" },
+        { icon: "🧊", t: "बारीक कुटी बर्फ आधार है", d: "बारीक कुटी बर्फ गिलास भर देती है, धीरे-धीरे पिघलकर कंडेंस्ड मिल्क के साथ मिल जाती है।" },
+        { icon: "🍨", t: "उबे और फ्लान मिठाई को पूरा करते हैं", d: "बैंगनी उबे आइसक्रीम का एक स्कूप और अंडे के फ्लान की एक स्लाइस ऊपर रखी जाती है, सजावट और स्वाद दोनों के लिए।" }
+      ],
+      tr: [
+        { icon: "🍧", t: "İsim 'karıştır-karıştır' anlamına gelir", d: "Halo-halo tam anlamıyla 'karıştır karıştır' demektir, yemeden önce tüm katmanları karıştırma daveti." },
+        { icon: "🫘", t: "Meyve yerine tatlı fasulye", d: "Şekerde pişirilmiş tatlı kırmızı fasulye veya nohut, tatlıya alışılmadık kremamsı bir doku verir." },
+        { icon: "🧊", t: "İnce kıyılmış buz temeldir", d: "İnce kıyılmış buz bardağı doldurur, yavaşça eriyerek yoğunlaştırılmış sütle karışır." },
+        { icon: "🍨", t: "Ube ve flan tatlıyı tamamlar", d: "Mor renkli ube dondurmasından bir top ve bir dilim yumurta flanı üzerine konur, hem süs hem lezzet olarak." }
+      ],
+      it: [
+        { icon: "🍧", t: "Il nome significa 'mescola-mescola'", d: "Halo-halo si traduce letteralmente 'mescola mescola', un invito a mescolare tutti gli strati prima di mangiare." },
+        { icon: "🫘", t: "Fagioli dolci al posto della frutta", d: "Fagioli rossi dolcificati o ceci, cotti nello zucchero, danno al dolce una texture cremosa insolita." },
+        { icon: "🧊", t: "Il ghiaccio grattugiato fine è la base", d: "Il ghiaccio grattugiato finemente riempie il bicchiere, sciogliendosi gradualmente e mescolandosi al latte condensato." },
+        { icon: "🍨", t: "Ube e flan concludono il dolce", d: "Una pallina di gelato all'ube viola e una fetta di flan all'uovo si posano sopra, come decorazione e sapore." }
+      ],
+      ko: [
+        { icon: "🍧", t: "이름의 뜻은 '섞어-섞어'", d: "할로할로는 문자 그대로 '섞어 섞어'라는 뜻으로, 먹기 전에 모든 층을 함께 저으라는 초대다." },
+        { icon: "🫘", t: "과일 대신 달콤한 콩", d: "설탕에 조린 단팥이나 병아리콩이 디저트에 독특한 크리미한 식감을 더한다." },
+        { icon: "🧊", t: "곱게 간 얼음이 바탕", d: "곱게 간 얼음이 컵을 채우고 서서히 녹으며 연유와 섞인다." },
+        { icon: "🍨", t: "우베와 플란이 마무리", d: "보라색 우베 아이스크림 한 스쿱과 에그 플란 한 조각이 위에 올라가 장식이자 맛의 포인트가 된다." }
+      ]
+    },
+    ingredients: {
+      ro: ["500g gheață rasă fin", "150g fasole roșie dulce, fiartă", "150g năut dulce, fiert", "100g cuburi de jeleu colorat (gulaman)", "200ml lapte condensat îndulcit", "100ml lapte evaporat", "2 banane plantain coapte, feliate și caramelizate", "4 lingurițe înghețată de ube", "4 felii de flan de ou (leche flan)"],
+      en: ["500g finely shaved ice", "150g sweetened red beans, cooked", "150g sweetened chickpeas, cooked", "100g colourful gelatin cubes (gulaman)", "200ml sweetened condensed milk", "100ml evaporated milk", "2 ripe plantain bananas, sliced and caramelised", "4 scoops ube ice cream", "4 slices egg flan (leche flan)"],
+      es: ["500g de hielo raspado fino", "150g de frijoles rojos endulzados, cocidos", "150g de garbanzos endulzados, cocidos", "100g de cubos de gelatina de colores (gulaman)", "200ml de leche condensada azucarada", "100ml de leche evaporada", "2 plátanos maduros, en rodajas y caramelizados", "4 bolas de helado de ube", "4 rebanadas de flan de huevo (leche flan)"],
+      fr: ["500g de glace finement pilée", "150g de haricots rouges sucrés, cuits", "150g de pois chiches sucrés, cuits", "100g de cubes de gélatine colorée (gulaman)", "200ml de lait concentré sucré", "100ml de lait évaporé", "2 bananes plantains mûres, tranchées et caramélisées", "4 boules de glace à l'ube", "4 tranches de flan à l'œuf (leche flan)"],
+      de: ["500g fein geschabtes Eis", "150g gesüßte rote Bohnen, gekocht", "150g gesüßte Kichererbsen, gekocht", "100g bunte Gelatinewürfel (Gulaman)", "200ml gesüßte Kondensmilch", "100ml Kondensmilch (unges.), evaporiert", "2 reife Kochbananen, in Scheiben und karamellisiert", "4 Kugeln Ube-Eis", "4 Scheiben Ei-Flan (Leche Flan)"],
+      pt: ["500g de gelo raspado fino", "150g de feijão vermelho adoçado, cozido", "150g de grão-de-bico adoçado, cozido", "100g de cubos de gelatina colorida (gulaman)", "200ml de leite condensado adoçado", "100ml de leite evaporado", "2 bananas-da-terra maduras, fatiadas e caramelizadas", "4 bolas de gelado de ube", "4 fatias de flan de ovo (leche flan)"],
+      ru: ["500г мелко колотого льда", "150г подслащённой красной фасоли, варёной", "150г подслащённого нута, варёного", "100г цветных кубиков желе (гуламан)", "200мл подслащённого сгущённого молока", "100мл сгущённого молока без сахара", "2 спелых банана плантана, нарезанных и карамелизированных", "4 шарика мороженого убе", "4 ломтика яичного флана (leche flan)"],
+      ar: ["500غ ثلج مبشور ناعم", "150غ فاصولياء حمراء محلاة، مطهوة", "150غ حمص محلى، مطهو", "100غ مكعبات جيلاتين ملونة (غولامان)", "200مل حليب مكثف محلى", "100مل حليب مبخر", "2 موز جنة ناضج، مقطع شرائح ومكرمل", "4 كرات آيس كريم الأوبي", "4 شرائح فلان بالبيض (ليتشي فلان)"],
+      zh: ["500克细碎刨冰", "150克糖煮红豆", "150克糖煮鹰嘴豆", "100克彩色果冻块（gulaman）", "200毫升甜炼乳", "100毫升淡奶", "2根成熟大蕉，切片并焦糖化", "4勺紫薯冰淇淋", "4片鸡蛋布丁（leche flan）"],
+      ja: ["細かい削り氷500g", "甘く煮た赤豆150g", "甘く煮たひよこ豆150g", "カラフルなゼリーキューブ（グラマン）100g", "加糖練乳200ml", "エバミルク100ml", "熟したプランテンバナナ2本（スライスしてキャラメリゼ）", "ウベアイスクリーム4スクープ", "卵フラン（レチェフラン）4切れ"],
+      hi: ["500 ग्राम बारीक कुटी बर्फ", "150 ग्राम मीठी राजमा, पकी हुई", "150 ग्राम मीठे छोले, पके हुए", "100 ग्राम रंगीन जेलाटिन क्यूब्स (गुलामान)", "200 मिली मीठा कंडेंस्ड मिल्क", "100 मिली एवापोरेटेड मिल्क", "2 पके प्लांटेन केले, कटे और कैरामलाइज़्ड", "4 स्कूप उबे आइसक्रीम", "4 स्लाइस अंडे का फ्लान (लेचे फ्लान)"],
+      tr: ["500g ince kıyılmış buz", "150g şekerlenmiş kırmızı fasulye, pişmiş", "150g şekerlenmiş nohut, pişmiş", "100g renkli jelatin küpleri (gulaman)", "200ml şekerli koyulaştırılmış süt", "100ml buharlaştırılmış süt", "2 olgun muz plantain, dilimlenmiş ve karamelize edilmiş", "4 top ube dondurması", "4 dilim yumurta flanı (leche flan)"],
+      it: ["500g di ghiaccio grattugiato fine", "150g di fagioli rossi zuccherati, cotti", "150g di ceci zuccherati, cotti", "100g di cubetti di gelatina colorata (gulaman)", "200ml di latte condensato zuccherato", "100ml di latte evaporato", "2 banane platano mature, a fette e caramellate", "4 palline di gelato all'ube", "4 fette di flan all'uovo (leche flan)"],
+      ko: ["곱게 간 얼음 500g", "설탕에 조린 팥 150g, 익힌 것", "설탕에 조린 병아리콩 150g, 익힌 것", "다채로운 젤라틴 큐브 100g (굴라만)", "가당 연유 200ml", "에바밀크 100ml", "잘 익은 플랜테인 바나나 2개, 슬라이스 후 캐러멜라이즈", "우베 아이스크림 4스쿱", "에그 플란 4조각 (레체 플란)"]
+    },
+    howIsMade: {
+      ro: "Se rade gheața fin, folosind un aparat special sau un blender, până devine pufoasă și fină ca zăpada. Se caramelizează bananele plantain feliate într-o tigaie cu puțin zahăr, până se rumenesc. Se așază câte un strat de fasole roșie dulce și de năut dulce pe fundul fiecărui pahar înalt. Se adaugă cuburile de jeleu colorat deasupra fasolei. Se umple paharul aproape până sus cu gheața rasă fin, presată ușor. Se toarnă generos lapte condensat și lapte evaporat peste gheață, lăsând să se scurgă printre straturi. Se termină cu o bilă de înghețată de ube și o felie de flan deasupra, apoi se amestecă totul bine înainte de a mânca.",
+      en: "Shave the ice finely, using a special machine or a blender, until it becomes fluffy and snow-like. Caramelise the sliced plantains in a pan with a little sugar until browned. Layer the sweet red beans and sweet chickpeas at the bottom of each tall glass. Add the colourful gelatin cubes on top of the beans. Fill the glass almost to the top with the finely shaved ice, pressed down lightly. Pour condensed milk and evaporated milk generously over the ice, letting it trickle through the layers. Finish with a scoop of ube ice cream and a slice of flan on top, then mix everything together well before eating.",
+      es: "Ralla el hielo fino, usando una máquina especial o una licuadora, hasta que quede esponjoso como nieve. Caramelice los plátanos en rodajas en una sartén con un poco de azúcar hasta que se doren. Coloca en capas los frijoles rojos dulces y los garbanzos dulces en el fondo de cada vaso alto. Añade los cubos de gelatina de colores encima de los frijoles. Llena el vaso casi hasta arriba con el hielo raspado fino, presionado ligeramente. Vierte generosamente leche condensada y leche evaporada sobre el hielo, dejando que se filtre entre las capas. Termina con una bola de helado de ube y una rebanada de flan encima, luego mezcla todo bien antes de comer.",
+      fr: "Râpez la glace finement, à l'aide d'une machine spéciale ou d'un mixeur, jusqu'à ce qu'elle devienne aérée comme de la neige. Caramélisez les bananes plantains tranchées dans une poêle avec un peu de sucre jusqu'à ce qu'elles dorent. Disposez les haricots rouges sucrés et les pois chiches sucrés au fond de chaque grand verre. Ajoutez les cubes de gélatine colorée sur les haricots. Remplissez le verre presque jusqu'en haut avec la glace finement pilée, légèrement tassée. Versez généreusement du lait concentré et du lait évaporé sur la glace, en le laissant s'infiltrer entre les couches. Terminez avec une boule de glace à l'ube et une tranche de flan dessus, puis mélangez bien le tout avant de manger.",
+      de: "Das Eis fein raspeln, mit einer speziellen Maschine oder einem Mixer, bis es locker und schneeähnlich wird. Die geschnittenen Kochbananen in einer Pfanne mit etwas Zucker karamellisieren, bis sie braun sind. Die süßen roten Bohnen und süßen Kichererbsen unten in jedes hohe Glas schichten. Die bunten Gelatinewürfel oben auf die Bohnen geben. Das Glas fast bis zum Rand mit dem fein geschabten Eis füllen, leicht angedrückt. Kondensmilch und Kondensmilch (unges.) großzügig über das Eis gießen und zwischen die Schichten sickern lassen. Mit einer Kugel Ube-Eis und einer Scheibe Flan obenauf abschließen, dann alles vor dem Essen gut vermischen.",
+      pt: "Raspe o gelo fino, usando uma máquina especial ou um liquidificador, até ficar fofo como neve. Caramelize as bananas-da-terra fatiadas numa frigideira com um pouco de açúcar até dourarem. Coloque em camadas o feijão vermelho doce e o grão-de-bico doce no fundo de cada copo alto. Adicione os cubos de gelatina colorida por cima do feijão. Encha o copo quase até ao topo com o gelo raspado fino, pressionado levemente. Regue generosamente com leite condensado e leite evaporado sobre o gelo, deixando escorrer entre as camadas. Termine com uma bola de gelado de ube e uma fatia de flan por cima, depois misture tudo bem antes de comer.",
+      ru: "Мелко натрите лёд с помощью специального аппарата или блендера, пока он не станет пушистым, как снег. Карамелизируйте нарезанные бананы плантан на сковороде с небольшим количеством сахара до румяности. Выложите сладкую красную фасоль и сладкий нут слоями на дно каждого высокого стакана. Добавьте цветные кубики желе поверх фасоли. Заполните стакан почти доверху мелко колотым льдом, слегка утрамбовав. Щедро полейте лёд сгущённым и сгущённым без сахара молоком, давая ему просочиться между слоями. Завершите шариком мороженого убе и ломтиком флана сверху, затем хорошо всё перемешайте перед едой.",
+      ar: "ابشري الثلج ناعماً، باستخدام جهاز خاص أو خلاط، حتى يصبح خفيفاً كالثلج. كرملي شرائح موز الجنة في مقلاة مع قليل من السكر حتى تصبح ذهبية. رتّبي الفاصولياء الحمراء المحلاة والحمص المحلى في قاع كل كأس طويل. أضيفي مكعبات الجيلاتين الملونة فوق الفاصولياء. املئي الكأس حتى القمة تقريباً بالثلج المبشور الناعم، مع الضغط عليه بلطف. اسكبي الحليب المكثف والحليب المبخر بسخاء فوق الثلج، تاركة إياه يتسرب بين الطبقات. أنهي الطبق بكرة من آيس كريم الأوبي وشريحة من الفلان فوقها، ثم اخلطي كل شيء جيداً قبل الأكل.",
+      zh: "使用专用刨冰机或搅拌机将冰刨得细碎，直至蓬松如雪。将切片车前蕉在锅中加少许糖焦糖化至金黄色。将甜红豆和甜鹰嘴豆铺在每个高玻璃杯底部。在豆子上方加入彩色果冻块。将细碎刨冰几乎装满杯子，轻轻压实。慷慨地在冰上淋上炼乳和淡奶，让其渗透各层。最后在顶部放一勺紫薯冰淇淋和一片布丁，享用前将所有材料充分拌匀。",
+      ja: "専用の機械やブレンダーを使って氷を細かく削り、雪のようにふわふわにする。スライスしたプランテンバナナを少量の砂糖でフライパンで色づくまでキャラメリゼする。甘い赤豆と甘いひよこ豆を各背の高いグラスの底に層にする。豆の上にカラフルなゼリーキューブを加える。細かい削り氷を軽く押さえながらグラスの上近くまで満たす。練乳とエバミルクをたっぷりと氷にかけ、層の間にしみ込ませる。最後にウベアイスクリームのスクープとフランのスライスをのせ、食べる前によくかき混ぜる。",
+      hi: "बर्फ को बारीक कद्दूकस करें, विशेष मशीन या ब्लेंडर का उपयोग करके, जब तक बर्फ की तरह फूली न हो जाए। कटे प्लांटेन केलों को थोड़ी चीनी के साथ पैन में सुनहरा होने तक कैरामलाइज़ करें। हर लंबे गिलास के तले में मीठी राजमा और मीठे छोले की परत बिछाएं। फलियों के ऊपर रंगीन जेलाटिन क्यूब्स डालें। गिलास को लगभग ऊपर तक बारीक कुटी बर्फ से भरें, हल्के से दबाते हुए। बर्फ पर भरपूर कंडेंस्ड मिल्क और एवापोरेटेड मिल्क डालें, इसे परतों के बीच बहने दें। ऊपर उबे आइसक्रीम का एक स्कूप और फ्लान की एक स्लाइस से खत्म करें, फिर खाने से पहले सब कुछ अच्छी तरह मिलाएं।",
+      tr: "Buzu özel bir makine veya blender kullanarak kar gibi kabarık olana kadar ince ince kazıyın. Dilimlenmiş plantain muzları bir tavada biraz şekerle kahverengileşene kadar karamelize edin. Tatlı kırmızı fasulyeyi ve tatlı nohudu her uzun bardağın dibine katman katman koyun. Fasulyelerin üzerine renkli jelatin küplerini ekleyin. Bardağı hafifçe bastırarak neredeyse tepeye kadar ince kıyılmış buzla doldurun. Koyulaştırılmış süt ve buharlaştırılmış sütü buzun üzerine bolca dökerek katmanlar arasına sızmasını sağlayın. Üzerine bir top ube dondurması ve bir dilim flan ile bitirin, ardından yemeden önce her şeyi iyice karıştırın.",
+      it: "Grattugia il ghiaccio finemente, usando una macchina speciale o un frullatore, finché non diventa soffice come neve. Caramella le banane platano a fette in padella con un po' di zucchero finché non si dorano. Disponi a strati i fagioli rossi dolci e i ceci dolci sul fondo di ogni bicchiere alto. Aggiungi i cubetti di gelatina colorata sopra i fagioli. Riempi il bicchiere quasi fino all'orlo con il ghiaccio grattugiato fine, pressato leggermente. Versa generosamente latte condensato e latte evaporato sul ghiaccio, lasciando che filtri tra gli strati. Termina con una pallina di gelato all'ube e una fetta di flan sopra, poi mescola bene il tutto prima di mangiare.",
+      ko: "특수 기계나 블렌더를 사용해 얼음을 눈처럼 푹신하게 곱게 간다. 슬라이스한 플랜테인 바나나를 팬에 설탕을 약간 넣고 갈색이 될 때까지 캐러멜라이즈한다. 각 긴 잔 바닥에 단팥과 단 병아리콩을 층층이 놓는다. 콩 위에 다채로운 젤라틴 큐브를 넣는다. 곱게 간 얼음을 가볍게 눌러가며 잔 거의 끝까지 채운다. 연유와 에바밀크를 얼음 위에 넉넉히 부어 층 사이로 스며들게 한다. 마지막으로 우베 아이스크림 한 스쿱과 플란 한 조각을 얹고 먹기 전에 모든 것을 잘 섞는다."
+    },
+    originText: {
+      ro: "Halo-halo își are rădăcinile într-un desert simplu adus de imigranții japonezi în Filipine la începutul secolului XX, numit 'mongo-ya', care combina doar gheață, fasole dulce și lapte. De-a lungul deceniilor, filipinezii au adăugat treptat tot mai multe ingrediente locale — jeleuri, fructe conservate, ube, flan — până a devenit desertul stratificat complex de astăzi.\n\nAstăzi halo-halo e considerat desertul național neoficial al Filipinelor, cel mai căutat în lunile de vară toride, iar fiecare familie sau restaurant are propria combinație preferată de ingrediente adăugate peste baza de gheață și lapte.",
+      en: "Halo-halo has its roots in a simple dessert brought by Japanese immigrants to the Philippines in the early 20th century, called 'mongo-ya', which combined just ice, sweet beans, and milk. Over the decades, Filipinos gradually added more and more local ingredients — jellies, preserved fruits, ube, flan — until it became today's complex layered dessert.\n\nToday halo-halo is considered the unofficial national dessert of the Philippines, most sought after during the scorching summer months, and every family or restaurant has its own favourite combination of add-ins over the ice and milk base.",
+      es: "El halo-halo tiene sus raíces en un postre sencillo traído por inmigrantes japoneses a Filipinas a principios del siglo XX, llamado 'mongo-ya', que combinaba solo hielo, frijoles dulces y leche. Con las décadas, los filipinos fueron añadiendo cada vez más ingredientes locales —gelatinas, frutas conservadas, ube, flan— hasta convertirse en el complejo postre en capas de hoy.\n\nHoy el halo-halo se considera el postre nacional no oficial de Filipinas, el más buscado durante los meses de verano abrasador, y cada familia o restaurante tiene su propia combinación favorita de ingredientes sobre la base de hielo y leche.",
+      fr: "Le halo-halo trouve ses racines dans un dessert simple apporté aux Philippines par des immigrants japonais au début du XXe siècle, appelé 'mongo-ya', qui combinait seulement de la glace, des haricots sucrés et du lait. Au fil des décennies, les Philippins ont progressivement ajouté de plus en plus d'ingrédients locaux — gelées, fruits conservés, ube, flan — jusqu'à devenir le dessert en couches complexe d'aujourd'hui.\n\nAujourd'hui, le halo-halo est considéré comme le dessert national non officiel des Philippines, le plus recherché pendant les mois d'été torrides, et chaque famille ou restaurant a sa propre combinaison préférée d'ingrédients sur la base de glace et de lait.",
+      de: "Halo-halo hat seine Wurzeln in einem einfachen Dessert, das japanische Einwanderer Anfang des 20. Jahrhunderts auf die Philippinen brachten, genannt 'mongo-ya', das nur aus Eis, süßen Bohnen und Milch bestand. Im Laufe der Jahrzehnte fügten die Filipinos nach und nach immer mehr lokale Zutaten hinzu — Gelees, eingelegte Früchte, Ube, Flan — bis es zu dem komplexen geschichteten Dessert von heute wurde.\n\nHeute gilt Halo-halo als das inoffizielle Nationaldessert der Philippinen, am meisten gefragt in den glühend heißen Sommermonaten, und jede Familie oder jedes Restaurant hat seine eigene bevorzugte Kombination von Zutaten über der Eis-Milch-Basis.",
+      pt: "O halo-halo tem raízes numa sobremesa simples trazida por imigrantes japoneses às Filipinas no início do século XX, chamada 'mongo-ya', que combinava apenas gelo, feijão doce e leite. Ao longo das décadas, os filipinos foram acrescentando cada vez mais ingredientes locais — gelatinas, frutas conservadas, ube, flan — até se tornar a complexa sobremesa em camadas de hoje.\n\nHoje o halo-halo é considerado a sobremesa nacional não oficial das Filipinas, a mais procurada durante os meses de verão escaldante, e cada família ou restaurante tem a sua própria combinação preferida de ingredientes sobre a base de gelo e leite.",
+      ru: "Хало-хало уходит корнями в простой десерт, привезённый японскими иммигрантами на Филиппины в начале XX века, называемый «монго-я», который сочетал лишь лёд, сладкую фасоль и молоко. За десятилетия филиппинцы постепенно добавляли всё больше местных ингредиентов — желе, консервированные фрукты, убе, флан — пока он не превратился в сложный слоёный десерт, каким мы знаем его сегодня.\n\nСегодня хало-хало считается неофициальным национальным десертом Филиппин, наиболее востребованным в изнуряюще жаркие летние месяцы, и у каждой семьи или ресторана есть своя любимая комбинация добавок поверх основы изо льда и молока.",
+      ar: "يعود أصل هالو هالو إلى حلوى بسيطة جلبها مهاجرون يابانيون إلى الفلبين في أوائل القرن العشرين، تُسمى 'مونغو-يا'، وكانت تجمع فقط بين الثلج والفاصولياء الحلوة والحليب. على مر العقود، أضاف الفلبينيون تدريجياً المزيد من المكونات المحلية — الجيلاتين والفواكه المحفوظة والأوبي والفلان — حتى أصبحت الحلوى المتعددة الطبقات المعقدة التي نعرفها اليوم.\n\nاليوم يُعتبر هالو هالو الحلوى الوطنية غير الرسمية للفلبين، والأكثر طلباً خلال أشهر الصيف الحارقة، ولكل عائلة أو مطعم مزيجه المفضل الخاص من الإضافات فوق أساس الثلج والحليب.",
+      zh: "哈罗哈罗的根源可以追溯到20世纪初日本移民带到菲律宾的一种简单甜点，名为'mongo-ya'，仅由冰、甜豆和牛奶组成。几十年来，菲律宾人逐渐加入了越来越多的本地食材——果冻、蜜饯、紫薯、布丁——最终演变成如今这道复杂的分层甜点。\n\n如今哈罗哈罗被视为菲律宾非官方的国民甜点，在炎热的夏季月份最受欢迎，每个家庭或餐厅都有自己钟爱的、加在冰和牛奶基底上的配料组合。",
+      ja: "ハロハロは20世紀初頭に日本人移民がフィリピンに持ち込んだ、氷と甘い豆とミルクだけを組み合わせたシンプルなデザート「モンゴヤ」にルーツを持つ。何十年もの間、フィリピン人は少しずつゼリー、保存果実、ウベ、フランといった地元の食材を加え、今日の複雑な層状デザートへと発展させた。\n\n今日ではハロハロはフィリピンの非公式な国民的デザートとされ、焼けつくような夏の間に最も求められ、氷とミルクのベースの上にどんなトッピングを乗せるかは、家庭やレストランごとにお気に入りの組み合わせがある。",
+      hi: "हालो-हालो की जड़ें एक साधारण मिठाई में हैं जिसे जापानी आप्रवासी 20वीं सदी की शुरुआत में फिलीपींस लाए, जिसे 'मोंगो-या' कहा जाता था, जिसमें केवल बर्फ, मीठी फलियां और दूध होता था। दशकों में, फिलीपींसवासियों ने धीरे-धीरे अधिक से अधिक स्थानीय सामग्री जोड़ी — जेली, संरक्षित फल, उबे, फ्लान — जब तक यह आज की जटिल परतदार मिठाई नहीं बन गई।\n\nआज हालो-हालो को फिलीपींस की अनौपचारिक राष्ट्रीय मिठाई माना जाता है, जो झुलसाने वाले गर्मी के महीनों में सबसे अधिक खोजी जाती है, और हर परिवार या रेस्तरां की बर्फ और दूध के आधार पर डाली जाने वाली सामग्री का अपना पसंदीदा संयोजन है।",
+      tr: "Halo-halo, 20. yüzyılın başında Japon göçmenlerin Filipinler'e getirdiği ve sadece buz, tatlı fasulye ve sütü birleştiren 'mongo-ya' adlı basit bir tatlıda köklerini bulur. Onyıllar boyunca Filipinliler giderek daha fazla yerel malzeme eklediler — jeleler, konserve meyveler, ube, flan — ta ki bugünkü karmaşık katmanlı tatlıya dönüşene kadar.\n\nBugün halo-halo, Filipinler'in resmi olmayan milli tatlısı olarak kabul edilir, kavurucu yaz aylarında en çok aranan tatlıdır ve her aile veya restoranın buz ve süt tabanının üzerine eklediği kendine özgü favori malzeme kombinasyonu vardır.",
+      it: "L'halo-halo affonda le radici in un semplice dolce portato nelle Filippine da immigrati giapponesi agli inizi del XX secolo, chiamato 'mongo-ya', che combinava solo ghiaccio, fagioli dolci e latte. Nel corso dei decenni, i filippini hanno gradualmente aggiunto sempre più ingredienti locali — gelatine, frutta conservata, ube, flan — fino a diventare il complesso dolce a strati di oggi.\n\nOggi l'halo-halo è considerato il dolce nazionale non ufficiale delle Filippine, il più richiesto durante i torridi mesi estivi, e ogni famiglia o ristorante ha la propria combinazione preferita di aggiunte sopra la base di ghiaccio e latte.",
+      ko: "할로할로는 20세기 초 일본 이민자들이 필리핀에 가져온 '몽고야'라는 간단한 디저트에 뿌리를 두고 있으며, 이는 얼음, 단콩, 우유만을 섞은 것이었다. 수십 년에 걸쳐 필리핀 사람들은 젤리, 절인 과일, 우베, 플란 같은 현지 재료를 점점 더 추가하여 오늘날의 복잡한 층층 디저트가 되었다.\n\n오늘날 할로할로는 필리핀의 비공식 국민 디저트로 여겨지며, 찌는 듯한 여름철에 가장 많이 찾는 디저트이고, 얼음과 우유 베이스 위에 올리는 재료 조합은 각 가정이나 레스토랑마다 저마다의 선호가 다르다."
+    }
   }
 ];
