@@ -54007,5 +54007,473 @@ export const recipes = [
       it: "L'halo-halo affonda le radici in un semplice dolce portato nelle Filippine da immigrati giapponesi agli inizi del XX secolo, chiamato 'mongo-ya', che combinava solo ghiaccio, fagioli dolci e latte. Nel corso dei decenni, i filippini hanno gradualmente aggiunto sempre più ingredienti locali — gelatine, frutta conservata, ube, flan — fino a diventare il complesso dolce a strati di oggi.\n\nOggi l'halo-halo è considerato il dolce nazionale non ufficiale delle Filippine, il più richiesto durante i torridi mesi estivi, e ogni famiglia o ristorante ha la propria combinazione preferita di aggiunte sopra la base di ghiaccio e latte.",
       ko: "할로할로는 20세기 초 일본 이민자들이 필리핀에 가져온 '몽고야'라는 간단한 디저트에 뿌리를 두고 있으며, 이는 얼음, 단콩, 우유만을 섞은 것이었다. 수십 년에 걸쳐 필리핀 사람들은 젤리, 절인 과일, 우베, 플란 같은 현지 재료를 점점 더 추가하여 오늘날의 복잡한 층층 디저트가 되었다.\n\n오늘날 할로할로는 필리핀의 비공식 국민 디저트로 여겨지며, 찌는 듯한 여름철에 가장 많이 찾는 디저트이고, 얼음과 우유 베이스 위에 올리는 재료 조합은 각 가정이나 레스토랑마다 저마다의 선호가 다르다."
     }
+  },
+  {
+    id: 438,
+    servings: 4,
+    tipType: "dessert",
+    pairingsType: "dessert",
+    nutrition: { cal: 420, prot: 7, carb: 52, fat: 20, fib: 2 },
+    origin: {
+      ro: "Belgia", en: "Belgium", es: "Bélgica", fr: "Belgique", de: "Belgien",
+      pt: "Bélgica", ru: "Бельгия", ar: "بلجيكا", zh: "比利时", ja: "ベルギー",
+      hi: "बेल्जियम", tr: "Belçika", it: "Belgio", ko: "벨기에"
+    },
+    name: {
+      ro: "Gofre de Liège", en: "Liège Waffles", es: "Gofres de Lieja", fr: "Gaufres de Liège", de: "Lütticher Waffeln",
+      pt: "Waffles de Liège", ru: "Льежские вафли", ar: "وافل لييج", zh: "列日华夫饼", ja: "リエージュワッフル",
+      hi: "लीज वैफल्स", tr: "Liège Waffle", it: "Waffel di Liegi", ko: "리에주 와플"
+    },
+    category: {
+      ro: "Desert", en: "Dessert", es: "Postre", fr: "Dessert", de: "Dessert",
+      pt: "Sobremesa", ru: "Десерт", ar: "حلوى", zh: "甜点", ja: "デザート",
+      hi: "मिठाई", tr: "Tatlı", it: "Dolce", ko: "디저트"
+    },
+    featureCards: {
+      ro: [
+        { icon: "🍞", t: "Aluat de brioșă, nu aluat lichid", d: "Spre deosebire de vafele americane, cele de Liège pornesc de la un aluat dospit cu drojdie, gros ca de brioșă." },
+        { icon: "🍬", t: "Zahărul perlat, ingredientul secret", d: "Bucățile de zahăr perlat, frământate direct în aluat, se caramelizează pe fierul încins și creează crusta crocantă." },
+        { icon: "🔥", t: "Se coace direct din bilă de aluat", d: "Fiecare vafă pornește de la o bilă compactă de aluat presată în fierul fierbinte, nu turnată ca o compoziție lichidă." },
+        { icon: "🙌", t: "Se mănâncă din mână, simplă", d: "Vafa de Liège autentică se mănâncă simplă, caldă, direct din mână, fără frișcă sau sirop." }
+      ],
+      en: [
+        { icon: "🍞", t: "Brioche-like dough, not batter", d: "Unlike American waffles, Liège waffles start from a yeasted dough, thick like brioche, not a pourable batter." },
+        { icon: "🍬", t: "Pearl sugar, the secret ingredient", d: "Chunks of Belgian pearl sugar, kneaded right into the dough, caramelise on the hot iron and form the crunchy crust." },
+        { icon: "🔥", t: "Pressed from a ball of dough", d: "Each waffle starts as a compact ball of dough pressed into the hot iron, not poured like a liquid batter." },
+        { icon: "🙌", t: "Eaten plain, from the hand", d: "An authentic Liège waffle is eaten plain and warm, straight from the hand, no cream or syrup needed." }
+      ],
+      es: [
+        { icon: "🍞", t: "Masa tipo brioche, no batido", d: "A diferencia de los gofres americanos, los de Lieja parten de una masa fermentada, espesa como brioche, no de un batido líquido." },
+        { icon: "🍬", t: "El azúcar perlado, el ingrediente secreto", d: "Trozos de azúcar perlado belga, amasados directamente en la masa, se caramelizan en la plancha caliente y forman la costra crujiente." },
+        { icon: "🔥", t: "Se prensa desde una bola de masa", d: "Cada gofre comienza como una bola compacta de masa presionada en la plancha caliente, no se vierte como un batido líquido." },
+        { icon: "🙌", t: "Se come solo, con la mano", d: "Un auténtico gofre de Lieja se come solo y caliente, directamente con la mano, sin nata ni sirope." }
+      ],
+      fr: [
+        { icon: "🍞", t: "Une pâte briochée, pas une pâte liquide", d: "Contrairement aux gaufres américaines, les gaufres de Liège partent d'une pâte levée, épaisse comme une brioche, pas d'une pâte liquide." },
+        { icon: "🍬", t: "Le sucre perlé, l'ingrédient secret", d: "Des morceaux de sucre perlé belge, pétris directement dans la pâte, caramélisent sur le fer chaud et forment la croûte croustillante." },
+        { icon: "🔥", t: "Pressée à partir d'une boule de pâte", d: "Chaque gaufre commence comme une boule compacte de pâte pressée dans le fer chaud, pas versée comme une pâte liquide." },
+        { icon: "🙌", t: "Mangée nature, à la main", d: "Une vraie gaufre de Liège se mange nature et chaude, directement à la main, sans crème ni sirop." }
+      ],
+      de: [
+        { icon: "🍞", t: "Brioche-artiger Teig, kein Rührteig", d: "Anders als amerikanische Waffeln beginnen Lütticher Waffeln mit einem Hefeteig, dick wie Brioche, kein gießbarer Teig." },
+        { icon: "🍬", t: "Perlzucker, die geheime Zutat", d: "Stücke belgischen Perlzuckers, direkt in den Teig geknetet, karamellisieren auf dem heißen Eisen und bilden die knusprige Kruste." },
+        { icon: "🔥", t: "Aus einer Teigkugel gepresst", d: "Jede Waffel beginnt als kompakte Teigkugel, die in das heiße Eisen gepresst wird, nicht wie ein flüssiger Teig gegossen." },
+        { icon: "🙌", t: "Pur, aus der Hand gegessen", d: "Eine echte Lütticher Waffel wird pur und warm gegessen, direkt aus der Hand, ohne Sahne oder Sirup." }
+      ],
+      pt: [
+        { icon: "🍞", t: "Massa tipo brioche, não batido", d: "Ao contrário dos waffles americanos, os de Liège partem de uma massa fermentada, espessa como brioche, não de um batido líquido." },
+        { icon: "🍬", t: "O açúcar em pérolas, o ingrediente secreto", d: "Pedaços de açúcar em pérolas belga, amassados diretamente na massa, caramelizam na chapa quente e formam a crosta crocante." },
+        { icon: "🔥", t: "Prensado a partir de uma bola de massa", d: "Cada waffle começa como uma bola compacta de massa prensada na chapa quente, não vertida como um batido líquido." },
+        { icon: "🙌", t: "Comido simples, com a mão", d: "Um autêntico waffle de Liège come-se simples e quente, diretamente com a mão, sem natas ou xarope." }
+      ],
+      ru: [
+        { icon: "🍞", t: "Дрожжевое тесто, а не жидкое", d: "В отличие от американских вафель, льежские начинаются с дрожжевого теста, густого как для бриоши, а не жидкого." },
+        { icon: "🍬", t: "Жемчужный сахар — секретный ингредиент", d: "Кусочки бельгийского жемчужного сахара, вмешанные прямо в тесто, карамелизуются на горячей форме и образуют хрустящую корочку." },
+        { icon: "🔥", t: "Прессуется из шарика теста", d: "Каждая вафля начинается как плотный шарик теста, спрессованный в горячей форме, а не разлитый как жидкое тесто." },
+        { icon: "🙌", t: "Едят руками, без добавок", d: "Настоящую льежскую вафлю едят простой и тёплой, прямо из рук, без сливок или сиропа." }
+      ],
+      ar: [
+        { icon: "🍞", t: "عجينة شبيهة بالبريوش، وليست خليطاً سائلاً", d: "خلافاً للوافل الأمريكي، يبدأ وافل لييج من عجينة مخمرة سميكة كالبريوش، وليس من خليط سائل." },
+        { icon: "🍬", t: "سكر اللؤلؤ، المكوّن السري", d: "قطع سكر اللؤلؤ البلجيكي، المعجونة مباشرة في العجينة، تتكرمل على الحديد الساخن وتشكل القشرة المقرمشة." },
+        { icon: "🔥", t: "يُضغط من كرة عجين", d: "تبدأ كل وافلة ككرة عجين مضغوطة تُوضع في الحديد الساخن، وليس مسكوبة كخليط سائل." },
+        { icon: "🙌", t: "تُؤكل سادة باليد", d: "يُؤكل وافل لييج الأصلي سادة ودافئاً، مباشرة باليد، دون كريمة أو شراب." }
+      ],
+      zh: [
+        { icon: "🍞", t: "布里欧修面团，而非面糊", d: "与美式华夫饼不同，列日华夫饼从发酵面团开始，像布里欧修一样厚实，而不是可倒的面糊。" },
+        { icon: "🍬", t: "珍珠糖是秘密武器", d: "直接揉入面团中的比利时珍珠糖块，在热铁板上焦糖化，形成酥脆的外壳。" },
+        { icon: "🔥", t: "由面团球压制而成", d: "每个华夫饼都从一个紧实的面团球开始，压入热铁板，而不是像液态面糊那样倒入。" },
+        { icon: "🙌", t: "直接用手拿着素吃", d: "正宗的列日华夫饼趁热直接用手拿着吃，不加奶油或糖浆。" }
+      ],
+      ja: [
+        { icon: "🍞", t: "ブリオッシュのような生地、タネではない", d: "アメリカンワッフルと違い、リエージュワッフルはブリオッシュのように濃厚なイースト生地から作られ、流し込むタネではない。" },
+        { icon: "🍬", t: "パールシュガーが秘密の材料", d: "生地に直接練り込まれたベルギー産パールシュガーの粒が、熱い鉄板の上でカラメル化し、カリカリの表面を作る。" },
+        { icon: "🔥", t: "生地の玉から押し出す", d: "各ワッフルは液状のタネのように流し込むのではなく、生地のかたまりを熱い鉄板に押し込むところから始まる。" },
+        { icon: "🙌", t: "手でそのまま食べる", d: "本場のリエージュワッフルは温かいままシンプルに、手で直接食べる。クリームやシロップは不要だ。" }
+      ],
+      hi: [
+        { icon: "🍞", t: "ब्रियोश जैसा आटा, घोल नहीं", d: "अमेरिकी वैफल्स के विपरीत, लीज वैफल्स खमीर वाले आटे से शुरू होते हैं, ब्रियोश जैसा गाढ़ा, न कि तरल घोल।" },
+        { icon: "🍬", t: "पर्ल शुगर, गुप्त सामग्री", d: "बेल्जियम पर्ल शुगर के टुकड़े, सीधे आटे में गूंथे जाते हैं, गरम आयरन पर कैरामलाइज़ होकर कुरकुरी परत बनाते हैं।" },
+        { icon: "🔥", t: "आटे की गोली से दबाया जाता है", d: "हर वैफल आटे की एक ठोस गोली से शुरू होता है जो गरम आयरन में दबाई जाती है, तरल घोल की तरह नहीं डाली जाती।" },
+        { icon: "🙌", t: "हाथ से, सादा खाया जाता है", d: "असली लीज वैफल सादा और गरम, सीधे हाथ से खाया जाता है, बिना क्रीम या सिरप के।" }
+      ],
+      tr: [
+        { icon: "🍞", t: "Brioş benzeri hamur, sulu karışım değil", d: "Amerikan waffle'ların aksine, Liège waffle'ları maya ile kabartılmış, brioş gibi kalın bir hamurdan başlar, dökülebilir karışım değil." },
+        { icon: "🍬", t: "İnci şekeri, gizli malzeme", d: "Doğrudan hamura yoğrulan Belçika inci şekeri parçaları, sıcak ütüde karamelize olur ve çıtır kabuğu oluşturur." },
+        { icon: "🔥", t: "Hamur topundan preslenir", d: "Her waffle, sıvı bir karışım gibi dökülmek yerine sıcak ütüye bastırılan kompakt bir hamur topu olarak başlar." },
+        { icon: "🙌", t: "Sade olarak elle yenir", d: "Otantik bir Liège waffle'ı sade ve sıcak halde, doğrudan elle yenir, krema veya şurup gerekmez." }
+      ],
+      it: [
+        { icon: "🍞", t: "Impasto simile alla brioche, non una pastella", d: "A differenza dei waffle americani, quelli di Liegi partono da un impasto lievitato, denso come una brioche, non da una pastella liquida." },
+        { icon: "🍬", t: "Lo zucchero perlato, l'ingrediente segreto", d: "Pezzi di zucchero perlato belga, impastati direttamente nella pasta, caramellano sulla piastra calda formando la crosta croccante." },
+        { icon: "🔥", t: "Pressato da una palla di impasto", d: "Ogni waffle inizia come una compatta palla di impasto pressata nella piastra calda, non versata come una pastella liquida." },
+        { icon: "🙌", t: "Si mangia semplice, con le mani", d: "Un autentico waffle di Liegi si mangia semplice e caldo, direttamente con le mani, senza panna o sciroppo." }
+      ],
+      ko: [
+        { icon: "🍞", t: "브리오슈 같은 반죽, 묽은 반죽이 아니다", d: "미국식 와플과 달리 리에주 와플은 브리오슈처럼 두꺼운 이스트 반죽으로 시작하며, 부어 만드는 묽은 반죽이 아니다." },
+        { icon: "🍬", t: "펄 슈거가 비밀 재료", d: "반죽에 직접 반죽해 넣은 벨기에산 펄 슈거 조각이 뜨거운 철판 위에서 캐러멜화되어 바삭한 겉면을 만든다." },
+        { icon: "🔥", t: "반죽 덩어리를 눌러 만든다", d: "각 와플은 액체 반죽처럼 붓는 것이 아니라 뜨거운 철판에 눌러 담는 단단한 반죽 덩어리로 시작한다." },
+        { icon: "🙌", t: "맨손으로 그냥 먹는다", d: "정통 리에주 와플은 크림이나 시럽 없이 따뜻할 때 그대로 손으로 먹는다." }
+      ]
+    },
+    ingredients: {
+      ro: ["500g făină", "10g drojdie proaspătă", "150ml lapte călduț", "2 ouă", "200g unt moale", "50g zahăr", "1/2 linguriță sare", "1 linguriță extract de vanilie", "150g zahăr perlat belgian"],
+      en: ["500g flour", "10g fresh yeast", "150ml lukewarm milk", "2 eggs", "200g soft butter", "50g sugar", "1/2 tsp salt", "1 tsp vanilla extract", "150g Belgian pearl sugar"],
+      es: ["500g de harina", "10g de levadura fresca", "150ml de leche tibia", "2 huevos", "200g de mantequilla blanda", "50g de azúcar", "1/2 cdta de sal", "1 cdta de extracto de vainilla", "150g de azúcar perlado belga"],
+      fr: ["500g de farine", "10g de levure fraîche", "150ml de lait tiède", "2 œufs", "200g de beurre mou", "50g de sucre", "1/2 c. à café de sel", "1 c. à café d'extrait de vanille", "150g de sucre perlé belge"],
+      de: ["500g Mehl", "10g frische Hefe", "150ml lauwarme Milch", "2 Eier", "200g weiche Butter", "50g Zucker", "1/2 TL Salz", "1 TL Vanilleextrakt", "150g belgischer Perlzucker"],
+      pt: ["500g de farinha", "10g de fermento fresco", "150ml de leite morno", "2 ovos", "200g de manteiga mole", "50g de açúcar", "1/2 col. chá de sal", "1 col. chá de extrato de baunilha", "150g de açúcar em pérolas belga"],
+      ru: ["500г муки", "10г свежих дрожжей", "150мл тёплого молока", "2 яйца", "200г мягкого сливочного масла", "50г сахара", "1/2 ч.л. соли", "1 ч.л. ванильного экстракта", "150г бельгийского жемчужного сахара"],
+      ar: ["500غ دقيق", "10غ خميرة طازجة", "150مل حليب فاتر", "2 بيضة", "200غ زبدة طرية", "50غ سكر", "1/2 ملعقة صغيرة ملح", "1 ملعقة صغيرة مستخلص فانيليا", "150غ سكر لؤلؤي بلجيكي"],
+      zh: ["500克面粉", "10克鲜酵母", "150毫升温牛奶", "2个鸡蛋", "200克软化黄油", "50克糖", "1/2茶匙盐", "1茶匙香草精", "150克比利时珍珠糖"],
+      ja: ["小麦粉500g", "生イースト10g", "ぬるま湯牛乳150ml", "卵2個", "柔らかいバター200g", "砂糖50g", "塩小さじ1/2", "バニラエッセンス小さじ1", "ベルギー産パールシュガー150g"],
+      hi: ["500 ग्राम आटा", "10 ग्राम ताज़ा खमीर", "150 मिली गुनगुना दूध", "2 अंडे", "200 ग्राम नरम मक्खन", "50 ग्राम चीनी", "1/2 छोटा चम्मच नमक", "1 छोटा चम्मच वनीला एक्सट्रेक्ट", "150 ग्राम बेल्जियम पर्ल शुगर"],
+      tr: ["500g un", "10g taze maya", "150ml ılık süt", "2 yumurta", "200g yumuşak tereyağı", "50g şeker", "1/2 tatlı kaşığı tuz", "1 tatlı kaşığı vanilya özütü", "150g Belçika inci şekeri"],
+      it: ["500g di farina", "10g di lievito fresco", "150ml di latte tiepido", "2 uova", "200g di burro morbido", "50g di zucchero", "1/2 cucchiaino di sale", "1 cucchiaino di estratto di vaniglia", "150g di zucchero perlato belga"],
+      ko: ["밀가루 500g", "생이스트 10g", "미지근한 우유 150ml", "달걀 2개", "부드러운 버터 200g", "설탕 50g", "소금 1/2작은술", "바닐라 추출물 1작은술", "벨기에산 펄 슈거 150g"]
+    },
+    howIsMade: {
+      ro: "Se dizolvă drojdia în laptele călduț și se lasă la stat până face spumă. Se amestecă făina, sarea, zahărul și ouăle, apoi se adaugă amestecul de drojdie pentru a forma un aluat moale. Se frământă untul moale puțin câte puțin, până aluatul devine neted și elastic. Se acoperă și se lasă aluatul la dospit într-un loc călduț circa o oră, până își dublează volumul. Se încorporează ușor zahărul perlat, fără să se zdrobească bucățile. Se împarte aluatul în bile și se presează fiecare în fierul de vafe încins. Se coace până devine auriu-închis și zahărul se caramelizează pe exterior, apoi se servește caldă.",
+      en: "Dissolve the yeast in the lukewarm milk and let it stand until foamy. Mix the flour, salt, sugar, and eggs, then add the yeast mixture to form a soft dough. Knead in the soft butter a little at a time until the dough is smooth and elastic. Cover and let the dough rise in a warm place for about an hour, until doubled in size. Gently fold in the pearl sugar, without crushing the pieces. Divide the dough into balls and press each one into a hot waffle iron. Cook until deep golden and the sugar caramelises on the outside, then serve warm.",
+      es: "Disuelve la levadura en la leche tibia y deja reposar hasta que haga espuma. Mezcla la harina, la sal, el azúcar y los huevos, luego añade la mezcla de levadura para formar una masa suave. Amasa la mantequilla blanda poco a poco hasta que la masa quede lisa y elástica. Tapa y deja reposar la masa en un lugar cálido durante una hora, hasta que doble su tamaño. Incorpora suavemente el azúcar perlado, sin aplastar los trozos. Divide la masa en bolas y presiona cada una en una plancha de gofres caliente. Cocina hasta que esté bien dorada y el azúcar se caramelice por fuera, y sirve caliente.",
+      fr: "Diluez la levure dans le lait tiède et laissez reposer jusqu'à ce qu'elle mousse. Mélangez la farine, le sel, le sucre et les œufs, puis ajoutez la levure pour former une pâte molle. Incorporez le beurre mou petit à petit jusqu'à ce que la pâte soit lisse et élastique. Couvrez et laissez lever la pâte dans un endroit chaud pendant environ une heure, jusqu'à ce qu'elle double de volume. Incorporez délicatement le sucre perlé, sans écraser les morceaux. Divisez la pâte en boules et pressez chacune dans un gaufrier chaud. Faites cuire jusqu'à ce qu'elle soit bien dorée et que le sucre caramélise à l'extérieur, puis servez chaud.",
+      de: "Die Hefe in der lauwarmen Milch auflösen und stehen lassen, bis sie schäumt. Mehl, Salz, Zucker und Eier vermischen, dann die Hefemischung hinzufügen, um einen weichen Teig zu formen. Die weiche Butter nach und nach unterkneten, bis der Teig glatt und elastisch ist. Abdecken und den Teig an einem warmen Ort etwa eine Stunde gehen lassen, bis er sich verdoppelt hat. Den Perlzucker vorsichtig unterheben, ohne die Stücke zu zerdrücken. Den Teig in Kugeln teilen und jede in ein heißes Waffeleisen pressen. Backen, bis er tief goldbraun ist und der Zucker außen karamellisiert, dann warm servieren.",
+      pt: "Dissolva o fermento no leite morno e deixe repousar até fazer espuma. Misture a farinha, o sal, o açúcar e os ovos, depois junte a mistura de fermento para formar uma massa mole. Amasse a manteiga mole aos poucos até a massa ficar lisa e elástica. Tape e deixe a massa levedar num local morno durante cerca de uma hora, até dobrar de tamanho. Envolva suavemente o açúcar em pérolas, sem esmagar os pedaços. Divida a massa em bolas e pressione cada uma numa máquina de waffles quente. Cozinhe até ficar bem dourado e o açúcar caramelizar por fora, depois sirva quente.",
+      ru: "Растворите дрожжи в тёплом молоке и дайте постоять до появления пены. Смешайте муку, соль, сахар и яйца, затем добавьте дрожжевую смесь, чтобы получить мягкое тесто. Вмешивайте мягкое масло понемногу, пока тесто не станет гладким и эластичным. Накройте и дайте тесту подняться в тёплом месте около часа, пока не увеличится вдвое. Аккуратно вмешайте жемчужный сахар, не раздавливая кусочки. Разделите тесто на шарики и прижмите каждый в горячей вафельнице. Выпекайте до насыщенного золотистого цвета и карамелизации сахара снаружи, затем подавайте тёплыми.",
+      ar: "أذيبي الخميرة في الحليب الفاتر واتركيها حتى تصبح رغوية. اخلطي الدقيق والملح والسكر والبيض، ثم أضيفي خليط الخميرة لتشكيل عجينة طرية. اعجني الزبدة الطرية تدريجياً حتى تصبح العجينة ناعمة ومرنة. غطّي العجينة واتركيها ترتفع في مكان دافئ لحوالي ساعة حتى يتضاعف حجمها. أضيفي سكر اللؤلؤ بلطف دون سحق القطع. قسّمي العجينة إلى كرات واضغطي كل واحدة في حديد وافل ساخن. اخبزيها حتى تصبح ذهبية داكنة ويتكرمل السكر من الخارج، ثم قدّميها دافئة.",
+      zh: "将酵母溶解在温牛奶中，静置至起泡。将面粉、盐、糖和鸡蛋混合，加入酵母混合物，揉成柔软的面团。分次揉入软化黄油，直至面团光滑有弹性。盖好，让面团在温暖处发酵约一小时，至体积翻倍。轻轻拌入珍珠糖，注意不要压碎糖粒。将面团分成球状，逐个压入烧热的华夫饼铁模中。烤至深金黄色且外层糖粒焦糖化，趁热享用。",
+      ja: "イーストをぬるま湯牛乳に溶かし、泡立つまで置く。小麦粉、塩、砂糖、卵を混ぜ、イースト液を加えて柔らかい生地を作る。柔らかいバターを少しずつ練り込み、生地がなめらかで弾力が出るまでこねる。覆いをして暖かい場所で約1時間、2倍の大きさになるまで発酵させる。パールシュガーの粒を潰さないよう優しく折り込む。生地を丸めて分け、それぞれを熱いワッフルアイロンに押し込む。濃い黄金色になり外側の砂糖がカラメル化するまで焼き、温かいうちに提供する。",
+      hi: "खमीर को गुनगुने दूध में घोलें और झागदार होने तक रखें। आटा, नमक, चीनी और अंडे मिलाएं, फिर खमीर मिश्रण डालकर नरम आटा बनाएं। नरम मक्खन को थोड़ा-थोड़ा करके गूंथें जब तक आटा चिकना और लचीला न हो जाए। ढककर आटे को गरम जगह पर लगभग एक घंटे फूलने दें जब तक दोगुना न हो जाए। पर्ल शुगर को टुकड़ों को कुचले बिना धीरे से मिलाएं। आटे को गोलियों में बांटें और हर एक को गरम वैफल आयरन में दबाएं। गहरे सुनहरे होने और बाहरी चीनी कैरामलाइज़ होने तक पकाएं, फिर गरम परोसें।",
+      tr: "Mayayı ılık sütte eritin ve köpürene kadar bekletin. Un, tuz, şeker ve yumurtaları karıştırın, ardından yumuşak bir hamur oluşturmak için maya karışımını ekleyin. Hamur pürüzsüz ve esnek olana kadar yumuşak tereyağını azar azar yoğurun. Örtün ve hamuru sıcak bir yerde hacmi ikiye katlanana kadar yaklaşık bir saat mayalandırın. İnci şekerini parçaları ezmeden nazikçe katın. Hamuru toplara bölün ve her birini sıcak waffle ütüsüne bastırın. Koyu altın rengi olana ve şeker dışta karamelize olana kadar pişirin, ardından sıcak servis edin.",
+      it: "Sciogli il lievito nel latte tiepido e lascialo riposare finché non fa schiuma. Mescola la farina, il sale, lo zucchero e le uova, poi aggiungi il composto di lievito per formare un impasto morbido. Impasta il burro morbido un po' alla volta finché l'impasto non è liscio ed elastico. Copri e lascia lievitare l'impasto in un luogo caldo per circa un'ora, finché non raddoppia di volume. Incorpora delicatamente lo zucchero perlato, senza schiacciare i pezzi. Dividi l'impasto in palline e pressa ognuna in una piastra per waffle calda. Cuoci finché non è ben dorata e lo zucchero caramella all'esterno, poi servi calda.",
+      ko: "이스트를 미지근한 우유에 녹여 거품이 날 때까지 둔다. 밀가루, 소금, 설탕, 달걀을 섞은 뒤 이스트 혼합물을 넣어 부드러운 반죽을 만든다. 부드러운 버터를 조금씩 반죽에 넣어 매끄럽고 탄력 있게 될 때까지 치댄다. 덮어서 따뜻한 곳에서 약 한 시간, 부피가 두 배가 될 때까지 발효시킨다. 알갱이가 으깨지지 않도록 펄 슈거를 부드럽게 섞어 넣는다. 반죽을 공 모양으로 나누어 각각을 뜨거운 와플 팬에 눌러 넣는다. 진한 황금빛이 되고 겉의 설탕이 캐러멜화될 때까지 구운 뒤 따뜻할 때 낸다."
+    },
+    originText: {
+      ro: "Legenda spune că gofrele de Liège au fost create la curtea Prințului-Episcop de Liège în secolul XVIII, de un bucătar care a improvizat un desert dulce pentru stăpânul său, folosind bucăți de zahăr amestecate direct în aluatul de brioșă. Indiferent de adevărul poveștii, gofra de Liège rămâne distinctă de cea de Bruxelles, mai subțire și mai ușoară, servită cu frișcă și fructe.\n\nAstăzi gofrele de Liège se vând la fiecare colț de stradă din Belgia, calde, direct de pe fierul de copt, iar zahărul perlat topit parțial și caramelizat pe margini rămâne semnul de calitate al unei gofre autentice.",
+      en: "Legend has it that Liège waffles were created at the court of the Prince-Bishop of Liège in the 18th century, by a cook who improvised a sweet dessert for his master, mixing chunks of sugar directly into brioche dough. Whatever the truth of the story, the Liège waffle remains distinct from the Brussels waffle, which is thinner and lighter, served with cream and fruit.\n\nToday Liège waffles are sold on every street corner in Belgium, warm, straight off the iron, and the partially melted, caramelised pearl sugar on the edges remains the mark of an authentic waffle.",
+      es: "Cuenta la leyenda que los gofres de Lieja fueron creados en la corte del Príncipe-Obispo de Lieja en el siglo XVIII, por un cocinero que improvisó un postre dulce para su señor, mezclando trozos de azúcar directamente en la masa de brioche. Sea cierta o no la historia, el gofre de Lieja sigue siendo distinto del de Bruselas, más fino y ligero, servido con nata y fruta.\n\nHoy los gofres de Lieja se venden en cada esquina de Bélgica, calientes, recién salidos de la plancha, y el azúcar perlado parcialmente fundido y caramelizado en los bordes sigue siendo la marca de un gofre auténtico.",
+      fr: "La légende raconte que les gaufres de Liège furent créées à la cour du Prince-Évêque de Liège au XVIIIe siècle, par un cuisinier qui improvisa un dessert sucré pour son maître, en mélangeant des morceaux de sucre directement dans une pâte briochée. Quelle que soit la vérité de cette histoire, la gaufre de Liège reste distincte de celle de Bruxelles, plus fine et plus légère, servie avec de la crème et des fruits.\n\nAujourd'hui, les gaufres de Liège se vendent à chaque coin de rue en Belgique, chaudes, tout juste sorties du fer, et le sucre perlé partiellement fondu et caramélisé sur les bords reste la marque d'une gaufre authentique.",
+      de: "Der Legende nach wurden Lütticher Waffeln im 18. Jahrhundert am Hof des Fürstbischofs von Lüttich erfunden, von einem Koch, der für seinen Herrn ein süßes Dessert improvisierte, indem er Zuckerstücke direkt in Brioche-Teig einarbeitete. Ob wahr oder nicht, die Lütticher Waffel bleibt deutlich von der Brüsseler Waffel unterschieden, die dünner und leichter ist und mit Sahne und Obst serviert wird.\n\nHeute werden Lütticher Waffeln an jeder Straßenecke in Belgien verkauft, warm, direkt vom Eisen, und der teilweise geschmolzene, karamellisierte Perlzucker an den Rändern bleibt das Zeichen einer echten Waffel.",
+      pt: "A lenda conta que os waffles de Liège foram criados na corte do Príncipe-Bispo de Liège no século XVIII, por um cozinheiro que improvisou uma sobremesa doce para o seu senhor, misturando pedaços de açúcar diretamente na massa de brioche. Seja qual for a verdade da história, o waffle de Liège continua distinto do de Bruxelas, mais fino e leve, servido com natas e fruta.\n\nHoje os waffles de Liège vendem-se em cada esquina da Bélgica, quentes, direto da chapa, e o açúcar em pérolas parcialmente derretido e caramelizado nas bordas continua a ser a marca de um waffle autêntico.",
+      ru: "Легенда гласит, что льежские вафли были созданы при дворе князя-епископа Льежа в XVIII веке поваром, который импровизировал сладкий десерт для своего хозяина, замешивая куски сахара прямо в тесто для бриоши. Правдива эта история или нет, льежская вафля остаётся отличной от брюссельской — более тонкой и лёгкой, подаваемой со сливками и фруктами.\n\nСегодня льежские вафли продают на каждом углу в Бельгии, тёплыми, прямо с формы, а частично расплавленный, карамелизированный жемчужный сахар по краям остаётся признаком настоящей вафли.",
+      ar: "تقول الأسطورة إن وافل لييج ابتُكر في بلاط أمير-أسقف لييج في القرن الثامن عشر، على يد طاهٍ ارتجل حلوى لسيده بمزج قطع من السكر مباشرة في عجينة البريوش. أياً كانت حقيقة القصة، يبقى وافل لييج مختلفاً عن وافل بروكسل، الأرق والأخف، الذي يُقدَّم مع الكريمة والفاكهة.\n\nاليوم يُباع وافل لييج في كل زاوية شارع في بلجيكا، دافئاً ومباشرة من الحديد، ويبقى سكر اللؤلؤ المذاب جزئياً والمكرمل على الحواف علامة الوافل الأصيل.",
+      zh: "传说列日华夫饼是18世纪在列日亲王主教的宫廷中，由一位厨师为主人即兴创作的甜点，他将糖块直接揉入布里欧修面团中。无论传说是否属实，列日华夫饼与布鲁塞尔华夫饼截然不同，后者更薄更轻，通常搭配奶油和水果食用。\n\n如今，列日华夫饼在比利时的每个街角都有售卖，热腾腾地刚出铁板，边缘部分融化并焦糖化的珍珠糖仍是判断一份正宗华夫饼的标志。",
+      ja: "伝説によれば、リエージュワッフルは18世紀、リエージュ司教公の宮廷で、主人のために砂糖の塊をブリオッシュ生地に直接混ぜ込んで甘いデザートを即興で作った料理人によって生まれたとされる。この話の真偽はともかく、リエージュワッフルはより薄く軽く、クリームとフルーツを添えて出されるブリュッセルワッフルとは明確に異なる。\n\n今日、リエージュワッフルはベルギーのあらゆる街角で、鉄板から出したての温かい状態で販売されており、縁で部分的に溶けてカラメル化したパールシュガーが本物のワッフルの証となっている。",
+      hi: "किंवदंती है कि लीज वैफल्स 18वीं सदी में लीज के प्रिंस-बिशप के दरबार में एक रसोइये द्वारा बनाए गए थे, जिसने अपने स्वामी के लिए चीनी के टुकड़ों को सीधे ब्रियोश आटे में मिलाकर एक मीठी मिठाई तुरंत बनाई। कहानी की सच्चाई चाहे जो हो, लीज वैफल ब्रसेल्स वैफल से अलग बना हुआ है, जो पतला और हल्का होता है, क्रीम और फल के साथ परोसा जाता है।\n\nआज लीज वैफल्स बेल्जियम के हर सड़क कोने पर बिकते हैं, गरम, सीधे आयरन से, और किनारों पर आंशिक रूप से पिघली, कैरामलाइज़्ड पर्ल शुगर एक असली वैफल की पहचान बनी हुई है।",
+      tr: "Efsaneye göre Liège waffle'ları, 18. yüzyılda Liège Prens-Piskoposu'nun sarayında, efendisi için şeker parçalarını doğrudan brioş hamuruna karıştırarak tatlı bir tatlı doğaçlayan bir aşçı tarafından yaratıldı. Hikayenin doğruluğu ne olursa olsun, Liège waffle'ı, daha ince ve hafif olan ve krema ile meyveyle servis edilen Brüksel waffle'ından farklı kalır.\n\nBugün Liège waffle'ları Belçika'nın her sokak köşesinde sıcak, ütüden yeni çıkmış halde satılıyor ve kenarlarda kısmen erimiş, karamelize inci şekeri hâlâ otantik bir waffle'ın işareti olmaya devam ediyor.",
+      it: "La leggenda narra che i waffel di Liegi furono creati alla corte del Principe-Vescovo di Liegi nel XVIII secolo, da un cuoco che improvvisò un dolce per il suo signore, mescolando pezzi di zucchero direttamente nell'impasto della brioche. Che la storia sia vera o meno, il waffel di Liegi resta distinto da quello di Bruxelles, più sottile e leggero, servito con panna e frutta.\n\nOggi i waffel di Liegi si vendono in ogni angolo di strada del Belgio, caldi, appena tolti dalla piastra, e lo zucchero perlato parzialmente sciolto e caramellato sui bordi resta il segno distintivo di un waffel autentico.",
+      ko: "전설에 따르면 리에주 와플은 18세기 리에주 공-주교의 궁정에서, 주인을 위해 설탕 덩어리를 브리오슈 반죽에 직접 섞어 즉흥적으로 만든 요리사에 의해 탄생했다고 한다. 이 이야기의 진위와 상관없이, 리에주 와플은 더 얇고 가벼우며 크림과 과일을 곁들여 내는 브뤼셀 와플과는 뚜렷이 구분된다.\n\n오늘날 리에주 와플은 벨기에의 모든 길모퉁이에서 철판에서 갓 나온 따뜻한 상태로 팔리며, 가장자리에서 부분적으로 녹아 캐러멜화된 펄 슈거가 정통 와플의 상징으로 남아 있다."
+    }
+  },
+  {
+    id: 439,
+    servings: 4,
+    tipType: "seafood",
+    pairingsType: "fish",
+    nutrition: { cal: 380, prot: 16, carb: 26, fat: 24, fib: 1 },
+    origin: {
+      ro: "Belgia", en: "Belgium", es: "Bélgica", fr: "Belgique", de: "Belgien",
+      pt: "Bélgica", ru: "Бельгия", ar: "بلجيكا", zh: "比利时", ja: "ベルギー",
+      hi: "बेल्जियम", tr: "Belçika", it: "Belgio", ko: "벨기에"
+    },
+    name: {
+      ro: "Crochete de creveți", en: "Garnaalkroketten", es: "Croquetas de gambas grises", fr: "Croquettes de crevettes grises", de: "Krabbenkroketten",
+      pt: "Croquetes de camarão cinzento", ru: "Крокеты с серыми креветками", ar: "كروكيت الروبيان الرمادي", zh: "灰虾可乐饼", ja: "小エビのクロケット",
+      hi: "ग्रे झींगा क्रोकेट", tr: "Gri Karides Kroket", it: "Crocchette di gamberetti grigi", ko: "회색새우 크로켓"
+    },
+    category: {
+      ro: "Aperitiv", en: "Appetizer", es: "Aperitivo", fr: "Entrée", de: "Vorspeise",
+      pt: "Entrada", ru: "Закуска", ar: "مقبلات", zh: "开胃菜", ja: "前菜",
+      hi: "स्टार्टर", tr: "Meze", it: "Antipasto", ko: "애피타이저"
+    },
+    featureCards: {
+      ro: [
+        { icon: "🦐", t: "Creveți gri, nu obișnuiți", d: "Creveții cenușii mici din Marea Nordului au un gust dulce-sărat distinct, imposibil de imitat cu alte specii." },
+        { icon: "🧈", t: "Un sos béchamel gros e cheia", d: "Un sos béchamel foarte gros, aproape solid odată răcit, dă crochetei acea textură care se topește la interior." },
+        { icon: "❄️", t: "Compoziția trebuie răcită bine", d: "Amestecul de sos și creveți se răcește minim câteva ore, altfel crochetele se destramă la prăjit." },
+        { icon: "🔥", t: "Pane dublă pentru crocanță", d: "Fiecare crochetă trece de două ori prin ou și pesmet pentru un strat exterior extrem de crocant." }
+      ],
+      en: [
+        { icon: "🦐", t: "Grey shrimp, not the usual kind", d: "Tiny grey shrimp from the North Sea have a distinct sweet-briny taste that no other species can replicate." },
+        { icon: "🧈", t: "A thick béchamel is the key", d: "A very thick béchamel sauce, nearly solid once chilled, gives the croquette its molten centre." },
+        { icon: "❄️", t: "The mixture needs a good chill", d: "The sauce and shrimp mixture must chill for several hours at least, or the croquettes fall apart when fried." },
+        { icon: "🔥", t: "Double-breading for extra crunch", d: "Each croquette goes through egg and breadcrumbs twice for an extremely crisp outer shell." }
+      ],
+      es: [
+        { icon: "🦐", t: "Gambas grises, no las habituales", d: "Las diminutas gambas grises del mar del Norte tienen un sabor dulce-salado único que ninguna otra especie puede replicar." },
+        { icon: "🧈", t: "Una bechamel espesa es la clave", d: "Una bechamel muy espesa, casi sólida al enfriarse, da a la croqueta su centro fundido." },
+        { icon: "❄️", t: "La mezcla necesita enfriarse bien", d: "La mezcla de salsa y gambas debe enfriarse al menos varias horas, o las croquetas se deshacen al freír." },
+        { icon: "🔥", t: "Doble empanado para más crujiente", d: "Cada croqueta pasa dos veces por huevo y pan rallado para una corteza exterior extremadamente crujiente." }
+      ],
+      fr: [
+        { icon: "🦐", t: "Des crevettes grises, pas les habituelles", d: "Les minuscules crevettes grises de la mer du Nord ont un goût doux-salé distinct qu'aucune autre espèce ne peut reproduire." },
+        { icon: "🧈", t: "Une béchamel épaisse est la clé", d: "Une béchamel très épaisse, presque solide une fois refroidie, donne à la croquette son cœur fondant." },
+        { icon: "❄️", t: "Le mélange doit bien refroidir", d: "Le mélange de sauce et de crevettes doit refroidir plusieurs heures au moins, sinon les croquettes se défont à la friture." },
+        { icon: "🔥", t: "Double panure pour plus de croustillant", d: "Chaque croquette passe deux fois dans l'œuf et la chapelure pour une coque extérieure extrêmement croustillante." }
+      ],
+      de: [
+        { icon: "🦐", t: "Graue Krabben, nicht die üblichen", d: "Winzige graue Krabben aus der Nordsee haben einen unverwechselbaren süß-salzigen Geschmack, den keine andere Art nachbilden kann." },
+        { icon: "🧈", t: "Eine dicke Béchamel ist der Schlüssel", d: "Eine sehr dicke Béchamelsauce, gekühlt fast fest, gibt der Krokette ihren flüssigen Kern." },
+        { icon: "❄️", t: "Die Masse braucht gute Kühlzeit", d: "Die Sauce-Krabben-Mischung muss mindestens mehrere Stunden kühlen, sonst zerfallen die Kroketten beim Frittieren." },
+        { icon: "🔥", t: "Doppelte Panade für extra Knusprigkeit", d: "Jede Krokette wird zweimal in Ei und Semmelbröseln paniert für eine extrem knusprige Außenschicht." }
+      ],
+      pt: [
+        { icon: "🦐", t: "Camarão cinzento, não o habitual", d: "Os minúsculos camarões cinzentos do mar do Norte têm um sabor doce-salgado distinto que nenhuma outra espécie consegue replicar." },
+        { icon: "🧈", t: "Um bechamel espesso é a chave", d: "Um bechamel muito espesso, quase sólido depois de arrefecido, dá ao croquete o seu centro derretido." },
+        { icon: "❄️", t: "A mistura precisa de arrefecer bem", d: "A mistura de molho e camarão deve arrefecer pelo menos várias horas, ou os croquetes desfazem-se ao fritar." },
+        { icon: "🔥", t: "Empanado duplo para mais crocância", d: "Cada croquete passa duas vezes por ovo e farinha de rosca para uma crosta exterior extremamente crocante." }
+      ],
+      ru: [
+        { icon: "🦐", t: "Серые креветки, не обычные", d: "Крошечные серые креветки из Северного моря обладают неповторимым сладко-солёным вкусом, который не воспроизвести другими видами." },
+        { icon: "🧈", t: "Густой соус бешамель — главное", d: "Очень густой соус бешамель, почти твёрдый после охлаждения, придаёт крокету плавящийся центр." },
+        { icon: "❄️", t: "Смесь должна хорошо охладиться", d: "Смесь соуса и креветок должна охлаждаться минимум несколько часов, иначе крокеты развалятся при жарке." },
+        { icon: "🔥", t: "Двойная панировка для хруста", d: "Каждый крокет дважды проходит через яйцо и панировочные сухари для очень хрустящей внешней корочки." }
+      ],
+      ar: [
+        { icon: "🦐", t: "روبيان رمادي، وليس المعتاد", d: "الروبيان الرمادي الصغير من بحر الشمال له طعم حلو مالح مميز لا يمكن لأي نوع آخر أن يضاهيه." },
+        { icon: "🧈", t: "صلصة بشاميل سميكة هي المفتاح", d: "صلصة بشاميل سميكة جداً، شبه صلبة بعد التبريد، تمنح الكروكيت مركزها الذائب." },
+        { icon: "❄️", t: "الخليط يحتاج تبريداً جيداً", d: "يجب تبريد خليط الصلصة والروبيان لعدة ساعات على الأقل، وإلا تتفكك الكروكيتات عند القلي." },
+        { icon: "🔥", t: "تغليف مزدوج لقرمشة إضافية", d: "يمر كل كروكيت مرتين عبر البيض والبقسماط للحصول على قشرة خارجية مقرمشة للغاية." }
+      ],
+      zh: [
+        { icon: "🦐", t: "灰虾，而非常见品种", d: "北海的微小灰虾拥有独特的咸甜风味，是其他品种无法复制的。" },
+        { icon: "🧈", t: "浓稠白酱是关键", d: "非常浓稠的白酱冷却后几乎凝固，赋予可乐饼融化般的内芯。" },
+        { icon: "❄️", t: "混合物需要充分冷藏", d: "酱汁与虾的混合物至少需要冷藏几个小时，否则炸制时可乐饼会散开。" },
+        { icon: "🔥", t: "双重裹粉更酥脆", d: "每个可乐饼要过两遍蛋液和面包糠，才能形成极其酥脆的外壳。" }
+      ],
+      ja: [
+        { icon: "🦐", t: "灰色エビ、普通のエビではない", d: "北海の小さな灰色エビは、他のどんな種類でも真似できない独特の甘塩っぱい味わいを持つ。" },
+        { icon: "🧈", t: "濃厚なベシャメルソースが決め手", d: "冷やすとほぼ固まる非常に濃いベシャメルソースが、クロケットのとろける中身を作る。" },
+        { icon: "❄️", t: "生地はしっかり冷やす必要がある", d: "ソースとエビの生地は少なくとも数時間冷やさないと、揚げるときにクロケットが崩れてしまう。" },
+        { icon: "🔥", t: "二度衣付けでよりカリッと", d: "各クロケットは卵とパン粉を二回くぐらせ、非常にカリカリした外側の殻を作る。" }
+      ],
+      hi: [
+        { icon: "🦐", t: "ग्रे झींगे, सामान्य नहीं", d: "उत्तरी सागर के छोटे ग्रे झींगों में एक विशिष्ट मीठा-नमकीन स्वाद होता है जिसे कोई अन्य प्रजाति दोहरा नहीं सकती।" },
+        { icon: "🧈", t: "गाढ़ी बेशामेल कुंजी है", d: "बहुत गाढ़ी बेशामेल सॉस, ठंडी होने पर लगभग ठोस, क्रोकेट को उसका पिघला हुआ केंद्र देती है।" },
+        { icon: "❄️", t: "मिश्रण को अच्छे से ठंडा करना जरूरी है", d: "सॉस और झींगे का मिश्रण कम से कम कई घंटे ठंडा होना चाहिए, वरना क्रोकेट तलते समय टूट जाते हैं।" },
+        { icon: "🔥", t: "अतिरिक्त कुरकुरेपन के लिए दोहरी ब्रेडिंग", d: "हर क्रोकेट दो बार अंडे और ब्रेडक्रम्ब से गुजरता है ताकि बाहरी परत बेहद कुरकुरी बने।" }
+      ],
+      tr: [
+        { icon: "🦐", t: "Gri karidesler, alışılmışlardan değil", d: "Kuzey Denizi'nin minik gri karidesleri, başka hiçbir türün taklit edemeyeceği kendine özgü tatlı-tuzlu bir tada sahiptir." },
+        { icon: "🧈", t: "Koyu beşamel şarttır", d: "Soğuduğunda neredeyse katılaşan çok koyu bir beşamel sos, krokete akışkan merkezini verir." },
+        { icon: "❄️", t: "Karışım iyice soğutulmalıdır", d: "Sos ve karides karışımı en az birkaç saat soğutulmalıdır, aksi takdirde kroketler kızartılırken dağılır." },
+        { icon: "🔥", t: "Ekstra çıtırlık için çift galeta", d: "Her kroket, son derece çıtır bir dış kabuk için iki kez yumurta ve galeta ununa bulanır." }
+      ],
+      it: [
+        { icon: "🦐", t: "Gamberetti grigi, non i soliti", d: "I minuscoli gamberetti grigi del Mare del Nord hanno un sapore dolce-salato distintivo che nessun'altra specie può replicare." },
+        { icon: "🧈", t: "Una besciamella densa è la chiave", d: "Una besciamella molto densa, quasi solida una volta raffreddata, dà alla crocchetta il suo cuore fondente." },
+        { icon: "❄️", t: "Il composto va raffreddato bene", d: "Il composto di salsa e gamberetti deve raffreddarsi per almeno diverse ore, altrimenti le crocchette si sfaldano friggendo." },
+        { icon: "🔥", t: "Doppia panatura per più croccantezza", d: "Ogni crocchetta passa due volte in uovo e pangrattato per un guscio esterno estremamente croccante." }
+      ],
+      ko: [
+        { icon: "🦐", t: "회색 새우, 보통 새우가 아니다", d: "북해의 작은 회색 새우는 다른 어떤 종도 흉내 낼 수 없는 독특한 짭짤달콤한 맛을 가지고 있다." },
+        { icon: "🧈", t: "진한 베샤멜 소스가 핵심", d: "식으면 거의 굳는 매우 진한 베샤멜 소스가 크로켓에 녹아내리는 속을 만든다." },
+        { icon: "❄️", t: "반죽은 충분히 식혀야 한다", d: "소스와 새우 혼합물은 최소 몇 시간 동안 차게 식혀야 하며, 그렇지 않으면 튀길 때 크로켓이 부서진다." },
+        { icon: "🔥", t: "더 바삭하도록 두 번 빵가루를 입힌다", d: "각 크로켓은 달걀과 빵가루를 두 번 거쳐 매우 바삭한 겉껍질을 만든다." }
+      ]
+    },
+    ingredients: {
+      ro: ["80g unt", "80g făină", "400ml lapte integral", "250g creveți gri, decojiți", "1 lingură pătrunjel tocat", "1/2 linguriță nucșoară", "2 ouă, bătute", "150g pesmet fin", "ulei pentru prăjit"],
+      en: ["80g butter", "80g flour", "400ml whole milk", "250g grey shrimp, peeled", "1 tbsp chopped parsley", "1/2 tsp nutmeg", "2 eggs, beaten", "150g fine breadcrumbs", "oil for frying"],
+      es: ["80g de mantequilla", "80g de harina", "400ml de leche entera", "250g de gambas grises, peladas", "1 cda de perejil picado", "1/2 cdta de nuez moscada", "2 huevos, batidos", "150g de pan rallado fino", "aceite para freír"],
+      fr: ["80g de beurre", "80g de farine", "400ml de lait entier", "250g de crevettes grises, décortiquées", "1 c. à soupe de persil haché", "1/2 c. à café de muscade", "2 œufs, battus", "150g de chapelure fine", "huile pour friture"],
+      de: ["80g Butter", "80g Mehl", "400ml Vollmilch", "250g graue Krabben, geschält", "1 EL gehackte Petersilie", "1/2 TL Muskatnuss", "2 Eier, verquirlt", "150g feine Semmelbrösel", "Öl zum Frittieren"],
+      pt: ["80g de manteiga", "80g de farinha", "400ml de leite integral", "250g de camarão cinzento, descascado", "1 col. sopa de salsa picada", "1/2 col. chá de noz-moscada", "2 ovos, batidos", "150g de farinha de rosca fina", "óleo para fritar"],
+      ru: ["80г сливочного масла", "80г муки", "400мл цельного молока", "250г серых креветок, очищенных", "1 ст.л. рубленой петрушки", "1/2 ч.л. мускатного ореха", "2 яйца, взбитых", "150г мелких панировочных сухарей", "масло для жарки"],
+      ar: ["80غ زبدة", "80غ دقيق", "400مل حليب كامل الدسم", "250غ روبيان رمادي، مقشر", "1 ملعقة كبيرة بقدونس مفروم", "1/2 ملعقة صغيرة جوزة الطيب", "2 بيضة، مخفوقة", "150غ بقسماط ناعم", "زيت للقلي"],
+      zh: ["80克黄油", "80克面粉", "400毫升全脂牛奶", "250克灰虾，去壳", "1汤匙欧芹碎", "1/2茶匙肉豆蔻", "2个鸡蛋，打散", "150克细面包糠", "煎炸用油"],
+      ja: ["バター80g", "小麦粉80g", "全乳400ml", "灰色エビ250g（殻を剥く）", "パセリのみじん切り大さじ1", "ナツメグ小さじ1/2", "卵2個（溶く）", "細かいパン粉150g", "揚げ油"],
+      hi: ["80 ग्राम मक्खन", "80 ग्राम आटा", "400 मिली फुल क्रीम दूध", "250 ग्राम ग्रे झींगे, छिले हुए", "1 बड़ा चम्मच कटा अजमोद", "1/2 छोटा चम्मच जायफल", "2 अंडे, फेंटे हुए", "150 ग्राम बारीक ब्रेडक्रम्ब", "तलने के लिए तेल"],
+      tr: ["80g tereyağı", "80g un", "400ml tam yağlı süt", "250g gri karides, kabuğu soyulmuş", "1 yemek kaşığı doğranmış maydanoz", "1/2 tatlı kaşığı muskat", "2 yumurta, çırpılmış", "150g ince galeta unu", "kızartmak için yağ"],
+      it: ["80g di burro", "80g di farina", "400ml di latte intero", "250g di gamberetti grigi, sgusciati", "1 cucchiaio di prezzemolo tritato", "1/2 cucchiaino di noce moscata", "2 uova, sbattute", "150g di pangrattato fine", "olio per friggere"],
+      ko: ["버터 80g", "밀가루 80g", "전유 400ml", "회색 새우 250g, 껍질 벗긴 것", "다진 파슬리 1큰술", "육두구 1/2작은술", "달걀 2개, 푼 것", "고운 빵가루 150g", "튀김용 기름"]
+    },
+    howIsMade: {
+      ro: "Se topește untul într-o cratiță, apoi se adaugă făina și se amestecă un minut, la foc mic, pentru un roux. Se toarnă laptele treptat, amestecând continuu, până se obține un sos béchamel foarte gros. Se ia de pe foc și se adaugă creveții, pătrunjelul și nucșoara, amestecând bine. Se toarnă compoziția într-o tavă și se lasă la frigider cel puțin patru ore, până devine fermă. Se taie compoziția în bastonașe și se trece fiecare prin ou, apoi prin pesmet, de două ori. Se prăjesc crochetele în ulei încins până devin aurii și crocante pe toate părțile. Se scurg pe hârtie absorbantă și se servesc calde, cu felii de lămâie.",
+      en: "Melt the butter in a saucepan, then add the flour and stir for a minute over low heat to make a roux. Gradually pour in the milk, stirring constantly, until you get a very thick béchamel sauce. Remove from the heat and stir in the shrimp, parsley, and nutmeg, mixing well. Pour the mixture into a tray and refrigerate for at least four hours, until firm. Cut the mixture into sticks and coat each in egg, then breadcrumbs, twice. Fry the croquettes in hot oil until golden and crisp on all sides. Drain on paper towel and serve warm, with lemon wedges.",
+      es: "Derrite la mantequilla en una cacerola, luego añade la harina y remueve un minuto a fuego lento para hacer un roux. Vierte la leche poco a poco, removiendo constantemente, hasta obtener una bechamel muy espesa. Retira del fuego e incorpora las gambas, el perejil y la nuez moscada, mezclando bien. Vierte la mezcla en una bandeja y refrigera al menos cuatro horas, hasta que esté firme. Corta la mezcla en bastones y pasa cada uno por huevo, luego por pan rallado, dos veces. Fríe las croquetas en aceite caliente hasta que estén doradas y crujientes por todos lados. Escurre sobre papel absorbente y sirve caliente, con gajos de limón.",
+      fr: "Faites fondre le beurre dans une casserole, puis ajoutez la farine et remuez une minute à feu doux pour faire un roux. Versez le lait progressivement, en remuant constamment, jusqu'à obtenir une béchamel très épaisse. Retirez du feu et incorporez les crevettes, le persil et la muscade, en mélangeant bien. Versez le mélange dans un plat et réfrigérez au moins quatre heures, jusqu'à ce qu'il soit ferme. Coupez le mélange en bâtonnets et enrobez chacun d'œuf, puis de chapelure, deux fois. Faites frire les croquettes dans l'huile chaude jusqu'à ce qu'elles soient dorées et croustillantes de tous les côtés. Égouttez sur du papier absorbant et servez chaud, avec des quartiers de citron.",
+      de: "Die Butter in einem Topf schmelzen, dann das Mehl hinzufügen und eine Minute bei niedriger Hitze rühren, um eine Roux zu machen. Die Milch nach und nach unter ständigem Rühren einrühren, bis eine sehr dicke Béchamelsauce entsteht. Vom Herd nehmen und die Krabben, Petersilie und Muskatnuss einrühren, gut mischen. Die Masse in eine Form füllen und mindestens vier Stunden kühlen, bis sie fest ist. Die Masse in Stäbchen schneiden und jedes zweimal in Ei, dann in Semmelbröseln wälzen. Die Kroketten in heißem Öl goldbraun und rundum knusprig frittieren. Auf Küchenpapier abtropfen lassen und warm mit Zitronenspalten servieren.",
+      pt: "Derreta a manteiga numa panela, depois junte a farinha e mexa por um minuto em lume baixo para fazer um roux. Deite o leite gradualmente, mexendo sempre, até obter um bechamel muito espesso. Retire do lume e junte o camarão, a salsa e a noz-moscada, misturando bem. Deite a mistura num tabuleiro e leve ao frigorífico por pelo menos quatro horas, até ficar firme. Corte a mistura em bastonetes e passe cada um por ovo, depois por farinha de rosca, duas vezes. Frite os croquetes em óleo quente até dourarem e ficarem crocantes de todos os lados. Escorra em papel absorvente e sirva quente, com gomos de limão.",
+      ru: "Растопите масло в кастрюле, добавьте муку и помешивайте минуту на слабом огне для получения ру. Постепенно влейте молоко, постоянно помешивая, пока не получится очень густой соус бешамель. Снимите с огня и вмешайте креветки, петрушку и мускатный орех, тщательно перемешав. Вылейте смесь на противень и уберите в холодильник минимум на четыре часа, пока не станет плотной. Нарежьте смесь на палочки и обваляйте каждую в яйце, затем в панировочных сухарях, дважды. Обжарьте крокеты в горячем масле до золотистого цвета и хруста со всех сторон. Обсушите на бумажном полотенце и подавайте тёплыми, с дольками лимона.",
+      ar: "أذيبي الزبدة في قدر، ثم أضيفي الدقيق وقلّبي لمدة دقيقة على نار هادئة لعمل روكس. اسكبي الحليب تدريجياً مع التحريك المستمر حتى تحصلي على صلصة بشاميل سميكة جداً. ارفعي عن النار وأضيفي الروبيان والبقدونس وجوزة الطيب، مع الخلط جيداً. اسكبي الخليط في صينية وضعيه في الثلاجة لمدة أربع ساعات على الأقل حتى يصبح متماسكاً. قطّعي الخليط إلى أصابع ومرّري كل واحد في البيض، ثم البقسماط، مرتين. اقلي الكروكيتات في زيت ساخن حتى تصبح ذهبية ومقرمشة من كل الجهات. صفّيها على ورق ماص وقدّميها دافئة مع شرائح الليمون.",
+      zh: "在锅中融化黄油，加入面粉，小火搅拌一分钟制成油面糊。逐渐倒入牛奶，不断搅拌，直到形成非常浓稠的白酱。离火后拌入虾仁、欧芹和肉豆蔻，充分混合。将混合物倒入托盘中，冷藏至少四小时，直至变硬实。将混合物切成条状，每根裹两遍蛋液和面包糠。将可乐饼放入热油中炸至各面金黄酥脆。捞出沥干在厨房纸上，趁热搭配柠檬瓣享用。",
+      ja: "鍋でバターを溶かし、小麦粉を加えて弱火で1分間混ぜてルーを作る。牛乳を少しずつ加え、絶えずかき混ぜながら非常に濃いベシャメルソースを作る。火から下ろし、エビ、パセリ、ナツメグを混ぜ込む。生地をバットに流し入れ、少なくとも4時間冷蔵庫で固まるまで冷やす。生地をスティック状に切り分け、それぞれを卵、パン粉の順に二回くぐらせる。クロケットを熱い油で全面が黄金色でカリッとするまで揚げる。キッチンペーパーで油を切り、レモンのくし切りを添えて温かいうちに提供する。",
+      hi: "पैन में मक्खन पिघलाएं, फिर आटा डालें और रु बनाने के लिए धीमी आंच पर एक मिनट हिलाएं। दूध धीरे-धीरे डालें, लगातार हिलाते हुए, जब तक बहुत गाढ़ी बेशामेल सॉस न बन जाए। आंच से उतारें और झींगे, अजमोद और जायफल मिलाएं, अच्छी तरह मिलाते हुए। मिश्रण को ट्रे में डालें और कम से कम चार घंटे फ्रिज में रखें जब तक सख्त न हो जाए। मिश्रण को स्टिक में काटें और हर एक को अंडे में, फिर ब्रेडक्रम्ब में, दो बार लपेटें। क्रोकेट को गरम तेल में चारों तरफ से सुनहरा और कुरकुरा होने तक तलें। टिशू पेपर पर निथारें और नींबू के टुकड़ों के साथ गरम परोसें।",
+      tr: "Bir tencerede tereyağını eritin, ardından unu ekleyip bir roux yapmak için düşük ateşte bir dakika karıştırın. Sütü yavaş yavaş dökerek sürekli karıştırın, çok koyu bir beşamel sos elde edene kadar. Ateşten alın ve karidesleri, maydanozu ve muskatı ekleyip iyice karıştırın. Karışımı bir tepsiye dökün ve sertleşene kadar en az dört saat buzdolabında bekletin. Karışımı çubuklar halinde kesin ve her birini yumurta, sonra galeta ununa iki kez bulayın. Kroketleri sıcak yağda her tarafı altın rengi ve çıtır olana kadar kızartın. Kağıt havlu üzerinde süzdürün ve limon dilimleriyle sıcak servis edin.",
+      it: "Sciogli il burro in una pentola, poi aggiungi la farina e mescola per un minuto a fuoco basso per fare un roux. Versa il latte gradualmente, mescolando continuamente, finché non ottieni una besciamella molto densa. Togli dal fuoco e incorpora i gamberetti, il prezzemolo e la noce moscata, mescolando bene. Versa il composto in una teglia e refrigera per almeno quattro ore, finché non è sodo. Taglia il composto a bastoncini e passa ognuno nell'uovo, poi nel pangrattato, due volte. Friggi le crocchette in olio caldo finché non sono dorate e croccanti su tutti i lati. Scola su carta assorbente e servi calde, con spicchi di limone.",
+      ko: "냄비에 버터를 녹인 뒤 밀가루를 넣고 약한 불에서 1분간 저어 루를 만든다. 우유를 조금씩 부으며 계속 저어 매우 진한 베샤멜 소스를 만든다. 불에서 내려 새우, 파슬리, 육두구를 넣고 잘 섞는다. 혼합물을 쟁반에 부어 단단해질 때까지 최소 네 시간 냉장 보관한다. 혼합물을 막대 모양으로 자르고 각각을 달걀, 빵가루 순으로 두 번 입힌다. 크로켓을 뜨거운 기름에 사방이 황금빛으로 바삭해질 때까지 튀긴다. 키친타월에 기름을 빼고 레몬 조각을 곁들여 따뜻할 때 낸다."
+    },
+    originText: {
+      ro: "Crochetele de creveți gri sunt legate strâns de pescuitul tradițional de coastă din Belgia, unde pescarii culeg încă și azi crevetele cu plase trase de cai pe plaja din Oostduinkerke, una din ultimele tradiții de acest fel din Europa. Creveții mici, cenușii, prinși în Marea Nordului, au un gust mult mai concentrat decât rudele lor mai mari.\n\nCrochetele au devenit un preparat clasic de bistro belgian, servite ca aperitiv sau fel principal ușor, alături de salată verde simplă și o felie de lămâie, iar prepararea sosului béchamel foarte gros rămâne testul priceperii unui bucătar belgian.",
+      en: "Grey shrimp croquettes are closely tied to Belgium's traditional coastal fishing, where fishermen still gather shrimp using horse-drawn nets on the beach at Oostduinkerke, one of the last traditions of its kind in Europe. The tiny grey shrimp caught in the North Sea have a much more concentrated flavour than their larger relatives.\n\nThe croquettes became a classic Belgian bistro dish, served as a starter or a light main course, alongside a simple green salad and a lemon wedge, and getting the very thick béchamel just right remains a test of a Belgian cook's skill.",
+      es: "Las croquetas de gambas grises están estrechamente ligadas a la pesca costera tradicional de Bélgica, donde los pescadores aún recogen las gambas con redes tiradas por caballos en la playa de Oostduinkerke, una de las últimas tradiciones de este tipo en Europa. Las diminutas gambas grises capturadas en el mar del Norte tienen un sabor mucho más concentrado que sus parientes más grandes.\n\nLas croquetas se convirtieron en un plato clásico de bistró belga, servido como entrante o plato principal ligero, junto a una simple ensalada verde y una rodaja de limón, y conseguir una bechamel muy espesa perfecta sigue siendo una prueba de la habilidad de un cocinero belga.",
+      fr: "Les croquettes de crevettes grises sont étroitement liées à la pêche côtière traditionnelle de Belgique, où les pêcheurs récoltent encore les crevettes avec des filets tirés par des chevaux sur la plage d'Oostduinkerke, l'une des dernières traditions de ce genre en Europe. Les minuscules crevettes grises pêchées en mer du Nord ont un goût bien plus concentré que leurs cousines plus grandes.\n\nLes croquettes sont devenues un plat classique des bistrots belges, servies en entrée ou en plat principal léger, accompagnées d'une simple salade verte et d'un quartier de citron, et réussir une béchamel très épaisse reste un test du savoir-faire d'un cuisinier belge.",
+      de: "Krabbenkroketten sind eng mit der traditionellen belgischen Küstenfischerei verbunden, wo Fischer immer noch mit von Pferden gezogenen Netzen am Strand von Oostduinkerke Krabben sammeln — eine der letzten Traditionen dieser Art in Europa. Die winzigen grauen Krabben aus der Nordsee haben einen viel konzentrierteren Geschmack als ihre größeren Verwandten.\n\nDie Kroketten wurden zu einem klassischen belgischen Bistro-Gericht, serviert als Vorspeise oder leichtes Hauptgericht, zusammen mit einem einfachen grünen Salat und einer Zitronenspalte, und eine sehr dicke Béchamel richtig hinzubekommen bleibt eine Prüfung des Könnens eines belgischen Kochs.",
+      pt: "Os croquetes de camarão cinzento estão intimamente ligados à pesca costeira tradicional da Bélgica, onde os pescadores ainda apanham camarão com redes puxadas por cavalos na praia de Oostduinkerke, uma das últimas tradições deste género na Europa. Os minúsculos camarões cinzentos apanhados no mar do Norte têm um sabor muito mais concentrado do que os seus parentes maiores.\n\nOs croquetes tornaram-se um prato clássico dos bistrôs belgas, servidos como entrada ou prato principal leve, junto com uma simples salada verde e uma rodela de limão, e acertar um bechamel muito espesso continua a ser um teste à habilidade de um cozinheiro belga.",
+      ru: "Крокеты из серых креветок тесно связаны с традиционным прибрежным промыслом Бельгии, где рыбаки до сих пор собирают креветок сетями, которые тянут лошади по пляжу Остдёйнкерке — одна из последних традиций такого рода в Европе. Крошечные серые креветки, выловленные в Северном море, обладают намного более концентрированным вкусом, чем их более крупные сородичи.\n\nКрокеты стали классическим блюдом бельгийских бистро, подаваемым как закуска или лёгкое основное блюдо, вместе с простым зелёным салатом и долькой лимона, и приготовление правильно очень густого бешамеля остаётся проверкой мастерства бельгийского повара.",
+      ar: "ترتبط كروكيتات الروبيان الرمادي ارتباطاً وثيقاً بصيد الأسماك الساحلي التقليدي في بلجيكا، حيث لا يزال الصيادون يجمعون الروبيان بشباك تجرها الخيول على شاطئ أوستدوينكيركه، وهي واحدة من آخر التقاليد من نوعها في أوروبا. الروبيان الرمادي الصغير المصطاد في بحر الشمال له نكهة أكثر تركيزاً بكثير من أقاربه الأكبر حجماً.\n\nأصبحت الكروكيتات طبقاً كلاسيكياً في المطاعم البلجيكية الصغيرة، تُقدَّم كمقبلات أو طبق رئيسي خفيف، إلى جانب سلطة خضراء بسيطة وشريحة ليمون، ويبقى إتقان صلصة البشاميل السميكة جداً اختباراً لمهارة الطاهي البلجيكي.",
+      zh: "灰虾可乐饼与比利时传统的沿海捕鱼业密切相关，在奥斯特迪克尔克海滩，渔民至今仍用马拉网捕捞灰虾，这是欧洲最后几种此类传统之一。在北海捕获的微小灰虾比其体型更大的近亲拥有更浓郁的风味。\n\n可乐饼已成为比利时小酒馆的经典菜肴，作为开胃菜或清淡主菜供应，搭配简单的青菜沙拉和一片柠檬，而做出恰到好处的浓稠白酱，至今仍是检验比利时厨师功力的标准。",
+      ja: "灰色エビのクロケットは、オーステンドンケルケの浜辺で今も馬に引かせた網でエビを集める、ヨーロッパでも数少ない伝統の一つであるベルギーの伝統的な沿岸漁業と密接に結びついている。北海で獲れる小さな灰色エビは、より大きい近縁種よりもはるかに濃厚な味わいを持つ。\n\nこのクロケットはベルギーのビストロの定番料理となり、シンプルなグリーンサラダとレモンのくし切りを添えて前菜または軽い主菜として提供される。非常に濃いベシャメルソースを正しく仕上げることは、今もベルギー人シェフの腕前を試す試金石だ。",
+      hi: "ग्रे झींगा क्रोकेट बेल्जियम की पारंपरिक तटीय मछली पकड़ने से गहराई से जुड़े हैं, जहां मछुआरे आज भी ओस्टडुइंकर्के समुद्र तट पर घोड़ों द्वारा खींचे गए जालों से झींगे इकट्ठा करते हैं, जो यूरोप में इस तरह की आखिरी परंपराओं में से एक है। उत्तरी सागर में पकड़े गए छोटे ग्रे झींगों का स्वाद उनके बड़े रिश्तेदारों की तुलना में कहीं अधिक गाढ़ा होता है।\n\nक्रोकेट बेल्जियम के बिस्ट्रो का एक क्लासिक व्यंजन बन गए, जिन्हें स्टार्टर या हल्के मुख्य व्यंजन के रूप में, साधारण हरे सलाद और नींबू के टुकड़े के साथ परोसा जाता है, और बेहद गाढ़ी बेशामेल को सही बनाना आज भी एक बेल्जियम रसोइये के कौशल की परीक्षा बना हुआ है।",
+      tr: "Gri karides kroketleri, balıkçıların hâlâ Oostduinkerke sahilinde at çekilen ağlarla karides topladığı, Avrupa'da türünün son geleneklerinden biri olan Belçika'nın geleneksel kıyı balıkçılığıyla yakından bağlantılıdır. Kuzey Denizi'nde avlanan minik gri karidesler, daha büyük akrabalarından çok daha yoğun bir tada sahiptir.\n\nKroketler, basit bir yeşil salata ve limon dilimiyle birlikte başlangıç veya hafif ana yemek olarak servis edilen klasik bir Belçika bistro yemeği haline geldi ve çok koyu bir beşameli doğru yapmak hâlâ bir Belçikalı aşçının becerisinin bir testi olarak kalıyor.",
+      it: "Le crocchette di gamberetti grigi sono strettamente legate alla pesca costiera tradizionale del Belgio, dove i pescatori raccolgono ancora i gamberetti con reti trainate da cavalli sulla spiaggia di Oostduinkerke, una delle ultime tradizioni di questo tipo in Europa. I minuscoli gamberetti grigi pescati nel Mare del Nord hanno un sapore molto più concentrato dei loro parenti più grandi.\n\nLe crocchette sono diventate un piatto classico dei bistrot belgi, servite come antipasto o secondo leggero, insieme a una semplice insalata verde e uno spicchio di limone, e ottenere una besciamella molto densa perfetta resta una prova dell'abilità di un cuoco belga.",
+      ko: "회색새우 크로켓은 벨기에의 전통적인 연안 어업과 밀접하게 연관되어 있는데, 오스트다윈케르케 해변에서는 지금도 어부들이 말이 끄는 그물로 새우를 잡는, 유럽에서 이런 종류로는 마지막 남은 전통 중 하나를 이어가고 있다. 북해에서 잡히는 작은 회색 새우는 더 큰 친척뻘 새우보다 훨씬 진한 풍미를 지닌다.\n\n크로켓은 벨기에 비스트로의 클래식 요리가 되어, 간단한 그린 샐러드와 레몬 한 조각을 곁들여 애피타이저나 가벼운 메인 요리로 제공되며, 아주 진한 베샤멜을 제대로 만드는 것은 여전히 벨기에 요리사의 실력을 가늠하는 시험대로 남아 있다."
+    }
+  },
+  {
+    id: 440,
+    servings: 4,
+    tipType: "veg",
+    pairingsType: "def",
+    nutrition: { cal: 380, prot: 16, carb: 18, fat: 27, fib: 5 },
+    origin: {
+      ro: "Belgia", en: "Belgium", es: "Bélgica", fr: "Belgique", de: "Belgien",
+      pt: "Bélgica", ru: "Бельгия", ar: "بلجيكا", zh: "比利时", ja: "ベルギー",
+      hi: "बेल्जियम", tr: "Belçika", it: "Belgio", ko: "벨기에"
+    },
+    name: {
+      ro: "Andive gratinate cu șuncă", en: "Chicons au Gratin", es: "Endivias gratinadas con jamón", fr: "Chicons au Gratin", de: "Chicorée-Gratin mit Schinken",
+      pt: "Endívias gratinadas com fiambre", ru: "Запечённый цикорий с ветчиной", ar: "هندباء مجروتان بالجبن ولحم مقدد", zh: "菊苣焗火腿", ja: "アンディーブのハムグラタン",
+      hi: "एंडिव ग्रेटिन विद हैम", tr: "Jambonlu Hindiba Gratin", it: "Indivia gratinata al prosciutto", ko: "치커리 햄 그라탱"
+    },
+    category: {
+      ro: "Fel principal", en: "Main Course", es: "Plato principal", fr: "Plat principal", de: "Hauptgericht",
+      pt: "Prato principal", ru: "Основное блюдо", ar: "طبق رئيسي", zh: "主菜", ja: "メイン料理",
+      hi: "मुख्य व्यंजन", tr: "Ana Yemek", it: "Piatto principale", ko: "메인 요리"
+    },
+    featureCards: {
+      ro: [
+        { icon: "🥬", t: "Andiva belgiană, o legumă de iarnă", d: "Andivele, cultivate în întuneric pentru a rămâne albe, sunt legume de iarnă tipic belgiene, cu gust ușor amărui." },
+        { icon: "💧", t: "Amăreala trebuie temperată", d: "Andivele fierte în apă cu puțin zahăr și suc de lămâie pierd din amăreala excesivă înainte de a fi gratinate." },
+        { icon: "🥓", t: "Fiecare andivă, învelită în șuncă", d: "Fiecare căpățână fiartă se înfășoară cu o felie de șuncă înainte de a fi acoperită cu sos." },
+        { icon: "🧀", t: "Sos béchamel cu brânză gratinat", d: "Un béchamel cu brânză rasă generos se toarnă deasupra și se dă la cuptor până face crustă aurie." }
+      ],
+      en: [
+        { icon: "🥬", t: "Belgian chicory, a winter vegetable", d: "Chicons, grown in darkness to stay pale, are a typically Belgian winter vegetable with a slightly bitter taste." },
+        { icon: "💧", t: "The bitterness needs taming", d: "Chicons boiled in water with a little sugar and lemon juice lose their excess bitterness before being gratinated." },
+        { icon: "🥓", t: "Each chicon wrapped in ham", d: "Each boiled head is wrapped in a slice of ham before being covered in sauce." },
+        { icon: "🧀", t: "A cheesy béchamel gratin", d: "A béchamel generously topped with grated cheese is poured over and baked until golden-crusted." }
+      ],
+      es: [
+        { icon: "🥬", t: "Endivia belga, una verdura de invierno", d: "Las endivias, cultivadas en la oscuridad para mantenerse pálidas, son una verdura de invierno típicamente belga, de sabor algo amargo." },
+        { icon: "💧", t: "El amargor debe suavizarse", d: "Las endivias hervidas en agua con un poco de azúcar y jugo de limón pierden su amargor excesivo antes de gratinarse." },
+        { icon: "🥓", t: "Cada endivia envuelta en jamón", d: "Cada cabeza hervida se envuelve en una loncha de jamón antes de cubrirse con salsa." },
+        { icon: "🧀", t: "Un gratinado bechamel con queso", d: "Una bechamel generosamente cubierta de queso rallado se vierte encima y se hornea hasta dorarse." }
+      ],
+      fr: [
+        { icon: "🥬", t: "Le chicon belge, un légume d'hiver", d: "Les chicons, cultivés dans l'obscurité pour rester pâles, sont un légume d'hiver typiquement belge, au goût légèrement amer." },
+        { icon: "💧", t: "L'amertume doit être adoucie", d: "Les chicons bouillis dans l'eau avec un peu de sucre et de jus de citron perdent leur amertume excessive avant d'être gratinés." },
+        { icon: "🥓", t: "Chaque chicon enveloppé de jambon", d: "Chaque tête bouillie est enveloppée d'une tranche de jambon avant d'être recouverte de sauce." },
+        { icon: "🧀", t: "Un gratin béchamel fromagé", d: "Une béchamel généreusement garnie de fromage râpé est versée dessus et cuite au four jusqu'à dorure." }
+      ],
+      de: [
+        { icon: "🥬", t: "Belgischer Chicorée, ein Wintergemüse", d: "Chicorée, im Dunkeln angebaut, um blass zu bleiben, ist ein typisch belgisches Wintergemüse mit leicht bitterem Geschmack." },
+        { icon: "💧", t: "Die Bitterkeit muss gezähmt werden", d: "In Wasser mit etwas Zucker und Zitronensaft gekochter Chicorée verliert seine übermäßige Bitterkeit, bevor er überbacken wird." },
+        { icon: "🥓", t: "Jeder Chicorée in Schinken gewickelt", d: "Jeder gekochte Kopf wird in eine Scheibe Schinken gewickelt, bevor er mit Sauce bedeckt wird." },
+        { icon: "🧀", t: "Ein käsiges Béchamel-Gratin", d: "Eine großzügig mit geriebenem Käse bedeckte Béchamel wird darübergegossen und goldbraun überbacken." }
+      ],
+      pt: [
+        { icon: "🥬", t: "Endívia belga, um legume de inverno", d: "As endívias, cultivadas no escuro para se manterem pálidas, são um legume de inverno tipicamente belga, com sabor ligeiramente amargo." },
+        { icon: "💧", t: "O amargor precisa de ser suavizado", d: "As endívias cozidas em água com um pouco de açúcar e sumo de limão perdem o amargor excessivo antes de serem gratinadas." },
+        { icon: "🥓", t: "Cada endívia envolvida em fiambre", d: "Cada cabeça cozida é envolvida numa fatia de fiambre antes de ser coberta com molho." },
+        { icon: "🧀", t: "Um gratinado bechamel com queijo", d: "Um bechamel generosamente coberto de queijo ralado é despejado por cima e levado ao forno até dourar." }
+      ],
+      ru: [
+        { icon: "🥬", t: "Бельгийский цикорий — зимний овощ", d: "Цикорий, выращенный в темноте, чтобы оставаться бледным, — типично бельгийский зимний овощ с лёгкой горчинкой." },
+        { icon: "💧", t: "Горечь нужно смягчить", d: "Цикорий, отваренный в воде с небольшим количеством сахара и лимонного сока, теряет излишнюю горечь перед запеканием." },
+        { icon: "🥓", t: "Каждый кочан обёрнут ветчиной", d: "Каждый отваренный кочан оборачивают ломтиком ветчины перед тем, как полить соусом." },
+        { icon: "🧀", t: "Сырный гратен на бешамеле", d: "Бешамель, щедро посыпанный тёртым сыром, поливают сверху и запекают до золотистой корочки." }
+      ],
+      ar: [
+        { icon: "🥬", t: "الهندباء البلجيكية، خضار شتوي", d: "الهندباء، التي تُزرع في الظلام لتبقى شاحبة، خضار شتوي بلجيكي نموذجي بطعم مر قليلاً." },
+        { icon: "💧", t: "المرارة يجب ترويضها", d: "الهندباء المسلوقة في ماء مع قليل من السكر وعصير الليمون تفقد مرارتها الزائدة قبل أن تُجرَّتن." },
+        { icon: "🥓", t: "كل هندباء ملفوفة بلحم مقدد", d: "تُلف كل رأس مسلوقة بشريحة من اللحم المقدد قبل تغطيتها بالصلصة." },
+        { icon: "🧀", t: "جراتان بشاميل بالجبن", d: "تُسكب صلصة بشاميل مغطاة بسخاء بالجبن المبشور فوقها وتُخبز حتى تكتسب قشرة ذهبية." }
+      ],
+      zh: [
+        { icon: "🥬", t: "比利时菊苣，一种冬季蔬菜", d: "菊苣在黑暗中生长以保持苍白色，是比利时典型的冬季蔬菜，带有轻微的苦味。" },
+        { icon: "💧", t: "苦味需要被驯服", d: "在加了少许糖和柠檬汁的水中煮过的菊苣，在焗烤前会去除多余的苦味。" },
+        { icon: "🥓", t: "每颗菊苣都裹上火腿", d: "每个煮好的菊苣球都裹上一片火腿，然后浇上酱汁。" },
+        { icon: "🧀", t: "奶酪白酱焗烤", d: "撒满芝士碎的白酱浇在上面，烤至表面呈金黄色。" }
+      ],
+      ja: [
+        { icon: "🥬", t: "ベルギー産チコリ、冬の野菜", d: "暗闇で育てられ白いまま保たれるアンディーブは、ほろ苦さを持つ典型的なベルギーの冬野菜だ。" },
+        { icon: "💧", t: "苦味を和らげる必要がある", d: "少量の砂糖とレモン汁を加えた水で茹でたアンディーブは、グラタンにする前に余分な苦味が抜ける。" },
+        { icon: "🥓", t: "各アンディーブにハムを巻く", d: "茹でた各玉にハムを一枚巻いてから、ソースをかける。" },
+        { icon: "🧀", t: "チーズたっぷりのベシャメルグラタン", d: "すりおろしたチーズをたっぷりのせたベシャメルソースをかけ、黄金色になるまで焼く。" }
+      ],
+      hi: [
+        { icon: "🥬", t: "बेल्जियम चिकोरी, एक सर्दियों की सब्ज़ी", d: "अंधेरे में उगाई गई एंडिव, हल्के कड़वे स्वाद वाली विशिष्ट बेल्जियम सर्दियों की सब्ज़ी है।" },
+        { icon: "💧", t: "कड़वाहट को नरम करना जरूरी है", d: "थोड़ी चीनी और नींबू के रस वाले पानी में उबली एंडिव ग्रेटिन बनाने से पहले अतिरिक्त कड़वाहट खो देती है।" },
+        { icon: "🥓", t: "हर एंडिव को हैम में लपेटा जाता है", d: "हर उबला हुआ सिर ग्रेटिन बनाने से पहले हैम की एक स्लाइस में लपेटा जाता है।" },
+        { icon: "🧀", t: "चीज़ भरा बेशामेल ग्रेटिन", d: "कद्दूकस चीज़ से भरपूर बेशामेल ऊपर डाला जाता है और सुनहरा होने तक बेक किया जाता है।" }
+      ],
+      tr: [
+        { icon: "🥬", t: "Belçika hindibası, bir kış sebzesi", d: "Solgun kalması için karanlıkta yetiştirilen hindiba, hafif acı tatlı tipik bir Belçika kış sebzesidir." },
+        { icon: "💧", t: "Acılığın törpülenmesi gerekir", d: "Biraz şeker ve limon suyuyla suda haşlanan hindiba, gratine edilmeden önce fazla acılığını kaybeder." },
+        { icon: "🥓", t: "Her hindiba jambonla sarılır", d: "Her haşlanmış baş, sosla kaplanmadan önce bir dilim jambonla sarılır." },
+        { icon: "🧀", t: "Peynirli beşamel gratin", d: "Bol rendelenmiş peynirle kaplanmış bir beşamel üzerine dökülür ve altın rengi olana kadar fırınlanır." }
+      ],
+      it: [
+        { icon: "🥬", t: "L'indivia belga, un ortaggio invernale", d: "Le indivie, coltivate al buio per restare pallide, sono un ortaggio invernale tipicamente belga dal sapore leggermente amaro." },
+        { icon: "💧", t: "L'amarezza va addolcita", d: "Le indivie bollite in acqua con un po' di zucchero e succo di limone perdono l'amarezza in eccesso prima di essere gratinate." },
+        { icon: "🥓", t: "Ogni indivia avvolta nel prosciutto", d: "Ogni testa bollita viene avvolta in una fetta di prosciutto prima di essere coperta di salsa." },
+        { icon: "🧀", t: "Un gratin di besciamella e formaggio", d: "Una besciamella generosamente ricoperta di formaggio grattugiato viene versata sopra e cotta al forno fino a doratura." }
+      ],
+      ko: [
+        { icon: "🥬", t: "벨기에 치커리, 겨울 채소", d: "하얗게 유지되도록 어둠 속에서 재배되는 치커리는 살짝 쓴맛이 나는 전형적인 벨기에 겨울 채소다." },
+        { icon: "💧", t: "쓴맛을 다스려야 한다", d: "설탕과 레몬즙을 약간 넣은 물에 삶은 치커리는 그라탱하기 전에 과도한 쓴맛이 빠진다." },
+        { icon: "🥓", t: "각 치커리를 햄으로 감싼다", d: "삶은 각 치커리 통은 소스로 덮기 전에 햄 한 장으로 감싼다." },
+        { icon: "🧀", t: "치즈 듬뿍 베샤멜 그라탱", d: "간 치즈를 듬뿍 얹은 베샤멜을 위에 붓고 황금빛이 될 때까지 굽는다." }
+      ]
+    },
+    ingredients: {
+      ro: ["8 andive belgiene mici", "1 lingură zahăr", "1 lingură suc de lămâie", "8 felii de șuncă", "50g unt", "50g făină", "500ml lapte", "150g brânză rasă (gruyère sau emmental)", "sare și piper"],
+      en: ["8 small Belgian chicons", "1 tbsp sugar", "1 tbsp lemon juice", "8 slices ham", "50g butter", "50g flour", "500ml milk", "150g grated cheese (gruyère or emmental)", "salt and pepper"],
+      es: ["8 endivias belgas pequeñas", "1 cda de azúcar", "1 cda de jugo de limón", "8 lonchas de jamón", "50g de mantequilla", "50g de harina", "500ml de leche", "150g de queso rallado (gruyère o emmental)", "sal y pimienta"],
+      fr: ["8 petits chicons", "1 c. à soupe de sucre", "1 c. à soupe de jus de citron", "8 tranches de jambon", "50g de beurre", "50g de farine", "500ml de lait", "150g de fromage râpé (gruyère ou emmental)", "sel et poivre"],
+      de: ["8 kleine Chicorée", "1 EL Zucker", "1 EL Zitronensaft", "8 Scheiben Schinken", "50g Butter", "50g Mehl", "500ml Milch", "150g geriebener Käse (Gruyère oder Emmentaler)", "Salz und Pfeffer"],
+      pt: ["8 endívias belgas pequenas", "1 col. sopa de açúcar", "1 col. sopa de sumo de limão", "8 fatias de fiambre", "50g de manteiga", "50g de farinha", "500ml de leite", "150g de queijo ralado (gruyère ou emmental)", "sal e pimenta"],
+      ru: ["8 маленьких бельгийских цикориев", "1 ст.л. сахара", "1 ст.л. лимонного сока", "8 ломтиков ветчины", "50г сливочного масла", "50г муки", "500мл молока", "150г тёртого сыра (грюйер или эмменталь)", "соль и перец"],
+      ar: ["8 هندباء بلجيكية صغيرة", "1 ملعقة كبيرة سكر", "1 ملعقة كبيرة عصير ليمون", "8 شرائح لحم مقدد", "50غ زبدة", "50غ دقيق", "500مل حليب", "150غ جبن مبشور (غرويير أو إيمنتال)", "ملح وفلفل"],
+      zh: ["8颗小比利时菊苣", "1汤匙糖", "1汤匙柠檬汁", "8片火腿", "50克黄油", "50克面粉", "500毫升牛奶", "150克奶酪碎（格吕耶尔或埃曼塔尔）", "盐和胡椒"],
+      ja: ["小さいベルギー産アンディーブ8個", "砂糖大さじ1", "レモン汁大さじ1", "ハム8枚", "バター50g", "小麦粉50g", "牛乳500ml", "すりおろしチーズ150g（グリュイエールまたはエメンタール）", "塩こしょう"],
+      hi: ["8 छोटे बेल्जियम एंडिव", "1 बड़ा चम्मच चीनी", "1 बड़ा चम्मच नींबू का रस", "8 स्लाइस हैम", "50 ग्राम मक्खन", "50 ग्राम आटा", "500 मिली दूध", "150 ग्राम कद्दूकस चीज़ (ग्रूयेर या एमेंटल)", "नमक और काली मिर्च"],
+      tr: ["8 küçük Belçika hindibası", "1 yemek kaşığı şeker", "1 yemek kaşığı limon suyu", "8 dilim jambon", "50g tereyağı", "50g un", "500ml süt", "150g rendelenmiş peynir (gruyère veya emmental)", "tuz ve karabiber"],
+      it: ["8 piccole indivie belghe", "1 cucchiaio di zucchero", "1 cucchiaio di succo di limone", "8 fette di prosciutto cotto", "50g di burro", "50g di farina", "500ml di latte", "150g di formaggio grattugiato (gruyère o emmental)", "sale e pepe"],
+      ko: ["작은 벨기에산 치커리 8개", "설탕 1큰술", "레몬즙 1큰술", "햄 8장", "버터 50g", "밀가루 50g", "우유 500ml", "간 치즈 150g (그뤼에르 또는 에멘탈)", "소금과 후추"]
+    },
+    howIsMade: {
+      ro: "Se fierb andivele întregi în apă cu zahăr și suc de lămâie timp de 15-20 de minute, până devin fragede. Se scurg bine andivele și se lasă să se răcească puțin, presându-le ușor pentru a elimina excesul de apă. Se înfășoară fiecare andivă cu o felie de șuncă și se așază într-o tavă unsă. Se topește untul într-o cratiță, se adaugă făina și se amestecă un minut pentru un roux. Se toarnă laptele treptat, amestecând continuu, până se obține un sos béchamel neted, apoi se condimentează cu sare și piper. Se toarnă sosul peste andivele înfășurate și se presară generos brânza rasă deasupra. Se coace la cuptor până sosul face bule și brânza se rumenește frumos, apoi se servește fierbinte.",
+      en: "Boil the whole chicons in water with sugar and lemon juice for 15-20 minutes, until tender. Drain the chicons well and let them cool slightly, pressing gently to remove excess water. Wrap each chicon with a slice of ham and place in a greased dish. Melt the butter in a saucepan, add the flour, and stir for a minute to make a roux. Gradually pour in the milk, stirring constantly, until you get a smooth béchamel sauce, then season with salt and pepper. Pour the sauce over the wrapped chicons and generously sprinkle grated cheese on top. Bake until the sauce is bubbling and the cheese turns nicely golden, then serve hot.",
+      es: "Hierve las endivias enteras en agua con azúcar y jugo de limón durante 15-20 minutos, hasta que estén tiernas. Escurre bien las endivias y deja que se enfríen un poco, presionando suavemente para eliminar el exceso de agua. Envuelve cada endivia con una loncha de jamón y colócalas en una fuente engrasada. Derrite la mantequilla en una cacerola, añade la harina y remueve un minuto para hacer un roux. Vierte la leche poco a poco, removiendo constantemente, hasta obtener una bechamel suave, y sazona con sal y pimienta. Vierte la salsa sobre las endivias envueltas y espolvorea generosamente con queso rallado por encima. Hornea hasta que la salsa burbujee y el queso se dore bien, y sirve caliente.",
+      fr: "Faites bouillir les chicons entiers dans l'eau avec le sucre et le jus de citron pendant 15 à 20 minutes, jusqu'à ce qu'ils soient tendres. Égouttez bien les chicons et laissez-les refroidir légèrement, en les pressant doucement pour retirer l'excès d'eau. Enveloppez chaque chicon d'une tranche de jambon et disposez-les dans un plat beurré. Faites fondre le beurre dans une casserole, ajoutez la farine et remuez une minute pour faire un roux. Versez le lait progressivement, en remuant constamment, jusqu'à obtenir une béchamel lisse, puis assaisonnez de sel et de poivre. Versez la sauce sur les chicons enveloppés et parsemez généreusement de fromage râpé. Faites cuire au four jusqu'à ce que la sauce bouillonne et que le fromage dore joliment, puis servez chaud.",
+      de: "Den ganzen Chicorée in Wasser mit Zucker und Zitronensaft 15-20 Minuten kochen, bis er zart ist. Den Chicorée gut abtropfen lassen und leicht abkühlen lassen, dabei sanft ausdrücken, um überschüssiges Wasser zu entfernen. Jeden Chicorée mit einer Scheibe Schinken umwickeln und in eine gefettete Form legen. Die Butter in einem Topf schmelzen, das Mehl hinzufügen und eine Minute rühren, um eine Roux zu machen. Die Milch nach und nach unter ständigem Rühren einrühren, bis eine glatte Béchamelsauce entsteht, dann mit Salz und Pfeffer würzen. Die Sauce über den umwickelten Chicorée gießen und großzügig mit geriebenem Käse bestreuen. Backen, bis die Sauce blubbert und der Käse schön golden wird, dann heiß servieren.",
+      pt: "Cozinhe as endívias inteiras em água com açúcar e sumo de limão durante 15-20 minutos, até ficarem macias. Escorra bem as endívias e deixe-as arrefecer ligeiramente, pressionando suavemente para retirar o excesso de água. Envolva cada endívia numa fatia de fiambre e coloque num tabuleiro untado. Derreta a manteiga numa panela, junte a farinha e mexa por um minuto para fazer um roux. Deite o leite gradualmente, mexendo sempre, até obter um bechamel liso, depois tempere com sal e pimenta. Regue as endívias envolvidas com o molho e polvilhe generosamente com queijo ralado por cima. Leve ao forno até o molho borbulhar e o queijo dourar bem, depois sirva quente.",
+      ru: "Отварите целые кочаны цикория в воде с сахаром и лимонным соком 15-20 минут, до мягкости. Хорошо слейте воду с цикория и дайте немного остыть, слегка отжав для удаления лишней воды. Оберните каждый кочан ломтиком ветчины и уложите в смазанную маслом форму. Растопите масло в кастрюле, добавьте муку и помешивайте минуту для получения ру. Постепенно влейте молоко, постоянно помешивая, пока не получится гладкий соус бешамель, затем приправьте солью и перцем. Полейте соусом обёрнутые кочаны и щедро посыпьте тёртым сыром сверху. Запекайте, пока соус не забурлит, а сыр красиво не подрумянится, затем подавайте горячим.",
+      ar: "اسلقي الهندباء كاملة في ماء مع السكر وعصير الليمون لمدة 15-20 دقيقة حتى تصبح طرية. صفّي الهندباء جيداً واتركيها تبرد قليلاً، مع الضغط عليها برفق لإزالة الماء الزائد. لفّي كل هندباء بشريحة من اللحم المقدد وضعيها في طبق مدهون. أذيبي الزبدة في قدر، أضيفي الدقيق وقلّبي لمدة دقيقة لعمل روكس. اسكبي الحليب تدريجياً مع التحريك المستمر حتى تحصلي على صلصة بشاميل ناعمة، ثم تبّلي بالملح والفلفل. اسكبي الصلصة فوق الهندباء الملفوفة ورشّي الجبن المبشور بسخاء فوقها. اخبزي حتى تفور الصلصة ويتحول الجبن إلى اللون الذهبي الجميل، ثم قدّميها ساخنة.",
+      zh: "将整颗菊苣放入加了糖和柠檬汁的水中煮15到20分钟，直至变软。将菊苣充分沥干并稍微放凉，轻轻按压以去除多余水分。将每颗菊苣用一片火腿包裹，放入涂油的烤盘中。在锅中融化黄油，加入面粉，搅拌一分钟制成油面糊。逐渐倒入牛奶，不断搅拌，直至形成顺滑的白酱，然后用盐和黑胡椒调味。将酱汁淋在裹好的菊苣上，再慷慨地撒上奶酪碎。烤至酱汁冒泡、奶酪呈漂亮的金黄色，趁热享用。",
+      ja: "アンディーブを丸ごと砂糖とレモン汁を加えた湯で15～20分、柔らかくなるまで茹でる。アンディーブの水気をよく切り、軽く冷ましながら余分な水分を優しく押し出す。各アンディーブにハムを一枚巻き、油を塗った耐熱皿に並べる。鍋でバターを溶かし、小麦粉を加えて1分間混ぜてルーを作る。牛乳を少しずつ加え、絶えずかき混ぜながらなめらかなベシャメルソースを作り、塩こしょうで味を整える。巻いたアンディーブにソースをかけ、すりおろしたチーズをたっぷり振りかける。ソースが泡立ちチーズがきれいな黄金色になるまで焼き、熱いうちに提供する。",
+      hi: "साबुत एंडिव को चीनी और नींबू के रस वाले पानी में 15-20 मिनट तक उबालें जब तक नरम न हो जाएं। एंडिव को अच्छी तरह छानें और थोड़ा ठंडा होने दें, अतिरिक्त पानी निकालने के लिए हल्के से दबाते हुए। हर एंडिव को हैम की एक स्लाइस में लपेटें और चिकनाई लगी डिश में रखें। पैन में मक्खन पिघलाएं, आटा डालें और रु बनाने के लिए एक मिनट हिलाएं। दूध धीरे-धीरे डालें, लगातार हिलाते हुए, जब तक चिकनी बेशामेल सॉस न बन जाए, फिर नमक-काली मिर्च से स्वाद दें। लपेटी एंडिव पर सॉस डालें और ऊपर से भरपूर कद्दूकस चीज़ छिड़कें। सॉस में उबाल आने और चीज़ सुंदर सुनहरा होने तक बेक करें, फिर गरम परोसें।",
+      tr: "Bütün hindibaları şeker ve limon suyuyla suda 15-20 dakika yumuşayana kadar haşlayın. Hindibaları iyice süzün ve fazla suyu çıkarmak için hafifçe bastırarak biraz soğumaya bırakın. Her hindibayı bir dilim jambonla sarın ve yağlanmış bir kaba yerleştirin. Bir tencerede tereyağını eritin, unu ekleyin ve bir roux yapmak için bir dakika karıştırın. Sütü yavaş yavaş dökerek sürekli karıştırın, pürüzsüz bir beşamel elde edene kadar, ardından tuz ve karabiberle tatlandırın. Sosu sarılı hindibaların üzerine dökün ve üzerine cömertçe rendelenmiş peynir serpin. Sos köpürene ve peynir güzelce altın rengi olana kadar fırınlayın, ardından sıcak servis edin.",
+      it: "Fai bollire le indivie intere in acqua con zucchero e succo di limone per 15-20 minuti, finché non sono tenere. Scola bene le indivie e lasciale raffreddare leggermente, premendo delicatamente per eliminare l'acqua in eccesso. Avvolgi ogni indivia con una fetta di prosciutto e disponile in una teglia imburrata. Sciogli il burro in una pentola, aggiungi la farina e mescola per un minuto per fare un roux. Versa il latte gradualmente, mescolando continuamente, finché non ottieni una besciamella liscia, poi condisci con sale e pepe. Versa il sugo sulle indivie avvolte e cospargi generosamente di formaggio grattugiato sopra. Cuoci in forno finché la salsa non bolle e il formaggio non dora bene, poi servi caldo.",
+      ko: "치커리 통째로 설탕과 레몬즙을 넣은 물에 15~20분간 부드러워질 때까지 삶는다. 치커리의 물기를 잘 빼고 살짝 눌러 여분의 물을 제거하며 조금 식힌다. 각 치커리를 햄 한 장으로 감싸 기름칠한 그릇에 놓는다. 냄비에 버터를 녹이고 밀가루를 넣어 1분간 저어 루를 만든다. 우유를 조금씩 부으며 계속 저어 매끄러운 베샤멜 소스를 만들고 소금과 후추로 간한다. 감싼 치커리 위에 소스를 붓고 간 치즈를 듬뿍 뿌린다. 소스가 보글거리고 치즈가 먹음직스러운 황금빛이 될 때까지 구운 뒤 뜨겁게 낸다."
+    },
+    originText: {
+      ro: "Andiva a fost descoperită din întâmplare la mijlocul secolului XIX de un fermier belgian din Schaerbeek, care a depozitat rădăcini de cicoare într-o pivniță întunecată și a observat că acestea produceau muguri albi, fragezi, complet diferiți de frunzele verzi obișnuite. Descoperirea a devenit rapid o cultură comercială importantă, iar Belgia rămâne astăzi cel mai mare producător mondial.\n\nGratinul cu șuncă și béchamel e felul clasic prin care belgienii transformă amăreala naturală a legumei într-un preparat confortabil de iarnă, servit adesea duminica în familie, alături de piure de cartofi.",
+      en: "Chicory was discovered by accident in the mid-19th century by a Belgian farmer from Schaerbeek, who stored chicory roots in a dark cellar and noticed they produced pale, tender shoots, completely different from the usual green leaves. The discovery quickly became an important commercial crop, and Belgium remains today the world's largest producer.\n\nThe gratin with ham and béchamel is the classic way Belgians turn the vegetable's natural bitterness into a comforting winter dish, often served on Sundays with the family, alongside mashed potatoes.",
+      es: "La endivia se descubrió por accidente a mediados del siglo XIX gracias a un agricultor belga de Schaerbeek, que almacenó raíces de achicoria en una bodega oscura y notó que producían brotes pálidos y tiernos, completamente distintos de las hojas verdes habituales. El descubrimiento se convirtió rápidamente en un cultivo comercial importante, y Bélgica sigue siendo hoy el mayor productor mundial.\n\nEl gratinado con jamón y bechamel es la forma clásica en que los belgas transforman el amargor natural de la verdura en un reconfortante plato de invierno, servido a menudo los domingos en familia, junto con puré de papas.",
+      fr: "Le chicon fut découvert par accident au milieu du XIXe siècle par un fermier belge de Schaerbeek, qui entreposa des racines de chicorée dans une cave sombre et remarqua qu'elles produisaient des pousses pâles et tendres, totalement différentes des feuilles vertes habituelles. La découverte devint rapidement une culture commerciale importante, et la Belgique reste aujourd'hui le plus grand producteur mondial.\n\nLe gratin au jambon et à la béchamel est la façon classique dont les Belges transforment l'amertume naturelle du légume en un plat d'hiver réconfortant, souvent servi le dimanche en famille, accompagné de purée de pommes de terre.",
+      de: "Chicorée wurde Mitte des 19. Jahrhunderts zufällig von einem belgischen Bauern aus Schaerbeek entdeckt, der Chicoréewurzeln in einem dunklen Keller lagerte und bemerkte, dass sie blasse, zarte Triebe hervorbrachten, ganz anders als die üblichen grünen Blätter. Die Entdeckung wurde schnell zu einer wichtigen Handelskultur, und Belgien bleibt heute der weltweit größte Produzent.\n\nDas Gratin mit Schinken und Béchamel ist die klassische Art, wie Belgier die natürliche Bitterkeit des Gemüses in ein tröstliches Wintergericht verwandeln, oft sonntags mit der Familie serviert, zusammen mit Kartoffelpüree.",
+      pt: "A endívia foi descoberta por acaso em meados do século XIX por um agricultor belga de Schaerbeek, que armazenou raízes de chicória numa cave escura e notou que produziam brotos pálidos e tenros, completamente diferentes das folhas verdes habituais. A descoberta tornou-se rapidamente uma cultura comercial importante, e a Bélgica continua hoje a ser o maior produtor mundial.\n\nO gratinado com fiambre e bechamel é a forma clássica como os belgas transformam o amargor natural do legume num reconfortante prato de inverno, muitas vezes servido aos domingos em família, junto com puré de batata.",
+      ru: "Цикорий был случайно открыт в середине XIX века бельгийским фермером из Схарбека, который хранил корни цикория в тёмном погребе и заметил, что они дают бледные, нежные побеги, совершенно отличные от обычных зелёных листьев. Открытие быстро превратилось в важную коммерческую культуру, и Бельгия по сей день остаётся крупнейшим мировым производителем.\n\nГратен с ветчиной и бешамелем — классический способ, которым бельгийцы превращают природную горечь овоща в уютное зимнее блюдо, часто подаваемое по воскресеньям в кругу семьи вместе с картофельным пюре.",
+      ar: "اكتُشفت الهندباء بالصدفة في منتصف القرن التاسع عشر على يد مزارع بلجيكي من شاربيك، خزّن جذور الهندباء في قبو مظلم ولاحظ أنها تنتج براعم شاحبة وطرية، مختلفة تماماً عن الأوراق الخضراء المعتادة. سرعان ما أصبح هذا الاكتشاف محصولاً تجارياً مهماً، وتبقى بلجيكا اليوم أكبر منتج في العالم.\n\nالجراتان باللحم المقدد والبشاميل هي الطريقة الكلاسيكية التي يحوّل بها البلجيكيون مرارة الخضار الطبيعية إلى طبق شتوي مريح، غالباً ما يُقدَّم أيام الأحد مع العائلة، إلى جانب هريس البطاطا.",
+      zh: "菊苣是19世纪中叶由一位来自沙尔贝克的比利时农民偶然发现的，他把菊苣的根存放在黑暗的地窖中，注意到它们长出了苍白娇嫩的芽，与常见的绿叶完全不同。这一发现很快成为重要的商业作物，如今比利时仍是全球最大的生产国。\n\n火腿白酱焗菊苣是比利时人将这种蔬菜天生的苦味转化为暖心冬日料理的经典方式，常在周日全家团聚时享用，搭配土豆泥。",
+      ja: "チコリは19世紀半ば、シャールベークのベルギー人農夫によって偶然発見された。彼はチコリの根を暗い地下室に保存していたところ、通常の緑の葉とはまったく異なる、青白く柔らかな芽が生えてくることに気づいた。この発見はすぐに重要な商業作物となり、ベルギーは今日でも世界最大の生産国であり続けている。\n\nハムとベシャメルのグラタンは、ベルギー人がこの野菜の自然な苦味を心温まる冬の料理に変える定番の方法であり、日曜日に家族と一緒に、マッシュポテトを添えてよく食される。",
+      hi: "एंडिव की खोज 19वीं सदी के मध्य में शार्बेक के एक बेल्जियम किसान द्वारा दुर्घटनावश हुई, जिसने चिकोरी की जड़ों को एक अंधेरे तहखाने में रखा और पाया कि वे पीले, नरम अंकुर पैदा करती थीं, जो सामान्य हरी पत्तियों से पूरी तरह अलग थीं। यह खोज जल्दी ही एक महत्वपूर्ण व्यावसायिक फसल बन गई, और बेल्जियम आज भी दुनिया का सबसे बड़ा उत्पादक बना हुआ है।\n\nहैम और बेशामेल के साथ ग्रेटिन वह क्लासिक तरीका है जिससे बेल्जियमवासी सब्ज़ी की प्राकृतिक कड़वाहट को एक आरामदायक सर्दियों के व्यंजन में बदलते हैं, जो अक्सर रविवार को परिवार के साथ आलू की प्यूरी के साथ परोसा जाता है।",
+      tr: "Hindiba, 19. yüzyılın ortalarında Schaerbeek'ten bir Belçikalı çiftçi tarafından tesadüfen keşfedildi; çiftçi hindiba köklerini karanlık bir mahzende sakladı ve olağan yeşil yapraklardan tamamen farklı, solgun ve yumuşak filizler ürettiklerini fark etti. Bu keşif hızla önemli bir ticari ürüne dönüştü ve Belçika bugün hâlâ dünyanın en büyük üreticisidir.\n\nJambonlu ve beşamelli gratin, Belçikalıların sebzenin doğal acılığını rahatlatıcı bir kış yemeğine dönüştürdüğü klasik yöntemdir; genellikle pazar günleri aile ile birlikte patates püresiyle servis edilir.",
+      it: "L'indivia fu scoperta per caso a metà del XIX secolo da un contadino belga di Schaerbeek, che conservò radici di cicoria in una cantina buia e notò che producevano germogli pallidi e teneri, completamente diversi dalle solite foglie verdi. La scoperta divenne rapidamente una coltura commerciale importante, e il Belgio resta oggi il maggior produttore mondiale.\n\nIl gratin con prosciutto e besciamella è il modo classico in cui i belgi trasformano l'amarezza naturale dell'ortaggio in un confortante piatto invernale, spesso servito la domenica in famiglia, insieme al purè di patate.",
+      ko: "치커리는 19세기 중반 스하르베이크의 한 벨기에 농부가 우연히 발견한 것으로, 그는 치커리 뿌리를 어두운 지하실에 저장해 두었다가 일반적인 초록 잎과는 완전히 다른, 창백하고 부드러운 싹이 자라난 것을 발견했다. 이 발견은 곧 중요한 상업 작물이 되었고, 벨기에는 오늘날에도 세계 최대 생산국으로 남아 있다.\n\n햄과 베샤멜을 곁들인 그라탱은 벨기에 사람들이 이 채소의 자연스러운 쓴맛을 아늑한 겨울 요리로 바꾸는 전형적인 방법으로, 흔히 일요일 가족 식사에서 으깬 감자와 함께 제공된다."
+    }
   }
 ];
