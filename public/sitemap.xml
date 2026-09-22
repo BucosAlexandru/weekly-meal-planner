@@ -4021,6 +4021,36 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://meal-planner.ro/ro/retete/congee/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/ro/retete/baozi/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/ro/retete/hotpot/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/ro/retete/chow-mein/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/ro/retete/mooncake/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://meal-planner.ro/en/recipes/</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>monthly</changefreq>
@@ -6848,6 +6878,36 @@
   </url>
   <url>
     <loc>https://meal-planner.ro/en/recipes/yakisoba/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/en/recipes/congee/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/en/recipes/baozi/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/en/recipes/hotpot/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/en/recipes/chow-mein/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/en/recipes/mooncake/</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -9685,6 +9745,36 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://meal-planner.ro/es/recetas/congee/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/es/recetas/baozi/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/es/recetas/hotpot/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/es/recetas/chow-mein/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/es/recetas/mooncake/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://meal-planner.ro/fr/recettes/</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>weekly</changefreq>
@@ -12512,6 +12602,36 @@
   </url>
   <url>
     <loc>https://meal-planner.ro/fr/recettes/yakisoba/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/fr/recettes/congee/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/fr/recettes/baozi/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/fr/recettes/hotpot/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/fr/recettes/chow-mein/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/fr/recettes/mooncake/</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -15349,6 +15469,36 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://meal-planner.ro/de/rezepte/congee/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/de/rezepte/baozi/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/de/rezepte/hotpot/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/de/rezepte/chow-mein/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/de/rezepte/mooncake/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://meal-planner.ro/pt/receitas/</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>weekly</changefreq>
@@ -18176,6 +18326,36 @@
   </url>
   <url>
     <loc>https://meal-planner.ro/pt/receitas/yakisoba/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/pt/receitas/congee/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/pt/receitas/baozi/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/pt/receitas/hotpot/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/pt/receitas/chow-mein/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/pt/receitas/mooncake/</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -21013,6 +21193,36 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://meal-planner.ro/ru/retsepty/congee/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/ru/retsepty/baozi/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/ru/retsepty/hotpot/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/ru/retsepty/chow-mein/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/ru/retsepty/mooncake/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://meal-planner.ro/ar/wasafat/</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>weekly</changefreq>
@@ -23840,6 +24050,36 @@
   </url>
   <url>
     <loc>https://meal-planner.ro/ar/wasafat/yakisoba/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/ar/wasafat/congee/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/ar/wasafat/baozi/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/ar/wasafat/hotpot/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/ar/wasafat/chow-mein/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/ar/wasafat/mooncake/</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -26677,6 +26917,36 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://meal-planner.ro/zh/shipu/congee/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/zh/shipu/baozi/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/zh/shipu/hotpot/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/zh/shipu/chow-mein/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/zh/shipu/mooncake/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://meal-planner.ro/ja/reshipi/</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>weekly</changefreq>
@@ -29504,6 +29774,36 @@
   </url>
   <url>
     <loc>https://meal-planner.ro/ja/reshipi/yakisoba/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/ja/reshipi/congee/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/ja/reshipi/baozi/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/ja/reshipi/hotpot/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/ja/reshipi/chow-mein/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/ja/reshipi/mooncake/</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -32341,6 +32641,36 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://meal-planner.ro/hi/recipes/congee/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/hi/recipes/baozi/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/hi/recipes/hotpot/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/hi/recipes/chow-mein/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/hi/recipes/mooncake/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://meal-planner.ro/tr/tarifler/</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>weekly</changefreq>
@@ -35168,6 +35498,36 @@
   </url>
   <url>
     <loc>https://meal-planner.ro/tr/tarifler/yakisoba/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/tr/tarifler/congee/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/tr/tarifler/baozi/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/tr/tarifler/hotpot/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/tr/tarifler/chow-mein/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/tr/tarifler/mooncake/</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -38005,6 +38365,36 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://meal-planner.ro/it/ricette/congee/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/it/ricette/baozi/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/it/ricette/hotpot/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/it/ricette/chow-mein/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/it/ricette/mooncake/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://meal-planner.ro/ko/recipes/</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>monthly</changefreq>
@@ -40837,6 +41227,36 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://meal-planner.ro/ko/recipes/congee/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/ko/recipes/baozi/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/ko/recipes/hotpot/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/ko/recipes/chow-mein/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/ko/recipes/mooncake/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://meal-planner.ro/ro/retete/south-korea/</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>monthly</changefreq>
@@ -40861,6 +41281,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://meal-planner.ro/ro/retete/china/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://meal-planner.ro/ro/retete/japan/</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>monthly</changefreq>
@@ -40868,12 +41294,6 @@
   </url>
   <url>
     <loc>https://meal-planner.ro/ro/retete/greece/</loc>
-    <lastmod>2026-09-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://meal-planner.ro/ro/retete/china/</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -41155,6 +41575,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://meal-planner.ro/en/recipes/china/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://meal-planner.ro/en/recipes/japan/</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>monthly</changefreq>
@@ -41162,12 +41588,6 @@
   </url>
   <url>
     <loc>https://meal-planner.ro/en/recipes/greece/</loc>
-    <lastmod>2026-09-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://meal-planner.ro/en/recipes/china/</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -41449,6 +41869,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://meal-planner.ro/es/recetas/china/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://meal-planner.ro/es/recetas/japan/</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>weekly</changefreq>
@@ -41456,12 +41882,6 @@
   </url>
   <url>
     <loc>https://meal-planner.ro/es/recetas/greece/</loc>
-    <lastmod>2026-09-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://meal-planner.ro/es/recetas/china/</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -41743,6 +42163,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://meal-planner.ro/fr/recettes/china/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://meal-planner.ro/fr/recettes/japan/</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>weekly</changefreq>
@@ -41750,12 +42176,6 @@
   </url>
   <url>
     <loc>https://meal-planner.ro/fr/recettes/greece/</loc>
-    <lastmod>2026-09-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://meal-planner.ro/fr/recettes/china/</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -42037,6 +42457,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://meal-planner.ro/de/rezepte/china/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://meal-planner.ro/de/rezepte/japan/</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>weekly</changefreq>
@@ -42044,12 +42470,6 @@
   </url>
   <url>
     <loc>https://meal-planner.ro/de/rezepte/greece/</loc>
-    <lastmod>2026-09-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://meal-planner.ro/de/rezepte/china/</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -42331,6 +42751,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://meal-planner.ro/pt/receitas/china/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://meal-planner.ro/pt/receitas/japan/</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>weekly</changefreq>
@@ -42338,12 +42764,6 @@
   </url>
   <url>
     <loc>https://meal-planner.ro/pt/receitas/greece/</loc>
-    <lastmod>2026-09-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://meal-planner.ro/pt/receitas/china/</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -42625,6 +43045,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://meal-planner.ro/ru/retsepty/china/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://meal-planner.ro/ru/retsepty/japan/</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>weekly</changefreq>
@@ -42632,12 +43058,6 @@
   </url>
   <url>
     <loc>https://meal-planner.ro/ru/retsepty/greece/</loc>
-    <lastmod>2026-09-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://meal-planner.ro/ru/retsepty/china/</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -42919,6 +43339,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://meal-planner.ro/ar/wasafat/china/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://meal-planner.ro/ar/wasafat/japan/</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>weekly</changefreq>
@@ -42926,12 +43352,6 @@
   </url>
   <url>
     <loc>https://meal-planner.ro/ar/wasafat/greece/</loc>
-    <lastmod>2026-09-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://meal-planner.ro/ar/wasafat/china/</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -43213,6 +43633,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://meal-planner.ro/zh/shipu/china/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://meal-planner.ro/zh/shipu/japan/</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>weekly</changefreq>
@@ -43220,12 +43646,6 @@
   </url>
   <url>
     <loc>https://meal-planner.ro/zh/shipu/greece/</loc>
-    <lastmod>2026-09-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://meal-planner.ro/zh/shipu/china/</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -43507,6 +43927,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://meal-planner.ro/ja/reshipi/china/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://meal-planner.ro/ja/reshipi/japan/</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>weekly</changefreq>
@@ -43514,12 +43940,6 @@
   </url>
   <url>
     <loc>https://meal-planner.ro/ja/reshipi/greece/</loc>
-    <lastmod>2026-09-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://meal-planner.ro/ja/reshipi/china/</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -43801,6 +44221,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://meal-planner.ro/hi/recipes/china/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://meal-planner.ro/hi/recipes/japan/</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>monthly</changefreq>
@@ -43808,12 +44234,6 @@
   </url>
   <url>
     <loc>https://meal-planner.ro/hi/recipes/greece/</loc>
-    <lastmod>2026-09-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://meal-planner.ro/hi/recipes/china/</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -44095,6 +44515,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://meal-planner.ro/tr/tarifler/china/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://meal-planner.ro/tr/tarifler/japan/</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>weekly</changefreq>
@@ -44102,12 +44528,6 @@
   </url>
   <url>
     <loc>https://meal-planner.ro/tr/tarifler/greece/</loc>
-    <lastmod>2026-09-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://meal-planner.ro/tr/tarifler/china/</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -44389,6 +44809,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://meal-planner.ro/it/ricette/china/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://meal-planner.ro/it/ricette/japan/</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>weekly</changefreq>
@@ -44396,12 +44822,6 @@
   </url>
   <url>
     <loc>https://meal-planner.ro/it/ricette/greece/</loc>
-    <lastmod>2026-09-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://meal-planner.ro/it/ricette/china/</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -44683,6 +45103,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://meal-planner.ro/ko/recipes/china/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://meal-planner.ro/ko/recipes/japan/</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>monthly</changefreq>
@@ -44690,12 +45116,6 @@
   </url>
   <url>
     <loc>https://meal-planner.ro/ko/recipes/greece/</loc>
-    <lastmod>2026-09-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://meal-planner.ro/ko/recipes/china/</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
