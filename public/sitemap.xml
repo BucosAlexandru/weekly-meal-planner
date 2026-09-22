@@ -3775,6 +3775,24 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://meal-planner.ro/ro/retete/num-banh-chok/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/ro/retete/bai-sach-chrouk/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/ro/retete/nom-krok/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://meal-planner.ro/en/recipes/</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>monthly</changefreq>
@@ -6356,6 +6374,24 @@
   </url>
   <url>
     <loc>https://meal-planner.ro/en/recipes/trukli/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/en/recipes/num-banh-chok/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/en/recipes/bai-sach-chrouk/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/en/recipes/nom-krok/</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -8947,6 +8983,24 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://meal-planner.ro/es/recetas/num-banh-chok/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/es/recetas/bai-sach-chrouk/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/es/recetas/nom-krok/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://meal-planner.ro/fr/recettes/</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>weekly</changefreq>
@@ -11528,6 +11582,24 @@
   </url>
   <url>
     <loc>https://meal-planner.ro/fr/recettes/trukli/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/fr/recettes/num-banh-chok/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/fr/recettes/bai-sach-chrouk/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/fr/recettes/nom-krok/</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -14119,6 +14191,24 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://meal-planner.ro/de/rezepte/num-banh-chok/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/de/rezepte/bai-sach-chrouk/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/de/rezepte/nom-krok/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://meal-planner.ro/pt/receitas/</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>weekly</changefreq>
@@ -16700,6 +16790,24 @@
   </url>
   <url>
     <loc>https://meal-planner.ro/pt/receitas/trukli/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/pt/receitas/num-banh-chok/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/pt/receitas/bai-sach-chrouk/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/pt/receitas/nom-krok/</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -19291,6 +19399,24 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://meal-planner.ro/ru/retsepty/num-banh-chok/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/ru/retsepty/bai-sach-chrouk/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/ru/retsepty/nom-krok/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://meal-planner.ro/ar/wasafat/</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>weekly</changefreq>
@@ -21872,6 +21998,24 @@
   </url>
   <url>
     <loc>https://meal-planner.ro/ar/wasafat/trukli/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/ar/wasafat/num-banh-chok/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/ar/wasafat/bai-sach-chrouk/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/ar/wasafat/nom-krok/</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -24463,6 +24607,24 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://meal-planner.ro/zh/shipu/num-banh-chok/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/zh/shipu/bai-sach-chrouk/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/zh/shipu/nom-krok/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://meal-planner.ro/ja/reshipi/</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>weekly</changefreq>
@@ -27044,6 +27206,24 @@
   </url>
   <url>
     <loc>https://meal-planner.ro/ja/reshipi/trukli/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/ja/reshipi/num-banh-chok/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/ja/reshipi/bai-sach-chrouk/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/ja/reshipi/nom-krok/</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -29635,6 +29815,24 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://meal-planner.ro/hi/recipes/num-banh-chok/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/hi/recipes/bai-sach-chrouk/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/hi/recipes/nom-krok/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://meal-planner.ro/tr/tarifler/</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>weekly</changefreq>
@@ -32216,6 +32414,24 @@
   </url>
   <url>
     <loc>https://meal-planner.ro/tr/tarifler/trukli/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/tr/tarifler/num-banh-chok/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/tr/tarifler/bai-sach-chrouk/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/tr/tarifler/nom-krok/</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -34807,6 +35023,24 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://meal-planner.ro/it/ricette/num-banh-chok/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/it/ricette/bai-sach-chrouk/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/it/ricette/nom-krok/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://meal-planner.ro/ko/recipes/</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>monthly</changefreq>
@@ -37393,6 +37627,24 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://meal-planner.ro/ko/recipes/num-banh-chok/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/ko/recipes/bai-sach-chrouk/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/ko/recipes/nom-krok/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://meal-planner.ro/ro/retete/south-korea/</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>monthly</changefreq>
@@ -37615,6 +37867,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://meal-planner.ro/ro/retete/cambodia/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://meal-planner.ro/ro/retete/croatia/</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>monthly</changefreq>
@@ -37670,12 +37928,6 @@
   </url>
   <url>
     <loc>https://meal-planner.ro/ro/retete/usa/</loc>
-    <lastmod>2026-09-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://meal-planner.ro/ro/retete/cambodia/</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -37909,6 +38161,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://meal-planner.ro/en/recipes/cambodia/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://meal-planner.ro/en/recipes/croatia/</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>monthly</changefreq>
@@ -37964,12 +38222,6 @@
   </url>
   <url>
     <loc>https://meal-planner.ro/en/recipes/usa/</loc>
-    <lastmod>2026-09-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://meal-planner.ro/en/recipes/cambodia/</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -38203,6 +38455,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://meal-planner.ro/es/recetas/cambodia/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://meal-planner.ro/es/recetas/croatia/</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>weekly</changefreq>
@@ -38258,12 +38516,6 @@
   </url>
   <url>
     <loc>https://meal-planner.ro/es/recetas/usa/</loc>
-    <lastmod>2026-09-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://meal-planner.ro/es/recetas/cambodia/</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -38497,6 +38749,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://meal-planner.ro/fr/recettes/cambodia/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://meal-planner.ro/fr/recettes/croatia/</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>weekly</changefreq>
@@ -38552,12 +38810,6 @@
   </url>
   <url>
     <loc>https://meal-planner.ro/fr/recettes/usa/</loc>
-    <lastmod>2026-09-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://meal-planner.ro/fr/recettes/cambodia/</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -38791,6 +39043,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://meal-planner.ro/de/rezepte/cambodia/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://meal-planner.ro/de/rezepte/croatia/</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>weekly</changefreq>
@@ -38846,12 +39104,6 @@
   </url>
   <url>
     <loc>https://meal-planner.ro/de/rezepte/usa/</loc>
-    <lastmod>2026-09-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://meal-planner.ro/de/rezepte/cambodia/</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -39085,6 +39337,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://meal-planner.ro/pt/receitas/cambodia/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://meal-planner.ro/pt/receitas/croatia/</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>weekly</changefreq>
@@ -39140,12 +39398,6 @@
   </url>
   <url>
     <loc>https://meal-planner.ro/pt/receitas/usa/</loc>
-    <lastmod>2026-09-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://meal-planner.ro/pt/receitas/cambodia/</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -39379,6 +39631,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://meal-planner.ro/ru/retsepty/cambodia/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://meal-planner.ro/ru/retsepty/croatia/</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>weekly</changefreq>
@@ -39434,12 +39692,6 @@
   </url>
   <url>
     <loc>https://meal-planner.ro/ru/retsepty/usa/</loc>
-    <lastmod>2026-09-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://meal-planner.ro/ru/retsepty/cambodia/</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -39673,6 +39925,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://meal-planner.ro/ar/wasafat/cambodia/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://meal-planner.ro/ar/wasafat/croatia/</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>weekly</changefreq>
@@ -39728,12 +39986,6 @@
   </url>
   <url>
     <loc>https://meal-planner.ro/ar/wasafat/usa/</loc>
-    <lastmod>2026-09-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://meal-planner.ro/ar/wasafat/cambodia/</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -39967,6 +40219,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://meal-planner.ro/zh/shipu/cambodia/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://meal-planner.ro/zh/shipu/croatia/</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>weekly</changefreq>
@@ -40022,12 +40280,6 @@
   </url>
   <url>
     <loc>https://meal-planner.ro/zh/shipu/usa/</loc>
-    <lastmod>2026-09-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://meal-planner.ro/zh/shipu/cambodia/</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -40261,6 +40513,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://meal-planner.ro/ja/reshipi/cambodia/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://meal-planner.ro/ja/reshipi/croatia/</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>weekly</changefreq>
@@ -40316,12 +40574,6 @@
   </url>
   <url>
     <loc>https://meal-planner.ro/ja/reshipi/usa/</loc>
-    <lastmod>2026-09-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://meal-planner.ro/ja/reshipi/cambodia/</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -40555,6 +40807,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://meal-planner.ro/hi/recipes/cambodia/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://meal-planner.ro/hi/recipes/croatia/</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>monthly</changefreq>
@@ -40610,12 +40868,6 @@
   </url>
   <url>
     <loc>https://meal-planner.ro/hi/recipes/usa/</loc>
-    <lastmod>2026-09-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://meal-planner.ro/hi/recipes/cambodia/</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -40849,6 +41101,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://meal-planner.ro/tr/tarifler/cambodia/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://meal-planner.ro/tr/tarifler/croatia/</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>weekly</changefreq>
@@ -40904,12 +41162,6 @@
   </url>
   <url>
     <loc>https://meal-planner.ro/tr/tarifler/usa/</loc>
-    <lastmod>2026-09-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://meal-planner.ro/tr/tarifler/cambodia/</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -41143,6 +41395,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://meal-planner.ro/it/ricette/cambodia/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://meal-planner.ro/it/ricette/croatia/</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>weekly</changefreq>
@@ -41198,12 +41456,6 @@
   </url>
   <url>
     <loc>https://meal-planner.ro/it/ricette/usa/</loc>
-    <lastmod>2026-09-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://meal-planner.ro/it/ricette/cambodia/</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -41437,6 +41689,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://meal-planner.ro/ko/recipes/cambodia/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://meal-planner.ro/ko/recipes/croatia/</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>monthly</changefreq>
@@ -41492,12 +41750,6 @@
   </url>
   <url>
     <loc>https://meal-planner.ro/ko/recipes/usa/</loc>
-    <lastmod>2026-09-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://meal-planner.ro/ko/recipes/cambodia/</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>

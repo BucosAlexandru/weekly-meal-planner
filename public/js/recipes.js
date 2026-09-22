@@ -54943,5 +54943,473 @@ export const recipes = [
       it: "Lo štrukli è originario della regione di Zagorje, nel nord della Croazia, dove è stato a lungo un piatto familiare tramandato di generazione in generazione, preparato soprattutto per le feste e la domenica. La tecnica di stendere l'impasto fino a renderlo quasi trasparente collega il piatto alla tradizione dello strudel centroeuropeo, un'eredità dell'influenza austriaca sulla cucina croata.\n\nNel 2007, il ministero della cultura croato ha dichiarato lo štrukli parte del patrimonio culturale immateriale del paese, e il piatto compare oggi nei menu dei ristoranti in tutta la Croazia, sia in versioni salate al forno che in varianti dolci con marmellata o noci.",
       ko: "슈트루클리는 크로아티아 북부 자고리예 지역에서 유래했으며, 오랫동안 대를 이어 전해진 가정 요리로 주로 명절과 일요일에 만들어졌다. 반죽을 거의 투명해질 때까지 늘리는 기법은 이 요리를 중부 유럽 슈트루델 전통과 연결시키는데, 이는 오스트리아가 크로아티아 요리에 남긴 영향의 유산이다.\n\n2007년 크로아티아 문화부는 슈트루클리를 국가 무형문화유산의 일부로 지정했으며, 이 요리는 오늘날 크로아티아 전역의 레스토랑 메뉴에 등장하는데, 구운 짭짤한 버전뿐 아니라 잼이나 호두를 채운 달콤한 버전으로도 만날 수 있다."
     }
+  },
+  {
+    id: 444,
+    servings: 4,
+    tipType: "asian",
+    pairingsType: "fish",
+    nutrition: { cal: 380, prot: 20, carb: 52, fat: 10, fib: 4 },
+    origin: {
+      ro: "Cambodgia", en: "Cambodia", es: "Camboya", fr: "Cambodge", de: "Kambodscha",
+      pt: "Camboja", ru: "Камбоджа", ar: "كمبوديا", zh: "柬埔寨", ja: "カンボジア",
+      hi: "कंबोडिया", tr: "Kamboçya", it: "Cambogia", ko: "캄보디아"
+    },
+    name: {
+      ro: "Num Banh Chok", en: "Num Banh Chok", es: "Num Banh Chok", fr: "Num Banh Chok", de: "Num Banh Chok",
+      pt: "Num Banh Chok", ru: "Нум Бань Чок", ar: "نوم بانه تشوك", zh: "努姆班奇鱼汤米线", ja: "ヌム・バンチョック",
+      hi: "नुम बन्ह छोक", tr: "Num Banh Chok", it: "Num Banh Chok", ko: "눔반쪽"
+    },
+    category: {
+      ro: "Fel principal", en: "Main Course", es: "Plato principal", fr: "Plat principal", de: "Hauptgericht",
+      pt: "Prato principal", ru: "Основное блюдо", ar: "طبق رئيسي", zh: "主菜", ja: "メイン料理",
+      hi: "मुख्य व्यंजन", tr: "Ana Yemek", it: "Piatto principale", ko: "메인 요리"
+    },
+    featureCards: {
+      ro: [
+        { icon: "🍜", t: "Considerat felul național khmer", d: "Num Banh Chok e adesea numit pur și simplu 'micul dejun khmer', un fel de tăiței de orez mâncat de generații." },
+        { icon: "🐟", t: "Sos verde pe bază de pește", d: "Sosul se face din pește de apă dulce fiert și mărunțit, amestecat cu o pastă bogată de plante aromatice." },
+        { icon: "🌿", t: "Pasta pisată e sufletul sosului", d: "Lemongrass, galangal, turmeric proaspăt și frunze de kaffir lime se pisează împreună într-o pastă fină." },
+        { icon: "🥒", t: "Legume crude proaspete deasupra", d: "Muguri de fasole, castraveți și flori de banană crude se pun generos deasupra tăițeilor, aducând prospețime." }
+      ],
+      en: [
+        { icon: "🍜", t: "Considered the Khmer national dish", d: "Num Banh Chok is often simply called 'Khmer breakfast', a rice noodle dish eaten for generations." },
+        { icon: "🐟", t: "A green sauce built on fish", d: "The sauce is made from boiled, flaked freshwater fish mixed with a rich paste of aromatic herbs." },
+        { icon: "🌿", t: "The pounded paste is the sauce's soul", d: "Lemongrass, galangal, fresh turmeric, and kaffir lime leaves are pounded together into a fine paste." },
+        { icon: "🥒", t: "Fresh raw vegetables on top", d: "Bean sprouts, cucumber, and raw banana blossom are piled generously over the noodles, bringing freshness." }
+      ],
+      es: [
+        { icon: "🍜", t: "Considerado el plato nacional jemer", d: "El Num Banh Chok a menudo se llama simplemente 'desayuno jemer', un plato de fideos de arroz comido por generaciones." },
+        { icon: "🐟", t: "Una salsa verde a base de pescado", d: "La salsa se hace con pescado de agua dulce hervido y desmenuzado, mezclado con una rica pasta de hierbas aromáticas." },
+        { icon: "🌿", t: "La pasta machacada es el alma de la salsa", d: "Citronela, galanga, cúrcuma fresca y hojas de lima kaffir se machacan juntas hasta formar una pasta fina." },
+        { icon: "🥒", t: "Verduras crudas frescas por encima", d: "Brotes de soja, pepino y flor de plátano cruda se apilan generosamente sobre los fideos, aportando frescura." }
+      ],
+      fr: [
+        { icon: "🍜", t: "Considéré comme le plat national khmer", d: "Le Num Banh Chok est souvent simplement appelé 'petit-déjeuner khmer', un plat de nouilles de riz mangé depuis des générations." },
+        { icon: "🐟", t: "Une sauce verte à base de poisson", d: "La sauce est faite de poisson d'eau douce bouilli et effiloché, mélangé à une riche pâte d'herbes aromatiques." },
+        { icon: "🌿", t: "La pâte pilée est l'âme de la sauce", d: "Citronnelle, galanga, curcuma frais et feuilles de combava sont pilés ensemble en une pâte fine." },
+        { icon: "🥒", t: "Des légumes crus frais dessus", d: "Germes de soja, concombre et fleur de bananier crue sont empilés généreusement sur les nouilles, apportant de la fraîcheur." }
+      ],
+      de: [
+        { icon: "🍜", t: "Gilt als das khmerische Nationalgericht", d: "Num Banh Chok wird oft einfach 'khmerisches Frühstück' genannt, ein seit Generationen gegessenes Reisnudelgericht." },
+        { icon: "🐟", t: "Eine grüne Sauce auf Fischbasis", d: "Die Sauce besteht aus gekochtem, zerpflücktem Süßwasserfisch, gemischt mit einer reichhaltigen Kräuterpaste." },
+        { icon: "🌿", t: "Die gestampfte Paste ist die Seele der Sauce", d: "Zitronengras, Galgant, frischer Kurkuma und Kaffir-Limettenblätter werden zu einer feinen Paste gestampft." },
+        { icon: "🥒", t: "Frisches rohes Gemüse obenauf", d: "Sojasprossen, Gurke und rohe Bananenblüte werden großzügig über die Nudeln gehäuft und bringen Frische." }
+      ],
+      pt: [
+        { icon: "🍜", t: "Considerado o prato nacional khmer", d: "O Num Banh Chok é frequentemente chamado simplesmente de 'pequeno-almoço khmer', um prato de macarrão de arroz comido há gerações." },
+        { icon: "🐟", t: "Um molho verde à base de peixe", d: "O molho é feito de peixe de água doce fervido e desfiado, misturado com uma rica pasta de ervas aromáticas." },
+        { icon: "🌿", t: "A pasta pilada é a alma do molho", d: "Capim-limão, galanga, açafrão-da-terra fresco e folhas de limão-kaffir são pilados juntos numa pasta fina." },
+        { icon: "🥒", t: "Legumes crus frescos por cima", d: "Brotos de feijão, pepino e flor de bananeira crua são empilhados generosamente sobre o macarrão, trazendo frescor." }
+      ],
+      ru: [
+        { icon: "🍜", t: "Считается кхмерским национальным блюдом", d: "Нум Бань Чок часто называют просто «кхмерским завтраком» — блюдо из рисовой лапши, которое едят уже поколениями." },
+        { icon: "🐟", t: "Зелёный соус на основе рыбы", d: "Соус готовят из варёной пресноводной рыбы, разобранной на хлопья и смешанной с насыщенной пастой из трав." },
+        { icon: "🌿", t: "Толчёная паста — душа соуса", d: "Лемонграсс, галангал, свежую куркуму и листья кафир-лайма растирают вместе в тонкую пасту." },
+        { icon: "🥒", t: "Свежие сырые овощи сверху", d: "Ростки фасоли, огурец и сырой банановый цвет щедро укладывают поверх лапши, добавляя свежести." }
+      ],
+      ar: [
+        { icon: "🍜", t: "يُعتبر الطبق الوطني الخميري", d: "غالباً ما يُطلق على نوم بانه تشوك ببساطة اسم 'إفطار الخمير'، طبق نودلز الأرز الذي يُؤكل منذ أجيال." },
+        { icon: "🐟", t: "صلصة خضراء أساسها السمك", d: "تُصنع الصلصة من سمك المياه العذبة المسلوق والمفتت، ممزوجاً بمعجون غني من الأعشاب العطرية." },
+        { icon: "🌿", t: "المعجون المدقوق هو روح الصلصة", d: "يُدق عشب الليمون والغالانغال والكركم الطازج وأوراق ليمون الكافير معاً في معجون ناعم." },
+        { icon: "🥒", t: "خضار نيئة طازجة فوقها", d: "تُكدّس براعم الفول والخيار وزهرة الموز النيئة بسخاء فوق النودلز، مما يمنحها انتعاشاً." }
+      ],
+      zh: [
+        { icon: "🍜", t: "被视为高棉国菜", d: "努姆班奇通常被简单地称为'高棉早餐'，是一道世代相传的米粉料理。" },
+        { icon: "🐟", t: "以鱼为基础的绿色酱汁", d: "酱汁用煮熟并剥碎的淡水鱼与浓郁的香草酱调制而成。" },
+        { icon: "🌿", t: "捣碎的香料酱是酱汁的灵魂", d: "香茅、南姜、新鲜姜黄和青柠叶一起捣成细腻的酱料。" },
+        { icon: "🥒", t: "上面铺满新鲜生蔬菜", d: "豆芽、黄瓜和生香蕉花大量堆放在米粉上，带来清新口感。" }
+      ],
+      ja: [
+        { icon: "🍜", t: "クメールの国民食とされる", d: "ヌム・バンチョックは単に『クメールの朝食』と呼ばれることが多く、何世代にもわたって食べられてきた米麺料理だ。" },
+        { icon: "🐟", t: "魚をベースにした緑のソース", d: "ソースは茹でてほぐした淡水魚を、豊かな香草ペーストと混ぜ合わせて作られる。" },
+        { icon: "🌿", t: "すりつぶしたペーストがソースの真髄", d: "レモングラス、ガランガル、生のウコン、コブミカンの葉を一緒にすりつぶして細かいペーストにする。" },
+        { icon: "🥒", t: "新鮮な生野菜をたっぷりのせる", d: "もやし、きゅうり、生のバナナの花がたっぷりと麺の上に盛られ、爽やかさを添える。" }
+      ],
+      hi: [
+        { icon: "🍜", t: "खमेर राष्ट्रीय व्यंजन माना जाता है", d: "नुम बन्ह छोक को अक्सर बस 'खमेर नाश्ता' कहा जाता है, यह पीढ़ियों से खाया जाने वाला चावल नूडल व्यंजन है।" },
+        { icon: "🐟", t: "मछली पर आधारित हरी चटनी", d: "चटनी उबली और तोड़ी गई मीठे पानी की मछली से बनती है, जो सुगंधित जड़ी-बूटियों के गाढ़े पेस्ट के साथ मिलाई जाती है।" },
+        { icon: "🌿", t: "कूटा हुआ पेस्ट चटनी की आत्मा है", d: "लेमनग्रास, गलांगल, ताज़ी हल्दी और कैफिर लाइम पत्तियां साथ में कूटकर एक बारीक पेस्ट बनाई जाती है।" },
+        { icon: "🥒", t: "ऊपर ताज़ी कच्ची सब्ज़ियां", d: "बीन स्प्राउट्स, खीरा और कच्चे केले के फूल नूडल्स के ऊपर भरपूर मात्रा में डाले जाते हैं, ताज़गी लाते हुए।" }
+      ],
+      tr: [
+        { icon: "🍜", t: "Khmer milli yemeği sayılır", d: "Num Banh Chok genellikle basitçe 'Khmer kahvaltısı' olarak adlandırılır, nesillerdir yenen bir pirinç eriştesi yemeğidir." },
+        { icon: "🐟", t: "Balık bazlı yeşil bir sos", d: "Sos, haşlanmış ve didiklenmiş tatlı su balığının zengin bir aromatik ot macunuyla karıştırılmasıyla yapılır." },
+        { icon: "🌿", t: "Dövülmüş macun sosun ruhudur", d: "Limon otu, galanga, taze zerdeçal ve kafir limon yaprakları birlikte ince bir macun haline dövülür." },
+        { icon: "🥒", t: "Üzerinde taze çiğ sebzeler", d: "Filiz, salatalık ve çiğ muz çiçeği eriştelerin üzerine cömertçe yığılarak tazelik katar." }
+      ],
+      it: [
+        { icon: "🍜", t: "Considerato il piatto nazionale khmer", d: "Il Num Banh Chok è spesso chiamato semplicemente 'colazione khmer', un piatto di noodle di riso mangiato da generazioni." },
+        { icon: "🐟", t: "Una salsa verde a base di pesce", d: "La salsa è fatta con pesce d'acqua dolce bollito e sfaldato, mescolato con una ricca pasta di erbe aromatiche." },
+        { icon: "🌿", t: "La pasta pestata è l'anima della salsa", d: "Citronella, galanga, curcuma fresca e foglie di lime kaffir vengono pestate insieme in una pasta fine." },
+        { icon: "🥒", t: "Verdure crude fresche sopra", d: "Germogli di soia, cetriolo e fiore di banana crudo vengono accumulati generosamente sui noodle, portando freschezza." }
+      ],
+      ko: [
+        { icon: "🍜", t: "크메르 대표 국민 요리로 여겨진다", d: "눔반쪽은 흔히 '크메르식 아침 식사'라 불리며, 여러 세대에 걸쳐 먹어온 쌀국수 요리다." },
+        { icon: "🐟", t: "생선을 기반으로 한 녹색 소스", d: "소스는 삶아서 발라낸 민물고기 살을 풍부한 허브 페이스트와 섞어 만든다." },
+        { icon: "🌿", t: "찧은 페이스트가 소스의 핵심", d: "레몬그라스, 갈랑갈, 생강황, 카피르 라임 잎을 함께 찧어 고운 페이스트를 만든다." },
+        { icon: "🥒", t: "위에 신선한 생채소", d: "숙주, 오이, 생 바나나꽃을 국수 위에 넉넉히 올려 신선함을 더한다." }
+      ]
+    },
+    ingredients: {
+      ro: ["400g tăiței de orez subțiri", "400g file de pește alb", "3 tulpini de lemongrass, tocate", "30g galangal proaspăt", "20g turmeric proaspăt", "6 frunze de kaffir lime", "4 șalote", "3 linguri sos de pește", "legume proaspete mixte (muguri de fasole, castraveți, mentă)"],
+      en: ["400g thin rice noodles", "400g white fish fillets", "3 stalks lemongrass, chopped", "30g fresh galangal", "20g fresh turmeric", "6 kaffir lime leaves", "4 shallots", "3 tbsp fish sauce", "mixed fresh vegetables (bean sprouts, cucumber, mint)"],
+      es: ["400g de fideos de arroz finos", "400g de filetes de pescado blanco", "3 tallos de citronela, picados", "30g de galanga fresca", "20g de cúrcuma fresca", "6 hojas de lima kaffir", "4 chalotas", "3 cdas de salsa de pescado", "verduras frescas mixtas (brotes de soja, pepino, menta)"],
+      fr: ["400g de vermicelles de riz fins", "400g de filets de poisson blanc", "3 tiges de citronnelle, hachées", "30g de galanga frais", "20g de curcuma frais", "6 feuilles de combava", "4 échalotes", "3 c. à soupe de sauce de poisson", "légumes frais variés (germes de soja, concombre, menthe)"],
+      de: ["400g dünne Reisnudeln", "400g weiße Fischfilets", "3 Stangen Zitronengras, gehackt", "30g frischer Galgant", "20g frischer Kurkuma", "6 Kaffir-Limettenblätter", "4 Schalotten", "3 EL Fischsauce", "gemischtes frisches Gemüse (Sojasprossen, Gurke, Minze)"],
+      pt: ["400g de macarrão de arroz fino", "400g de filés de peixe branco", "3 talos de capim-limão, picados", "30g de galanga fresca", "20g de açafrão-da-terra fresco", "6 folhas de limão-kaffir", "4 chalotas", "3 col. sopa de molho de peixe", "legumes frescos variados (brotos de feijão, pepino, hortelã)"],
+      ru: ["400г тонкой рисовой лапши", "400г филе белой рыбы", "3 стебля лемонграсса, нарезанных", "30г свежего галангала", "20г свежей куркумы", "6 листьев кафир-лайма", "4 луковицы-шалот", "3 ст.л. рыбного соуса", "смесь свежих овощей (ростки фасоли, огурец, мята)"],
+      ar: ["400غ نودلز أرز رفيعة", "400غ شرائح سمك أبيض", "3 سيقان عشب الليمون، مفرومة", "30غ غالانغال طازج", "20غ كركم طازج", "6 أوراق ليمون كافير", "4 كراث", "3 ملاعق كبيرة صلصة سمك", "خضار طازجة مشكلة (براعم فول، خيار، نعناع)"],
+      zh: ["400克细米粉", "400克白鱼片", "3根香茅，切碎", "30克新鲜南姜", "20克新鲜姜黄", "6片青柠叶", "4颗红葱头", "3汤匙鱼露", "各式新鲜蔬菜（豆芽、黄瓜、薄荷）"],
+      ja: ["細い米麺400g", "白身魚の切り身400g", "レモングラス3本（刻む）", "生ガランガル30g", "生ターメリック20g", "コブミカンの葉6枚", "エシャロット4個", "ナンプラー大さじ3", "ミックス生野菜（もやし、きゅうり、ミント）"],
+      hi: ["400 ग्राम पतली चावल नूडल्स", "400 ग्राम सफेद मछली फिलेट", "3 डंठल लेमनग्रास, कटा हुआ", "30 ग्राम ताज़ा गलांगल", "20 ग्राम ताज़ी हल्दी", "6 कैफिर लाइम पत्तियां", "4 शालोट्स", "3 बड़े चम्मच फिश सॉस", "मिश्रित ताज़ी सब्ज़ियां (बीन स्प्राउट्स, खीरा, पुदीना)"],
+      tr: ["400g ince pirinç eriştesi", "400g beyaz balık fileto", "3 sap limon otu, doğranmış", "30g taze galanga", "20g taze zerdeçal", "6 kafir limon yaprağı", "4 arpacık soğanı", "3 yemek kaşığı balık sosu", "karışık taze sebzeler (filiz, salatalık, nane)"],
+      it: ["400g di vermicelli di riso sottili", "400g di filetti di pesce bianco", "3 gambi di citronella, tritati", "30g di galanga fresca", "20g di curcuma fresca", "6 foglie di lime kaffir", "4 scalogni", "3 cucchiai di salsa di pesce", "verdure fresche miste (germogli di soia, cetriolo, menta)"],
+      ko: ["가는 쌀국수 400g", "흰살 생선 필레 400g", "레몬그라스 3대, 다진 것", "생 갈랑갈 30g", "생강황 20g", "카피르 라임 잎 6장", "샬롯 4개", "피시소스 3큰술", "혼합 생채소 (숙주, 오이, 민트)"]
+    },
+    howIsMade: {
+      ro: "Se pisează lemongrass-ul, galangalul, turmericul, frunzele de kaffir lime și șalotele într-o pastă fină și aromată. Se fierbe peștele în apă până se gătește, apoi se scoate și se mărunțește, păstrând lichidul de fiert. Se călește pasta de mirodenii într-un pic de ulei până devine intens aromată. Se adaugă peștele mărunțit și se pisează în pastă până devine omogenă. Se adaugă lichidul de fiert rezervat și sosul de pește, apoi se lasă să fiarbă ușor până sosul se îngroașă puțin. Se fierb tăițeii de orez în apă clocotită până devin fragezi, apoi se scurg și se împart în boluri. Se toarnă sosul de pește peste tăiței și se acoperă generos cu legume proaspete înainte de servire.",
+      en: "Pound the lemongrass, galangal, turmeric, kaffir lime leaves, and shallots into a fine, fragrant paste. Simmer the fish in water until just cooked, then remove and flake the flesh, reserving the poaching liquid. Fry the spice paste in a little oil until deeply fragrant. Add the flaked fish and mash it into the paste until smooth. Stir in the reserved poaching liquid and fish sauce, then simmer until the sauce thickens slightly. Cook the rice noodles in boiling water until tender, then drain and divide among bowls. Ladle the fish sauce over the noodles and top generously with fresh vegetables before serving.",
+      es: "Machaca la citronela, la galanga, la cúrcuma, las hojas de lima kaffir y las chalotas hasta obtener una pasta fina y aromática. Cuece el pescado a fuego lento en agua hasta que esté justo cocido, luego retíralo y desmenúzalo, reservando el líquido de cocción. Sofríe la pasta de especias en un poco de aceite hasta que esté muy aromática. Añade el pescado desmenuzado y macháalo en la pasta hasta que quede homogénea. Incorpora el líquido de cocción reservado y la salsa de pescado, luego cuece a fuego lento hasta que la salsa espese ligeramente. Cocina los fideos de arroz en agua hirviendo hasta que estén tiernos, luego escúrrelos y repártelos en cuencos. Vierte la salsa de pescado sobre los fideos y cubre generosamente con verduras frescas antes de servir.",
+      fr: "Pilez la citronnelle, le galanga, le curcuma, les feuilles de combava et les échalotes en une pâte fine et parfumée. Faites mijoter le poisson dans l'eau jusqu'à ce qu'il soit juste cuit, puis retirez-le et effeuillez-le, en réservant le liquide de cuisson. Faites revenir la pâte d'épices dans un peu d'huile jusqu'à ce qu'elle soit très parfumée. Ajoutez le poisson effeuillé et écrasez-le dans la pâte jusqu'à obtenir une texture lisse. Incorporez le liquide de cuisson réservé et la sauce de poisson, puis laissez mijoter jusqu'à ce que la sauce épaississe légèrement. Faites cuire les vermicelles de riz dans l'eau bouillante jusqu'à ce qu'ils soient tendres, puis égouttez-les et répartissez-les dans des bols. Nappez les nouilles de sauce de poisson et garnissez généreusement de légumes frais avant de servir.",
+      de: "Zitronengras, Galgant, Kurkuma, Kaffir-Limettenblätter und Schalotten zu einer feinen, aromatischen Paste stampfen. Den Fisch in Wasser garziehen lassen, bis er gerade gegart ist, dann herausnehmen und zerpflücken, dabei die Garflüssigkeit aufbewahren. Die Gewürzpaste in etwas Öl anbraten, bis sie intensiv duftet. Den zerpflückten Fisch hinzufügen und in die Paste einarbeiten, bis sie glatt ist. Die aufbewahrte Garflüssigkeit und Fischsauce einrühren, dann köcheln lassen, bis die Sauce leicht eindickt. Die Reisnudeln in kochendem Wasser garen, bis sie weich sind, dann abgießen und auf Schalen verteilen. Die Fischsauce über die Nudeln geben und vor dem Servieren großzügig mit frischem Gemüse belegen.",
+      pt: "Pile o capim-limão, a galanga, o açafrão-da-terra, as folhas de limão-kaffir e as chalotas até obter uma pasta fina e aromática. Cozinhe o peixe em água até ficar apenas cozido, depois retire e desfie, reservando o líquido de cozedura. Refogue a pasta de especiarias num pouco de óleo até ficar bem aromática. Junte o peixe desfiado e esmague-o na pasta até ficar homogénea. Incorpore o líquido de cozedura reservado e o molho de peixe, depois deixe cozinhar até o molho engrossar um pouco. Cozinhe o macarrão de arroz em água a ferver até ficar macio, depois escorra e divida por tigelas. Regue o macarrão com o molho de peixe e cubra generosamente com legumes frescos antes de servir.",
+      ru: "Растолките лемонграсс, галангал, куркуму, листья кафир-лайма и лук-шалот в тонкую ароматную пасту. Отварите рыбу в воде до готовности, затем выньте и разберите на хлопья, сохранив отвар. Обжарьте пасту специй в небольшом количестве масла до насыщенного аромата. Добавьте разобранную рыбу и разомните в пасте до однородности. Влейте сохранённый отвар и рыбный соус, затем варите на медленном огне, пока соус слегка не загустеет. Отварите рисовую лапшу в кипящей воде до мягкости, затем слейте воду и разложите по мискам. Полейте лапшу рыбным соусом и щедро посыпьте свежими овощами перед подачей.",
+      ar: "ادقي عشب الليمون والغالانغال والكركم وأوراق ليمون الكافير والكراث في معجون ناعم وعطري. اطهي السمك في الماء حتى ينضج، ثم ارفعيه وفتّتيه، مع الاحتفاظ بسائل السلق. اقلي معجون التوابل في قليل من الزيت حتى تفوح رائحته بقوة. أضيفي السمك المفتت واهرسيه في المعجون حتى يصبح ناعماً. أضيفي سائل السلق المحفوظ وصلصة السمك، ثم اتركيه يغلي حتى تتكاثف الصلصة قليلاً. اطهي نودلز الأرز في ماء مغلي حتى تصبح طرية، ثم صفّيها ووزّعيها في أوعية. اسكبي صلصة السمك فوق النودلز وغطّيها بسخاء بالخضار الطازجة قبل التقديم.",
+      zh: "将香茅、南姜、姜黄、青柠叶和红葱头捣成细腻芳香的酱料。将鱼放入水中煮至刚熟，取出剥成鱼肉碎，保留煮鱼的汤汁。用少许油将香料酱炒至香气浓郁。加入鱼肉碎，捣入酱料中直至顺滑。倒入保留的鱼汤和鱼露，小火煮至酱汁略微变稠。将米粉放入沸水中煮至软熟，捞出沥干分装入碗中。将鱼酱浇在米粉上，享用前铺满新鲜蔬菜。",
+      ja: "レモングラス、ガランガル、ターメリック、コブミカンの葉、エシャロットを香り豊かな細かいペーストになるまですりつぶす。魚を水で火が通るまで煮て、取り出してほぐし、煮汁は取っておく。香辛料のペーストを少量の油で香りが立つまで炒める。ほぐした魚を加え、ペーストの中でつぶしてなめらかにする。取っておいた煮汁とナンプラーを加え、ソースが少しとろみがつくまで煮る。米麺を沸騰した湯で柔らかくなるまで茹で、水を切って器に分ける。魚のソースを麺にかけ、提供前に新鮮な野菜をたっぷりのせる。",
+      hi: "लेमनग्रास, गलांगल, हल्दी, कैफिर लाइम पत्तियां और शालोट्स को कूटकर बारीक, सुगंधित पेस्ट बनाएं। मछली को पानी में तब तक पकाएं जब तक पक न जाए, फिर निकालकर टुकड़ों में तोड़ें, पकाने का पानी बचाकर रखें। मसाला पेस्ट को थोड़े तेल में तब तक भूनें जब तक तेज़ सुगंध न आए। तोड़ी मछली डालें और पेस्ट में तब तक मैश करें जब तक चिकना न हो जाए। बचा हुआ पानी और फिश सॉस डालें, फिर तब तक पकने दें जब तक सॉस थोड़ा गाढ़ा न हो जाए। चावल नूडल्स को उबलते पानी में नरम होने तक पकाएं, फिर छानकर कटोरों में बांटें। नूडल्स पर मछली की चटनी डालें और परोसने से पहले भरपूर ताज़ी सब्ज़ियों से सजाएं।",
+      tr: "Limon otunu, galangayı, zerdeçalı, kafir limon yapraklarını ve arpacık soğanlarını ince, kokulu bir macun haline getirin. Balığı suda tam pişene kadar haşlayın, sonra çıkarıp didikleyin, haşlama suyunu ayırın. Baharat macununu biraz yağda yoğun kokulu olana kadar kızartın. Didiklenmiş balığı ekleyip macunun içinde pürüzsüz olana kadar ezin. Ayrılan haşlama suyunu ve balık sosunu ekleyin, ardından sos hafifçe koyulaşana kadar pişirin. Pirinç eriştesini kaynayan suda yumuşayana kadar pişirin, ardından süzüp kaselere bölün. Balık sosunu eriştelerin üzerine dökün ve servisten önce cömertçe taze sebzelerle süsleyin.",
+      it: "Pesta la citronella, la galanga, la curcuma, le foglie di lime kaffir e gli scalogni in una pasta fine e profumata. Cuoci il pesce a fuoco lento in acqua finché non è appena cotto, poi toglilo e sfaldalo, conservando il liquido di cottura. Rosola la pasta di spezie in un po' d'olio finché non profuma intensamente. Aggiungi il pesce sfaldato e schiaccialo nella pasta finché non è liscia. Incorpora il liquido di cottura conservato e la salsa di pesce, poi lascia sobbollire finché la salsa non si addensa leggermente. Cuoci i vermicelli di riso in acqua bollente finché non sono teneri, poi scolali e dividili nelle ciotole. Versa la salsa di pesce sui noodle e guarnisci generosamente con verdure fresche prima di servire.",
+      ko: "레몬그라스, 갈랑갈, 강황, 카피르 라임 잎, 샬롯을 곱고 향긋한 페이스트가 되도록 찧는다. 생선을 물에 넣어 막 익을 때까지 삶은 뒤 건져 살을 발라내고 삶은 물은 남겨둔다. 향신료 페이스트를 약간의 기름에 향이 진하게 날 때까지 볶는다. 발라낸 생선을 넣고 페이스트에 으깨어 매끄럽게 만든다. 남겨둔 삶은 물과 피시소스를 넣고 소스가 약간 걸쭉해질 때까지 끓인다. 쌀국수를 끓는 물에 부드러워질 때까지 삶은 뒤 물기를 빼고 그릇에 나눈다. 생선 소스를 국수 위에 붓고 서빙 전에 신선한 채소를 넉넉히 올린다."
+    },
+    originText: {
+      ro: "Num Banh Chok e considerat cel mai vechi fel de mâncare khmer atestat, cu rădăcini care merg până în perioada Angkor, iar femeile care vindeau tăiței de orez proaspeți apar chiar în reliefurile de piatră ale templului Bayon din secolul XII. Tradițional, tăițeii se fac încă de mână, prin presarea aluatului de orez fermentat printr-o sită direct în apa clocotită.\n\nSe mănâncă aproape întotdeauna dimineața, cumpărat de la vânzătorii ambulanți care circulă prin cartiere cu coșuri suspendate pe o prăjină, iar combinația de sos de pește parfumat cu legume crude rămâne rețeta care definește bucătăria khmeră pentru mulți cambodgieni.",
+      en: "Num Banh Chok is considered the oldest attested Khmer dish, with roots going back to the Angkor period, and women selling fresh rice noodles even appear carved into the 12th-century stone reliefs of Bayon temple. Traditionally, the noodles are still made by hand, by pressing fermented rice dough through a sieve directly into boiling water.\n\nIt's eaten almost always in the morning, bought from street vendors who walk through neighbourhoods with baskets hung from a shoulder pole, and the combination of fragrant fish sauce with raw vegetables remains the recipe that defines Khmer cuisine for many Cambodians.",
+      es: "El Num Banh Chok se considera el plato jemer atestiguado más antiguo, con raíces que se remontan al periodo de Angkor, y mujeres vendiendo fideos de arroz frescos aparecen incluso talladas en los relieves de piedra del siglo XII del templo de Bayon. Tradicionalmente, los fideos todavía se hacen a mano, presionando masa de arroz fermentado a través de un colador directamente en agua hirviendo.\n\nSe come casi siempre por la mañana, comprado a vendedores ambulantes que recorren los barrios con cestas colgadas de una vara sobre el hombro, y la combinación de salsa de pescado aromática con verduras crudas sigue siendo la receta que define la cocina jemer para muchos camboyanos.",
+      fr: "Le Num Banh Chok est considéré comme le plus ancien plat khmer attesté, avec des racines remontant à la période d'Angkor, et des femmes vendant des nouilles de riz fraîches apparaissent même sculptées dans les bas-reliefs de pierre du XIIe siècle du temple de Bayon. Traditionnellement, les nouilles sont encore faites à la main, en pressant de la pâte de riz fermentée à travers un tamis directement dans l'eau bouillante.\n\nIl se mange presque toujours le matin, acheté auprès de vendeurs ambulants qui parcourent les quartiers avec des paniers suspendus à une palanche, et l'association de sauce de poisson parfumée avec des légumes crus reste la recette qui définit la cuisine khmère pour de nombreux Cambodgiens.",
+      de: "Num Banh Chok gilt als das älteste bezeugte Khmer-Gericht, mit Wurzeln, die bis in die Angkor-Zeit zurückreichen, und Frauen, die frische Reisnudeln verkaufen, erscheinen sogar in die Steinreliefs des Bayon-Tempels aus dem 12. Jahrhundert gemeißelt. Traditionell werden die Nudeln noch von Hand hergestellt, indem fermentierter Reisteig durch ein Sieb direkt in kochendes Wasser gepresst wird.\n\nEs wird fast immer morgens gegessen, gekauft von Straßenverkäufern, die mit an einer Schulterstange hängenden Körben durch die Viertel gehen, und die Kombination aus aromatischer Fischsauce mit rohem Gemüse bleibt für viele Kambodschaner das Rezept, das die khmerische Küche definiert.",
+      pt: "O Num Banh Chok é considerado o prato khmer atestado mais antigo, com raízes que remontam ao período de Angkor, e mulheres a vender macarrão de arroz fresco aparecem mesmo esculpidas nos relevos de pedra do século XII do templo de Bayon. Tradicionalmente, o macarrão ainda é feito à mão, pressionando massa de arroz fermentada através de uma peneira diretamente em água a ferver.\n\nÉ comido quase sempre de manhã, comprado a vendedores ambulantes que percorrem os bairros com cestos pendurados numa vara ao ombro, e a combinação de molho de peixe aromático com legumes crus continua a ser a receita que define a culinária khmer para muitos cambojanos.",
+      ru: "Нум Бань Чок считается древнейшим засвидетельствованным кхмерским блюдом, корни которого уходят в период Ангкора, а женщины, продающие свежую рисовую лапшу, даже изображены в каменных рельефах XII века храма Байон. Традиционно лапшу до сих пор делают вручную, продавливая тесто из ферментированного риса через сито прямо в кипящую воду.\n\nЕго едят почти всегда утром, покупая у уличных торговцев, которые ходят по кварталам с корзинами, подвешенными на коромысле, и сочетание ароматного рыбного соуса с сырыми овощами остаётся для многих камбоджийцев рецептом, определяющим кхмерскую кухню.",
+      ar: "يُعتبر نوم بانه تشوك أقدم طبق خميري موثّق، وتعود جذوره إلى فترة أنغكور، بل إن النساء اللواتي يبعن نودلز الأرز الطازجة ظهرن منحوتات في النقوش الحجرية من القرن الثاني عشر في معبد بايون. تقليدياً، لا تزال النودلز تُصنع يدوياً، بضغط عجينة الأرز المخمرة عبر مصفاة مباشرة في الماء المغلي.\n\nتُؤكل دائماً تقريباً في الصباح، تُشترى من الباعة المتجولين الذين يسيرون في الأحياء بسلال معلقة على عصا على الكتف، ويبقى مزيج صلصة السمك العطرية مع الخضار النيئة الوصفة التي تُعرّف المطبخ الخميري لدى الكثير من الكمبوديين.",
+      zh: "努姆班奇被认为是有史料记载的最古老的高棉菜肴，其起源可以追溯到吴哥时期，售卖新鲜米线的妇女形象甚至出现在巴戎寺12世纪的石雕浮雕中。传统上，米线仍然是手工制作的，将发酵的米浆通过筛网直接挤压到沸水中。\n\n它几乎总是在早晨食用，从挑着扁担、篮子里装着米线走街串巷的小贩那里购买，芳香的鱼酱与生蔬菜的组合，对许多柬埔寨人来说，仍然是定义高棉料理的经典配方。",
+      ja: "ヌム・バンチョックは記録に残る最古のクメール料理とされ、アンコール時代にまで遡る起源を持ち、新鮮な米麺を売る女性の姿は12世紀のバイヨン寺院の石造りの浮き彫りにも彫られている。伝統的に、麺は今でも発酵させた米粉の生地をふるいに通して沸騰した湯に直接押し出して手作りされている。\n\nほぼ常に朝に食べられ、肩に担いだ棒に籠をぶら下げて近所を歩く行商人から買われる。香り高い魚のソースと生野菜の組み合わせは、多くのカンボジア人にとってクメール料理を定義するレシピであり続けている。",
+      hi: "नुम बन्ह छोक को सबसे पुराना प्रमाणित खमेर व्यंजन माना जाता है, जिसकी जड़ें अंगकोर काल तक जाती हैं, और ताज़ी चावल नूडल्स बेचती महिलाएं 12वीं सदी के बेयोन मंदिर के पत्थर के नक्काशीदार भित्तिचित्रों में भी दिखाई देती हैं। पारंपरिक रूप से, नूडल्स आज भी हाथ से बनाए जाते हैं, किण्वित चावल के आटे को छलनी से सीधे उबलते पानी में दबाकर।\n\nयह लगभग हमेशा सुबह खाया जाता है, फेरीवालों से खरीदा जाता है जो कंधे की छड़ी पर लटकी टोकरियों के साथ मोहल्लों में घूमते हैं, और सुगंधित मछली की चटनी के साथ कच्ची सब्ज़ियों का संयोजन कई कंबोडियाई लोगों के लिए खमेर व्यंजन को परिभाषित करने वाली रेसिपी बना हुआ है।",
+      tr: "Num Banh Chok, Angkor dönemine kadar uzanan köklere sahip, kanıtlanmış en eski Khmer yemeği olarak kabul edilir ve taze pirinç eriştesi satan kadınlar 12. yüzyıldan kalma Bayon Tapınağı'nın taş kabartmalarında bile tasvir edilmiştir. Geleneksel olarak, erişteler hâlâ elle yapılır; fermente pirinç hamuru bir süzgeçten doğrudan kaynayan suya bastırılarak.\n\nNeredeyse her zaman sabah yenir, omuzda taşınan bir sırığa asılı sepetlerle mahalleleri dolaşan seyyar satıcılardan satın alınır ve kokulu balık sosunun çiğ sebzelerle birleşimi, birçok Kamboçyalı için Khmer mutfağını tanımlayan tarif olmaya devam ediyor.",
+      it: "Il Num Banh Chok è considerato il più antico piatto khmer attestato, con radici che risalgono al periodo di Angkor, e donne che vendono noodle di riso freschi compaiono persino scolpite nei bassorilievi in pietra del XII secolo del tempio di Bayon. Tradizionalmente, i noodle vengono ancora fatti a mano, premendo l'impasto di riso fermentato attraverso un setaccio direttamente nell'acqua bollente.\n\nViene mangiato quasi sempre al mattino, acquistato da venditori ambulanti che percorrono i quartieri con ceste appese a un bastone sulla spalla, e la combinazione di salsa di pesce profumata con verdure crude resta la ricetta che definisce la cucina khmer per molti cambogiani.",
+      ko: "눔반쪽은 앙코르 시대까지 거슬러 올라가는 뿌리를 가진, 증명된 가장 오래된 크메르 요리로 여겨지며, 신선한 쌀국수를 파는 여성들의 모습이 12세기 바이욘 사원의 석조 부조에도 새겨져 있다. 전통적으로 국수는 여전히 손으로 만드는데, 발효된 쌀 반죽을 체에 걸러 끓는 물에 바로 눌러 넣는 방식이다.\n\n거의 항상 아침에 먹으며, 어깨에 멘 장대에 바구니를 달고 동네를 돌아다니는 행상에게서 사 먹는다. 향긋한 생선 소스와 생채소의 조합은 많은 캄보디아인들에게 크메르 요리를 정의하는 레시피로 남아 있다."
+    }
+  },
+  {
+    id: 445,
+    servings: 4,
+    tipType: "meat",
+    pairingsType: "asian",
+    nutrition: { cal: 520, prot: 32, carb: 48, fat: 22, fib: 2 },
+    origin: {
+      ro: "Cambodgia", en: "Cambodia", es: "Camboya", fr: "Cambodge", de: "Kambodscha",
+      pt: "Camboja", ru: "Камбоджа", ar: "كمبوديا", zh: "柬埔寨", ja: "カンボジア",
+      hi: "कंबोडिया", tr: "Kamboçya", it: "Cambogia", ko: "캄보디아"
+    },
+    name: {
+      ro: "Bai Sach Chrouk", en: "Bai Sach Chrouk", es: "Bai Sach Chrouk", fr: "Bai Sach Chrouk", de: "Bai Sach Chrouk",
+      pt: "Bai Sach Chrouk", ru: "Бай Сач Чрук", ar: "باي ساش تشروك", zh: "柬埔寨烤肉饭", ja: "バイサイチュルック",
+      hi: "बाई साच छ्रोक", tr: "Bai Sach Chrouk", it: "Bai Sach Chrouk", ko: "바이삭쭈룩"
+    },
+    category: {
+      ro: "Fel principal", en: "Main Course", es: "Plato principal", fr: "Plat principal", de: "Hauptgericht",
+      pt: "Prato principal", ru: "Основное блюдо", ar: "طبق رئيسي", zh: "主菜", ja: "メイン料理",
+      hi: "मुख्य व्यंजन", tr: "Ana Yemek", it: "Piatto principale", ko: "메인 요리"
+    },
+    featureCards: {
+      ro: [
+        { icon: "🌅", t: "Micul dejun preferat al capitalei", d: "Bai Sach Chrouk e felul de mâncare de dimineață cu care majoritatea locuitorilor din Phnom Penh încep ziua." },
+        { icon: "🥛", t: "Marinată cu lapte de cocos", d: "Feliile de carne de porc se marinează cu lapte de cocos și usturoi, care le fac fragede și ușor dulcege." },
+        { icon: "🔥", t: "Grătarul lent, pe cărbuni", d: "Carnea se frige lent pe grătar de cărbuni, întorsă constant, pentru o crustă caramelizată uniformă." },
+        { icon: "🥒", t: "Murături acrișoare alături", d: "Un castron mic de murături de castraveți și morcovi echilibrează dulceața cărnii marinate." }
+      ],
+      en: [
+        { icon: "🌅", t: "The capital's favourite breakfast", d: "Bai Sach Chrouk is the morning dish most Phnom Penh residents start their day with." },
+        { icon: "🥛", t: "Marinated with coconut milk", d: "Thin slices of pork are marinated with coconut milk and garlic, which make them tender and slightly sweet." },
+        { icon: "🔥", t: "Slow-grilled over charcoal", d: "The meat is grilled slowly over charcoal, turned constantly, for an even, caramelised crust." },
+        { icon: "🥒", t: "Tangy pickles on the side", d: "A small bowl of pickled cucumber and carrot balances the sweetness of the marinated meat." }
+      ],
+      es: [
+        { icon: "🌅", t: "El desayuno favorito de la capital", d: "El Bai Sach Chrouk es el plato matutino con el que la mayoría de los residentes de Phnom Penh comienzan el día." },
+        { icon: "🥛", t: "Marinado con leche de coco", d: "Finas lonchas de cerdo se marinan con leche de coco y ajo, lo que las vuelve tiernas y ligeramente dulces." },
+        { icon: "🔥", t: "A la parrilla lenta sobre carbón", d: "La carne se asa lentamente sobre carbón, girándola constantemente, para lograr una costra caramelizada uniforme." },
+        { icon: "🥒", t: "Encurtidos ácidos al lado", d: "Un pequeño cuenco de pepino y zanahoria encurtidos equilibra la dulzura de la carne marinada." }
+      ],
+      fr: [
+        { icon: "🌅", t: "Le petit-déjeuner préféré de la capitale", d: "Le Bai Sach Chrouk est le plat matinal avec lequel la plupart des habitants de Phnom Penh commencent leur journée." },
+        { icon: "🥛", t: "Mariné au lait de coco", d: "De fines tranches de porc sont marinées au lait de coco et à l'ail, ce qui les rend tendres et légèrement sucrées." },
+        { icon: "🔥", t: "Grillé lentement au charbon", d: "La viande est grillée lentement au charbon de bois, retournée sans cesse, pour une croûte caramélisée uniforme." },
+        { icon: "🥒", t: "Des cornichons acidulés à côté", d: "Un petit bol de concombre et de carotte marinés équilibre la douceur de la viande marinée." }
+      ],
+      de: [
+        { icon: "🌅", t: "Das Lieblingsfrühstück der Hauptstadt", d: "Bai Sach Chrouk ist das Morgengericht, mit dem die meisten Bewohner von Phnom Penh ihren Tag beginnen." },
+        { icon: "🥛", t: "Mariniert mit Kokosmilch", d: "Dünne Schweinefleischscheiben werden mit Kokosmilch und Knoblauch mariniert, was sie zart und leicht süß macht." },
+        { icon: "🔥", t: "Langsam über Holzkohle gegrillt", d: "Das Fleisch wird langsam über Holzkohle gegrillt und ständig gewendet, für eine gleichmäßige karamellisierte Kruste." },
+        { icon: "🥒", t: "Säuerliches Eingelegtes dazu", d: "Eine kleine Schale eingelegter Gurke und Karotte gleicht die Süße des marinierten Fleisches aus." }
+      ],
+      pt: [
+        { icon: "🌅", t: "O pequeno-almoço favorito da capital", d: "O Bai Sach Chrouk é o prato matinal com que a maioria dos residentes de Phnom Penh começa o dia." },
+        { icon: "🥛", t: "Marinado com leite de coco", d: "Fatias finas de carne de porco são marinadas com leite de coco e alho, o que as torna macias e ligeiramente doces." },
+        { icon: "🔥", t: "Grelhado lentamente sobre carvão", d: "A carne é grelhada lentamente sobre carvão, virada constantemente, para uma crosta caramelizada uniforme." },
+        { icon: "🥒", t: "Picles ácidos ao lado", d: "Uma pequena tigela de pepino e cenoura em conserva equilibra a doçura da carne marinada." }
+      ],
+      ru: [
+        { icon: "🌅", t: "Любимый завтрак столицы", d: "Бай Сач Чрук — утреннее блюдо, с которого большинство жителей Пномпеня начинают свой день." },
+        { icon: "🥛", t: "Маринуется в кокосовом молоке", d: "Тонкие ломтики свинины маринуют в кокосовом молоке с чесноком, что делает их мягкими и слегка сладковатыми." },
+        { icon: "🔥", t: "Медленно жарится на углях", d: "Мясо медленно готовят на углях, постоянно переворачивая, для равномерной карамелизированной корочки." },
+        { icon: "🥒", t: "Кисловатые маринады рядом", d: "Небольшая миска маринованного огурца и моркови уравновешивает сладость маринованного мяса." }
+      ],
+      ar: [
+        { icon: "🌅", t: "فطور العاصمة المفضل", d: "باي ساش تشروك هو طبق الصباح الذي يبدأ به معظم سكان بنوم بنه يومهم." },
+        { icon: "🥛", t: "متبّل بحليب جوز الهند", d: "تُتبّل شرائح لحم الخنزير الرقيقة بحليب جوز الهند والثوم، مما يجعلها طرية وحلوة قليلاً." },
+        { icon: "🔥", t: "يُشوى ببطء على الفحم", d: "يُشوى اللحم ببطء على الفحم، مع قلبه باستمرار، للحصول على قشرة كراملية متساوية." },
+        { icon: "🥒", t: "مخللات حامضة بجانبه", d: "وعاء صغير من الخيار والجزر المخلل يوازن حلاوة اللحم المتبّل." }
+      ],
+      zh: [
+        { icon: "🌅", t: "首都最爱的早餐", d: "柬埔寨烤肉饭是金边大多数居民开启一天的早餐首选。" },
+        { icon: "🥛", t: "用椰奶腌制", d: "薄猪肉片用椰奶和大蒜腌制，使其嫩滑且带一丝甜味。" },
+        { icon: "🔥", t: "炭火慢烤", d: "肉在炭火上慢慢烤制，不断翻动，形成均匀焦糖化的外皮。" },
+        { icon: "🥒", t: "配一旁的酸腌菜", d: "一小碗腌黄瓜和胡萝卜平衡了腌制肉的甜味。" }
+      ],
+      ja: [
+        { icon: "🌅", t: "首都で人気の朝食", d: "バイサイチュルックはプノンペンの住民の多くが一日を始めるための朝の料理だ。" },
+        { icon: "🥛", t: "ココナッツミルクでマリネ", d: "薄切りの豚肉をココナッツミルクとにんにくでマリネすると、柔らかくほんのり甘くなる。" },
+        { icon: "🔥", t: "炭火でじっくり焼く", d: "肉は炭火でゆっくりと焼かれ、絶えず返しながら均一なキャラメル色の焼き目をつける。" },
+        { icon: "🥒", t: "添えられる酸味のピクルス", d: "小さなボウルに入ったきゅうりと人参のピクルスが、マリネした肉の甘さを引き締める。" }
+      ],
+      hi: [
+        { icon: "🌅", t: "राजधानी का पसंदीदा नाश्ता", d: "बाई साच छ्रोक वह सुबह का व्यंजन है जिससे अधिकांश नोम पेन्ह निवासी अपना दिन शुरू करते हैं।" },
+        { icon: "🥛", t: "नारियल के दूध में मैरीनेट", d: "पतले सूअर के मांस के टुकड़ों को नारियल के दूध और लहसुन में मैरीनेट किया जाता है, जो इन्हें नरम और हल्का मीठा बनाता है।" },
+        { icon: "🔥", t: "कोयले पर धीमी ग्रिलिंग", d: "मांस को कोयले पर धीरे-धीरे ग्रिल किया जाता है, लगातार पलटते हुए, ताकि समान रूप से कैरामलाइज़्ड परत बने।" },
+        { icon: "🥒", t: "साथ में तीखे अचार", d: "अचार वाले खीरे और गाजर का एक छोटा कटोरा मैरीनेट मांस की मिठास को संतुलित करता है।" }
+      ],
+      tr: [
+        { icon: "🌅", t: "Başkentin en sevilen kahvaltısı", d: "Bai Sach Chrouk, çoğu Phnom Penh sakininin güne başladığı sabah yemeğidir." },
+        { icon: "🥛", t: "Hindistancevizi sütüyle marine edilir", d: "İnce domuz eti dilimleri hindistancevizi sütü ve sarımsakla marine edilir, bu da onları yumuşak ve hafif tatlı yapar." },
+        { icon: "🔥", t: "Kömür ateşinde yavaşça ızgara yapılır", d: "Et, eşit karamelize bir kabuk için sürekli çevrilerek kömür ateşinde yavaşça ızgara yapılır." },
+        { icon: "🥒", t: "Yanında ekşimsi turşular", d: "Küçük bir kase salatalık ve havuç turşusu marine edilmiş etin tatlılığını dengeler." }
+      ],
+      it: [
+        { icon: "🌅", t: "La colazione preferita della capitale", d: "Il Bai Sach Chrouk è il piatto mattutino con cui la maggior parte degli abitanti di Phnom Penh inizia la giornata." },
+        { icon: "🥛", t: "Marinato nel latte di cocco", d: "Sottili fette di maiale vengono marinate con latte di cocco e aglio, il che le rende tenere e leggermente dolci." },
+        { icon: "🔥", t: "Grigliato lentamente sulla brace", d: "La carne viene grigliata lentamente sulla brace, girata di continuo, per una crosta caramellata uniforme." },
+        { icon: "🥒", t: "Sottaceti agrodolci a fianco", d: "Una piccola ciotola di cetriolo e carota sottaceto bilancia la dolcezza della carne marinata." }
+      ],
+      ko: [
+        { icon: "🌅", t: "수도가 사랑하는 아침 식사", d: "바이삭쭈룩은 프놈펜 주민 대부분이 하루를 시작하는 아침 요리다." },
+        { icon: "🥛", t: "코코넛 밀크에 재운다", d: "얇게 썬 돼지고기를 코코넛 밀크와 마늘에 재우면 부드럽고 은은하게 달콤해진다." },
+        { icon: "🔥", t: "숯불에 천천히 굽는다", d: "고기는 숯불에서 천천히 구워지며 계속 뒤집혀 고르게 캐러멜화된 겉면을 만든다." },
+        { icon: "🥒", t: "곁들이는 새콤한 피클", d: "오이와 당근 피클을 담은 작은 그릇이 양념한 고기의 단맛을 중화한다." }
+      ]
+    },
+    ingredients: {
+      ro: ["600g cotlet de porc, feliat subțire", "150ml lapte de cocos", "4 căței de usturoi, tocați", "2 linguri sos de pește", "1 lingură zahăr", "400g orez alb", "1 castravete, feliat subțire", "1 morcov, feliat subțire", "100ml oțet de orez"],
+      en: ["600g pork chop, thinly sliced", "150ml coconut milk", "4 garlic cloves, minced", "2 tbsp fish sauce", "1 tbsp sugar", "400g white rice", "1 cucumber, thinly sliced", "1 carrot, thinly sliced", "100ml rice vinegar"],
+      es: ["600g de chuleta de cerdo, en lonchas finas", "150ml de leche de coco", "4 dientes de ajo, picados", "2 cdas de salsa de pescado", "1 cda de azúcar", "400g de arroz blanco", "1 pepino, en rodajas finas", "1 zanahoria, en rodajas finas", "100ml de vinagre de arroz"],
+      fr: ["600g de côtelette de porc, tranchée finement", "150ml de lait de coco", "4 gousses d'ail, hachées", "2 c. à soupe de sauce de poisson", "1 c. à soupe de sucre", "400g de riz blanc", "1 concombre, tranché finement", "1 carotte, tranchée finement", "100ml de vinaigre de riz"],
+      de: ["600g Schweinekotelett, dünn geschnitten", "150ml Kokosmilch", "4 Knoblauchzehen, gehackt", "2 EL Fischsauce", "1 EL Zucker", "400g weißer Reis", "1 Gurke, dünn geschnitten", "1 Karotte, dünn geschnitten", "100ml Reisessig"],
+      pt: ["600g de costeleta de porco, fatiada fina", "150ml de leite de coco", "4 dentes de alho, picados", "2 col. sopa de molho de peixe", "1 col. sopa de açúcar", "400g de arroz branco", "1 pepino, fatiado fino", "1 cenoura, fatiada fina", "100ml de vinagre de arroz"],
+      ru: ["600г свиной отбивной, тонко нарезанной", "150мл кокосового молока", "4 зубчика чеснока, измельчённых", "2 ст.л. рыбного соуса", "1 ст.л. сахара", "400г белого риса", "1 огурец, тонко нарезанный", "1 морковь, тонко нарезанная", "100мл рисового уксуса"],
+      ar: ["600غ ريش خنزير، مقطعة شرائح رفيعة", "150مل حليب جوز الهند", "4 فصوص ثوم، مفرومة", "2 ملعقة كبيرة صلصة سمك", "1 ملعقة كبيرة سكر", "400غ أرز أبيض", "1 خيارة، مقطعة شرائح رفيعة", "1 جزرة، مقطعة شرائح رفيعة", "100مل خل أرز"],
+      zh: ["600克猪排，切薄片", "150毫升椰奶", "4瓣大蒜，切碎", "2汤匙鱼露", "1汤匙糖", "400克白米", "1根黄瓜，切薄片", "1根胡萝卜，切薄片", "100毫升米醋"],
+      ja: ["豚ロース肉600g（薄切り）", "ココナッツミルク150ml", "にんにく4片（みじん切り）", "ナンプラー大さじ2", "砂糖大さじ1", "白米400g", "きゅうり1本（薄切り）", "にんじん1本（薄切り）", "米酢100ml"],
+      hi: ["600 ग्राम पोर्क चॉप, पतला कटा", "150 मिली नारियल का दूध", "4 लहसुन की कलियां, कटी हुई", "2 बड़े चम्मच फिश सॉस", "1 बड़ा चम्मच चीनी", "400 ग्राम सफेद चावल", "1 खीरा, पतला कटा", "1 गाजर, पतली कटी", "100 मिली चावल का सिरका"],
+      tr: ["600g domuz pirzolası, ince dilimlenmiş", "150ml hindistancevizi sütü", "4 diş sarımsak, doğranmış", "2 yemek kaşığı balık sosu", "1 yemek kaşığı şeker", "400g beyaz pirinç", "1 salatalık, ince dilimlenmiş", "1 havuç, ince dilimlenmiş", "100ml pirinç sirkesi"],
+      it: ["600g di braciola di maiale, tagliata sottile", "150ml di latte di cocco", "4 spicchi d'aglio, tritati", "2 cucchiai di salsa di pesce", "1 cucchiaio di zucchero", "400g di riso bianco", "1 cetriolo, tagliato sottile", "1 carota, tagliata sottile", "100ml di aceto di riso"],
+      ko: ["돼지 목살 600g, 얇게 썬 것", "코코넛 밀크 150ml", "마늘 4쪽, 다진 것", "피시소스 2큰술", "설탕 1큰술", "흰쌀 400g", "오이 1개, 얇게 썬 것", "당근 1개, 얇게 썬 것", "쌀식초 100ml"]
+    },
+    howIsMade: {
+      ro: "Se amestecă laptele de cocos, usturoiul, sosul de pește și zahărul într-un castron pentru marinată. Se adaugă feliile subțiri de porc și se lasă la marinat cel puțin două ore, ideal peste noapte, la frigider. Se fierbe orezul alb conform instrucțiunilor, până devine pufos. Se amestecă castravetele și morcovul feliate subțire cu oțetul de orez și puțină sare, lăsându-le la murat cât timp se pregătește restul. Se scoate carnea din marinată și se lasă să ajungă la temperatura camerei. Se frige carnea pe grătar de cărbuni sau într-o tigaie foarte încinsă, întorcând des, până capătă o crustă caramelizată pe ambele părți. Se servește feliată peste orezul aburit, alături de murăturile acrișoare.",
+      en: "Mix the coconut milk, garlic, fish sauce, and sugar together in a bowl for the marinade. Add the thin pork slices and let them marinate for at least two hours, ideally overnight, in the fridge. Cook the white rice according to the instructions until fluffy. Toss the thinly sliced cucumber and carrot with the rice vinegar and a little salt, letting them pickle while everything else is prepared. Remove the meat from the marinade and let it come to room temperature. Grill the meat over charcoal or in a very hot pan, turning often, until it develops a caramelised crust on both sides. Serve sliced over the steamed rice, alongside the tangy pickles.",
+      es: "Mezcla la leche de coco, el ajo, la salsa de pescado y el azúcar en un bowl para la marinada. Añade las lonchas finas de cerdo y déjalas marinar al menos dos horas, idealmente toda la noche, en el frigorífico. Cocina el arroz blanco según las instrucciones hasta que quede esponjoso. Mezcla el pepino y la zanahoria en rodajas finas con el vinagre de arroz y un poco de sal, dejándolos encurtir mientras se prepara el resto. Retira la carne de la marinada y deja que alcance la temperatura ambiente. Asa la carne a la parrilla de carbón o en una sartén muy caliente, girándola a menudo, hasta que forme una costra caramelizada por ambos lados. Sirve en rodajas sobre el arroz al vapor, junto a los encurtidos ácidos.",
+      fr: "Mélangez le lait de coco, l'ail, la sauce de poisson et le sucre dans un bol pour la marinade. Ajoutez les fines tranches de porc et laissez-les mariner au moins deux heures, idéalement toute la nuit, au réfrigérateur. Faites cuire le riz blanc selon les instructions jusqu'à ce qu'il soit moelleux. Mélangez le concombre et la carotte tranchés finement avec le vinaigre de riz et un peu de sel, en les laissant mariner pendant que le reste se prépare. Retirez la viande de la marinade et laissez-la revenir à température ambiante. Faites griller la viande au charbon de bois ou dans une poêle très chaude, en la retournant souvent, jusqu'à ce qu'elle développe une croûte caramélisée des deux côtés. Servez tranché sur le riz vapeur, avec les cornichons acidulés.",
+      de: "Kokosmilch, Knoblauch, Fischsauce und Zucker in einer Schüssel für die Marinade vermischen. Die dünnen Schweinefleischscheiben hinzufügen und mindestens zwei Stunden, idealerweise über Nacht, im Kühlschrank marinieren lassen. Den weißen Reis nach Anleitung kochen, bis er locker ist. Die dünn geschnittene Gurke und Karotte mit Reisessig und etwas Salz vermengen und einlegen lassen, während der Rest zubereitet wird. Das Fleisch aus der Marinade nehmen und auf Zimmertemperatur bringen. Das Fleisch über Holzkohle oder in einer sehr heißen Pfanne grillen, häufig wenden, bis es auf beiden Seiten eine karamellisierte Kruste entwickelt. Aufgeschnitten über dem gedämpften Reis servieren, zusammen mit den säuerlichen Eingelegten.",
+      pt: "Misture o leite de coco, o alho, o molho de peixe e o açúcar numa tigela para a marinada. Junte as fatias finas de porco e deixe marinar pelo menos duas horas, idealmente durante a noite, no frigorífico. Cozinhe o arroz branco conforme as instruções até ficar fofo. Misture o pepino e a cenoura fatiados finos com o vinagre de arroz e um pouco de sal, deixando-os em conserva enquanto prepara o resto. Retire a carne da marinada e deixe atingir a temperatura ambiente. Grelhe a carne sobre carvão ou numa frigideira muito quente, virando frequentemente, até formar uma crosta caramelizada de ambos os lados. Sirva fatiada sobre o arroz cozido a vapor, com os picles ácidos.",
+      ru: "Смешайте кокосовое молоко, чеснок, рыбный соус и сахар в миске для маринада. Добавьте тонкие ломтики свинины и оставьте мариноваться минимум на два часа, желательно на ночь, в холодильнике. Отварите белый рис по инструкции до рассыпчатости. Перемешайте тонко нарезанные огурец и морковь с рисовым уксусом и небольшим количеством соли, дав им мариноваться, пока готовится остальное. Достаньте мясо из маринада и дайте ему нагреться до комнатной температуры. Обжарьте мясо на углях или на очень горячей сковороде, часто переворачивая, пока не образуется карамелизированная корочка с обеих сторон. Подавайте нарезанным поверх риса на пару, вместе с кисловатыми маринадами.",
+      ar: "اخلطي حليب جوز الهند والثوم وصلصة السمك والسكر في وعاء لعمل التتبيلة. أضيفي شرائح لحم الخنزير الرقيقة واتركيها تتبّل لمدة ساعتين على الأقل، ويفضل طوال الليل، في الثلاجة. اطهي الأرز الأبيض حسب التعليمات حتى يصبح هشاً. اخلطي الخيار والجزر المقطعين شرائح رفيعة مع خل الأرز وقليل من الملح، واتركيهما يتخللان أثناء تحضير الباقي. ارفعي اللحم من التتبيلة واتركيه يصل إلى درجة حرارة الغرفة. اشوي اللحم على الفحم أو في مقلاة ساخنة جداً، مع القلب كثيراً، حتى يتكوّن قشرة كراملية على الجانبين. قدّميه مقطعاً فوق الأرز المطهو بالبخار، مع المخللات الحامضة.",
+      zh: "在碗中将椰奶、大蒜、鱼露和糖混合成腌料。加入猪肉薄片，冷藏腌制至少两小时，最好整夜。按说明煮白米饭至松软。将切薄片的黄瓜和胡萝卜与米醋及少许盐拌匀，在准备其他食材的同时进行腌制。将肉从腌料中取出，回温至室温。将肉在炭火或非常热的锅中烤制，频繁翻面，直至两面形成焦糖化外壳。切片盛在蒸米饭上，配以酸腌菜享用。",
+      ja: "ボウルにココナッツミルク、にんにく、ナンプラー、砂糖を混ぜてマリネ液を作る。薄切りの豚肉を加え、冷蔵庫で最低2時間、できれば一晩マリネする。白米を袋の指示通りにふっくらと炊く。薄切りのきゅうりとにんじんを米酢と少量の塩で和え、他の準備をしている間に漬け込む。肉をマリネ液から取り出し、常温に戻す。肉を炭火または非常に熱したフライパンで頻繁に返しながら焼き、両面にキャラメル色の焼き目をつける。蒸したご飯の上にスライスしてのせ、酸味のピクルスと共に提供する。",
+      hi: "एक कटोरे में नारियल का दूध, लहसुन, फिश सॉस और चीनी मिलाकर मैरिनेड बनाएं। पतले सूअर के मांस के टुकड़े डालें और फ्रिज में कम से कम दो घंटे, आदर्श रूप से रातभर मैरीनेट होने दें। निर्देशानुसार सफेद चावल तब तक पकाएं जब तक फूला न हो जाए। पतले कटे खीरे और गाजर को चावल के सिरके और थोड़े नमक के साथ मिलाएं, बाकी तैयार होने तक अचार बनने दें। मांस को मैरिनेड से निकालें और कमरे के तापमान पर आने दें। मांस को कोयले पर या बहुत गरम पैन में बार-बार पलटते हुए तब तक ग्रिल करें जब तक दोनों तरफ कैरामलाइज़्ड परत न बन जाए। उबले चावल पर स्लाइस करके परोसें, तीखे अचार के साथ।",
+      tr: "Bir kasede hindistancevizi sütü, sarımsak, balık sosu ve şekeri marine için karıştırın. İnce domuz eti dilimlerini ekleyin ve buzdolabında en az iki saat, tercihen bütün gece marine olmasını sağlayın. Beyaz pirinci talimatlara göre kabarık olana kadar pişirin. İnce dilimlenmiş salatalık ve havucu pirinç sirkesi ve biraz tuzla karıştırın, geri kalanı hazırlanırken turşulanmasını bekleyin. Eti marinattan çıkarın ve oda sıcaklığına gelmesini bekleyin. Eti kömür ateşinde veya çok sıcak bir tavada sık sık çevirerek her iki tarafta karamelize bir kabuk oluşana kadar ızgara yapın. Buharda pişmiş pirincin üzerine dilimleyerek servis edin, ekşimsi turşularla birlikte.",
+      it: "Mescola il latte di cocco, l'aglio, la salsa di pesce e lo zucchero in una ciotola per la marinata. Aggiungi le sottili fette di maiale e lasciale marinare per almeno due ore, idealmente tutta la notte, in frigorifero. Cuoci il riso bianco secondo le istruzioni finché non è soffice. Mescola il cetriolo e la carota tagliati sottili con l'aceto di riso e un po' di sale, lasciandoli marinare mentre prepari il resto. Togli la carne dalla marinata e lasciala arrivare a temperatura ambiente. Griglia la carne sulla brace o in una padella molto calda, girandola spesso, finché non sviluppa una crosta caramellata su entrambi i lati. Servi affettata sul riso al vapore, con i sottaceti agrodolci.",
+      ko: "그릇에 코코넛 밀크, 마늘, 피시소스, 설탕을 섞어 마리네이드를 만든다. 얇게 썬 돼지고기를 넣고 냉장고에서 최소 두 시간, 이상적으로는 하룻밤 재운다. 흰쌀을 안내대로 폭신하게 익힌다. 얇게 썬 오이와 당근을 쌀식초와 약간의 소금으로 버무려 나머지를 준비하는 동안 절인다. 고기를 마리네이드에서 꺼내 실온에 맞춘다. 고기를 숯불이나 아주 뜨거운 팬에서 자주 뒤집어가며 양면이 캐러멜화될 때까지 굽는다. 찐밥 위에 썰어 올리고 새콤한 피클을 곁들여 낸다."
+    },
+    originText: {
+      ro: "Bai Sach Chrouk s-a răspândit din Phnom Penh, unde încă domină colțurile de stradă în orele de dimineață, servit de la standuri simple, adesea gestionate de aceeași familie de generații. Combinația de porc dulceag și orez simplu e o moștenire directă a bucătăriei tăietorilor de orez, ce aveau nevoie de energie rapidă înainte de o zi de muncă.\n\nSpre deosebire de multe alte feluri cambodgiene bogate în condimente, Bai Sach Chrouk rămâne intenționat simplu — carnea, orezul și murăturile — permițând calității materiilor prime să vorbească de la sine, motiv pentru care fiecare vânzător își apără cu strășnicie reputația.",
+      en: "Bai Sach Chrouk spread out from Phnom Penh, where it still dominates street corners in the morning hours, served from simple stalls, often run by the same family for generations. The combination of sweetish pork and plain rice is a direct legacy of the cuisine of rice-field workers, who needed quick energy before a day of labour.\n\nUnlike many other spice-heavy Cambodian dishes, Bai Sach Chrouk remains deliberately simple — meat, rice, and pickles — letting the quality of the raw ingredients speak for itself, which is why every vendor fiercely guards their reputation.",
+      es: "El Bai Sach Chrouk se extendió desde Phnom Penh, donde todavía domina las esquinas de las calles en las horas de la mañana, servido desde sencillos puestos, a menudo gestionados por la misma familia durante generaciones. La combinación de cerdo dulzón y arroz simple es un legado directo de la cocina de los trabajadores de los arrozales, que necesitaban energía rápida antes de un día de trabajo.\n\nA diferencia de muchos otros platos camboyanos cargados de especias, el Bai Sach Chrouk sigue siendo deliberadamente sencillo —carne, arroz y encurtidos—, dejando que la calidad de los ingredientes hable por sí sola, razón por la cual cada vendedor defiende ferozmente su reputación.",
+      fr: "Le Bai Sach Chrouk s'est répandu depuis Phnom Penh, où il domine encore les coins de rue le matin, servi depuis de simples étals, souvent tenus par la même famille depuis des générations. L'association de porc légèrement sucré et de riz nature est un héritage direct de la cuisine des travailleurs des rizières, qui avaient besoin d'une énergie rapide avant une journée de labeur.\n\nContrairement à de nombreux autres plats cambodgiens riches en épices, le Bai Sach Chrouk reste délibérément simple — viande, riz et cornichons — laissant la qualité des ingredients bruts parler d'elle-même, raison pour laquelle chaque vendeur défend farouchement sa réputation.",
+      de: "Bai Sach Chrouk verbreitete sich von Phnom Penh aus, wo es morgens noch immer die Straßenecken dominiert, serviert von einfachen Ständen, die oft seit Generationen von derselben Familie betrieben werden. Die Kombination aus leicht süßlichem Schweinefleisch und einfachem Reis ist ein direktes Erbe der Küche der Reisfeldarbeiter, die vor einem Arbeitstag schnelle Energie brauchten.\n\nAnders als viele andere gewürzreiche kambodschanische Gerichte bleibt Bai Sach Chrouk bewusst einfach — Fleisch, Reis und Eingelegtes — und lässt die Qualität der Rohzutaten für sich sprechen, weshalb jeder Verkäufer seinen Ruf entschieden verteidigt.",
+      pt: "O Bai Sach Chrouk espalhou-se a partir de Phnom Penh, onde ainda domina as esquinas de rua nas horas da manhã, servido em bancas simples, muitas vezes geridas pela mesma família há gerações. A combinação de porco adocicado e arroz simples é uma herança direta da cozinha dos trabalhadores dos arrozais, que precisavam de energia rápida antes de um dia de trabalho.\n\nAo contrário de muitos outros pratos cambojanos ricos em especiarias, o Bai Sach Chrouk permanece deliberadamente simples — carne, arroz e picles — deixando a qualidade dos ingredientes falar por si, razão pela qual cada vendedor defende ferozmente a sua reputação.",
+      ru: "Бай Сач Чрук распространился из Пномпеня, где до сих пор доминирует на уличных углах по утрам, продаваясь с простых лотков, часто принадлежащих одной семье на протяжении поколений. Сочетание сладковатой свинины и простого риса — прямое наследие кухни рабочих рисовых полей, которым нужна была быстрая энергия перед рабочим днём.\n\nВ отличие от многих других насыщенных специями камбоджийских блюд, Бай Сач Чрук намеренно остаётся простым — мясо, рис и маринады, — позволяя качеству сырых ингредиентов говорить самим за себя, поэтому каждый продавец яростно оберегает свою репутацию.",
+      ar: "انتشر باي ساش تشروك من بنوم بنه، حيث لا يزال يهيمن على زوايا الشوارع في ساعات الصباح، يُقدَّم من أكشاك بسيطة، غالباً ما تديرها نفس العائلة منذ أجيال. مزيج لحم الخنزير الحلو قليلاً والأرز البسيط هو إرث مباشر لمطبخ عمال حقول الأرز الذين احتاجوا طاقة سريعة قبل يوم من العمل.\n\nخلافاً للعديد من الأطباق الكمبودية الأخرى الغنية بالتوابل، يبقى باي ساش تشروك بسيطاً عن قصد — لحم وأرز ومخللات — تاركاً جودة المكونات الخام تتحدث عن نفسها، وهو سبب دفاع كل بائع بشراسة عن سمعته.",
+      zh: "柬埔寨烤肉饭从金边传播开来，至今仍在清晨时分主导着街角，通常由同一家庭经营数代的简朴摊位供应。略带甜味的猪肉与简单米饭的搭配，是稻田工人饮食的直接传承，他们在一天的劳作前需要快速补充能量。\n\n与许多其他香料浓郁的柬埔寨菜肴不同，柬埔寨烤肉饭刻意保持简单——肉、米饭和腌菜——让原材料的品质自己说话，这也是每个摊贩都极力捍卫自己声誉的原因。",
+      ja: "バイサイチュルックはプノンペンから広まり、今も朝の時間帯に街角を支配し、多くの場合何世代にもわたって同じ家族が営むシンプルな屋台で提供されている。ほのかに甘い豚肉とシンプルなご飯の組み合わせは、労働の一日を前に素早くエネルギーを必要とした稲田労働者の食文化を直接受け継いだものだ。\n\n他の多くの香辛料豊かなカンボジア料理とは異なり、バイサイチュルックは意図的にシンプルなまま――肉、ご飯、ピクルス――であり続け、素材の質そのものを語らせる。そのため、どの屋台も自らの評判を激しく守っている。",
+      hi: "बाई साच छ्रोक नोम पेन्ह से फैला, जहां यह आज भी सुबह के घंटों में सड़क के कोनों पर हावी रहता है, साधारण स्टैंडों से परोसा जाता है, जो अक्सर पीढ़ियों से एक ही परिवार द्वारा चलाए जाते हैं। हल्के मीठे सूअर के मांस और सादे चावल का संयोजन चावल के खेतों में काम करने वालों के भोजन की सीधी विरासत है, जिन्हें काम के दिन से पहले त्वरित ऊर्जा की आवश्यकता होती थी।\n\nकई अन्य मसालेदार कंबोडियाई व्यंजनों के विपरीत, बाई साच छ्रोक जानबूझकर सरल बना रहता है — मांस, चावल और अचार — कच्ची सामग्री की गुणवत्ता को खुद बोलने देते हुए, यही कारण है कि हर विक्रेता अपनी प्रतिष्ठा की भयंकर रक्षा करता है।",
+      tr: "Bai Sach Chrouk, sabah saatlerinde hâlâ sokak köşelerine hakim olan, genellikle nesillerdir aynı aile tarafından işletilen basit tezgahlarda servis edilen Phnom Penh'ten yayıldı. Hafif tatlı domuz eti ile sade pirincin birleşimi, bir çalışma gününden önce hızlı enerjiye ihtiyaç duyan pirinç tarlası işçilerinin mutfağının doğrudan bir mirasıdır.\n\nBirçok baharatlı Kamboçya yemeğinin aksine, Bai Sach Chrouk kasıtlı olarak basit kalır — et, pirinç ve turşular — ham malzemelerin kalitesinin kendisi için konuşmasına izin verir, bu yüzden her satıcı itibarını şiddetle korur.",
+      it: "Il Bai Sach Chrouk si diffuse da Phnom Penh, dove domina ancora gli angoli delle strade nelle ore mattutine, servito da semplici bancarelle, spesso gestite dalla stessa famiglia da generazioni. La combinazione di maiale dolciastro e riso semplice è un'eredità diretta della cucina dei lavoratori delle risaie, che avevano bisogno di energia rapida prima di una giornata di lavoro.\n\nA differenza di molti altri piatti cambogiani ricchi di spezie, il Bai Sach Chrouk resta volutamente semplice — carne, riso e sottaceti — lasciando che la qualità degli ingredienti grezzi parli da sé, motivo per cui ogni venditore difende ferocemente la propria reputazione.",
+      ko: "바이삭쭈룩은 프놈펜에서 퍼져나갔으며, 지금도 아침 시간대에 거리 모퉁이를 장악하고, 흔히 여러 세대에 걸쳐 같은 가족이 운영하는 소박한 노점에서 판매된다. 은은하게 단 돼지고기와 담백한 밥의 조합은 하루 노동 전에 빠른 에너지가 필요했던 논밭 일꾼들의 음식 문화를 직접 이어받은 것이다.\n\n향신료가 진한 다른 많은 캄보디아 요리와 달리, 바이삭쭈룩은 의도적으로 단순함을 유지한다 — 고기, 밥, 피클 — 재료 자체의 품질이 말하게 두는 것이며, 이것이 각 노점상이 자신의 평판을 필사적으로 지키는 이유다."
+    }
+  },
+  {
+    id: 446,
+    servings: 4,
+    tipType: "dessert",
+    pairingsType: "dessert",
+    nutrition: { cal: 300, prot: 4, carb: 46, fat: 11, fib: 1 },
+    origin: {
+      ro: "Cambodgia", en: "Cambodia", es: "Camboya", fr: "Cambodge", de: "Kambodscha",
+      pt: "Camboja", ru: "Камбоджа", ar: "كمبوديا", zh: "柬埔寨", ja: "カンボジア",
+      hi: "कंबोडिया", tr: "Kamboçya", it: "Cambogia", ko: "캄보디아"
+    },
+    name: {
+      ro: "Nom Krok", en: "Nom Krok", es: "Nom Krok", fr: "Nom Krok", de: "Nom Krok",
+      pt: "Nom Krok", ru: "Ном Крок", ar: "نوم كروك", zh: "椰浆米糕球", ja: "ヌム・クロック",
+      hi: "नुम क्रोक", tr: "Nom Krok", it: "Nom Krok", ko: "놈크록"
+    },
+    category: {
+      ro: "Desert", en: "Dessert", es: "Postre", fr: "Dessert", de: "Dessert",
+      pt: "Sobremesa", ru: "Десерт", ar: "حلوى", zh: "甜点", ja: "デザート",
+      hi: "मिठाई", tr: "Tatlı", it: "Dolce", ko: "디저트"
+    },
+    featureCards: {
+      ro: [
+        { icon: "🥥", t: "Gătit într-o tavă specială cu adâncituri", d: "O tavă rotundă de fontă, cu multe adâncituri mici, dă bilelor forma lor caracteristică, crocantă pe margini." },
+        { icon: "🌾", t: "Orez fermentat, nu doar făină", d: "Aluatul se face din orez măcinat și fermentat ușor, ceea ce dă aluatului o aciditate discretă." },
+        { icon: "🥛", t: "Interior cremos de cocos", d: "O parte din compoziție se lasă mai lichidă, cu lapte de cocos, pentru un miez moale, aproape topit." },
+        { icon: "🧅", t: "Presărat cu ceapă verde", d: "Ceapa verde tocată fin, presărată deasupra la final, dă un contrast sărat neașteptat desertului dulce." }
+      ],
+      en: [
+        { icon: "🥥", t: "Cooked in a special dimpled pan", d: "A round cast-iron pan with many small hollows gives the balls their signature shape, crispy at the edges." },
+        { icon: "🌾", t: "Fermented rice, not just flour", d: "The batter is made from ground rice left to ferment lightly, giving it a subtle tang." },
+        { icon: "🥛", t: "A creamy coconut centre", d: "Part of the batter is kept looser, enriched with coconut milk, for a soft, almost molten centre." },
+        { icon: "🧅", t: "Topped with spring onion", d: "Finely chopped spring onion scattered on top at the end gives an unexpected savoury contrast to the sweet treat." }
+      ],
+      es: [
+        { icon: "🥥", t: "Cocinado en un molde especial con hoyuelos", d: "Un molde redondo de hierro fundido con muchos huecos pequeños da a las bolitas su forma característica, crujiente en los bordes." },
+        { icon: "🌾", t: "Arroz fermentado, no solo harina", d: "La masa se hace de arroz molido dejado fermentar ligeramente, dándole un toque ácido sutil." },
+        { icon: "🥛", t: "Un centro cremoso de coco", d: "Parte de la masa se deja más líquida, enriquecida con leche de coco, para un centro suave, casi derretido." },
+        { icon: "🧅", t: "Cubierto con cebolleta", d: "Cebolleta finamente picada esparcida encima al final da un contraste salado inesperado al dulce." }
+      ],
+      fr: [
+        { icon: "🥥", t: "Cuit dans une poêle spéciale à empreintes", d: "Une poêle ronde en fonte, avec de nombreux petits creux, donne aux boules leur forme caractéristique, croustillante sur les bords." },
+        { icon: "🌾", t: "Du riz fermenté, pas seulement de la farine", d: "La pâte est faite de riz moulu laissé fermenter légèrement, ce qui lui donne une acidité subtile." },
+        { icon: "🥛", t: "Un cœur crémeux à la noix de coco", d: "Une partie de la pâte est gardée plus liquide, enrichie de lait de coco, pour un cœur moelleux, presque fondant." },
+        { icon: "🧅", t: "Garni d'oignon vert", d: "De l'oignon vert finement haché parsemé dessus à la fin apporte un contraste salé inattendu à cette gourmandise sucrée." }
+      ],
+      de: [
+        { icon: "🥥", t: "Gebacken in einer speziellen Vertiefungspfanne", d: "Eine runde Gusseisenpfanne mit vielen kleinen Vertiefungen gibt den Kugeln ihre charakteristische Form, an den Rändern knusprig." },
+        { icon: "🌾", t: "Fermentierter Reis, nicht nur Mehl", d: "Der Teig wird aus gemahlenem Reis hergestellt, der leicht fermentieren gelassen wird, was ihm eine subtile Säure verleiht." },
+        { icon: "🥛", t: "Ein cremiger Kokoskern", d: "Ein Teil des Teigs wird flüssiger gehalten, mit Kokosmilch angereichert, für einen weichen, fast geschmolzenen Kern." },
+        { icon: "🧅", t: "Mit Frühlingszwiebel bestreut", d: "Fein gehackte Frühlingszwiebel, zum Schluss darübergestreut, gibt der süßen Leckerei einen unerwarteten herzhaften Kontrast." }
+      ],
+      pt: [
+        { icon: "🥥", t: "Cozinhado numa forma especial com covinhas", d: "Uma forma redonda de ferro fundido com muitas pequenas covinhas dá às bolinhas a sua forma característica, crocante nas bordas." },
+        { icon: "🌾", t: "Arroz fermentado, não apenas farinha", d: "A massa é feita de arroz moído deixado fermentar levemente, dando-lhe um toque ácido subtil." },
+        { icon: "🥛", t: "Um centro cremoso de coco", d: "Parte da massa é mantida mais líquida, enriquecida com leite de coco, para um centro macio, quase derretido." },
+        { icon: "🧅", t: "Coberto com cebolinho", d: "Cebolinho finamente picado polvilhado por cima no final dá um contraste salgado inesperado à guloseima doce." }
+      ],
+      ru: [
+        { icon: "🥥", t: "Готовится на специальной сковороде с ямками", d: "Круглая чугунная сковорода со множеством маленьких ямок придаёт шарикам их характерную форму, хрустящую по краям." },
+        { icon: "🌾", t: "Ферментированный рис, а не просто мука", d: "Тесто делают из молотого риса, слегка оставленного бродить, что даёт ему тонкую кислинку." },
+        { icon: "🥛", t: "Кремовая кокосовая середина", d: "Часть теста делают более жидкой, обогащённой кокосовым молоком, для мягкой, почти тающей середины." },
+        { icon: "🧅", t: "Посыпается зелёным луком", d: "Мелко нарезанный зелёный лук, посыпанный сверху в конце, придаёт неожиданный солёный контраст сладкому лакомству." }
+      ],
+      ar: [
+        { icon: "🥥", t: "يُطهى في مقلاة خاصة ذات تجاويف", d: "مقلاة حديدية دائرية بها العديد من التجاويف الصغيرة تمنح الكرات شكلها المميز، المقرمش عند الحواف." },
+        { icon: "🌾", t: "أرز مخمر، وليس مجرد دقيق", d: "تُصنع العجينة من أرز مطحون يُترك ليتخمر قليلاً، مما يمنحها حموضة خفية." },
+        { icon: "🥛", t: "مركز كريمي بجوز الهند", d: "يُترك جزء من العجينة أكثر سيولة، مُغنى بحليب جوز الهند، للحصول على مركز طري شبه ذائب." },
+        { icon: "🧅", t: "مزيّن بالبصل الأخضر", d: "البصل الأخضر المفروم ناعماً المرشوش فوقها في النهاية يمنح الحلوى الحلوة تبايناً مالحاً غير متوقع." }
+      ],
+      zh: [
+        { icon: "🥥", t: "用特制凹槽锅煎烤", d: "圆形铸铁锅上的许多小凹槽赋予米糕球标志性的形状，边缘酥脆。" },
+        { icon: "🌾", t: "发酵米浆，不只是面粉", d: "面糊由磨碎的大米轻微发酵而成，带来微妙的酸味。" },
+        { icon: "🥛", t: "椰浆奶香内芯", d: "部分面糊保持更稀，加入椰浆增香，形成柔软近乎融化的内芯。" },
+        { icon: "🧅", t: "撒上葱花点缀", d: "最后撒上的细葱花为这道甜点带来意想不到的咸香对比。" }
+      ],
+      ja: [
+        { icon: "🥥", t: "特別なくぼみ付き鍋で焼く", d: "多くの小さなくぼみがある丸い鋳鉄鍋が、団子に特徴的な形と縁のパリッとした食感を与える。" },
+        { icon: "🌾", t: "発酵米、小麦粉だけではない", d: "生地は軽く発酵させた米粉から作られ、ほのかな酸味を与える。" },
+        { icon: "🥛", t: "クリーミーなココナッツの中身", d: "生地の一部はより緩く保たれ、ココナッツミルクで濃厚にし、柔らかくほぼとろけるような中心を作る。" },
+        { icon: "🧅", t: "小ねぎをのせて仕上げ", d: "最後に散らす細かく刻んだ小ねぎが、この甘いお菓子に意外な塩気の対比を加える。" }
+      ],
+      hi: [
+        { icon: "🥥", t: "एक खास गड्ढेदार पैन में पकाया जाता है", d: "कई छोटे गड्ढों वाला गोल कास्ट-आयरन पैन गोलों को उनका विशिष्ट आकार देता है, किनारों पर कुरकुरा।" },
+        { icon: "🌾", t: "किण्वित चावल, सिर्फ आटा नहीं", d: "घोल पिसे चावल से बनता है जिसे हल्का किण्वित होने दिया जाता है, जो इसे हल्की खटास देता है।" },
+        { icon: "🥛", t: "मलाईदार नारियल केंद्र", d: "घोल का एक हिस्सा अधिक पतला रखा जाता है, नारियल के दूध से समृद्ध, नरम, लगभग पिघले केंद्र के लिए।" },
+        { icon: "🧅", t: "हरे प्याज़ से सजाया गया", d: "अंत में ऊपर छिड़का बारीक कटा हरा प्याज़ मीठी मिठाई को एक अप्रत्याशित नमकीन विरोधाभास देता है।" }
+      ],
+      tr: [
+        { icon: "🥥", t: "Özel girintili bir tavada pişirilir", d: "Birçok küçük girintisi olan yuvarlak dökme demir tava toplara kenarlarda çıtır olan karakteristik şeklini verir." },
+        { icon: "🌾", t: "Fermente pirinç, sadece un değil", d: "Hamur, hafifçe fermente edilmiş öğütülmüş pirinçten yapılır, bu da ona hafif bir ekşilik verir." },
+        { icon: "🥛", t: "Kremamsı hindistancevizi merkezi", d: "Hamurun bir kısmı hindistancevizi sütüyle zenginleştirilerek daha sulu bırakılır, yumuşak, neredeyse eriyen bir merkez için." },
+        { icon: "🧅", t: "Üzerine taze soğan serpilir", d: "Sona doğru üzerine serpilen ince doğranmış taze soğan, bu tatlı ikrama beklenmedik tuzlu bir kontrast katar." }
+      ],
+      it: [
+        { icon: "🥥", t: "Cotto in una speciale padella a fossette", d: "Una padella rotonda in ghisa con molte piccole cavità dà alle palline la loro forma caratteristica, croccante ai bordi." },
+        { icon: "🌾", t: "Riso fermentato, non solo farina", d: "L'impasto è fatto di riso macinato lasciato fermentare leggermente, il che gli dona un'acidità sottile." },
+        { icon: "🥛", t: "Un cuore cremoso al cocco", d: "Parte dell'impasto viene tenuta più liquida, arricchita con latte di cocco, per un cuore morbido, quasi fuso." },
+        { icon: "🧅", t: "Guarnito con cipollotto", d: "Cipollotto tritato finemente sparso sopra alla fine dà un contrasto salato inaspettato al dolce." }
+      ],
+      ko: [
+        { icon: "🥥", t: "특별한 홈이 파인 팬에 굽는다", d: "작은 홈이 많이 파인 둥근 무쇠 팬이 볼에 특유의 모양을 만들고 가장자리를 바삭하게 한다." },
+        { icon: "🌾", t: "발효된 쌀, 밀가루만이 아니다", d: "반죽은 살짝 발효시킨 곱게 간 쌀로 만들어 은은한 신맛을 낸다." },
+        { icon: "🥛", t: "크리미한 코코넛 속", d: "반죽의 일부는 코코넛 밀크를 넣어 더 묽게 만들어 부드럽고 거의 녹아내리는 속을 만든다." },
+        { icon: "🧅", t: "파를 올려 마무리", d: "마지막에 뿌리는 잘게 썬 파가 이 달콤한 간식에 뜻밖의 짭짤한 대비를 준다." }
+      ]
+    },
+    ingredients: {
+      ro: ["300g orez, măcinat fin", "200ml apă", "200ml lapte de cocos", "100g zahăr", "1/2 linguriță sare", "1/4 linguriță drojdie", "50g nucă de cocos rasă", "2 tulpini de ceapă verde, tocate", "ulei pentru uns tava"],
+      en: ["300g rice, finely ground", "200ml water", "200ml coconut milk", "100g sugar", "1/2 tsp salt", "1/4 tsp yeast", "50g shredded coconut", "2 spring onion stalks, chopped", "oil for greasing the pan"],
+      es: ["300g de arroz, molido fino", "200ml de agua", "200ml de leche de coco", "100g de azúcar", "1/2 cdta de sal", "1/4 cdta de levadura", "50g de coco rallado", "2 tallos de cebolleta, picados", "aceite para engrasar el molde"],
+      fr: ["300g de riz, moulu finement", "200ml d'eau", "200ml de lait de coco", "100g de sucre", "1/2 c. à café de sel", "1/4 c. à café de levure", "50g de noix de coco râpée", "2 tiges d'oignon vert, hachées", "huile pour graisser la poêle"],
+      de: ["300g Reis, fein gemahlen", "200ml Wasser", "200ml Kokosmilch", "100g Zucker", "1/2 TL Salz", "1/4 TL Hefe", "50g geriebene Kokosnuss", "2 Frühlingszwiebeln, gehackt", "Öl zum Einfetten der Pfanne"],
+      pt: ["300g de arroz, moído fino", "200ml de água", "200ml de leite de coco", "100g de açúcar", "1/2 col. chá de sal", "1/4 col. chá de fermento", "50g de coco ralado", "2 talos de cebolinho, picados", "óleo para untar a forma"],
+      ru: ["300г риса, мелко смолотого", "200мл воды", "200мл кокосового молока", "100г сахара", "1/2 ч.л. соли", "1/4 ч.л. дрожжей", "50г тёртого кокоса", "2 стебля зелёного лука, нарезанных", "масло для смазывания сковороды"],
+      ar: ["300غ أرز، مطحون ناعماً", "200مل ماء", "200مل حليب جوز الهند", "100غ سكر", "1/2 ملعقة صغيرة ملح", "1/4 ملعقة صغيرة خميرة", "50غ جوز هند مبشور", "2 ساق بصل أخضر، مفروم", "زيت لدهن المقلاة"],
+      zh: ["300克大米，磨细", "200毫升水", "200毫升椰浆", "100克糖", "1/2茶匙盐", "1/4茶匙酵母", "50克椰丝", "2根葱，切碎", "煎锅用油"],
+      ja: ["米300g（細かく挽く）", "水200ml", "ココナッツミルク200ml", "砂糖100g", "塩小さじ1/2", "イースト小さじ1/4", "ココナッツフレーク50g", "小ねぎ2本（刻む）", "型用の油"],
+      hi: ["300 ग्राम चावल, बारीक पिसा", "200 मिली पानी", "200 मिली नारियल का दूध", "100 ग्राम चीनी", "1/2 छोटा चम्मच नमक", "1/4 छोटा चम्मच खमीर", "50 ग्राम कसा नारियल", "2 डंठल हरा प्याज़, कटा हुआ", "पैन चिकना करने के लिए तेल"],
+      tr: ["300g pirinç, ince öğütülmüş", "200ml su", "200ml hindistancevizi sütü", "100g şeker", "1/2 tatlı kaşığı tuz", "1/4 tatlı kaşığı maya", "50g hindistancevizi rendesi", "2 sap taze soğan, doğranmış", "tavayı yağlamak için yağ"],
+      it: ["300g di riso, macinato fine", "200ml di acqua", "200ml di latte di cocco", "100g di zucchero", "1/2 cucchiaino di sale", "1/4 cucchiaino di lievito", "50g di cocco grattugiato", "2 gambi di cipollotto, tritati", "olio per ungere la padella"],
+      ko: ["쌀 300g, 곱게 간 것", "물 200ml", "코코넛 밀크 200ml", "설탕 100g", "소금 1/2작은술", "이스트 1/4작은술", "코코넛 슈레드 50g", "파 2대, 다진 것", "팬에 바를 기름"]
+    },
+    howIsMade: {
+      ro: "Se amestecă orezul măcinat cu apa, drojdia și o parte din zahăr, apoi se acoperă și se lasă la fermentat ușor timp de câteva ore, la temperatura camerei. Se împarte compoziția în două: într-o parte se adaugă restul de zahăr și sare pentru un aluat gros, iar în cealaltă se adaugă laptele de cocos pentru un amestec mai lichid. Se unge bine tava specială cu adâncituri cu ulei și se încălzește pe foc mediu. Se toarnă puțin din aluatul gros în fiecare adâncitură, cam pe jumătate. Se completează fiecare adâncitură cu amestecul de cocos mai lichid, deasupra aluatului gros. Se acoperă tava și se lasă să se coacă la foc mic până marginile devin aurii și crocante, iar mijlocul rămâne moale. Se scot bilele cu grijă și se presară cu nucă de cocos rasă și ceapă verde tocată înainte de servire.",
+      en: "Mix the ground rice with the water, yeast, and part of the sugar, then cover and let it ferment lightly for a few hours at room temperature. Divide the mixture in two: to one part add the remaining sugar and salt for a thicker batter, and to the other add the coconut milk for a looser mixture. Grease the special dimpled pan well with oil and heat it over medium heat. Pour a little of the thicker batter into each hollow, about halfway. Top up each hollow with the looser coconut mixture, over the thicker batter. Cover the pan and let it cook over low heat until the edges turn golden and crisp, while the centre stays soft. Carefully lift out the balls and sprinkle with shredded coconut and chopped spring onion before serving.",
+      es: "Mezcla el arroz molido con el agua, la levadura y parte del azúcar, luego tapa y deja fermentar ligeramente unas horas a temperatura ambiente. Divide la mezcla en dos: en una parte añade el azúcar restante y la sal para una masa más espesa, y en la otra añade la leche de coco para una mezcla más líquida. Engrasa bien el molde especial con hoyuelos con aceite y caliéntalo a fuego medio. Vierte un poco de la masa más espesa en cada hueco, hasta la mitad. Rellena cada hueco con la mezcla de coco más líquida, sobre la masa espesa. Tapa el molde y deja que se cocine a fuego lento hasta que los bordes se doren y queden crujientes, mientras el centro permanece blando. Retira las bolitas con cuidado y espolvorea con coco rallado y cebolleta picada antes de servir.",
+      fr: "Mélangez le riz moulu avec l'eau, la levure et une partie du sucre, puis couvrez et laissez fermenter légèrement quelques heures à température ambiante. Divisez le mélange en deux : dans une partie ajoutez le reste du sucre et le sel pour une pâte plus épaisse, et dans l'autre ajoutez le lait de coco pour un mélange plus liquide. Graissez bien la poêle spéciale à empreintes avec de l'huile et faites-la chauffer à feu moyen. Versez un peu de la pâte épaisse dans chaque creux, jusqu'à mi-hauteur. Complétez chaque creux avec le mélange de coco plus liquide, par-dessus la pâte épaisse. Couvrez la poêle et laissez cuire à feu doux jusqu'à ce que les bords soient dorés et croustillants, tandis que le centre reste moelleux. Retirez délicatement les boules et saupoudrez de noix de coco râpée et d'oignon vert haché avant de servir.",
+      de: "Den gemahlenen Reis mit Wasser, Hefe und einem Teil des Zuckers vermischen, dann abdecken und einige Stunden bei Raumtemperatur leicht fermentieren lassen. Die Mischung teilen: In einen Teil den restlichen Zucker und Salz für einen dickeren Teig geben, in den anderen die Kokosmilch für eine flüssigere Mischung. Die spezielle Vertiefungspfanne gut mit Öl einfetten und bei mittlerer Hitze erhitzen. Etwas dickeren Teig in jede Vertiefung geben, etwa zur Hälfte. Jede Vertiefung mit der flüssigeren Kokosmischung über dem dickeren Teig auffüllen. Die Pfanne abdecken und bei niedriger Hitze backen, bis die Ränder goldbraun und knusprig sind, während die Mitte weich bleibt. Die Kugeln vorsichtig herausheben und vor dem Servieren mit geriebener Kokosnuss und gehackter Frühlingszwiebel bestreuen.",
+      pt: "Misture o arroz moído com a água, o fermento e parte do açúcar, depois tape e deixe fermentar levemente por algumas horas à temperatura ambiente. Divida a mistura em duas: numa parte junte o restante açúcar e o sal para uma massa mais espessa, e na outra junte o leite de coco para uma mistura mais líquida. Unte bem a forma especial com covinhas com óleo e aqueça em lume médio. Deite um pouco da massa mais espessa em cada covinha, até meio. Complete cada covinha com a mistura de coco mais líquida, sobre a massa espessa. Tape a forma e deixe cozinhar em lume brando até as bordas ficarem douradas e crocantes, enquanto o centro permanece macio. Retire as bolinhas com cuidado e polvilhe com coco ralado e cebolinho picado antes de servir.",
+      ru: "Смешайте молотый рис с водой, дрожжами и частью сахара, накройте и дайте слегка перебродить несколько часов при комнатной температуре. Разделите смесь на две части: в одну добавьте оставшийся сахар и соль для более густого теста, в другую — кокосовое молоко для более жидкой смеси. Хорошо смажьте маслом специальную сковороду с ямками и разогрейте на среднем огне. Налейте немного густого теста в каждую ямку, примерно наполовину. Долейте каждую ямку более жидкой кокосовой смесью поверх густого теста. Накройте сковороду и готовьте на слабом огне, пока края не станут золотистыми и хрустящими, а середина останется мягкой. Аккуратно выньте шарики и посыпьте тёртым кокосом и нарезанным зелёным луком перед подачей.",
+      ar: "اخلطي الأرز المطحون مع الماء والخميرة وجزء من السكر، ثم غطّيه واتركيه يتخمر قليلاً لبضع ساعات في درجة حرارة الغرفة. قسّمي الخليط إلى قسمين: أضيفي إلى أحدهما باقي السكر والملح لعجينة أكثر سماكة، وإلى الآخر حليب جوز الهند لخليط أكثر سيولة. ادهني المقلاة الخاصة ذات التجاويف جيداً بالزيت وسخّنيها على نار متوسطة. اسكبي قليلاً من العجينة السميكة في كل تجويف، حتى منتصفه. أكملي كل تجويف بخليط جوز الهند السائل، فوق العجينة السميكة. غطّي المقلاة واتركيها تُطهى على نار هادئة حتى تصبح الحواف ذهبية ومقرمشة، بينما يبقى الوسط طرياً. ارفعي الكرات بعناية ورشّيها بجوز الهند المبشور والبصل الأخضر المفروم قبل التقديم.",
+      zh: "将磨好的米粉与水、酵母和部分糖混合，盖好，在室温下轻微发酵几个小时。将混合物分成两份：一份加入剩余的糖和盐制成较稠的面糊，另一份加入椰浆制成较稀的混合物。将专用凹槽锅充分刷油并中火加热。在每个凹槽中倒入少量较稠的面糊，约至一半高度。在较稠面糊上方，用较稀的椰浆混合物填满每个凹槽。盖上锅盖，小火烤至边缘呈金黄色酥脆，中心保持柔软。小心取出米糕球，享用前撒上椰丝和葱花。",
+      ja: "挽いた米を水、イースト、一部の砂糖と混ぜ、覆いをして室温で数時間軽く発酵させる。生地を二つに分ける：一方には残りの砂糖と塩を加えて濃い生地にし、もう一方にはココナッツミルクを加えてより緩い生地にする。専用のくぼみ付き鍋に油をよく塗り、中火で熱する。各くぼみに濃い生地を半分ほど注ぐ。濃い生地の上に、より緩いココナッツ生地を各くぼみに足す。鍋に蓋をして弱火で、縁が黄金色でカリッとなり、中心が柔らかいままになるまで焼く。団子を慎重に取り出し、提供前にすりおろしたココナッツと刻んだ小ねぎを散らす。",
+      hi: "पिसे चावल को पानी, खमीर और थोड़ी चीनी के साथ मिलाएं, फिर ढककर कमरे के तापमान पर कुछ घंटे हल्का किण्वित होने दें। मिश्रण को दो भागों में बांटें: एक में बाकी चीनी और नमक डालकर गाढ़ा घोल बनाएं, दूसरे में नारियल का दूध डालकर पतला मिश्रण बनाएं। खास गड्ढेदार पैन को तेल से अच्छी तरह चिकना करें और मध्यम आंच पर गरम करें। हर गड्ढे में थोड़ा गाढ़ा घोल डालें, लगभग आधा तक। गाढ़े घोल के ऊपर हर गड्ढे को पतले नारियल मिश्रण से भरें। पैन को ढककर धीमी आंच पर तब तक पकाएं जब तक किनारे सुनहरे और कुरकुरे न हो जाएं, जबकि बीच नरम रहे। गोलों को सावधानी से निकालें और परोसने से पहले कसा नारियल और कटा हरा प्याज़ छिड़कें।",
+      tr: "Öğütülmüş pirinci su, maya ve şekerin bir kısmıyla karıştırın, ardından örtün ve oda sıcaklığında birkaç saat hafifçe fermente olmasını bekleyin. Karışımı ikiye bölün: birine kalan şeker ve tuzu ekleyerek daha koyu bir hamur, diğerine hindistancevizi sütü ekleyerek daha sulu bir karışım yapın. Özel girintili tavayı yağla iyice yağlayın ve orta ateşte ısıtın. Her girintiye biraz koyu hamurdan yarıya kadar dökün. Koyu hamurun üzerine, daha sulu hindistancevizi karışımıyla her girintiyi tamamlayın. Tavayı örtün ve kenarları altın rengi ve çıtır olana, ortası yumuşak kalana kadar kısık ateşte pişirin. Topları dikkatlice çıkarın ve servisten önce hindistancevizi rendesi ve doğranmış taze soğan serpin.",
+      it: "Mescola il riso macinato con l'acqua, il lievito e parte dello zucchero, poi copri e lascia fermentare leggermente per alcune ore a temperatura ambiente. Dividi il composto in due: in una parte aggiungi lo zucchero rimanente e il sale per un impasto più denso, nell'altra aggiungi il latte di cocco per un composto più liquido. Ungi bene la speciale padella a fossette con olio e scaldala a fuoco medio. Versa un po' dell'impasto più denso in ogni cavità, fino a metà. Completa ogni cavità con il composto di cocco più liquido, sopra l'impasto denso. Copri la padella e lascia cuocere a fuoco basso finché i bordi non diventano dorati e croccanti, mentre il centro resta morbido. Solleva con cura le palline e cospargi di cocco grattugiato e cipollotto tritato prima di servire.",
+      ko: "간 쌀을 물, 이스트, 설탕 일부와 섞은 뒤 덮어서 실온에서 몇 시간 살짝 발효시킨다. 반죽을 둘로 나눈다: 한쪽에는 남은 설탕과 소금을 넣어 더 되직한 반죽을, 다른 쪽에는 코코넛 밀크를 넣어 더 묽은 반죽을 만든다. 특수 홈 팬에 기름을 충분히 바르고 중불로 달군다. 각 홈에 되직한 반죽을 절반 정도 붓는다. 되직한 반죽 위에 묽은 코코넛 반죽을 채워 각 홈을 마저 채운다. 팬을 덮고 가장자리가 황금빛으로 바삭해지고 가운데는 부드럽게 남을 때까지 약한 불에서 굽는다. 조심스럽게 볼을 꺼내 서빙 전에 코코넛 가루와 다진 파를 뿌린다."
+    },
+    originText: {
+      ro: "Nom Krok se vinde tradițional de vânzători ambulanți care poartă tava specială de fontă direct pe cărbuni aprinși, umplând ulițele cu miros de cocos și orez prăjit. Desertul face parte din familia mai largă de prăjituri asemănătoare din Asia de Sud-Est, dar amestecul specific de aluat fermentat și lapte de cocos rămâne distinct cambodgian.\n\nContrastul dintre exteriorul crocant și interiorul cremos, plus presărarea neașteptată de ceapă verde deasupra unui desert dulce, face din Nom Krok o gustare aparte, savurată de obicei fierbinte, direct de pe grătarul vânzătorului stradal.",
+      en: "Nom Krok is traditionally sold by street vendors who carry the special cast-iron pan directly over glowing charcoal, filling the alleys with the smell of coconut and toasted rice. The dessert belongs to a wider family of similar cakes found across Southeast Asia, but the specific mix of fermented batter and coconut milk remains distinctly Cambodian.\n\nThe contrast between the crispy exterior and the creamy interior, plus the unexpected sprinkle of spring onion over a sweet treat, makes Nom Krok a peculiar snack, usually enjoyed piping hot, straight off the street vendor's grill.",
+      es: "El Nom Krok se vende tradicionalmente por vendedores ambulantes que llevan el molde especial de hierro fundido directamente sobre brasas encendidas, llenando las callejuelas con olor a coco y arroz tostado. El postre pertenece a una familia más amplia de dulces similares encontrados por todo el sudeste asiático, pero la mezcla específica de masa fermentada y leche de coco sigue siendo claramente camboyana.\n\nEl contraste entre el exterior crujiente y el interior cremoso, más el inesperado toque de cebolleta sobre un dulce, hace del Nom Krok un bocado peculiar, disfrutado habitualmente bien caliente, directamente de la parrilla del vendedor callejero.",
+      fr: "Le Nom Krok est traditionnellement vendu par des vendeurs ambulants qui portent la poêle spéciale en fonte directement sur des braises ardentes, remplissant les ruelles de l'odeur de noix de coco et de riz grillé. Le dessert appartient à une plus large famille de gâteaux similaires que l'on trouve à travers l'Asie du Sud-Est, mais le mélange spécifique de pâte fermentée et de lait de coco reste résolument cambodgien.\n\nLe contraste entre l'extérieur croustillant et l'intérieur crémeux, ajouté à la touche inattendue d'oignon vert sur une gourmandise sucrée, fait du Nom Krok un en-cas particulier, généralement dégusté bien chaud, tout droit sorti du gril du vendeur de rue.",
+      de: "Nom Krok wird traditionell von Straßenverkäufern verkauft, die die spezielle Gusseisenpfanne direkt über glühender Holzkohle tragen und die Gassen mit dem Duft von Kokosnuss und geröstetem Reis erfüllen. Das Dessert gehört zu einer breiteren Familie ähnlicher Kuchen, die in ganz Südostasien zu finden sind, aber die spezifische Mischung aus fermentiertem Teig und Kokosmilch bleibt unverkennbar kambodschanisch.\n\nDer Kontrast zwischen der knusprigen Außenseite und dem cremigen Inneren, dazu der unerwartete Hauch Frühlingszwiebel auf einer süßen Leckerei, macht Nom Krok zu einem besonderen Snack, der üblicherweise dampfend heiß, direkt vom Grill des Straßenverkäufers, genossen wird.",
+      pt: "O Nom Krok é tradicionalmente vendido por vendedores ambulantes que carregam a forma especial de ferro fundido diretamente sobre brasas em brasa, enchendo as vielas com o cheiro de coco e arroz tostado. A sobremesa pertence a uma família mais ampla de bolos semelhantes encontrados por todo o sudeste asiático, mas a mistura específica de massa fermentada e leite de coco continua a ser distintamente cambojana.\n\nO contraste entre o exterior crocante e o interior cremoso, mais o toque inesperado de cebolinho sobre uma guloseima doce, faz do Nom Krok um petisco peculiar, normalmente saboreado bem quente, diretamente da grelha do vendedor de rua.",
+      ru: "Ном Крок традиционно продают уличные торговцы, которые носят специальную чугунную сковороду прямо над тлеющими углями, наполняя переулки запахом кокоса и жареного риса. Десерт принадлежит к более широкому семейству подобных лепёшек, встречающихся по всей Юго-Восточной Азии, но именно сочетание ферментированного теста и кокосового молока остаётся отличительно камбоджийским.\n\nКонтраст между хрустящей внешней частью и кремовой серединой, а также неожиданная посыпка зелёным луком поверх сладкого лакомства делают Ном Крок особенной закуской, которую обычно едят с пылу с жару, прямо с гриля уличного продавца.",
+      ar: "يُباع نوم كروك تقليدياً من قبل الباعة المتجولين الذين يحملون المقلاة الحديدية الخاصة مباشرة فوق الفحم المتوهج، مالئين الأزقة برائحة جوز الهند والأرز المحمص. تنتمي هذه الحلوى إلى عائلة أوسع من الكعك المشابه الموجود في جميع أنحاء جنوب شرق آسيا، لكن المزيج المحدد من العجين المخمر وحليب جوز الهند يبقى مميزاً كمبودياً.\n\nالتباين بين الخارج المقرمش والداخل الكريمي، بالإضافة إلى الرشة غير المتوقعة من البصل الأخضر فوق حلوى حلوة، يجعل نوم كروك وجبة خفيفة غريبة، تُستمتع بها عادة ساخنة جداً، مباشرة من شواية البائع المتجول.",
+      zh: "努姆克洛克传统上由沿街小贩售卖，他们直接在燃烧的炭火上端着特制的铸铁锅，让小巷弥漫着椰香与烤米的气味。这道甜点属于东南亚各地常见的类似糕点大家族，但发酵面糊与椰浆的独特组合仍是柬埔寨特有的。\n\n外酥内嫩的对比，加上出人意料地撒在甜点上的葱花，让努姆克洛克成为一种独特的小吃，通常趁热直接从街头小贩的烤炉上取下享用。",
+      ja: "ヌム・クロックは伝統的に、特別な鋳鉄鍋を赤く燃える炭火の上に直接持ち運ぶ露天商によって売られ、路地をココナッツと炒った米の香りで満たす。このデザートは東南アジア各地で見られる似たような菓子の広い一族に属するが、発酵させた生地とココナッツミルクの特有の組み合わせは、明確にカンボジア独自のものだ。\n\nカリッとした外側とクリーミーな中身のコントラストに、甘いお菓子に意外な小ねぎを振りかけるという工夫が加わり、ヌム・クロックは独特のスナックとなっており、通常は屋台の炭火焼きから出したての熱々の状態で味わわれる。",
+      hi: "नुम क्रोक पारंपरिक रूप से फेरीवालों द्वारा बेचा जाता है जो विशेष कास्ट-आयरन पैन को सीधे जलते कोयले पर ले जाते हैं, गलियों को नारियल और भुने चावल की खुशबू से भर देते हैं। यह मिठाई दक्षिण-पूर्व एशिया भर में पाए जाने वाले समान केक के व्यापक परिवार से संबंधित है, लेकिन किण्वित घोल और नारियल के दूध का विशिष्ट मिश्रण विशिष्ट रूप से कंबोडियाई बना हुआ है।\n\nकुरकुरे बाहरी हिस्से और मलाईदार अंदरूनी हिस्से के बीच का विरोधाभास, साथ ही मीठी मिठाई पर हरे प्याज़ की अप्रत्याशित छिड़काव, नुम क्रोक को एक विशेष नाश्ता बनाता है, जिसे आमतौर पर बहुत गरम, सीधे फेरीवाले के ग्रिल से लिया जाता है।",
+      tr: "Nom Krok geleneksel olarak, özel dökme demir tavayı doğrudan közlenen kömürün üzerinde taşıyan seyyar satıcılar tarafından satılır ve sokakları hindistancevizi ve kavrulmuş pirinç kokusuyla doldurur. Bu tatlı, Güneydoğu Asya genelinde bulunan benzer keklerin daha geniş bir ailesine aittir, ancak fermente hamur ve hindistancevizi sütünün özel karışımı belirgin şekilde Kamboçya'ya özgü kalır.\n\nÇıtır dış kısım ile kremamsı iç kısım arasındaki kontrast, ayrıca tatlı bir ikramın üzerine beklenmedik taze soğan serpilmesi, Nom Krok'u tuhaf bir atıştırmalık yapar; genellikle sokak satıcısının ızgarasından yeni çıkmış, dumanı tüterken tüketilir.",
+      it: "Il Nom Krok viene tradizionalmente venduto da venditori ambulanti che portano la speciale padella in ghisa direttamente sopra la brace ardente, riempiendo i vicoli con l'odore di cocco e riso tostato. Il dolce appartiene a una famiglia più ampia di dolcetti simili presenti in tutto il sud-est asiatico, ma la specifica miscela di impasto fermentato e latte di cocco resta distintamente cambogiana.\n\nIl contrasto tra l'esterno croccante e l'interno cremoso, più l'inaspettata spolverata di cipollotto su un dolcetto zuccherato, rende il Nom Krok uno spuntino peculiare, solitamente gustato bollente, direttamente dalla griglia del venditore ambulante.",
+      ko: "놈크록은 전통적으로 특수 무쇠 팬을 이글거리는 숯불 위에 직접 들고 다니는 노점상들이 판매하며, 골목을 코코넛과 볶은 쌀 냄새로 채운다. 이 디저트는 동남아시아 전역에서 발견되는 비슷한 케이크들의 더 넓은 계열에 속하지만, 발효 반죽과 코코넛 밀크의 특유한 조합은 뚜렷이 캄보디아적인 것으로 남아 있다.\n\n바삭한 겉과 크리미한 속의 대비, 그리고 달콤한 간식 위에 뜻밖에 뿌려진 파는 놈크록을 독특한 간식으로 만들며, 보통 노점상의 그릴에서 갓 꺼낸 매우 뜨거운 상태로 즐긴다."
+    }
   }
 ];
