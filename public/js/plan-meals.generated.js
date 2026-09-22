@@ -76,7 +76,7 @@ export const PLAN_MEALS = {
       419,
       246,
       274,
-      275
+      513
     ]
   },
   "tur-mondial": {
