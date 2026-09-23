@@ -4111,6 +4111,36 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://meal-planner.ro/ro/retete/bakso/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/ro/retete/gudeg/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/ro/retete/soto-betawi/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/ro/retete/martabak/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/ro/retete/es-cendol/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://meal-planner.ro/en/recipes/</loc>
     <lastmod>2026-09-23</lastmod>
     <changefreq>monthly</changefreq>
@@ -7028,6 +7058,36 @@
   </url>
   <url>
     <loc>https://meal-planner.ro/en/recipes/moo-ping/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/en/recipes/bakso/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/en/recipes/gudeg/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/en/recipes/soto-betawi/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/en/recipes/martabak/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/en/recipes/es-cendol/</loc>
     <lastmod>2026-09-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -9955,6 +10015,36 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://meal-planner.ro/es/recetas/bakso/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/es/recetas/gudeg/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/es/recetas/soto-betawi/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/es/recetas/martabak/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/es/recetas/es-cendol/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://meal-planner.ro/fr/recettes/</loc>
     <lastmod>2026-09-23</lastmod>
     <changefreq>weekly</changefreq>
@@ -12872,6 +12962,36 @@
   </url>
   <url>
     <loc>https://meal-planner.ro/fr/recettes/moo-ping/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/fr/recettes/bakso/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/fr/recettes/gudeg/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/fr/recettes/soto-betawi/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/fr/recettes/martabak/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/fr/recettes/es-cendol/</loc>
     <lastmod>2026-09-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -15799,6 +15919,36 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://meal-planner.ro/de/rezepte/bakso/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/de/rezepte/gudeg/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/de/rezepte/soto-betawi/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/de/rezepte/martabak/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/de/rezepte/es-cendol/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://meal-planner.ro/pt/receitas/</loc>
     <lastmod>2026-09-23</lastmod>
     <changefreq>weekly</changefreq>
@@ -18716,6 +18866,36 @@
   </url>
   <url>
     <loc>https://meal-planner.ro/pt/receitas/moo-ping/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/pt/receitas/bakso/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/pt/receitas/gudeg/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/pt/receitas/soto-betawi/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/pt/receitas/martabak/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/pt/receitas/es-cendol/</loc>
     <lastmod>2026-09-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -21643,6 +21823,36 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://meal-planner.ro/ru/retsepty/bakso/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/ru/retsepty/gudeg/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/ru/retsepty/soto-betawi/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/ru/retsepty/martabak/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/ru/retsepty/es-cendol/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://meal-planner.ro/ar/wasafat/</loc>
     <lastmod>2026-09-23</lastmod>
     <changefreq>weekly</changefreq>
@@ -24560,6 +24770,36 @@
   </url>
   <url>
     <loc>https://meal-planner.ro/ar/wasafat/moo-ping/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/ar/wasafat/bakso/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/ar/wasafat/gudeg/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/ar/wasafat/soto-betawi/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/ar/wasafat/martabak/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/ar/wasafat/es-cendol/</loc>
     <lastmod>2026-09-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -27487,6 +27727,36 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://meal-planner.ro/zh/shipu/bakso/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/zh/shipu/gudeg/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/zh/shipu/soto-betawi/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/zh/shipu/martabak/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/zh/shipu/es-cendol/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://meal-planner.ro/ja/reshipi/</loc>
     <lastmod>2026-09-23</lastmod>
     <changefreq>weekly</changefreq>
@@ -30404,6 +30674,36 @@
   </url>
   <url>
     <loc>https://meal-planner.ro/ja/reshipi/moo-ping/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/ja/reshipi/bakso/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/ja/reshipi/gudeg/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/ja/reshipi/soto-betawi/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/ja/reshipi/martabak/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/ja/reshipi/es-cendol/</loc>
     <lastmod>2026-09-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -33331,6 +33631,36 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://meal-planner.ro/hi/recipes/bakso/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/hi/recipes/gudeg/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/hi/recipes/soto-betawi/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/hi/recipes/martabak/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/hi/recipes/es-cendol/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://meal-planner.ro/tr/tarifler/</loc>
     <lastmod>2026-09-23</lastmod>
     <changefreq>weekly</changefreq>
@@ -36248,6 +36578,36 @@
   </url>
   <url>
     <loc>https://meal-planner.ro/tr/tarifler/moo-ping/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/tr/tarifler/bakso/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/tr/tarifler/gudeg/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/tr/tarifler/soto-betawi/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/tr/tarifler/martabak/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/tr/tarifler/es-cendol/</loc>
     <lastmod>2026-09-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -39175,6 +39535,36 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://meal-planner.ro/it/ricette/bakso/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/it/ricette/gudeg/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/it/ricette/soto-betawi/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/it/ricette/martabak/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/it/ricette/es-cendol/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://meal-planner.ro/ko/recipes/</loc>
     <lastmod>2026-09-23</lastmod>
     <changefreq>monthly</changefreq>
@@ -42097,6 +42487,36 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://meal-planner.ro/ko/recipes/bakso/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/ko/recipes/gudeg/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/ko/recipes/soto-betawi/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/ko/recipes/martabak/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/ko/recipes/es-cendol/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://meal-planner.ro/ro/retete/south-korea/</loc>
     <lastmod>2026-09-23</lastmod>
     <changefreq>monthly</changefreq>
@@ -42151,6 +42571,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://meal-planner.ro/ro/retete/indonesia/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://meal-planner.ro/ro/retete/thailand/</loc>
     <lastmod>2026-09-23</lastmod>
     <changefreq>monthly</changefreq>
@@ -42164,12 +42590,6 @@
   </url>
   <url>
     <loc>https://meal-planner.ro/ro/retete/india/</loc>
-    <lastmod>2026-09-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://meal-planner.ro/ro/retete/indonesia/</loc>
     <lastmod>2026-09-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -42445,6 +42865,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://meal-planner.ro/en/recipes/indonesia/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://meal-planner.ro/en/recipes/thailand/</loc>
     <lastmod>2026-09-23</lastmod>
     <changefreq>monthly</changefreq>
@@ -42458,12 +42884,6 @@
   </url>
   <url>
     <loc>https://meal-planner.ro/en/recipes/india/</loc>
-    <lastmod>2026-09-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://meal-planner.ro/en/recipes/indonesia/</loc>
     <lastmod>2026-09-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -42739,6 +43159,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://meal-planner.ro/es/recetas/indonesia/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://meal-planner.ro/es/recetas/thailand/</loc>
     <lastmod>2026-09-23</lastmod>
     <changefreq>weekly</changefreq>
@@ -42752,12 +43178,6 @@
   </url>
   <url>
     <loc>https://meal-planner.ro/es/recetas/india/</loc>
-    <lastmod>2026-09-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://meal-planner.ro/es/recetas/indonesia/</loc>
     <lastmod>2026-09-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -43033,6 +43453,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://meal-planner.ro/fr/recettes/indonesia/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://meal-planner.ro/fr/recettes/thailand/</loc>
     <lastmod>2026-09-23</lastmod>
     <changefreq>weekly</changefreq>
@@ -43046,12 +43472,6 @@
   </url>
   <url>
     <loc>https://meal-planner.ro/fr/recettes/india/</loc>
-    <lastmod>2026-09-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://meal-planner.ro/fr/recettes/indonesia/</loc>
     <lastmod>2026-09-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -43327,6 +43747,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://meal-planner.ro/de/rezepte/indonesia/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://meal-planner.ro/de/rezepte/thailand/</loc>
     <lastmod>2026-09-23</lastmod>
     <changefreq>weekly</changefreq>
@@ -43340,12 +43766,6 @@
   </url>
   <url>
     <loc>https://meal-planner.ro/de/rezepte/india/</loc>
-    <lastmod>2026-09-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://meal-planner.ro/de/rezepte/indonesia/</loc>
     <lastmod>2026-09-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -43621,6 +44041,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://meal-planner.ro/pt/receitas/indonesia/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://meal-planner.ro/pt/receitas/thailand/</loc>
     <lastmod>2026-09-23</lastmod>
     <changefreq>weekly</changefreq>
@@ -43634,12 +44060,6 @@
   </url>
   <url>
     <loc>https://meal-planner.ro/pt/receitas/india/</loc>
-    <lastmod>2026-09-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://meal-planner.ro/pt/receitas/indonesia/</loc>
     <lastmod>2026-09-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -43915,6 +44335,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://meal-planner.ro/ru/retsepty/indonesia/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://meal-planner.ro/ru/retsepty/thailand/</loc>
     <lastmod>2026-09-23</lastmod>
     <changefreq>weekly</changefreq>
@@ -43928,12 +44354,6 @@
   </url>
   <url>
     <loc>https://meal-planner.ro/ru/retsepty/india/</loc>
-    <lastmod>2026-09-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://meal-planner.ro/ru/retsepty/indonesia/</loc>
     <lastmod>2026-09-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -44209,6 +44629,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://meal-planner.ro/ar/wasafat/indonesia/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://meal-planner.ro/ar/wasafat/thailand/</loc>
     <lastmod>2026-09-23</lastmod>
     <changefreq>weekly</changefreq>
@@ -44222,12 +44648,6 @@
   </url>
   <url>
     <loc>https://meal-planner.ro/ar/wasafat/india/</loc>
-    <lastmod>2026-09-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://meal-planner.ro/ar/wasafat/indonesia/</loc>
     <lastmod>2026-09-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -44503,6 +44923,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://meal-planner.ro/zh/shipu/indonesia/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://meal-planner.ro/zh/shipu/thailand/</loc>
     <lastmod>2026-09-23</lastmod>
     <changefreq>weekly</changefreq>
@@ -44516,12 +44942,6 @@
   </url>
   <url>
     <loc>https://meal-planner.ro/zh/shipu/india/</loc>
-    <lastmod>2026-09-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://meal-planner.ro/zh/shipu/indonesia/</loc>
     <lastmod>2026-09-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -44797,6 +45217,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://meal-planner.ro/ja/reshipi/indonesia/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://meal-planner.ro/ja/reshipi/thailand/</loc>
     <lastmod>2026-09-23</lastmod>
     <changefreq>weekly</changefreq>
@@ -44810,12 +45236,6 @@
   </url>
   <url>
     <loc>https://meal-planner.ro/ja/reshipi/india/</loc>
-    <lastmod>2026-09-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://meal-planner.ro/ja/reshipi/indonesia/</loc>
     <lastmod>2026-09-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -45091,6 +45511,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://meal-planner.ro/hi/recipes/indonesia/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://meal-planner.ro/hi/recipes/thailand/</loc>
     <lastmod>2026-09-23</lastmod>
     <changefreq>monthly</changefreq>
@@ -45104,12 +45530,6 @@
   </url>
   <url>
     <loc>https://meal-planner.ro/hi/recipes/india/</loc>
-    <lastmod>2026-09-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://meal-planner.ro/hi/recipes/indonesia/</loc>
     <lastmod>2026-09-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -45385,6 +45805,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://meal-planner.ro/tr/tarifler/indonesia/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://meal-planner.ro/tr/tarifler/thailand/</loc>
     <lastmod>2026-09-23</lastmod>
     <changefreq>weekly</changefreq>
@@ -45398,12 +45824,6 @@
   </url>
   <url>
     <loc>https://meal-planner.ro/tr/tarifler/india/</loc>
-    <lastmod>2026-09-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://meal-planner.ro/tr/tarifler/indonesia/</loc>
     <lastmod>2026-09-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -45679,6 +46099,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://meal-planner.ro/it/ricette/indonesia/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://meal-planner.ro/it/ricette/thailand/</loc>
     <lastmod>2026-09-23</lastmod>
     <changefreq>weekly</changefreq>
@@ -45692,12 +46118,6 @@
   </url>
   <url>
     <loc>https://meal-planner.ro/it/ricette/india/</loc>
-    <lastmod>2026-09-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://meal-planner.ro/it/ricette/indonesia/</loc>
     <lastmod>2026-09-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -45973,6 +46393,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://meal-planner.ro/ko/recipes/indonesia/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://meal-planner.ro/ko/recipes/thailand/</loc>
     <lastmod>2026-09-23</lastmod>
     <changefreq>monthly</changefreq>
@@ -45986,12 +46412,6 @@
   </url>
   <url>
     <loc>https://meal-planner.ro/ko/recipes/india/</loc>
-    <lastmod>2026-09-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://meal-planner.ro/ko/recipes/indonesia/</loc>
     <lastmod>2026-09-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
