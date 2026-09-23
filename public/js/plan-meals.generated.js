@@ -122,9 +122,9 @@ export const PLAN_MEALS = {
       315,
       313,
       310,
-      111,
-      113,
-      166
+      518,
+      515,
+      517
     ]
   },
   "vegetarian": {
