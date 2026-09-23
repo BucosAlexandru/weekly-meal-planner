@@ -4291,6 +4291,36 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://meal-planner.ro/ro/retete/lech-n-asado/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/ro/retete/arroz-con-pollo/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/ro/retete/yuca-con-mojo/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/ro/retete/frijoles-negros/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/ro/retete/flan-cubano/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://meal-planner.ro/en/recipes/</loc>
     <lastmod>2026-09-23</lastmod>
     <changefreq>monthly</changefreq>
@@ -7388,6 +7418,36 @@
   </url>
   <url>
     <loc>https://meal-planner.ro/en/recipes/zserb/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/en/recipes/lech-n-asado/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/en/recipes/arroz-con-pollo/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/en/recipes/yuca-con-mojo/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/en/recipes/frijoles-negros/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/en/recipes/flan-cubano/</loc>
     <lastmod>2026-09-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -10495,6 +10555,36 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://meal-planner.ro/es/recetas/lech-n-asado/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/es/recetas/arroz-con-pollo/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/es/recetas/yuca-con-mojo/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/es/recetas/frijoles-negros/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/es/recetas/flan-cubano/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://meal-planner.ro/fr/recettes/</loc>
     <lastmod>2026-09-23</lastmod>
     <changefreq>weekly</changefreq>
@@ -13592,6 +13682,36 @@
   </url>
   <url>
     <loc>https://meal-planner.ro/fr/recettes/zserb/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/fr/recettes/lech-n-asado/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/fr/recettes/arroz-con-pollo/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/fr/recettes/yuca-con-mojo/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/fr/recettes/frijoles-negros/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/fr/recettes/flan-cubano/</loc>
     <lastmod>2026-09-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -16699,6 +16819,36 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://meal-planner.ro/de/rezepte/lech-n-asado/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/de/rezepte/arroz-con-pollo/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/de/rezepte/yuca-con-mojo/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/de/rezepte/frijoles-negros/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/de/rezepte/flan-cubano/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://meal-planner.ro/pt/receitas/</loc>
     <lastmod>2026-09-23</lastmod>
     <changefreq>weekly</changefreq>
@@ -19796,6 +19946,36 @@
   </url>
   <url>
     <loc>https://meal-planner.ro/pt/receitas/zserb/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/pt/receitas/lech-n-asado/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/pt/receitas/arroz-con-pollo/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/pt/receitas/yuca-con-mojo/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/pt/receitas/frijoles-negros/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/pt/receitas/flan-cubano/</loc>
     <lastmod>2026-09-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -22903,6 +23083,36 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://meal-planner.ro/ru/retsepty/lech-n-asado/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/ru/retsepty/arroz-con-pollo/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/ru/retsepty/yuca-con-mojo/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/ru/retsepty/frijoles-negros/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/ru/retsepty/flan-cubano/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://meal-planner.ro/ar/wasafat/</loc>
     <lastmod>2026-09-23</lastmod>
     <changefreq>weekly</changefreq>
@@ -26000,6 +26210,36 @@
   </url>
   <url>
     <loc>https://meal-planner.ro/ar/wasafat/zserb/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/ar/wasafat/lech-n-asado/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/ar/wasafat/arroz-con-pollo/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/ar/wasafat/yuca-con-mojo/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/ar/wasafat/frijoles-negros/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/ar/wasafat/flan-cubano/</loc>
     <lastmod>2026-09-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -29107,6 +29347,36 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://meal-planner.ro/zh/shipu/lech-n-asado/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/zh/shipu/arroz-con-pollo/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/zh/shipu/yuca-con-mojo/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/zh/shipu/frijoles-negros/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/zh/shipu/flan-cubano/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://meal-planner.ro/ja/reshipi/</loc>
     <lastmod>2026-09-23</lastmod>
     <changefreq>weekly</changefreq>
@@ -32204,6 +32474,36 @@
   </url>
   <url>
     <loc>https://meal-planner.ro/ja/reshipi/zserb/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/ja/reshipi/lech-n-asado/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/ja/reshipi/arroz-con-pollo/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/ja/reshipi/yuca-con-mojo/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/ja/reshipi/frijoles-negros/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/ja/reshipi/flan-cubano/</loc>
     <lastmod>2026-09-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -35311,6 +35611,36 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://meal-planner.ro/hi/recipes/lech-n-asado/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/hi/recipes/arroz-con-pollo/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/hi/recipes/yuca-con-mojo/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/hi/recipes/frijoles-negros/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/hi/recipes/flan-cubano/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://meal-planner.ro/tr/tarifler/</loc>
     <lastmod>2026-09-23</lastmod>
     <changefreq>weekly</changefreq>
@@ -38408,6 +38738,36 @@
   </url>
   <url>
     <loc>https://meal-planner.ro/tr/tarifler/zserb/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/tr/tarifler/lech-n-asado/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/tr/tarifler/arroz-con-pollo/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/tr/tarifler/yuca-con-mojo/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/tr/tarifler/frijoles-negros/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/tr/tarifler/flan-cubano/</loc>
     <lastmod>2026-09-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -41515,6 +41875,36 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://meal-planner.ro/it/ricette/lech-n-asado/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/it/ricette/arroz-con-pollo/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/it/ricette/yuca-con-mojo/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/it/ricette/frijoles-negros/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/it/ricette/flan-cubano/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://meal-planner.ro/ko/recipes/</loc>
     <lastmod>2026-09-23</lastmod>
     <changefreq>monthly</changefreq>
@@ -44617,6 +45007,36 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://meal-planner.ro/ko/recipes/lech-n-asado/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/ko/recipes/arroz-con-pollo/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/ko/recipes/yuca-con-mojo/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/ko/recipes/frijoles-negros/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meal-planner.ro/ko/recipes/flan-cubano/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://meal-planner.ro/ro/retete/south-korea/</loc>
     <lastmod>2026-09-23</lastmod>
     <changefreq>monthly</changefreq>
@@ -44701,6 +45121,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://meal-planner.ro/ro/retete/cuba/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://meal-planner.ro/ro/retete/hungary/</loc>
     <lastmod>2026-09-23</lastmod>
     <changefreq>monthly</changefreq>
@@ -44708,12 +45134,6 @@
   </url>
   <url>
     <loc>https://meal-planner.ro/ro/retete/syria/</loc>
-    <lastmod>2026-09-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://meal-planner.ro/ro/retete/cuba/</loc>
     <lastmod>2026-09-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -44995,6 +45415,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://meal-planner.ro/en/recipes/cuba/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://meal-planner.ro/en/recipes/hungary/</loc>
     <lastmod>2026-09-23</lastmod>
     <changefreq>monthly</changefreq>
@@ -45002,12 +45428,6 @@
   </url>
   <url>
     <loc>https://meal-planner.ro/en/recipes/syria/</loc>
-    <lastmod>2026-09-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://meal-planner.ro/en/recipes/cuba/</loc>
     <lastmod>2026-09-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -45289,6 +45709,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://meal-planner.ro/es/recetas/cuba/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://meal-planner.ro/es/recetas/hungary/</loc>
     <lastmod>2026-09-23</lastmod>
     <changefreq>weekly</changefreq>
@@ -45296,12 +45722,6 @@
   </url>
   <url>
     <loc>https://meal-planner.ro/es/recetas/syria/</loc>
-    <lastmod>2026-09-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://meal-planner.ro/es/recetas/cuba/</loc>
     <lastmod>2026-09-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -45583,6 +46003,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://meal-planner.ro/fr/recettes/cuba/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://meal-planner.ro/fr/recettes/hungary/</loc>
     <lastmod>2026-09-23</lastmod>
     <changefreq>weekly</changefreq>
@@ -45590,12 +46016,6 @@
   </url>
   <url>
     <loc>https://meal-planner.ro/fr/recettes/syria/</loc>
-    <lastmod>2026-09-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://meal-planner.ro/fr/recettes/cuba/</loc>
     <lastmod>2026-09-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -45877,6 +46297,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://meal-planner.ro/de/rezepte/cuba/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://meal-planner.ro/de/rezepte/hungary/</loc>
     <lastmod>2026-09-23</lastmod>
     <changefreq>weekly</changefreq>
@@ -45884,12 +46310,6 @@
   </url>
   <url>
     <loc>https://meal-planner.ro/de/rezepte/syria/</loc>
-    <lastmod>2026-09-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://meal-planner.ro/de/rezepte/cuba/</loc>
     <lastmod>2026-09-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -46171,6 +46591,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://meal-planner.ro/pt/receitas/cuba/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://meal-planner.ro/pt/receitas/hungary/</loc>
     <lastmod>2026-09-23</lastmod>
     <changefreq>weekly</changefreq>
@@ -46178,12 +46604,6 @@
   </url>
   <url>
     <loc>https://meal-planner.ro/pt/receitas/syria/</loc>
-    <lastmod>2026-09-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://meal-planner.ro/pt/receitas/cuba/</loc>
     <lastmod>2026-09-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -46465,6 +46885,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://meal-planner.ro/ru/retsepty/cuba/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://meal-planner.ro/ru/retsepty/hungary/</loc>
     <lastmod>2026-09-23</lastmod>
     <changefreq>weekly</changefreq>
@@ -46472,12 +46898,6 @@
   </url>
   <url>
     <loc>https://meal-planner.ro/ru/retsepty/syria/</loc>
-    <lastmod>2026-09-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://meal-planner.ro/ru/retsepty/cuba/</loc>
     <lastmod>2026-09-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -46759,6 +47179,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://meal-planner.ro/ar/wasafat/cuba/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://meal-planner.ro/ar/wasafat/hungary/</loc>
     <lastmod>2026-09-23</lastmod>
     <changefreq>weekly</changefreq>
@@ -46766,12 +47192,6 @@
   </url>
   <url>
     <loc>https://meal-planner.ro/ar/wasafat/syria/</loc>
-    <lastmod>2026-09-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://meal-planner.ro/ar/wasafat/cuba/</loc>
     <lastmod>2026-09-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -47053,6 +47473,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://meal-planner.ro/zh/shipu/cuba/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://meal-planner.ro/zh/shipu/hungary/</loc>
     <lastmod>2026-09-23</lastmod>
     <changefreq>weekly</changefreq>
@@ -47060,12 +47486,6 @@
   </url>
   <url>
     <loc>https://meal-planner.ro/zh/shipu/syria/</loc>
-    <lastmod>2026-09-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://meal-planner.ro/zh/shipu/cuba/</loc>
     <lastmod>2026-09-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -47347,6 +47767,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://meal-planner.ro/ja/reshipi/cuba/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://meal-planner.ro/ja/reshipi/hungary/</loc>
     <lastmod>2026-09-23</lastmod>
     <changefreq>weekly</changefreq>
@@ -47354,12 +47780,6 @@
   </url>
   <url>
     <loc>https://meal-planner.ro/ja/reshipi/syria/</loc>
-    <lastmod>2026-09-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://meal-planner.ro/ja/reshipi/cuba/</loc>
     <lastmod>2026-09-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -47641,6 +48061,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://meal-planner.ro/hi/recipes/cuba/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://meal-planner.ro/hi/recipes/hungary/</loc>
     <lastmod>2026-09-23</lastmod>
     <changefreq>monthly</changefreq>
@@ -47648,12 +48074,6 @@
   </url>
   <url>
     <loc>https://meal-planner.ro/hi/recipes/syria/</loc>
-    <lastmod>2026-09-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://meal-planner.ro/hi/recipes/cuba/</loc>
     <lastmod>2026-09-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -47935,6 +48355,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://meal-planner.ro/tr/tarifler/cuba/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://meal-planner.ro/tr/tarifler/hungary/</loc>
     <lastmod>2026-09-23</lastmod>
     <changefreq>weekly</changefreq>
@@ -47942,12 +48368,6 @@
   </url>
   <url>
     <loc>https://meal-planner.ro/tr/tarifler/syria/</loc>
-    <lastmod>2026-09-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://meal-planner.ro/tr/tarifler/cuba/</loc>
     <lastmod>2026-09-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -48229,6 +48649,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://meal-planner.ro/it/ricette/cuba/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://meal-planner.ro/it/ricette/hungary/</loc>
     <lastmod>2026-09-23</lastmod>
     <changefreq>weekly</changefreq>
@@ -48236,12 +48662,6 @@
   </url>
   <url>
     <loc>https://meal-planner.ro/it/ricette/syria/</loc>
-    <lastmod>2026-09-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://meal-planner.ro/it/ricette/cuba/</loc>
     <lastmod>2026-09-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -48523,6 +48943,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://meal-planner.ro/ko/recipes/cuba/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://meal-planner.ro/ko/recipes/hungary/</loc>
     <lastmod>2026-09-23</lastmod>
     <changefreq>monthly</changefreq>
@@ -48530,12 +48956,6 @@
   </url>
   <url>
     <loc>https://meal-planner.ro/ko/recipes/syria/</loc>
-    <lastmod>2026-09-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://meal-planner.ro/ko/recipes/cuba/</loc>
     <lastmod>2026-09-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
