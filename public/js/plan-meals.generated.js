@@ -192,11 +192,11 @@ export const PLAN_MEALS = {
     "dinnerIds": [
       116,
       14,
+      631,
       17,
+      630,
       76,
-      45,
-      628,
-      42
+      633
     ]
   },
   "vara-usoara": {
