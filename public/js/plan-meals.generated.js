@@ -8,22 +8,22 @@ export const PLAN_MEALS = {
     "isBudget": false,
     "weekend": false,
     "lunchIds": [
+      611,
+      610,
+      613,
+      612,
+      614,
       578,
-      11,
+      11
+    ],
+    "dinnerIds": [
       75,
       10,
       77,
       575,
-      559
-    ],
-    "dinnerIds": [
+      559,
       576,
-      577,
-      567,
-      566,
-      555,
-      321,
-      434
+      577
     ]
   },
   "asia": {
