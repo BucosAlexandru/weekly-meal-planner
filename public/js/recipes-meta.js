@@ -7,6 +7,8 @@
  * desc    → short appetising sentence in all 14 app languages
  */
 
+import { recipes } from './recipes.js';
+
 // ─── Tag label translations (all 14 languages) ───────────────────────────────
 export const TAG_LABELS = {
   quick:        { ro:'Rapid',          en:'Quick',          es:'Rápido',           fr:'Rapide',         de:'Schnell',        pt:'Rápido',           ru:'Быстро',      ar:'سريع',          zh:'快手菜',   ja:'時短',           tr:'Hızlı',       it:'Veloce',          ko:'빠른',   hi:'जल्दी'  },
@@ -1493,37 +1495,65 @@ export const recipesMeta = {
 };
 
 // ─── Auto-fill remaining recipes with smart defaults ─────────────────────────
+//
+// The bound used to be derived from `Object.keys(recipesMeta)` — i.e. from
+// the entries already written into this file. That self-referential bound
+// silently stopped growing the moment a new batch of recipes was appended
+// to recipes.js WITHOUT also appending explicit entries here: the loop
+// never saw ids past whatever was already hand-authored, so every recipe
+// added after that point (first ids 247-262, the South Korea batch; later
+// the entire 414-689 range — Russia through Uzbekistan) got no tags at
+// all, which broke the "similar dishes from other cuisines" strip on
+// every one of those pages (it hard-requires tags.length > 0).
+//
+// Fixed by deriving coverage from the actual recipes.js id list — the
+// real source of truth — instead of from this file's own keys. Every
+// recipe that exists always gets a fallback entry now, regardless of how
+// far recipes.js grows.
 (function fillDefaults() {
-  const MEAT_KW = /pui|vit[aă]|porc|carne|miel|pe[șs]te|somon|creveți|tun|cârnați|bacon|șunc[aă]|sard[ei]/i;
-  const SPICY_IDS = new Set([9,16,19,36,49,50,67,69,75,78,86,87,99,102,110,112,165,166,169,179]);
-  const QUICK_IDS = new Set([4,7,8,13,15,19,24,25,30,41,44,58,62,65,66,84,89,98,101,103,107,109,114,120,124,130,132,146,155,158,169,170,173,174,176]);
-  const BUDGET_IDS = new Set([12,14,15,24,25,30,33,39,40,44,52,58,70,76,95,97,120,121,122,123,128,130,132,133,147,161,164,165,170,173,179]);
-  const VEG_IDS = new Set([4,10,12,13,14,15,24,25,30,33,35,38,39,40,42,44,58,63,66,70,76,83,89,92,93,95,96,97,102,120,121,122,123,127,128,130,131,132,147,153,159,161,164,170,179]);
+  const recipesById = new Map(recipes.map(r => [r.id, r]));
 
-  // Bound was a hard-coded 183, which silently left any recipe added past
-  // that id (with no explicit entry above) permanently without tags — e.g.
-  // ids 247-262 (the South Korea batch), which broke the "similar dishes
-  // from other cuisines" strip on their pages. Derive the bound from the
-  // highest id actually present so future additions are covered too.
-  const maxKnownId = Math.max(183, ...Object.keys(recipesMeta).map(Number));
-  for (let id = 1; id <= maxKnownId; id++) {
-    if (recipesMeta[id]) continue; // already defined above
-    const isVeg = VEG_IDS.has(id);
-    const isQuick = QUICK_IDS.has(id);
-    const isBudget = BUDGET_IDS.has(id);
-    const isSpicy = SPICY_IDS.has(id);
+  const MEAT_FISH_RE = /\b(beef|pork|lamb|veal|chicken|turkey|duck|goat|mutton|venison|bacon|ham|sausage|salami|prosciutto|chorizo|pancetta|guanciale|lardon|meat|fish|salmon|tuna|cod|anchov(y|ies)|mackerel|herring|sardine|shrimp|prawn|crab|lobster|squid|octopus|mussel|clam|oyster|lard|gelatin|liver|kidney|tripe|blood|bone(s)?\b)/i;
+  const DAIRY_EGG_RE = /\b(milk|cream|butter|cheese|yog(h)?urt|egg(s)?|honey|mascarpone|ricotta|paneer|ghee|whey)\b/i;
+  const SPICY_RE = /\b(chil(i|li|ies)|cayenne|jalapeno|habanero|harissa|gochujang|sriracha|hot pepper|hot sauce|szechuan pepper|piri.?piri)\b/i;
+  const LUXURY_OR_PRICEY_RE = /\b(lobster|caviar|truffle|foie gras|wagyu|king crab|saffron|veal|venison|crab|shrimp|prawn|squid|octopus|mussel|clam|oyster|lamb)\b/i;
+
+  // Rough per-dish-kind defaults — same spirit as the flat 45min/26RON the
+  // previous version used for every uncovered recipe, just bucketed instead
+  // of uniform so a bread or salad isn't quoted the same prep time as a
+  // slow-braised stew.
+  const TIME_BY_KIND = { soup: 75, meat: 70, seafood: 45, fish: 40, pasta: 40, asian: 45, veg: 40, salad: 20, dessert: 55, def: 45 };
+  const COST_BY_KIND = { soup: 20, meat: 28, seafood: 30, fish: 26, pasta: 20, asian: 24, veg: 16, salad: 14, dessert: 18, def: 22 };
+
+  for (const recipe of recipes) {
+    const id = recipe.id;
+    if (recipesMeta[id]) continue; // already defined above (explicit or previously auto-filled)
+
+    const ingr = (recipe.ingredients?.en || recipe.ingredients?.ro || []).join(' ');
+    const prot = recipe.nutrition?.prot ?? 0;
+    const cal  = recipe.nutrition?.cal ?? 0;
+    const fib  = recipe.nutrition?.fib ?? 0;
+    const kind = recipe.tipType && TIME_BY_KIND[recipe.tipType] ? recipe.tipType : 'def';
+
+    const hasMeatFish = MEAT_FISH_RE.test(ingr);
     const tags = [];
-    if (isQuick) tags.push('quick');
-    if (isBudget) tags.push('budget');
-    if (isVeg) tags.push('vegetarian');
-    else tags.push('high-protein');
-    if (isSpicy) tags.push('spicy');
-    if (!isQuick) tags.push('family');
+    if (!hasMeatFish) {
+      tags.push('vegetarian');
+      if (!DAIRY_EGG_RE.test(ingr)) tags.push('vegan');
+    }
+    if (prot >= 20) tags.push('high-protein');
+    if (SPICY_RE.test(ingr)) tags.push('spicy');
+    if (recipe.tipType === 'soup') tags.push('one-pot');
+    if (['meat', 'soup', 'pasta', 'seafood', 'fish'].includes(recipe.tipType)) tags.push('family');
+    if (!LUXURY_OR_PRICEY_RE.test(ingr)) tags.push('budget');
+    if (cal > 0 && cal <= 400 && fib >= 2) tags.push('healthy');
+    if (tags.length === 0) tags.push('family'); // safety net: bridge strip needs >=1 tag
+
     recipesMeta[id] = {
-      time: isQuick ? 20 : (isBudget ? 30 : 45),
-      costRon: isBudget ? 14 : (isVeg ? 18 : 26),
+      time: TIME_BY_KIND[kind],
+      costRon: COST_BY_KIND[kind],
       tags,
-      desc: null // will fall back to howIsMade first sentence
+      desc: null // will fall back to originText / howIsMade first sentence
     };
   }
 })();

@@ -133,22 +133,22 @@ export const PLAN_MEALS = {
     "isBudget": false,
     "weekend": false,
     "lunchIds": [
-      25,
-      33,
-      123,
-      130,
-      285,
-      231,
-      272
+      638,
+      626,
+      654,
+      646,
+      639,
+      655,
+      641
     ],
     "dinnerIds": [
-      275,
-      211,
-      216,
-      206,
-      215,
-      203,
-      315
+      640,
+      643,
+      658,
+      628,
+      648,
+      25,
+      33
     ]
   },
   "rapid": {
@@ -157,22 +157,22 @@ export const PLAN_MEALS = {
     "isBudget": false,
     "weekend": false,
     "lunchIds": [
-      158,
       240,
       227,
       226,
       239,
       374,
-      306
+      306,
+      376
     ],
     "dinnerIds": [
-      376,
       378,
       329,
       399,
       324,
       7,
-      1
+      1,
+      8
     ]
   },
   "iarna-confort": {
@@ -205,22 +205,22 @@ export const PLAN_MEALS = {
     "isBudget": false,
     "weekend": false,
     "lunchIds": [
-      85,
-      14,
-      12,
-      10,
-      11,
-      194,
-      228
+      650,
+      651,
+      619,
+      668,
+      689,
+      685,
+      687
     ],
     "dinnerIds": [
-      232,
-      218,
-      227,
-      226,
-      246,
-      215,
-      378
+      686,
+      681,
+      680,
+      683,
+      85,
+      14,
+      12
     ]
   },
   "duminica-familie": {
