@@ -1993,6 +1993,626 @@
       "source": "/ko/meniu-saptamanal/:path*",
       "destination": "/ko/jugan-menu/",
       "permanent": true
+    },
+    {
+      "source": "/:locale/:dir/butter-chicken-murgh-makhani",
+      "destination": "/:locale/:dir/butter-chicken/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/:dir/butter-chicken-murgh-makhani/",
+      "destination": "/:locale/:dir/butter-chicken/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/:dir/green-curry-gaeng-khiao-wan",
+      "destination": "/:locale/:dir/green-curry/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/:dir/green-curry-gaeng-khiao-wan/",
+      "destination": "/:locale/:dir/green-curry/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/:dir/mango-sticky-rice-khao-niao-mamuang",
+      "destination": "/:locale/:dir/mango-sticky-rice/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/:dir/mango-sticky-rice-khao-niao-mamuang/",
+      "destination": "/:locale/:dir/mango-sticky-rice/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/:dir/pain-perdu-french-toast",
+      "destination": "/:locale/:dir/pain-perdu/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/:dir/pain-perdu-french-toast/",
+      "destination": "/:locale/:dir/pain-perdu/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/:dir/confit-de-canard-duck-confit",
+      "destination": "/:locale/:dir/confit-de-canard/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/:dir/confit-de-canard-duck-confit/",
+      "destination": "/:locale/:dir/confit-de-canard/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/:dir/souffl-au-fromage-cheese-souffl",
+      "destination": "/:locale/:dir/souffl-au-fromage/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/:dir/souffl-au-fromage-cheese-souffl/",
+      "destination": "/:locale/:dir/souffl-au-fromage/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/:dir/hal-szl-fisherman-s-soup",
+      "destination": "/:locale/:dir/hal-szl/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/:dir/hal-szl-fisherman-s-soup/",
+      "destination": "/:locale/:dir/hal-szl/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/:dir/t-lt-tt-k-poszta-hungarian-stuffed-cabbage",
+      "destination": "/:locale/:dir/t-lt-tt-k-poszta/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/:dir/t-lt-tt-k-poszta-hungarian-stuffed-cabbage/",
+      "destination": "/:locale/:dir/t-lt-tt-k-poszta/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/:dir/k-rt-skal-cs-chimney-cake",
+      "destination": "/:locale/:dir/k-rt-skal-cs/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/:dir/k-rt-skal-cs-chimney-cake/",
+      "destination": "/:locale/:dir/k-rt-skal-cs/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/:dir/soml-i-galuska-soml-sponge-trifle",
+      "destination": "/:locale/:dir/soml-i-galuska/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/:dir/soml-i-galuska-soml-sponge-trifle/",
+      "destination": "/:locale/:dir/soml-i-galuska/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/:dir/asado-argentine-grill",
+      "destination": "/:locale/:dir/asado/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/:dir/asado-argentine-grill/",
+      "destination": "/:locale/:dir/asado/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/:dir/shakriyeh-lamb-in-yogurt-stew",
+      "destination": "/:locale/:dir/shakriyeh/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/:dir/shakriyeh-lamb-in-yogurt-stew/",
+      "destination": "/:locale/:dir/shakriyeh/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/:dir/muhammara-walnut-pepper-dip",
+      "destination": "/:locale/:dir/muhammara/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/:dir/muhammara-walnut-pepper-dip/",
+      "destination": "/:locale/:dir/muhammara/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/:dir/maqluba-upside-down-rice",
+      "destination": "/:locale/:dir/maqluba/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/:dir/maqluba-upside-down-rice/",
+      "destination": "/:locale/:dir/maqluba/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/:dir/yalanji-vegetarian-stuffed-grape-leaves",
+      "destination": "/:locale/:dir/yalanji/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/:dir/yalanji-vegetarian-stuffed-grape-leaves/",
+      "destination": "/:locale/:dir/yalanji/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/:dir/tahchin-saffron-rice-cake",
+      "destination": "/:locale/:dir/tahchin/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/:dir/tahchin-saffron-rice-cake/",
+      "destination": "/:locale/:dir/tahchin/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/:dir/zereshk-polo-barberry-rice-with-chicken",
+      "destination": "/:locale/:dir/zereshk-polo/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/:dir/zereshk-polo-barberry-rice-with-chicken/",
+      "destination": "/:locale/:dir/zereshk-polo/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/:dir/ash-e-reshteh-noodle-and-herb-soup",
+      "destination": "/:locale/:dir/ash-e-reshteh/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/:dir/ash-e-reshteh-noodle-and-herb-soup/",
+      "destination": "/:locale/:dir/ash-e-reshteh/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/:dir/kuku-sabzi-persian-herb-frittata",
+      "destination": "/:locale/:dir/kuku-sabzi/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/:dir/kuku-sabzi-persian-herb-frittata/",
+      "destination": "/:locale/:dir/kuku-sabzi/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/:dir/faloodeh-vermicelli-sorbet",
+      "destination": "/:locale/:dir/faloodeh/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/:dir/faloodeh-vermicelli-sorbet/",
+      "destination": "/:locale/:dir/faloodeh/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/:dir/manakish-za-atar-flatbread",
+      "destination": "/:locale/:dir/manakish/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/:dir/manakish-za-atar-flatbread/",
+      "destination": "/:locale/:dir/manakish/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/:dir/ma-amoul-date-filled-cookies",
+      "destination": "/:locale/:dir/ma-amoul/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/:dir/ma-amoul-date-filled-cookies/",
+      "destination": "/:locale/:dir/ma-amoul/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/:dir/otak-otak-grilled-fish-paste",
+      "destination": "/:locale/:dir/otak-otak/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/:dir/otak-otak-grilled-fish-paste/",
+      "destination": "/:locale/:dir/otak-otak/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/:dir/molokhia-jute-leaf-stew",
+      "destination": "/:locale/:dir/molokhia/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/:dir/molokhia-jute-leaf-stew/",
+      "destination": "/:locale/:dir/molokhia/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/:dir/ta-ameya-egyptian-fava-bean-falafel",
+      "destination": "/:locale/:dir/ta-ameya/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/:dir/ta-ameya-egyptian-fava-bean-falafel/",
+      "destination": "/:locale/:dir/ta-ameya/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/:dir/om-ali-egyptian-bread-pudding",
+      "destination": "/:locale/:dir/om-ali/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/:dir/om-ali-egyptian-bread-pudding/",
+      "destination": "/:locale/:dir/om-ali/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/:dir/feteer-meshaltet-egyptian-layered-flatbread",
+      "destination": "/:locale/:dir/feteer-meshaltet/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/:dir/feteer-meshaltet-egyptian-layered-flatbread/",
+      "destination": "/:locale/:dir/feteer-meshaltet/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/:dir/basbousa-egyptian-semolina-cake",
+      "destination": "/:locale/:dir/basbousa/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/:dir/basbousa-egyptian-semolina-cake/",
+      "destination": "/:locale/:dir/basbousa/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/:dir/kitfo-ethiopian-spiced-beef-tartare",
+      "destination": "/:locale/:dir/kitfo/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/:dir/kitfo-ethiopian-spiced-beef-tartare/",
+      "destination": "/:locale/:dir/kitfo/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/:dir/shiro-wat-spiced-chickpea-flour-stew",
+      "destination": "/:locale/:dir/shiro-wat/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/:dir/shiro-wat-spiced-chickpea-flour-stew/",
+      "destination": "/:locale/:dir/shiro-wat/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/:dir/tibs-ethiopian-saut-ed-beef-with-rosemary",
+      "destination": "/:locale/:dir/tibs/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/:dir/tibs-ethiopian-saut-ed-beef-with-rosemary/",
+      "destination": "/:locale/:dir/tibs/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/:dir/misir-wat-spiced-red-lentil-stew",
+      "destination": "/:locale/:dir/misir-wat/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/:dir/misir-wat-spiced-red-lentil-stew/",
+      "destination": "/:locale/:dir/misir-wat/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/:dir/gomen-ethiopian-saut-ed-collard-greens",
+      "destination": "/:locale/:dir/gomen/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/:dir/gomen-ethiopian-saut-ed-collard-greens/",
+      "destination": "/:locale/:dir/gomen/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/:dir/soto-ayam-indonesian-turmeric-chicken-soup",
+      "destination": "/:locale/:dir/soto-ayam/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/:dir/soto-ayam-indonesian-turmeric-chicken-soup/",
+      "destination": "/:locale/:dir/soto-ayam/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/:dir/mie-goreng-indonesian-fried-noodles",
+      "destination": "/:locale/:dir/mie-goreng/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/:dir/mie-goreng-indonesian-fried-noodles/",
+      "destination": "/:locale/:dir/mie-goreng/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/:dir/ayam-penyet-smashed-fried-chicken-with-sambal",
+      "destination": "/:locale/:dir/ayam-penyet/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/:dir/ayam-penyet-smashed-fried-chicken-with-sambal/",
+      "destination": "/:locale/:dir/ayam-penyet/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/:dir/nasi-uduk-fragrant-coconut-rice",
+      "destination": "/:locale/:dir/nasi-uduk/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/:dir/nasi-uduk-fragrant-coconut-rice/",
+      "destination": "/:locale/:dir/nasi-uduk/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/:dir/klepon-glutinous-rice-balls-with-palm-sugar",
+      "destination": "/:locale/:dir/klepon/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/:dir/klepon-glutinous-rice-balls-with-palm-sugar/",
+      "destination": "/:locale/:dir/klepon/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/:dir/aj-de-gallina-creamy-peruvian-chicken-in-yellow-chili-sauce",
+      "destination": "/:locale/:dir/aj-de-gallina/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/:dir/aj-de-gallina-creamy-peruvian-chicken-in-yellow-chili-sauce/",
+      "destination": "/:locale/:dir/aj-de-gallina/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/:dir/anticuchos-peruvian-marinated-grilled-skewers",
+      "destination": "/:locale/:dir/anticuchos/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/:dir/anticuchos-peruvian-marinated-grilled-skewers/",
+      "destination": "/:locale/:dir/anticuchos/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/:dir/papa-a-la-huanca-na-potatoes-in-creamy-yellow-chili-sauce",
+      "destination": "/:locale/:dir/papa-a-la-huanca-na/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/:dir/papa-a-la-huanca-na-potatoes-in-creamy-yellow-chili-sauce/",
+      "destination": "/:locale/:dir/papa-a-la-huanca-na/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/:dir/rocoto-relleno-peruvian-stuffed-hot-peppers",
+      "destination": "/:locale/:dir/rocoto-relleno/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/:dir/rocoto-relleno-peruvian-stuffed-hot-peppers/",
+      "destination": "/:locale/:dir/rocoto-relleno/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/:dir/suspiro-a-la-lime-a-peruvian-caramel-cream-with-port-meringue",
+      "destination": "/:locale/:dir/suspiro-a-la-lime-a/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/:dir/suspiro-a-la-lime-a-peruvian-caramel-cream-with-port-meringue/",
+      "destination": "/:locale/:dir/suspiro-a-la-lime-a/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/:dir/sauerbraten-german-marinated-pot-roast",
+      "destination": "/:locale/:dir/sauerbraten/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/:dir/sauerbraten-german-marinated-pot-roast/",
+      "destination": "/:locale/:dir/sauerbraten/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/:dir/rouladen-german-stuffed-beef-rolls",
+      "destination": "/:locale/:dir/rouladen/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/:dir/rouladen-german-stuffed-beef-rolls/",
+      "destination": "/:locale/:dir/rouladen/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/:dir/k-sesp-tzle-german-cheese-noodles",
+      "destination": "/:locale/:dir/k-sesp-tzle/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/:dir/k-sesp-tzle-german-cheese-noodles/",
+      "destination": "/:locale/:dir/k-sesp-tzle/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/:dir/kartoffelsalat-swabian-warm-potato-salad",
+      "destination": "/:locale/:dir/kartoffelsalat/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/:dir/kartoffelsalat-swabian-warm-potato-salad/",
+      "destination": "/:locale/:dir/kartoffelsalat/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/:dir/schwarzw-lder-kirschtorte-black-forest-cake",
+      "destination": "/:locale/:dir/schwarzw-lder-kirschtorte/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/:dir/schwarzw-lder-kirschtorte-black-forest-cake/",
+      "destination": "/:locale/:dir/schwarzw-lder-kirschtorte/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/:dir/bitterballen-dutch-beef-croquettes",
+      "destination": "/:locale/:dir/bitterballen/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/:dir/bitterballen-dutch-beef-croquettes/",
+      "destination": "/:locale/:dir/bitterballen/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/:dir/erwtensoep-dutch-split-pea-soup",
+      "destination": "/:locale/:dir/erwtensoep/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/:dir/erwtensoep-dutch-split-pea-soup/",
+      "destination": "/:locale/:dir/erwtensoep/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/:dir/stroopwafel-dutch-syrup-waffle",
+      "destination": "/:locale/:dir/stroopwafel/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/:dir/stroopwafel-dutch-syrup-waffle/",
+      "destination": "/:locale/:dir/stroopwafel/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/:dir/kibbeling-dutch-fried-fish-bites-with-garlic-sauce",
+      "destination": "/:locale/:dir/kibbeling/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/:dir/kibbeling-dutch-fried-fish-bites-with-garlic-sauce/",
+      "destination": "/:locale/:dir/kibbeling/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/:dir/oliebollen-dutch-new-year-s-doughnuts",
+      "destination": "/:locale/:dir/oliebollen/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/:dir/oliebollen-dutch-new-year-s-doughnuts/",
+      "destination": "/:locale/:dir/oliebollen/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/:dir/suya-nigerian-peanut-spiced-beef-skewers",
+      "destination": "/:locale/:dir/suya/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/:dir/suya-nigerian-peanut-spiced-beef-skewers/",
+      "destination": "/:locale/:dir/suya/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/:dir/puff-puff-nigerian-fried-dough-balls",
+      "destination": "/:locale/:dir/puff-puff/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/:dir/puff-puff-nigerian-fried-dough-balls/",
+      "destination": "/:locale/:dir/puff-puff/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/:dir/moin-moin-nigerian-steamed-bean-pudding",
+      "destination": "/:locale/:dir/moin-moin/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/:dir/moin-moin-nigerian-steamed-bean-pudding/",
+      "destination": "/:locale/:dir/moin-moin/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/:dir/akara-nigerian-black-eyed-pea-fritters",
+      "destination": "/:locale/:dir/akara/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/:dir/akara-nigerian-black-eyed-pea-fritters/",
+      "destination": "/:locale/:dir/akara/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/:dir/chicken-karahi-pakistani-spiced-skillet-chicken",
+      "destination": "/:locale/:dir/chicken-karahi/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/:dir/chicken-karahi-pakistani-spiced-skillet-chicken/",
+      "destination": "/:locale/:dir/chicken-karahi/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/:dir/haleem-pakistani-slow-cooked-meat-and-lentil-stew",
+      "destination": "/:locale/:dir/haleem/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/:dir/haleem-pakistani-slow-cooked-meat-and-lentil-stew/",
+      "destination": "/:locale/:dir/haleem/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/:dir/seekh-kebab-pakistani-grilled-minced-meat-skewers",
+      "destination": "/:locale/:dir/seekh-kebab/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/:dir/seekh-kebab-pakistani-grilled-minced-meat-skewers/",
+      "destination": "/:locale/:dir/seekh-kebab/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/:dir/sarson-da-saag-punjabi-mustard-greens-curry",
+      "destination": "/:locale/:dir/sarson-da-saag/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/:dir/sarson-da-saag-punjabi-mustard-greens-curry/",
+      "destination": "/:locale/:dir/sarson-da-saag/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/:dir/halwa-puri-pakistani-semolina-sweet-with-fried-bread",
+      "destination": "/:locale/:dir/halwa-puri/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/:dir/halwa-puri-pakistani-semolina-sweet-with-fried-bread/",
+      "destination": "/:locale/:dir/halwa-puri/",
+      "permanent": true
     }
   ]
 }
