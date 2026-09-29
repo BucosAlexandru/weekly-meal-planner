@@ -480,3 +480,49 @@
 // back-gesture on iOS and never feels reliable; the floating pill
 // covers the use case without the risk.)
 
+// ── Back-to-top button ────────────────────────────────────────────
+// Every static content page (recipe, cuisine hub, recipe/plan index, plan,
+// pricing) loads content.js, so adding it here covers all of them at once.
+// Bottom-right, at every viewport width — the existing .mp-back-pill "go
+// back to the list" control is bottom-LEFT and mobile-only, so there's no
+// overlap. (The SPA homepage doesn't load content.js; app.js carries its
+// own copy of this same behavior.)
+(function () {
+  'use strict';
+  const SHOW_AFTER_PX = 500;
+
+  const ARIA_LABEL = {
+    ro: 'Înapoi sus', en: 'Back to top', es: 'Volver arriba', fr: 'Retour en haut',
+    de: 'Nach oben', pt: 'Voltar ao topo', ru: 'Наверх', ar: 'العودة إلى الأعلى',
+    zh: '返回顶部', ja: 'トップに戻る', ko: '맨 위로', hi: 'ऊपर वापस जाएं',
+    tr: 'Başa dön', it: 'Torna su',
+  };
+  const lang = (document.documentElement.lang || 'en').slice(0, 2).toLowerCase();
+  const label = ARIA_LABEL[lang] || ARIA_LABEL.en;
+
+  const btn = document.createElement('button');
+  btn.type = 'button';
+  btn.className = 'mp-back-to-top';
+  btn.setAttribute('aria-label', label);
+  btn.title = label;
+  btn.innerHTML = '<span aria-hidden="true">&#8593;</span>';
+  document.body.appendChild(btn);
+
+  let ticking = false;
+  function updateVisibility() {
+    ticking = false;
+    btn.classList.toggle('is-visible', window.scrollY > SHOW_AFTER_PX);
+  }
+  window.addEventListener('scroll', () => {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(updateVisibility);
+  }, { passive: true });
+  updateVisibility();
+
+  btn.addEventListener('click', () => {
+    const reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    window.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' });
+  });
+})();
+

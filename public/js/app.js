@@ -6294,3 +6294,48 @@ if (verifyBtn && emailInput && resultDiv) {
   wireInputsToShoppingList();
   ensurePwToast(); // aria-live region must exist before its first announcement
 });
+
+// ── Back-to-top button ────────────────────────────────────────────
+// The SPA homepage doesn't load content.js (it loads this file instead), so
+// it needs its own copy of the same self-contained behavior content.js adds
+// to every static content page (recipe/hub/plan/pricing). Bottom-right, at
+// every viewport width, so it never overlaps the mobile-only "back to list"
+// pill some static pages use (which is bottom-left).
+(function () {
+  'use strict';
+  const SHOW_AFTER_PX = 500;
+
+  const ARIA_LABEL = {
+    ro: 'Înapoi sus', en: 'Back to top', es: 'Volver arriba', fr: 'Retour en haut',
+    de: 'Nach oben', pt: 'Voltar ao topo', ru: 'Наверх', ar: 'العودة إلى الأعلى',
+    zh: '返回顶部', ja: 'トップに戻る', ko: '맨 위로', hi: 'ऊपर वापस जाएं',
+    tr: 'Başa dön', it: 'Torna su',
+  };
+  const lang = (document.documentElement.lang || 'en').slice(0, 2).toLowerCase();
+  const label = ARIA_LABEL[lang] || ARIA_LABEL.en;
+
+  const btn = document.createElement('button');
+  btn.type = 'button';
+  btn.className = 'mp-back-to-top';
+  btn.setAttribute('aria-label', label);
+  btn.title = label;
+  btn.innerHTML = '<span aria-hidden="true">&#8593;</span>';
+  document.body.appendChild(btn);
+
+  let ticking = false;
+  function updateVisibility() {
+    ticking = false;
+    btn.classList.toggle('is-visible', window.scrollY > SHOW_AFTER_PX);
+  }
+  window.addEventListener('scroll', () => {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(updateVisibility);
+  }, { passive: true });
+  updateVisibility();
+
+  btn.addEventListener('click', () => {
+    const reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    window.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' });
+  });
+})();
