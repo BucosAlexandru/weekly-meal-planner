@@ -22,7 +22,7 @@
 //   SPA homes + root   = LANGS + 1
 //   ───────────────────────────────────────────────────────────────────────
 //   EXPECTED_PAGES = LANGS × (recipes + eligibleCuisines + plans) + 4×LANGS + 1
-//   EXPECTED_URLS  = EXPECTED_PAGES + SITEMAP_ROOT_EXTRA   (bare "/" canonical)
+//   EXPECTED_URLS  = EXPECTED_PAGES + SITEMAP_ROOT_EXTRA   (0 — sitemap URLs match pages 1:1)
 //
 // If the FIXED structural terms below ever change (a new per-locale hub type,
 // etc.), update LANGS/MIN/FIXED here — the failure message points right at it.
@@ -40,7 +40,12 @@ const ROOT = path.join(__dirname, '..');
 // ── content-derived inputs ──────────────────────────────────────────────────
 const LANGS = 14;                 // app locales (ro,en,es,fr,de,pt,ru,ar,zh,ja,hi,tr,it,ko)
 const MIN_CUISINE_RECIPES = 2;    // CUISINE_MIN_RECIPES in generate-content.mjs
-const SITEMAP_ROOT_EXTRA = 1;     // bare https://meal-planner.ro/ has a sitemap URL beyond the per-page ones
+const SITEMAP_ROOT_EXTRA = 0;     // sitemap URLs now equal page count 1:1 — generate-content.mjs used to
+                                   // also push a dangling https://meal-planner.ro/pricing/ (no matching
+                                   // page ever written, and vercel.json 301s it away regardless), which
+                                   // was the actual source of the old +1; the bare root "/" already has
+                                   // a real page and was never the extra one. Fixed in the same change
+                                   // that dropped that orphan entry from sitemapUrls.
 const TOLERANCE = LANGS;          // ±1 locale of structural slack; a real bug is off by hundreds
 
 const recipeCount = recipes.length;

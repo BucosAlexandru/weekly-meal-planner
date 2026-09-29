@@ -5655,8 +5655,12 @@ for (const [code, lc] of Object.entries(LANG_CONFIGS)) {
   PLANS.forEach(p => sitemapUrls.push(`https://meal-planner.ro${lc.dir}/${lc.planIdFn(p)}/`));
 }
 
-// Pricing pages — /pricing/ (English default) + 14 localised
-sitemapUrls.push('https://meal-planner.ro/pricing/');
+// Pricing pages — 14 localised. No bare /pricing/ page is ever written to
+// disk (only public/<lc>/<PRICING_SLUGS[lc]>/index.html), and vercel.json
+// 301s /pricing/ -> /en/pricing/ regardless — a sitemap entry for it was a
+// dangling URL with no matching page, which Search Console flags as an
+// error. /en/pricing/ (the actual redirect target) is already included
+// below, so nothing is lost by not listing the redirect itself.
 for (const [lc_code, sl] of Object.entries(PRICING_SLUGS)) {
   sitemapUrls.push(`https://meal-planner.ro/${lc_code}/${sl}/`);
 }

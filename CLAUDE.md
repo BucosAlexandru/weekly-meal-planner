@@ -8,8 +8,10 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 npm run build         # full build: esbuild JS + esbuild CSS + generate-content.mjs
 npm run build:js      # bundles app.js, checkout.js, portal.js → *.min.js (recipes-budget.js is external)
 npm run build:css     # minifies public/css/style.css → style.min.css
-npm run content       # regenerates ~4005 HTML pages + public/sitemap.xml
-npm run sitemap       # standalone sitemap regen (scripts/generate-sitemap.cjs)
+npm run content       # regenerates ~10400 HTML pages + public/sitemap.xml
+npm run sitemap       # alias for npm run content — generate-sitemap.cjs used to hand-build a
+                       # 15-URL sitemap independently and could wipe the real one; it now just
+                       # delegates to generate-content.mjs, the only correct source of the page list
 ```
 
 No test runner is configured. The CI workflow (`.github/workflows/build-check.yml`) is the de facto test suite: it runs the curly-quote check, `node --check` on every API file, the full build, then asserts:
