@@ -70,6 +70,14 @@ async function ensureMainRecipes() {
     });
     window.recipesMain = recipesMain;
     window.recipes = [...recipesMain, ...recipesBudget];
+    // The homepage cuisine teaser (renderCuisineDiscover, called once at
+    // initial paint via applyTranslations) always runs before this promise
+    // resolves — recipesMain is [] until first interaction — so it always
+    // renders off TOP6_FALLBACK's hardcoded snapshot and, with nothing else
+    // re-triggering it, would stay on that stale snapshot indefinitely even
+    // after the real corpus is available. Re-render now so it picks up the
+    // live counts/dishes as soon as they're actually known.
+    if (typeof renderCuisineDiscover === 'function') renderCuisineDiscover();
   }).catch(err => console.error('Main recipes load failed:', err));
   return _mainLoadPromise;
 }
@@ -5278,7 +5286,7 @@ function renderCuisineDiscover() {
   // to a recent real snapshot (same rule: min 2 recipes, count DESC, origin
   // alpha ASC) so the teaser is never wrong-shaped while the corpus loads.
   const TOP6_FALLBACK = [
-    ['South Korea', 20], ['France', 18], ['Italy', 17], ['Romania', 17], ['China', 15], ['Japan', 15],
+    ['South Korea', 25], ['France', 23], ['Italy', 22], ['Romania', 22], ['China', 20], ['Japan', 20],
   ];
   // Localized names for the 6 fallback origins above, since the fallback
   // path has no recipe object to read origin[lang] from (see `rep` below).
