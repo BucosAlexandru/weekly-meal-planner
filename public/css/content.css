@@ -1985,6 +1985,16 @@
   transform: translateY(-1px);
 }
 
+/* Locked state for .btn-print-pdf while Premium access is unverified
+   (see public/js/content.js). Un-scoped opacity dimming so it reads
+   correctly under both the base and .recipe-main themed button styles. */
+.btn-print-pdf--locked {
+  opacity: .62;
+}
+.btn-print-pdf--locked:hover {
+  opacity: .8;
+}
+
 /* ── Feature Cards ── */
 .recipe-features-row {
   display: grid;
