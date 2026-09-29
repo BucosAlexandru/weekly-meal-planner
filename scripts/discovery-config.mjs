@@ -74,6 +74,17 @@ export const CUISINE_MARQUEE = {
 // origin names; matched case-insensitively against `recipe.origin.en`. A
 // related cuisine that has no eligible hub (< CUISINE_MIN_RECIPES) is
 // silently skipped at build time so links never 404.
+// NOTE on coverage: any eligible cuisine (>= CUISINE_MIN_RECIPES) missing
+// from this map simply renders no "related cuisines" strip on its hub page
+// — no error, no placeholder, just a silently skipped section (see
+// cuisineHubPage() in generate-content.mjs). That's exactly what happened
+// to every country added after this map was first curated: Sweden,
+// Australia, Switzerland, Israel, Finland, Philippines, Belgium, Croatia,
+// Cambodia, Uzbekistan and a dozen others all had eligible hubs (>=10
+// recipes each) with an empty related-cuisines section because nobody
+// added them here. Keep this list in sync with buildCuisineHubs() output —
+// `node -e "import('./public/js/recipes.js').then(({recipes})=>{...})"`
+// diffed against Object.keys(RELATED_CUISINES) catches drift.
 export const RELATED_CUISINES = Object.freeze({
   // East & Southeast Asia
   japan:         ['south korea', 'china', 'vietnam'],
@@ -82,9 +93,13 @@ export const RELATED_CUISINES = Object.freeze({
   vietnam:       ['thailand', 'china', 'japan'],
   thailand:      ['vietnam', 'indonesia', 'india'],
   indonesia:     ['thailand', 'vietnam', 'india'],
+  malaysia:      ['indonesia', 'thailand', 'vietnam'],
+  philippines:   ['vietnam', 'indonesia', 'malaysia'],
+  cambodia:      ['thailand', 'vietnam', 'indonesia'],
 
   // South Asia
   india:         ['thailand', 'indonesia', 'lebanon'],
+  pakistan:      ['india', 'iran', 'turkey'],
 
   // Mediterranean
   italy:         ['france', 'greece', 'spain'],
@@ -92,19 +107,34 @@ export const RELATED_CUISINES = Object.freeze({
   spain:         ['italy', 'portugal', 'greece'],
   greece:        ['turkey', 'lebanon', 'italy'],
   portugal:      ['spain', 'italy', 'france'],
+  croatia:       ['italy', 'hungary', 'austria'],
 
-  // Levant & Caucasus
+  // Levant, Caucasus & Central Asia
   turkey:        ['greece', 'lebanon', 'georgia'],
   lebanon:       ['turkey', 'greece', 'india'],
   georgia:       ['russia', 'turkey', 'romania'],
+  syria:         ['lebanon', 'turkey', 'egypt'],
+  israel:        ['lebanon', 'turkey', 'egypt'],
+  iran:          ['turkey', 'lebanon', 'pakistan'],
+  uzbekistan:    ['russia', 'georgia', 'turkey'],
 
-  // Latin America
+  // North & West Africa
+  morocco:       ['tunisia', 'egypt', 'lebanon'],
+  tunisia:       ['morocco', 'egypt', 'lebanon'],
+  egypt:         ['lebanon', 'morocco', 'turkey'],
+  ethiopia:      ['egypt', 'nigeria', 'morocco'],
+  nigeria:       ['ethiopia', 'morocco', 'tunisia'],
+
+  // Latin America & Caribbean
   mexico:        ['peru', 'spain', 'usa'],
   peru:          ['mexico', 'spain', 'brazil'],
   brazil:        ['peru', 'portugal', 'mexico'],
+  argentina:     ['brazil', 'peru', 'spain'],
+  ecuador:       ['peru', 'mexico', 'brazil'],
+  cuba:          ['brazil', 'mexico', 'usa'],
 
   // Americas
-  usa:           ['mexico', 'uk', 'italy'],
+  usa:           ['mexico', 'united kingdom', 'italy'],
 
   // Eastern Europe
   romania:       ['hungary', 'greece', 'turkey'],
@@ -113,12 +143,20 @@ export const RELATED_CUISINES = Object.freeze({
   ukraine:       ['russia', 'romania', 'hungary'],
   poland:        ['germany', 'hungary', 'russia'],
 
-  // Central Europe
+  // Central & Western Europe
   germany:       ['france', 'hungary', 'poland'],
   austria:       ['germany', 'hungary', 'italy'],
+  switzerland:   ['germany', 'france', 'italy'],
+  belgium:       ['france', 'netherlands', 'germany'],
+  netherlands:   ['germany', 'belgium', 'united kingdom'],
 
   // Northern Europe
-  uk:            ['usa', 'france', 'india'],
+  'united kingdom': ['usa', 'france', 'india'],
+  sweden:        ['finland', 'germany', 'netherlands'],
+  finland:       ['sweden', 'russia', 'germany'],
+
+  // Oceania
+  australia:     ['united kingdom', 'usa', 'vietnam'],
 });
 
 // Hard cap on how many related cuisines we ever render per hub page.
