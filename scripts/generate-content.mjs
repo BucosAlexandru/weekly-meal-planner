@@ -5644,8 +5644,14 @@ console.log(`\n🎉 Done! Generated ${count} pages total.`);
 /* ════════════════════════════════════════════════════════════════
    SITEMAP — all URLs
    ════════════════════════════════════════════════════════════════ */
+// The bare https://meal-planner.ro/ is deliberately left out: vercel.json
+// permanently 301s it to /en/ (the intended entry door), so it is never a
+// real crawl target — Search Console flags sitemap URLs that only ever
+// redirect. /en/ is already included below as its own entry, so nothing is
+// lost; public/index.html (the pre-redirect file behind that URL) still
+// exists on disk for eligibleCuisines/page-count purposes, it's just not
+// advertised to crawlers as a distinct destination.
 const sitemapUrls = [
-  'https://meal-planner.ro/',
   ...Object.keys(LANG_CONFIGS).map(c => `https://meal-planner.ro/${c}/`),
 ];
 
