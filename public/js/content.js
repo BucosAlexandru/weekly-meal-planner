@@ -241,6 +241,74 @@
   if (url) { injectLegacy(url); }
 })();
 
+// ── Gate the recipe print/PDF button behind Premium ─────────────────
+// The button (class btn-print-pdf, built by scripts/generate-content.mjs)
+// used to call window.print() directly via its inline onclick. Here it
+// starts locked and only unlocks once /api/check-access confirms an active
+// subscription for the remembered email — the same mp:lastEmail hint and
+// endpoint app.js uses to silently re-verify premium on the planner. A
+// locked click routes to the pricing page instead of printing. Client-side
+// only, like window.hasUnlimited elsewhere: a determined user can bypass it
+// in DevTools, but window.print() has nothing sensitive to protect
+// server-side, so that's an accepted trade-off, not a gap to close here.
+(function () {
+  'use strict';
+  const btn = document.querySelector('.btn-print-pdf');
+  if (!btn) return;
+
+  const PRICING_SLUGS = {
+    ro:'premium', en:'pricing', es:'precios', fr:'tarifs', de:'preise',
+    pt:'precos', ru:'tseny', ar:'asaar', zh:'jiage', ja:'pricing',
+    hi:'pricing', tr:'fiyatlar', it:'prezzi', ko:'pricing',
+  };
+  const LOCKED_TITLE = {
+    ro:'Funcție Premium — vezi planurile', en:'Premium feature — see plans',
+    es:'Función Premium — ver planes', fr:'Fonctionnalité Premium — voir les offres',
+    de:'Premium-Funktion — Pläne ansehen', pt:'Recurso Premium — ver planos',
+    ru:'Премиум-функция — посмотреть планы', ar:'ميزة مميزة — عرض الخطط',
+    zh:'高级功能 — 查看套餐', ja:'プレミアム機能 — プランを見る',
+    hi:'प्रीमियम सुविधा — योजनाएं देखें', tr:'Premium özellik — planları gör',
+    it:'Funzione Premium — vedi i piani', ko:'프리미엄 기능 — 요금제 보기',
+  };
+
+  const lang        = (document.documentElement.lang || 'en').slice(0, 2).toLowerCase();
+  const pricingHref = `/${lang}/${PRICING_SLUGS[lang] || PRICING_SLUGS.en}/`;
+  const origTitle    = btn.getAttribute('title') || '';
+  const icon         = btn.querySelector('i');
+
+  function lock() {
+    btn.classList.add('btn-print-pdf--locked');
+    btn.setAttribute('title', LOCKED_TITLE[lang] || LOCKED_TITLE.en);
+    if (icon) icon.className = 'bi bi-gem';
+  }
+  function unlock() {
+    btn.classList.remove('btn-print-pdf--locked');
+    btn.setAttribute('title', origTitle);
+    if (icon) icon.className = 'bi bi-printer';
+    btn.dispatchEvent(new CustomEvent('mp:pdf-unlocked', { bubbles: true }));
+  }
+
+  btn.onclick = null; // clear the SSR inline onclick="window.print()"
+  lock();
+  btn.addEventListener('click', function (e) {
+    if (btn.classList.contains('btn-print-pdf--locked')) {
+      e.preventDefault();
+      window.location.href = pricingHref;
+    } else {
+      window.print();
+    }
+  });
+
+  let hintEmail = null;
+  try { hintEmail = localStorage.getItem('mp:lastEmail'); } catch (_) {}
+  if (!hintEmail) return; // stays locked — no known verified email yet
+
+  fetch(`/api/check-access?email=${encodeURIComponent(hintEmail)}`)
+    .then(r => r.json())
+    .then(({ active }) => { if (active) unlock(); })
+    .catch(() => {}); // network error → stays locked, no crash
+})();
+
 // ── iOS/iPadOS PDF helper ─────────────────────────────────────────
 (function () {
   'use strict';
@@ -275,7 +343,10 @@
 
   function injectHelper() {
     const btn = document.querySelector('.btn-print-pdf');
-    if (!btn || btn.parentNode.querySelector('.pdf-ios-hint')) return;
+    // Skip while the button is still Premium-locked (see the gating IIFE
+    // above) — the hint explains a print flow the click won't reach yet.
+    // It re-fires on the mp:pdf-unlocked event once access is confirmed.
+    if (!btn || btn.classList.contains('btn-print-pdf--locked') || btn.parentNode.querySelector('.pdf-ios-hint')) return;
     const hint = document.createElement('p');
     hint.className = 'pdf-ios-hint';
     hint.innerHTML = msg;
@@ -287,6 +358,7 @@
   } else {
     injectHelper();
   }
+  document.addEventListener('mp:pdf-unlocked', injectHelper);
 })();
 
 // ── Mobile recipe navigator: scroll restoration + cuisine context ───
@@ -407,4 +479,50 @@
 // priority." Edge-swipe detection conflicts with Safari's native
 // back-gesture on iOS and never feels reliable; the floating pill
 // covers the use case without the risk.)
+
+// ── Back-to-top button ────────────────────────────────────────────
+// Every static content page (recipe, cuisine hub, recipe/plan index, plan,
+// pricing) loads content.js, so adding it here covers all of them at once.
+// Bottom-right, at every viewport width — the existing .mp-back-pill "go
+// back to the list" control is bottom-LEFT and mobile-only, so there's no
+// overlap. (The SPA homepage doesn't load content.js; app.js carries its
+// own copy of this same behavior.)
+(function () {
+  'use strict';
+  const SHOW_AFTER_PX = 500;
+
+  const ARIA_LABEL = {
+    ro: 'Înapoi sus', en: 'Back to top', es: 'Volver arriba', fr: 'Retour en haut',
+    de: 'Nach oben', pt: 'Voltar ao topo', ru: 'Наверх', ar: 'العودة إلى الأعلى',
+    zh: '返回顶部', ja: 'トップに戻る', ko: '맨 위로', hi: 'ऊपर वापस जाएं',
+    tr: 'Başa dön', it: 'Torna su',
+  };
+  const lang = (document.documentElement.lang || 'en').slice(0, 2).toLowerCase();
+  const label = ARIA_LABEL[lang] || ARIA_LABEL.en;
+
+  const btn = document.createElement('button');
+  btn.type = 'button';
+  btn.className = 'mp-back-to-top';
+  btn.setAttribute('aria-label', label);
+  btn.title = label;
+  btn.innerHTML = '<span aria-hidden="true">&#8593;</span>';
+  document.body.appendChild(btn);
+
+  let ticking = false;
+  function updateVisibility() {
+    ticking = false;
+    btn.classList.toggle('is-visible', window.scrollY > SHOW_AFTER_PX);
+  }
+  window.addEventListener('scroll', () => {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(updateVisibility);
+  }, { passive: true });
+  updateVisibility();
+
+  btn.addEventListener('click', () => {
+    const reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    window.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' });
+  });
+})();
 

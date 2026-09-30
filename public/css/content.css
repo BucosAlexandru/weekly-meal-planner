@@ -1985,6 +1985,16 @@
   transform: translateY(-1px);
 }
 
+/* Locked state for .btn-print-pdf while Premium access is unverified
+   (see public/js/content.js). Un-scoped opacity dimming so it reads
+   correctly under both the base and .recipe-main themed button styles. */
+.btn-print-pdf--locked {
+  opacity: .62;
+}
+.btn-print-pdf--locked:hover {
+  opacity: .8;
+}
+
 /* ── Feature Cards ── */
 .recipe-features-row {
   display: grid;
@@ -2465,6 +2475,52 @@
 }
 body.pdf-exporting .recipe-mobile-back,
 body.pdf-exporting .mp-back-pill { display: none !important; }
+
+/* ── Back-to-top button (public/js/content.js) ──────────────────────
+   Bottom-right at every width (unlike .mp-back-pill above, which is
+   bottom-left and mobile-only) so the two never overlap. */
+.mp-back-to-top {
+  position: fixed;
+  right: max(14px, env(safe-area-inset-right));
+  bottom: calc(max(14px, env(safe-area-inset-bottom)) + 6px);
+  z-index: 90;
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(0, 0, 0, .08);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, .96);
+  -webkit-backdrop-filter: saturate(180%) blur(12px);
+  backdrop-filter: saturate(180%) blur(12px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, .12);
+  color: #1f2937;
+  font-size: 1.15rem;
+  line-height: 1;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(6px);
+  transition: opacity .18s ease, transform .18s ease, background-color .15s ease, box-shadow .15s ease;
+}
+.mp-back-to-top.is-visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.mp-back-to-top:hover {
+  background: rgba(245, 247, 250, 1);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, .16);
+}
+.mp-back-to-top:active { transform: scale(.94); }
+.mp-back-to-top:focus-visible {
+  outline: 2px solid var(--cuisine-accent, #24712A);
+  outline-offset: 2px;
+}
+@media print { .mp-back-to-top { display: none !important; } }
+body.pdf-exporting .mp-back-to-top { display: none !important; }
 
 /* ── Recipe tip box ── */
 .recipe-tip-box {

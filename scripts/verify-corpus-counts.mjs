@@ -22,7 +22,9 @@
 //   SPA homes + root   = LANGS + 1
 //   ───────────────────────────────────────────────────────────────────────
 //   EXPECTED_PAGES = LANGS × (recipes + eligibleCuisines + plans) + 4×LANGS + 1
-//   EXPECTED_URLS  = EXPECTED_PAGES + SITEMAP_ROOT_EXTRA   (bare "/" canonical)
+//   EXPECTED_URLS  = EXPECTED_PAGES - SITEMAP_ROOT_OMITTED   (bare "/" has a page on
+//                    disk but is deliberately left out of the sitemap — it's a
+//                    permanent redirect to /en/, never a real crawl target)
 //
 // If the FIXED structural terms below ever change (a new per-locale hub type,
 // etc.), update LANGS/MIN/FIXED here — the failure message points right at it.
@@ -40,7 +42,14 @@ const ROOT = path.join(__dirname, '..');
 // ── content-derived inputs ──────────────────────────────────────────────────
 const LANGS = 14;                 // app locales (ro,en,es,fr,de,pt,ru,ar,zh,ja,hi,tr,it,ko)
 const MIN_CUISINE_RECIPES = 2;    // CUISINE_MIN_RECIPES in generate-content.mjs
-const SITEMAP_ROOT_EXTRA = 1;     // bare https://meal-planner.ro/ has a sitemap URL beyond the per-page ones
+const SITEMAP_ROOT_OMITTED = 1;   // public/index.html (bare "/") is a real page on disk, counted in
+                                   // EXPECTED_PAGES, but generate-content.mjs deliberately omits it from
+                                   // sitemapUrls: vercel.json permanently 301s "/" to "/en/" (the intended
+                                   // entry door), so "/" is never itself a crawl target — /en/ is already
+                                   // its own separate sitemap entry. (A previous version of this constant,
+                                   // SITEMAP_ROOT_EXTRA = +1, compensated for a *different* bug — a
+                                   // dangling /pricing/ sitemap entry with no matching page — that has
+                                   // since been removed; it was never actually about the root page.)
 const TOLERANCE = LANGS;          // ±1 locale of structural slack; a real bug is off by hundreds
 
 const recipeCount = recipes.length;
@@ -51,7 +60,7 @@ const planCount = Object.keys(PLAN_MEALS).length;
 
 const FIXED = 4 * LANGS + 1; // recipe-index + plan-index + pricing + homes, per locale, + bare root
 const EXPECTED_PAGES = LANGS * (recipeCount + eligibleCuisines + planCount) + FIXED;
-const EXPECTED_URLS = EXPECTED_PAGES + SITEMAP_ROOT_EXTRA;
+const EXPECTED_URLS = EXPECTED_PAGES - SITEMAP_ROOT_OMITTED;
 
 // ── actual counts from the built output ─────────────────────────────────────
 const actualPages = Number(execSync(`find "${path.join(ROOT, 'public')}" -name '*.html' | wc -l`).toString().trim());
@@ -63,7 +72,7 @@ const actualUrls = (fs.readFileSync(sitemapPath, 'utf8').match(/<url>/g) || []).
 console.log('Corpus composition (content-derived):');
 console.log(`  recipes=${recipeCount}  eligibleCuisines(>=${MIN_CUISINE_RECIPES})=${eligibleCuisines}  plans=${planCount}  langs=${LANGS}`);
 console.log(`  expected pages = ${LANGS}×(${recipeCount}+${eligibleCuisines}+${planCount}) + ${FIXED} = ${EXPECTED_PAGES}`);
-console.log(`  expected URLs  = ${EXPECTED_PAGES} + ${SITEMAP_ROOT_EXTRA} = ${EXPECTED_URLS}`);
+console.log(`  expected URLs  = ${EXPECTED_PAGES} - ${SITEMAP_ROOT_OMITTED} = ${EXPECTED_URLS}`);
 console.log(`  actual pages=${actualPages}  actual URLs=${actualUrls}  tolerance=±${TOLERANCE}`);
 
 let ok = true;
