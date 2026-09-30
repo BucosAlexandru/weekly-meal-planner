@@ -205,22 +205,22 @@ export const PLAN_MEALS = {
     "isBudget": false,
     "weekend": false,
     "lunchIds": [
+      705,
       444,
       440,
       680,
       681,
       683,
-      633,
-      644
+      633
     ],
     "dinnerIds": [
+      644,
       685,
       645,
       686,
       687,
       657,
-      640,
-      689
+      640
     ]
   },
   "duminica-familie": {
