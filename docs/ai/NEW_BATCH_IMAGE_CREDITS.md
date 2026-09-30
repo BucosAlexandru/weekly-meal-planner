@@ -18,10 +18,7 @@ Images sourced from Wikimedia Commons (licence read from the file page metadata 
 | Mont Lin Ma Yar (id 713) | `mont-lin-ma-yar.webp` | စာကလေး SarKaLay | CC0 | https://commons.wikimedia.org/wiki/File:%E1%80%99%E1%80%AF%E1%80%94%E1%80%B7%E1%80%BA%E1%80%9C%E1%80%84%E1%80%BA%E1%80%99%E1%80%9A%E1%80%AC%E1%80%B8_(11038).jpg |
 
 ## Supplied by the site owner (not Commons)
-- `kavarma.webp`, `samaki-wa-kupaka.webp` — provided directly by the site owner. `samaki-wa-kupaka` was matched to a Cookpad source photo; reuse licence not verified.
+- `kavarma.webp`, `samaki-wa-kupaka.webp`, `nga-baung-doke.webp` — provided directly by the site owner. `samaki-wa-kupaka` was matched to a Cookpad source photo; reuse licence not verified. `nga-baung-doke` was supplied as a screenshot of a social-media post (black bars cropped); author/licence unknown. NOTE: it shows rice with prawns, peas, shiitake and truffle in a banana leaf, whereas the recipe is white fish with coconut/lemongrass in banana-leaf parcels — same wrapping, different filling.
 
 ## Previously committed Commons images (6)
 `mandazi`, `garash-torte`, `mohinga`, `tarator`, `lahpet-thoke` — source/licence was not recorded in the earlier commits and still needs to be re-verified.
-
-## Unresolved
-- `nga-baung-doke` — no matching image on Commons (only a different dish, kao hnyin baung).
