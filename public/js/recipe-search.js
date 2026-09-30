@@ -33,7 +33,7 @@ export function pwNorm(s) {
 
 // Structured filters applied BEFORE free-text ranking. A missing filter is
 // ignored. `maxTime` keeps entries with a known time <= maxTime (unknown time
-// is excluded from a time filter, matching selectByTimeMax in discovery-config).
+// is excluded from a time filter).
 function passesFilters(entry, { cuisine, meal, maxTime } = {}) {
   if (cuisine && entry.cuisine !== cuisine) return false;
   if (meal && entry.meal !== meal) return false;

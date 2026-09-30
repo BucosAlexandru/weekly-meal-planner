@@ -20,8 +20,6 @@
   --line:    #e5e7eb;
 
   /* Accent */
-  --amber:       #f59e0b;
-  --amber-hover: #d97706;
   --blue:        #3b82f6;
   --blue-light:  #eff6ff;
   --blue-soft:   #dbeafe;
@@ -40,7 +38,6 @@
   --r-sm:   6px;
   --r-md:   12px;
   --r-lg:   16px;
-  --r-xl:   24px;
   --r-full: 9999px;
 
   /* Motion */
@@ -582,13 +579,9 @@ body {
 .hero-pills { display: none; }
 .hero-social-proof { display: none; }
 .hero-inner { display: none; }
-.hero-cta-row { display: none; }
 .hero-title { display: none; }
 .hero-sub { display: none; }
 .hero-stars { display: none; }
-/* Old dark-hero card classes — no longer rendered */
-.hero-app-card, .hcard-bar, .hcard-head, .hcard-row,
-.hcard-shop, .hcard-chips, .hcard-chip { display: none !important; }
 
 /* ── Responsive hero ── */
 @media (max-width: 860px) {
@@ -977,28 +970,6 @@ input.form-control:focus {
   margin: 2px 0;
 }
 
-/* Old .list-group-item support */
-.shopping-list .list-group-item {
-  border: none;
-  border-bottom: 1px solid var(--line);
-  background: transparent;
-  padding: 6px 0;
-  font-size: 0.9rem;
-  color: var(--ink-2);
-  display: flex;
-  align-items: baseline;
-  gap: 7px;
-}
-.shopping-list .list-group-item:last-child { border-bottom: none; }
-.shopping-list .list-group-item::before {
-  content: '•';
-  color: var(--color-brand);
-  font-size: 1.1em;
-  flex-shrink: 0;
-  font-weight: bold;
-}
-.shopping-list .list-group-item strong { color: var(--color-brand); font-weight: 600; }
-
 #shopping-list[data-empty='true']::after,
 #shopping-list:not(:has(li))::after {
   content: attr(data-empty-msg);
@@ -1057,21 +1028,6 @@ input.form-control:focus {
   padding: 2px 9px;
 }
 .shopping-toggle-count:empty { display: none; }
-.shopping-toggle-chevron {
-  width: 14px;
-  height: 14px;
-  border-right: 2px solid var(--ink-3, #6b7280);
-  border-bottom: 2px solid var(--ink-3, #6b7280);
-  transform: rotate(45deg);
-  transition: transform .2s ease;
-  margin-right: 6px;
-  margin-bottom: 4px;
-  flex-shrink: 0;
-}
-.shopping-collapsible[open] > summary .shopping-toggle-chevron {
-  transform: rotate(-135deg);
-  margin-bottom: -2px;
-}
 .shopping-collapsible__body { padding: 0; }
 /* Auto-expand when the PDF export flow runs OR the page is printed.
    This guarantees ingredient data is never hidden from any export path. */
@@ -1080,7 +1036,6 @@ input.form-control:focus {
   .shopping-collapsible > summary .shopping-toggle-chevron,
   .shopping-collapsible > summary .shopping-toggle-count { display: none; }
 }
-body.pdf-exporting .shopping-collapsible:not([open]) > .shopping-collapsible__body { display: block !important; }
 
 /* ================================================
    SHOPPING TEASER (homepage)
@@ -1447,16 +1402,6 @@ button#manage-subscription:hover {
   color: var(--color-brand-dark);
 }
 
-/* Bootstrap btn-info override (used in access-card header) */
-.btn-info {
-  background: var(--blue);
-  color: #fff;
-  border: none;
-  padding: 9px 22px;
-  font-size: 0.875rem;
-}
-.btn-info:hover { background: #2563eb; color: #fff; }
-
 /* Bootstrap btn-primary (used in verify result paid button) */
 .btn-primary {
   background: var(--color-brand);
@@ -1642,26 +1587,6 @@ button#manage-subscription:hover {
 /* ================================================
    HERO — SECONDARY CTA + DEPTH UPGRADES
    ================================================ */
-.hero-secondary-cta {
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-  background: rgba(255,255,255,.13);
-  border: 1.5px solid rgba(255,255,255,.30);
-  color: rgba(255,255,255,.92);
-  font-weight: 600;
-  font-size: 0.88rem;
-  padding: 10px 22px;
-  border-radius: var(--r-full);
-  text-decoration: none;
-  transition: background var(--t-base), border-color var(--t-base);
-  margin-left: 10px;
-}
-.hero-secondary-cta:hover {
-  background: rgba(255,255,255,.22);
-  border-color: rgba(255,255,255,.5);
-  color: #fff;
-}
 .hero-cta-row {
   display: flex;
   align-items: center;
@@ -1669,71 +1594,6 @@ button#manage-subscription:hover {
   flex-wrap: wrap;
   gap: 10px;
   margin-bottom: 22px;
-}
-
-/* ================================================
-   LANDING FEATURES SECTION
-   ================================================ */
-.landing-features {
-  background: var(--surface);
-  border-bottom: 1px solid var(--line);
-  padding: 64px 24px 56px;
-}
-.landing-features-inner {
-  max-width: 1020px;
-  margin: 0 auto;
-}
-.landing-features-title {
-  text-align: center;
-  font-size: 1.7rem;
-  font-weight: 800;
-  letter-spacing: -0.03em;
-  color: var(--ink);
-  margin-bottom: 6px;
-}
-.landing-features-sub {
-  text-align: center;
-  font-size: 1rem;
-  color: var(--ink-3);
-  margin-bottom: 40px;
-  max-width: 500px;
-  margin-left: auto;
-  margin-right: auto;
-}
-.features-grid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 14px;
-}
-.feature-card {
-  background: var(--bg);
-  border: 1px solid var(--line);
-  border-radius: var(--r-lg);
-  padding: 22px 16px 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 9px;
-  transition: box-shadow var(--t-base), transform var(--t-base), border-color var(--t-base), background var(--t-base);
-}
-.feature-card:hover {
-  background: #fff;
-  box-shadow: var(--shadow-md);
-  transform: translateY(-3px);
-  border-color: var(--color-brand-soft);
-}
-.feature-icon { font-size: 1.8rem; line-height: 1; }
-.feature-title {
-  font-size: 0.9rem;
-  font-weight: 700;
-  color: var(--ink);
-  margin: 0;
-  line-height: 1.3;
-}
-.feature-desc {
-  font-size: 0.8rem;
-  color: var(--ink-3);
-  line-height: 1.55;
-  margin: 0;
 }
 
 /* ================================================
@@ -1906,13 +1766,6 @@ button#manage-subscription:hover {
   .product-preview-section { padding: 60px 24px; }
 }
 
-/* Legacy mockup classes — hidden, phone mockup is now in hero */
-.preview-eyebrow, .preview-text-col, .preview-mockup-col,
-.product-mockup, .mockup-bar, .mockup-bar-title, .mockup-pdf-chip,
-.mockup-table, .mockup-header-row, .mockup-row, .mockup-day, .mockup-meal,
-.mockup-shopping, .mockup-shopping-header, .mockup-chips, .mockup-chip,
-.preview-checklist { /* retained for fallback; override in section */ }
-
 /* ================================================
    DISCOVERY — EDITORIAL MAGAZINE CARDS
    ================================================ */
@@ -2037,123 +1890,16 @@ button#manage-subscription:hover {
 }
 
 /* ================================================
-   HOW IT WORKS SECTION
-   ================================================ */
-.how-it-works {
-  background: var(--surface);
-  border-bottom: 1px solid var(--line);
-  padding: 44px 24px 48px;
-  text-align: center;
-}
-.how-inner {
-  max-width: 760px;
-  margin: 0 auto;
-}
-.how-title {
-  font-size: 1.3rem;
-  font-weight: 800;
-  color: var(--ink);
-  margin: 0 0 36px;
-  letter-spacing: -0.02em;
-}
-.how-steps {
-  display: flex;
-  gap: 0;
-  justify-content: center;
-  align-items: flex-start;
-  position: relative;
-}
-/* Connecting line between steps */
-.how-steps::before {
-  content: '';
-  position: absolute;
-  top: 34px;
-  left: calc(16.66% + 34px);
-  right: calc(16.66% + 34px);
-  height: 2px;
-  background: linear-gradient(90deg, var(--color-brand-soft), var(--color-brand-soft));
-  z-index: 0;
-}
-.how-step {
-  flex: 1;
-  padding: 0 16px;
-  position: relative;
-  z-index: 1;
-}
-.how-step-icon {
-  position: relative;
-  font-size: 1.7rem;
-  line-height: 1;
-  background: var(--color-brand-light);
-  border: 2px solid var(--color-brand-soft);
-  width: 68px;
-  height: 68px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto 16px;
-  box-shadow: 0 0 0 6px var(--surface);
-  transition: box-shadow var(--t-base), background var(--t-base);
-}
-.how-step:hover .how-step-icon {
-  background: var(--color-brand-soft);
-  box-shadow: 0 0 0 6px var(--surface), var(--shadow-brand);
-}
-.how-step-num {
-  position: absolute;
-  top: -4px;
-  right: -4px;
-  background: var(--color-brand);
-  color: #fff;
-  font-size: 0.62rem;
-  font-weight: 800;
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  line-height: 1;
-  border: 2px solid var(--surface);
-}
-.how-step-title {
-  font-size: 0.9rem;
-  font-weight: 700;
-  color: var(--ink);
-  margin: 0 0 6px;
-  line-height: 1.3;
-}
-.how-step-desc {
-  font-size: 0.8rem;
-  color: var(--ink-3);
-  line-height: 1.55;
-  margin: 0;
-}
-
-@media (max-width: 600px) {
-  .how-it-works { padding: 32px 16px 36px; }
-  .how-steps { flex-direction: column; align-items: center; gap: 28px; }
-  .how-steps::before { display: none; }
-  .how-step { max-width: 280px; width: 100%; }
-}
-
-/* ================================================
    RESPONSIVE
    ================================================ */
 @media (max-width: 800px) {
-  .features-grid { grid-template-columns: repeat(3, 1fr); }
   .product-preview-inner { grid-template-columns: 1fr; gap: 36px; }
-  .preview-text-col h2 { font-size: 1.55rem; }
 }
 @media (max-width: 600px) {
   .landing-features, .product-preview-section, .discovery-section { padding: 44px 16px; }
   .planner-anchor-section { padding: 32px 16px 22px; }
-  .features-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
-  .feature-card { padding: 16px 13px; }
   .discovery-cards { grid-template-columns: 1fr; gap: 14px; }
   .discovery-card { padding: 22px 18px 18px; }
-  .hero-secondary-cta { margin-left: 0; }
 }
 
 @media (max-width: 640px) {
@@ -2282,43 +2028,9 @@ button#manage-subscription:hover {
 #pdf-list li strong    { color: var(--color-brand) !important; }
 html[dir="rtl"] #pdf-list ul { direction: rtl; text-align: right; }
 
-.page-break {
-  break-before: page;
-  page-break-before: always;
-  height: 0; margin: 0; padding: 0; border: 0;
-}
-.page-break + .recipe-section { margin-top: 4mm; }
-
-/* ================================================
-   PDF EXPORTING STATE
-   ================================================ */
-body.pdf-exporting {
-  overflow: auto !important;
-  pointer-events: none !important;
-  background: #fff !important;
-}
-body.pdf-exporting .app-header,
-body.pdf-exporting .hero,
-body.pdf-exporting .app-footer { display: none !important; }
-
 /* ================================================
    UTILITIES
    ================================================ */
-.no-print {}
-.pdf-span {
-  display: inline-block;
-  width: 100%;
-  min-height: 2em;
-  padding: 6px 10px;
-  border: 1px solid var(--line);
-  border-radius: var(--r-sm);
-  background: var(--surface);
-  box-sizing: border-box;
-  word-break: break-word;
-  white-space: pre-line;
-  font-size: 0.875rem;
-}
-
 /* Bootstrap overrides */
 .text-success { color: #16a34a !important; }
 .text-danger  { color: #dc2626 !important; }
@@ -2407,8 +2119,7 @@ body.pdf-exporting .app-footer { display: none !important; }
   .planner-table th,
   .planner-table td,
   .table th,
-  .table td,
-  .pdf-span {
+  .table td {
     border: 1px solid #bbb !important;
     padding: 6px 5px !important;
     background: #fff !important;
@@ -2429,17 +2140,6 @@ body.pdf-exporting .app-footer { display: none !important; }
     page-break-after: avoid !important;
   }
 
-  #shopping-list .list-group-item {
-    font-size: 12px !important;
-    padding: 4px 0 4px .7em !important;
-    border: none !important;
-    background: #fff !important;
-    color: #222 !important;
-  }
-  #shopping-list .list-group-item strong {
-    color: var(--color-brand) !important;
-    font-weight: 600 !important;
-  }
   #shopping-list { margin-bottom: 12px !important; }
 
   .btn, select, input,
@@ -2511,8 +2211,6 @@ body.theme-winter .app-header { position: relative; z-index: 2; }
   body.theme-winter::before,
   body.theme-winter::after { display: none !important; }
 }
-body.pdf-exporting.theme-winter::before,
-body.pdf-exporting.theme-winter::after { display: none !important; }
 
 /* ── Grouped shopping list (normalization-engine output on screen) ──
    display:block overrides the legacy 175px item grid (line ~848), which was
@@ -3268,9 +2966,6 @@ a.btn-recipe-primary.pw-cart-in:hover {
 [dir="rtl"] .ex-filter { padding:7px 14px 7px 30px; background-position:left 12px center; }
 .ex-filter:focus-visible { outline:none; border-color:var(--color-brand); box-shadow:0 0 0 3px var(--color-brand-glow); }
 .ex-status { min-height:1.1em; margin:0; text-align:center; font-size:12.5px; color:#6b7280; }
-/* Idle divider before the cuisine cards; hidden once search/filters are active. */
-.ex-divider { text-align:center; margin:10px 0 18px; font-size:.85rem; color:#9aa3af; font-style:italic; }
-.explorer[data-explorer-state="active"] ~ .content-section .ex-divider { display:none; }
 
 /* Idle: no results grid, cuisine cards shown. Active: dense results grid. */
 .explorer[data-explorer-state="idle"] ~ .content-section .ex-results,
@@ -3333,4 +3028,3 @@ a.btn-recipe-primary.pw-cart-in:hover {
 .mp-back-to-top:active { transform:scale(.94); }
 .mp-back-to-top:focus-visible { outline:2px solid var(--color-brand); outline-offset:2px; }
 @media print { .mp-back-to-top { display:none !important; } }
-body.pdf-exporting .mp-back-to-top { display:none !important; }

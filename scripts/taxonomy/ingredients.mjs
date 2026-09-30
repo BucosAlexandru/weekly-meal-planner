@@ -17,7 +17,7 @@
 // time is not possible without touching it — out of scope). The rest are
 // authored here.
 //
-// Locale order (matches discovery-config ALL_LANGS):
+// Locale order (matches discovery-config RECIPE_DETAIL_LANGS):
 //   ro, en, es, fr, de, pt, ru, ar, zh, ja, hi, tr, it, ko
 
 export const ALIAS_LOCALES = Object.freeze([

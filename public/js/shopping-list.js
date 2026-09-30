@@ -1837,8 +1837,6 @@ const ITEM_LABELS = {
    PARSER — extract qty, unit, name from a raw EN ingredient
    ============================================================ */
 
-const UNIT_PATTERN = /\b(kg|kilograms?|g|grams?|gramme[s]?|mg|milligrams?|l|liters?|litres?|ml|milliliters?|millilitres?|tsp|teaspoons?|tbsp|tablespoons?|cup|cups|pint|pints|quart|quarts|oz|ounces?|lb|pounds?|cloves?|sprigs?|stalks?|sheets?|cans?|tins?|packs?|packets?|bunch|bunches|head|heads|piece|pieces|slices?|stick|sticks|leaves|leaf)\b/i;
-
 const FRACTIONS = { '½': 0.5, '⅓': 0.333, '⅔': 0.667, '¼': 0.25, '¾': 0.75, '⅕': 0.2, '⅖': 0.4, '⅗': 0.6, '⅘': 0.8, '⅙': 0.167, '⅚': 0.833, '⅛': 0.125, '⅜': 0.375, '⅝': 0.625, '⅞': 0.875 };
 
 function parseQty(s) {
@@ -2115,14 +2113,6 @@ const UNIT_GROUPS = {
   volume: { ml: 1, l: 1000, tsp: 5, tbsp: 15, cup: 240, oz_fl: 30, pint: 473, quart: 946 },
 };
 
-function unitGroup(u) {
-  if (!u) return null;
-  u = u.toLowerCase();
-  if (UNIT_GROUPS.mass[u] != null) return 'mass';
-  if (UNIT_GROUPS.volume[u] != null) return 'volume';
-  return null;
-}
-
 // Trim trailing ".0" so "2.0 kg" reads as "2 kg".
 function trimZero(s) { return s.replace(/\.0(\s)/, '$1'); }
 
@@ -2155,11 +2145,10 @@ function combineItems(items, canonical) {
   let totalGrams = 0, totalMl = 0;
   let countPieces = 0;
   let sizeCount = { large: 0, medium: 0, small: 0 };
-  let hasUntyped = false;
   const isHerb = !!(canonical && FRESH_HERB.test(canonical));
 
   for (const it of items) {
-    if (!it.qty || !it.unit) { hasUntyped = true; continue; }
+    if (!it.qty || !it.unit) continue;
     const u = it.unit.toLowerCase();
     if (UNIT_GROUPS.mass[u] != null) totalGrams += it.qty * UNIT_GROUPS.mass[u];
     else if (UNIT_GROUPS.volume[u] != null) totalMl += it.qty * UNIT_GROUPS.volume[u];

@@ -3,7 +3,7 @@
 // statically imported. It is lazy-loaded on first interaction via
 // ensureMainRecipes() below, to keep the initial planner payload small.
 import { recipesMeta, TAG_LABELS, READY_IN } from './recipes-meta.js';
-import { i18n, langNames, seoParagraphs, pdfMessages, MOTIV, access } from './i18n.js';
+import { i18n, langNames, seoParagraphs, access } from './i18n.js';
 import { buildShoppingFromRawIngredients, parseIngredient } from './shopping-list.js';
 import { PLAN_MEALS } from './plan-meals.generated.js';
 
@@ -85,12 +85,6 @@ window.recipesMain  = recipesMain;   // [] until ensureMainRecipes() resolves
 window.recipesBudget = recipesBudget;
 window.recipes = [];                 // populated after the lazy corpus load
 
-// helper
-function isBudgetMenuEnabled() {
-  const cb = document.getElementById('budget-menu-toggle');
-  return !!(cb && cb.checked);
-}
-
 // ===== Safe translation helper — never render "undefined" or null in UI
 function safeText(value, fallback = '') {
   if (value === undefined || value === null || value === 'undefined') return fallback;
@@ -118,10 +112,6 @@ function recipeNameMatches(r, lang, extractedName) {
     if (stripped && stripped === extractedName) return true;
   }
   return false;
-}
-function pickMotiv(langCode) {
-  const arr = MOTIV[langCode] || MOTIV.ro;
-  return arr[Math.floor(Math.random() * arr.length)];
 }
 // --- A11Y: aria-label pentru butoanele de dictare ---
 (function () {
@@ -287,16 +277,6 @@ function resetPdfQuotaIfNeeded() {
     localStorage.setItem('pdfCount', pdfCount);
     localStorage.setItem('pdfFirst', pdfFirst);
   }
-}
-function parseExpiryToMs(expires_at) {
-  if (expires_at === null || expires_at === undefined || expires_at === '') return null;
-  const s = String(expires_at).trim();
-  if (/^\d+$/.test(s)) {
-    const n = Number(s);
-    return n < 1e12 ? n * 1000 : n;
-  }
-  const t = Date.parse(s);
-  return isNaN(t) ? null : t;
 }
 // ===== Toate după ce DOM-ul e gata
 document.addEventListener('DOMContentLoaded', () => {
@@ -1286,32 +1266,6 @@ document.addEventListener('DOMContentLoaded', () => {
     return recipe.name?.[langCode] || recipe.name?.en || recipe.name?.ro || '';
   }
 
-  // Full-sentence version used only in PDF output
-  function getRecipeTextLong(recipe, langCode) {
-    if (!recipe) return '';
-    const name   = recipe.name?.[langCode] || recipe.name?.en || recipe.name?.ro || '';
-    const ingr   = recipe.ingredients?.[langCode] || recipe.ingredients?.en || recipe.ingredients?.ro || [];
-    const origin = recipe.origin?.[langCode] || recipe.origin?.en || recipe.origin?.ro || '';
-    const list   = Array.isArray(ingr) ? ingr : [];
-    if (!list.length) return name;
-    const templates = {
-      ro: (n, o, l) => `${n} (${l.join(', ')}) este o rețetă tradițională din ${o}.`,
-      en: (n, o, l) => `${n} (${l.join(', ')}) is a traditional recipe from ${o}.`,
-      es: (n, o, l) => `${n} (${l.join(', ')}) es una receta tradicional de ${o}.`,
-      fr: (n, o, l) => `${n} (${l.join(', ')}) est une recette traditionnelle de ${o}.`,
-      de: (n, o, l) => `${n} (${l.join(', ')}) ist ein traditionelles Rezept aus ${o}.`,
-      pt: (n, o, l) => `${n} (${l.join(', ')}) é uma receita tradicional de ${o}.`,
-      ru: (n, o, l) => `${n} (${l.join(', ')}) — традиционное блюдо из ${o}.`,
-      ar: (n, o, l) => `${n} (${l.join(', ')}) هي وصفة تقليدية من ${o}.`,
-      zh: (n, o, l) => `${n}（${l.join('，')}）是一道来自${o}的传统菜肴。`,
-      ja: (n, o, l) => `${n}（${l.join('、')}）は${o}の伝統料理です。`,
-      hi: (n, o, l) => `${n} (${l.join(', ')}) ${o} की पारंपरिक रेसिपी है।`,
-      tr: (n, o, l) => `${n} (${l.join(', ')}) ${o} kökenli geleneksel bir tariftir.`,
-      it: (n, o, l) => `${n} (${l.join(', ')}) è una ricetta tradizionale di ${o}.`,
-      ko: (n, o, l) => `${n} (${l.join(', ')})는(은) ${o}의 전통 요리입니다.`,
-    };
-    return (templates[langCode] || templates.en)(name, origin, list);
-  }
   // ── Smart diversity + feasibility picker for full-week generation ──────────
   // Diversity rules: max 2 recipes from same country, max 3 pasta/rice, max 4
   // heavy-meat. Feasibility: an optional `maxTimes` array gives a per-slot cook-
@@ -2827,7 +2781,6 @@ function renderProductPreview() {
   // Remove existing so language switch re-renders with new language
   document.getElementById(ID)?.remove();
 
-  const ro = lang === 'ro';
   // Per-language weekly-plan index. MUST use the localized slug table
   // (en→weekly-meal-plan, de→wochenplan…); the old `/${lang}/meniu-saptamanal/`
   // fallback hardcoded the Romanian slug and 404'd on every non-RO locale.
@@ -3044,9 +2997,6 @@ function renderDiscovery() {
   // Remove existing so language switch re-renders with new language
   document.getElementById(ID)?.remove();
 
-  const ro = lang === 'ro';
-  const menusUrl   = (NAV_CONTENT_LINKS[lang] || NAV_CONTENT_LINKS.en).plans.href;
-  const recipesUrl = `/${lang}/${ro ? 'retete' : 'recipes'}/`;
 
   // Correct URL per language — these MUST match the actual generated route
   // slugs from scripts/generate-content.mjs LANG_CONFIGS / RECIPE_LANG. The
@@ -3276,8 +3226,6 @@ function renderPlannerAnchor() {
   if (main) main.insertAdjacentHTML('beforebegin', html);
 }
 
-function injectHeroSecondaryCta() { /* replaced by renderPremiumHero */ }
-
 function renderPremiumHero() {
   const hero = document.querySelector('.hero');
   if (!hero) return;
@@ -3291,15 +3239,8 @@ function renderPremiumHero() {
     tr:'haftalik-menu', ar:'khitat-usbuiya', zh:'zhoujicaidan', ja:'weekly-menu',
     ko:'jugan-menu', hi:'weekly-plan',
   };
-  const recipesBase = {
-    ro:'retete', en:'recipes', es:'recetas', fr:'recettes', de:'rezepte',
-    pt:'receitas', ru:'retsepty', ar:'wasafat', zh:'shipu', ja:'reshipi',
-    ko:'recipes', hi:'recipes', tr:'tarifler', it:'ricette',
-  };
   const mSeg = menusBase[lang] || 'weekly-menu';
-  const rSeg = recipesBase[lang] || 'recipes';
   const mUrl = `/${lang}/${mSeg}/`;
-  const rUrl = `/${lang}/${rSeg}/`;
 
   // Per-language strings (ro primary, en fallback for rest)
   const copy = {

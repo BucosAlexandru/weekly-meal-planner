@@ -1557,5 +1557,3 @@ export const recipesMeta = {
     };
   }
 })();
-
-export default recipesMeta;

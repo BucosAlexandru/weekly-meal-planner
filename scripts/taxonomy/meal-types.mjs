@@ -8,7 +8,7 @@
 // (Dinner, Pasta, Salad, Curry, Pizza, Dessert, ...), only 187/225 fall inside
 // {Breakfast,Lunch,Dinner,Snack}, and `hi` is missing on 35 recipes. So a
 // clean, closed, language-independent `mealType` is curated per recipe.
-// `category` is LEFT UNTOUCHED — discovery-config.mjs selectors still match it.
+// `category` is LEFT UNTOUCHED — discovery-config.mjs's enrichCatalog still carries it through.
 
 // Closed canonical set. Order is presentation order for a future filter row.
 export const MEAL_TYPE_IDS = Object.freeze([

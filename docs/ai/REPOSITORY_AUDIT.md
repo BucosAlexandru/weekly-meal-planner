@@ -235,7 +235,7 @@ _(Must be done before any marketing push or traffic increase)_
 
 4. **`public/js/i18n.js`** — Translation strings for all 14 languages. If a key is renamed or removed, every page that uses it silently falls back to the key name itself (e.g., the button shows "btn.download" instead of a translated string). Changes require testing all 14 languages.
 
-5. **The `tokens` Supabase table schema** — The `expires_at` field has inconsistent formats (seconds vs milliseconds, handled by `parseExpiryToMs()`). Any schema migration must account for all existing rows and update the parsing logic in `check-access.js`, `check-token.js`, and `app.js` simultaneously.
+5. **The `tokens` Supabase table schema** — The `expires_at` field has inconsistent formats (seconds vs milliseconds: `check-access.js` and `api/_lib/requirePremium.js` treat values below 1e12 as seconds, while `check-token.js` multiplies by 1000 unconditionally). Any schema migration must account for all existing rows and update the parsing logic in `check-access.js`, `check-token.js`, and `api/_lib/requirePremium.js` simultaneously.
 
 6. **`vercel.json`** — Wrong rewrite rules will 404 all pages or expose raw files. Test in a preview deployment before merging to main.
 

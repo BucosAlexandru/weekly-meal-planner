@@ -191,9 +191,6 @@
   max-width: 640px;
 }
 .export-upgrade-line strong { color: #1a5c21; font-weight: 700; }
-@media (max-width: 700px) {
-  .export-upgrade-strip { max-width: none; }
-}
 [dir="rtl"] .hp-preview-card-badge { right: auto; left: 12px; }
 
 /* ── FAQ accordion ─────────────────────────────────────────── */
@@ -305,7 +302,6 @@
 }
 
 /* ── Hero secondary Premium CTA ────────────────────────────── */
-.hero-premium-cta { flex-wrap: wrap; }
 .hero-premium-link {
   display: inline-flex;
   align-items: center;
@@ -316,7 +312,6 @@
   padding: 0.5rem 0.85rem;
   font-size: 0.95rem;
 }
-.hero-premium-link:hover { color: #8e6c12; }
 
 /* ── Premium nav badge (when user has active premium) ──────── */
 .nav-link--active-premium {
@@ -408,12 +403,6 @@ body.hp-cursor-active::after { opacity: 1; }
 .hero-phone-frame {
   transition: transform 0.18s ease-out;
   will-change: transform;
-}
-
-/* Hero stats — count-up animation needs the number to land on the
-   exact pixel each frame; give it a tabular-num for stable width. */
-.hero-stat-num {
-  font-variant-numeric: tabular-nums;
 }
 
 /* Badge pulse — soften the existing dot and add a slow halo. */
@@ -709,10 +698,8 @@ html { scrollbar-color: #d4a017 rgba(255, 255, 255, 0.5); }
   --hp-cream-deep:   #f1e7d1;
   --hp-ink:          #1d1812;
   --hp-ink-soft:     #3a342b;
-  --hp-warm:         #d4a017;
   --hp-warm-deep:    #a87a0c;
   --hp-terracotta:   #c1392c;
-  --hp-sage:         #4a6b4a;
   --hp-aubergine:    #3a2438;
   --hp-butter:       #e8b85b;
   --hp-muted:        #8a7e6a;
@@ -890,11 +877,6 @@ html { scrollbar-color: #d4a017 rgba(255, 255, 255, 0.5); }
   text-transform: uppercase;
   color: rgba(250, 245, 234, 0.55);
 }
-.hero-stat--link {
-  transition: color 0.2s ease;
-}
-.hero-stat--link:hover .hero-stat-num { color: var(--hp-butter); }
-.hero-stat--link:hover .hero-stat-label { color: rgba(232, 184, 91, 0.85); }
 
 /* CTAs in the hero — primary button uses butter on ink. */
 .hero-premium-cta {

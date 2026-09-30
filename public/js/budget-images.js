@@ -39,4 +39,3 @@ export const budgetImages = {
   budget_034: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Lemon_Barley_Pilaf.jpg/500px-Lemon_Barley_Pilaf.jpg', // Arpacaș cu legume (cooked pearl barley)
   budget_035: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Pimientos_rojos%2C_asados_al_horno_%28Espa%C3%B1a%29.jpg/500px-Pimientos_rojos%2C_asados_al_horno_%28Espa%C3%B1a%29.jpg', // Ardei copți cu usturoi (roasted red peppers)
 };
-export default budgetImages;

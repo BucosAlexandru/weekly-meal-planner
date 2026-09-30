@@ -395,10 +395,6 @@
     // (A) list page — save state when ANY link to a recipe page is tapped.
     // Delegated listener catches every recipe link regardless of markup.
     const RECIPE_PATH = /\/(?:recipes|retete|recetas|recettes|rezepte|receitas|retsepty|wasafat|shipu|reshipi|tarifler|ricette|weekly-plan)\/[^\/]+\/?$/;
-    // Per-locale cuisine-hub URL prefixes (mirror CUISINE_HUB_LANG in
-    // scripts/generate-content.mjs). We detect "is this URL a cuisine hub"
-    // when overriding the back-pill on a recipe page reached directly.
-    const HUB_PATH = /^\/(?:ro|en|es|fr|de|pt|ru|ar|zh|ja|hi|tr|it|ko)\/(?:bucatarie|cuisine|cocina|kueche|cozinha|kuhnya|matbakh|caixi|ryori|vyanjan|mutfak|cucina|yori)\/[^\/]+\/?$/;
     // Pick up cuisine context from <main data-cuisine-hub data-cuisine-label="…">
     const hubMain = document.querySelector('main[data-cuisine-hub="1"]');
     document.addEventListener('click', (e) => {

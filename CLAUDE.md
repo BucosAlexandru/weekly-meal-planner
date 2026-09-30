@@ -5,17 +5,20 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## Commands
 
 ```bash
-npm run build         # full build: esbuild JS + esbuild CSS + generate-content.mjs
-npm run build:js      # bundles app.js, checkout.js, portal.js → *.min.js (recipes-budget.js is external)
+npm run build         # full build: content → build:index → sync:counts → build:js → build:css
+npm run build:js      # bundles checkout.js, portal.js, analytics.js → *.min.js (app.js is not bundled)
 npm run build:css     # minifies public/css/style.css → style.min.css
 npm run content       # regenerates ~10400 HTML pages + public/sitemap.xml
+npm run build:index   # writes per-locale search indexes → public/data/recipe-search-index.<lc>.json
+npm run sync:counts   # rewrites the hardcoded RECIPE_COUNT in app.js from recipes.js if it drifted
+                       # (--check exits 1 instead of writing)
 npm run sitemap       # alias for npm run content — generate-sitemap.cjs used to hand-build a
                        # 15-URL sitemap independently and could wipe the real one; it now just
                        # delegates to generate-content.mjs, the only correct source of the page list
 ```
 
-No test runner is configured. The CI workflow (`.github/workflows/build-check.yml`) is the de facto test suite: it runs the curly-quote check, `node --check` on every API file, the full build, then asserts:
-- HTML page + sitemap counts match a **content-derived** invariant (not a magic number): `scripts/verify-corpus-counts.mjs` computes `EXPECTED_PAGES = 14 × (recipes + eligibleCuisines + plans) + 57` from `recipes.js` + `plan-meals.generated.js`, tolerance ±14. Currently 225 recipes → 4005 pages / 4006 sitemap URLs. Adding recipes/cuisines/plans auto-tracks; a regenerate bug still fails.
+No test runner is configured. The CI workflow (`.github/workflows/build-check.yml`) is the de facto test suite: it runs the curly-quote check, `node --check` on the API files listed in the workflow (a hard-coded list, see rule 6), the full build, then asserts:
+- HTML page + sitemap counts match a **content-derived** invariant (not a magic number): `scripts/verify-corpus-counts.mjs` computes `EXPECTED_PAGES = 14 × (recipes + eligibleCuisines + plans) + 57` from `recipes.js` + `plan-meals.generated.js`, tolerance ±14. Currently 681 recipes → 10431 pages / 10430 sitemap URLs (the bare `/` page is deliberately left out of the sitemap). Adding recipes/cuisines/plans auto-tracks; a regenerate bug still fails.
 - No `sk_live_` Stripe keys anywhere in source
 - No hard-coded `SUPABASE_SERVICE_ROLE_KEY=…` assignments (only `process.env.SUPABASE_SERVICE_ROLE_KEY` reads allowed, in `api/`)
 
@@ -27,31 +30,31 @@ Violating these will silently break production or trip CI:
 
 1. **Curly quotes (U+2018 / U+2019) in `public/js/recipes.js` break JS parsing.** Always grep before committing:
    `python3 -c "s=open('public/js/recipes.js',encoding='utf-8').read(); print(s.count('‘')+s.count('’'))"` must be `0`.
-2. **Any edit to `public/js/recipes.js` requires `npm run content`** to regenerate HTML; the page count auto-tracks via `scripts/verify-corpus-counts.mjs` (currently ~4005), so adding recipes is fine — just don't leave the generated HTML/sitemap out of sync with the data.
+2. **Any edit to `public/js/recipes.js` requires `npm run content`** to regenerate HTML; the page count auto-tracks via `scripts/verify-corpus-counts.mjs` (currently ~10431), so adding recipes is fine — just don't leave the generated HTML/sitemap out of sync with the data.
 3. **Every multilingual field needs all 14 language codes**: `ro, en, es, fr, de, pt, ru, ar, zh, ja, hi, tr, it, ko`. Older recipes are often missing `hi` — add it.
 4. **Recipes with 9+ ingredients need an explicit `servings: 4` override** at the recipe-object level (default scaling assumptions otherwise produce wrong amounts).
 5. **Never commit `.env` or `.env.local`** — gitignored, hold Stripe + Supabase + OpenAI secrets.
 6. **Adding a new `api/*.js` route?** Add it to the `node --check` list in `.github/workflows/build-check.yml` step 5 — that step iterates a hard-coded file list, not a glob, so new handlers go unchecked silently until you add them.
 
-Workflow: commit directly to `main` and push. No feature branches, no PRs. (See `memory/feedback_worktree.md`.)
+Workflow: commit directly to `main` and push. No feature branches, no PRs.
 
 ## Architecture
 
 ### Two halves: static site + serverless API
 
-- **Static site** lives in `public/` and is served as-is (Vercel `@vercel/static` + GitHub Pages). The browser runs `public/js/app.min.js`, which is `app.js` bundled by esbuild.
+- **Static site** lives in `public/` and is served as-is (Vercel `@vercel/static` + GitHub Pages). The browser loads `public/js/app.js` directly as an ES module (it is not bundled); only `checkout.js`, `portal.js` and `analytics.js` are bundled by esbuild (→ `*.min.js`).
 - **Serverless API** lives in `api/*.js` (Vercel `@vercel/node`). `vercel.json` rewrites `/api/foo` → `/api/foo.js`. Files under `api/_lib/` are NOT routes (Vercel ignores leading underscore); they are shared modules.
 
 ### Content pipeline
 
-`scripts/generate-content.mjs` is the engine. It imports `public/js/recipes.js`, `public/js/recipes-budget.js`, and `public/js/i18n.js`, then writes ~4005 static HTML pages:
+`scripts/generate-content.mjs` is the engine. It imports `public/js/recipes.js`, `public/js/recipes-budget.js`, and `public/js/i18n.js`, then writes ~10431 static HTML pages:
 
 - 14 language home indexes (`/{lc}/`) + root
 - 11 themed weekly plans × 14 languages + 14 plan indexes = 168 plan pages
-- 225 recipes × 14 languages = 3150 recipe pages (under language-specific dirs like `/ro/retete/`, `/en/recipes/`, `/de/rezepte/`, etc.)
+- 681 recipes × 14 languages = 9534 recipe pages (under language-specific dirs like `/ro/retete/`, `/en/recipes/`, `/de/rezepte/`, etc.)
 - 14 pricing pages
-- 46 cuisine hubs (origins with ≥2 recipes) × 14 locales = 644 hub pages + 14 hub indexes (under language-specific prefixes like `/en/recipes/<country>/`, `/ro/retete/<country>/`, `/de/rezepte/<country>/`)
-- `public/sitemap.xml` (~4006 URLs)
+- 49 cuisine hubs (origins with ≥2 recipes) × 14 locales = 686 hub pages + 14 hub indexes (under language-specific prefixes like `/en/recipes/<country>/`, `/ro/retete/<country>/`, `/de/rezepte/<country>/`)
+- `public/sitemap.xml` (~10430 URLs)
 
 Recipe slugs are derived from `r.name.en || r.name.ro` via the local `slug()` helper. If you rename a recipe's English name, every language's URL for that recipe changes — update internal links and check 301s.
 
@@ -59,14 +62,14 @@ Per-language URL prefixes for recipes and pricing are hard-coded in the `RECIPE_
 
 ### Frontend JS layout
 
-- `public/js/app.js` — main planner UI. Bundled. Imports `recipes.js`, `recipes-meta.js`, `i18n.js`. **`recipes-budget.js` is marked external in the esbuild command** and lazy-loaded at runtime (`ensureBudgetRecipes()`) to keep initial JS under ~1.7 MB. Do not statically import `recipes-budget.js` from `app.js`.
-- `public/js/recipes.js` — 175 main recipes, one object per recipe with multilingual `name`, `origin`, `featureCards`, `ingredients`, `howIsMade`, plus `nutrition`, `tipType`, `pairingsType`. This is the canonical content source; the HTML generator reads it directly.
+- `public/js/app.js` — main planner UI. **Not bundled**: `public/index.html` loads it directly as an ES module (`<script type="module" src="/js/app.js">`). It statically imports `recipes-meta.js`, `i18n.js`, `shopping-list.js` and `plan-meals.generated.js`; `recipes.js` and `recipes-budget.js` are lazy-loaded at runtime (`ensureMainRecipes()` / `ensureBudgetRecipes()`) to keep the initial payload small. Do not statically import `recipes.js` or `recipes-budget.js` from `app.js`.
+- `public/js/recipes.js` — 681 main recipes, one object per recipe with multilingual `name`, `origin`, `featureCards`, `ingredients`, `howIsMade`, plus `nutrition`, `tipType`, `pairingsType`. This is the canonical content source; the HTML generator reads it directly.
 - `public/js/recipes-meta.js` — per-recipe `time`, `costRon`, `tags`, optional `desc`. Applied to recipe objects at runtime by `app.js` (does not mutate the file).
 - `public/js/recipes-budget.js` — secondary recipe set, only loaded when the budget toggle is on.
-- `public/js/i18n.js` — all UI translations, language names, SEO paragraph templates, PDF messages.
+- `public/js/i18n.js` — all UI translations, language names, SEO paragraph templates.
 - `public/js/checkout.js` / `portal.js` — Stripe Checkout + Customer Portal launch buttons. Bundled separately.
 - `public/js/recipe-images.js` — **auto-generated** (`// DO NOT edit manually`). Maps recipe ID → image URL (Spoonacular + Wikipedia). Regenerated by a separate tooling script.
-- `public/js/content.js`, `public/js/find-duplicates.js`, `public/js/ai-recipes.js` — utility/debug files, not loaded by the planner UI; ignore unless explicitly working on them.
+- `public/js/content.js` — client script loaded by the generated recipe/content pages (food-photo map, back-pill and back-to-top buttons), not by the planner UI. `public/js/find-duplicates.js` is a gitignored local helper and is not in the repo.
 
 ### Payments + premium gating
 
@@ -91,9 +94,9 @@ Vercel hosts the production site at `meal-planner.ro` (CNAME). GitHub Pages serv
 
 ## Per-recipe `fix_*.py` scripts
 
-The repo root has many `fix_<recipe-id>.py` files (and `audit_*.py`, `fix_tier_c_*.py`, etc.). These are one-shot Python scripts used to rewrite specific recipes in `public/js/recipes.js` — they parse the JS as text, splice in new content for one or more recipe IDs, and write the file back. They are throwaway tooling, not a library. Run them with `python3 fix_<id>.py` from repo root, then run `npm run content` to regenerate HTML. Don't try to import or generalize them.
+The repo root may hold local-only `fix_<recipe-id>.py` files (and `audit_*.py`, `fix_tier_c_*.py`, etc.). They are gitignored (`/*.py`, `/fix_*.py`, `/audit_*.py` in `.gitignore`) and never committed, so a fresh checkout has none. Where they exist, these are one-shot Python scripts used to rewrite specific recipes in `public/js/recipes.js` — they parse the JS as text, splice in new content for one or more recipe IDs, and write the file back. They are throwaway tooling, not a library. Run them with `python3 fix_<id>.py` from repo root, then run `npm run content` to regenerate HTML. Don't try to import or generalize them.
 
-The matching `audit_*.py` scripts at repo root (`audit_quality.py`, `audit_recipes.py`, `audit_uniqueness.py`) are read-only checks over `recipes.js` and the generated HTML — run before/after batch fixes to spot regressions.
+The matching local-only `audit_*.py` scripts at repo root, if present (`audit_quality.py`, `audit_recipes.py`, `audit_uniqueness.py`), are read-only checks over `recipes.js` and the generated HTML — run before/after batch fixes to spot regressions.
 
 ## Multi-agent context (from AGENTS.md)
 

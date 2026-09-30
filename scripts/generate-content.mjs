@@ -107,72 +107,6 @@ function imgStability(url) {
   return 1;
 }
 
-/* Image quality pipeline (Phase 6 item 3): generates srcset + sizes for an
-   image URL so the browser picks an appropriately-sized variant per
-   viewport+DPR. Avoids serving 330px Wikipedia thumbs to Retina screens.
-
-   Returns { srcset, sizes } strings, or { srcset:'', sizes:'' } when the
-   URL doesn't support resizing (local images, opaque URLs).
-
-     Wikipedia thumb URL pattern:
-       https://upload.wikimedia.org/wikipedia/commons/thumb/X/XX/Filename.jpg/330px-Filename.jpg
-                                                                            ^^^^
-                                                                            width
-       → swap "330px-" for "660px-" / "990px-" to get higher-DPR variants.
-
-     Spoonacular URL pattern:
-       https://img.spoonacular.com/recipes/<id>-312x231.jpg
-                                            ^^^^^^^
-                                            w x h
-       → swap "-312x231" for "-556x370" / "-636x393" for high-DPR.
-
-     Local /images/<slug>.<ext> → no srcset (already optimal WebP/JPG/PNG).
-
-     `tileSize` is one of 'tile' | 'hero' | 'thumb' and drives the `sizes`
-     attribute hint so the browser knows how big the IMG renders at each
-     viewport. */
-function imageSrcset(url, tileSize = 'tile') {
-  if (!url || url.startsWith('/') || url.includes(PROD_ORIGIN) || url.endsWith('cover2.jpg')) {
-    return { srcset: '', sizes: '' };
-  }
-
-  // Wikipedia commons thumb pattern
-  const wikiMatch = url.match(/^(.+\/)(\d+)px-([^/]+)$/);
-  if (wikiMatch) {
-    const [, prefix, , name] = wikiMatch;
-    const srcset = [330, 660, 990]
-      .map(w => `${prefix}${w}px-${name} ${w}w`)
-      .join(', ');
-    const sizes = tileSize === 'hero'
-      ? '(max-width: 720px) 92vw, 480px'
-      : tileSize === 'thumb'
-      ? '(max-width: 600px) 33vw, 140px'
-      : '(max-width: 420px) 92vw, (max-width: 720px) 46vw, 320px';
-    return { srcset, sizes };
-  }
-
-  // Spoonacular pattern
-  const spoonMatch = url.match(/^(.+\/recipes\/\d+)-(\d+)x(\d+)\.(jpg|png|webp)$/);
-  if (spoonMatch) {
-    const [, base, , , ext] = spoonMatch;
-    // Spoonacular accepts: 312x231, 480x360, 556x370, 636x393, 1024x767
-    const srcset = [
-      `${base}-312x231.${ext} 312w`,
-      `${base}-556x370.${ext} 556w`,
-      `${base}-636x393.${ext} 636w`,
-    ].join(', ');
-    const sizes = tileSize === 'hero'
-      ? '(max-width: 720px) 92vw, 480px'
-      : tileSize === 'thumb'
-      ? '(max-width: 600px) 33vw, 140px'
-      : '(max-width: 420px) 92vw, (max-width: 720px) 46vw, 320px';
-    return { srcset, sizes };
-  }
-
-  // Unknown URL pattern — return empty (browser uses src as-is)
-  return { srcset: '', sizes: '' };
-}
-
 /* Image error handling: emit attributes that recover from transient Wikipedia
    404s instead of permanently removing the <img>. Two Wikimedia URL shapes are
    used as primary sources across recipe-images.js, and both now get a fallback
@@ -211,14 +145,6 @@ function imgFallbackAttrs(url) {
   }
   // Everything else — remove on error so the emoji card shows.
   return ' onerror="this.remove()"';
-}
-
-/* Convenience: build the attribute string `srcset="..." sizes="..."` to
-   slot into an <img> tag. Empty string when no variants generated. */
-function imgSrcsetAttrs(url, tileSize) {
-  const { srcset, sizes } = imageSrcset(url, tileSize);
-  if (!srcset) return '';
-  return ` srcset="${srcset}" sizes="${sizes}"`;
 }
 
 /* ════════════════════════════════════════════════════════════════
@@ -751,7 +677,6 @@ const LANG_CONFIGS = {
     indexH1:'Meniuri Săptămânale cu <span class="accent">Liste de Cumpărături</span>',
     indexH1raw:'Meniuri Săptămânale cu <span class="accent">Liste de Cumpărături</span>',
     indexSubdesc:`${PLAN_COUNT} planuri de mese complete, fiecare cu 14 rețete, lista de cumpărături sortată și costul estimat.`,
-    indexViewPlan:'Vezi planul',
     indexSeoH:'De ce să folosești un planificator săptămânal?',
     indexSeoP:'Planificarea meselor este una din cele mai eficiente metode de a mânca sănătos și de a economisi bani.',
     metaTitle: (theme)=>`Meniu Săptămânal ${theme} – Listă Cumpărături | Meal-Planner.ro`,
@@ -780,7 +705,6 @@ const LANG_CONFIGS = {
     indexDesc:`${PLAN_COUNT} complete weekly meal plans with shopping lists and cost estimates. Mediterranean, Asian, Budget, Vegetarian and more — all free.`,
     indexH1raw:'Free Weekly Meal Plans with <span class="accent">Shopping Lists</span>',
     indexSubdesc:`${PLAN_COUNT} complete meal plans, each with 14 recipes, a sorted shopping list and estimated cost.`,
-    indexViewPlan:'View plan',
     indexSeoH:'Why use a weekly meal planner?',
     indexSeoP:'Planning meals in advance is one of the most effective ways to eat healthier and save money.',
     metaTitle: (theme)=>`Weekly Meal Plan – ${theme} | Meal-Planner.ro`,
@@ -809,7 +733,6 @@ const LANG_CONFIGS = {
     indexDesc:`${PLAN_COUNT} planes de comida semanales completos con listas de compra y costes estimados.`,
     indexH1raw:'Planes Semanales con <span class="accent">Listas de Compra</span>',
     indexSubdesc:`${PLAN_COUNT} planes completos, cada uno con 14 recetas, lista de compra ordenada y coste estimado.`,
-    indexViewPlan:'Ver plan',
     indexSeoH:'¿Por qué usar un planificador semanal?',
     indexSeoP:'Planificar las comidas es una de las formas más eficaces de comer más sano y ahorrar dinero.',
     metaTitle: (theme)=>`Plan Semanal – ${theme} | Meal-Planner.ro`,
@@ -838,7 +761,6 @@ const LANG_CONFIGS = {
     indexDesc:`${PLAN_COUNT} plans repas hebdomadaires complets avec listes de courses et coûts estimés.`,
     indexH1raw:'Plans Hebdomadaires avec <span class="accent">Listes de Courses</span>',
     indexSubdesc:`${PLAN_COUNT} plans complets, chacun avec 14 recettes, une liste de courses et un coût estimé.`,
-    indexViewPlan:'Voir le plan',
     indexSeoH:'Pourquoi utiliser un planificateur hebdomadaire ?',
     indexSeoP:'Planifier les repas à l\'avance est l\'un des moyens les plus efficaces de manger sainement.',
     metaTitle: (theme)=>`Plan de Repas – ${theme} | Meal-Planner.ro`,
@@ -867,7 +789,6 @@ const LANG_CONFIGS = {
     indexDesc:`${PLAN_COUNT} vollständige Wochenspeisepläne mit Einkaufslisten und Kostenabschätzungen.`,
     indexH1raw:'Wochenpläne mit <span class="accent">Einkaufslisten</span>',
     indexSubdesc:`${PLAN_COUNT} vollständige Pläne, jeder mit 14 Rezepten, einer sortierten Einkaufsliste und Kostenabschätzung.`,
-    indexViewPlan:'Plan ansehen',
     indexSeoH:'Warum einen Wochenplaner verwenden?',
     indexSeoP:'Die Mahlzeitenplanung im Voraus ist eine der effektivsten Methoden, gesünder zu essen.',
     metaTitle: (theme)=>`Wochenplan – ${theme} | Meal-Planner.ro`,
@@ -896,7 +817,6 @@ const LANG_CONFIGS = {
     indexDesc:`${PLAN_COUNT} planos semanais completos com listas de compras e custos estimados.`,
     indexH1raw:'Planos Semanais com <span class="accent">Listas de Compras</span>',
     indexSubdesc:`${PLAN_COUNT} planos completos, cada um com 14 receitas, lista de compras e custo estimado.`,
-    indexViewPlan:'Ver plano',
     indexSeoH:'Por que usar um planejador semanal?',
     indexSeoP:'Planejar as refeições com antecedência é uma das formas mais eficazes de comer melhor.',
     metaTitle: (theme)=>`Plano Semanal – ${theme} | Meal-Planner.ro`,
@@ -925,7 +845,6 @@ const LANG_CONFIGS = {
     indexDesc:`${PLAN_COUNT} полных недельных планов питания со списками покупок и оценками стоимости.`,
     indexH1raw:'Недельные меню со <span class="accent">Списками покупок</span>',
     indexSubdesc:`${PLAN_COUNT} планов с 14 рецептами каждый, отсортированным списком и оценкой стоимости.`,
-    indexViewPlan:'Смотреть план',
     indexSeoH:'Почему стоит планировать питание?',
     indexSeoP:'Планирование питания — один из эффективных способов питаться здоровее.',
     metaTitle: (theme)=>`Недельное меню – ${theme} | Meal-Planner.ro`,
@@ -954,7 +873,6 @@ const LANG_CONFIGS = {
     indexDesc:`${PLAN_COUNT_AR} خطط أسبوعية كاملة مع قوائم تسوق وتقديرات تكلفة.`,
     indexH1raw:'خطط أسبوعية مع <span class="accent">قوائم التسوق</span>',
     indexSubdesc:`${PLAN_COUNT_AR} خطط كاملة، كل منها يحتوي على ١٤ وصفة وقائمة تسوق وتقدير التكلفة.`,
-    indexViewPlan:'عرض الخطة',
     indexSeoH:'لماذا تستخدم مخططاً أسبوعياً؟',
     indexSeoP:'التخطيط المسبق للوجبات من أفضل الطرق لتناول طعام صحي وتوفير المال.',
     metaTitle: (theme)=>`الخطة الأسبوعية – ${theme} | Meal-Planner.ro`,
@@ -983,7 +901,6 @@ const LANG_CONFIGS = {
     indexDesc:`${PLAN_COUNT}个完整的每周饮食计划，附购物清单和费用估算。`,
     indexH1raw:'每周饮食计划与<span class="accent">购物清单</span>',
     indexSubdesc:`${PLAN_COUNT}个完整计划，每个包含14道食谱、购物清单和费用估算。`,
-    indexViewPlan:'查看计划',
     indexSeoH:'为什么使用每周饮食规划器？',
     indexSeoP:'提前规划饮食是健康饮食和节省开支的最有效方法之一。',
     metaTitle: (theme)=>`每周饮食计划 – ${theme} | Meal-Planner.ro`,
@@ -1012,7 +929,6 @@ const LANG_CONFIGS = {
     indexDesc:`${PLAN_COUNT}つの完全な週間食事プラン、買い物リスト付き。`,
     indexH1raw:'週間献立と<span class="accent">買い物リスト</span>',
     indexSubdesc:`${PLAN_COUNT}つのプラン、それぞれ14レシピ、買い物リスト、費用概算付き。`,
-    indexViewPlan:'プランを見る',
     indexSeoH:'なぜ週間プランナーを使うのか？',
     indexSeoP:'食事を事前に計画することは、健康的に食べるための最も効果的な方法の一つです。',
     metaTitle: (theme)=>`週間プラン – ${theme} | Meal-Planner.ro`,
@@ -1041,7 +957,6 @@ const LANG_CONFIGS = {
     indexDesc:`${PLAN_COUNT} पूर्ण साप्ताहिक भोजन योजनाएं, खरीदारी सूची और लागत अनुमान के साथ।`,
     indexH1raw:'साप्ताहिक योजनाएं और <span class="accent">खरीदारी सूची</span>',
     indexSubdesc:`${PLAN_COUNT} पूर्ण योजनाएं, प्रत्येक में 14 रेसिपी, खरीदारी सूची और लागत अनुमान।`,
-    indexViewPlan:'योजना देखें',
     indexSeoH:'साप्ताहिक प्लानर क्यों उपयोग करें?',
     indexSeoP:'पहले से भोजन की योजना बनाना स्वस्थ खाने और पैसे बचाने के सबसे प्रभावी तरीकों में से एक है।',
     metaTitle: (theme)=>`साप्ताहिक योजना – ${theme} | Meal-Planner.ro`,
@@ -1070,7 +985,6 @@ const LANG_CONFIGS = {
     indexDesc:`${PLAN_COUNT} tam haftalık yemek planı, alışveriş listeleri ve maliyet tahminleriyle.`,
     indexH1raw:'Haftalık Planlar ve <span class="accent">Alışveriş Listeleri</span>',
     indexSubdesc:`Her biri 14 tarif, alışveriş listesi ve maliyet tahmini içeren ${PLAN_COUNT} tam plan.`,
-    indexViewPlan:'Planı gör',
     indexSeoH:'Haftalık planlayıcı neden kullanılmalı?',
     indexSeoP:'Yemek planlaması, daha sağlıklı beslenmenin ve para biriktirmenin en etkili yollarından biridir.',
     metaTitle: (theme)=>`Haftalık Plan – ${theme} | Meal-Planner.ro`,
@@ -1099,7 +1013,6 @@ const LANG_CONFIGS = {
     indexDesc:`${PLAN_COUNT} piani settimanali completi con liste della spesa e stime dei costi.`,
     indexH1raw:'Piani Settimanali con <span class="accent">Liste della Spesa</span>',
     indexSubdesc:`${PLAN_COUNT} piani completi, ognuno con 14 ricette, lista della spesa e stima dei costi.`,
-    indexViewPlan:'Vedi piano',
     indexSeoH:'Perché usare un pianificatore settimanale?',
     indexSeoP:'Pianificare i pasti in anticipo è uno dei metodi più efficaci per mangiare in modo più sano.',
     metaTitle: (theme)=>`Piano Settimanale – ${theme} | Meal-Planner.ro`,
@@ -1128,7 +1041,6 @@ const LANG_CONFIGS = {
     indexDesc:`장보기 목록과 비용 추정이 포함된 ${PLAN_COUNT}가지 완전한 주간 식단 계획.`,
     indexH1raw:'주간 계획과 <span class="accent">장보기 목록</span>',
     indexSubdesc:`각각 14가지 레시피, 장보기 목록, 비용 추정이 포함된 ${PLAN_COUNT}가지 완전한 계획.`,
-    indexViewPlan:'계획 보기',
     indexSeoH:'주간 플래너를 사용하는 이유',
     indexSeoP:'식사를 미리 계획하는 것은 건강하게 먹고 비용을 절약하는 가장 효과적인 방법 중 하나입니다.',
     metaTitle: (theme)=>`주간 계획 – ${theme} | Meal-Planner.ro`,
@@ -2062,7 +1974,6 @@ function planPage(plan, lc) {
         return `<li class="shopping-group"><div class="shopping-group-title"><span class="sg-emoji" aria-hidden="true">${emoji}</span><span>${esc(g.label)}</span></div><ul class="shopping-group-items list-unstyled">${items}</ul></li>`;
       }).join('')
     : shopping.map(i => shopItemLi(i, '')).join('');
-  const shoppingIsGrouped = shoppingGroups.length > 0;
   const otherPlans = PLANS.filter(p => p.id !== plan.id).slice(0, 4).map(p =>
     `<a href="${lc.dir}/${lc.planIdFn(p)}/" class="content-card-mini">
       <span class="card-mini-emoji">${p.emoji}</span>
@@ -2408,7 +2319,6 @@ const RECIPE_LANG = {
         addBtn: n=>`Adaugă în planul meu`, relatedH: o=>`Alte rețete din ${esc(o)}`,
         cartAdded:'✓ În plan', cartOpen:'Construiește planul', cartYours:'Rețetele tale',
         favAdd:'Salvează la favorite', favAdded:'La favorite',
-        seoP: n=>`Adaugă <strong>${esc(n)}</strong> în planul tău săptămânal cu <a href="/ro/">Meal-Planner.ro</a>.`,
         pageTitle: n=>`Rețetă ${esc(n)} – Ingrediente și Mod de Preparare | Meal-Planner.ro`,
         pageDesc: (n,o)=>`Rețeta de ${n}: ingrediente, mod de preparare pas cu pas. Adaugă în planificator gratuit.`,
         heroDesc: o=>`Rețetă din ${esc(o)}. Ingrediente proaspete, preparare simplă.`,
@@ -2422,7 +2332,6 @@ const RECIPE_LANG = {
         addBtn: n=>`Add to my meal plan`, relatedH: o=>`More recipes from ${esc(o)}`,
         cartAdded:'✓ In plan', cartOpen:'Build my plan', cartYours:'Your recipes',
         favAdd:'Save to favorites', favAdded:'In favorites',
-        seoP: n=>`Add <strong>${esc(n)}</strong> to your weekly plan with the <a href="/en/">free Meal-Planner.ro app</a>.`,
         pageTitle: n=>`${esc(n)} Recipe – Ingredients & How to Make | Meal-Planner.ro`,
         pageDesc: (n,o)=>`${n} recipe: ingredients, step-by-step instructions. Add to your free meal planner.`,
         heroDesc: o=>`Traditional recipe from ${esc(o)}.`,
@@ -2436,7 +2345,6 @@ const RECIPE_LANG = {
         addBtn: n=>`Añadir a mi plan`, relatedH: o=>`Más recetas de ${esc(o)}`,
         cartAdded:'✓ En el plan', cartOpen:'Crear mi plan', cartYours:'Tus recetas',
         favAdd:'Guardar en favoritos', favAdded:'En favoritos',
-        seoP: n=>`Añade <strong>${esc(n)}</strong> a tu plan semanal con <a href="/es/">Meal-Planner.ro</a>.`,
         pageTitle: n=>`Receta de ${esc(n)} – Ingredientes y Preparación | Meal-Planner.ro`,
         pageDesc: (n,o)=>`Receta de ${n} de ${o}: ingredientes e instrucciones paso a paso.`,
         heroDesc: o=>`Receta tradicional de ${esc(o)}.`,
@@ -2450,7 +2358,6 @@ const RECIPE_LANG = {
         addBtn: n=>`Ajouter à mon plan`, relatedH: o=>`Plus de recettes de ${esc(o)}`,
         cartAdded:'✓ Dans le plan', cartOpen:'Construire mon plan', cartYours:'Vos recettes',
         favAdd:'Ajouter aux favoris', favAdded:'Dans les favoris',
-        seoP: n=>`Ajoutez <strong>${esc(n)}</strong> à votre plan hebdomadaire avec <a href="/fr/">Meal-Planner.ro</a>.`,
         pageTitle: n=>`Recette ${esc(n)} – Ingrédients et Préparation | Meal-Planner.ro`,
         pageDesc: (n,o)=>`Recette de ${n} de ${o}: ingrédients et instructions étape par étape.`,
         heroDesc: o=>`Recette traditionnelle de ${esc(o)}.`,
@@ -2464,7 +2371,6 @@ const RECIPE_LANG = {
         addBtn: n=>`Zu meinem Plan hinzufügen`, relatedH: o=>`Weitere Rezepte aus ${esc(o)}`,
         cartAdded:'✓ Im Plan', cartOpen:'Plan erstellen', cartYours:'Deine Rezepte',
         favAdd:'Zu Favoriten speichern', favAdded:'In Favoriten',
-        seoP: n=>`Füge <strong>${esc(n)}</strong> zu deinem Wochenplan mit <a href="/de/">Meal-Planner.ro</a> hinzu.`,
         pageTitle: n=>`${esc(n)} Rezept – Zutaten & Zubereitung | Meal-Planner.ro`,
         pageDesc: (n,o)=>`${n} Rezept aus ${o}: Zutaten und Schritt-für-Schritt-Anleitung.`,
         heroDesc: o=>`Traditionelles Rezept aus ${esc(o)}.`,
@@ -2478,7 +2384,6 @@ const RECIPE_LANG = {
         addBtn: n=>`Adicionar ao meu plano`, relatedH: o=>`Mais receitas de ${esc(o)}`,
         cartAdded:'✓ No plano', cartOpen:'Montar meu plano', cartYours:'Suas receitas',
         favAdd:'Salvar nos favoritos', favAdded:'Nos favoritos',
-        seoP: n=>`Adicione <strong>${esc(n)}</strong> ao seu plano semanal com <a href="/pt/">Meal-Planner.ro</a>.`,
         pageTitle: n=>`Receita de ${esc(n)} – Ingredientes e Preparo | Meal-Planner.ro`,
         pageDesc: (n,o)=>`Receita de ${n} de ${o}: ingredientes e instruções passo a passo.`,
         heroDesc: o=>`Receita tradicional de ${esc(o)}.`,
@@ -2492,7 +2397,6 @@ const RECIPE_LANG = {
         addBtn: n=>`Добавить в мой план`, relatedH: o=>`Ещё рецепты из ${esc(o)}`,
         cartAdded:'✓ В плане', cartOpen:'Собрать план', cartYours:'Ваши рецепты',
         favAdd:'В избранное', favAdded:'В избранном',
-        seoP: n=>`Добавьте <strong>${esc(n)}</strong> в свой план на неделю с <a href="/ru/">Meal-Planner.ro</a>.`,
         pageTitle: n=>`Рецепт ${esc(n)} – Ингредиенты и приготовление | Meal-Planner.ro`,
         pageDesc: (n,o)=>`Рецепт ${n} из ${o}: ингредиенты и пошаговые инструкции.`,
         heroDesc: o=>`Традиционный рецепт из ${esc(o)}.`,
@@ -2506,7 +2410,6 @@ const RECIPE_LANG = {
         addBtn: n=>`أضف إلى خطتي`, relatedH: o=>`المزيد من وصفات ${esc(o)}`,
         cartAdded:'✓ في الخطة', cartOpen:'أنشئ خطتي', cartYours:'وصفاتك',
         favAdd:'احفظ في المفضلة', favAdded:'في المفضلة',
-        seoP: n=>`أضف <strong>${esc(n)}</strong> إلى خطتك الأسبوعية مع <a href="/ar/">Meal-Planner.ro</a>.`,
         pageTitle: n=>`وصفة ${esc(n)} – المكونات وطريقة التحضير | Meal-Planner.ro`,
         pageDesc: (n,o)=>`وصفة ${n} من ${o}: مكونات وتعليمات خطوة بخطوة.`,
         heroDesc: o=>`وصفة تقليدية من ${esc(o)}.`,
@@ -2520,7 +2423,6 @@ const RECIPE_LANG = {
         addBtn: n=>`加入我的计划`, relatedH: o=>`更多来自${esc(o)}的食谱`,
         cartAdded:'✓ 已加入计划', cartOpen:'创建我的计划', cartYours:'你的食谱',
         favAdd:'收藏', favAdded:'已收藏',
-        seoP: n=>`将<strong>${esc(n)}</strong>添加到您的每周计划 <a href="/zh/">Meal-Planner.ro</a>。`,
         pageTitle: n=>`${esc(n)}食谱 – 食材和做法 | Meal-Planner.ro`,
         pageDesc: (n,o)=>`${n}食谱来自${o}：食材和步骤说明。`,
         heroDesc: o=>`来自${esc(o)}的传统食谱。`,
@@ -2534,7 +2436,6 @@ const RECIPE_LANG = {
         addBtn: n=>`プランに追加`, relatedH: o=>`${esc(o)}のその他のレシピ`,
         cartAdded:'✓ プランに追加済み', cartOpen:'プランを作る', cartYours:'あなたのレシピ',
         favAdd:'お気に入りに保存', favAdded:'お気に入り済み',
-        seoP: n=>`<strong>${esc(n)}</strong>を<a href="/ja/">Meal-Planner.ro</a>の週間プランに追加しましょう。`,
         pageTitle: n=>`${esc(n)}のレシピ – 材料と作り方 | Meal-Planner.ro`,
         pageDesc: (n,o)=>`${o}の${n}レシピ：材料とステップごとの作り方。`,
         heroDesc: o=>`${esc(o)}の伝統的なレシピ。`,
@@ -2548,7 +2449,6 @@ const RECIPE_LANG = {
         addBtn: n=>`मेरी योजना में जोड़ें`, relatedH: o=>`${esc(o)} की और रेसिपी`,
         cartAdded:'✓ योजना में', cartOpen:'योजना बनाएं', cartYours:'आपकी रेसिपी',
         favAdd:'पसंदीदा में सहेजें', favAdded:'पसंदीदा में',
-        seoP: n=>`<strong>${esc(n)}</strong> को <a href="/hi/">Meal-Planner.ro</a> के साथ अपनी साप्ताहिक योजना में जोड़ें।`,
         pageTitle: n=>`${esc(n)} रेसिपी – सामग्री और बनाने का तरीका | Meal-Planner.ro`,
         pageDesc: (n,o)=>`${o} से ${n} रेसिपी: सामग्री और चरण-दर-चरण निर्देश।`,
         heroDesc: o=>`${esc(o)} की पारंपरिक रेसिपी।`,
@@ -2562,7 +2462,6 @@ const RECIPE_LANG = {
         addBtn: n=>`Planıma ekle`, relatedH: o=>`${esc(o)} tarihinden daha fazla tarif`,
         cartAdded:'✓ Planda', cartOpen:'Planımı oluştur', cartYours:'Tarifleriniz',
         favAdd:'Favorilere kaydet', favAdded:'Favorilerde',
-        seoP: n=>`<strong>${esc(n)}</strong>'ı <a href="/tr/">Meal-Planner.ro</a> ile haftalık planınıza ekleyin.`,
         pageTitle: n=>`${esc(n)} Tarifi – Malzemeler ve Yapılışı | Meal-Planner.ro`,
         pageDesc: (n,o)=>`${o}'dan ${n} tarifi: malzemeler ve adım adım talimatlar.`,
         heroDesc: o=>`${esc(o)}'dan geleneksel tarif.`,
@@ -2576,7 +2475,6 @@ const RECIPE_LANG = {
         addBtn: n=>`Aggiungi al mio piano`, relatedH: o=>`Altre ricette da ${esc(o)}`,
         cartAdded:'✓ Nel piano', cartOpen:'Costruisci il piano', cartYours:'Le tue ricette',
         favAdd:'Salva nei preferiti', favAdded:'Nei preferiti',
-        seoP: n=>`Aggiungi <strong>${esc(n)}</strong> al tuo piano settimanale con <a href="/it/">Meal-Planner.ro</a>.`,
         pageTitle: n=>`Ricetta ${esc(n)} – Ingredienti e Preparazione | Meal-Planner.ro`,
         pageDesc: (n,o)=>`Ricetta di ${n} da ${o}: ingredienti e istruzioni passo dopo passo.`,
         heroDesc: o=>`Ricetta tradizionale da ${esc(o)}.`,
@@ -2590,7 +2488,6 @@ const RECIPE_LANG = {
         addBtn: n=>`내 플랜에 추가`, relatedH: o=>`${esc(o)}의 더 많은 레시피`,
         cartAdded:'✓ 플랜에 추가됨', cartOpen:'플랜 만들기', cartYours:'내 레시피',
         favAdd:'즐겨찾기에 저장', favAdded:'즐겨찾기됨',
-        seoP: n=>`<strong>${esc(n)}</strong>을(를) <a href="/ko/">Meal-Planner.ro</a>의 주간 플랜에 추가하세요.`,
         pageTitle: n=>`${esc(n)} 레시피 – 재료 및 만드는 법 | Meal-Planner.ro`,
         pageDesc: (n,o)=>`${o}의 ${n} 레시피: 재료와 단계별 지침.`,
         heroDesc: o=>`${esc(o)}의 전통 레시피.`,
@@ -4523,13 +4420,6 @@ const EXPLORER_I18N = {
   it:{ searchPh:'Cerca ricetta, ingrediente o cucina…', cuisineAll:'Tutte le cucine', mealAll:'Tutti i pasti', timeAll:'Qualsiasi durata', clear:'Cancella', t30:'≤ 30 min', t3060:'31–60 min', t60:'60+ min', addToPlan:'Aggiungi al piano', noResults:'Nessuna ricetta trovata. Prova un altro ingrediente o togli un filtro.', resultsCount:'{n} ricette', loadError:'Ricerca non caricata. Sfoglia le cucine qui sotto.', min:'min', h:'h', filters:'Filtri' },
   ko:{ searchPh:'레시피, 재료 또는 요리 검색…', cuisineAll:'모든 요리', mealAll:'모든 식사', timeAll:'모든 시간', clear:'지우기', t30:'30분 이하', t3060:'31–60분', t60:'60분 이상', addToPlan:'플랜에 추가', noResults:'레시피가 없습니다. 다른 재료를 시도하거나 필터를 제거하세요.', resultsCount:'레시피 {n}개', loadError:'검색을 불러오지 못했습니다. 아래 요리를 둘러보세요.', min:'분', h:'시간', filters:'필터' },
 };
-// Idle-state divider between the search and the static cuisine cards.
-const EXPLORE_BY_CUISINE = {
-  ro:'Sau explorează după bucătărie', en:'Or explore by cuisine', es:'O explora por cocina',
-  fr:'Ou explorez par cuisine', de:'Oder nach Küche entdecken', pt:'Ou explore por cozinha',
-  ru:'Или выберите по кухне', ar:'أو استكشف حسب المطبخ', zh:'或按菜系浏览', ja:'または料理ジャンルで探す',
-  hi:'या व्यंजन के अनुसार खोजें', tr:'Ya da mutfağa göre keşfedin', it:'Oppure esplora per cucina', ko:'또는 요리별로 둘러보기',
-};
 
 function recipeIndex(rl) {
   const lc   = rl.lc;
@@ -4775,99 +4665,85 @@ recipeCuisineHubHref = function (originEnKey, lc_code) {
 })();
 
 const CUISINE_HUB_LANG = {
-  ro: { prefix:'bucatarie',
-        breadLabel:'Bucătărie',
+  ro: { breadLabel:'Bucătărie',
         title:    (o)    => `Rețete din ${o} – Bucătărie autentică | Meal-Planner.ro`,
         desc:     (o, n) => `${n} rețete tradiționale din ${o}: ingrediente, mod de preparare pas cu pas și valori nutriționale. Adaugă-le în planificatorul tău săptămânal gratuit.`,
         h1:       (o)    => `Rețete din <span class="accent">${o}</span>`,
         intro:    (o, n) => `${n} rețete autentice din ${o}, cu ingrediente, mod de preparare și valori nutriționale. Toate pot fi adăugate în planul tău săptămânal gratuit.`,
         backLink: 'Înapoi la toate rețetele' },
-  en: { prefix:'cuisine',
-        breadLabel:'Cuisine',
+  en: { breadLabel:'Cuisine',
         title:    (o)    => `Recipes from ${o} – Authentic Dishes & Free Meal Plan | Meal-Planner.ro`,
         desc:     (o, n) => `${n} traditional recipes from ${o} with ingredients, step-by-step instructions and nutrition info. Add any of them to your free weekly meal planner.`,
         h1:       (o)    => `Recipes from <span class="accent">${o}</span>`,
         intro:    (o, n) => `${n} authentic recipes from ${o}, with ingredients, step-by-step instructions and nutrition info. Add any of them to your free weekly meal planner.`,
         backLink: 'Back to all recipes' },
-  es: { prefix:'cocina',
-        breadLabel:'Cocina',
+  es: { breadLabel:'Cocina',
         title:    (o)    => `Recetas de ${o} – Auténticas y Plan Gratuito | Meal-Planner.ro`,
         desc:     (o, n) => `${n} recetas tradicionales de ${o}: ingredientes, instrucciones paso a paso y nutrición. Añádelas a tu planificador semanal gratuito.`,
         h1:       (o)    => `Recetas de <span class="accent">${o}</span>`,
         intro:    (o, n) => `${n} recetas auténticas de ${o}, con ingredientes, instrucciones y valores nutricionales. Todas pueden añadirse a tu plan semanal gratuito.`,
         backLink: 'Volver a todas las recetas' },
-  fr: { prefix:'cuisine',
-        breadLabel:'Cuisine',
+  fr: { breadLabel:'Cuisine',
         title:    (o)    => `Recettes de ${o} – Plats Authentiques | Meal-Planner.ro`,
         desc:     (o, n) => `${n} recettes traditionnelles de ${o} : ingrédients, instructions étape par étape et valeurs nutritionnelles. Ajoutez-les à votre planificateur hebdomadaire gratuit.`,
         h1:       (o)    => `Recettes de <span class="accent">${o}</span>`,
         intro:    (o, n) => `${n} recettes authentiques de ${o}, avec ingrédients, instructions et valeurs nutritionnelles. Toutes peuvent être ajoutées à votre plan hebdomadaire gratuit.`,
         backLink: 'Retour à toutes les recettes' },
-  de: { prefix:'kueche',
-        breadLabel:'Küche',
+  de: { breadLabel:'Küche',
         title:    (o)    => `Rezepte aus ${o} – Authentische Gerichte & Wochenplan | Meal-Planner.ro`,
         desc:     (o, n) => `${n} traditionelle Rezepte aus ${o}: Zutaten, Schritt-für-Schritt-Anleitung und Nährwerte. Füge sie zu deinem kostenlosen Wochenplaner hinzu.`,
         h1:       (o)    => `Rezepte aus <span class="accent">${o}</span>`,
         intro:    (o, n) => `${n} authentische Rezepte aus ${o} mit Zutaten, Anleitung und Nährwerten. Alle können zu deinem kostenlosen Wochenplan hinzugefügt werden.`,
         backLink: 'Zurück zu allen Rezepten' },
-  pt: { prefix:'cozinha',
-        breadLabel:'Cozinha',
+  pt: { breadLabel:'Cozinha',
         title:    (o)    => `Receitas de ${o} – Pratos Autênticos | Meal-Planner.ro`,
         desc:     (o, n) => `${n} receitas tradicionais de ${o}: ingredientes, instruções passo a passo e nutrição. Adicione-as ao seu planejador semanal gratuito.`,
         h1:       (o)    => `Receitas de <span class="accent">${o}</span>`,
         intro:    (o, n) => `${n} receitas autênticas de ${o}, com ingredientes, instruções e valores nutricionais. Todas podem ser adicionadas ao seu plano semanal gratuito.`,
         backLink: 'Voltar a todas as receitas' },
-  ru: { prefix:'kuhnya',
-        breadLabel:'Кухня',
+  ru: { breadLabel:'Кухня',
         title:    (o)    => `Рецепты из ${o} – Аутентичные блюда | Meal-Planner.ro`,
         desc:     (o, n) => `${n} традиционных рецептов из ${o}: ингредиенты, пошаговые инструкции и пищевая ценность. Добавьте их в свой бесплатный планировщик меню на неделю.`,
         h1:       (o)    => `Рецепты из <span class="accent">${o}</span>`,
         intro:    (o, n) => `${n} аутентичных рецептов из ${o} — ингредиенты, инструкции и пищевая ценность. Каждый можно добавить в бесплатный планировщик меню на неделю.`,
         backLink: 'Назад ко всем рецептам' },
-  ar: { prefix:'matbakh',
-        breadLabel:'مطبخ',
+  ar: { breadLabel:'مطبخ',
         title:    (o)    => `وصفات من ${o} – أطباق أصيلة وخطة وجبات | Meal-Planner.ro`,
         desc:     (o, n) => `${n} وصفة تقليدية من ${o}: مكونات وتعليمات خطوة بخطوة وقيم غذائية. أضفها إلى مخطط الوجبات الأسبوعي المجاني.`,
         h1:       (o)    => `وصفات من <span class="accent">${o}</span>`,
         intro:    (o, n) => `${n} وصفة أصيلة من ${o} مع المكونات وطرق التحضير والقيم الغذائية. كل وصفة يمكن إضافتها إلى خطة الوجبات الأسبوعية المجانية.`,
         backLink: 'العودة إلى جميع الوصفات' },
-  zh: { prefix:'caixi',
-        breadLabel:'菜系',
+  zh: { breadLabel:'菜系',
         title:    (o)    => `${o}菜谱 – 正宗菜系与免费周计划 | Meal-Planner.ro`,
         desc:     (o, n) => `${n}道来自${o}的传统菜谱:食材、分步说明和营养信息。可加入免费每周饮食计划。`,
         h1:       (o)    => `来自<span class="accent">${o}</span>的菜谱`,
         intro:    (o, n) => `${n}道来自${o}的正宗菜谱,含食材、做法和营养信息。每道都可加入免费的每周饮食计划。`,
         backLink: '返回所有食谱' },
-  ja: { prefix:'ryori',
-        breadLabel:'料理',
+  ja: { breadLabel:'料理',
         title:    (o)    => `${o}のレシピ – 本格的な家庭料理と週間プラン | Meal-Planner.ro`,
         desc:     (o, n) => `${n}の伝統的な${o}のレシピ。材料、手順、栄養情報付き。無料の週間ミールプランナーに追加できます。`,
         h1:       (o)    => `<span class="accent">${o}</span>のレシピ`,
         intro:    (o, n) => `${n}の本格的な${o}のレシピ。材料、手順、栄養情報を掲載。すべて無料の週間ミールプランナーに追加できます。`,
         backLink: 'すべてのレシピに戻る' },
-  hi: { prefix:'vyanjan',
-        breadLabel:'व्यंजन',
+  hi: { breadLabel:'व्यंजन',
         title:    (o)    => `${o} की रेसिपी – पारंपरिक व्यंजन और मील प्लानर | Meal-Planner.ro`,
         desc:     (o, n) => `${n} पारंपरिक ${o} की रेसिपी: सामग्री, चरण-दर-चरण निर्देश और पोषण की जानकारी। मुफ्त साप्ताहिक मील प्लानर में जोड़ें।`,
         h1:       (o)    => `<span class="accent">${o}</span> की रेसिपी`,
         intro:    (o, n) => `${n} पारंपरिक ${o} की रेसिपी, सामग्री, निर्देश और पोषण की जानकारी के साथ। सभी को मुफ्त साप्ताहिक मील प्लानर में जोड़ा जा सकता है।`,
         backLink: 'सभी रेसिपी पर वापस' },
-  tr: { prefix:'mutfak',
-        breadLabel:'Mutfak',
+  tr: { breadLabel:'Mutfak',
         title:    (o)    => `${o} tarifleri – Otantik Yemekler | Meal-Planner.ro`,
         desc:     (o, n) => `${n} geleneksel ${o} tarifi: malzemeler, adım adım talimatlar ve besin değerleri. Ücretsiz haftalık öğün planlayıcınıza ekleyin.`,
         h1:       (o)    => `<span class="accent">${o}</span> tarifleri`,
         intro:    (o, n) => `${n} otantik ${o} tarifi — malzemeler, talimatlar ve besin değerleri. Her biri ücretsiz haftalık planlayıcıya eklenebilir.`,
         backLink: 'Tüm tariflere dön' },
-  it: { prefix:'cucina',
-        breadLabel:'Cucina',
+  it: { breadLabel:'Cucina',
         title:    (o)    => `Ricette di ${o} – Piatti Autentici e Piano Gratuito | Meal-Planner.ro`,
         desc:     (o, n) => `${n} ricette tradizionali di ${o}: ingredienti, istruzioni passo dopo passo e valori nutrizionali. Aggiungile al tuo piano settimanale gratuito.`,
         h1:       (o)    => `Ricette di <span class="accent">${o}</span>`,
         intro:    (o, n) => `${n} ricette autentiche di ${o}, con ingredienti, istruzioni e valori nutrizionali. Tutte possono essere aggiunte al tuo piano settimanale gratuito.`,
         backLink: 'Torna a tutte le ricette' },
-  ko: { prefix:'yori',
-        breadLabel:'요리',
+  ko: { breadLabel:'요리',
         title:    (o)    => `${o} 레시피 – 정통 요리와 주간 식단 | Meal-Planner.ro`,
         desc:     (o, n) => `${n}개의 전통 ${o} 레시피: 재료, 단계별 지침, 영양 정보 포함. 무료 주간 식단 플래너에 추가하세요.`,
         h1:       (o)    => `<span class="accent">${o}</span> 레시피`,

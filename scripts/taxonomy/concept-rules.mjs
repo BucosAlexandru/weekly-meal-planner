@@ -116,12 +116,6 @@ export const DESCRIPTORS = new Set([
   'boiling', 'cooking', 'strong', 'day-old', 'stale', 'crusty', 'ripe',
 ]);
 
-// Lines that are structural noise, not ingredients → never a concept.
-export const NON_INGREDIENT = new Set([
-  'sauce', 'paste', 'broth', 'oil', 'batter', 'dough', 'filling', 'topping',
-  'garnish', 'marinade', 'dressing', 'seasoning', 'spice', 'spices', 'mix',
-]);
-
 // ── Phase 3B.0 cleanup of auto-derived ids ───────────────────────────────────
 // Applied when an auto id is minted. MERGE/RENAME collapse "X or Y" collapses,
 // form-suffix duplicates, token-order duplicates and synonyms onto one clean
