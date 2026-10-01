@@ -5244,6 +5244,8 @@ function renderCuisineDiscover() {
     Turkey:'🇹🇷', Turkmenistan:'🇹🇲', UK:'🇬🇧', USA:'🇺🇸',
     Ukraine:'🇺🇦', 'United Kingdom':'🇬🇧', Uzbekistan:'🇺🇿',
     Venezuela:'🇻🇪', Vietnam:'🇻🇳',
+    Austria:'🇦🇹', Bangladesh:'🇧🇩', Bulgaria:'🇧🇬', Kenya:'🇰🇪', Myanmar:'🇲🇲',
+    Scotland:'🏴󠁧󠁢󠁳󠁣󠁴󠁿',
   };
   const CUISINE_ATMOSPHERE = {
     Italy:'mediterranean', Greece:'mediterranean', Spain:'mediterranean',

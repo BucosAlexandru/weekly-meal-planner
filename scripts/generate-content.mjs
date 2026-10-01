@@ -4330,6 +4330,7 @@ const COUNTRY_FLAG = {
   Turkey: '🇹🇷', Turkmenistan: '🇹🇲', UK: '🇬🇧', USA: '🇺🇸',
   Ukraine: '🇺🇦', 'United Kingdom': '🇬🇧', Uzbekistan: '🇺🇿',
   Venezuela: '🇻🇪', Vietnam: '🇻🇳',
+  Bangladesh: '🇧🇩', Bulgaria: '🇧🇬', Kenya: '🇰🇪', Myanmar: '🇲🇲',
 };
 
 /* ════════════════════════════════════════════════════════════════
