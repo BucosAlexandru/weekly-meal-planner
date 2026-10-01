@@ -317,6 +317,33 @@ document.addEventListener('DOMContentLoaded', () => {
   const currencySelUI = document.getElementById('currency-select');
   // ---------- PLAN MODE: 'meal' | 'day' | 'week' ----------
   window._planMode = window._planMode || 'week';
+  // ---------- Stage 4: optional Breakfast slot (Premium, week mode only) ----
+  // OFF by default — the 14-slot Lunch+Dinner week stays functionally
+  // unchanged. ON adds a third slot/day (d{n}b), gated behind the same
+  // window.hasUnlimited premium check used elsewhere in the app. Seeded ONCE
+  // here (synchronous, cheap localStorage peek — same key the full restore
+  // reads moments later) so the very first renderWeekCards() already knows
+  // how many rows to build per day card; from here on window._breakfastOn is
+  // live app state, owned by the toggle control and by savePlanToStorage's
+  // merge-write (never re-derived from storage again, so it never fights a
+  // user's in-session toggle across a language/mode-switch re-render).
+  window._breakfastOn = window._breakfastOn || peekBreakfastOnFromStorage();
+  const SLOT_KIND_ORDER = ['breakfast', 'lunch', 'dinner'];
+  const SLOT_META = {
+    breakfast: { suffix: 'b', emoji: '🍳', labelKey: 'pw.breakfast', phKey: 'placeholderB' },
+    lunch:     { suffix: 'l', emoji: '🍱', labelKey: 'pw.lunch',     phKey: 'placeholderL' },
+    dinner:    { suffix: 'c', emoji: '🌙', labelKey: 'pw.dinner',    phKey: 'placeholderD' },
+  };
+  // Single source of truth for "which slot kinds exist in the current plan" —
+  // replaces the ~8 literal ['l','c'] arrays the Stage 4A audit inventoried.
+  // Breakfast-first order keeps day-chronological order wherever this feeds
+  // UI/PDF row order.
+  function activeSlotKinds() {
+    return window._breakfastOn ? SLOT_KIND_ORDER : ['lunch', 'dinner'];
+  }
+  function activeSlotSuffixes() {
+    return activeSlotKinds().map(k => SLOT_META[k].suffix);
+  }
 
   function t(key) {
     return (i18n[lang] && i18n[lang][key]) || (i18n['en'] && i18n['en'][key]) || key;
@@ -432,14 +459,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const weekdays = (i18n[lang] && i18n[lang].weekdays) || i18n.en.weekdays;
 
     const mealSlot = (idx, kind) => {
-      const inputId = `d${idx + 1}${kind === 'lunch' ? 'l' : 'c'}`;
-      const emoji   = kind === 'lunch' ? '🍱' : '🌙';
-      const label   = kind === 'lunch' ? t('pw.lunch') : t('pw.dinner');
-      const ph      = kind === 'lunch' ? t('placeholderL') : t('placeholderD');
+      const meta    = SLOT_META[kind];
+      const inputId = `d${idx + 1}${meta.suffix}`;
+      const emoji   = meta.emoji;
+      const label   = t(meta.labelKey);
+      const ph      = t(meta.phKey);
       const dayName = weekdays[idx];
       const rerollLabel = `${t('pw.reroll')} — ${dayName}, ${label}`;
       const removeLabel = `${t('pw.remove')} — ${dayName}, ${label}`;
-      const addLabel    = kind === 'lunch' ? t('pw.addLunch') : t('pw.addDinner');
+      // pw.addBreakfast / pw.addLunch / pw.addDinner
+      const addLabel    = t(`pw.add${kind[0].toUpperCase()}${kind.slice(1)}`);
       // The pre-created #rmeta-… div is picked up by updateAllRecipeMeta() (it
       // looks the id up before appending next to the input), so the meta chips
       // land BELOW the input instead of inside the .input-group.
@@ -499,8 +528,7 @@ document.addEventListener('DOMContentLoaded', () => {
               <span class="pw-day-name">${day}</span>
               <span class="pw-day-cost" id="pw-day-cost-${idx + 1}"></span>
             </div>
-            ${mealSlot(idx, 'lunch')}
-            ${mealSlot(idx, 'dinner')}
+            ${activeSlotKinds().map(kind => mealSlot(idx, kind)).join('')}
           </div>`).join('')}
       </div>`;
 
@@ -550,7 +578,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const cuisines = new Set();
     for (let d = 1; d <= 7; d++) {
       let dayCost = 0, dayHasMeal = false;
-      ['l', 'c'].forEach(sfx => {
+      activeSlotSuffixes().forEach(sfx => {
         const inp = document.getElementById(`d${d}${sfx}`);
         const val = inp?.value.trim() || '';
         if (!val) return;
@@ -661,7 +689,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function recipeIdsInPlan() {
     const used = new Set();
     for (let d = 1; d <= 7; d++) {
-      ['l', 'c'].forEach(sfx => {
+      activeSlotSuffixes().forEach(sfx => {
         const inp = document.getElementById(`d${d}${sfx}`);
         if (!inp?.value.trim()) return;
         const rec = getRecipeByInput(inp);
@@ -711,7 +739,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Sprint 2 — Final analytics completion. Fires only after a real reroll
     // (both early returns above — empty slot, exhausted pool — already
     // exited before this point, so this line is reached only on success).
-    if (window.mpTrack) window.mpTrack('planner_reroll', { slot_type: inputId.endsWith('l') ? 'lunch' : 'dinner' });
+    if (window.mpTrack) window.mpTrack('planner_reroll', { slot_type: slotForInputId(inputId) });
     const oldName = getRecipeText(current, lang) || extractRecipeName(prevValue) || prevValue;
     showChangeToast({
       inputId,
@@ -735,7 +763,7 @@ document.addEventListener('DOMContentLoaded', () => {
     setSlotValue(input, '');
     // Sprint 2 — Final analytics completion. Fires only when a filled slot
     // was actually cleared (the empty-slot early return above already exited).
-    if (window.mpTrack) window.mpTrack('planner_recipe_removed', { slot_type: inputId.endsWith('l') ? 'lunch' : 'dinner' });
+    if (window.mpTrack) window.mpTrack('planner_recipe_removed', { slot_type: slotForInputId(inputId) });
     const name = getRecipeText(rec, lang) || extractRecipeName(prevValue) || prevValue;
     showChangeToast({
       inputId,
@@ -774,7 +802,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!btn) return;
     let hasAny = false;
     for (let d = 1; d <= 7 && !hasAny; d++) {
-      hasAny = ['l', 'c'].some(sfx =>
+      hasAny = activeSlotSuffixes().some(sfx =>
         !!document.getElementById(`d${d}${sfx}`)?.value.trim());
     }
     btn.classList.toggle('pw-hidden', !hasAny);
@@ -807,7 +835,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function pwSnapshotPlan() {
     const snap = [];
     for (let d = 1; d <= 7; d++) {
-      ['l', 'c'].forEach(sfx => {
+      activeSlotSuffixes().forEach(sfx => {
         const input = document.getElementById(`d${d}${sfx}`);
         if (input) snap.push({ inputId: input.id, prevValue: input.value, prevRecipeId: input.dataset.recipeId || null });
       });
@@ -912,7 +940,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const map = new Map();
     const weekdays = (i18n[lang] && i18n[lang].weekdays) || i18n.en.weekdays;
     for (let d = 1; d <= 7; d++) {
-      ['l', 'c'].forEach(sfx => {
+      activeSlotSuffixes().forEach(sfx => {
         const inp = document.getElementById(`d${d}${sfx}`);
         if (!inp?.value.trim()) return;
         const rec = getRecipeByInput(inp);
@@ -1008,12 +1036,14 @@ document.addEventListener('DOMContentLoaded', () => {
     // sheet under the same 700px threshold the card grid uses.
     backdrop.classList.toggle('pw-picker--sheet', window.matchMedia('(max-width: 699px)').matches);
 
-    // d{n}l / d{n}c → day 1-7 + lunch/dinner, reusing the Day 1 i18n keys.
+    // d{n}l / d{n}c / d{n}b → day 1-7 + breakfast/lunch/dinner, reusing the
+    // Day 1 i18n keys (Stage 4: slotForInputId is the one shared 3-way map —
+    // see mealEligibility.js).
     const day = parseInt(inputId.slice(1), 10);
-    const kind = inputId.endsWith('l') ? 'lunch' : 'dinner';
+    const kind = slotForInputId(inputId);
     const weekdays = (i18n[lang] && i18n[lang].weekdays) || i18n.en.weekdays;
     document.getElementById('pw-picker-title').textContent =
-      `${weekdays[day - 1] || ''} · ${kind === 'lunch' ? t('pw.lunch') : t('pw.dinner')}`;
+      `${weekdays[day - 1] || ''} · ${t(SLOT_META[kind].labelKey)}`;
 
     const search = document.getElementById('pw-picker-search');
     search.value = '';
@@ -1251,7 +1281,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Sprint 2 — Final analytics completion. Fires only on a genuine
         // replace of an already-filled slot (guarded by wasFilled above and
         // the newText !== prevValue check on the outer if).
-        if (window.mpTrack) window.mpTrack('planner_recipe_changed', { slot_type: st.inputId.endsWith('l') ? 'lunch' : 'dinner' });
+        if (window.mpTrack) window.mpTrack('planner_recipe_changed', { slot_type: slotForInputId(st.inputId) });
         // Replace: old → new with honest deltas (brain spec §2).
         const oldName = getRecipeText(prevRec, lang) || extractRecipeName(prevValue) || prevValue;
         showChangeToast({
@@ -1268,7 +1298,7 @@ document.addEventListener('DOMContentLoaded', () => {
       } else {
         // Sprint 2 — Final analytics completion. Fires only when a
         // previously-empty slot is genuinely filled for the first time.
-        if (window.mpTrack) window.mpTrack('planner_empty_slot_added', { slot_type: st.inputId.endsWith('l') ? 'lunch' : 'dinner' });
+        if (window.mpTrack) window.mpTrack('planner_empty_slot_added', { slot_type: slotForInputId(st.inputId) });
         // Add: name + cost added — no new i18n key needed; undo (prevValue
         // '') restores the empty slot through the same mechanism.
         showChangeToast({
@@ -1422,11 +1452,16 @@ document.addEventListener('DOMContentLoaded', () => {
   // also lunch-eligible in the current catalogue, the reverse is not true).
   const lunchPool  = await getGenerationPool('lunch');
   const dinnerPool = await getGenerationPool('dinner');
+  // Stage 4: fetched only when Breakfast is on (week mode's own flag) — never
+  // costs 'meal'/'day' modes, which stay untouched by Breakfast entirely.
+  const breakfastPool = window._breakfastOn ? await getGenerationPool('breakfast') : [];
 
   const mode = window._planMode;
-  const havePool = mode === 'meal' ? lunchPool.length > 0 : (lunchPool.length > 0 || dinnerPool.length > 0);
+  const havePool = mode === 'meal' ? lunchPool.length > 0
+    : mode === 'day' ? (lunchPool.length > 0 || dinnerPool.length > 0)
+    : (lunchPool.length > 0 || dinnerPool.length > 0 || (window._breakfastOn && breakfastPool.length > 0));
   if (!havePool) {
-    console.warn("Random menu: pool too small", { lunch: lunchPool.length, dinner: dinnerPool.length });
+    console.warn("Random menu: pool too small", { lunch: lunchPool.length, dinner: dinnerPool.length, breakfast: breakfastPool.length });
     return false; // signal failure so plan_generated is NOT counted
   }
 
@@ -1460,29 +1495,43 @@ document.addEventListener('DOMContentLoaded', () => {
     writeSlot(lunchInput, picks[0]);
     writeSlot(dinnerInput, picks[1]);
   } else {
-    // Full week — 7 days × lunch + dinner.
+    // Full week — 7 days × active slot kinds (Lunch+Dinner always; +
+    // Breakfast too when window._breakfastOn — Stage 4).
     // §2b (8 iul): Generate produces a FRESH week — fills ALL slots, not just
     // empty ones. The old "preserve manual edits by skipping filled slots"
     // rule made regeneration impossible (Generate on a full plan did nothing
     // — producer bug report). Manual work is now protected by REVERSIBILITY:
     // the bulk-undo toast restores the entire previous plan in one tap.
+    const kinds = activeSlotKinds();
+    const poolByKind = { breakfast: breakfastPool, lunch: lunchPool, dinner: dinnerPool };
     const emptySlots = [];
     for (let i = 0; i < 7; i++) {
-      const l = document.getElementById(`d${i+1}l`);
-      const c = document.getElementById(`d${i+1}c`);
-      if (l && (!keepFilled || !l.value.trim())) emptySlots.push(l);
-      if (c && (!keepFilled || !c.value.trim())) emptySlots.push(c);
+      kinds.forEach(kind => {
+        const el = document.getElementById(`d${i + 1}${SLOT_META[kind].suffix}`);
+        if (el && (!keepFilled || !el.value.trim())) emptySlots.push(el);
+      });
     }
     // Feasibility: keep very-long recipes off weekday slots (days 1–5) so the
     // default week is realistic for an average household; allow them only on
-    // the weekend (days 6–7), where there's time for a project recipe.
+    // the weekend (days 6–7), where there's time for a project recipe. Same
+    // ceiling for Breakfast as for Lunch/Dinner — measured feasible (Stage 4A
+    // audit §5: 38 of 41 main breakfast recipes are ≤75 min).
     const WEEKDAY_MAX_MIN = 75;
     const dayOfSlot = el => parseInt((el.id.match(/^d(\d)/) || [])[1], 10) || 1;
     const maxTimes = emptySlots.map(el => (dayOfSlot(el) >= 6 ? Infinity : WEEKDAY_MAX_MIN));
-    const slotPools = emptySlots.map(el => (el.id.endsWith('l') ? lunchPool : dinnerPool));
+    // One shared smartPickWeek pass across every active kind — diversity
+    // (max 2/country, max 3 pasta, max 4 heavy-meat) is tracked across the
+    // whole week's meals together, same as today's existing Lunch+Dinner
+    // behavior (they already share one pass, not two) — Breakfast joins that
+    // same pass rather than getting a separate diversity budget. Per-position
+    // HARD eligibility is untouched: each slot only ever draws from its own
+    // slot's pool (poolByKind), never a merged one.
+    const slotPools = emptySlots.map(el => poolByKind[slotForInputId(el.id)]);
     const picks = smartPickWeek(slotPools, emptySlots.length, maxTimes);
     emptySlots.forEach((inp, i) => {
       if (picks[i]) writeSlot(inp, picks[i]);
+      // else: pool exhausted for this slot (e.g. a narrow filter + Breakfast,
+      // Stage 4A §8) — left empty, never relaxed past HARD eligibility.
     });
   }
 
@@ -1506,16 +1555,23 @@ document.addEventListener('DOMContentLoaded', () => {
   function collectMeals() {
     // Day names come from i18n (index-based), NOT from the table DOM — week
     // mode renders day cards (no <tr> rows) since the planner redesign, and
-    // the inputs d{n}l / d{n}c are the single source of truth in every mode.
-    // Stage 3.2: lunchId/dinnerId (from dataset.recipeId, possibly null) ride
-    // alongside the display text so every consumer (PDF, shopping list) can
-    // resolve id-first instead of re-parsing the text.
+    // the inputs d{n}l / d{n}c / d{n}b are the single source of truth in
+    // every mode. Stage 3.2: lunchId/dinnerId (from dataset.recipeId,
+    // possibly null) ride alongside the display text so every consumer (PDF,
+    // shopping list) can resolve id-first instead of re-parsing the text.
+    // Stage 4: breakfast/breakfastId are ALWAYS present (empty string/null
+    // when off or unfilled — d{n}b simply doesn't exist in the DOM while
+    // Breakfast is off, same fallback as lunch/dinner on a missing input) so
+    // every consumer can treat all three the same shape, no branch needed.
     const weekdays = (i18n[lang] && i18n[lang].weekdays) || i18n.en.weekdays;
     return weekdays.map((day, i) => {
+      const breakfastInp = document.getElementById(`d${i+1}b`);
       const lunchInp = document.getElementById(`d${i+1}l`);
       const dinnerInp = document.getElementById(`d${i+1}c`);
       return {
         day,
+        breakfast: breakfastInp?.value.trim() || '',
+        breakfastId: breakfastInp?.dataset.recipeId || null,
         lunch: lunchInp?.value.trim() || '',
         lunchId: lunchInp?.dataset.recipeId || null,
         dinner: dinnerInp?.value.trim() || '',
@@ -1653,20 +1709,28 @@ document.addEventListener('DOMContentLoaded', () => {
     const abbrev = (s) => String(s || '').trim().slice(0, 3);
     const localizedDays = DAY_ABBREV[lang] || fullDays.map(abbrev);
 
-    // Per-day real cost (sum of the two meals' costRon) + weekly total for
+    // Per-day real cost (sum of the day's meals' costRon) + weekly total for
     // the hero — replaces the uniform "~€5 everywhere" impression with the
-    // actual budget of the plan.
+    // actual budget of the plan. Stage 4: `breakfast` rides alongside
+    // lunch/dinner in every day object (null when off/unfilled, same as
+    // collectMeals()) so the server picks a 2- or 3-column day row from
+    // `hasBreakfast` below rather than from each day's shape.
     let weekCostRon = 0;
     const days = visibleMeals.map((m, i) => {
-      const dayRon = costRonOf(m.lunch, m.lunchId) + costRonOf(m.dinner, m.dinnerId);
+      const dayRon = costRonOf(m.breakfast, m.breakfastId) + costRonOf(m.lunch, m.lunchId) + costRonOf(m.dinner, m.dinnerId);
       weekCostRon += dayRon;
       return {
         day: localizedDays[i] || `Day ${i + 1}`,
+        breakfast: mealPayload(m.breakfast, m.breakfastId),
         lunch: mealPayload(m.lunch, m.lunchId),
         dinner: mealPayload(m.dinner, m.dinnerId),
         costLabel: fmtCost(dayRon),
       };
-    }).filter(d => (d.lunch && d.lunch.name) || (d.dinner && d.dinner.name));
+    }).filter(d => (d.breakfast && d.breakfast.name) || (d.lunch && d.lunch.name) || (d.dinner && d.dinner.name));
+    // Single document-wide layout switch (Stage 4A audit recommendation): the
+    // server picks ONE 2-col or 3-col day-row template for the whole PDF
+    // rather than branching per day, which keeps pagination math uniform.
+    const hasBreakfast = days.some(d => d.breakfast && d.breakfast.name);
 
     // Hybrid-B: pass aligned { en, loc } pairs, not a flat EN list. The EN
     // string drives parsing/canonical/category/quantity math (English-only
@@ -1677,7 +1741,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // when the active locale lacks that line (keeps indices in lockstep).
     const ingredientPairs = [];
     visibleMeals.forEach(m => {
-      [[m.lunch, m.lunchId], [m.dinner, m.dinnerId]].filter(([text]) => text).forEach(([text, id]) => {
+      [[m.breakfast, m.breakfastId], [m.lunch, m.lunchId], [m.dinner, m.dinnerId]].filter(([text]) => text).forEach(([text, id]) => {
         const r = findRecipe(text, id);
         if (!r) return;
         const enArr  = r.ingredients?.en || r.ingredients?.ro || [];
@@ -1735,7 +1799,7 @@ document.addEventListener('DOMContentLoaded', () => {
       ro: {
         sectionPlan:'Săptămâna, zi cu zi',
         weekAtGlance:'Săptămâna dintr-o privire', dayByDay:'Zi cu zi',
-        lunch:'PRÂNZ', dinner:'CINĂ',
+        breakfast:'MIC DEJUN', lunch:'PRÂNZ', dinner:'CINĂ',
         stats:{ days:'ZILE', meals:'MESE', avg:'MED', cuisines:'BUCĂTĂRII', cost:'COST' },
         mealsSuffix:'mese', minTotal:'min total', moreSuffix:'altele',
         tipLabel:'SFAT', tipText:'Ingredientele sunt grupate pe rafturi — bifează pe măsură ce cumperi. Produsele proaspete și carnea la final pentru a păstra prospețimea.',
@@ -1744,7 +1808,7 @@ document.addEventListener('DOMContentLoaded', () => {
       en: {
         sectionPlan:'The week, day by day',
         weekAtGlance:'The week at a glance', dayByDay:'Day by day',
-        lunch:'LUNCH', dinner:'DINNER',
+        breakfast:'BREAKFAST', lunch:'LUNCH', dinner:'DINNER',
         stats:{ days:'DAYS', meals:'MEALS', avg:'AVG', cuisines:'CUISINES', cost:'BUDGET' },
         mealsSuffix:'meals', minTotal:'min total', moreSuffix:'more',
         tipLabel:'PRO TIP', tipText:'Items grouped by aisle — tick boxes as you shop. Produce and proteins last keeps everything fresh.',
@@ -1753,7 +1817,7 @@ document.addEventListener('DOMContentLoaded', () => {
       es: {
         sectionPlan:'La semana, día a día',
         weekAtGlance:'La semana de un vistazo', dayByDay:'Día a día',
-        lunch:'ALMUERZO', dinner:'CENA',
+        breakfast:'DESAYUNO', lunch:'ALMUERZO', dinner:'CENA',
         stats:{ days:'DÍAS', meals:'COMIDAS', avg:'MED', cuisines:'COCINAS', cost:'COSTE' },
         mealsSuffix:'comidas', minTotal:'min total', moreSuffix:'más',
         tipLabel:'CONSEJO', tipText:'Ingredientes agrupados por pasillo — marca al comprar. Productos frescos y proteínas al final mantienen todo fresco.',
@@ -1762,7 +1826,7 @@ document.addEventListener('DOMContentLoaded', () => {
       fr: {
         sectionPlan:'La semaine, jour par jour',
         weekAtGlance:'La semaine en un coup d\'œil', dayByDay:'Jour par jour',
-        lunch:'DÉJEUNER', dinner:'DÎNER',
+        breakfast:'PETIT-DÉJEUNER', lunch:'DÉJEUNER', dinner:'DÎNER',
         stats:{ days:'JOURS', meals:'REPAS', avg:'MOY', cuisines:'CUISINES', cost:'COÛT' },
         mealsSuffix:'repas', minTotal:'min total', moreSuffix:'autres',
         tipLabel:'ASTUCE', tipText:'Ingrédients regroupés par rayon — cochez en faisant les courses. Légumes frais et protéines en dernier pour la fraîcheur.',
@@ -1771,7 +1835,7 @@ document.addEventListener('DOMContentLoaded', () => {
       de: {
         sectionPlan:'Die Woche, Tag für Tag',
         weekAtGlance:'Die Woche auf einen Blick', dayByDay:'Tag für Tag',
-        lunch:'MITTAG', dinner:'ABEND',
+        breakfast:'FRÜHSTÜCK', lunch:'MITTAG', dinner:'ABEND',
         stats:{ days:'TAGE', meals:'MAHLZ.', avg:'Ø', cuisines:'KÜCHEN', cost:'KOSTEN' },
         mealsSuffix:'Mahlzeiten', minTotal:'Min gesamt', moreSuffix:'weitere',
         tipLabel:'TIPP', tipText:'Zutaten nach Supermarkt-Gang gruppiert — beim Einkauf abhaken. Frisches und Eiweiß zuletzt für maximale Frische.',
@@ -1780,7 +1844,7 @@ document.addEventListener('DOMContentLoaded', () => {
       pt: {
         sectionPlan:'A semana, dia a dia',
         weekAtGlance:'A semana num relance', dayByDay:'Dia a dia',
-        lunch:'ALMOÇO', dinner:'JANTAR',
+        breakfast:'CAFÉ DA MANHÃ', lunch:'ALMOÇO', dinner:'JANTAR',
         stats:{ days:'DIAS', meals:'REFEIÇÕES', avg:'MED', cuisines:'COZINHAS', cost:'CUSTO' },
         mealsSuffix:'refeições', minTotal:'min total', moreSuffix:'mais',
         tipLabel:'DICA', tipText:'Ingredientes agrupados por corredor — marque ao comprar. Frescos e proteínas por último para máxima frescura.',
@@ -1789,7 +1853,7 @@ document.addEventListener('DOMContentLoaded', () => {
       ru: {
         sectionPlan:'Неделя, день за днём',
         weekAtGlance:'Неделя одним взглядом', dayByDay:'День за днём',
-        lunch:'ОБЕД', dinner:'УЖИН',
+        breakfast:'ЗАВТРАК', lunch:'ОБЕД', dinner:'УЖИН',
         stats:{ days:'ДНИ', meals:'БЛЮДА', avg:'СРЕД', cuisines:'КУХНИ', cost:'БЮДЖЕТ' },
         mealsSuffix:'блюд', minTotal:'мин всего', moreSuffix:'ещё',
         tipLabel:'СОВЕТ', tipText:'Продукты сгруппированы по отделам — отмечайте при покупке. Свежие и белки в конце для максимальной свежести.',
@@ -1798,7 +1862,7 @@ document.addEventListener('DOMContentLoaded', () => {
       it: {
         sectionPlan:'La settimana, giorno per giorno',
         weekAtGlance:'La settimana a colpo d\'occhio', dayByDay:'Giorno per giorno',
-        lunch:'PRANZO', dinner:'CENA',
+        breakfast:'COLAZIONE', lunch:'PRANZO', dinner:'CENA',
         stats:{ days:'GIORNI', meals:'PASTI', avg:'MED', cuisines:'CUCINE', cost:'COSTO' },
         mealsSuffix:'pasti', minTotal:'min totali', moreSuffix:'altri',
         tipLabel:'CONSIGLIO', tipText:'Ingredienti raggruppati per corsia — spunta mentre fai la spesa. Freschi e proteine per ultimi per la massima freschezza.',
@@ -1807,7 +1871,7 @@ document.addEventListener('DOMContentLoaded', () => {
       tr: {
         sectionPlan:'Hafta, gün gün',
         weekAtGlance:'Bir bakışta hafta', dayByDay:'Gün gün',
-        lunch:'ÖĞLE', dinner:'AKŞAM',
+        breakfast:'KAHVALTI', lunch:'ÖĞLE', dinner:'AKŞAM',
         stats:{ days:'GÜN', meals:'YEMEK', avg:'ORT', cuisines:'MUTFAK', cost:'MALİYET' },
         mealsSuffix:'yemek', minTotal:'dk toplam', moreSuffix:'daha',
         tipLabel:'İPUCU', tipText:'Malzemeler reyon bazlı gruplandı — alışveriş ederken işaretle. Taze ürünler ve protein en son için maksimum tazelik.',
@@ -1816,7 +1880,7 @@ document.addEventListener('DOMContentLoaded', () => {
       ar: {
         sectionPlan:'الأسبوع، يوم بيوم',
         weekAtGlance:'الأسبوع في لمحة', dayByDay:'يومًا بيوم',
-        lunch:'الغداء', dinner:'العشاء',
+        breakfast:'فطور', lunch:'الغداء', dinner:'العشاء',
         stats:{ days:'أيام', meals:'وجبات', avg:'متوسط', cuisines:'مطابخ', cost:'التكلفة' },
         mealsSuffix:'وجبات', minTotal:'دقيقة إجمالًا', moreSuffix:'أخرى',
         tipLabel:'نصيحة', tipText:'المكونات مُجمَّعة حسب رواق المتجر — اشطب أثناء التسوق. الطازج والبروتين في الأخير للحفاظ على النضارة.',
@@ -1825,7 +1889,7 @@ document.addEventListener('DOMContentLoaded', () => {
       zh: {
         sectionPlan:'一周食谱',
         weekAtGlance:'一周概览', dayByDay:'逐日安排',
-        lunch:'午餐', dinner:'晚餐',
+        breakfast:'早餐', lunch:'午餐', dinner:'晚餐',
         stats:{ days:'天', meals:'餐', avg:'均', cuisines:'菜系', cost:'花费' },
         mealsSuffix:'餐', minTotal:'分钟总计', moreSuffix:'更多',
         tipLabel:'小贴士', tipText:'食材按超市货架分组——边购物边打勾。生鲜和蛋白类最后买，保证新鲜。',
@@ -1834,7 +1898,7 @@ document.addEventListener('DOMContentLoaded', () => {
       ja: {
         sectionPlan:'今週の献立',
         weekAtGlance:'今週の一覧', dayByDay:'日ごとの献立',
-        lunch:'昼食', dinner:'夕食',
+        breakfast:'朝食', lunch:'昼食', dinner:'夕食',
         stats:{ days:'日', meals:'食', avg:'平均', cuisines:'料理', cost:'費用' },
         mealsSuffix:'食', minTotal:'分合計', moreSuffix:'その他',
         tipLabel:'ヒント', tipText:'食材は売場別にグループ化。買い物中にチェック。生鮮品とタンパク質は最後で鮮度キープ。',
@@ -1843,7 +1907,7 @@ document.addEventListener('DOMContentLoaded', () => {
       hi: {
         sectionPlan:'सप्ताह, दिन-प्रतिदिन',
         weekAtGlance:'एक नज़र में सप्ताह', dayByDay:'दिन-प्रतिदिन',
-        lunch:'दोपहर', dinner:'रात्रि',
+        breakfast:'नाश्ता', lunch:'दोपहर', dinner:'रात्रि',
         stats:{ days:'दिन', meals:'भोजन', avg:'औसत', cuisines:'व्यंजन', cost:'लागत' },
         mealsSuffix:'भोजन', minTotal:'मि कुल', moreSuffix:'और',
         tipLabel:'सुझाव', tipText:'सामग्री अलमारी के अनुसार समूहित — खरीदते समय निशान लगाएँ। ताज़ा सामान और प्रोटीन अंत में लें ताकि सब ताज़ा रहे।',
@@ -1852,7 +1916,7 @@ document.addEventListener('DOMContentLoaded', () => {
       ko: {
         sectionPlan:'한 주 식단',
         weekAtGlance:'한눈에 보는 한 주', dayByDay:'하루하루',
-        lunch:'점심', dinner:'저녁',
+        breakfast:'아침', lunch:'점심', dinner:'저녁',
         stats:{ days:'일', meals:'식사', avg:'평균', cuisines:'요리', cost:'비용' },
         mealsSuffix:'식', minTotal:'분 합계', moreSuffix:'개 더',
         tipLabel:'팁', tipText:'재료는 매대별로 그룹화 — 장보면서 체크. 신선식품과 단백질은 마지막에 담으면 신선도 유지.',
@@ -1865,6 +1929,7 @@ document.addEventListener('DOMContentLoaded', () => {
       weekAtGlance:   L.weekAtGlance,
       dayByDay:       L.dayByDay,
       sectionShop:    lcStrings.shoppingList || 'Shopping list',
+      breakfast:      L.breakfast,
       lunch:          L.lunch,
       dinner:         L.dinner,
       ingredients:    lcStrings['col.ingredients']
@@ -1893,6 +1958,7 @@ document.addEventListener('DOMContentLoaded', () => {
       title:     lcStrings.title || 'Weekly Meal Plan',
       weekLabel: `${WEEK_OF[lang] || WEEK_OF.en} ${dateStr}`,
       days,
+      hasBreakfast,
       // Real weekly total for the hero stat strip (sum of the visible days'
       // meal costs). Null when no matched recipe carries a cost.
       weekCost: fmtCost(weekCostRon),
@@ -2278,7 +2344,10 @@ document.addEventListener('DOMContentLoaded', () => {
     meals.forEach(m => {
       // Stage 3.2: id-first (m.lunchId/m.dinnerId from collectMeals()'s
       // dataset.recipeId read), legacy name-fallback only when absent.
-      [[m.lunch, m.lunchId], [m.dinner, m.dinnerId]].forEach(([mealText, mealId]) => {
+      // Stage 4: m.breakfast/m.breakfastId are always present on the meal
+      // object (empty/null when off or unfilled) — the falsy-text guard
+      // below makes this a no-op exactly like an unfilled lunch/dinner slot.
+      [[m.breakfast, m.breakfastId], [m.lunch, m.lunchId], [m.dinner, m.dinnerId]].forEach(([mealText, mealId]) => {
         if (!mealText) return;
         const rec = (mealId && getRecipeById(mealId)) || getRecipeByName(mealText);
         if (!rec) return;
@@ -2417,7 +2486,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function updateAllRecipeMeta() {
     for (let day = 1; day <= 7; day++) {
-      ['l','c'].forEach(type => {
+      activeSlotSuffixes().forEach(type => {
         const input = document.getElementById(`d${day}${type}`);
         if (!input) return;
         // Day 2/3: filled slots show the 🎲/✕ actions (CSS keys off .pw-filled)
@@ -2454,7 +2523,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // through the same pipeline the ?autoplan= deep link uses (direct input
   // writes + one updateAllRecipeMeta + one updateShoppingList).
   //
-  // Shape: { v: 1, savedAt: <ms>, slots: { d1l: { recipeId, en, raw }, ... } }
+  // Shape: { v: 1, savedAt: <ms>, breakfastOn: <bool>, slots: { d1l: { recipeId, en, raw }, ... } }
   // — only non-empty slots. Stage 3.2: `recipeId` is the canonical id and is
   // now the primary identity on restore; `en` (the canonical EN recipe name)
   // stays as the legacy name-fallback key for entries saved before this
@@ -2465,6 +2534,28 @@ document.addEventListener('DOMContentLoaded', () => {
   // name resolution) gets `recipeId` written here — so a legacy entry
   // self-upgrades to the new shape the next time this runs. No expiry: a
   // week-old plan is exactly what a returning user wants to see.
+  //
+  // Stage 4: `breakfastOn` records whether Breakfast was enabled when this
+  // was saved — read synchronously at init (peekBreakfastOnFromStorage) so
+  // the very first card render already knows whether to build 3 rows/day. A
+  // historical plan has no `breakfastOn` field and no 'b'-suffixed slot keys
+  // → reads as false, restoring exactly as before Stage 4.
+  //
+  // MERGE, never replace: the write loop below only touches keys whose
+  // suffix is in the CURRENT activeSlotSuffixes(). When Breakfast is off,
+  // any 'b'-suffixed keys already in storage are copied over untouched. The
+  // pre-Stage-4 version rebuilt `slots` from scratch and did a wholesale
+  // `localStorage.setItem` every time — safe only because the DOM always had
+  // exactly the keys the writer expected. Once a 'b' key can exist while the
+  // DOM doesn't render a d{n}b input (Breakfast off), that same unconditional
+  // replace would silently erase saved breakfast picks on the very next
+  // Lunch/Dinner edit. This merge is what prevents that (Stage 4A audit §7).
+  function peekBreakfastOnFromStorage() {
+    try {
+      const data = JSON.parse(localStorage.getItem('mp:plan') || 'null');
+      return !!(data && data.v === 1 && data.breakfastOn);
+    } catch (_) { return false; }
+  }
   function savePlanToStorage() {
     // Only the week plan is persisted. 'meal'/'day' table modes reuse the same
     // d1l/d1c input ids, so saving there would clobber the stored week plan.
@@ -2474,19 +2565,21 @@ document.addEventListener('DOMContentLoaded', () => {
     // empty (mode switch back to week, language switch) — saving now would
     // wipe the very plan we're about to restore.
     if (window._pwRestorePending) return;
-    const slots = {};
-    let any = false;
+    let prev = null;
+    try { prev = JSON.parse(localStorage.getItem('mp:plan') || 'null'); } catch (_) {}
+    const slots = (prev && prev.v === 1 && prev.slots && typeof prev.slots === 'object')
+      ? { ...prev.slots } : {};
     for (let d = 1; d <= 7; d++) {
-      ['l', 'c'].forEach(sfx => {
+      activeSlotSuffixes().forEach(sfx => {
         const id = `d${d}${sfx}`;
         const inp = document.getElementById(id);
         const val = inp?.value.trim() || '';
-        if (!val) return;
-        any = true;
+        if (!val) { delete slots[id]; return; } // cleared in the DOM → cleared in storage too
         const rec = getRecipeByInput(inp);
         slots[id] = rec ? { recipeId: rec.id, en: rec.name?.en || rec.name?.ro, raw: val } : { raw: val };
       });
     }
+    const any = Object.keys(slots).length > 0; // includes inactive-kind (e.g. hidden breakfast) keys carried over above
     try {
       if (!any) {
         // Deep links (?autoplan= / ?meal=) apply on a 200–300 ms timer; the
@@ -2496,7 +2589,9 @@ document.addEventListener('DOMContentLoaded', () => {
         if (p.get('autoplan') || p.get('meal')) return;
         localStorage.removeItem('mp:plan'); // empty plan = clean storage
       } else {
-        localStorage.setItem('mp:plan', JSON.stringify({ v: 1, savedAt: Date.now(), slots }));
+        localStorage.setItem('mp:plan', JSON.stringify({
+          v: 1, savedAt: Date.now(), breakfastOn: !!window._breakfastOn, slots,
+        }));
       }
     } catch (_) { /* storage unavailable (private mode/quota) — plan stays DOM-only */ }
   }
@@ -2514,8 +2609,13 @@ document.addEventListener('DOMContentLoaded', () => {
     let data = null;
     try { data = JSON.parse(localStorage.getItem('mp:plan') || 'null'); } catch (_) {}
     if (!data || data.v !== 1 || !data.slots || typeof data.slots !== 'object') return;
+    // Stage 4: 'b' (breakfast) is a valid suffix alongside 'l'/'c' — purely
+    // additive, matches zero additional keys in any plan saved before Stage 4.
+    // Entries only ever apply to inputs that actually exist in the DOM (the
+    // `!inp` guard below), so a 'b' entry is a no-op while Breakfast is off —
+    // it stays in storage, untouched, for the next time Breakfast is enabled.
     const entries = Object.entries(data.slots)
-      .filter(([id, s]) => /^d[1-7][lc]$/.test(id) && s && (s.recipeId != null || s.en || s.raw));
+      .filter(([id, s]) => /^d[1-7][lcb]$/.test(id) && s && (s.recipeId != null || s.en || s.raw));
     if (!entries.length) return;
     // Flag BEFORE the first await (async body runs sync until then): the
     // mode-switch / observer recalcs that fire right after the re-render see
@@ -2637,6 +2737,7 @@ document.addEventListener('DOMContentLoaded', () => {
         updateAutoMenuBtn();
         updateShoppingList();
         updateExportSectionVisibility();
+        updateBreakfastToggleVisibility(); // Stage 4: week-mode-only control
         showCostEstimate(window._activeFilter);
       });
     });
@@ -2814,6 +2915,53 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     const cbEl = document.getElementById('budget-menu-toggle');
     if (cbEl) cbEl.checked = !!window.isBudgetMenu;
+
+    // ── Stage 4: Breakfast toggle (Premium, week mode only) ───────────────
+    // Create-once-then-resync, same pattern as the budget checkbox above.
+    // Free users see it disabled with an upsell link to pricing instead of a
+    // working control — window.hasUnlimited is re-checked server-side by
+    // every endpoint that matters (PDF export, chat/coach), this is UX only.
+    let breakfastWrap = document.getElementById('pw-breakfast-wrap');
+    if (!breakfastWrap) {
+      breakfastWrap = document.createElement('label');
+      breakfastWrap.id = 'pw-breakfast-wrap';
+      breakfastWrap.className = 'pw-breakfast-toggle';
+      const cb = document.createElement('input');
+      cb.type = 'checkbox';
+      cb.id = 'pw-breakfast-toggle';
+      const span = document.createElement('span');
+      span.className = 'pw-breakfast-toggle-label';
+      breakfastWrap.appendChild(cb);
+      breakfastWrap.appendChild(span);
+      cb.addEventListener('change', () => {
+        if (!window.hasUnlimited) {
+          cb.checked = false; // never actually enable for a free user
+          document.getElementById('pricing-section')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          return;
+        }
+        window._breakfastOn = cb.checked;
+        // Rebuild the day cards with 2 or 3 rows/day; renderWeekCards()'s own
+        // restorePlanFromStorage() call then pours back any previously-saved
+        // breakfast picks into the freshly-created (empty) d{n}b inputs —
+        // "turned back on restores, never regenerates" (Stage 4B spec).
+        renderTable();
+        updateAutoMenuBtn();
+        updateShoppingList();
+        showCostEstimate(window._activeFilter);
+      });
+      bar.appendChild(breakfastWrap);
+    }
+    const breakfastCb = document.getElementById('pw-breakfast-toggle');
+    if (breakfastCb) {
+      breakfastCb.checked = !!window._breakfastOn;
+      breakfastCb.disabled = !window.hasUnlimited;
+      breakfastWrap.classList.toggle('pw-locked', !window.hasUnlimited);
+    }
+    const breakfastLabel = breakfastWrap.querySelector('.pw-breakfast-toggle-label');
+    if (breakfastLabel) {
+      breakfastLabel.textContent = t('pw.breakfastToggle') + (window.hasUnlimited ? '' : ' 🔒');
+    }
+    updateBreakfastToggleVisibility();
 
     // ── Wire up input change → live shopping list + recipe meta ──
     document.querySelectorAll('#plan-table input, #plan-cards input').forEach(inp => {
@@ -6328,7 +6476,7 @@ if (verifyBtn && emailInput && resultDiv) {
         || (item && item.en ? findByName(item.en) : null);
       const emptySlots = [];
       for (let d = 1; d <= 7; d++) {
-        ['l', 'c'].forEach(sfx => {
+        activeSlotSuffixes().forEach(sfx => {
           const inp = document.getElementById(`d${d}${sfx}`);
           if (inp && !inp.value.trim()) emptySlots.push(inp);
         });
@@ -6371,6 +6519,18 @@ if (verifyBtn && emailInput && resultDiv) {
     exportSection.style.display = isWeek ? '' : 'none';
   }
   updateExportSectionVisibility();
+
+  // ---------- Stage 4: BREAKFAST TOGGLE VISIBILITY (week only) ----------
+  // 'meal'/'day' table modes never gain a Breakfast slot (Stage 4A §1) — the
+  // control itself only makes sense in week mode, so it's hidden rather than
+  // left visible-but-inert in the other two.
+  function updateBreakfastToggleVisibility() {
+    const wrap = document.getElementById('pw-breakfast-wrap');
+    if (!wrap) return;
+    const isWeek = (window._planMode || 'week') === 'week';
+    wrap.style.display = isWeek ? '' : 'none';
+  }
+  updateBreakfastToggleVisibility();
 
   // NOTE: hero-cta-btn listener is now attached inside renderPremiumHero()
   // (hero is rendered by applyTranslations below; the button doesn't exist here yet)

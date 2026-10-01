@@ -295,6 +295,72 @@ function check(bucket, pick, slot, label, iter, scenario) {
 }
 
 // ─────────────────────────────────────────────────────────────────────────
+// DIVERSITY INVARIANT (Stage 4B addendum, added after the duplicate-PDF
+// investigation). Protects the EXISTING `used`-Set generation behavior — the
+// live-browser + 12,000-plan audit found it already holds unconditionally;
+// this makes that guarantee an explicit, permanent assertion instead of an
+// untested emergent property, so a future change to smartPickWeek can't
+// silently reintroduce reuse without this gate catching it.
+//
+// Two separate mechanisms, never conflated by this code:
+//   - `mealSlots` (mealEligibility.js) is semantic ELIGIBILITY: which POOL a
+//     recipe may be drawn from for a given slot. HARD, never relaxed, tested
+//     by check() above. This section does not touch it.
+//   - `used` (inside smartPickWeek, this file's port + app.js's real one) is
+//     exact-recipe DIVERSITY: once a recipe object is picked anywhere in a
+//     call, every one of smartPickWeek's three fallback tiers still filters
+//     on `!used.has(r)`, so it can never be picked again in that same call.
+//     This is what this section tests.
+//
+// A duplicate recipeId is treated as an unconditional violation below, not a
+// conditional "only if a candidate was available" one: the current engine's
+// `used` Set has no bypass at ANY fallback tier, so it structurally cannot
+// reuse a recipe even when a position's pool is genuinely exhausted — the
+// correct degradation there is an unfilled slot (already measured by
+// `insufficientPool` above). "While sufficient eligible unused candidates
+// exist" is therefore equivalent, for this engine as it exists today, to
+// "always" — confirmed, not assumed: see the Budget+Breakfast case in 3d.
+// ─────────────────────────────────────────────────────────────────────────
+function newDiversityTracker(label) {
+  return { label, plansChecked: 0, plansWithWeekDuplicate: 0, plansWithSameDayDuplicate: 0, weekViolations: [], sameDayViolations: [] };
+}
+// `slotIds` is the same array already built by each caller to drive
+// smartPickWeek — reused here purely to recover each position's day, no
+// separate construction, no separate port of the picking logic.
+function recordDiversity(tracker, picks, slotIds, scenario, iter) {
+  tracker.plansChecked++;
+  const seenAt = new Map(); // recipeId -> first slot index it was picked at
+  let weekDup = false;
+  picks.forEach((p, i) => {
+    if (!p) return;
+    if (seenAt.has(p.id)) {
+      weekDup = true;
+      tracker.weekViolations.push(`${scenario} iter=${iter}: recipeId ${p.id} picked twice (positions ${seenAt.get(p.id)} and ${i}) within one week`);
+    } else {
+      seenAt.set(p.id, i);
+    }
+  });
+  if (weekDup) tracker.plansWithWeekDuplicate++;
+
+  const byDay = new Map();
+  slotIds.forEach((s, i) => { if (!byDay.has(s.day)) byDay.set(s.day, []); byDay.get(s.day).push(i); });
+  let sameDayDup = false;
+  for (const [day, idxs] of byDay) {
+    const ids = idxs.map(i => picks[i]).filter(Boolean).map(p => p.id);
+    if (new Set(ids).size < ids.length) {
+      sameDayDup = true;
+      tracker.sameDayViolations.push(`${scenario} iter=${iter} day=${day}: same-day slots share a recipeId (${JSON.stringify(ids)})`);
+    }
+  }
+  if (sameDayDup) tracker.plansWithSameDayDuplicate++;
+}
+function reportDiversity(tracker) {
+  console.log(`  ${tracker.label}: plans checked=${tracker.plansChecked}, plans with a within-week duplicate recipeId=${tracker.plansWithWeekDuplicate}, plans with a same-day duplicate=${tracker.plansWithSameDayDuplicate}`);
+  tracker.weekViolations.slice(0, 20).forEach(v => fail(v));
+  tracker.sameDayViolations.slice(0, 20).forEach(v => fail(v));
+}
+
+// ─────────────────────────────────────────────────────────────────────────
 // 3a. COMPLETE-PLAN GATE — genuinely complete 7-day (14-slot) weekly plans
 // only. "Complete" means every one of the 14 slots is attempted fresh in a
 // single smartPickWeek call, exactly as generateRandomMenu()'s full-week
@@ -305,6 +371,7 @@ function check(bucket, pick, slot, label, iter, scenario) {
 section('3a. Complete-plan gate — genuinely complete 7-day Lunch+Dinner plans');
 const GATE_SCENARIOS = ['complete_week', 'complete_week_filtered', 'complete_week_budget'];
 const N_GATE = 5200;
+const diversityGate = newDiversityTracker('Lunch+Dinner gate (3a)');
 for (let iter = 0; iter < N_GATE; iter++) {
   const rng = mulberry32(100000 + iter); // disjoint seed space from 3b
   const scenario = GATE_SCENARIOS[Math.floor(rng() * GATE_SCENARIOS.length)];
@@ -325,7 +392,11 @@ for (let iter = 0; iter < N_GATE; iter++) {
   const slotPools = slotIds.map(s => (s.kind === 'l' ? lunchPool : dinnerPool));
   const picks = smartPickWeek(slotPools, 14, maxTimes, rng);
   picks.forEach((pick, i) => check(bucket, pick, slotIds[i].kind === 'l' ? 'lunch' : 'dinner', 'complete_week', iter, scenario));
+  recordDiversity(diversityGate, picks, slotIds, scenario, iter);
 }
+
+console.log('\n  --- Diversity invariant (Lunch+Dinner gate, same ' + N_GATE + ' plans above) ---');
+reportDiversity(diversityGate);
 
 const gateIterations = GATE_SCENARIOS.reduce((s, k) => s + buckets[k].iterations, 0);
 const gateSlotsChecked = GATE_SCENARIOS.reduce((s, k) => s + buckets[k].slotsChecked, 0);
@@ -426,6 +497,178 @@ const totalSlotsChecked = ALL_SCENARIO_KEYS.reduce((s, k) => s + buckets[k].slot
 const totalInsufficient = ALL_SCENARIO_KEYS.reduce((s, k) => s + buckets[k].insufficientPool, 0);
 const totalViolations = ALL_SCENARIO_KEYS.reduce((s, k) => s + buckets[k].violations.length, 0);
 console.log(`  TOTAL (gate + coverage) | ${totalIterations} | — | — | ${totalSlotsChecked} | ${totalInsufficient} | ${totalViolations}`);
+
+// ═════════════════════════════════════════════════════════════════════════
+// STAGE 4 — Breakfast gate + starvation coverage. Appended entirely below
+// the Stage 3 gate/coverage/breakdown above, which is reported UNCHANGED
+// (same thresholds, same scenarios, same math) — Stage 4's numbers are never
+// commingled with Stage 3's, exactly the separation precedent the Stage 3
+// reconciliation established for gate vs. coverage.
+// ═════════════════════════════════════════════════════════════════════════
+
+// ─────────────────────────────────────────────────────────────────────────
+// 3c. Breakfast gate — genuinely complete 7-day x 3-meal (21-slot) plans,
+// Breakfast enabled. Verbatim port of generateRandomMenu()'s week branch AS
+// CHANGED by Stage 4: ONE shared smartPickWeek call across all 21 slots in
+// day-major order (breakfast, lunch, dinner) x day 1..7 — NOT three
+// independent calls — so diversity counters (max 2/country, max 3 pasta,
+// max 4 heavy-meat) are shared across all three meal kinds per week, exactly
+// as the live app does (see app.js generateRandomMenu, "poolByKind" +
+// activeSlotKinds()). getGenerationPool/smartPickWeek above are reused
+// UNMODIFIED — slot is already a free-form string to both, 'breakfast'
+// needed no new code path in either.
+// ─────────────────────────────────────────────────────────────────────────
+section('3c. Breakfast gate (Stage 4) — genuinely complete 7-day x 3-meal (21-slot) plans');
+const breakfastBuckets = {
+  complete_week_breakfast:          newBucket('full-week generation, Breakfast ON (21/21 slots fresh)', 21),
+  complete_week_breakfast_filtered: newBucket('full-week generation, Breakfast ON + a realistic filter chip', 21),
+  complete_week_breakfast_starved:  newBucket('full-week generation, Breakfast ON + a chip measured (Stage 4A audit) to starve the breakfast pool below 7 candidates', 21),
+};
+// The 5 filter chips the Stage 4A audit measured as yielding fewer than 7
+// breakfast-eligible recipes (chicken=2, meat=4, fish=5, asian=5, quick=5 —
+// see FILTER_DEFS in app.js for the real predicates these mirror exactly).
+const STARVING_CHIP_TESTS = {
+  chicken: r => /(pui|piept de pui|carne de pui|chicken|poultry)/.test((r.ingredients?.ro || r.ingredients?.en || []).join(' ').toLowerCase()),
+  meat: r => {
+    const i = (r.ingredients?.ro || r.ingredients?.en || []).join(' ').toLowerCase();
+    return /(vit[ăa]|carne de vit|biftec|porc|cotlet|cârnați|miel|beef|pork|steak|lamb|veal)/.test(i) && !/(pui|piept de pui|chicken)/.test(i);
+  },
+  fish: r => /(pește|somon|ton\b|creveți|dorad|crap|macrou|tilapia|cod\b|fish|salmon|tuna|shrimp|prawn|trout|sea bass)/.test((r.ingredients?.ro || r.ingredients?.en || []).join(' ').toLowerCase()),
+  asian: r => ['Japonia', 'Coreea de Sud', 'China', 'Vietnam', 'Thailanda', 'India', 'Indonezia'].includes(r.origin?.ro),
+  quick: r => (r.time || 999) <= 30,
+};
+const STARVING_CHIP_IDS = Object.keys(STARVING_CHIP_TESTS);
+
+const N_BREAKFAST_GATE = 5200;
+const diversityBreakfastGate = newDiversityTracker('Breakfast gate (3c)');
+for (let iter = 0; iter < N_BREAKFAST_GATE; iter++) {
+  const rng = mulberry32(400000 + iter); // disjoint seed space from both 3a and 3b above
+  const scenarioKeys = Object.keys(breakfastBuckets);
+  const scenario = scenarioKeys[Math.floor(rng() * scenarioKeys.length)];
+  const bucket = breakfastBuckets[scenario];
+  bucket.iterations++;
+
+  let activeTests = [];
+  if (scenario === 'complete_week_breakfast_filtered') activeTests = randomRealisticChipTests(rng);
+  if (scenario === 'complete_week_breakfast_starved') {
+    const chipId = STARVING_CHIP_IDS[Math.floor(rng() * STARVING_CHIP_IDS.length)];
+    activeTests = [STARVING_CHIP_TESTS[chipId]];
+  }
+
+  const breakfastPool = getGenerationPool({ slot: 'breakfast', isBudget: false, activeTests });
+  const lunchPool     = getGenerationPool({ slot: 'lunch',     isBudget: false, activeTests });
+  const dinnerPool    = getGenerationPool({ slot: 'dinner',    isBudget: false, activeTests });
+  const poolByKind = { b: breakfastPool, l: lunchPool, c: dinnerPool };
+  const KIND_SLOT = { b: 'breakfast', l: 'lunch', c: 'dinner' };
+
+  const slotIds = [];
+  for (let d = 1; d <= 7; d++) {
+    slotIds.push({ day: d, kind: 'b' });
+    slotIds.push({ day: d, kind: 'l' });
+    slotIds.push({ day: d, kind: 'c' });
+  }
+  const maxTimes = slotIds.map(s => (s.day >= 6 ? Infinity : WEEKDAY_MAX_MIN));
+  const slotPools = slotIds.map(s => poolByKind[s.kind]);
+  const picks = smartPickWeek(slotPools, 21, maxTimes, rng);
+  picks.forEach((pick, i) => check(bucket, pick, KIND_SLOT[slotIds[i].kind], 'complete_week_breakfast', iter, scenario));
+  recordDiversity(diversityBreakfastGate, picks, slotIds, scenario, iter);
+}
+
+console.log('\n  --- Diversity invariant (Breakfast gate, same ' + N_BREAKFAST_GATE + ' plans above; same-day = b/l/c mutually distinct) ---');
+reportDiversity(diversityBreakfastGate);
+
+const BREAKFAST_GATE_KEYS = Object.keys(breakfastBuckets);
+const bfGateIterations = BREAKFAST_GATE_KEYS.reduce((s, k) => s + breakfastBuckets[k].iterations, 0);
+const bfGateSlotsChecked = BREAKFAST_GATE_KEYS.reduce((s, k) => s + breakfastBuckets[k].slotsChecked, 0);
+const bfGateInsufficient = BREAKFAST_GATE_KEYS.reduce((s, k) => s + breakfastBuckets[k].insufficientPool, 0);
+const bfGateViolations = BREAKFAST_GATE_KEYS.reduce((s, k) => s + breakfastBuckets[k].violations.length, 0);
+console.log('  scenario | iterations | expected slots/iter | actual slots checked | insufficient-pool | violations');
+for (const k of BREAKFAST_GATE_KEYS) {
+  const b = breakfastBuckets[k];
+  console.log(`  ${k} | ${b.iterations} | ${b.expectedPerIter} | ${b.slotsChecked} | ${b.insufficientPool} | ${b.violations.length}`);
+  for (const v of b.violations.slice(0, 20)) fail(v);
+}
+console.log(`  complete 21-slot plans run: ${bfGateIterations}`);
+console.log(`  total slot positions checked: ${bfGateSlotsChecked} (= ${bfGateIterations} plans x 21 slots)`);
+console.log(`  insufficient-pool slots (correctly left unfilled, never substituted): ${bfGateInsufficient}`);
+console.log(`  violations (a pick ineligible for the exact slot it was picked for): ${bfGateViolations} (requirement: 0)`);
+const breakfastGatePass = bfGateViolations === 0;
+console.log(`  BREAKFAST GATE RESULT: ${breakfastGatePass ? 'PASS' : 'FAIL'}`);
+if (!breakfastGatePass) fail(`breakfast gate found ${bfGateViolations} eligibility violation(s)`);
+
+// ─────────────────────────────────────────────────────────────────────────
+// 3d. Exact starvation reproduction — ONE deterministic 21-slot plan per
+// starving chip (no randomness in which chip runs — only the pick order
+// within an already-narrow pool is seeded), reporting the EXACT breakfast
+// fill count against the Stage 4A audit's measured pool sizes. This is the
+// "report exact starvation behavior" requirement: a reader can check these
+// numbers against the audit table directly, not infer them from a fuzz run.
+// ─────────────────────────────────────────────────────────────────────────
+section('3d. Exact starvation reproduction (one deterministic run per starving chip)');
+const MEASURED_BREAKFAST_POOL_SIZE = { chicken: 2, meat: 4, fish: 5, asian: 5, quick: 5 }; // Stage 4A audit §5
+console.log('  chip | measured breakfast pool (Stage 4A audit) | breakfast slots filled | breakfast slots left empty | any lunch/dinner-only recipe picked for breakfast?');
+let starvationReproFailed = false;
+const diversityStarvation = newDiversityTracker('Starvation reproduction (3d) — per-chip + Budget+Breakfast');
+for (const chipId of STARVING_CHIP_IDS) {
+  const rng = mulberry32(900000 + chipId.length);
+  const activeTests = [STARVING_CHIP_TESTS[chipId]];
+  const breakfastPool = getGenerationPool({ slot: 'breakfast', isBudget: false, activeTests });
+  const lunchPool     = getGenerationPool({ slot: 'lunch',     isBudget: false, activeTests });
+  const dinnerPool    = getGenerationPool({ slot: 'dinner',    isBudget: false, activeTests });
+  const poolByKind = { b: breakfastPool, l: lunchPool, c: dinnerPool };
+  const slotIds = [];
+  for (let d = 1; d <= 7; d++) { slotIds.push({ day: d, kind: 'b' }); slotIds.push({ day: d, kind: 'l' }); slotIds.push({ day: d, kind: 'c' }); }
+  const maxTimes = slotIds.map(s => (s.day >= 6 ? Infinity : WEEKDAY_MAX_MIN));
+  const slotPools = slotIds.map(s => poolByKind[s.kind]);
+  const picks = smartPickWeek(slotPools, 21, maxTimes, rng);
+  let filled = 0, empty = 0, badSubstitution = false;
+  picks.forEach((pick, i) => {
+    if (slotIds[i].kind !== 'b') return;
+    if (pick === null) { empty++; return; }
+    filled++;
+    if (!isEligibleForSlot(pick, 'breakfast')) badSubstitution = true; // the thing that must NEVER happen
+  });
+  if (filled > breakfastPool.length) badSubstitution = true; // filled more breakfast slots than the eligible pool can distinctly supply without reuse-past-eligibility
+  recordDiversity(diversityStarvation, picks, slotIds, `starved_${chipId}`, 0);
+  console.log(`  ${chipId} | ${breakfastPool.length} (expect ${MEASURED_BREAKFAST_POOL_SIZE[chipId]}) | ${filled} | ${empty} | ${badSubstitution}`);
+  if (breakfastPool.length !== MEASURED_BREAKFAST_POOL_SIZE[chipId]) {
+    fail(`${chipId}: breakfast pool size drifted from the Stage 4A audit's measured ${MEASURED_BREAKFAST_POOL_SIZE[chipId]} to ${breakfastPool.length} — recipe data changed since the audit; update MEASURED_BREAKFAST_POOL_SIZE if intentional`);
+  }
+  if (badSubstitution) { starvationReproFailed = true; fail(`${chipId}: a breakfast slot was filled with a non-breakfast-eligible recipe — HARD eligibility was relaxed`); }
+  if (filled > 7) { starvationReproFailed = true; fail(`${chipId}: ${filled} breakfast slots filled but only 7 exist in a week — impossible, investigate`); }
+}
+console.log(`  STARVATION REPRODUCTION RESULT: ${starvationReproFailed ? 'FAIL' : 'PASS'} (every starving chip left the pool-exceeding slots empty, never substituted)`);
+console.log('\n  --- Diversity invariant (requirement 4: starvation must leave slots empty, never reuse) ---');
+
+// The single most severe starvation case the Stage 4A audit identified:
+// Budget + Breakfast together, breakfast pool = 3 recipes total (vs 7
+// slots/week) — deterministic, not fuzzed, same "never substitute" proof.
+{
+  const rng = mulberry32(950001);
+  const breakfastPool = getGenerationPool({ slot: 'breakfast', isBudget: true, activeTests: [] });
+  const lunchPool     = getGenerationPool({ slot: 'lunch',     isBudget: true, activeTests: [] });
+  const dinnerPool    = getGenerationPool({ slot: 'dinner',    isBudget: true, activeTests: [] });
+  const poolByKind = { b: breakfastPool, l: lunchPool, c: dinnerPool };
+  const slotIds = [];
+  for (let d = 1; d <= 7; d++) { slotIds.push({ day: d, kind: 'b' }); slotIds.push({ day: d, kind: 'l' }); slotIds.push({ day: d, kind: 'c' }); }
+  const maxTimes = slotIds.map(s => (s.day >= 6 ? Infinity : WEEKDAY_MAX_MIN));
+  const slotPools = slotIds.map(s => poolByKind[s.kind]);
+  const picks = smartPickWeek(slotPools, 21, maxTimes, rng);
+  let filled = 0, empty = 0, badSubstitution = false;
+  picks.forEach((pick, i) => {
+    if (slotIds[i].kind !== 'b') return;
+    if (pick === null) { empty++; return; }
+    filled++;
+    if (!isEligibleForSlot(pick, 'breakfast')) badSubstitution = true;
+  });
+  console.log(`\n  Budget + Breakfast (most severe case): breakfast pool=${breakfastPool.length} (expect 3) | filled=${filled} | empty=${empty} | bad substitution=${badSubstitution}`);
+  if (breakfastPool.length !== 3) fail(`Budget breakfast pool drifted from the audit's measured 3 to ${breakfastPool.length}`);
+  if (badSubstitution) fail('Budget + Breakfast: a non-breakfast-eligible (or non-budget) recipe filled a breakfast slot');
+  if (filled > breakfastPool.length) fail(`Budget + Breakfast: ${filled} breakfast slots filled but the eligible pool only has ${breakfastPool.length} distinct recipes`);
+  if (!badSubstitution && filled <= breakfastPool.length) console.log('  OK: Budget + Breakfast leaves the pool-exceeding slots empty, never substitutes a non-breakfast recipe');
+  recordDiversity(diversityStarvation, picks, slotIds, 'budget_breakfast', 0);
+}
+reportDiversity(diversityStarvation);
 
 // ─────────────────────────────────────────────────────────────────────────
 section(failed ? 'RESULT: FAIL' : 'RESULT: PASS');

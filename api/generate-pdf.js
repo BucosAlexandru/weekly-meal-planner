@@ -189,6 +189,10 @@ const BRAND_DARK = '#15532a';
 const BRAND_TINT = '#eaf5ec';
 const ACCENT     = '#b45309';
 const ACCENT_TINT= '#fef6e7';
+// Stage 4: third meal-kind badge color, distinct from lunch (ACCENT, amber)
+// and dinner (BRAND_DARK, green) — a calm blue reads clearly as a third
+// category without competing with either existing color.
+const BREAKFAST  = '#2f6690';
 const HAIRLINE   = '#e2e8f0';
 const HAIRLINE_2 = '#edf1f5';
 const DOT        = '#c9d2cb';
@@ -401,6 +405,13 @@ function makeStyles(fontFamily) { return StyleSheet.create({
   mealCol: { flex: 1 },
   mealColLeft:  { paddingRight: 12 },
   mealColRight: { paddingLeft: 12, borderLeftWidth: 0.5, borderLeftColor: HAIRLINE_2 },
+  // Stage 4: 3-column variant (breakfast + lunch + dinner), used instead of
+  // mealColLeft/mealColRight ONLY when the document has Breakfast enabled —
+  // the 2-column styles above are untouched, so an existing Lunch+Dinner
+  // export's layout is byte-identical to before Stage 4.
+  mealColFirst:  { paddingRight: 9 },
+  mealColMiddle: { paddingHorizontal: 9, borderLeftWidth: 0.5, borderLeftColor: HAIRLINE_2 },
+  mealColLast:   { paddingLeft: 9, borderLeftWidth: 0.5, borderLeftColor: HAIRLINE_2 },
 
   mealHead: { flexDirection: 'row', alignItems: 'center', marginBottom: 2 },
   mealKindBadge: {
@@ -412,6 +423,7 @@ function makeStyles(fontFamily) { return StyleSheet.create({
     paddingTop: 1.8,
     marginRight: 4,
   },
+  mealKindBreakfast: { backgroundColor: BREAKFAST },
   mealKindLunch:  { backgroundColor: ACCENT },
   mealKindDinner: { backgroundColor: BRAND_DARK },
   mealKindText: {
@@ -470,6 +482,12 @@ function makeStyles(fontFamily) { return StyleSheet.create({
   mealIngrCols: { flexDirection: 'row', marginTop: 1 },
   mealIngrCol: { flex: 1, paddingRight: 7 },
   mealIngrColLast: { paddingRight: 0 },
+  // Stage 4: single stacked column, used instead of mealIngrCols/mealIngrCol
+  // only in 3-column (breakfast-on) layout — each meal cell is narrower
+  // there, so splitting ingredient lines into 2 sub-columns would cramp them
+  // further; one full-width column keeps lines readable (no "unreadable
+  // typography" from doubling up the narrowing).
+  mealIngrColsSingle: { marginTop: 1 },
   mealIngrLine: {
     fontSize: 7.5,
     color: INK_SOFT,
@@ -633,10 +651,17 @@ function getStyles(fontFamily) {
   return _stylesCache[fontFamily];
 }
 
-function mealCell(meal, kind, L, styles) {
-  const kindLabel = kind === 'lunch' ? (L.lunch || 'LUNCH') : (L.dinner || 'DINNER');
+// Stage 4: kind is one of 'breakfast' | 'lunch' | 'dinner'. `singleColIngr`
+// renders the full ingredient list as one stacked column instead of the
+// 2-column split — used only in 3-column (breakfast-on) layout, where each
+// meal cell is narrower (see mealIngrColsSingle above).
+const KIND_LABEL_KEY = { breakfast: 'breakfast', lunch: 'lunch', dinner: 'dinner' };
+const KIND_LABEL_FALLBACK = { breakfast: 'BREAKFAST', lunch: 'LUNCH', dinner: 'DINNER' };
+const KIND_STYLE_KEY = { breakfast: 'mealKindBreakfast', lunch: 'mealKindLunch', dinner: 'mealKindDinner' };
+function mealCell(meal, kind, L, styles, singleColIngr) {
+  const kindLabel = L[KIND_LABEL_KEY[kind]] || KIND_LABEL_FALLBACK[kind];
   const kindLetter = kindLabel.charAt(0);
-  const kindStyle = kind === 'lunch' ? styles.mealKindLunch : styles.mealKindDinner;
+  const kindStyle = styles[KIND_STYLE_KEY[kind]];
   if (!meal || !meal.name) {
     return h(View, null,
       h(View, { style: styles.mealHead },
@@ -668,7 +693,15 @@ function mealCell(meal, kind, L, styles) {
   if (meal.servings) chips.push(h(Text, { key: 'cs', style: styles.mealMetaChip }, `${meal.servings} ${L.servingsWord || 'servings'}`));
   if (meal.cost)     chips.push(h(Text, { key: 'cc', style: [styles.mealMetaChip, styles.mealMetaChipCost] }, String(meal.cost)));
   if (chips.length)  children.push(h(View, { key: 'm', style: styles.mealMeta }, ...chips));
-  if (full) {
+  if (full && singleColIngr) {
+    // Stage 4, 3-column layout: one full-width stacked column instead of a
+    // further 2-way split — each meal cell is already narrower here, and a
+    // nested split would cramp ingredient lines into an unreadably thin
+    // sub-column.
+    children.push(h(Text, { key: 'il', style: styles.mealIngrLabel }, L.ingredients || 'INGREDIENTS'));
+    children.push(h(View, { key: 'ic', style: styles.mealIngrColsSingle },
+      ...full.map((line, i) => h(Text, { key: `f${i}`, style: styles.mealIngrLine }, String(line)))));
+  } else if (full) {
     // ALL ingredient lines, quantities included, laid out in 2 tight columns.
     const mid = Math.ceil(full.length / 2);
     const colA = full.slice(0, mid);
@@ -689,19 +722,35 @@ function mealCell(meal, kind, L, styles) {
   return h(View, null, ...children);
 }
 
-function dayBlock(d, idx, L, styles) {
-  const totalMin = (d.lunch && d.lunch.time ? d.lunch.time : 0)
+// Stage 4: hasBreakfast is a single document-wide switch (never decided per
+// day) — see MealPlanDocument — so every day block uses the same column
+// count even if one particular day's breakfast slot is unfilled (that cell
+// then just renders mealCell's own empty state, same as an unfilled
+// lunch/dinner cell always has).
+function dayBlock(d, idx, L, styles, hasBreakfast) {
+  const totalMin = (hasBreakfast && d.breakfast && d.breakfast.time ? d.breakfast.time : 0)
+                 + (d.lunch && d.lunch.time ? d.lunch.time : 0)
                  + (d.dinner && d.dinner.time ? d.dinner.time : 0);
-  const meals = (d.lunch ? 1 : 0) + (d.dinner ? 1 : 0);
+  const meals = (hasBreakfast && d.breakfast ? 1 : 0) + (d.lunch ? 1 : 0) + (d.dinner ? 1 : 0);
   const metaBits = [];
   if (meals)    metaBits.push(`${meals} ${L.mealsSuffix || 'meals'}`);
   if (totalMin) metaBits.push(`${totalMin} ${L.minTotal || 'min total'}`);
-  // Real cost of the day (sum of the two meals), computed client-side.
+  // Real cost of the day (sum of the meals), computed client-side.
   if (d.costLabel) metaBits.push(String(d.costLabel));
   // Pagination: the day block itself may flow to the next page (full
-  // ingredient lists make 7 days taller than one page), but a meal pair
+  // ingredient lists make 7 days taller than one page), but a meal row
   // must never split mid-recipe — the mealRow is the atomic unit and the
   // header uses minPresenceAhead so it can't orphan at a page bottom.
+  const mealRowEl = hasBreakfast
+    ? h(View, { style: styles.mealRow, wrap: false },
+        h(View, { style: [styles.mealCol, styles.mealColFirst] },  mealCell(d.breakfast, 'breakfast', L, styles, true)),
+        h(View, { style: [styles.mealCol, styles.mealColMiddle] }, mealCell(d.lunch,     'lunch',     L, styles, true)),
+        h(View, { style: [styles.mealCol, styles.mealColLast] },   mealCell(d.dinner,    'dinner',    L, styles, true)),
+      )
+    : h(View, { style: styles.mealRow, wrap: false },
+        h(View, { style: [styles.mealCol, styles.mealColLeft] },  mealCell(d.lunch,  'lunch',  L, styles, false)),
+        h(View, { style: [styles.mealCol, styles.mealColRight] }, mealCell(d.dinner, 'dinner', L, styles, false)),
+      );
   return h(View, { key: idx, style: styles.dayBlock },
     h(View, { style: styles.dayHeader, minPresenceAhead: 60 },
       h(Text, { style: styles.dayBadge }, String(idx + 1)),
@@ -710,15 +759,12 @@ function dayBlock(d, idx, L, styles) {
       metaBits.length ? h(Text, { style: styles.dayMeta }, metaBits.join(' · ')) : null,
       h(View, { style: styles.dayRule }),
     ),
-    h(View, { style: styles.mealRow, wrap: false },
-      h(View, { style: [styles.mealCol, styles.mealColLeft] },  mealCell(d.lunch,  'lunch',  L, styles)),
-      h(View, { style: [styles.mealCol, styles.mealColRight] }, mealCell(d.dinner, 'dinner', L, styles)),
-    ),
+    mealRowEl,
   );
 }
 
-// One row of the week-at-a-glance grid: day abbrev | lunch | dinner.
-function glanceRow(d, idx, L, styles) {
+// One row of the week-at-a-glance grid: day abbrev | (breakfast) | lunch | dinner.
+function glanceRow(d, idx, L, styles, hasBreakfast) {
   const cell = (meal) => {
     if (!meal || !meal.name) return h(View, { style: styles.glanceCell }, h(Text, { style: styles.glanceEmpty }, ' '));
     return h(View, { style: styles.glanceCell },
@@ -730,6 +776,7 @@ function glanceRow(d, idx, L, styles) {
   };
   return h(View, { key: `g${idx}`, style: styles.glanceRow },
     h(Text, { style: styles.glanceDay }, String(d.day || idx + 1).toUpperCase()),
+    hasBreakfast ? cell(d.breakfast) : null,
     cell(d.lunch),
     cell(d.dinner),
   );
@@ -780,11 +827,17 @@ export function MealPlanDocument(plan) {
   const L = (plan.labels && typeof plan.labels === 'object') ? plan.labels : {};
   const LStats = (L.stats && typeof L.stats === 'object') ? L.stats : {};
 
+  // Stage 4: single document-wide switch, never decided per day — see
+  // dayBlock/glanceRow. Computed from the client's own `hasBreakfast`
+  // (derived the same way: "any day has a named breakfast meal").
+  const hasBreakfast = !!plan.hasBreakfast;
+
   // ── Weekly stats for the hero ─────────────────────────────────────────
   let mealCount = 0, totalMin = 0, cuisines = 0;
   const cuisineSet = new Set();
+  const statKinds = hasBreakfast ? ['breakfast', 'lunch', 'dinner'] : ['lunch', 'dinner'];
   days.forEach(d => {
-    ['lunch','dinner'].forEach(k => {
+    statKinds.forEach(k => {
       const m = d[k];
       if (m && m.name) {
         mealCount++;
@@ -848,7 +901,7 @@ export function MealPlanDocument(plan) {
       h(View, { style: styles.sectionRule }),
     ),
     h(View, { key: 'gg', style: styles.glanceGrid, wrap: false },
-      ...days.map((d, i) => glanceRow(d, i, L, styles)),
+      ...days.map((d, i) => glanceRow(d, i, L, styles, hasBreakfast)),
     ),
   ] : [];
 
@@ -859,7 +912,7 @@ export function MealPlanDocument(plan) {
     h(View, { style: styles.sectionRule }),
   );
 
-  const dayEls = days.map((d, i) => dayBlock(d, i, L, styles));
+  const dayEls = days.map((d, i) => dayBlock(d, i, L, styles, hasBreakfast));
 
   // ── Locked-days notice (free preview only) ──
   // Roboto ships Latin Extended + Cyrillic only — no emoji or supplementary

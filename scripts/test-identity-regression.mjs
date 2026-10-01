@@ -41,6 +41,8 @@ import { fileURLToPath } from 'url';
 import fs from 'fs';
 import { recipes } from '../public/js/recipes.js';
 import { recipes as budgetRecipes } from '../public/js/recipes-budget.js';
+import { i18n as I18N } from '../public/js/i18n.js';
+import { isEligibleForSlot } from '../public/js/mealEligibility.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const PUBLIC = path.join(__dirname, '..', 'public');
@@ -353,6 +355,285 @@ async function main() {
     }
   }
 
+  // ═══════════════════════════════════════════════════════════════════════
+  // STAGE 4 — Breakfast slot: DOM/persistence/UI proofs. Pure HARD-eligibility
+  // and generation-algorithm proofs for the breakfast pool live in
+  // scripts/test-generation-engine.mjs (sections 3c/3d) — this file covers
+  // exactly what that one can't: real DOM rendering, the real toggle
+  // control, real localStorage round trips through the real
+  // save/restore code, and real picker/reroll UI wiring.
+  // ═══════════════════════════════════════════════════════════════════════
+  console.log('\n=== Stage 4: Breakfast toggle + slot rendering ===\n');
+
+  // The toggle is premium-gated; this session never goes through the real
+  // async premium check, so we simulate "already a premium session" the
+  // same way a real one would look by the time the user can click it —
+  // window.hasUnlimited true, checkbox enabled — then drive the REAL change
+  // handler via a real DOM event (not calling an internal function).
+  async function setBreakfastOn(on) {
+    await page.evaluate((on) => {
+      window.hasUnlimited = true;
+      const cb = document.getElementById('pw-breakfast-toggle');
+      cb.disabled = false;
+      cb.checked = on;
+      cb.dispatchEvent(new Event('change', { bubbles: true }));
+    }, on);
+    await page.waitForTimeout(350); // renderTable() + restorePlanFromStorage() settle
+  }
+  async function breakfastSlotsExist() {
+    return page.evaluate(() => {
+      for (let d = 1; d <= 7; d++) if (!document.getElementById(`d${d}b`)) return false;
+      return true;
+    });
+  }
+
+  const bfSample = recipes.find(r => Array.isArray(r.mealSlots) && r.mealSlots.includes('breakfast'));
+  const bfSample2 = recipes.find(r => Array.isArray(r.mealSlots) && r.mealSlots.includes('breakfast') && r.id !== bfSample.id);
+
+  await clearSlot('d1l'); await clearSlot('d1c');
+  await setBreakfastOn(false);
+  {
+    const exists = await breakfastSlotsExist();
+    if (!exists) ok('Breakfast OFF: no d{n}b inputs in the DOM (14-slot layout unchanged)');
+    else fail('Breakfast OFF', 'd{n}b inputs exist even though the toggle is off');
+  }
+
+  await setBreakfastOn(true);
+  {
+    const exists = await breakfastSlotsExist();
+    if (exists) ok('Breakfast ON: all 7 d{n}b inputs exist (21-slot layout)');
+    else fail('Breakfast ON', 'd{n}b inputs missing after enabling the toggle');
+  }
+
+  // ── Identity + metadata + shopping list + PDF, for a breakfast slot ──────
+  // Same proof shape as the per-pair loop above (PDF payload + shopping list
+  // + localStorage recipeId), applied to d1b instead of d1l.
+  await placeRecipe('d1b', bfSample.id, 'en');
+  {
+    const stamped = await page.evaluate(() => document.getElementById('d1b')?.dataset.recipeId || null);
+    if (String(stamped) === String(bfSample.id)) ok(`Breakfast identity: d1b.dataset.recipeId === ${bfSample.id} after placement`);
+    else fail('Breakfast identity (dataset.recipeId)', `expected ${bfSample.id}, got ${stamped}`);
+
+    lastPdfPayload = null;
+    await page.evaluate(() => window.exportShoppingListToPDF());
+    await page.waitForTimeout(150);
+    const pdfBreakfast = lastPdfPayload?.days?.[0]?.breakfast;
+    const expectedName = bfSample.name?.en || bfSample.name?.ro;
+    if (pdfBreakfast && pdfBreakfast.name === expectedName) ok(`Breakfast PDF payload: days[0].breakfast.name === "${expectedName}"`);
+    else fail('Breakfast PDF payload', `expected "${expectedName}", got ${JSON.stringify(pdfBreakfast)}`);
+    if (lastPdfPayload?.hasBreakfast === true) ok('PDF payload: hasBreakfast === true when Breakfast is on');
+    else fail('PDF payload hasBreakfast', `expected true, got ${JSON.stringify(lastPdfPayload?.hasBreakfast)}`);
+
+    const slText = await shoppingListText();
+    const firstIngr = (bfSample.ingredients?.en || [])[0];
+    if (firstIngr && slText.length > 0) ok('Breakfast ingredients reach the shopping list (non-empty after placing a resolvable breakfast recipe)');
+    else fail('Breakfast shopping list', 'empty after placing a resolvable breakfast recipe');
+
+    const stored = await getStoredPlan();
+    if (String(stored?.slots?.d1b?.recipeId) === String(bfSample.id)) ok(`localStorage mp:plan.slots.d1b.recipeId === ${bfSample.id}`);
+    else fail('Breakfast saved-plan recipeId', `expected ${bfSample.id}, got ${JSON.stringify(stored?.slots?.d1b)}`);
+    if (stored?.breakfastOn === true) ok('localStorage mp:plan.breakfastOn === true while Breakfast is on');
+    else fail('mp:plan.breakfastOn', `expected true, got ${JSON.stringify(stored?.breakfastOn)}`);
+  }
+
+  // ── Reroll + picker respect breakfast eligibility (real UI, real click) ──
+  {
+    const beforeId = await page.evaluate(() => document.getElementById('d1b')?.dataset.recipeId || null);
+    await page.evaluate(() => document.querySelector('.pw-btn[data-act="reroll"][data-input="d1b"]')?.click());
+    await page.waitForTimeout(250);
+    const afterId = await page.evaluate(() => document.getElementById('d1b')?.dataset.recipeId || null);
+    const afterRec = afterId ? byId.get(String(afterId)) : null;
+    if (afterRec && isEligibleForSlot(afterRec, 'breakfast')) {
+      ok(`Reroll on d1b landed on a breakfast-eligible recipe (id ${afterId}${afterId === beforeId ? ', pool-of-1 edge case — same id' : ''})`);
+    } else {
+      fail('Reroll on d1b', `landed on id=${afterId}, mealSlots=${JSON.stringify(afterRec?.mealSlots)}`);
+    }
+
+    const title = await page.evaluate(() => {
+      document.querySelector('.pw-meal-name[data-input="d1b"], .pw-empty-slot[data-input="d1b"]')?.click();
+      return new Promise(r => setTimeout(() => r(document.getElementById('pw-picker-title')?.textContent || ''), 150));
+    });
+    await page.evaluate(() => document.querySelector('.pw-picker-backdrop, #pw-picker-backdrop')?.classList.remove('pw-open'));
+    if (/breakfast/i.test(title)) ok(`Picker opened on d1b shows the Breakfast title ("${title.trim()}")`);
+    else fail('Picker title for d1b', `expected it to mention "Breakfast", got "${title}"`);
+  }
+
+  // ── Full week Generate (real Generate button click) respects breakfast
+  // eligibility for every filled slot, not just the one we placed by hand ──
+  {
+    await page.evaluate(() => document.getElementById('auto-menu-btn')?.click());
+    await page.waitForTimeout(600);
+    const violations = await page.evaluate(() => {
+      const bad = [];
+      for (let d = 1; d <= 7; d++) {
+        [['b', 'breakfast'], ['l', 'lunch'], ['c', 'dinner']].forEach(([sfx, slot]) => {
+          const inp = document.getElementById(`d${d}${sfx}`);
+          const id = inp?.dataset.recipeId;
+          if (!id) return;
+          const rec = (window.recipes || []).find(r => String(r.id) === String(id));
+          if (!rec || !Array.isArray(rec.mealSlots) || !rec.mealSlots.includes(slot)) {
+            bad.push(`d${d}${sfx}: id=${id} mealSlots=${JSON.stringify(rec?.mealSlots)} expected "${slot}"`);
+          }
+        });
+      }
+      return bad;
+    });
+    if (!violations.length) ok('Full-week Generate (Breakfast ON): every filled slot (21 max) is eligible for its own slot kind');
+    else violations.forEach(v => fail('Generate week eligibility violation', v));
+  }
+
+  // ── Persistence requirement #6: OFF -> save -> ON restores (never
+  // regenerates) the previously-persisted Breakfast selection ───────────────
+  console.log('\n=== Stage 4: persistence — merge-save, toggle round trip ===\n');
+  {
+    await clearSlot('d1l'); await clearSlot('d1c');
+    await setBreakfastOn(true);
+    await placeRecipe('d1b', bfSample.id, 'en');
+    await page.waitForTimeout(200);
+    const savedWithBreakfast = await getStoredPlan();
+    if (String(savedWithBreakfast?.slots?.d1b?.recipeId) === String(bfSample.id)) {
+      ok('Pre-toggle-off: d1b saved with the known breakfast recipeId');
+    } else {
+      fail('Pre-toggle-off save', JSON.stringify(savedWithBreakfast?.slots?.d1b));
+    }
+
+    await setBreakfastOn(false); // d{n}b inputs removed from the DOM now
+    // A Lunch/Dinner-only edit — the exact scenario the merge-save fix
+    // exists for: this save must NOT drop the hidden d1b entry.
+    await placeRecipe('d1l', bfSample2.id, 'en'); // any resolvable recipe; identity isn't the point here
+    await page.waitForTimeout(200);
+    const afterOffEdit = await getStoredPlan();
+    if (String(afterOffEdit?.slots?.d1b?.recipeId) === String(bfSample.id)) {
+      ok('Breakfast OFF + a Lunch edit: hidden d1b entry survives untouched in localStorage (merge-save, not replace)');
+    } else {
+      fail('Merge-save (Breakfast OFF)', `d1b expected recipeId ${bfSample.id}, storage now has ${JSON.stringify(afterOffEdit?.slots?.d1b)}`);
+    }
+    if (afterOffEdit?.breakfastOn === false) {
+      ok('mp:plan.breakfastOn flips to false immediately when the toggle is turned off');
+    } else {
+      fail('mp:plan.breakfastOn after toggle-off', JSON.stringify(afterOffEdit?.breakfastOn));
+    }
+
+    await setBreakfastOn(true); // re-enable — must RESTORE, not regenerate
+    const restoredId = await page.evaluate(() => document.getElementById('d1b')?.dataset.recipeId || null);
+    if (String(restoredId) === String(bfSample.id)) {
+      ok(`Breakfast turned back ON: d1b restores the SAME previously-saved recipe (id ${bfSample.id}), not a freshly generated one`);
+    } else {
+      fail('Breakfast re-enable restore', `expected ${bfSample.id}, got ${restoredId}`);
+    }
+  }
+
+  // ── Persistence requirement #7: a genuinely historical (pre-Stage-4)
+  // Lunch+Dinner-only plan — no breakfastOn field, no 'b' keys at all —
+  // still restores exactly, and Breakfast stays off (no auto-enable). ──────
+  {
+    const sample = recipes.find(r => isEligibleForSlot(r, 'lunch'));
+    await page.evaluate((en) => {
+      // Deliberately the EXACT pre-Stage-4 shape: no breakfastOn key.
+      localStorage.setItem('mp:plan', JSON.stringify({ v: 1, savedAt: Date.now(), slots: { d1l: { recipeId: null, en, raw: en } } }));
+    }, sample.name.en);
+    await page.reload({ waitUntil: 'domcontentloaded' });
+    await page.mouse.click(5, 5);
+    await page.waitForFunction(() => Array.isArray(window.recipesMain) && window.recipesMain.length > 0, null, { timeout: 15000 });
+    await page.waitForTimeout(600);
+    const breakfastOnAfterHistorical = await page.evaluate(() => window._breakfastOn);
+    const exists = await breakfastSlotsExist();
+    if (breakfastOnAfterHistorical === false && !exists) {
+      ok('Historical Lunch+Dinner-only plan (no breakfastOn field): Breakfast stays off, 14-slot layout, no auto-enable');
+    } else {
+      fail('Historical plan restore', `window._breakfastOn=${breakfastOnAfterHistorical}, breakfast slots exist=${exists}`);
+    }
+    const val = await page.evaluate(() => document.getElementById('d1l')?.value || '');
+    if (val === sample.name.en || val === sample.name.ro) ok(`Historical plan's own Lunch slot still restores correctly ("${val}")`);
+    else fail('Historical plan Lunch restore', `got "${val}"`);
+  }
+
+  // ── Persistence requirement #8: a NEW Breakfast plan, saved fresh, then a
+  // full page reload (not just a toggle flip) — recipeId must survive. ─────
+  {
+    await clearSlot('d1l'); await clearSlot('d1c');
+    await setBreakfastOn(true);
+    await placeRecipe('d1b', bfSample.id, 'en');
+    await page.waitForTimeout(200);
+    await page.reload({ waitUntil: 'domcontentloaded' });
+    await page.mouse.click(5, 5);
+    await page.waitForFunction(() => Array.isArray(window.recipesMain) && window.recipesMain.length > 0, null, { timeout: 15000 });
+    await page.waitForTimeout(700);
+    const breakfastOnAfterReload = await page.evaluate(() => window._breakfastOn);
+    const restoredId = await page.evaluate(() => document.getElementById('d1b')?.dataset.recipeId || null);
+    if (breakfastOnAfterReload === true) ok('Fresh reload: breakfastOn auto-enables from the synchronous storage peek (before the DOM even builds the cards)');
+    else fail('Fresh reload breakfastOn peek', `expected true, got ${breakfastOnAfterReload}`);
+    if (String(restoredId) === String(bfSample.id)) ok(`Fresh reload: d1b restores the exact same recipeId (${bfSample.id}) across a full page reload`);
+    else fail('Fresh reload d1b restore', `expected ${bfSample.id}, got ${restoredId}`);
+  }
+
+  // ── Requirement #13 (smoke): all 14 locales carry the new i18n keys ──────
+  console.log('\n=== Stage 4: 14-locale i18n key presence (data-layer) + one live non-EN render ===\n');
+  {
+    const REQUIRED_KEYS = ['pw.breakfast', 'pw.breakfastToggle', 'pw.addBreakfast', 'placeholderB'];
+    let missing = [];
+    for (const lc of Object.keys(I18N)) {
+      for (const key of REQUIRED_KEYS) {
+        const v = I18N[lc][key];
+        if (typeof v !== 'string' || !v.trim()) missing.push(`${lc}.${key}`);
+      }
+    }
+    if (!missing.length) ok(`All 14 locales (${Object.keys(I18N).length}) carry all 4 new Breakfast i18n keys`);
+    else fail('i18n key coverage', missing.join(', '));
+  }
+  {
+    // One real, non-English, browser-rendered proof (ro) — the data-layer
+    // sweep above covers all 14; this confirms the wiring actually reaches
+    // the rendered page for at least one of them.
+    await page.goto(`${base}/ro/`, { waitUntil: 'domcontentloaded' });
+    await page.mouse.click(5, 5);
+    await page.waitForFunction(() => Array.isArray(window.recipesMain) && window.recipesMain.length > 0, null, { timeout: 15000 });
+    await setBreakfastOn(true);
+    const roTitle = await page.evaluate(() => {
+      document.querySelector('.pw-empty-slot[data-input="d1b"], .pw-meal-name[data-input="d1b"]')?.click();
+      return new Promise(r => setTimeout(() => r(document.getElementById('pw-picker-title')?.textContent || ''), 150));
+    });
+    await page.evaluate(() => document.querySelector('.pw-picker-backdrop, #pw-picker-backdrop')?.classList.remove('pw-open'));
+    if (roTitle.includes(I18N.ro['pw.breakfast'])) ok(`ro locale: picker title for d1b shows "${I18N.ro['pw.breakfast']}" (live-rendered, not just the data table)`);
+    else fail('ro locale picker title', `expected to include "${I18N.ro['pw.breakfast']}", got "${roTitle}"`);
+  }
+
+  // ── Requirement #14: mobile/responsive smoke — 3-row day cards at a
+  // narrow viewport, no horizontal overflow, every row actually visible. ───
+  console.log('\n=== Stage 4: mobile/responsive smoke (375x812, Breakfast ON) ===\n');
+  {
+    await page.goto(`${base}/en/`, { waitUntil: 'domcontentloaded' });
+    await page.setViewportSize({ width: 375, height: 812 });
+    await page.mouse.click(5, 5);
+    await page.waitForFunction(() => Array.isArray(window.recipesMain) && window.recipesMain.length > 0, null, { timeout: 15000 });
+    await setBreakfastOn(true);
+    await placeRecipe('d1b', bfSample.id, 'en');
+    await page.waitForTimeout(200);
+    const metrics = await page.evaluate(() => {
+      const doc = document.documentElement;
+      const rows = [];
+      for (const sfx of ['b', 'l', 'c']) {
+        const el = document.querySelector(`.pw-meal-name[data-input="d1${sfx}"]`)?.closest('.pw-meal')
+          || document.querySelector(`.pw-empty-slot[data-input="d1${sfx}"]`)?.closest('.pw-meal');
+        const r = el?.getBoundingClientRect();
+        rows.push({ sfx, visible: !!(r && r.width > 0 && r.height > 0) });
+      }
+      return { scrollWidth: doc.scrollWidth, clientWidth: doc.clientWidth, rows };
+    });
+    if (metrics.scrollWidth <= metrics.clientWidth + 1) {
+      ok(`No horizontal overflow at 375px with Breakfast on (scrollWidth=${metrics.scrollWidth}, clientWidth=${metrics.clientWidth})`);
+    } else {
+      fail('Mobile horizontal overflow', `scrollWidth=${metrics.scrollWidth} > clientWidth=${metrics.clientWidth}`);
+    }
+    const allVisible = metrics.rows.every(r => r.visible);
+    if (allVisible) ok('All 3 meal rows (breakfast, lunch, dinner) render with non-zero size at 375px width');
+    else fail('Mobile row visibility', JSON.stringify(metrics.rows));
+    const screenshotPath = process.env.STAGE4_SCREENSHOT_DIR
+      ? path.join(process.env.STAGE4_SCREENSHOT_DIR, 'stage4_mobile_breakfast.png')
+      : null;
+    if (screenshotPath) await page.screenshot({ path: screenshotPath }).catch(() => {});
+  }
+
   await browser.close();
   server.close();
 
@@ -364,6 +645,9 @@ async function main() {
     process.exit(1);
   }
   console.log('\n✓ Canonical identity holds across all 14 collision pairs, legacy restore, and the save/reload round trip.');
+  console.log('✓ Stage 4: Breakfast toggle, slot identity/PDF/shopping-list, reroll/picker/Generate eligibility,');
+  console.log('  merge-save persistence (OFF/ON round trip + historical-plan compat + fresh-reload), 14-locale');
+  console.log('  i18n coverage, and mobile/responsive layout all hold.');
 }
 
 main().catch(e => { console.error('FATAL:', e); process.exit(1); });

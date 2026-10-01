@@ -714,6 +714,34 @@ body {
   color: var(--ink-2);
   background: var(--surface);
 }
+
+/* ── Stage 4: Breakfast toggle (Premium, week mode only) ── */
+.pw-breakfast-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin: 0 auto 14px;
+  width: fit-content;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--ink-2);
+  cursor: pointer;
+  user-select: none;
+}
+.pw-breakfast-toggle input[type="checkbox"] {
+  width: 17px;
+  height: 17px;
+  accent-color: var(--color-brand);
+  cursor: pointer;
+}
+.pw-breakfast-toggle.pw-locked {
+  cursor: pointer; /* still clickable — routes to pricing */
+  opacity: 0.75;
+}
+.pw-breakfast-toggle.pw-locked input[type="checkbox"] {
+  cursor: not-allowed;
+}
 /* "Pick up to N categories" nudge shown when a 5th chip is tapped. */
 .filter-cap-hint {
   display: none;

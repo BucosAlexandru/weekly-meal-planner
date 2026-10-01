@@ -27,10 +27,14 @@ export function filterEligible(recipeList, slot) {
   return (recipeList || []).filter(r => isEligibleForSlot(r, slot));
 }
 
-// d{n}l / d{n}c input-id convention used throughout the planner UI
-// (d1l = day 1 lunch, d1c = day 1 "cină" = dinner). Centralizing this tiny
-// mapping here means both the reroll and picker paths derive the slot the
-// same way they already derive it for analytics (`inputId.endsWith('l')`).
+// d{n}l / d{n}c / d{n}b input-id convention used throughout the planner UI
+// (d1l = day 1 lunch, d1c = day 1 "cină" = dinner, d1b = day 1 breakfast,
+// Stage 4). Centralizing this tiny mapping here means every caller (reroll,
+// picker, analytics, card rendering) derives the slot kind the same way,
+// instead of re-deriving a binary lunch/dinner guess inline (Stage 4A audit
+// found 6 such duplicates — none of them knew about 'b' and would have
+// silently mislabeled every breakfast slot as dinner).
+export const SLOT_SUFFIX = { l: 'lunch', c: 'dinner', b: 'breakfast' };
 export function slotForInputId(inputId) {
-  return inputId.endsWith('l') ? 'lunch' : 'dinner';
+  return SLOT_SUFFIX[inputId.slice(-1)] || 'dinner';
 }

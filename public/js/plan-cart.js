@@ -20,7 +20,13 @@
 
   var KEY = 'mp:plan-cart';
   var FKEY = 'mp:favorites';
-  var CAP = 14; // one full week (7 days × lunch + dinner)
+  // Stage 4: 21 = one full week × 3 meals/day (breakfast, lunch, dinner) —
+  // the max the live planner can ever hold. This file has no visibility into
+  // whether a given viewer's planner session has Breakfast on (that flag
+  // lives only in app.js's live state), so it always uses the upper bound;
+  // overshooting it when Breakfast is off is harmless, since app.js's own
+  // cart-pour already leaves any excess as "leftover" in the stored cart.
+  var CAP = 21; // one full week (7 days × breakfast + lunch + dinner)
 
   var cfg = document.getElementById('plan-cart-config');
   if (!cfg) return; // page wasn't generated with cart support → do nothing
