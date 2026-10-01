@@ -108,9 +108,12 @@ Potica Noel'de, Paskalya'da, vaftiz törenlerinde ve düğünlerde pişirilir �
       <div class="recipe-cta-row">
         <!-- ?meal= carries the EN name (locale-stable): it is both the no-JS
              deep-link value (app.js matches every name locale, EN included)
-             and the plan-cart storage key. data-display feeds the localized
-             name to the cart badge panel (plan-cart.js). -->
-        <a href="/?meal=Potica" class="btn-recipe-primary" data-display="Potica"><i class="bi bi-plus-circle-fill"></i> Planıma ekle</a>
+             and the plan-cart storage key, kept exactly as-is for backward
+             compatibility with existing links. data-display feeds the
+             localized name to the cart badge panel (plan-cart.js).
+             data-recipe-id (Stage 3.2) is the canonical id, read directly by
+             plan-cart.js instead of re-deriving identity from the href. -->
+        <a href="/?meal=Potica" class="btn-recipe-primary" data-display="Potica" data-recipe-id="153"><i class="bi bi-plus-circle-fill"></i> Planıma ekle</a>
         <button type="button" class="btn-recipe-outline btn-print-pdf" onclick="window.print()" title="PDF kaydet: Paylaş (⬆) → Yazdır → PDF Olarak Kaydet (iPhone/iPad)"><i class="bi bi-printer"></i> PDF Dışa Aktar</button>
       </div>
     </div>

@@ -35,9 +35,12 @@
   };
 
   /* ── storage ──────────────────────────────────────────────────────────
-     Shape: JSON array of { en: <EN recipe name>, display: <localized name> }.
-     `en` is the stable cross-language key (app.js resolves it against every
-     name locale); `display` is only for showing the list in the panel. */
+     Shape: JSON array of { en, id, display }. Stage 3.2: `id` (the
+     canonical recipe id, read straight off the page's data-recipe-id) is
+     now the primary identity app.js resolves against; `en` stays as the
+     name-fallback key for entries saved before this change (app.js
+     resolves it against every name locale); `display` is only for showing
+     the list in the panel. */
   function readCart() {
     try {
       var v = JSON.parse(localStorage.getItem(KEY));
@@ -77,10 +80,10 @@
   }
 
   /* ── favorites (❤️, BRAIN spec §9 item 2) ─────────────────────────────
-     Same { en, display } shape as the cart (en = stable cross-language
-     key), deduped by en case-insensitively, but NO cap and never consumed:
-     the planner picker surfaces them as a browse section ("Your
-     favorites") — that is where the information earns its existence. */
+     Same { en, id, display } shape as the cart, deduped by en
+     case-insensitively, but NO cap and never consumed: the planner picker
+     surfaces them as a browse section ("Your favorites") — that is where
+     the information earns its existence. */
   function readFavs() {
     try {
       var v = JSON.parse(localStorage.getItem(FKEY));
@@ -105,7 +108,7 @@
     btn.setAttribute('aria-label', label);
     btn.title = label;
   }
-  function makeFavButton(en, display) {
+  function makeFavButton(en, display, id) {
     var btn = document.createElement('button');
     btn.type = 'button';
     btn.className = 'pw-fav-btn';
@@ -114,7 +117,7 @@
       var favs = readFavs();
       var at = cartIndex(favs, en);
       if (at >= 0) favs.splice(at, 1);
-      else favs.push({ en: en, display: display });
+      else favs.push({ en: en, id: id || null, display: display });
       writeFavs(favs);
       syncFavButton(btn, at < 0);
       btn.classList.remove('pw-fav-pop');
@@ -125,8 +128,11 @@
   }
 
   /* ── add buttons (recipe pages only; hubs just carry the badge) ────────
-     The generator gives each button data-display="<localized name>" and an
-     href ending in ?meal=<EN name> — the same URL non-JS users navigate to. */
+     The generator gives each button data-display="<localized name>", an
+     href ending in ?meal=<EN name> — the same URL non-JS users navigate to
+     — and (Stage 3.2) data-recipe-id="<canonical id>", read directly rather
+     than re-deriving identity from the href's name, the same way every
+     other write path now carries an id instead of only a name. */
   var buttons = [];
   function initButtons() {
     var links = document.querySelectorAll('a.btn-recipe-primary[href*="meal="]');
@@ -136,16 +142,18 @@
         en = new URL(a.getAttribute('href'), location.origin).searchParams.get('meal');
       } catch (e) { /* malformed href → leave the link alone */ }
       if (!en) return;
+      var id = a.getAttribute('data-recipe-id') || null;
       buttons.push({
         el: a,
         en: en,
+        id: id,
         display: a.getAttribute('data-display') || en,
         orig: a.innerHTML // restored when the recipe is removed from the cart
       });
       // Favorites heart, same button row (recipe-cta-row), right of the add
-      // button — same en/display source as the cart entry above.
+      // button — same en/display/id source as the cart entry above.
       a.insertAdjacentElement('afterend',
-        makeFavButton(en, a.getAttribute('data-display') || en));
+        makeFavButton(en, a.getAttribute('data-display') || en, id));
       a.addEventListener('click', function (ev) {
         ev.preventDefault(); // cart toggle instead of leaving the page
         var items = readCart();
@@ -157,7 +165,7 @@
         } else if (items.length >= CAP) {
           render(items, true); // full week: just pulse the badge, no add
         } else {
-          items.push({ en: en, display: a.getAttribute('data-display') || en });
+          items.push({ en: en, id: id, display: a.getAttribute('data-display') || en });
           writeCart(items);
           render(items, true); // < 1s feedback: ✓ button + badge bounce
           // Fires exactly once, only on a real add (not remove, not the

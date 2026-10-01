@@ -108,9 +108,12 @@ Ce deosebește o tochitură reușită de una ratată e ordinea gătirii: carnea 
       <div class="recipe-cta-row">
         <!-- ?meal= carries the EN name (locale-stable): it is both the no-JS
              deep-link value (app.js matches every name locale, EN included)
-             and the plan-cart storage key. data-display feeds the localized
-             name to the cart badge panel (plan-cart.js). -->
-        <a href="/ro/?meal=Romanian%20Pork%20Stew" class="btn-recipe-primary" data-display="Tochitură Moldovenească"><i class="bi bi-plus-circle-fill"></i> Adaugă în planul meu</a>
+             and the plan-cart storage key, kept exactly as-is for backward
+             compatibility with existing links. data-display feeds the
+             localized name to the cart badge panel (plan-cart.js).
+             data-recipe-id (Stage 3.2) is the canonical id, read directly by
+             plan-cart.js instead of re-deriving identity from the href. -->
+        <a href="/ro/?meal=Romanian%20Pork%20Stew" class="btn-recipe-primary" data-display="Tochitură Moldovenească" data-recipe-id="274"><i class="bi bi-plus-circle-fill"></i> Adaugă în planul meu</a>
         <button type="button" class="btn-recipe-outline btn-print-pdf" onclick="window.print()" title="Salvare PDF: Share (⬆) → Print → Salvează ca PDF (iPhone/iPad)"><i class="bi bi-printer"></i> Previzualizare PDF</button>
       </div>
     </div>

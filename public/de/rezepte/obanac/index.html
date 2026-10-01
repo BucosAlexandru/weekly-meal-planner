@@ -108,9 +108,12 @@ Heute ist čobanac ein beliebtes Gericht bei kulinarischen Wettbewerben in Slawo
       <div class="recipe-cta-row">
         <!-- ?meal= carries the EN name (locale-stable): it is both the no-JS
              deep-link value (app.js matches every name locale, EN included)
-             and the plan-cart storage key. data-display feeds the localized
-             name to the cart badge panel (plan-cart.js). -->
-        <a href="/?meal=%C4%8Cobanac" class="btn-recipe-primary" data-display="Čobanac"><i class="bi bi-plus-circle-fill"></i> Zu meinem Plan hinzufügen</a>
+             and the plan-cart storage key, kept exactly as-is for backward
+             compatibility with existing links. data-display feeds the
+             localized name to the cart badge panel (plan-cart.js).
+             data-recipe-id (Stage 3.2) is the canonical id, read directly by
+             plan-cart.js instead of re-deriving identity from the href. -->
+        <a href="/?meal=%C4%8Cobanac" class="btn-recipe-primary" data-display="Čobanac" data-recipe-id="676"><i class="bi bi-plus-circle-fill"></i> Zu meinem Plan hinzufügen</a>
         <button type="button" class="btn-recipe-outline btn-print-pdf" onclick="window.print()" title="Als PDF: Teilen (⬆) → Drucken → Als PDF sichern (iPhone/iPad)"><i class="bi bi-printer"></i> PDF exportieren</button>
       </div>
     </div>

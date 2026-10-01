@@ -551,10 +551,11 @@ document.addEventListener('DOMContentLoaded', () => {
     for (let d = 1; d <= 7; d++) {
       let dayCost = 0, dayHasMeal = false;
       ['l', 'c'].forEach(sfx => {
-        const val = document.getElementById(`d${d}${sfx}`)?.value.trim() || '';
+        const inp = document.getElementById(`d${d}${sfx}`);
+        const val = inp?.value.trim() || '';
         if (!val) return;
         dayHasMeal = true;
-        const rec = getRecipeByInput(val);
+        const rec = getRecipeByInput(inp);
         if (!rec) return;
         if (rec.costRon) { dayCost += rec.costRon; totalCost += rec.costRon; }
         if (rec.time)    { totalTime += rec.time; timeCount++; }
@@ -580,12 +581,24 @@ document.addEventListener('DOMContentLoaded', () => {
   // — shopping list, Week Overview, per-day costs, meta chips, PDF payload
   // (reads live state at export) — through the existing wiring. No duplicated
   // recalculation logic anywhere in this section.
-  function setSlotValue(input, value) {
+  // Stage 3.2 — canonical identity: `dataset.recipeId` carries the slot's
+  // true recipe id (set only by code that KNOWS the recipe object, never by
+  // guessing from text). The visible text is unchanged presentation data —
+  // free text and legacy name-only state never populate recipe id, and every
+  // write that places a known recipe must go through setSlotRecipe (never
+  // write .value directly, or the id silently goes stale for that slot).
+  function restoreSlotValue(input, value, recipeId) {
     input.value = value;
-    // Immediate visual state (action buttons + Day 3 name/empty display swap);
-    // updateAllRecipeMeta() re-asserts both on its own (debounced) pass.
+    if (recipeId) input.dataset.recipeId = String(recipeId);
+    else delete input.dataset.recipeId;
     syncSlotDisplay(input);
     input.dispatchEvent(new Event('input', { bubbles: true }));
+  }
+  function setSlotValue(input, value) {
+    restoreSlotValue(input, value, null);
+  }
+  function setSlotRecipe(input, rec, lang) {
+    restoreSlotValue(input, getRecipeText(rec, lang), rec.id);
   }
 
   // Day 3 display layer: keep the visible slot UI (recipe-name button vs
@@ -599,7 +612,7 @@ document.addEventListener('DOMContentLoaded', () => {
     meal.classList.toggle('pw-filled', filled);
     const nameBtn = meal.querySelector('.pw-meal-name');
     if (nameBtn) {
-      const rec = filled ? getRecipeByInput(input.value) : null;
+      const rec = filled ? getRecipeByInput(input) : null;
       const name = rec ? getRecipeText(rec, lang) : input.value.trim();
       if (nameBtn.textContent !== name) nameBtn.textContent = name;
     }
@@ -644,14 +657,14 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Every recipe currently in any slot, resolved through the same helper the
-  // rest of the app uses (getRecipeByInput → recipeNameMatches).
+  // rest of the app uses (getRecipeByInput: id-first, name-fallback).
   function recipeIdsInPlan() {
     const used = new Set();
     for (let d = 1; d <= 7; d++) {
       ['l', 'c'].forEach(sfx => {
-        const val = document.getElementById(`d${d}${sfx}`)?.value.trim() || '';
-        if (!val) return;
-        const rec = getRecipeByInput(val);
+        const inp = document.getElementById(`d${d}${sfx}`);
+        if (!inp?.value.trim()) return;
+        const rec = getRecipeByInput(inp);
         if (rec) used.add(rec.id);
       });
     }
@@ -679,7 +692,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const input = document.getElementById(inputId);
     if (!input || !input.value.trim()) return;
     const prevValue = input.value;
-    const current = getRecipeByInput(prevValue);
+    const prevRecipeId = input.dataset.recipeId || null;
+    const current = getRecipeByInput(input);
     const pool = await getGenerationPool(slotForInputId(inputId));
     const used = recipeIdsInPlan();
     // §1.2: zero duplicates — exclude everything already in the plan.
@@ -693,7 +707,7 @@ document.addEventListener('DOMContentLoaded', () => {
     ) : [];
     const from = similar.length ? similar : valid;
     const pick = from[Math.floor(Math.random() * from.length)];
-    setSlotValue(input, getRecipeText(pick, lang));
+    setSlotRecipe(input, pick, lang);
     // Sprint 2 — Final analytics completion. Fires only after a real reroll
     // (both early returns above — empty slot, exhausted pool — already
     // exited before this point, so this line is reached only on success).
@@ -702,6 +716,7 @@ document.addEventListener('DOMContentLoaded', () => {
     showChangeToast({
       inputId,
       prevValue,
+      prevRecipeId,
       text: [
         `${oldName} → ${getRecipeText(pick, lang)}`,
         current && current.costRon != null && pick.costRon != null
@@ -715,7 +730,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const input = document.getElementById(inputId);
     if (!input || !input.value.trim()) return;
     const prevValue = input.value;
-    const rec = getRecipeByInput(prevValue);
+    const prevRecipeId = input.dataset.recipeId || null;
+    const rec = getRecipeByInput(input);
     setSlotValue(input, '');
     // Sprint 2 — Final analytics completion. Fires only when a filled slot
     // was actually cleared (the empty-slot early return above already exited).
@@ -724,6 +740,7 @@ document.addEventListener('DOMContentLoaded', () => {
     showChangeToast({
       inputId,
       prevValue,
+      prevRecipeId,
       text: [
         `${name} ${t('pw.removed')}`,
         rec && rec.costRon != null ? pwCostDelta(-rec.costRon) : '',
@@ -792,7 +809,7 @@ document.addEventListener('DOMContentLoaded', () => {
     for (let d = 1; d <= 7; d++) {
       ['l', 'c'].forEach(sfx => {
         const input = document.getElementById(`d${d}${sfx}`);
-        if (input) snap.push({ inputId: input.id, prevValue: input.value });
+        if (input) snap.push({ inputId: input.id, prevValue: input.value, prevRecipeId: input.dataset.recipeId || null });
       });
     }
     return snap;
@@ -822,9 +839,9 @@ document.addEventListener('DOMContentLoaded', () => {
       // set-value+dispatch mechanism → full recalculation chain (§7):
       // shopping list, Week Overview, day costs, meta chips, slot display.
       const entries = undo.bulk || [undo];
-      entries.forEach(({ inputId, prevValue }) => {
+      entries.forEach(({ inputId, prevValue, prevRecipeId }) => {
         const input = document.getElementById(inputId);
-        if (input && input.value !== prevValue) setSlotValue(input, prevValue);
+        if (input && input.value !== prevValue) restoreSlotValue(input, prevValue, prevRecipeId || null);
       });
     });
     el.appendChild(txt);
@@ -896,9 +913,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const weekdays = (i18n[lang] && i18n[lang].weekdays) || i18n.en.weekdays;
     for (let d = 1; d <= 7; d++) {
       ['l', 'c'].forEach(sfx => {
-        const val = document.getElementById(`d${d}${sfx}`)?.value.trim() || '';
-        if (!val) return;
-        const rec = getRecipeByInput(val);
+        const inp = document.getElementById(`d${d}${sfx}`);
+        if (!inp?.value.trim()) return;
+        const rec = getRecipeByInput(inp);
         if (rec && !map.has(rec.id)) map.set(rec.id, weekdays[d - 1]);
       });
     }
@@ -1099,7 +1116,7 @@ document.addEventListener('DOMContentLoaded', () => {
       hits.forEach(h => { html += itemHtml(h.r, h.byIngredient ? whyTxt : ''); });
     } else {
       const inputEl = document.getElementById(st.inputId);
-      const currentRec = st.mode === 'replace' ? getRecipeByInput(inputEl?.value || '') : null;
+      const currentRec = st.mode === 'replace' ? getRecipeByInput(inputEl) : null;
       const slot = slotForInputId(st.inputId);
       const recs = await pwRecommendations(st.mode, currentRec, slot);
       const pool = await getGenerationPool(slot);
@@ -1118,10 +1135,12 @@ document.addEventListener('DOMContentLoaded', () => {
         recs.forEach(r => { html += itemHtml(r, ''); });
       }
       if (favCorpus) {
-        // Same resolution as the cart pour: the stored EN name is matched
-        // against every name locale. Unresolved names are skipped silently;
-        // recipes already in the plan still show (the pw.alreadyIn hint in
-        // itemHtml covers duplicates). Deduped by en, cap 8.
+        // Stage 3.2: id-first (when the cart/favorites entry carries one —
+        // plan-cart.js writes it going forward), name-fallback for legacy
+        // entries saved before that. Unresolved favorites are skipped
+        // silently; recipes already in the plan still show (the
+        // pw.alreadyIn hint in itemHtml covers duplicates). Deduped by en,
+        // cap 8.
         const seen = new Set();
         const favRecs = [];
         for (const f of favs) {
@@ -1129,7 +1148,7 @@ document.addEventListener('DOMContentLoaded', () => {
           const key = f.en.toLowerCase();
           if (seen.has(key)) continue;
           seen.add(key);
-          const rec = favCorpus.find(r => Object.values(r.name || {}).some(n =>
+          const rec = (f.id && getRecipeById(f.id)) || favCorpus.find(r => Object.values(r.name || {}).some(n =>
             typeof n === 'string' && n.toLowerCase() === key));
           if (rec) favRecs.push(rec);
         }
@@ -1222,11 +1241,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const input = document.getElementById(st.inputId);
     if (!input) { closePwPicker(); return; }
     const prevValue = input.value;
+    const prevRecipeId = input.dataset.recipeId || null;
     const wasFilled = !!prevValue.trim();
-    const prevRec = wasFilled ? getRecipeByInput(prevValue) : null;
+    const prevRec = wasFilled ? getRecipeByInput(input) : null;
     const newText = getRecipeText(rec, lang);
     if (newText && newText !== prevValue) {
-      setSlotValue(input, newText);
+      setSlotRecipe(input, rec, lang);
       if (wasFilled) {
         // Sprint 2 — Final analytics completion. Fires only on a genuine
         // replace of an already-filled slot (guarded by wasFilled above and
@@ -1237,6 +1257,7 @@ document.addEventListener('DOMContentLoaded', () => {
         showChangeToast({
           inputId: st.inputId,
           prevValue,
+          prevRecipeId,
           text: [
             `${oldName} → ${newText}`,
             prevRec && prevRec.costRon != null && rec.costRon != null
@@ -1253,6 +1274,7 @@ document.addEventListener('DOMContentLoaded', () => {
         showChangeToast({
           inputId: st.inputId,
           prevValue,
+          prevRecipeId,
           text: [newText, rec.costRon != null ? pwCostDelta(rec.costRon) : '']
             .filter(Boolean).join(' · '),
         });
@@ -1414,18 +1436,29 @@ document.addEventListener('DOMContentLoaded', () => {
   const pwSnapshot = pwSnapshotPlan();
   const pwHadMeals = pwSnapshot.some(s => s.prevValue.trim());
 
+  // Stage 3.2: direct writes here (no setSlotRecipe/event dispatch — these
+  // branches recalc once at the end via updateAllRecipeMeta/
+  // updateShoppingList, same as before) must still stamp dataset.recipeId
+  // so canonical identity survives past this generation.
+  const writeSlot = (input, pick) => {
+    if (!input) return;
+    input.value = pick ? getRecipeText(pick, lang) : '';
+    if (pick) input.dataset.recipeId = String(pick.id);
+    else delete input.dataset.recipeId;
+  };
+
   if (mode === 'meal') {
     // Fill only one input — a single random recipe
     const input = document.getElementById('d1l');
     const pick = lunchPool[Math.floor(Math.random() * lunchPool.length)];
-    if (input) input.value = pick ? getRecipeText(pick, lang) : '';
+    writeSlot(input, pick);
   } else if (mode === 'day') {
     // Fill lunch + dinner for today — each from its own slot-eligible pool.
     const lunchInput  = document.getElementById('d1l');
     const dinnerInput = document.getElementById('d1c');
     const picks = smartPickWeek([lunchPool, dinnerPool], 2);
-    if (lunchInput)  lunchInput.value  = picks[0] ? getRecipeText(picks[0], lang) : '';
-    if (dinnerInput) dinnerInput.value = picks[1] ? getRecipeText(picks[1], lang) : '';
+    writeSlot(lunchInput, picks[0]);
+    writeSlot(dinnerInput, picks[1]);
   } else {
     // Full week — 7 days × lunch + dinner.
     // §2b (8 iul): Generate produces a FRESH week — fills ALL slots, not just
@@ -1449,7 +1482,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const slotPools = emptySlots.map(el => (el.id.endsWith('l') ? lunchPool : dinnerPool));
     const picks = smartPickWeek(slotPools, emptySlots.length, maxTimes);
     emptySlots.forEach((inp, i) => {
-      if (picks[i]) inp.value = getRecipeText(picks[i], lang);
+      if (picks[i]) writeSlot(inp, picks[i]);
     });
   }
 
@@ -1474,12 +1507,21 @@ document.addEventListener('DOMContentLoaded', () => {
     // Day names come from i18n (index-based), NOT from the table DOM — week
     // mode renders day cards (no <tr> rows) since the planner redesign, and
     // the inputs d{n}l / d{n}c are the single source of truth in every mode.
+    // Stage 3.2: lunchId/dinnerId (from dataset.recipeId, possibly null) ride
+    // alongside the display text so every consumer (PDF, shopping list) can
+    // resolve id-first instead of re-parsing the text.
     const weekdays = (i18n[lang] && i18n[lang].weekdays) || i18n.en.weekdays;
-    return weekdays.map((day, i) => ({
-      day,
-      lunch: document.getElementById(`d${i+1}l`)?.value.trim() || '',
-      dinner: document.getElementById(`d${i+1}c`)?.value.trim() || ''
-    }));
+    return weekdays.map((day, i) => {
+      const lunchInp = document.getElementById(`d${i+1}l`);
+      const dinnerInp = document.getElementById(`d${i+1}c`);
+      return {
+        day,
+        lunch: lunchInp?.value.trim() || '',
+        lunchId: lunchInp?.dataset.recipeId || null,
+        dinner: dinnerInp?.value.trim() || '',
+        dinnerId: dinnerInp?.dataset.recipeId || null,
+      };
+    });
   }
   // (legacy generatePDFimpact removed — see git log for the html2pdf restore recipe.)
   // ── PDF export engine ─────────────────────────────────────────────────────
@@ -1529,10 +1571,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const freeDays     = 2;
     const visibleMeals = isPremium ? allMeals : allMeals.slice(0, freeDays);
 
-    function findRecipe(mealText) {
+    // Stage 3.2: id-first (mealId = the slot's dataset.recipeId, threaded
+    // through by collectMeals()), legacy name-fallback only when absent.
+    function findRecipe(mealText, mealId) {
+      if (mealId) { const r = getRecipeById(mealId); if (r) return r; }
       if (!mealText) return null;
-      const title = extractRecipeName(mealText).toLowerCase();
-      return (window.recipes || []).find(r => recipeNameMatches(r, lang, title)) || null;
+      return getRecipeByName(mealText);
     }
     // Extract a clean noun phrase from each raw ingredient string (drop
     // quantities, parens, prep notes) so the per-meal ingredient line reads
@@ -1553,9 +1597,9 @@ document.addEventListener('DOMContentLoaded', () => {
       }
       return out;
     }
-    function mealPayload(mealText) {
+    function mealPayload(mealText, mealId) {
       if (!mealText) return null;
-      const r = findRecipe(mealText);
+      const r = findRecipe(mealText, mealId);
       // Resolve recipe name + ingredient list in the active locale, falling
       // back to EN then RO. Without this, an Italian user generates a PDF
       // with English ingredient previews under Italian chrome — labels
@@ -1585,8 +1629,8 @@ document.addEventListener('DOMContentLoaded', () => {
       if (!ron) return null;
       return lang === 'ro' ? `~${Math.round(ron)} RON` : `~€${Math.round(ron / 4.97)}`;
     }
-    function costRonOf(mealText) {
-      const r = findRecipe(mealText);
+    function costRonOf(mealText, mealId) {
+      const r = findRecipe(mealText, mealId);
       return (r && r.costRon) || 0;
     }
 
@@ -1614,12 +1658,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // actual budget of the plan.
     let weekCostRon = 0;
     const days = visibleMeals.map((m, i) => {
-      const dayRon = costRonOf(m.lunch) + costRonOf(m.dinner);
+      const dayRon = costRonOf(m.lunch, m.lunchId) + costRonOf(m.dinner, m.dinnerId);
       weekCostRon += dayRon;
       return {
         day: localizedDays[i] || `Day ${i + 1}`,
-        lunch: mealPayload(m.lunch),
-        dinner: mealPayload(m.dinner),
+        lunch: mealPayload(m.lunch, m.lunchId),
+        dinner: mealPayload(m.dinner, m.dinnerId),
         costLabel: fmtCost(dayRon),
       };
     }).filter(d => (d.lunch && d.lunch.name) || (d.dinner && d.dinner.name));
@@ -1633,8 +1677,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // when the active locale lacks that line (keeps indices in lockstep).
     const ingredientPairs = [];
     visibleMeals.forEach(m => {
-      [m.lunch, m.dinner].filter(Boolean).forEach(text => {
-        const r = findRecipe(text);
+      [[m.lunch, m.lunchId], [m.dinner, m.dinnerId]].filter(([text]) => text).forEach(([text, id]) => {
+        const r = findRecipe(text, id);
         if (!r) return;
         const enArr  = r.ingredients?.en || r.ingredients?.ro || [];
         const locArr = r.ingredients?.[lang] || enArr;
@@ -2232,10 +2276,11 @@ document.addEventListener('DOMContentLoaded', () => {
     // localized display label.
     const ingredientPairs = [];
     meals.forEach(m => {
-      [m.lunch, m.dinner].forEach(mealText => {
+      // Stage 3.2: id-first (m.lunchId/m.dinnerId from collectMeals()'s
+      // dataset.recipeId read), legacy name-fallback only when absent.
+      [[m.lunch, m.lunchId], [m.dinner, m.dinnerId]].forEach(([mealText, mealId]) => {
         if (!mealText) return;
-        const recipeName = extractRecipeName(mealText).toLowerCase();
-        const rec = (window.recipes || []).find(r => recipeNameMatches(r, lang, recipeName));
+        const rec = (mealId && getRecipeById(mealId)) || getRecipeByName(mealText);
         if (!rec) return;
         matchedRecipes++;
         if (rec.costRon) totalCost += rec.costRon;
@@ -2302,11 +2347,35 @@ document.addEventListener('DOMContentLoaded', () => {
     if (countEl) countEl.textContent = String(totalItems);
   }
 
-  // ── Recipe meta chips (time / cost / tags) under each meal input ──────────
-  function getRecipeByInput(inputVal) {
+  // ── Canonical recipe identity (Stage 3.2) ──────────────────────────────────
+  // getRecipeById: the ONLY trustworthy resolver — no ambiguity possible.
+  // getRecipeByName: the legacy best-effort resolver (first match wins across
+  // all 14 locales) — kept as the fallback for free text and pre-migration
+  // persisted state, never used when an id is available.
+  // getRecipeByInput: id-first, name-fallback. Takes the INPUT ELEMENT so it
+  // can read dataset.recipeId; a bare string (no element available) always
+  // falls back to name resolution, exactly like before this stage.
+  function getRecipeById(id) {
+    if (id == null) return null;
+    const sid = String(id);
+    return (window.recipes || []).find(r => String(r.id) === sid) || null;
+  }
+  function getRecipeByName(inputVal) {
     if (!inputVal) return null;
     const name = extractRecipeName(inputVal).toLowerCase();
     return (window.recipes || []).find(r => recipeNameMatches(r, lang, name)) || null;
+  }
+  function getRecipeByInput(input) {
+    if (typeof input === 'string') return getRecipeByName(input);
+    if (!input) return null;
+    const id = input.dataset?.recipeId;
+    if (id) {
+      const rec = getRecipeById(id);
+      if (rec) return rec;
+      // id present but unresolvable (corpus not loaded yet, or stale) —
+      // fall through to name resolution rather than reporting no recipe.
+    }
+    return getRecipeByName(input.value);
   }
 
   function renderRecipeMeta(rec) {
@@ -2358,7 +2427,7 @@ document.addEventListener('DOMContentLoaded', () => {
         syncSlotDisplay(input);
         const metaId = `rmeta-d${day}${type}`;
         let metaEl = document.getElementById(metaId);
-        const rec = getRecipeByInput(input.value);
+        const rec = getRecipeByInput(input);
         const html = renderRecipeMeta(rec);
         if (html) {
           if (!metaEl) {
@@ -2385,13 +2454,17 @@ document.addEventListener('DOMContentLoaded', () => {
   // through the same pipeline the ?autoplan= deep link uses (direct input
   // writes + one updateAllRecipeMeta + one updateShoppingList).
   //
-  // Shape: { v: 1, savedAt: <ms>, slots: { d1l: { en, raw }, ... } } — only
-  // non-empty slots. `en` is the canonical EN recipe name (language-neutral
-  // key, so restore can re-localize via getRecipeText in the ACTIVE language);
-  // `raw` is the literal input value, kept as the fallback for free text and
-  // for recipes that can't be resolved at restore time (e.g. a budget recipe
-  // before recipes-budget.js has lazy-loaded). No expiry: a week-old plan is
-  // exactly what a returning user wants to see.
+  // Shape: { v: 1, savedAt: <ms>, slots: { d1l: { recipeId, en, raw }, ... } }
+  // — only non-empty slots. Stage 3.2: `recipeId` is the canonical id and is
+  // now the primary identity on restore; `en` (the canonical EN recipe name)
+  // stays as the legacy name-fallback key for entries saved before this
+  // change, or on the rare occasion a recipe can't be id-resolved (e.g. a
+  // budget recipe before recipes-budget.js has lazy-loaded); `raw` is the
+  // literal input value, kept as the final fallback for free text. Every
+  // slot whose recipe is known (via dataset.recipeId OR successful legacy
+  // name resolution) gets `recipeId` written here — so a legacy entry
+  // self-upgrades to the new shape the next time this runs. No expiry: a
+  // week-old plan is exactly what a returning user wants to see.
   function savePlanToStorage() {
     // Only the week plan is persisted. 'meal'/'day' table modes reuse the same
     // d1l/d1c input ids, so saving there would clobber the stored week plan.
@@ -2406,11 +2479,12 @@ document.addEventListener('DOMContentLoaded', () => {
     for (let d = 1; d <= 7; d++) {
       ['l', 'c'].forEach(sfx => {
         const id = `d${d}${sfx}`;
-        const val = document.getElementById(id)?.value.trim() || '';
+        const inp = document.getElementById(id);
+        const val = inp?.value.trim() || '';
         if (!val) return;
         any = true;
-        const rec = getRecipeByInput(val);
-        slots[id] = rec ? { en: rec.name?.en || rec.name?.ro, raw: val } : { raw: val };
+        const rec = getRecipeByInput(inp);
+        slots[id] = rec ? { recipeId: rec.id, en: rec.name?.en || rec.name?.ro, raw: val } : { raw: val };
       });
     }
     try {
@@ -2441,7 +2515,7 @@ document.addEventListener('DOMContentLoaded', () => {
     try { data = JSON.parse(localStorage.getItem('mp:plan') || 'null'); } catch (_) {}
     if (!data || data.v !== 1 || !data.slots || typeof data.slots !== 'object') return;
     const entries = Object.entries(data.slots)
-      .filter(([id, s]) => /^d[1-7][lc]$/.test(id) && s && (s.en || s.raw));
+      .filter(([id, s]) => /^d[1-7][lc]$/.test(id) && s && (s.recipeId != null || s.en || s.raw));
     if (!entries.length) return;
     // Flag BEFORE the first await (async body runs sync until then): the
     // mode-switch / observer recalcs that fire right after the re-render see
@@ -2453,20 +2527,25 @@ document.addEventListener('DOMContentLoaded', () => {
       // Budget recipes resolve only if recipes-budget.js is already loaded
       // (the toggle isn't persisted); otherwise the `raw` fallback shows the
       // saved display text and the corpus match catches up once it loads.
-      const allSrc = [...recipesMain, ...recipesBudget];
-      const findByName = (name) => allSrc.find(r =>
-        Object.values(r.name || {}).some(n =>
-          typeof n === 'string' && n.toLowerCase() === String(name).toLowerCase()));
+      // Stage 3.2: id-first (getRecipeById), legacy name-fallback
+      // (getRecipeByName) only when no recipeId was persisted — exactly the
+      // "reads follow id, then legacy fallback" contract.
       for (const [id, slot] of entries) {
         const inp = document.getElementById(id);
         if (!inp || inp.value.trim()) continue; // never clobber a live value
-        const rec = slot.en ? findByName(slot.en) : null;
+        const rec = (slot.recipeId != null && getRecipeById(slot.recipeId))
+          || (slot.en ? getRecipeByName(slot.en) : null);
         // Resolved → re-localized display name in the ACTIVE language (this is
         // what turns the old "language switch wipes the plan" bug into "the
         // plan follows the language"); unresolved → literal saved text.
         const value = rec ? getRecipeText(rec, lang) : (typeof slot.raw === 'string' ? slot.raw : '');
         if (!value) continue;
         inp.value = value; // direct write, same pattern as the ?autoplan= handler
+        // Stamp canonical identity when resolved — including a legacy
+        // name-only entry that just got id-resolved for the first time, so
+        // the NEXT savePlanToStorage() naturally upgrades this slot's
+        // storage shape (no destructive migration needed).
+        if (rec) inp.dataset.recipeId = String(rec.id); else delete inp.dataset.recipeId;
         wrote = true;
       }
     } finally {
@@ -2739,7 +2818,14 @@ document.addEventListener('DOMContentLoaded', () => {
     // ── Wire up input change → live shopping list + recipe meta ──
     document.querySelectorAll('#plan-table input, #plan-cards input').forEach(inp => {
       if (!inp.dataset.shopListener) {
-        inp.addEventListener('input', () => {
+        inp.addEventListener('input', (e) => {
+          // Stage 3.2: a genuine keystroke/paste (isTrusted) invalidates
+          // whatever recipeId was stamped — the text no longer provably
+          // matches it. Our own writes (setSlotRecipe/restoreSlotValue,
+          // generation, deep links) dispatch a SYNTHETIC event instead
+          // (isTrusted:false) and set the id themselves, so this never
+          // undoes a real placement.
+          if (e.isTrusted) delete inp.dataset.recipeId;
           updateShoppingList();
           clearTimeout(inp._metaTimer);
           inp._metaTimer = setTimeout(updateAllRecipeMeta, 120);
@@ -4535,6 +4621,7 @@ function renderFeaturedRecipe() {
         const inp = document.getElementById(slot);
         if (inp && !inp.value.trim()) {
           inp.value = getRecipeText(recipe, lang);
+          inp.dataset.recipeId = String(recipe.id); // Stage 3.2: already id-resolved above
           inp.dispatchEvent(new Event('input', { bubbles: true }));
           placed = true;
           break;
@@ -6061,7 +6148,10 @@ if (verifyBtn && emailInput && resultDiv) {
   function wireInputsToShoppingList() {
     document.querySelectorAll('#plan-table input, #plan-cards input').forEach(inp => {
       if (!inp.dataset.shopWired) {
-        inp.addEventListener('input', () => {
+        inp.addEventListener('input', (e) => {
+          // Stage 3.2: see the twin listener above — only a genuine
+          // (isTrusted) keystroke/paste clears a stale recipeId.
+          if (e.isTrusted) delete inp.dataset.recipeId;
           updateShoppingList();
           // debounce meta update to avoid excessive DOM work while typing
           clearTimeout(inp._metaTimer);
@@ -6124,6 +6214,7 @@ if (verifyBtn && emailInput && resultDiv) {
               const rec = byId.get(id);
               if (!rec) unresolved.push(id);
               inp.value = rec ? getRecipeText(rec, lang) : String(id);
+              if (rec) inp.dataset.recipeId = String(rec.id); // Stage 3.2: already id-resolved above
             });
           };
           fillSlots(plan.lunchIds, 'l');
@@ -6158,13 +6249,27 @@ if (verifyBtn && emailInput && resultDiv) {
   }
 
   // ---------- ?meal= deep link (from recipe pages "Add to my plan") ----------
+  // Stage 3.2: this is the one remaining boundary where identity MUST be
+  // resolved from a name (the public URL carries only the EN recipe name —
+  // changing that would break every existing recipe-page link and bookmark,
+  // out of scope here). Resolution itself is unchanged (first match across
+  // all 14 locales, deterministic given the fixed recipesMain/recipesBudget
+  // order) — ambiguous only for the main-vs-main collision pairs a `?meal=`
+  // link can reach (budget recipes have no page to link from). Once
+  // resolved, the id is stamped immediately so every path downstream of
+  // this slot (reroll, shopping list, PDF, save) is id-based from here on,
+  // instead of re-running this same ambiguous search on every read.
   const mealParam = new URLSearchParams(window.location.search).get('meal');
   if (mealParam) {
     setTimeout(async () => {
       await ensureMainRecipes();
-      const allSrc = [...recipesMain, ...recipesBudget];
-      const rec = allSrc.find(r =>
-        Object.values(r.name || {}).some(n => n.toLowerCase() === mealParam.toLowerCase())
+      // Exact pre-existing resolution, unchanged: every name locale checked
+      // (not just the active one), no extractRecipeName stripping — mealParam
+      // is always a bare EN name from generate-content.mjs's own ?meal= link,
+      // never free text, so this must stay distinct from getRecipeByName
+      // (which is tuned for parsing a typed/legacy input-field string).
+      const rec = (window.recipes || []).find(r =>
+        Object.values(r.name || {}).some(n => typeof n === 'string' && n.toLowerCase() === mealParam.toLowerCase())
       );
       // Pin the chosen recipe to Monday lunch, then build a COMPLETE week
       // AROUND it. Regression fix (8 iul): Generate now fills ALL slots by
@@ -6173,6 +6278,7 @@ if (verifyBtn && emailInput && resultDiv) {
       const anchor = document.getElementById('d1l');
       if (anchor) {
         anchor.value = rec ? getRecipeText(rec, lang) : mealParam;
+        if (rec) anchor.dataset.recipeId = String(rec.id);
         anchor.dispatchEvent(new Event('input', { bubbles: true }));
       }
       window._planMode = 'week';
@@ -6216,6 +6322,10 @@ if (verifyBtn && emailInput && resultDiv) {
         Object.values(r.name || {}).some(n =>
           typeof n === 'string' && n.toLowerCase() === String(name).toLowerCase())
       );
+      // Stage 3.2: id-first (plan-cart.js writes item.id going forward),
+      // legacy name-fallback for cart entries saved before that change.
+      const resolveCartItem = (item) => (item && item.id && getRecipeById(item.id))
+        || (item && item.en ? findByName(item.en) : null);
       const emptySlots = [];
       for (let d = 1; d <= 7; d++) {
         ['l', 'c'].forEach(sfx => {
@@ -6227,11 +6337,11 @@ if (verifyBtn && emailInput && resultDiv) {
       const leftover = []; // unresolved names / no free slot → stay in the cart
       let poured = 0;
       for (const item of items) {
-        const rec = item && item.en ? findByName(item.en) : null;
+        const rec = resolveCartItem(item);
         if (!rec) { if (item && item.en) leftover.push(item); continue; }
         const slot = emptySlots.shift();
         if (!slot) { leftover.push(item); continue; }
-        setSlotValue(slot, getRecipeText(rec, lang)); // full recalc chain (§7)
+        setSlotRecipe(slot, rec, lang); // full recalc chain (§7)
         poured++;
       }
       try {

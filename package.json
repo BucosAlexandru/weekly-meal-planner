@@ -13,6 +13,7 @@
     "sync:counts": "node scripts/sync-recipe-count.mjs",
     "validate:plans": "node scripts/validate-open-in-app.mjs",
     "validate:budget": "node scripts/validate-budget-recipes.mjs",
+    "test:identity": "node scripts/test-identity-regression.mjs",
     "build": "npm run content && npm run build:index && npm run sync:counts && npm run build:js && npm run build:css"
   },
   "repository": {
@@ -39,6 +40,7 @@
   },
   "devDependencies": {
     "esbuild": "^0.23.1",
+    "playwright": "^1.63.0",
     "sharp": "^0.34.5",
     "vercel": "^48.10.2"
   }
