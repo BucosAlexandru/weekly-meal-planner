@@ -20,6 +20,7 @@ import { REGION_FLAVOURS, CUISINE_HUB_PROSE } from './cuisine-hub-prose.mjs';
 import { RELATED_CUISINES, MAX_RELATED_CUISINES,
          enrichCatalog, selectByTagMix, resolveDiscoveryTarget } from './discovery-config.mjs';
 import { MEAL_TYPE_IDS, MEAL_TYPE_LABELS } from './taxonomy/meal-types.mjs';
+import { isEligibleForSlot }          from '../public/js/mealEligibility.js';
 import fs   from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -620,12 +621,16 @@ function currentMenuWeek() {
 const MENU_WEEK = currentMenuWeek();
 console.log(`[menus] weekly rotation index = ${MENU_WEEK}`);
 
-// Categories that are never a lunch/dinner main and must not land in a plan:
-// desserts (Tiramisu, Papanași…), breakfast items, snacks, appetizers, sides.
-// Salads stay eligible — they ARE the meal in the Mediterranean / summer-light
-// plans. Mirrors the app's runtime NON_MAIN_MEAL guard (minus Salad).
-const NON_MEAL_CATEGORIES = new Set(['Dessert', 'Breakfast', 'Snack', 'Appetizer', 'Side dish']);
-const isMainMeal = r => !NON_MEAL_CATEGORIES.has(r.category?.en || '');
+// A recipe may be scoped into a weekly plan's candidate pool when it is
+// eligible for AT LEAST ONE of lunch/dinner (mealSlots — see
+// public/js/mealEligibility.js). This union is ONLY used to shape which
+// recipes are considered for a "main meal" plan at all (so no dessert/
+// breakfast/snack/side ever enters the pool, mirroring the old
+// NON_MEAL_CATEGORIES guard); the actual lunch vs. dinner ASSIGNMENT below
+// (takeForSlot) always checks each slot independently via isEligibleForSlot,
+// since some recipes are lunch-eligible only (see Stage 2D counts) — a
+// generic "is this a main" check must never decide which slot a recipe lands in.
+const isMainCandidate = r => isEligibleForSlot(r, 'lunch') || isEligibleForSlot(r, 'dinner');
 
 function autoPlanMeals(plan) {
   const sel = PLAN_PICK[plan.id];
@@ -638,53 +643,85 @@ function autoPlanMeals(plan) {
 
   let pool;
   if (plan.isBudget) {
-    pool = budgetRecipes.filter(isMainMeal);
+    pool = budgetRecipes.filter(isMainCandidate);
   } else if (!sel) {
     return null;
   } else if (sel.diverse) {
     const seen = new Set(); pool = [];
     for (const r of planSeedSort(seed, recipes)) {
       const o = originEn(r);
-      if (o && isMainMeal(r) && !seen.has(o)) { seen.add(o); pool.push(r); }
+      if (o && isMainCandidate(r) && !seen.has(o)) { seen.add(o); pool.push(r); }
     }
   } else if (sel.cuisines) {
-    pool = recipes.filter(r => isMainMeal(r) && sel.cuisines.includes(originEn(r)));
+    pool = recipes.filter(r => isMainCandidate(r) && sel.cuisines.includes(originEn(r)));
   } else if (sel.tags) {
-    pool = recipes.filter(r => isMainMeal(r) && tagsOf(r).some(t => sel.tags.includes(t)));
+    pool = recipes.filter(r => isMainCandidate(r) && tagsOf(r).some(t => sel.tags.includes(t)));
   } else {
-    pool = recipes.filter(isMainMeal);
+    pool = recipes.filter(isMainCandidate);
   }
   pool = planSeedSort(seed, pool);
 
-  // Safety: guarantee 14 distinct meals even if a pool is short — top up
+  // Safety: guarantee 14 distinct candidates even if a pool is short — top up
   // deterministically from the corpus (budget stays within budget recipes),
-  // still excluding non-meal categories so no dessert slips in as filler.
+  // still restricted to main candidates so no dessert slips in as filler.
   if (pool.length < 14) {
     const have = new Set(pool.map(r => r.id));
     for (const r of planSeedSort(seed, topupSrc, '#')) {
-      if (!have.has(r.id) && isMainMeal(r)) { pool.push(r); have.add(r.id); }
+      if (!have.has(r.id) && isMainCandidate(r)) { pool.push(r); have.add(r.id); }
       if (pool.length >= 14) break;
     }
   }
-  // Small corpus (e.g. the budget set): once the distinct top-up is exhausted,
-  // cycle the available recipes so all 14 slots are filled instead of leaving
-  // empty days. Repeats are unavoidable below 14 distinct recipes and vanish
-  // as the set grows.
-  if (pool.length && pool.length < 14) {
-    const base = pool.slice();
-    for (let i = 0; pool.length < 14; i++) pool.push(base[i % base.length]);
-  }
   // Weekend plans cover only Saturday + Sunday → 2 lunches + 2 dinners.
   const nDays = plan.weekend ? 2 : 7;
+
+  // Lunch and dinner are independent HARD-eligible pools — a lunch-only
+  // recipe must never be assigned to a dinner slot. Walk the same
+  // seed-ordered `pool` once per slot, taking the first nDays distinct
+  // recipes eligible for THAT slot and not already used by the other slot
+  // today. This replaces the old positional pool.slice(0,nDays) /
+  // slice(nDays,nDays*2) split, which assumed any main-eligible recipe could
+  // serve either slot — exactly the assumption Stage 2 proved false for 30
+  // lunch-only recipes.
+  const used = new Set();
+  function takeForSlot(slot, n) {
+    const out = [];
+    for (const r of pool) {
+      if (out.length >= n) break;
+      if (used.has(r.id) || !isEligibleForSlot(r, slot)) continue;
+      out.push(r);
+      used.add(r.id);
+    }
+    // Small-corpus cycling (e.g. a niche cuisine or the budget set): once the
+    // distinct candidates for THIS slot are exhausted, repeat them rather
+    // than leaving days empty. Repeats are unavoidable below n distinct
+    // eligible recipes and vanish as the set grows. No cycling is possible
+    // (and none is attempted) when zero candidates were found at all.
+    if (out.length && out.length < n) {
+      const base = out.slice();
+      for (let i = 0; out.length < n; i++) out.push(base[i % base.length]);
+    }
+    return out;
+  }
+  const lunchPicked  = takeForSlot('lunch', nDays).filter(r => r.name?.en || r.name?.ro);
+  const dinnerPicked = takeForSlot('dinner', nDays).filter(r => r.name?.en || r.name?.ro);
+
+  if (lunchPicked.length < nDays || dinnerPicked.length < nDays) {
+    // Explicit failure, not a silent partial plan: a plan whose pool (even
+    // after the full-corpus topup) can't fill every slot for one meal type
+    // means the theme/tag filter is too narrow for the current catalogue.
+    console.error(
+      `[autoPlanMeals] "${plan.id}": insufficient eligible recipes — ` +
+      `lunch ${lunchPicked.length}/${nDays}, dinner ${dinnerPicked.length}/${nDays}.`
+    );
+  }
+
   // Single selection → derive both display names and recipe IDs from the
   // SAME picked recipes, so "Open in app" (which consumes the IDs) loads
   // exactly the meals this page renders (which consumes the names).
-  const picked = pool.slice(0, nDays * 2).filter(r => r.name?.en || r.name?.ro);
-  const names  = picked.map(r => r.name?.en || r.name?.ro);
-  const ids    = picked.map(r => r.id);
+  const nameOf = r => r.name?.en || r.name?.ro;
   return {
-    lunches:  names.slice(0, nDays), dinners:   names.slice(nDays, nDays * 2),
-    lunchIds: ids.slice(0, nDays),   dinnerIds: ids.slice(nDays, nDays * 2),
+    lunches:  lunchPicked.map(nameOf),  dinners:   dinnerPicked.map(nameOf),
+    lunchIds: lunchPicked.map(r=>r.id), dinnerIds: dinnerPicked.map(r=>r.id),
   };
 }
 

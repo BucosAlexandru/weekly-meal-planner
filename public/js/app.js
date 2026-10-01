@@ -6,6 +6,7 @@ import { recipesMeta, TAG_LABELS, READY_IN } from './recipes-meta.js';
 import { i18n, langNames, seoParagraphs, pdfMessages, MOTIV, access } from './i18n.js';
 import { buildShoppingFromRawIngredients, parseIngredient } from './shopping-list.js';
 import { PLAN_MEALS } from './plan-meals.generated.js';
+import { filterEligible, slotForInputId } from './mealEligibility.js';
 
 // ===== Live counts (single source of truth for discovery/FAQ/stats copy)
 // Round recipes down to the nearest 100 so the "X+" marketing copy stays
@@ -605,9 +606,17 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // The exact pool generateRandomMenu() draws from: active filter chip
-  // (window._activeFilter) or the budget corpus, minus non-main-meal
-  // categories. Shared so 🎲 can never suggest something Generate wouldn't.
-  async function getGenerationPool() {
+  // (window._activeFilter) or the budget corpus, gated by mealSlots
+  // eligibility for the requested slot. Shared so 🎲 can never suggest
+  // something Generate wouldn't.
+  //
+  // `slot` is required and must be 'lunch' or 'dinner' — the two are
+  // independent HARD-eligibility pools (some recipes are lunch-eligible
+  // only; see mealEligibility.js) and must never be collapsed into one
+  // generic "main" test. There is no fallback past slot eligibility: if
+  // filtering leaves an unusable pool, callers must surface that rather
+  // than silently readmitting an ineligible recipe.
+  async function getGenerationPool(slot) {
     await ensureMainRecipes();
     let pool;
     if (window.isBudgetMenu) {
@@ -628,16 +637,10 @@ document.addEventListener('DOMContentLoaded', () => {
         pool = tests.length
           ? recipesMain.filter(r => tests.some(test => test(r)))
           : recipesMain;
-        if (pool.length < 2) pool = recipesMain; // fallback
+        if (pool.length < 2) pool = recipesMain; // fallback (chip filter too narrow — unrelated to slot eligibility, applied below)
       }
     }
-    // Exclude non-main categories (Dessert / Snack / Salad / Breakfast /
-    // Appetizer / Side dish) from lunch/dinner slots. Category EN values are
-    // stable; recipes without a category fall through as eligible.
-    const NON_MAIN_MEAL = new Set(['Dessert', 'Snack', 'Salad', 'Breakfast', 'Appetizer', 'Side dish']);
-    const mainOnly = pool.filter(r => !NON_MAIN_MEAL.has(r.category?.en || ''));
-    if (mainOnly.length >= 2) pool = mainOnly;
-    return Array.isArray(pool) ? pool : [];
+    return filterEligible(pool, slot);
   }
 
   // Every recipe currently in any slot, resolved through the same helper the
@@ -677,7 +680,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!input || !input.value.trim()) return;
     const prevValue = input.value;
     const current = getRecipeByInput(prevValue);
-    const pool = await getGenerationPool();
+    const pool = await getGenerationPool(slotForInputId(inputId));
     const used = recipeIdsInPlan();
     // §1.2: zero duplicates — exclude everything already in the plan.
     const valid = pool.filter(r => !used.has(r.id));
@@ -926,8 +929,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // in plan, time ±15 min AND cost ±10 RON vs the current recipe, sorted by
   // cost proximity, max 3. Add mode → "Rapide și ieftine": top 3 by
   // time + costRon. Honest labels only — no taste profile exists yet.
-  async function pwRecommendations(mode, currentRec) {
-    const pool = await getGenerationPool();
+  async function pwRecommendations(mode, currentRec, slot) {
+    const pool = await getGenerationPool(slot);
     const used = recipeIdsInPlan();
     const free = pool.filter(r => !used.has(r.id));
     if (mode === 'replace' && currentRec) {
@@ -1097,8 +1100,9 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
       const inputEl = document.getElementById(st.inputId);
       const currentRec = st.mode === 'replace' ? getRecipeByInput(inputEl?.value || '') : null;
-      const recs = await pwRecommendations(st.mode, currentRec);
-      const pool = await getGenerationPool();
+      const slot = slotForInputId(st.inputId);
+      const recs = await pwRecommendations(st.mode, currentRec, slot);
+      const pool = await getGenerationPool(slot);
       // Favorites (BRAIN §9 item 2): hearts saved on recipe pages
       // (plan-cart.js, localStorage 'mp:favorites' = [{en, display}]) surface
       // here — browse mode only, between recommendations and "All recipes".
@@ -1326,8 +1330,14 @@ document.addEventListener('DOMContentLoaded', () => {
   // time ceiling (minutes) so very-long recipes stay off weekday slots and are
   // reserved for the weekend (see generateRandomMenu). Slots are filled in
   // order, so the tighter weekday slots are served from the short pool first.
-  function smartPickWeek(pool, count, maxTimes) {
-    const shuffled = [...pool].sort(() => 0.5 - Math.random());
+  //
+  // `pools` is an array of length `count`: pools[k] is the slot-eligible
+  // candidate list for position k (lunch and dinner slots draw from
+  // different getGenerationPool() results — see generateRandomMenu — so each
+  // position can have its own HARD-eligible pool; diversity/time ranking
+  // below only ever picks from that position's own pool, never a wider one).
+  function smartPickWeek(pools, count, maxTimes) {
+    const shuffledPools = pools.map(pool => [...pool].sort(() => 0.5 - Math.random()));
     const result = new Array(count).fill(null);
     const used = new Set();
     const countryCounts = Object.create(null);
@@ -1366,10 +1376,11 @@ document.addEventListener('DOMContentLoaded', () => {
     for (let k = 0; k < count; k++) {
       // Per slot, prefer (time + diversity); then relax diversity but keep the
       // time ceiling; only as a last resort relax time too, then take anything.
+      const candidates = shuffledPools[k];
       const pick =
-        shuffled.find(r => !used.has(r) && timeOk(r, k) && diversityOk(r)) ||
-        shuffled.find(r => !used.has(r) && timeOk(r, k)) ||
-        shuffled.find(r => !used.has(r));
+        candidates.find(r => !used.has(r) && timeOk(r, k) && diversityOk(r)) ||
+        candidates.find(r => !used.has(r) && timeOk(r, k)) ||
+        candidates.find(r => !used.has(r));
       if (pick) { result[k] = pick; take(pick); }
     }
     return result;
@@ -1380,11 +1391,20 @@ document.addEventListener('DOMContentLoaded', () => {
   // Default false = fresh full week (§2b.1) with the bulk-undo leash.
   async function generateRandomMenu({ keepFilled = false } = {}) {
   // Pool building is shared with the per-slot reroll (Day 2) — see
-  // getGenerationPool(): active filter / budget corpus / non-main exclusion.
-  const pool = await getGenerationPool();
+  // getGenerationPool(): active filter / budget corpus / mealSlots
+  // eligibility. Lunch and dinner are independent HARD-eligibility pools
+  // (some recipes are lunch-eligible only) and are always built separately —
+  // never collapsed into one shared "main" pool. 'meal' mode (the generic
+  // "Surprise me" single suggestion, not day-specific) draws from the lunch
+  // pool, which is the broader of the two (every dinner-eligible recipe is
+  // also lunch-eligible in the current catalogue, the reverse is not true).
+  const lunchPool  = await getGenerationPool('lunch');
+  const dinnerPool = await getGenerationPool('dinner');
 
-  if (!Array.isArray(pool) || pool.length < 1) {
-    console.warn("Random menu: pool too small", pool?.length);
+  const mode = window._planMode;
+  const havePool = mode === 'meal' ? lunchPool.length > 0 : (lunchPool.length > 0 || dinnerPool.length > 0);
+  if (!havePool) {
+    console.warn("Random menu: pool too small", { lunch: lunchPool.length, dinner: dinnerPool.length });
     return false; // signal failure so plan_generated is NOT counted
   }
 
@@ -1394,18 +1414,16 @@ document.addEventListener('DOMContentLoaded', () => {
   const pwSnapshot = pwSnapshotPlan();
   const pwHadMeals = pwSnapshot.some(s => s.prevValue.trim());
 
-  const mode = window._planMode;
-
   if (mode === 'meal') {
     // Fill only one input — a single random recipe
     const input = document.getElementById('d1l');
-    const pick = pool[Math.floor(Math.random() * pool.length)];
+    const pick = lunchPool[Math.floor(Math.random() * lunchPool.length)];
     if (input) input.value = pick ? getRecipeText(pick, lang) : '';
   } else if (mode === 'day') {
-    // Fill lunch + dinner for today
+    // Fill lunch + dinner for today — each from its own slot-eligible pool.
     const lunchInput  = document.getElementById('d1l');
     const dinnerInput = document.getElementById('d1c');
-    const picks = smartPickWeek(pool, 2);
+    const picks = smartPickWeek([lunchPool, dinnerPool], 2);
     if (lunchInput)  lunchInput.value  = picks[0] ? getRecipeText(picks[0], lang) : '';
     if (dinnerInput) dinnerInput.value = picks[1] ? getRecipeText(picks[1], lang) : '';
   } else {
@@ -1428,7 +1446,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const WEEKDAY_MAX_MIN = 75;
     const dayOfSlot = el => parseInt((el.id.match(/^d(\d)/) || [])[1], 10) || 1;
     const maxTimes = emptySlots.map(el => (dayOfSlot(el) >= 6 ? Infinity : WEEKDAY_MAX_MIN));
-    const picks = smartPickWeek(pool, emptySlots.length, maxTimes);
+    const slotPools = emptySlots.map(el => (el.id.endsWith('l') ? lunchPool : dinnerPool));
+    const picks = smartPickWeek(slotPools, emptySlots.length, maxTimes);
     emptySlots.forEach((inp, i) => {
       if (picks[i]) inp.value = getRecipeText(picks[i], lang);
     });

@@ -117,6 +117,24 @@ jobs:
       - name: Verify corpus counts (pages + sitemap)
         run: node scripts/verify-corpus-counts.mjs
 
+      # 9b. Meal-slot taxonomy invariant — every recipe (main + budget) must
+      # carry a valid mealSlots array from the controlled enum. This is the
+      # guard against the production bug where a free-text category match
+      # (or its absence) silently decided meal-slot eligibility; see
+      # scripts/verify-meal-taxonomy.mjs for the full rationale.
+      - name: Verify meal-slot taxonomy
+        run: node scripts/verify-meal-taxonomy.mjs
+
+      # 9c. Generation-engine regression + property test (Stage 3 — Engine
+      # Fix). Taxonomy above only checks the DATA is well-formed; this checks
+      # the ENGINE actually honours it: known-regression recipes (e.g.
+      # Birchermüesli) stay out of Lunch/Dinner, every static plan-meals.
+      # generated.js slot resolves to an eligible recipe, and a 5,200-plan
+      # fuzz run of the real pool/pick algorithm finds zero slot violations.
+      # See scripts/test-generation-engine.mjs for the full rationale.
+      - name: Test generation engine (regression + fuzz)
+        run: node scripts/test-generation-engine.mjs
+
       # 10. Secret leak check
       # Prevents accidentally committing live Stripe keys or Supabase service keys.
       # The anon key in app.js is intentionally public -- only service/secret keys are dangerous.
