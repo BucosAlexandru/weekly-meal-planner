@@ -8,10 +8,27 @@
 //
 import { createClient } from '@supabase/supabase-js';
 
-const supabase = createClient(
-  process.env.SUPABASE_URL,
-  process.env.SUPABASE_SERVICE_ROLE_KEY
-);
+// The Supabase client is created LAZILY, on the first premium check — not at
+// import time. Importing this module must never throw: offline tooling (the
+// PDF harness in scripts/pdf/ + tests/pdf/) imports api/generate-pdf.js, which
+// imports this file, in an environment with no Supabase credentials. Before,
+// createClient() ran at import and threw "supabaseUrl is required", taking the
+// whole module graph down. Lazy creation changes nothing for production
+// callers: the env is read on the first call instead of at cold start, and a
+// missing/invalid env still FAILS CLOSED — isPremiumEmail() catches the throw
+// and returns false; requirePremium() lets it propagate to the handler (500),
+// exactly as an import-time failure did. There is no flag or env switch that
+// grants premium.
+let _supabase = null;
+function getSupabase() {
+  if (!_supabase) {
+    _supabase = createClient(
+      process.env.SUPABASE_URL,
+      process.env.SUPABASE_SERVICE_ROLE_KEY
+    );
+  }
+  return _supabase;
+}
 
 /**
  * Validates that the request body contains an `email` with an active premium
@@ -37,7 +54,7 @@ export async function requirePremium(req, res) {
   }
 
   // Query all token rows for this email — do NOT use .single() (fails if 2+ rows)
-  const { data: rows, error } = await supabase
+  const { data: rows, error } = await getSupabase()
     .from('tokens')
     .select('expires_at')
     .eq('email', email)
@@ -80,7 +97,7 @@ export async function isPremiumEmail(email) {
   const e = typeof email === 'string' ? email.trim().toLowerCase() : '';
   if (!e) return false;
   try {
-    const { data: rows, error } = await supabase
+    const { data: rows, error } = await getSupabase()
       .from('tokens')
       .select('expires_at')
       .eq('email', e)

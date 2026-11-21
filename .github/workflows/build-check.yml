@@ -94,6 +94,20 @@ jobs:
       - name: Main-meal guard tests
         run: node --test tests/meal-category.test.mjs
 
+      # 6d. Offline PDF harness (PDF-001)
+      # Renders the deterministic fixture plan through the REAL render path of
+      # api/generate-pdf.js in all 14 locales (ar must be reported as blocked
+      # by the 422 guard), checks the free-tier clamp still applies when there
+      # is no Supabase env, and validates every PDF. No secrets, no network.
+      # poppler-utils enables the text checks; if the install fails the tests
+      # still run in builtin mode (structure + page count only).
+      - name: Install poppler-utils (PDF text checks)
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils \
+            || echo "poppler-utils unavailable: PDF tests run in builtin mode"
+      - name: PDF offline harness tests
+        run: node --test tests/pdf/*.test.mjs
+
       # 7. Verify minified asset files exist
       - name: Verify build artifacts
         run: |
