@@ -62,6 +62,7 @@ Per-language URL prefixes for recipes and pricing are hard-coded in the `RECIPE_
 
 - `public/js/app.js` — main planner UI. Bundled. Imports `recipes.js`, `recipes-meta.js`, `i18n.js`. **`recipes-budget.js` is marked external in the esbuild command** and lazy-loaded at runtime (`ensureBudgetRecipes()`) to keep initial JS under ~1.7 MB. Do not statically import `recipes-budget.js` from `app.js`.
 - `public/js/recipes.js` — 701 main recipes, one object per recipe with multilingual `name`, `origin`, `featureCards`, `ingredients`, `howIsMade`, plus `nutrition`, `tipType`, `pairingsType`. This is the canonical content source; the HTML generator reads it directly.
+- `public/js/meal-category.js` — shared lunch/dinner predicate (`isMainMealCandidate`, `filterMainMeals`) used by `app.js` and `scripts/plan-picker.mjs`. Never re-add a hard-coded category list; add a reviewed `NON_MAIN_OVERRIDES` entry instead. Tests: `node --test tests/meal-category.test.mjs` (PL-001, see `docs/ai/PL-001_MEAL_CATEGORY_GUARD.md`).
 - `public/js/recipes-meta.js` — per-recipe `time`, `costRon`, `tags`, optional `desc`. Applied to recipe objects at runtime by `app.js` (does not mutate the file).
 - `public/js/recipes-budget.js` — secondary recipe set (35 recipes), only loaded when the budget toggle is on.
 - `public/js/i18n.js` — all UI translations, language names, SEO paragraph templates, PDF messages.

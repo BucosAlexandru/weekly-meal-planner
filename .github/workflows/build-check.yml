@@ -86,6 +86,14 @@ jobs:
       - name: Validate Open-in-app plan parity
         run: npm run validate:plans
 
+      # 6c. Main-meal guard regression suite (PL-001)
+      # Shared lunch/dinner predicate (public/js/meal-category.js) used by the
+      # planner and the SEO plan generator: unit + corpus tests and a 52-week
+      # simulation against an independent oracle. Fails if a dessert, bread,
+      # breakfast, snack or side can land in a published plan.
+      - name: Main-meal guard tests
+        run: node --test tests/meal-category.test.mjs
+
       # 7. Verify minified asset files exist
       - name: Verify build artifacts
         run: |

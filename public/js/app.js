@@ -6,6 +6,7 @@ import { recipesMeta, TAG_LABELS, READY_IN } from './recipes-meta.js';
 import { i18n, langNames, seoParagraphs, pdfMessages, MOTIV, access } from './i18n.js';
 import { buildShoppingFromRawIngredients, parseIngredient } from './shopping-list.js';
 import { PLAN_MEALS } from './plan-meals.generated.js';
+import { filterMainMeals } from './meal-category.js';
 
 // ===== Live counts (single source of truth for discovery/FAQ/stats copy)
 // Round recipes down to the nearest 100 so the "X+" marketing copy stays
@@ -631,13 +632,12 @@ document.addEventListener('DOMContentLoaded', () => {
         if (pool.length < 2) pool = recipesMain; // fallback
       }
     }
-    // Exclude non-main categories (Dessert / Snack / Salad / Breakfast /
-    // Appetizer / Side dish) from lunch/dinner slots. Category EN values are
-    // stable; recipes without a category fall through as eligible.
-    const NON_MAIN_MEAL = new Set(['Dessert', 'Snack', 'Salad', 'Breakfast', 'Appetizer', 'Side dish']);
-    const mainOnly = pool.filter(r => !NON_MAIN_MEAL.has(r.category?.en || ''));
-    if (mainOnly.length >= 2) pool = mainOnly;
-    return Array.isArray(pool) ? pool : [];
+    // Exclude non-main recipes (desserts, breakfast, snacks, appetizers,
+    // sides, breads, salads) from lunch/dinner slots. Shared predicate with
+    // the SEO plan generator — see meal-category.js. Recipes without a
+    // category fall through as eligible.
+    // Falls back to the unfiltered pool when < 2 main meals remain.
+    return filterMainMeals(pool, { allowSalad: false });
   }
 
   // Every recipe currently in any slot, resolved through the same helper the
