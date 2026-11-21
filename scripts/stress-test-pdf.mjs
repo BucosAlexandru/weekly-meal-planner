@@ -28,12 +28,27 @@
 //   - empty       (no meals selected — empty payload)
 //   - huge-shop   (very large shopping list — 12+ groups)
 
-import handler, { MealPlanDocument } from '../api/generate-pdf.js';
-import { renderToBuffer as rpdfRenderToBuffer } from '@react-pdf/renderer';
+//
+// Offline: runs with NO Supabase/Stripe env and no network (PDF-001). The
+// handler-path scenarios go through the real handler, whose premium check
+// fails closed without Supabase → they exercise the FREE path. The `direct`
+// scenarios render the full premium view through renderPlanPdf(), the same
+// render call the handler makes after gating. Requires poppler (pdfinfo,
+// pdftotext, pdftoppm); for a poppler-free check of all 14 locales use
+// scripts/pdf/render-all.mjs.
+
+import handler, { renderPlanPdf } from '../api/generate-pdf.js';
+import { hasPoppler } from './pdf/pdf-inspect.mjs';
 import fs from 'fs';
 import os from 'os';
 import path from 'path';
 import { execSync } from 'child_process';
+
+if (!hasPoppler()) {
+  console.error('stress-test-pdf: poppler (pdfinfo/pdftotext/pdffonts) not found on PATH.\n' +
+                '  Install poppler-utils, or run the poppler-free harness: node scripts/pdf/render-all.mjs');
+  process.exit(2);
+}
 
 const STRESS_TIMEOUT_MS = 8000;
 const TMP = fs.mkdtempSync(path.join(os.tmpdir(), 'pdf-stress-'));
@@ -50,13 +65,14 @@ function fail(msg){ console.log(`  ✗ ${msg}`); exitCode = 1; }
 async function renderToBuffer(plan, scenarioIdx = 0, direct = false) {
   const t0 = Date.now();
   if (direct) {
-    // Premium-equivalent render through the exported pure document builder.
+    // Premium-equivalent render through renderPlanPdf() — the handler's own
+    // render call, minus the entitlement gate.
     // Used for pagination stress on payload shapes (7-day plans) that the
     // handler would clamp to the 2-day free preview without a real premium
     // email — Supabase isn't available in this harness. Gating itself is
     // exercised by the handler-path scenarios below.
     const body = await Promise.race([
-      rpdfRenderToBuffer(MealPlanDocument(plan)),
+      renderPlanPdf(plan),
       new Promise((_, rej) => setTimeout(() => rej(new Error('render timeout')), STRESS_TIMEOUT_MS)),
     ]);
     return { body, status: 200, headers: { 'content-type': 'application/pdf' }, ms: Date.now() - t0 };

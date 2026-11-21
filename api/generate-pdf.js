@@ -976,6 +976,31 @@ export function MealPlanDocument(plan) {
   return h(Document, { title: plan.title || 'Weekly meal plan', author: 'Meal-Planner.ro' }, pageEl);
 }
 
+// ── Language guard (pure) ──────────────────────────────────────────────────
+// Returns null when the locale may be rendered, or { status, body } describing
+// the refusal the handler sends. Exported so the offline harness
+// (scripts/pdf/, tests/pdf/) applies the SAME guard and can report a blocked
+// locale as "blocked by guard" instead of rendering it (an ar render would
+// poison shared fontkit state for every later locale in the process — see the
+// GUARD note in the handler).
+export const PDF_BLOCKED_LANGS = Object.freeze(['ar']);
+export function pdfLanguageGuard(plan) {
+  const lang = plan && plan.lang;
+  if (lang && PDF_BLOCKED_LANGS.includes(lang)) {
+    return { status: 422, body: { error: 'pdf_unavailable_for_language', lang } };
+  }
+  return null;
+}
+
+// ── Render (pure, no access control) ───────────────────────────────────────
+// The exact render call the handler makes once the plan has been gated. It
+// does NOT check entitlement — callers in production go through the default
+// handler below (pdfLanguageGuard → isPremiumEmail → gatePlanForAccess →
+// renderPlanPdf). Offline tooling calls it directly with fixture plans.
+export function renderPlanPdf(plan) {
+  return renderToBuffer(MealPlanDocument(plan));
+}
+
 // Minimal demo payload used when the request body is empty / GET. Lets us
 // smoke-test the endpoint from a browser address bar without wiring the UI.
 const DEMO_PLAN = {
@@ -1034,8 +1059,9 @@ export default async function handler(req, res) {
     // layout work. The client blocks ar too (localized message); this is the
     // backstop for direct POSTs. Remove when the upstream bidi fix lands —
     // see docs/ai/PRODUCT_RELEASE_AUDIT.md §2.1.
-    if (plan && plan.lang === 'ar') {
-      return res.status(422).json({ error: 'pdf_unavailable_for_language', lang: 'ar' });
+    const blocked = pdfLanguageGuard(plan);
+    if (blocked) {
+      return res.status(blocked.status).json(blocked.body);
     }
 
     // SECURITY: server decides the entitlement, not the browser. Validate the
@@ -1061,7 +1087,7 @@ export default async function handler(req, res) {
     plan = gatePlanForAccess(plan, premium);
 
     const t0 = Date.now();
-    const buffer = await renderToBuffer(MealPlanDocument(plan));
+    const buffer = await renderPlanPdf(plan);
     const ms = Date.now() - t0;
 
     res.setHeader('Content-Type', 'application/pdf');

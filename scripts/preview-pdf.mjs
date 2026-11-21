@@ -1,25 +1,29 @@
 // scripts/preview-pdf.mjs
 // Render a sample PDFv2 export using current recipes + the merged premium-
-// polish handler (api/generate-pdf.js). Writes to /tmp/preview-pdf.pdf so the
-// session can surface the file directly.
+// polish handler (api/generate-pdf.js). Writes to <os tmpdir>/preview-pdf.pdf
+// (or the path given as the first argument).
 //
-// Usage: node scripts/preview-pdf.mjs
+// Usage: node scripts/preview-pdf.mjs [out.pdf]
+// Offline: no Supabase/Stripe env and no network needed (PDF-001). For all
+// 14 locales use scripts/pdf/render-all.mjs.
 
-import { MealPlanDocument } from '../api/generate-pdf.js';
-import { renderToBuffer } from '@react-pdf/renderer';
+import { renderPlanPdf } from '../api/generate-pdf.js';
+import os from 'node:os';
+import path from 'node:path';
 import { recipes } from '../public/js/recipes.js';
 import { recipesMeta } from '../public/js/recipes-meta.js';
 import { parseIngredient, buildShoppingFromRawIngredients } from '../public/js/shopping-list.js';
 import fs from 'fs';
 
-// Renders the FULL (premium-equivalent) view via the exported pure document
-// builder. The HTTP handler's access gating (isPremiumEmail +
-// gatePlanForAccess) is intentionally bypassed here — a local preview has no
-// Supabase, so going through the handler would always produce the clamped
-// 2-day free PDF and hide most of what we need to inspect. Gating itself is
-// covered by scripts/stress-test-pdf.mjs's handler-path scenarios.
+// Renders the FULL (premium-equivalent) view via renderPlanPdf() — the
+// handler's own render call, minus the entitlement gate. The HTTP handler's
+// access gating (isPremiumEmail + gatePlanForAccess) is intentionally not
+// used here — a local preview has no Supabase, so going through the handler
+// would always produce the clamped 2-day free PDF and hide most of what we
+// need to inspect. Gating itself is covered by
+// tests/pdf/handler-offline.test.mjs and scripts/stress-test-pdf.mjs.
 async function renderFull(plan) {
-  const body = await renderToBuffer(MealPlanDocument(plan));
+  const body = await renderPlanPdf(plan);
   return { status: 200, body };
 }
 
@@ -179,6 +183,6 @@ if (result.status !== 200) {
   process.exit(1);
 }
 
-const outPath = '/tmp/preview-pdf.pdf';
+const outPath = process.argv[2] || path.join(os.tmpdir(), 'preview-pdf.pdf');
 fs.writeFileSync(outPath, result.body);
 console.log('\n✅ Written to', outPath);
