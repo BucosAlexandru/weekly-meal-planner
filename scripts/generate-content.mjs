@@ -23,6 +23,7 @@ import { MEAL_TYPE_IDS, MEAL_TYPE_LABELS } from './taxonomy/meal-types.mjs';
 import { autoPlanMeals } from './plan-picker.mjs';
 import fs   from 'fs';
 import path from 'path';
+import crypto from 'crypto';
 import { fileURLToPath } from 'url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -697,7 +698,7 @@ const LANG_CONFIGS = {
     planIdFn: p=>p.idEn,
   },
   es: {
-    code:'es', dir:'/es/plan-semanal', appDir:'/',
+    code:'es', dir:'/es/plan-semanal', appDir:'/es',
     homeLabel:'Inicio', sectionLabel:'Planes Semanales', appLabel:'App',
     planBadge:'Plan de comidas semanal', planHeading:'Plan semanal completo',
     dayTh:'Día', lunchTh:'Almuerzo', dinnerTh:'Cena',
@@ -726,7 +727,7 @@ const LANG_CONFIGS = {
     planIdFn: p=>p.idEn,
   },
   fr: {
-    code:'fr', dir:'/fr/plan-semaine', appDir:'/',
+    code:'fr', dir:'/fr/plan-semaine', appDir:'/fr',
     homeLabel:'Accueil', sectionLabel:'Plans de la Semaine', appLabel:'Application',
     planBadge:'Plan repas hebdomadaire', planHeading:'Plan complet de la semaine',
     dayTh:'Jour', lunchTh:'Déjeuner', dinnerTh:'Dîner',
@@ -755,7 +756,7 @@ const LANG_CONFIGS = {
     planIdFn: p=>p.idEn,
   },
   de: {
-    code:'de', dir:'/de/wochenplan', appDir:'/',
+    code:'de', dir:'/de/wochenplan', appDir:'/de',
     homeLabel:'Startseite', sectionLabel:'Wochenpläne', appLabel:'App',
     planBadge:'Wochenspeiseplan', planHeading:'Vollständiger Wochenplan',
     dayTh:'Tag', lunchTh:'Mittagessen', dinnerTh:'Abendessen',
@@ -784,7 +785,7 @@ const LANG_CONFIGS = {
     planIdFn: p=>p.idEn,
   },
   pt: {
-    code:'pt', dir:'/pt/plano-semanal', appDir:'/',
+    code:'pt', dir:'/pt/plano-semanal', appDir:'/pt',
     homeLabel:'Início', sectionLabel:'Planos Semanais', appLabel:'App',
     planBadge:'Plano de refeições semanal', planHeading:'Plano semanal completo',
     dayTh:'Dia', lunchTh:'Almoço', dinnerTh:'Jantar',
@@ -813,7 +814,7 @@ const LANG_CONFIGS = {
     planIdFn: p=>p.idEn,
   },
   ru: {
-    code:'ru', dir:'/ru/nedelnoe-menyu', appDir:'/',
+    code:'ru', dir:'/ru/nedelnoe-menyu', appDir:'/ru',
     homeLabel:'Главная', sectionLabel:'Недельные меню', appLabel:'Приложение',
     planBadge:'Недельный план питания', planHeading:'Полный недельный план',
     dayTh:'День', lunchTh:'Обед', dinnerTh:'Ужин',
@@ -842,7 +843,7 @@ const LANG_CONFIGS = {
     planIdFn: p=>p.idEn,
   },
   ar: {
-    code:'ar', dir:'/ar/khitat-usbuiya', appDir:'/', dir_attr:'rtl',
+    code:'ar', dir:'/ar/khitat-usbuiya', appDir:'/ar', dir_attr:'rtl',
     homeLabel:'الرئيسية', sectionLabel:'الخطط الأسبوعية', appLabel:'التطبيق',
     planBadge:'خطة وجبات أسبوعية', planHeading:'الخطة الأسبوعية الكاملة',
     dayTh:'اليوم', lunchTh:'الغداء', dinnerTh:'العشاء',
@@ -871,7 +872,7 @@ const LANG_CONFIGS = {
     planIdFn: p=>p.idEn,
   },
   zh: {
-    code:'zh', dir:'/zh/zhoujicaidan', appDir:'/',
+    code:'zh', dir:'/zh/zhoujicaidan', appDir:'/zh',
     homeLabel:'首页', sectionLabel:'每周食谱计划', appLabel:'应用',
     planBadge:'每周饮食计划', planHeading:'完整的每周计划',
     dayTh:'日期', lunchTh:'午餐', dinnerTh:'晚餐',
@@ -900,7 +901,7 @@ const LANG_CONFIGS = {
     planIdFn: p=>p.idEn,
   },
   ja: {
-    code:'ja', dir:'/ja/weekly-menu', appDir:'/',
+    code:'ja', dir:'/ja/weekly-menu', appDir:'/ja',
     homeLabel:'ホーム', sectionLabel:'週間献立', appLabel:'アプリ',
     planBadge:'週間食事プラン', planHeading:'1週間の完全なプラン',
     dayTh:'曜日', lunchTh:'昼食', dinnerTh:'夕食',
@@ -929,7 +930,7 @@ const LANG_CONFIGS = {
     planIdFn: p=>p.idEn,
   },
   hi: {
-    code:'hi', dir:'/hi/weekly-plan', appDir:'/',
+    code:'hi', dir:'/hi/weekly-plan', appDir:'/hi',
     homeLabel:'होम', sectionLabel:'साप्ताहिक भोजन योजना', appLabel:'ऐप',
     planBadge:'साप्ताहिक भोजन योजना', planHeading:'पूरी साप्ताहिक योजना',
     dayTh:'दिन', lunchTh:'दोपहर का भोजन', dinnerTh:'रात का खाना',
@@ -958,7 +959,7 @@ const LANG_CONFIGS = {
     planIdFn: p=>p.idEn,
   },
   tr: {
-    code:'tr', dir:'/tr/haftalik-menu', appDir:'/',
+    code:'tr', dir:'/tr/haftalik-menu', appDir:'/tr',
     homeLabel:'Ana Sayfa', sectionLabel:'Haftalık Yemek Planları', appLabel:'Uygulama',
     planBadge:'Haftalık yemek planı', planHeading:'Tam haftalık plan',
     dayTh:'Gün', lunchTh:'Öğle Yemeği', dinnerTh:'Akşam Yemeği',
@@ -987,7 +988,7 @@ const LANG_CONFIGS = {
     planIdFn: p=>p.idEn,
   },
   it: {
-    code:'it', dir:'/it/piano-settimanale', appDir:'/',
+    code:'it', dir:'/it/piano-settimanale', appDir:'/it',
     homeLabel:'Home', sectionLabel:'Piani Settimanali', appLabel:'App',
     planBadge:'Piano pasti settimanale', planHeading:'Piano settimanale completo',
     dayTh:'Giorno', lunchTh:'Pranzo', dinnerTh:'Cena',
@@ -1016,7 +1017,7 @@ const LANG_CONFIGS = {
     planIdFn: p=>p.idEn,
   },
   ko: {
-    code:'ko', dir:'/ko/jugan-menu', appDir:'/',
+    code:'ko', dir:'/ko/jugan-menu', appDir:'/ko',
     homeLabel:'홈', sectionLabel:'주간 식단 계획', appLabel:'앱',
     planBadge:'주간 식단 계획', planHeading:'전체 주간 계획',
     dayTh:'요일', lunchTh:'점심', dinnerTh:'저녁',
@@ -1058,7 +1059,7 @@ const HEAD = (title, desc, canonical, langCode='ro', dir='ltr', ogType='website'
   <meta name="description" content="${esc(desc)}"/>
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1"/>
   <link rel="canonical" href="https://meal-planner.ro${canonical}"/>
-  <link rel="alternate" hreflang="x-default" href="https://meal-planner.ro/"/>
+  <link rel="alternate" hreflang="x-default" href="https://meal-planner.ro/en/"/>
   <link rel="alternate" hreflang="ro" href="https://meal-planner.ro/ro/"/>
   <link rel="alternate" hreflang="en" href="https://meal-planner.ro/en/"/>
   <meta property="og:type" content="${ogType}"/>
@@ -1623,7 +1624,7 @@ function makePricingNav(lc_code) {
 const PRICING_HREFLANGS = Object.entries(PRICING_SLUGS)
   .map(([lc, sl]) => `  <link rel="alternate" hreflang="${lc}" href="https://meal-planner.ro/${lc}/${sl}/" />`)
   .join('\n');
-const PRICING_HREFLANGS_FULL = `  <link rel="alternate" hreflang="x-default" href="https://meal-planner.ro/pricing/" />\n${PRICING_HREFLANGS}`;
+const PRICING_HREFLANGS_FULL = `  <link rel="alternate" hreflang="x-default" href="https://meal-planner.ro/en/${PRICING_SLUGS.en}/" />\n${PRICING_HREFLANGS}`;
 
 function pricingPage(lc_code) {
   const lc  = LANG_CONFIGS[lc_code];
@@ -1773,7 +1774,7 @@ ${premRows}
           </ul>
           <button class="btn btn-upgrade pcard-cta" id="pay-btn" type="button">${cp.cta}</button>
           <p class="pcard-already">
-            <a href="/#access-card">${cp.alreadyLabel}</a>
+            <a href="${appHref(lc)}#access-card">${cp.alreadyLabel}</a>
           </p>
         </div>
 
@@ -1789,7 +1790,7 @@ ${premRows}
              the homepage access card, which used to arrive with an EMPTY email
              field — whatever the user typed here was silently lost. Stash it in
              mp:lastEmail so restorePremiumFromHint() verifies it on arrival. -->
-        <a href="/#access-card" class="btn btn-verify"
+        <a href="${appHref(lc)}#access-card" class="btn btn-verify"
            onclick="try{var v=document.getElementById('emailInput').value.trim();if(v)localStorage.setItem('mp:lastEmail',v);}catch(e){}">${cp.alreadyActivate}</a>
       </div>
     </div>
@@ -2007,7 +2008,7 @@ ${makeNav(lc, NAV_URL_FOR.plan(plan))}
   <section class="content-hero${heroImg ? ' content-hero--photo' : ''}"${heroImg ? ` style="--hero-bg: url('${heroImg}')"` : ''}>
     <div class="content-hero-inner">
       <nav aria-label="breadcrumb" class="breadcrumb-nav">
-        <a href="/">${lc.homeLabel}</a> › <a href="${lc.dir}/">${lc.sectionLabel}</a> › <span>${esc(theme)}</span>
+        <a href="${appHref(lc)}">${lc.homeLabel}</a> › <a href="${lc.dir}/">${lc.sectionLabel}</a> › <span>${esc(theme)}</span>
       </nav>
       <div class="content-hero-badge">${plan.emoji} ${wknd?.badge || lc.planBadge}</div>
       <h1>${esc(theme)}</h1>
@@ -2019,7 +2020,7 @@ ${makeNav(lc, NAV_URL_FOR.plan(plan))}
         <span class="plan-chip"><i class="bi bi-bag-check-fill"></i> ${lc.ingredientsLabel(shopping.length)}</span>
       </div>
       <div class="content-cta-group">
-        <a href="${appHref(lc)}?autoplan=${plan.id}" class="btn btn-generate btn-lg">
+        <a href="${appHref(lc)}?autoplan=${plan.id}" rel="nofollow" class="btn btn-generate btn-lg">
           <i class="bi bi-pencil-square"></i> ${lc.customizeLabel}
         </a>
         <a href="#${lc.shoppingAnchor}" class="btn btn-outline-light btn-lg">
@@ -2269,7 +2270,7 @@ ${makeNav(lc, NAV_URL_FOR.planIndex())}
   <section class="content-hero content-hero--short">
     <div class="content-hero-inner">
       <nav aria-label="breadcrumb" class="breadcrumb-nav">
-        <a href="/">${lc.homeLabel}</a> › <span>${lc.sectionLabel}</span>
+        <a href="${appHref(lc)}">${lc.homeLabel}</a> › <span>${lc.sectionLabel}</span>
       </nav>
       <h1>${lc.indexH1raw}</h1>
       <p class="content-hero-desc">${esc(lc.indexSubdesc)}</p>
@@ -2349,7 +2350,7 @@ const RECIPE_LANG = {
         pageTitle: n=>`Receta de ${esc(n)} – Ingredientes y Preparación | Meal-Planner.ro`,
         pageDesc: (n,o)=>`Receta de ${n} de ${o}: ingredientes e instrucciones paso a paso.`,
         heroDesc: o=>`Receta tradicional de ${esc(o)}.`,
-        appDir:'', lc: null },
+        appDir:'/es', lc: null },
   fr: { dir:'/fr/recettes',  indexTitle:`Recettes du Monde | Meal-Planner.ro`,
         indexH1:'Recettes du <span class="accent">Monde</span>',
         indexDesc: n=>`<p>Des tables familiales aux traditions transmises de génération en génération.</p><p>${n} recettes de 53 cuisines, en 14 langues.</p><p>Choisissez où commence le dîner d'aujourd'hui.</p>`,
@@ -2363,7 +2364,7 @@ const RECIPE_LANG = {
         pageTitle: n=>`Recette ${esc(n)} – Ingrédients et Préparation | Meal-Planner.ro`,
         pageDesc: (n,o)=>`Recette de ${n} de ${o}: ingrédients et instructions étape par étape.`,
         heroDesc: o=>`Recette traditionnelle de ${esc(o)}.`,
-        appDir:'', lc: null },
+        appDir:'/fr', lc: null },
   de: { dir:'/de/rezepte',   indexTitle:`Rezepte aus aller Welt | Meal-Planner.ro`,
         indexH1:'Rezepte aus <span class="accent">aller Welt</span>',
         indexDesc: n=>`<p>Vom Familientisch zu Traditionen, die über Generationen weitergegeben werden.</p><p>${n} Rezepte aus 53 Küchen, in 14 Sprachen.</p><p>Wähle, wo das heutige Abendessen beginnt.</p>`,
@@ -2377,7 +2378,7 @@ const RECIPE_LANG = {
         pageTitle: n=>`${esc(n)} Rezept – Zutaten & Zubereitung | Meal-Planner.ro`,
         pageDesc: (n,o)=>`${n} Rezept aus ${o}: Zutaten und Schritt-für-Schritt-Anleitung.`,
         heroDesc: o=>`Traditionelles Rezept aus ${esc(o)}.`,
-        appDir:'', lc: null },
+        appDir:'/de', lc: null },
   pt: { dir:'/pt/receitas',  indexTitle:`Receitas do Mundo | Meal-Planner.ro`,
         indexH1:'Receitas do <span class="accent">Mundo</span>',
         indexDesc: n=>`<p>Das mesas de família às tradições transmitidas de geração em geração.</p><p>${n} receitas de 53 cozinhas, em 14 idiomas.</p><p>Escolha onde começa o jantar de hoje.</p>`,
@@ -2391,7 +2392,7 @@ const RECIPE_LANG = {
         pageTitle: n=>`Receita de ${esc(n)} – Ingredientes e Preparo | Meal-Planner.ro`,
         pageDesc: (n,o)=>`Receita de ${n} de ${o}: ingredientes e instruções passo a passo.`,
         heroDesc: o=>`Receita tradicional de ${esc(o)}.`,
-        appDir:'', lc: null },
+        appDir:'/pt', lc: null },
   ru: { dir:'/ru/retsepty',  indexTitle:`Рецепты со всего мира | Meal-Planner.ro`,
         indexH1:'Рецепты со <span class="accent">всего мира</span>',
         indexDesc: n=>`<p>От семейных столов до традиций, передаваемых из поколения в поколение.</p><p>${n} рецептов из 53 кухонь, на 14 языках.</p><p>Выберите, где начнётся сегодняшний ужин.</p>`,
@@ -2405,7 +2406,7 @@ const RECIPE_LANG = {
         pageTitle: n=>`Рецепт ${esc(n)} – Ингредиенты и приготовление | Meal-Planner.ro`,
         pageDesc: (n,o)=>`Рецепт ${n} из ${o}: ингредиенты и пошаговые инструкции.`,
         heroDesc: o=>`Традиционный рецепт из ${esc(o)}.`,
-        appDir:'', lc: null },
+        appDir:'/ru', lc: null },
   ar: { dir:'/ar/wasafat',   indexTitle:`وصفات من حول العالم | Meal-Planner.ro`,
         indexH1:'وصفات من <span class="accent">حول العالم</span>',
         indexDesc: n=>`<p>من موائد العائلة إلى التقاليد المتوارثة جيلاً بعد جيل.</p><p>${n} وصفة من 53 مطبخًا، بـ 14 لغة.</p><p>اختر من أين يبدأ عشاء اليوم.</p>`,
@@ -2419,7 +2420,7 @@ const RECIPE_LANG = {
         pageTitle: n=>`وصفة ${esc(n)} – المكونات وطريقة التحضير | Meal-Planner.ro`,
         pageDesc: (n,o)=>`وصفة ${n} من ${o}: مكونات وتعليمات خطوة بخطوة.`,
         heroDesc: o=>`وصفة تقليدية من ${esc(o)}.`,
-        appDir:'', dir_attr:'rtl', lc: null },
+        appDir:'/ar', dir_attr:'rtl', lc: null },
   zh: { dir:'/zh/shipu',     indexTitle:`世界各地食谱 | Meal-Planner.ro`,
         indexH1:'<span class="accent">世界各地</span>食谱',
         indexDesc: n=>`<p>从家庭餐桌到代代相传的传统。</p><p>来自53个厨房的${n}道食谱，14种语言。</p><p>选择今天晚餐从哪里开始。</p>`,
@@ -2433,7 +2434,7 @@ const RECIPE_LANG = {
         pageTitle: n=>`${esc(n)}食谱 – 食材和做法 | Meal-Planner.ro`,
         pageDesc: (n,o)=>`${n}食谱来自${o}：食材和步骤说明。`,
         heroDesc: o=>`来自${esc(o)}的传统食谱。`,
-        appDir:'', lc: null },
+        appDir:'/zh', lc: null },
   ja: { dir:'/ja/reshipi',   indexTitle:`世界の料理レシピ | Meal-Planner.ro`,
         indexH1:'<span class="accent">世界の</span>料理レシピ',
         indexDesc: n=>`<p>家族の食卓から、世代を超えて受け継がれる伝統まで。</p><p>53の厨房から${n}のレシピ、14言語で。</p><p>今日の食事をどこから始めるか選びましょう。</p>`,
@@ -2447,7 +2448,7 @@ const RECIPE_LANG = {
         pageTitle: n=>`${esc(n)}のレシピ – 材料と作り方 | Meal-Planner.ro`,
         pageDesc: (n,o)=>`${o}の${n}レシピ：材料とステップごとの作り方。`,
         heroDesc: o=>`${esc(o)}の伝統的なレシピ。`,
-        appDir:'', lc: null },
+        appDir:'/ja', lc: null },
   hi: { dir:'/hi/recipes',   indexTitle:`दुनिया भर की रेसिपी | Meal-Planner.ro`,
         indexH1:'<span class="accent">दुनिया भर</span> की रेसिपी',
         indexDesc: n=>`<p>परिवार की मेज़ से लेकर पीढ़ी दर पीढ़ी चली आ रही परंपराओं तक।</p><p>53 रसोइयों की ${n} रेसिपी, 14 भाषाओं में।</p><p>आज का खाना कहां से शुरू होगा, चुनें।</p>`,
@@ -2461,7 +2462,7 @@ const RECIPE_LANG = {
         pageTitle: n=>`${esc(n)} रेसिपी – सामग्री और बनाने का तरीका | Meal-Planner.ro`,
         pageDesc: (n,o)=>`${o} से ${n} रेसिपी: सामग्री और चरण-दर-चरण निर्देश।`,
         heroDesc: o=>`${esc(o)} की पारंपरिक रेसिपी।`,
-        appDir:'', lc: null },
+        appDir:'/hi', lc: null },
   tr: { dir:'/tr/tarifler',  indexTitle:`Dünyadan Tarifler | Meal-Planner.ro`,
         indexH1:'<span class="accent">Dünyadan</span> Tarifler',
         indexDesc: n=>`<p>Aile sofralarından nesilden nesle aktarılan geleneklere.</p><p>53 mutfaktan ${n} tarif, 14 dilde.</p><p>Bugünkü akşam yemeğinin nereden başlayacağını seç.</p>`,
@@ -2475,7 +2476,7 @@ const RECIPE_LANG = {
         pageTitle: n=>`${esc(n)} Tarifi – Malzemeler ve Yapılışı | Meal-Planner.ro`,
         pageDesc: (n,o)=>`${o}'dan ${n} tarifi: malzemeler ve adım adım talimatlar.`,
         heroDesc: o=>`${esc(o)}'dan geleneksel tarif.`,
-        appDir:'', lc: null },
+        appDir:'/tr', lc: null },
   it: { dir:'/it/ricette',   indexTitle:`Ricette dal Mondo | Meal-Planner.ro`,
         indexH1:'Ricette dal <span class="accent">Mondo</span>',
         indexDesc: n=>`<p>Dalle tavole di famiglia alle tradizioni tramandate di generazione in generazione.</p><p>${n} ricette da 53 cucine, in 14 lingue.</p><p>Scegli dove inizia la cena di oggi.</p>`,
@@ -2489,7 +2490,7 @@ const RECIPE_LANG = {
         pageTitle: n=>`Ricetta ${esc(n)} – Ingredienti e Preparazione | Meal-Planner.ro`,
         pageDesc: (n,o)=>`Ricetta di ${n} da ${o}: ingredienti e istruzioni passo dopo passo.`,
         heroDesc: o=>`Ricetta tradizionale da ${esc(o)}.`,
-        appDir:'', lc: null },
+        appDir:'/it', lc: null },
   ko: { dir:'/ko/recipes',   indexTitle:`세계 요리 레시피 | Meal-Planner.ro`,
         indexH1:'<span class="accent">세계</span> 요리 레시피',
         indexDesc: n=>`<p>가족의 식탁에서 대대로 이어진 전통까지.</p><p>53개 주방의 ${n}가지 레시피, 14개 언어로.</p><p>오늘의 저녁이 어디서 시작될지 선택하세요.</p>`,
@@ -2503,7 +2504,7 @@ const RECIPE_LANG = {
         pageTitle: n=>`${esc(n)} 레시피 – 재료 및 만드는 법 | Meal-Planner.ro`,
         pageDesc: (n,o)=>`${o}의 ${n} 레시피: 재료와 단계별 지침.`,
         heroDesc: o=>`${esc(o)}의 전통 레시피.`,
-        appDir:'', lc: null },
+        appDir:'/ko', lc: null },
 };
 // Attach lc nav/footer builders + populate RECIPES_NAV
 Object.entries(RECIPE_LANG).forEach(([code, rl]) => {
@@ -3930,9 +3931,12 @@ function recipePage(recipe, rl) {
   //    translation already established for recipe tiles (see the tags
   //    line in recipeTile(), ~L4454) — same tags, same lookup table.
   const recipeTags = recipesMeta[recipe.id]?.tags || [];
-  const keywords = recipeTags
-    .map(t => TAG_LABELS[t]?.[code] || TAG_LABELS[t]?.en || t)
-    .join(', ');
+  // Fallback for recipes whose meta carries an explicitly empty tag list
+  // (Search Console flagged "Missing field keywords"): category + cuisine.
+  const keywords = (recipeTags.length
+    ? recipeTags.map(t => TAG_LABELS[t]?.[code] || TAG_LABELS[t]?.en || t)
+    : [cat, o].filter(Boolean)
+  ).join(', ');
 
   const jsonLd = JSON.stringify({
     "@context":"https://schema.org","@type":"Recipe","name":n,
@@ -4091,7 +4095,7 @@ ${makeNav(lc, NAV_URL_FOR.recipe(rslug))}
 <div class="recipe-page-wrap">
 
   <nav class="recipe-breadcrumb" aria-label="breadcrumb">
-    <a href="/">${rl.breadHome}</a> › <a href="${rl.dir}/">${rl.breadLabel}</a>${breadcrumbCuisine} › <span>${esc(n)}</span>
+    <a href="${rl.appDir}/">${rl.breadHome}</a> › <a href="${rl.dir}/">${rl.breadLabel}</a>${breadcrumbCuisine} › <span>${esc(n)}</span>
   </nav>
 
   <!-- Hero — no srcset on the img. Same reason cuisine hub tiles and the
@@ -4127,7 +4131,7 @@ ${makeNav(lc, NAV_URL_FOR.recipe(rslug))}
              deep-link value (app.js matches every name locale, EN included)
              and the plan-cart storage key. data-display feeds the localized
              name to the cart badge panel (plan-cart.js). -->
-        <a href="${appUrl}?meal=${encodeURIComponent(enName)}" class="btn-recipe-primary" data-display="${esc(n)}"><i class="bi bi-plus-circle-fill"></i> ${rl.addBtn(n)}</a>
+        <a href="${appUrl}?meal=${encodeURIComponent(enName)}" rel="nofollow" class="btn-recipe-primary" data-display="${esc(n)}"><i class="bi bi-plus-circle-fill"></i> ${rl.addBtn(n)}</a>
         <button type="button" class="btn-recipe-outline btn-print-pdf" onclick="window.print()" title="${ui.pdfTitle}"><i class="bi bi-printer"></i> ${ui.pdfBtn}</button>
       </div>
     </div>
@@ -4595,7 +4599,7 @@ function recipeIndex(rl) {
   return `${withHreflang(HEAD(rl.indexTitle, descPlain, `${rl.dir}/`, code, dir_attr), recipeIndexHreflangs())}
 ${makeNav(lc, NAV_URL_FOR.recipeIndex())}<main class="content-main cuisine-hub-index-main">
   <section class="content-hero content-hero--short"><div class="content-hero-inner">
-    <nav aria-label="breadcrumb" class="breadcrumb-nav"><a href="/">${rl.breadHome}</a> › <span>${rl.breadLabel}</span></nav>
+    <nav aria-label="breadcrumb" class="breadcrumb-nav"><a href="${rl.appDir}/">${rl.breadHome}</a> › <span>${rl.breadLabel}</span></nav>
     <h1>${rl.indexH1}</h1>
     <div class="content-hero-desc">${rl.indexDesc(recipes.length)}</div>
     <p class="content-hero-kicker">${rl.indexKicker}</p>
@@ -5045,7 +5049,7 @@ function planIndexHreflangs() {
 // provided locale-specific hreflang set in its place.
 function withHreflang(headHtml, hreflangBlock) {
   return headHtml
-    .replace(/\s+<link rel="alternate" hreflang="x-default" href="https:\/\/meal-planner\.ro\/"\/>/, '')
+    .replace(/\s+<link rel="alternate" hreflang="x-default" href="https:\/\/meal-planner\.ro\/en\/"\/>/, '')
     .replace(/\s+<link rel="alternate" hreflang="ro" href="https:\/\/meal-planner\.ro\/ro\/"\/>/, '')
     .replace(/<link rel="alternate" hreflang="en" href="https:\/\/meal-planner\.ro\/en\/"\/>/, hreflangBlock);
 }
@@ -5162,7 +5166,7 @@ function cuisineHubPage(originEnKey, recs, lc_code) {
   // roots and don't apply to a cuisine hub) and replace with the hub-specific
   // hreflang set covering all 14 locales.
   const head = HEAD(hub.title(display), hub.desc(display, recs.length), canonical, lc_code, dir_attr)
-    .replace(/\s+<link rel="alternate" hreflang="x-default" href="https:\/\/meal-planner\.ro\/"\/>/, '')
+    .replace(/\s+<link rel="alternate" hreflang="x-default" href="https:\/\/meal-planner\.ro\/en\/"\/>/, '')
     .replace(/\s+<link rel="alternate" hreflang="ro" href="https:\/\/meal-planner\.ro\/ro\/"\/>/, '')
     .replace(/<link rel="alternate" hreflang="en" href="https:\/\/meal-planner\.ro\/en\/"\/>/,
              cuisineHubHreflangs(originSlug));
@@ -5217,7 +5221,7 @@ function cuisineHubPage(originEnKey, recs, lc_code) {
 ${makeNav(lc, NAV_URL_FOR.cuisineHub(originSlug))}<main class="content-main cuisine-hub-main" data-cuisine-hub="1" data-cuisine-label="${esc(display)}" data-cuisine-href="${canonical}" data-cuisine-atmosphere="${atmosphere}">
   <section class="cuisine-hero" data-cuisine-atmosphere="${atmosphere}">
     <div class="cuisine-hero-inner">
-      <nav aria-label="breadcrumb" class="breadcrumb-nav cuisine-hero-breadcrumb"><a href="/">${rl.breadHome}</a> › <a href="${rl.dir}/">${rl.breadLabel}</a> › <span>${esc(display)}</span></nav>
+      <nav aria-label="breadcrumb" class="breadcrumb-nav cuisine-hero-breadcrumb"><a href="${rl.appDir}/">${rl.breadHome}</a> › <a href="${rl.dir}/">${rl.breadLabel}</a> › <span>${esc(display)}</span></nav>
       <div class="cuisine-hero-content">
         <div class="cuisine-hero-text">
           <span class="cuisine-hero-flag" aria-hidden="true">${flag}</span>
@@ -5599,16 +5603,42 @@ for (const [, rl] of Object.entries(RECIPE_LANG)) {
   }
 }
 
+// lastmod = the date a page's content last actually changed. It used to be
+// the build date for EVERY URL, so each weekly rotation / auto-sync run
+// declared all ~10.7k pages modified, which teaches Google to ignore the
+// sitemap's lastmod (and wastes crawl budget re-fetching unchanged pages).
+// scripts/sitemap-lastmod.json keeps [content hash, date] per URL; the date
+// only moves when the generated HTML for that URL changes. Committed by the
+// same workflows that commit the regenerated pages (git add -A).
 const today = new Date().toISOString().slice(0,10);
+const LASTMOD_FILE = path.join(__dirname, 'sitemap-lastmod.json');
+let lastmodDb = {};
+try { lastmodDb = JSON.parse(fs.readFileSync(LASTMOD_FILE, 'utf8')); } catch { /* first run */ }
+const nextLastmodDb = {};
+const lastmodFor = (u) => {
+  const rel = u.replace('https://meal-planner.ro', '') || '/';
+  let hash = '';
+  try {
+    const html = fs.readFileSync(path.join(PUBLIC, rel, 'index.html'), 'utf8').replace(/\r\n/g, '\n');
+    hash = crypto.createHash('sha1').update(html).digest('hex').slice(0, 16);
+  } catch { /* page missing: hash '' never matches a real one */ }
+  const prev = lastmodDb[rel];
+  const date = prev && prev[0] === hash && hash ? prev[1] : today;
+  nextLastmodDb[rel] = [hash, date];
+  return date;
+};
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${sitemapUrls.map(u => `  <url>
     <loc>${u}</loc>
-    <lastmod>${today}</lastmod>
+    <lastmod>${lastmodFor(u)}</lastmod>
     <changefreq>${u.includes('/retete/')||u.includes('/recipes/')?'monthly':u.endsWith('/meniu-saptamanal/')||u.endsWith('/weekly-meal-plan/')||u.includes('/plan-')||u.includes('/wochenplan')||u.includes('/piano-')||u.includes('/nedelnoe')||u.includes('/haftalik')||u.includes('/jugan')||u.includes('/weekly-menu')||u.includes('/zhouji')||u.includes('/khitat')||u.includes('/plano-')||u.includes('/weekly-plan')?'monthly':'weekly'}</changefreq>
     <priority>${u==='https://meal-planner.ro/'?'1.0':u.match(/meal-planner\.ro\/(ro|en)\/$/)?'0.9':'0.7'}</priority>
   </url>`).join('\n')}
 </urlset>`;
 
 write(path.join(PUBLIC, 'sitemap.xml'), sitemap);
+// One entry per line, sorted: small, reviewable diffs when a few pages change.
+write(LASTMOD_FILE, '{\n' + Object.keys(nextLastmodDb).sort()
+  .map(k => `  ${JSON.stringify(k)}: ${JSON.stringify(nextLastmodDb[k])}`).join(',\n') + '\n}\n');
 console.log(`\n✅ sitemap.xml — ${sitemapUrls.length} URLs`);

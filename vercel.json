@@ -38,9 +38,9 @@
   ],
   "redirects": [
     {
-      "source": "/:path*",
+      "source": "/(.*)",
       "has": [{ "type": "host", "value": "www.meal-planner.ro" }],
-      "destination": "https://meal-planner.ro/:path*",
+      "destination": "https://meal-planner.ro/$1",
       "permanent": true
     },
     {
@@ -2006,6 +2006,501 @@
     {
       "source": "/ko/meniu-saptamanal/:path*",
       "destination": "/ko/jugan-menu/",
+      "permanent": true
+    },
+    {
+      "source": "/(ro/retete|en/recipes|es/recetas|fr/recettes|de/rezepte|pt/receitas|ru/retsepty|ar/wasafat|zh/shipu|ja/reshipi|hi/recipes|tr/tarifler|it/ricette|ko/recipes)/butter-chicken-murgh-makhani",
+      "destination": "/$1/butter-chicken/",
+      "permanent": true
+    },
+    {
+      "source": "/(ro/retete|en/recipes|es/recetas|fr/recettes|de/rezepte|pt/receitas|ru/retsepty|ar/wasafat|zh/shipu|ja/reshipi|hi/recipes|tr/tarifler|it/ricette|ko/recipes)/green-curry-gaeng-khiao-wan",
+      "destination": "/$1/green-curry/",
+      "permanent": true
+    },
+    {
+      "source": "/(ro/retete|en/recipes|es/recetas|fr/recettes|de/rezepte|pt/receitas|ru/retsepty|ar/wasafat|zh/shipu|ja/reshipi|hi/recipes|tr/tarifler|it/ricette|ko/recipes)/mango-sticky-rice-khao-niao-mamuang",
+      "destination": "/$1/mango-sticky-rice/",
+      "permanent": true
+    },
+    {
+      "source": "/(ro/retete|en/recipes|es/recetas|fr/recettes|de/rezepte|pt/receitas|ru/retsepty|ar/wasafat|zh/shipu|ja/reshipi|hi/recipes|tr/tarifler|it/ricette|ko/recipes)/pain-perdu-french-toast",
+      "destination": "/$1/pain-perdu/",
+      "permanent": true
+    },
+    {
+      "source": "/(ro/retete|en/recipes|es/recetas|fr/recettes|de/rezepte|pt/receitas|ru/retsepty|ar/wasafat|zh/shipu|ja/reshipi|hi/recipes|tr/tarifler|it/ricette|ko/recipes)/confit-de-canard-duck-confit",
+      "destination": "/$1/confit-de-canard/",
+      "permanent": true
+    },
+    {
+      "source": "/(ro/retete|en/recipes|es/recetas|fr/recettes|de/rezepte|pt/receitas|ru/retsepty|ar/wasafat|zh/shipu|ja/reshipi|hi/recipes|tr/tarifler|it/ricette|ko/recipes)/souffl-au-fromage-cheese-souffl",
+      "destination": "/$1/souffl-au-fromage/",
+      "permanent": true
+    },
+    {
+      "source": "/(ro/retete|en/recipes|es/recetas|fr/recettes|de/rezepte|pt/receitas|ru/retsepty|ar/wasafat|zh/shipu|ja/reshipi|hi/recipes|tr/tarifler|it/ricette|ko/recipes)/hal-szl-fisherman-s-soup",
+      "destination": "/$1/hal-szl/",
+      "permanent": true
+    },
+    {
+      "source": "/(ro/retete|en/recipes|es/recetas|fr/recettes|de/rezepte|pt/receitas|ru/retsepty|ar/wasafat|zh/shipu|ja/reshipi|hi/recipes|tr/tarifler|it/ricette|ko/recipes)/t-lt-tt-k-poszta-hungarian-stuffed-cabbage",
+      "destination": "/$1/t-lt-tt-k-poszta/",
+      "permanent": true
+    },
+    {
+      "source": "/(ro/retete|en/recipes|es/recetas|fr/recettes|de/rezepte|pt/receitas|ru/retsepty|ar/wasafat|zh/shipu|ja/reshipi|hi/recipes|tr/tarifler|it/ricette|ko/recipes)/k-rt-skal-cs-chimney-cake",
+      "destination": "/$1/k-rt-skal-cs/",
+      "permanent": true
+    },
+    {
+      "source": "/(ro/retete|en/recipes|es/recetas|fr/recettes|de/rezepte|pt/receitas|ru/retsepty|ar/wasafat|zh/shipu|ja/reshipi|hi/recipes|tr/tarifler|it/ricette|ko/recipes)/soml-i-galuska-soml-sponge-trifle",
+      "destination": "/$1/soml-i-galuska/",
+      "permanent": true
+    },
+    {
+      "source": "/(ro/retete|en/recipes|es/recetas|fr/recettes|de/rezepte|pt/receitas|ru/retsepty|ar/wasafat|zh/shipu|ja/reshipi|hi/recipes|tr/tarifler|it/ricette|ko/recipes)/asado-argentine-grill",
+      "destination": "/$1/asado/",
+      "permanent": true
+    },
+    {
+      "source": "/(ro/retete|en/recipes|es/recetas|fr/recettes|de/rezepte|pt/receitas|ru/retsepty|ar/wasafat|zh/shipu|ja/reshipi|hi/recipes|tr/tarifler|it/ricette|ko/recipes)/shakriyeh-lamb-in-yogurt-stew",
+      "destination": "/$1/shakriyeh/",
+      "permanent": true
+    },
+    {
+      "source": "/(ro/retete|en/recipes|es/recetas|fr/recettes|de/rezepte|pt/receitas|ru/retsepty|ar/wasafat|zh/shipu|ja/reshipi|hi/recipes|tr/tarifler|it/ricette|ko/recipes)/muhammara-walnut-pepper-dip",
+      "destination": "/$1/muhammara/",
+      "permanent": true
+    },
+    {
+      "source": "/(ro/retete|en/recipes|es/recetas|fr/recettes|de/rezepte|pt/receitas|ru/retsepty|ar/wasafat|zh/shipu|ja/reshipi|hi/recipes|tr/tarifler|it/ricette|ko/recipes)/maqluba-upside-down-rice",
+      "destination": "/$1/maqluba/",
+      "permanent": true
+    },
+    {
+      "source": "/(ro/retete|en/recipes|es/recetas|fr/recettes|de/rezepte|pt/receitas|ru/retsepty|ar/wasafat|zh/shipu|ja/reshipi|hi/recipes|tr/tarifler|it/ricette|ko/recipes)/yalanji-vegetarian-stuffed-grape-leaves",
+      "destination": "/$1/yalanji/",
+      "permanent": true
+    },
+    {
+      "source": "/(ro/retete|en/recipes|es/recetas|fr/recettes|de/rezepte|pt/receitas|ru/retsepty|ar/wasafat|zh/shipu|ja/reshipi|hi/recipes|tr/tarifler|it/ricette|ko/recipes)/tahchin-saffron-rice-cake",
+      "destination": "/$1/tahchin/",
+      "permanent": true
+    },
+    {
+      "source": "/(ro/retete|en/recipes|es/recetas|fr/recettes|de/rezepte|pt/receitas|ru/retsepty|ar/wasafat|zh/shipu|ja/reshipi|hi/recipes|tr/tarifler|it/ricette|ko/recipes)/zereshk-polo-barberry-rice-with-chicken",
+      "destination": "/$1/zereshk-polo/",
+      "permanent": true
+    },
+    {
+      "source": "/(ro/retete|en/recipes|es/recetas|fr/recettes|de/rezepte|pt/receitas|ru/retsepty|ar/wasafat|zh/shipu|ja/reshipi|hi/recipes|tr/tarifler|it/ricette|ko/recipes)/ash-e-reshteh-noodle-and-herb-soup",
+      "destination": "/$1/ash-e-reshteh/",
+      "permanent": true
+    },
+    {
+      "source": "/(ro/retete|en/recipes|es/recetas|fr/recettes|de/rezepte|pt/receitas|ru/retsepty|ar/wasafat|zh/shipu|ja/reshipi|hi/recipes|tr/tarifler|it/ricette|ko/recipes)/kuku-sabzi-persian-herb-frittata",
+      "destination": "/$1/kuku-sabzi/",
+      "permanent": true
+    },
+    {
+      "source": "/(ro/retete|en/recipes|es/recetas|fr/recettes|de/rezepte|pt/receitas|ru/retsepty|ar/wasafat|zh/shipu|ja/reshipi|hi/recipes|tr/tarifler|it/ricette|ko/recipes)/faloodeh-vermicelli-sorbet",
+      "destination": "/$1/faloodeh/",
+      "permanent": true
+    },
+    {
+      "source": "/(ro/retete|en/recipes|es/recetas|fr/recettes|de/rezepte|pt/receitas|ru/retsepty|ar/wasafat|zh/shipu|ja/reshipi|hi/recipes|tr/tarifler|it/ricette|ko/recipes)/manakish-za-atar-flatbread",
+      "destination": "/$1/manakish/",
+      "permanent": true
+    },
+    {
+      "source": "/(ro/retete|en/recipes|es/recetas|fr/recettes|de/rezepte|pt/receitas|ru/retsepty|ar/wasafat|zh/shipu|ja/reshipi|hi/recipes|tr/tarifler|it/ricette|ko/recipes)/ma-amoul-date-filled-cookies",
+      "destination": "/$1/ma-amoul/",
+      "permanent": true
+    },
+    {
+      "source": "/(ro/retete|en/recipes|es/recetas|fr/recettes|de/rezepte|pt/receitas|ru/retsepty|ar/wasafat|zh/shipu|ja/reshipi|hi/recipes|tr/tarifler|it/ricette|ko/recipes)/otak-otak-grilled-fish-paste",
+      "destination": "/$1/otak-otak/",
+      "permanent": true
+    },
+    {
+      "source": "/(ro/retete|en/recipes|es/recetas|fr/recettes|de/rezepte|pt/receitas|ru/retsepty|ar/wasafat|zh/shipu|ja/reshipi|hi/recipes|tr/tarifler|it/ricette|ko/recipes)/molokhia-jute-leaf-stew",
+      "destination": "/$1/molokhia/",
+      "permanent": true
+    },
+    {
+      "source": "/(ro/retete|en/recipes|es/recetas|fr/recettes|de/rezepte|pt/receitas|ru/retsepty|ar/wasafat|zh/shipu|ja/reshipi|hi/recipes|tr/tarifler|it/ricette|ko/recipes)/ta-ameya-egyptian-fava-bean-falafel",
+      "destination": "/$1/ta-ameya/",
+      "permanent": true
+    },
+    {
+      "source": "/(ro/retete|en/recipes|es/recetas|fr/recettes|de/rezepte|pt/receitas|ru/retsepty|ar/wasafat|zh/shipu|ja/reshipi|hi/recipes|tr/tarifler|it/ricette|ko/recipes)/om-ali-egyptian-bread-pudding",
+      "destination": "/$1/om-ali/",
+      "permanent": true
+    },
+    {
+      "source": "/(ro/retete|en/recipes|es/recetas|fr/recettes|de/rezepte|pt/receitas|ru/retsepty|ar/wasafat|zh/shipu|ja/reshipi|hi/recipes|tr/tarifler|it/ricette|ko/recipes)/feteer-meshaltet-egyptian-layered-flatbread",
+      "destination": "/$1/feteer-meshaltet/",
+      "permanent": true
+    },
+    {
+      "source": "/(ro/retete|en/recipes|es/recetas|fr/recettes|de/rezepte|pt/receitas|ru/retsepty|ar/wasafat|zh/shipu|ja/reshipi|hi/recipes|tr/tarifler|it/ricette|ko/recipes)/basbousa-egyptian-semolina-cake",
+      "destination": "/$1/basbousa/",
+      "permanent": true
+    },
+    {
+      "source": "/(ro/retete|en/recipes|es/recetas|fr/recettes|de/rezepte|pt/receitas|ru/retsepty|ar/wasafat|zh/shipu|ja/reshipi|hi/recipes|tr/tarifler|it/ricette|ko/recipes)/kitfo-ethiopian-spiced-beef-tartare",
+      "destination": "/$1/kitfo/",
+      "permanent": true
+    },
+    {
+      "source": "/(ro/retete|en/recipes|es/recetas|fr/recettes|de/rezepte|pt/receitas|ru/retsepty|ar/wasafat|zh/shipu|ja/reshipi|hi/recipes|tr/tarifler|it/ricette|ko/recipes)/shiro-wat-spiced-chickpea-flour-stew",
+      "destination": "/$1/shiro-wat/",
+      "permanent": true
+    },
+    {
+      "source": "/(ro/retete|en/recipes|es/recetas|fr/recettes|de/rezepte|pt/receitas|ru/retsepty|ar/wasafat|zh/shipu|ja/reshipi|hi/recipes|tr/tarifler|it/ricette|ko/recipes)/tibs-ethiopian-saut-ed-beef-with-rosemary",
+      "destination": "/$1/tibs/",
+      "permanent": true
+    },
+    {
+      "source": "/(ro/retete|en/recipes|es/recetas|fr/recettes|de/rezepte|pt/receitas|ru/retsepty|ar/wasafat|zh/shipu|ja/reshipi|hi/recipes|tr/tarifler|it/ricette|ko/recipes)/misir-wat-spiced-red-lentil-stew",
+      "destination": "/$1/misir-wat/",
+      "permanent": true
+    },
+    {
+      "source": "/(ro/retete|en/recipes|es/recetas|fr/recettes|de/rezepte|pt/receitas|ru/retsepty|ar/wasafat|zh/shipu|ja/reshipi|hi/recipes|tr/tarifler|it/ricette|ko/recipes)/gomen-ethiopian-saut-ed-collard-greens",
+      "destination": "/$1/gomen/",
+      "permanent": true
+    },
+    {
+      "source": "/(ro/retete|en/recipes|es/recetas|fr/recettes|de/rezepte|pt/receitas|ru/retsepty|ar/wasafat|zh/shipu|ja/reshipi|hi/recipes|tr/tarifler|it/ricette|ko/recipes)/soto-ayam-indonesian-turmeric-chicken-soup",
+      "destination": "/$1/soto-ayam/",
+      "permanent": true
+    },
+    {
+      "source": "/(ro/retete|en/recipes|es/recetas|fr/recettes|de/rezepte|pt/receitas|ru/retsepty|ar/wasafat|zh/shipu|ja/reshipi|hi/recipes|tr/tarifler|it/ricette|ko/recipes)/mie-goreng-indonesian-fried-noodles",
+      "destination": "/$1/mie-goreng/",
+      "permanent": true
+    },
+    {
+      "source": "/(ro/retete|en/recipes|es/recetas|fr/recettes|de/rezepte|pt/receitas|ru/retsepty|ar/wasafat|zh/shipu|ja/reshipi|hi/recipes|tr/tarifler|it/ricette|ko/recipes)/ayam-penyet-smashed-fried-chicken-with-sambal",
+      "destination": "/$1/ayam-penyet/",
+      "permanent": true
+    },
+    {
+      "source": "/(ro/retete|en/recipes|es/recetas|fr/recettes|de/rezepte|pt/receitas|ru/retsepty|ar/wasafat|zh/shipu|ja/reshipi|hi/recipes|tr/tarifler|it/ricette|ko/recipes)/nasi-uduk-fragrant-coconut-rice",
+      "destination": "/$1/nasi-uduk/",
+      "permanent": true
+    },
+    {
+      "source": "/(ro/retete|en/recipes|es/recetas|fr/recettes|de/rezepte|pt/receitas|ru/retsepty|ar/wasafat|zh/shipu|ja/reshipi|hi/recipes|tr/tarifler|it/ricette|ko/recipes)/klepon-glutinous-rice-balls-with-palm-sugar",
+      "destination": "/$1/klepon/",
+      "permanent": true
+    },
+    {
+      "source": "/(ro/retete|en/recipes|es/recetas|fr/recettes|de/rezepte|pt/receitas|ru/retsepty|ar/wasafat|zh/shipu|ja/reshipi|hi/recipes|tr/tarifler|it/ricette|ko/recipes)/aj-de-gallina-creamy-peruvian-chicken-in-yellow-chili-sauce",
+      "destination": "/$1/aj-de-gallina/",
+      "permanent": true
+    },
+    {
+      "source": "/(ro/retete|en/recipes|es/recetas|fr/recettes|de/rezepte|pt/receitas|ru/retsepty|ar/wasafat|zh/shipu|ja/reshipi|hi/recipes|tr/tarifler|it/ricette|ko/recipes)/anticuchos-peruvian-marinated-grilled-skewers",
+      "destination": "/$1/anticuchos/",
+      "permanent": true
+    },
+    {
+      "source": "/(ro/retete|en/recipes|es/recetas|fr/recettes|de/rezepte|pt/receitas|ru/retsepty|ar/wasafat|zh/shipu|ja/reshipi|hi/recipes|tr/tarifler|it/ricette|ko/recipes)/papa-a-la-huanca-na-potatoes-in-creamy-yellow-chili-sauce",
+      "destination": "/$1/papa-a-la-huanca-na/",
+      "permanent": true
+    },
+    {
+      "source": "/(ro/retete|en/recipes|es/recetas|fr/recettes|de/rezepte|pt/receitas|ru/retsepty|ar/wasafat|zh/shipu|ja/reshipi|hi/recipes|tr/tarifler|it/ricette|ko/recipes)/rocoto-relleno-peruvian-stuffed-hot-peppers",
+      "destination": "/$1/rocoto-relleno/",
+      "permanent": true
+    },
+    {
+      "source": "/(ro/retete|en/recipes|es/recetas|fr/recettes|de/rezepte|pt/receitas|ru/retsepty|ar/wasafat|zh/shipu|ja/reshipi|hi/recipes|tr/tarifler|it/ricette|ko/recipes)/suspiro-a-la-lime-a-peruvian-caramel-cream-with-port-meringue",
+      "destination": "/$1/suspiro-a-la-lime-a/",
+      "permanent": true
+    },
+    {
+      "source": "/(ro/retete|en/recipes|es/recetas|fr/recettes|de/rezepte|pt/receitas|ru/retsepty|ar/wasafat|zh/shipu|ja/reshipi|hi/recipes|tr/tarifler|it/ricette|ko/recipes)/sauerbraten-german-marinated-pot-roast",
+      "destination": "/$1/sauerbraten/",
+      "permanent": true
+    },
+    {
+      "source": "/(ro/retete|en/recipes|es/recetas|fr/recettes|de/rezepte|pt/receitas|ru/retsepty|ar/wasafat|zh/shipu|ja/reshipi|hi/recipes|tr/tarifler|it/ricette|ko/recipes)/rouladen-german-stuffed-beef-rolls",
+      "destination": "/$1/rouladen/",
+      "permanent": true
+    },
+    {
+      "source": "/(ro/retete|en/recipes|es/recetas|fr/recettes|de/rezepte|pt/receitas|ru/retsepty|ar/wasafat|zh/shipu|ja/reshipi|hi/recipes|tr/tarifler|it/ricette|ko/recipes)/k-sesp-tzle-german-cheese-noodles",
+      "destination": "/$1/k-sesp-tzle/",
+      "permanent": true
+    },
+    {
+      "source": "/(ro/retete|en/recipes|es/recetas|fr/recettes|de/rezepte|pt/receitas|ru/retsepty|ar/wasafat|zh/shipu|ja/reshipi|hi/recipes|tr/tarifler|it/ricette|ko/recipes)/kartoffelsalat-swabian-warm-potato-salad",
+      "destination": "/$1/kartoffelsalat/",
+      "permanent": true
+    },
+    {
+      "source": "/(ro/retete|en/recipes|es/recetas|fr/recettes|de/rezepte|pt/receitas|ru/retsepty|ar/wasafat|zh/shipu|ja/reshipi|hi/recipes|tr/tarifler|it/ricette|ko/recipes)/schwarzw-lder-kirschtorte-black-forest-cake",
+      "destination": "/$1/schwarzw-lder-kirschtorte/",
+      "permanent": true
+    },
+    {
+      "source": "/(ro/retete|en/recipes|es/recetas|fr/recettes|de/rezepte|pt/receitas|ru/retsepty|ar/wasafat|zh/shipu|ja/reshipi|hi/recipes|tr/tarifler|it/ricette|ko/recipes)/bitterballen-dutch-beef-croquettes",
+      "destination": "/$1/bitterballen/",
+      "permanent": true
+    },
+    {
+      "source": "/(ro/retete|en/recipes|es/recetas|fr/recettes|de/rezepte|pt/receitas|ru/retsepty|ar/wasafat|zh/shipu|ja/reshipi|hi/recipes|tr/tarifler|it/ricette|ko/recipes)/erwtensoep-dutch-split-pea-soup",
+      "destination": "/$1/erwtensoep/",
+      "permanent": true
+    },
+    {
+      "source": "/(ro/retete|en/recipes|es/recetas|fr/recettes|de/rezepte|pt/receitas|ru/retsepty|ar/wasafat|zh/shipu|ja/reshipi|hi/recipes|tr/tarifler|it/ricette|ko/recipes)/stroopwafel-dutch-syrup-waffle",
+      "destination": "/$1/stroopwafel/",
+      "permanent": true
+    },
+    {
+      "source": "/(ro/retete|en/recipes|es/recetas|fr/recettes|de/rezepte|pt/receitas|ru/retsepty|ar/wasafat|zh/shipu|ja/reshipi|hi/recipes|tr/tarifler|it/ricette|ko/recipes)/kibbeling-dutch-fried-fish-bites-with-garlic-sauce",
+      "destination": "/$1/kibbeling/",
+      "permanent": true
+    },
+    {
+      "source": "/(ro/retete|en/recipes|es/recetas|fr/recettes|de/rezepte|pt/receitas|ru/retsepty|ar/wasafat|zh/shipu|ja/reshipi|hi/recipes|tr/tarifler|it/ricette|ko/recipes)/oliebollen-dutch-new-year-s-doughnuts",
+      "destination": "/$1/oliebollen/",
+      "permanent": true
+    },
+    {
+      "source": "/(ro/retete|en/recipes|es/recetas|fr/recettes|de/rezepte|pt/receitas|ru/retsepty|ar/wasafat|zh/shipu|ja/reshipi|hi/recipes|tr/tarifler|it/ricette|ko/recipes)/suya-nigerian-peanut-spiced-beef-skewers",
+      "destination": "/$1/suya/",
+      "permanent": true
+    },
+    {
+      "source": "/(ro/retete|en/recipes|es/recetas|fr/recettes|de/rezepte|pt/receitas|ru/retsepty|ar/wasafat|zh/shipu|ja/reshipi|hi/recipes|tr/tarifler|it/ricette|ko/recipes)/puff-puff-nigerian-fried-dough-balls",
+      "destination": "/$1/puff-puff/",
+      "permanent": true
+    },
+    {
+      "source": "/(ro/retete|en/recipes|es/recetas|fr/recettes|de/rezepte|pt/receitas|ru/retsepty|ar/wasafat|zh/shipu|ja/reshipi|hi/recipes|tr/tarifler|it/ricette|ko/recipes)/moin-moin-nigerian-steamed-bean-pudding",
+      "destination": "/$1/moin-moin/",
+      "permanent": true
+    },
+    {
+      "source": "/(ro/retete|en/recipes|es/recetas|fr/recettes|de/rezepte|pt/receitas|ru/retsepty|ar/wasafat|zh/shipu|ja/reshipi|hi/recipes|tr/tarifler|it/ricette|ko/recipes)/akara-nigerian-black-eyed-pea-fritters",
+      "destination": "/$1/akara/",
+      "permanent": true
+    },
+    {
+      "source": "/(ro/retete|en/recipes|es/recetas|fr/recettes|de/rezepte|pt/receitas|ru/retsepty|ar/wasafat|zh/shipu|ja/reshipi|hi/recipes|tr/tarifler|it/ricette|ko/recipes)/chicken-karahi-pakistani-spiced-skillet-chicken",
+      "destination": "/$1/chicken-karahi/",
+      "permanent": true
+    },
+    {
+      "source": "/(ro/retete|en/recipes|es/recetas|fr/recettes|de/rezepte|pt/receitas|ru/retsepty|ar/wasafat|zh/shipu|ja/reshipi|hi/recipes|tr/tarifler|it/ricette|ko/recipes)/haleem-pakistani-slow-cooked-meat-and-lentil-stew",
+      "destination": "/$1/haleem/",
+      "permanent": true
+    },
+    {
+      "source": "/(ro/retete|en/recipes|es/recetas|fr/recettes|de/rezepte|pt/receitas|ru/retsepty|ar/wasafat|zh/shipu|ja/reshipi|hi/recipes|tr/tarifler|it/ricette|ko/recipes)/seekh-kebab-pakistani-grilled-minced-meat-skewers",
+      "destination": "/$1/seekh-kebab/",
+      "permanent": true
+    },
+    {
+      "source": "/(ro/retete|en/recipes|es/recetas|fr/recettes|de/rezepte|pt/receitas|ru/retsepty|ar/wasafat|zh/shipu|ja/reshipi|hi/recipes|tr/tarifler|it/ricette|ko/recipes)/sarson-da-saag-punjabi-mustard-greens-curry",
+      "destination": "/$1/sarson-da-saag/",
+      "permanent": true
+    },
+    {
+      "source": "/(ro/retete|en/recipes|es/recetas|fr/recettes|de/rezepte|pt/receitas|ru/retsepty|ar/wasafat|zh/shipu|ja/reshipi|hi/recipes|tr/tarifler|it/ricette|ko/recipes)/halwa-puri-pakistani-semolina-sweet-with-fried-bread",
+      "destination": "/$1/halwa-puri/",
+      "permanent": true
+    },
+    {
+      "source": "/(ro/retete|en/recipes|es/recetas|fr/recettes|de/rezepte|pt/receitas|ru/retsepty|ar/wasafat|zh/shipu|ja/reshipi|hi/recipes|tr/tarifler|it/ricette|ko/recipes)/piftie-romanian-jellied-pork",
+      "destination": "/$1/romanian-pork-aspic/",
+      "permanent": true
+    },
+    {
+      "source": "/(ro/retete|en/recipes|es/recetas|fr/recettes|de/rezepte|pt/receitas|ru/retsepty|ar/wasafat|zh/shipu|ja/reshipi|hi/recipes|tr/tarifler|it/ricette|ko/recipes)/tochitur-romanian-pork-stew",
+      "destination": "/$1/romanian-pork-stew/",
+      "permanent": true
+    },
+    {
+      "source": "/(ro/retete|en/recipes|es/recetas|fr/recettes|de/rezepte|pt/receitas|ru/retsepty|ar/wasafat|zh/shipu|ja/reshipi|hi/recipes|tr/tarifler|it/ricette|ko/recipes)/col-una-i-romanian-cheese-dumplings",
+      "destination": "/$1/romanian-cheese-dumplings/",
+      "permanent": true
+    },
+    {
+      "source": "/(ro/retete|en/recipes|es/recetas|fr/recettes|de/rezepte|pt/receitas|ru/retsepty|ar/wasafat|zh/shipu|ja/reshipi|hi/recipes|tr/tarifler|it/ricette|ko/recipes)/drob-de-miel-romanian-lamb-p-t",
+      "destination": "/$1/romanian-lamb-p-t/",
+      "permanent": true
+    },
+    {
+      "source": "/(ro/retete|en/recipes|es/recetas|fr/recettes|de/rezepte|pt/receitas|ru/retsepty|ar/wasafat|zh/shipu|ja/reshipi|hi/recipes|tr/tarifler|it/ricette|ko/recipes)/romanian-potato-musaca",
+      "destination": "/$1/romanian-potato-moussaka/",
+      "permanent": true
+    },
+    {
+      "source": "/(ro/retete|en/recipes|es/recetas|fr/recettes|de/rezepte|pt/receitas|ru/retsepty|ar/wasafat|zh/shipu|ja/reshipi|hi/recipes|tr/tarifler|it/ricette|ko/recipes)/mushroom-risotto",
+      "destination": "/$1/risotto/",
+      "permanent": true
+    },
+    {
+      "source": "/ro/retete/spaghete-carbonara",
+      "destination": "/ro/retete/spaghetti-carbonara/",
+      "permanent": true
+    },
+    {
+      "source": "/ro/retete/ciorb-de-burt",
+      "destination": "/ro/retete/tripe-soup/",
+      "permanent": true
+    },
+    {
+      "source": "/ro/retete/musaca-greceasc",
+      "destination": "/ro/retete/moussaka/",
+      "permanent": true
+    },
+    {
+      "source": "/ro/retete/curry-de-pui",
+      "destination": "/ro/retete/chicken-curry/",
+      "permanent": true
+    },
+    {
+      "source": "/ro/retete/bors",
+      "destination": "/ro/retete/borscht/",
+      "permanent": true
+    },
+    {
+      "source": "/ro/retete/cl-tite-americane",
+      "destination": "/ro/retete/pancakes/",
+      "permanent": true
+    },
+    {
+      "source": "/ro/retete/pui-gong-bao",
+      "destination": "/ro/retete/kung-pao-chicken/",
+      "permanent": true
+    },
+    {
+      "source": "/ro/retete/chiftelu-e-suedeze",
+      "destination": "/ro/retete/swedish-meatballs/",
+      "permanent": true
+    },
+    {
+      "source": "/ro/retete/soupe-l-oignon",
+      "destination": "/ro/retete/french-onion-soup/",
+      "permanent": true
+    },
+    {
+      "source": "/ro/retete/gula",
+      "destination": "/ro/retete/goulash/",
+      "permanent": true
+    },
+    {
+      "source": "/ro/retete/tajine",
+      "destination": "/ro/retete/chicken-tagine/",
+      "permanent": true
+    },
+    {
+      "source": "/ro/retete/pui-dulce-acri-or",
+      "destination": "/ro/retete/sweet-and-sour-chicken/",
+      "permanent": true
+    },
+    {
+      "source": "/ro/retete/lohikeitto",
+      "destination": "/ro/retete/salmon-soup/",
+      "permanent": true
+    },
+    {
+      "source": "/ro/retete/zeam",
+      "destination": "/ro/retete/zeama/",
+      "permanent": true
+    },
+    {
+      "source": "/ro/retete/kanelbulle",
+      "destination": "/ro/retete/cinnamon-bun/",
+      "permanent": true
+    },
+    {
+      "source": "/ro/retete/sup-de-linte",
+      "destination": "/ro/retete/lentil-soup/",
+      "permanent": true
+    },
+    {
+      "source": "/ro/retete/k-ttbullar",
+      "destination": "/ro/retete/swedish-meatballs/",
+      "permanent": true
+    },
+    {
+      "source": "/ro/retete/karjalanpiirakka",
+      "destination": "/ro/retete/karelian-pie/",
+      "permanent": true
+    },
+    {
+      "source": "/ro/retete/b-nh-x-o",
+      "destination": "/ro/retete/banh-xeo/",
+      "permanent": true
+    },
+    {
+      "source": "/ro/retete/orez-cu-lapte-de-cocos",
+      "destination": "/ro/retete/coconut-rice/",
+      "permanent": true
+    },
+    {
+      "source": "/ro/retete/fasole-cu-c-rna-i",
+      "destination": "/ro/retete/beans-with-sausages/",
+      "permanent": true
+    },
+    {
+      "source": "/ro/retete/carbonade-flamande",
+      "destination": "/ro/retete/stoofvlees/",
+      "permanent": true
+    },
+    {
+      "source": "/ro/retete/pui-kiev",
+      "destination": "/ro/retete/chicken-kiev/",
+      "permanent": true
+    },
+    {
+      "source": "/ro/retete/fricass-e-de-poulet",
+      "destination": "/ro/retete/chicken-fricass-e/",
+      "permanent": true
+    },
+    {
+      "source": "/ro/retete/pui-moambe",
+      "destination": "/ro/retete/moambe-chicken/",
+      "permanent": true
+    },
+    {
+      "source": "/ro/retete/pa-ticada",
+      "destination": "/ro/retete/pasticada/",
+      "permanent": true
+    },
+    {
+      "source": "/ro/retete/curry-japonez",
+      "destination": "/ro/retete/japanese-curry-rice/",
+      "permanent": true
+    },
+    {
+      "source": "/ro/retete/tagine-cu-miel",
+      "destination": "/ro/retete/lamb-tagine/",
+      "permanent": true
+    },
+    {
+      "source": "/ro/retete/pl-cint-a-ciobanului",
+      "destination": "/ro/retete/shepherd-s-pie/",
+      "permanent": true
+    },
+    {
+      "source": "/ro/retete/karjalanpaisti",
+      "destination": "/ro/retete/karelian-stew/",
+      "permanent": true
+    },
+    {
+      "source": "/ro/retete/ceviche-de-camar-n",
+      "destination": "/ro/retete/ceviche/",
       "permanent": true
     }
   ]
