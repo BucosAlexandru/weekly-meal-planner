@@ -542,10 +542,9 @@ const ITEM_LABELS = {
     'phyllo pastry': 'Foi de plăcintă (filo)', 'shortcrust pastry': 'Aluat fraged',
     'day-old white bread': 'Pâine albă veche', 'breadcrumbs': 'Pesmet',
     // Meat extras
-    'guanciale': 'Guanciale', 'pancetta': 'Pancetta', 'lardons': 'Lardons',
+    'lardons': 'Lardons',
     'pork shoulder': 'Spată de porc', 'pork belly': 'Piept de porc',
     'lamb shoulder': 'Spată de miel',
-    'beef cut': 'Vită', 'beef mince': 'Vită tocată',
     // Cheese variants that often leak as "grated parmesan"
     'grated parmesan': 'Parmezan ras', 'grated kefalotyri': 'Kefalotyri ras',
     'grated pecorino': 'Pecorino ras',
@@ -576,7 +575,6 @@ const ITEM_LABELS = {
     // Wines + remaining user-reported leaks
     'white wine': 'Vin alb', 'red wine': 'Vin roșu', 'cognac': 'Coniac',
     'dry white wine': 'Vin alb sec', 'dry red wine': 'Vin roșu sec',
-    'bell peppers': 'Ardei gras',
     // Long-tail items added round 4 — pork/cream cheese/peach/pomegranate/
     // lasagna sheets/tomato sauce/lime juice/lemon juice — were leaking as
     // English in non-EN PDFs because they had no canonical entry.

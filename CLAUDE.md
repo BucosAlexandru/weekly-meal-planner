@@ -5,8 +5,9 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## Commands
 
 ```bash
-npm run build         # full build: esbuild JS + esbuild CSS + generate-content.mjs
-npm run build:js      # bundles app.js, checkout.js, portal.js → *.min.js (recipes-budget.js is external)
+npm run build         # full build: generate-content.mjs + search index + recipe packs + esbuild JS/CSS
+npm run build:js      # bundles checkout.js, portal.js, analytics.js → *.min.js (app.js is served unbundled)
+npm run build:packs   # writes public/js/recipe-packs/<lc>.js (planner's per-locale recipe data)
 npm run build:css     # minifies public/css/style.css → style.min.css
 npm run content       # regenerates ~10400 HTML pages + public/sitemap.xml
 npm run sitemap       # alias for npm run content — generate-sitemap.cjs used to hand-build a
@@ -40,7 +41,7 @@ Workflow: commit directly to `main` and push. No feature branches, no PRs. (See 
 
 ### Two halves: static site + serverless API
 
-- **Static site** lives in `public/` and is served as-is (Vercel `@vercel/static` + GitHub Pages). The browser runs `public/js/app.min.js`, which is `app.js` bundled by esbuild.
+- **Static site** lives in `public/` and is served as-is (Vercel `@vercel/static` + GitHub Pages). The browser loads `public/js/app.js` directly as an ES module (no bundle).
 - **Serverless API** lives in `api/*.js` (Vercel `@vercel/node`). `vercel.json` rewrites `/api/foo` → `/api/foo.js`. Files under `api/_lib/` are NOT routes (Vercel ignores leading underscore); they are shared modules.
 
 ### Content pipeline
@@ -60,10 +61,12 @@ Per-language URL prefixes for recipes and pricing are hard-coded in the `RECIPE_
 
 ### Frontend JS layout
 
-- `public/js/app.js` — main planner UI. Bundled. Imports `recipes.js`, `recipes-meta.js`, `i18n.js`. **`recipes-budget.js` is marked external in the esbuild command** and lazy-loaded at runtime (`ensureBudgetRecipes()`) to keep initial JS under ~1.7 MB. Do not statically import `recipes-budget.js` from `app.js`.
+- `public/js/app.js` — main planner UI, served unbundled. Statically imports only `recipe-labels.js`, `i18n.js`, `shopping-list.js`, `plan-meals.generated.js`, `meal-category.js`. Recipe data is lazy-loaded: the active locale's pack `recipe-packs/<lc>.js` (`ensureMainRecipes()`, merged in place on an in-page language switch) and `recipes-budget.js` (`ensureBudgetRecipes()`). **Never import `recipes.js` or `recipes-meta.js` from `app.js` or anything it imports**: `recipes.js` is ~33 MB, and `recipes-meta.js` statically imports it.
+- `public/js/recipe-packs/<lc>.js` — **auto-generated** by `scripts/build-recipe-packs.mjs` (part of `npm run build`; committed, since Vercel serves `public/` as-is). Each pack holds only what `app.js` reads: per-locale fields as `{ <lc>, en, ro }` (`name` keeps all 14), `originText`/`howIsMade` cut to the first sentence, no `featureCards`/`pairings`, and `time`/`costRon`/`tags`/`desc` pre-merged from `recipes-meta.js`. If `app.js` starts reading a new recipe field, add it there.
+- `public/js/recipe-labels.js` — `TAG_LABELS` + `READY_IN` (re-exported by `recipes-meta.js` for the Node scripts).
 - `public/js/recipes.js` — 701 main recipes, one object per recipe with multilingual `name`, `origin`, `featureCards`, `ingredients`, `howIsMade`, plus `nutrition`, `tipType`, `pairingsType`. This is the canonical content source; the HTML generator reads it directly.
 - `public/js/meal-category.js` — shared lunch/dinner predicate (`isMainMealCandidate`, `filterMainMeals`) used by `app.js` and `scripts/plan-picker.mjs`. Never re-add a hard-coded category list; add a reviewed `NON_MAIN_OVERRIDES` entry instead. Tests: `node --test tests/meal-category.test.mjs` (PL-001, see `docs/ai/PL-001_MEAL_CATEGORY_GUARD.md`).
-- `public/js/recipes-meta.js` — per-recipe `time`, `costRon`, `tags`, optional `desc`. Applied to recipe objects at runtime by `app.js` (does not mutate the file).
+- `public/js/recipes-meta.js` — per-recipe `time`, `costRon`, `tags`, optional `desc`, plus auto-filled defaults for recipes without an entry. Node-only now: consumed by the build scripts, and baked into the recipe packs for the browser.
 - `public/js/recipes-budget.js` — secondary recipe set (35 recipes), only loaded when the budget toggle is on.
 - `public/js/i18n.js` — all UI translations, language names, SEO paragraph templates, PDF messages.
 - `public/js/checkout.js` / `portal.js` — Stripe Checkout + Customer Portal launch buttons. Bundled separately.
